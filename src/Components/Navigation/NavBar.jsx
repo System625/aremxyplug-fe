@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 export const NavBar = () => {
   return (
@@ -25,7 +26,7 @@ export const NavBar = () => {
           alt="/aremxyplug"
         />
        <ul className="flex gap-[31px] items-center lg:gap-[55px]">
-        <li className="text-[9px] lg:text-[16px]">Home</li>
+        <li className="text-[9px] lg:text-[16px]"><Link to="/">Home</Link></li>
         <li className="text-[9px] lg:text-[16px]" >Services</li>
         <li className="text-[9px] lg:text-[16px]">About us</li>
         <li className="text-[9px] lg:text-[16px]">Pricing</li>

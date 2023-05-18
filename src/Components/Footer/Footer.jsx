@@ -201,7 +201,7 @@ export const Footer = () => {
       </div>
 
       {/* TABLET & DESKTOP VIEW */}
-      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] h-[] lg:h-[]">
+      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%]">
         <img
           className="w-[20%] p-[4%] ml-9 lg:p-[3%] lg:ml-[4%] lg:w-[19%]"
           src="./Images/newaremxy.png"
