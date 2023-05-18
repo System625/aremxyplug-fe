@@ -14,14 +14,14 @@ export const Footer = () => {
   return (
     <>
       {/* MOBILE VIEW */}
-      <div className="md:hidden bg-[#04177F] text-[#ffffff] h-[1200px] pb-[20%]">
+      <div className="md:hidden bg-[#04177F] text-[#ffffff] h-[px] pb-[20%]">
         <img
           className="w-[30%] p-[4%]"
-          src="./Images/layeraremxy.png"
+          src="./Images/newaremxy.png"
           alt="/aremxyplug"
         />
         <hr />
-        <div className="flex flex-wrap gap-[20%] h-[201px] w-[261px] pt-[15px] mx-auto ">
+        <div className="flex flex-wrap gap-[20%] h-[] w-[261px] pt-[15px] mx-auto ">
           <div className="flex flex-col gap-[15px]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               AremxyPlug
@@ -151,7 +151,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="absolute top-[150%] right-[10%] flex gap-[20px]">
+        <div className=" flex gap-[30px] justify-center mt-[10%]">
           <div className="flex flex-col h-[52px] gap-[15px]">
             <div className="text-[10px]">Follow Us on</div>
             <div className="flex gap-[12px]">
@@ -186,7 +186,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="absolute top-[165%] right-[8%] w-[312px] h-[40px] text-[6px]">
+        <div className="mx-auto mt-[10%] w-[312px] h-[40px] text-[6px]">
           AremxyPlug is a business enterprise and telecommunication service
           provider company, not a bank. We offer telecom products, payments, and
           digital services. Banking services are provided by AremxyPlug’s
@@ -195,13 +195,13 @@ export const Footer = () => {
           partners who are authorized by VISA and MasterCard to carry out card
           payment services.
         </div>
-        <div className="absolute top-[175%] right-[35%] text-[6px] ">
+        <div className="mt-[10%] text-center text-[6px] ">
           ©AremxyPlug 2023. All Rights Reserved.
         </div>
       </div>
 
       {/* TABLET & DESKTOP VIEW */}
-      <div className="hidden md:block bg-[#04177F] text-[#ffffff] h-[850px] lg:h-[1000px] overflow-y-auto ">
+      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] h-[] lg:h-[]">
         <img
           className="w-[20%] p-[4%] ml-9 lg:p-[3%] lg:ml-[4%] lg:w-[19%]"
           src="./Images/newaremxy.png"
