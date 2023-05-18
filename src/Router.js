@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, createBrowserRouter } from "react-router-dom";
 import { Home } from "./Components/Screens/Home";
+
 
 export const Router = () => {
   return (
