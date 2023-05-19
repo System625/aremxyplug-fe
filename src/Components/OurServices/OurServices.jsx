@@ -16,6 +16,7 @@ const OurServices = () => {
                     { ourServiceDetails.map((data) => (
                         <OurServiceCard key={data.id} cardDetails={data}/>
                     ))}
+                    {/* check the data file for the names used to link each of the service page links on explore */}
                 </div>
             </div>
         </div>
