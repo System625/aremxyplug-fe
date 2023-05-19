@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <>
       {/* MOBILE VIEW */}
-      <div className="md:hidden bg-[#04177F] text-[#ffffff] h-[px] pb-[20%]">
+      <div className="md:hidden bg-[#04177F] text-[#ffffff] pb-[20%]">
         <img
           className="w-[30%] p-[4%]"
           src="./Images/newaremxy.png"
@@ -47,8 +47,8 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px]">
-            <div className="w-[81px] h-[16px] text-[13px] font-semibold">
+          <div className="flex flex-col gap-[15px] mb-[10%]">
+            <div className="w-[81px] h-[16px] text-[13px] font-semibold ">
               Product
             </div>
             <div className="w-[40px] h-[13px] text-[9px]">Telecom</div>
@@ -84,7 +84,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[15px] mb-[5%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Solutions
             </div>
@@ -118,7 +118,7 @@ export const Footer = () => {
             <div className="w-[40px] h-[13px] text-[9px]">FAQs</div>
           </div>
 
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[15px] mb-[8%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Contact us
             </div>
@@ -240,7 +240,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px] lg:gap-[25px]">
+          <div className="flex flex-col gap-[15px] lg:gap-[25px] ">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
               Product
             </div>

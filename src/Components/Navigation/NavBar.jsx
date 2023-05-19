@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 export const NavBar = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex justify-between p-[5%] md:hidden lg:hidden">
+      <div className="sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
         <img
           className="w-[85px] h-[18px]"
           src="./Images/aremxy2.png"
