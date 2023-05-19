@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes, createBrowserRouter } from "react-router-dom";
 import { Home } from "./Components/Screens/Home";
+import PaymentServices from "./Components/PaymentServices/PaymentServices";
 
 
 export const Router = () => {
@@ -8,6 +9,7 @@ export const Router = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/our-services/payment" element={<Home/>} />
       </Routes>
     </div>
   );
