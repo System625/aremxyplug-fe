@@ -200,8 +200,9 @@ export const Footer = () => {
         </div>
       </div>
 
+
       {/* TABLET & DESKTOP VIEW */}
-      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%]">
+      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] w-[]">
         <img
           className="w-[20%] p-[4%] ml-9 lg:p-[3%] lg:ml-[4%] lg:w-[19%]"
           src="./Images/newaremxy.png"
@@ -209,7 +210,7 @@ export const Footer = () => {
         />
         <hr />
 
-        <div className="flex gap-[20%] w-[261px] pt-[15px] ml-[8%] lg:gap-[40%]">
+        <div className="flex gap-[10%] w-[85%] pt-[15px] ml-[%] lg:gap-[10%] mx-auto">
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
               AremxyPlug
@@ -386,7 +387,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="a right- flex gap-[90px] ml-[8%] mt-[10%]  lg:gap-[120px]">
+        <div className=" right- flex gap-[90px] ml-[8%] mt-[10%]  lg:gap-[120px]">
           <div className="flex flex-col h-[52px] gap-[15px] ">
             <div className="text-[14px] lg:text-[25px]">Follow Us on</div>
             <div className="flex gap-[12px] lg:gap-[15px]">
@@ -430,10 +431,10 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" text-[9px] mx-[40%] mt-[5%] w-[100%] lg:text-[16px] ">
+        <div className=" text-[9px] mx-[30%] mt-[5%] w-[%] lg:text-[16px] ">
           ©AremxyPlug 2023. All Rights Reserved.
         </div>
-        <div className=" w-[702px] h-[30px] text-[7px] mx-[8%] mt-[2%] lg:text-[12px] lg:w-[1213px]">
+        <div className=" w-[] h-[30px] text-[7px] mx-[8%] mt-[2%] lg:text-[12px] lg:w-[px]">
           AremxyPlug is a business enterprise and telecommunication service
           provider company, not a bank. We offer telecom products, payments, and
           digital services. Banking services are provided by AremxyPlug’s
