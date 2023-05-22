@@ -265,9 +265,9 @@ const thirdItems = [
 
 const feedback = [
   <div className="bg-[#D9D9D9] h-[61px] w-[72px] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
+  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-75%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
+  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-150%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
+  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-225%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
 ];
 
 export const Home = () => {
@@ -275,7 +275,7 @@ export const Home = () => {
   const [secondDrop, setSecondDrop] = useState(false);
   const [buttonText, setButtonText] = useState("More");
   const [buttonTextTwo, setButtonTextTwo] = useState("More");
-  const [icon, setIcon] = useState(<RiArrowDropDownLine />);
+  // const [icon, setIcon] = useState(<RiArrowDropDownLine />);
 
   function handleClick() {
     setFirstDrop((prev) => !prev);
@@ -908,8 +908,8 @@ export const Home = () => {
       </div>
 
       {/* FEEDBACK */}
-      <div className="py-[15%]">
-        <div className="text-[#04177f] text-center font-semibold text-[20px]">
+      <div className="py-[15%] mx-[5%]">
+        <div className="text-[#04177f] text-center font-semibold text-[20px] lg:text-[30px] lg:font-bold mb-[5%]">
           Feedbacks
         </div>
         <AliceCarousel
