@@ -24,7 +24,9 @@ export const NavBar = () => {
         <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
           <ul className="flex flex-col gap-[20px]">
             <li>Home</li>
-            <li>Services</li>
+            <li>
+              <Link to={`/our-services`}>Services</Link>
+            </li>
             <li>About us</li>
             <li>Pricing</li>
             <li>Solutions</li>
@@ -45,7 +47,9 @@ export const NavBar = () => {
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/">Home</Link>
           </li>
-          <li className="text-[9px] lg:text-[16px]">Services</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/our-services">Services</Link>
+          </li>
           <li className="text-[9px] lg:text-[16px]">About us</li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
           <li className="text-[9px] lg:text-[16px]">Solutions</li>
