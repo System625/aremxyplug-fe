@@ -5,7 +5,9 @@ export const NavBar = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex justify-between p-[5%] md:hidden lg:hidden">
+      <div className="flex justify-between p-[5%] md:hidden lg:hidden" 
+ 
+      >
         <img
           className="w-[85px] h-[18px]"
           src="./Images/aremxy2.png"
@@ -19,7 +21,9 @@ export const NavBar = () => {
       </div>
 
       {/* Tablet & Desktop View */}
-      <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]">
+      <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]"
+ 
+      >
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
