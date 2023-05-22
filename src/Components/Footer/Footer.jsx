@@ -47,7 +47,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px] mb-[10%]">
+          <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold ">
               Product
             </div>
@@ -84,7 +84,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px] mb-[5%]">
+          <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Solutions
             </div>
@@ -108,7 +108,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[15px] ">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Resources
             </div>
@@ -118,7 +118,7 @@ export const Footer = () => {
             <div className="w-[40px] h-[13px] text-[9px]">FAQs</div>
           </div>
 
-          <div className="flex flex-col gap-[15px] mb-[8%]">
+          <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Contact us
             </div>
@@ -140,7 +140,7 @@ export const Footer = () => {
             <div className="w-[80px] h-[13px] text-[9px]">API status</div>
           </div>
 
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[15px] ">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Legal
             </div>
@@ -200,7 +200,6 @@ export const Footer = () => {
         </div>
       </div>
 
-
       {/* TABLET & DESKTOP VIEW */}
       <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] w-[]">
         <img
@@ -210,7 +209,7 @@ export const Footer = () => {
         />
         <hr />
 
-        <div className="flex gap-[10%] w-[85%] pt-[15px] ml-[%] lg:gap-[10%] mx-auto">
+        <div className="flex gap-[10%] w-[85%] pt-[15px] ml-[%] lg:gap-[100px] mx-auto">
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
               AremxyPlug
@@ -336,11 +335,11 @@ export const Footer = () => {
                 FAQs
               </div>
             </div>
-            <div className="flex flex-col gap-[15px] lg:gap-[25px]">
-              <div className="w-[81px] h-[13px] text-[14px] font-semibold lg:text-[16px]">
+            <div className="flex flex-col gap-[15px] lg:gap-[20px]">
+              <div className="w-[81px] h-[13px] text-[14px] font-semibold lg:text-[18px]">
                 Legal
               </div>
-              <div className="w-[90px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
+              <div className="w-[90px] h-[13px] text-[9px] lg:w-[100%] lg:text-[16px]">
                 Privacy Policy
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
