@@ -1,16 +1,14 @@
 import React from "react";
+import { Router } from "../../Router";
 import { Footer } from "../Footer/Footer";
 import { NavBar } from "../Navigation/NavBar";
-import { Home } from "../Screens/Home";
-import PaymentServices from "../PaymentServices/PaymentServices";
 
 export const Layout = () => {
   return (
     <div>
-      <NavBar />
-      <PaymentServices/>
+      <NavBar/>
       {/* Contents */}
-      {/* <Home /> */}
+      <Router/>
       {/* Contents */}
       <Footer />
     </div>

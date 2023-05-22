@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+  const [navOpen, setNavOpen] = useState(false);
   return (
+    //  bg-[#ffffff4a] 
     <>
       {/* Mobile View */}
-      <div className="flex justify-between p-[5%] md:hidden lg:hidden">
+      <div className=" sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
         <img
           className="w-[85px] h-[18px]"
           src="./Images/aremxy2.png"
           alt="/aremxyplug"
         />
-        <img
+        <img onClick={()=>setNavOpen((prev)=>!prev)}
           className="w-[30px] h-[17px]"
           src="./Images/aremxyNav.png"
           alt="/aremxyplug"
         />
       </div>
+
+      {navOpen && (
+        <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
+          <ul className="flex flex-col gap-[20px]">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About us</li>
+            <li>Pricing</li>
+            <li>Solutions</li>
+            <li>FAQs</li>
+            <li className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md">Contact Us</li>
+          </ul>
+        </div>
+      )}
 
       {/* Tablet & Desktop View */}
       <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]">
