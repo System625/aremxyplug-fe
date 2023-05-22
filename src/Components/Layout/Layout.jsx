@@ -1,15 +1,16 @@
 import React from "react";
+import { Router } from "../../Router";
 import { Footer } from "../Footer/Footer";
 import { NavBar } from "../Navigation/NavBar";
-import { Router } from "../../Router";
 
 export const Layout = () => {
   return (
     <div>
       <NavBar />
       {/* Contents */}
-     <Router/>
-   
+
+      <Router />
+
       {/* Contents */}
       <Footer />
     </div>
