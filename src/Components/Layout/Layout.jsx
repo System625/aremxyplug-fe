@@ -9,11 +9,7 @@ export const Layout = () => {
     <div>
       <NavBar/>
       {/* Contents */}
-<<<<<<< HEAD
-      <Router/>
-=======
       <Router />
->>>>>>> 6f1738d7747e9679b222efbdb84ad7657b5f27ae
       {/* Contents */}
       <Footer />
     </div>
