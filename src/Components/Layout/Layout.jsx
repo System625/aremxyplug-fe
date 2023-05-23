@@ -7,7 +7,7 @@ import { NavBar } from "../Navigation/NavBar";
 export const Layout = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar/>
       {/* Contents */}
       <Router />
       {/* Contents */}
