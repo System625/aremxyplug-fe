@@ -37,7 +37,9 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]">
+      <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]"
+ 
+      >
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
@@ -48,8 +50,13 @@ export const NavBar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="text-[9px] lg:text-[16px]">
+<<<<<<< HEAD
             <Link to={`/our-services`}>Services</Link>
             </li>
+=======
+            <Link to="/our-services">Services</Link>
+          </li>
+>>>>>>> 6f1738d7747e9679b222efbdb84ad7657b5f27ae
           <li className="text-[9px] lg:text-[16px]">About us</li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
           <li className="text-[9px] lg:text-[16px]">Solutions</li>

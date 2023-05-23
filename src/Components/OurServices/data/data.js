@@ -3,7 +3,7 @@ export const ourServiceDetails = [
         id:1,
         title: 'Telecom',
         message: 'Our Telecom services offers fast and secure connectivity for all your telecommunication needs. Whether you need to make calls, send messages, or access the internet, our telecom products and service has got you covered.',
-        link: 'our-services/telecom',
+        link: 'our-services/telecoms',
         image: require('./../images/telecom.png'),
         image_name: 'telecom_img'
     },
