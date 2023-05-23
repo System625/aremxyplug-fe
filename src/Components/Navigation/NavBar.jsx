@@ -50,13 +50,8 @@ export const NavBar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="text-[9px] lg:text-[16px]">
-<<<<<<< HEAD
-            <Link to={`/our-services`}>Services</Link>
-            </li>
-=======
             <Link to="/our-services">Services</Link>
           </li>
->>>>>>> 6f1738d7747e9679b222efbdb84ad7657b5f27ae
           <li className="text-[9px] lg:text-[16px]">About us</li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
           <li className="text-[9px] lg:text-[16px]">Solutions</li>
