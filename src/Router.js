@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, createBrowserRouter } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import { Home } from "./Components/Screens/Home/Home"
 import OurServices from "./Components/OurServices/OurServices";
 import PaymentServices from "./Components/PaymentServices/PaymentServices";
@@ -12,11 +12,11 @@ export const Router = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/our-services" element={<OurServices />} />
-        <Route path="/our-services/payment" element={<PaymentServices />}/>
+        <Route path="/our-services" element={<OurServices/>} />
+        <Route path="/our-services/payment" element={<PaymentServices/>}/>
         <Route path="/our-services/telecoms" element={<Telecoms/>} />
-        <Route path="/our-services/card-issuing" element={<CardIssuing/>} />
-        <Route path="/our-services/digital-services" element={<DigitalServices/>} />
+        <Route path="/our-services/card-issuing" element={<CardIssuing/>}/>
+        <Route path="/our-services/digital-services" element={<DigitalServices/>}/>
       </Routes>
     </div>
   );
