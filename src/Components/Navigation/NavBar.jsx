@@ -25,7 +25,7 @@ export const NavBar = () => {
           <ul className="flex flex-col gap-[20px]">
             <li>Home</li>
             <li>
-              <Link to={`/our-services`}>Services</Link>
+              <Link to="/our-services">Services</Link>
             </li>
             <li>About us</li>
             <li>Pricing</li>
