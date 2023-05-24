@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
+    //  bg-[#ffffff4a]
     <>
       {/* Mobile View */}
-      <div className="bg-[white] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
+      <div
+        className=" sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden"
+        style={{
+          zIndex: 999,
+        }}
+      >
         <img
           className="w-[85px] h-[18px]"
           src="./Images/aremxy2.png"
@@ -42,8 +48,12 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div className="sticky top-0 z-[50] bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:p-[1%] lg:px-[8%] ">
-
+      <div
+        className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]"
+        style={{
+          zIndex: 999,
+        }}
+      >
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
