@@ -26,7 +26,10 @@ export const NavBar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Services</li>
+            <li>
+              <Link to="/our-services">Services</Link>
+            </li>
+
             <li>About us</li>
             <li>Pricing</li>
             <li>Solutions</li>
@@ -40,6 +43,7 @@ export const NavBar = () => {
 
       {/* Tablet & Desktop View */}
       <div className="sticky top-0 z-[50] bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:p-[1%] lg:px-[8%] ">
+
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
@@ -49,7 +53,9 @@ export const NavBar = () => {
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/">Home</Link>
           </li>
-          <li className="text-[9px] lg:text-[16px]">Services</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/our-services">Services</Link>
+          </li>
           <li className="text-[9px] lg:text-[16px]">About us</li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
           <li className="text-[9px] lg:text-[16px]">Solutions</li>
