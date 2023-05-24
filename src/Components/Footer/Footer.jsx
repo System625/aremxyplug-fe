@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropUpLine } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
 import { ImFacebook2 } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
@@ -10,7 +11,21 @@ export const Footer = () => {
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
   const [thirdDrop, setThirdDrop] = useState(false);
-
+  const [buttonText, setButtonText] = useState("More");
+  const [buttonText2, setButtonText2] = useState("More");
+  const [buttonText3, setButtonText3] = useState("More");
+  function handleClick() {
+    setFirstDrop((prev) => !prev);
+    setButtonText((prevText) => (prevText === "More" ? "Less" : "More"));
+  }
+  function handleClick2() {
+    setSecondDrop((prev) => !prev);
+    setButtonText2((prevText) => (prevText === "More" ? "Less" : "More"));
+  }
+  function handleClick3() {
+    setThirdDrop((prev) => !prev);
+    setButtonText3((prevText) => (prevText === "More" ? "Less" : "More"));
+  }
   return (
     <>
       {/* MOBILE VIEW */}
@@ -22,7 +37,7 @@ export const Footer = () => {
         />
         <hr />
         <div className="flex flex-wrap gap-[20%] h-[] w-[261px] pt-[15px] mx-auto ">
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[15px] mb-[10%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               AremxyPlug
             </div>
@@ -41,9 +56,11 @@ export const Footer = () => {
                 </div>
               </div>
             )}
-            <div className="flex" onClick={() => setFirstDrop((prev) => !prev)}>
-              <div className="text-[9px] font-bold">More</div>
-              <RiArrowDropDownLine />
+            <div className="flex" onClick={handleClick}>
+              <div className="text-[9px] font-bold">{buttonText}</div>
+              <div className="w-[11px] ">
+                {!firstDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
             </div>
           </div>
 
@@ -75,12 +92,11 @@ export const Footer = () => {
                 </div>
               </div>
             )}
-            <div
-              className="flex"
-              onClick={() => setSecondDrop((prev) => !prev)}
-            >
-              <div className="text-[9px] font-bold">More</div>
-              <RiArrowDropDownLine />
+            <div className="flex" onClick={handleClick2}>
+              <div className="text-[9px] font-bold">{buttonText2}</div>
+              <div className="w-[11px] ">
+                {!secondDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
             </div>
           </div>
 
@@ -102,9 +118,11 @@ export const Footer = () => {
                 <div className="w-[100px] h-[13px] text-[9px]">Transfer</div>
               </div>
             )}
-            <div className="flex" onClick={() => setThirdDrop((prev) => !prev)}>
-              <div className="text-[9px] font-bold">More</div>
-              <RiArrowDropDownLine />
+            <div className="flex" onClick={handleClick3}>
+              <div className="text-[9px] font-bold">{buttonText3}</div>
+              <div className="w-[11px] ">
+                {!thirdDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
             </div>
           </div>
 
@@ -151,7 +169,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className=" flex gap-[30px] justify-center mt-[10%]">
+        <div className=" flex gap-[30px] justify-center mt-[10%] ml-[8%]">
           <div className="flex flex-col h-[52px] gap-[15px]">
             <div className="text-[10px]">Follow Us on</div>
             <div className="flex gap-[12px]">
@@ -179,9 +197,9 @@ export const Footer = () => {
             <div className="text-[6px] w-[143px]">
               Discover exclusive deals and accounts with our mobile experience.
             </div>
-            <div className="flex">
-              <img src="./Images/googleplay.png" alt="/" />
-              <img src="./Images/applestore.png" alt="/" />
+            <div className="flex gap-[15px]">
+              <img className="w-[35%]" src="./Images/google2.png" alt="/" />
+              <img className="w-[35%]" src="./Images/apple2.png" alt="/" />
             </div>
           </div>
         </div>

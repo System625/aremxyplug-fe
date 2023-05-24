@@ -265,10 +265,21 @@ const thirdItems = [
 ];
 
 const feedback = [
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-75%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-150%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
-  <div className="bg-[#D9D9D9] h-[61px] w-[72px] ml-[-225%] md:h-[135px] md:w-[160px] lg:h-[243px] lg:w-[288px]"></div>,
+  <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
+    1
+  </div>,
+  <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
+    2
+  </div>,
+  <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
+    3
+  </div>,
+  <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
+    4
+  </div>,
+  <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
+    5
+  </div>,
 ];
 
 export const Home = () => {
