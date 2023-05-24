@@ -6,6 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const items = [
   <div
@@ -22,7 +23,7 @@ const items = [
     </div>
   </div>,
   <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-20%] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-65%]"
+    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-20%] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-64%]"
     style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
   >
     <div className="font-medium lg:text-[24px]">Data Bundles</div>
@@ -129,7 +130,7 @@ const secondItems = [
     </div>
   </div>,
   <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-65%]"
+    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-64%]"
     style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
   >
     <div className="font-medium lg:text-[24px]">Global Virtual Accounts</div>
@@ -197,7 +198,7 @@ const thirdItems = [
     </div>
   </div>,
   <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:h-[276px] lg:w-[30%] lg:ml-[-65%]"
+    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:h-[276px] lg:w-[30%] lg:ml-[-64%]"
     style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
   >
     <div className="font-medium lg:text-[24px]">Social Media Marketing</div>
@@ -285,6 +286,12 @@ const feedback = [
 export const Home = () => {
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
+  const [thirdDrop, setThirdDrop] = useState(false);
+  const [fourthDrop, setFourthDrop] = useState(false);
+  const [fifthDrop, setFifthDrop] = useState(false);
+  const [sixDrop, setSixDrop] = useState(false);
+  const [seventhDrop, setSeventhDrop] = useState(false);
+  const [eightDrop, setEightDrop] = useState(false);
   const [buttonText, setButtonText] = useState("More");
   const [buttonTextTwo, setButtonTextTwo] = useState("More");
   const [telecomIcon, setTelecomIcon] = useState(true);
@@ -300,6 +307,11 @@ export const Home = () => {
     setSecondDrop((prev) => !prev);
     setButtonTextTwo((prevText) => (prevText === "More" ? "Less" : "More"));
   }
+
+  // function handleClickThree() {
+
+  // }
+
   return (
     <>
       <div className={styles.hero}>
@@ -902,7 +914,7 @@ export const Home = () => {
       "
       >
         <div className="text-[20px] text-[#04177f] text-center font-semibold lg:text-[30px] lg:font-bold">
-          Our Partners
+          Partners & Businesses
         </div>
         <img
           className="w-[60%] md:w-[50%] mx-auto lg:w-[30%]"
@@ -951,64 +963,166 @@ export const Home = () => {
 
       {/* FREQUENTLY ASKED QUESTIONS */}
       <div className="mx-[5%] mb-[25%]">
-        <div className="text-[#04177f] text-[25px] font-semibold text-center">
+        <div className="text-[#04177f] text-[15px] font-bold text-center md:text-[20px]">
           Frequently Asked Questions
         </div>
         <br />
         <div className="flex flex-col gap-[10px] md:gap-[20px]">
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl"
+                onClick={() => setThirdDrop((prev) => !prev)}
+              >
+                {!thirdDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                What are Global Virtual Accounts?
+              </div>
             </div>
-            <div>************************</div>
+            {thirdDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                Global Virtual Accounts are virtual bank accounts that allow
+                users to send, receive, and store money securely, without having
+                to open a physical bank account. They are designed to simplify
+                cross-border payments and reduce transaction costs for
+                businesses and individuals.
+              </div>
+            )}
           </div>
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl"
+                onClick={() => setFourthDrop((prev) => !prev)}
+              >
+                {!fourthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                Can I receive local and international bank transfers to my
+                global virtual accounts?
+              </div>
             </div>
-            <div>************************</div>
+            {fourthDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                Yes, you can receive both local and international bank transfers
+                to your global virtual account.
+              </div>
+            )}
           </div>
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl"
+                onClick={() => setFifthDrop((prev) => !prev)}
+              >
+                {!fifthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                How Automated is AremxyPlug's wallet to reflect payments
+                instantly?
+              </div>
             </div>
-            <div>************************</div>
+            {fifthDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                AremxyPlug's wallet system is fully automated and designed to
+                reflect payments instantly. Once a payment is made, it is
+                immediately reflected in your wallet balance.
+              </div>
+            )}
           </div>
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl"
+                onClick={() => setSixDrop((prev) => !prev)}
+              >
+                {!sixDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                How does the wallet system work?
+              </div>
             </div>
-            <div>************************</div>
+            {sixDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                The wallet system allows you to store funds securely and make
+                payments for goods and services. You can fund your wallet using
+                various payment methods, such as bank transfer, card payment, or
+                cash deposit.
+              </div>
+            )}
           </div>
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl"
+                onClick={() => setSeventhDrop((prev) => !prev)}
+              >
+                {!seventhDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                Can I send money from my wallet to another AremxyPlug user's
+                wallet?
+              </div>
             </div>
-            <div>************************</div>
+            {seventhDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                Yes, you can send money from your wallet to another AremxyPlug
+                user's wallet instantly and free of charge.
+              </div>
+            )}
           </div>
           <div
-            className="flex p-1 rounded-md md:p-4"
+            className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="text-[#04177f] text-xl">
-              <RiArrowDropDownLine />
+            <div className="flex ">
+              <div
+                className="text-[#04177f] text-2xl md:text-4xl "
+                onClick={() => setEightDrop((prev) => !prev)}
+              >
+                {!eightDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+              </div>
+
+              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+                How can I fulfill airtime top-ups, data bundles, and bill
+                payments after funding my wallet?
+              </div>
             </div>
-            <div>************************</div>
+            {eightDrop && (
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+                You can fulfill airtime top-ups, data bundles, and bill payments
+                by selecting the appropriate service from the AremxyPlug app or
+                website and entering the necessary information. The payment will
+                be deducted from your wallet balance.
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
+          <div className="flex justify-center items-center gap-[10px] ">
+            More
+            <AiOutlineArrowRight />
           </div>
         </div>
       </div>
