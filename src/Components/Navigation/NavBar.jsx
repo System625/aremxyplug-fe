@@ -8,7 +8,7 @@ export const NavBar = () => {
     <>
       {/* Mobile View */}
       <div
-        className=" sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden"
+        className="bg-[#ffffff] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden"
         style={{
           zIndex: 999,
         }}
@@ -48,12 +48,7 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div
-        className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]"
-        style={{
-          zIndex: 999,
-        }}
-      >
+      <div className="z-[55] sticky top-0 bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%] ">
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
