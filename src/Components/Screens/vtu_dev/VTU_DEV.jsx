@@ -421,7 +421,7 @@ const keyFeatures =[
   >Airtime Top-up</p>
 </div>
 <div className="flex ml-4 items-center my-4">
-  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  <img src="./images/vtu_dev/blueCheck.png" alt="blue check" 
   className="w-[28px] "
   />
   <p className="pl-4 text-xl"

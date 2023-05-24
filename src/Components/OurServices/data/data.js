@@ -35,7 +35,7 @@ export const ourServiceDetails = [
         id:5,
         title: 'VTU Development',
         message: "AremxyPlug is a company that has a team of technical experts that can easily and quickly design and develop a VTU platform to start your telecom business with services like airtime top-up, data bundles, education pins, TV subscription, and bills payment platform.",
-        link: 'our-services/vtu-development', //link for vtu-development 
+        link: 'VTU_DEV', //link for vtu-development 
         image: require('./../images/vtu-development.png'),
         image_name: 'vtu-development_img'
     },
