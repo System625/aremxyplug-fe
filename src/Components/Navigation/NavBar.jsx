@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className=" sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
+      <div className="bg-[white] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
         <img
           className="w-[85px] h-[18px]"
           src="./Images/aremxy2.png"
@@ -24,7 +24,7 @@ export const NavBar = () => {
         <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
           <ul className="flex flex-col gap-[20px]">
             <li>
-              <Link>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>Services</li>
             <li>About us</li>
@@ -39,7 +39,7 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div className="hidden md:flex justify-between p-[5%] mx-[2%] lg:p-[3%] lg:mx-[5%]">
+      <div className="sticky top-0 z-[50] bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:p-[1%] lg:px-[8%] ">
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"

@@ -1,3 +1,7 @@
-*body{
-font-family: "poppins";
+@font-face {
+    font-family: interFont;
+    src: url(./font/Inter/static/Inter-Regular.ttf);
+  }
+body, html{
+font-family: interFont;
 }
