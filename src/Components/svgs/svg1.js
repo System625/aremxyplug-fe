@@ -23,3 +23,26 @@ function DIGITAL_SERVICES_BG({props}) {
 }
 
 export default DIGITAL_SERVICES_BG
+
+
+
+
+
+export function VTU_PAY({props}) {
+  return (
+    <svg
+      width={380}
+      height={319}
+      viewBox="0 0 380 319"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M380 318.279c-29.03-21.331-57.973-42.736-82.819-57.521-24.759-14.859-45.42-23.097-77.153-26.995-31.733-3.825-74.711-3.237-92.757-20.523-18.046-17.285-11.246-52.519-29.64-75.689-18.395-23.171-61.984-34.278-81.948-55.168C-4.368 61.42-.794 30.747 2.78 0H380v318.279z"
+        fill="#90D7FF"
+      />
+    </svg>
+  )
+}
+

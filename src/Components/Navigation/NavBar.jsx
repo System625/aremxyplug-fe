@@ -4,16 +4,20 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
+    //  bg-[#ffffff4a]
     <>
       {/* Mobile View */}
-      <div className="bg-[white] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden">
-        <Link to="/">
-          <img
-            className="w-[85px] h-[18px]"
-            src="./Images/aremxy2.png"
-            alt="/aremxyplug"
-          />
-        </Link>
+      <div
+        className="bg-[#ffffff] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden"
+        style={{
+          zIndex: 999,
+        }}
+      >
+        <img
+          className="w-[85px] h-[18px]"
+          src="./Images/aremxy2.png"
+          alt="/aremxyplug"
+        />
         <img
           onClick={() => setNavOpen((prev) => !prev)}
           className="w-[30px] h-[17px]"
@@ -44,7 +48,7 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div className="sticky top-0 z-[50] bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:p-[1%] lg:px-[8%] ">
+      <div className="z-[55] sticky top-0 bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%] ">
         <img
           className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
           src="./Images/aremxy2.png"
