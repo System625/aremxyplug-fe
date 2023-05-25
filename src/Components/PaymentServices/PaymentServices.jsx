@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const PaymentServices = () => {
   return (
-    <div className='w-10/12 mx-auto pt-[120px] mb-[100px] md:pt-[140px] lg:pt-[213px]'>
+    <div className='w-[90%] mx-auto pt-[40%] lg:pt-[25%] md:pt-[10%] md:w-[84%]'>
       <PaymentServiceHeader/>
       <div className="w-full p-[10px] flex flex-col gap-[80px] bg-center bg-cover md:p-[20px] lg:p-[25px] md:gap-[120px] lg:gap-[150px]" style={{backgroundImage: `url(${bgImg})`}}>
         {/* row 1 start here*/}

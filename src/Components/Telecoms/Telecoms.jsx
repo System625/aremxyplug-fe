@@ -10,7 +10,7 @@ import mobileBg from './images/mobileBg.png'
 const Telecoms = () => {
   return (
     <>
-        <div className='w-10/12 mx-auto pt-[120px] md:pt-[140px] lg:pt-[213px]'>
+        <div className='w-[90%] mx-auto pt-[40%] lg:pt-[25%] md:pt-[10%] md:w-[84%]'>
             <TelecomsHeader/>
         </div>
         <div className="w-10/12 mx-auto mb-[80px]">
