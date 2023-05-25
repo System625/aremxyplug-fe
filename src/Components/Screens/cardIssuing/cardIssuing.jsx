@@ -11,7 +11,7 @@ const items = [
   <div
     onDragStart={handleDragStart}
     role="presentation"
-    className="w-[280px]  pr-4"
+    className="w-[280px]   pr-4 md:pr-8 "
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[320px] ">
       <div className="flex pl-2 space-x-4">
@@ -34,7 +34,7 @@ const items = [
   <div
     onDragStart={handleDragStart}
     role="presentation"
-    className="w-[280px]  pr-4"
+    className="w-[280px]  pr-4 md:pr-8"
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[320px]">
       <div className="flex pl-2 space-x-4">
@@ -56,7 +56,7 @@ const items = [
   <div
     onDragStart={handleDragStart}
     role="presentation"
-    className="w-[280px]  pr-4"
+    className="w-[280px] pr-4 md:pr-8"
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[320px]">
       <div className="flex pl-2 space-x-4">
@@ -83,7 +83,7 @@ const items = [
   <div
     onDragStart={handleDragStart}
     role="presentation"
-    className="w-[280px]  pr-4"
+    className="w-[280px] pr-4 md:pr-8"
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[320px]">
       <div className="flex pl-2 space-x-4">
@@ -107,7 +107,7 @@ const items = [
       </p>
     </div>
   </div>,
-  <div onDragStart={handleDragStart} role="presentation" className="w-[280px] ">
+  <div onDragStart={handleDragStart} role="presentation" className="w-[280px] pr-4 md:pr-8">
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[320px]">
       <div className="flex pl-2 space-x-4">
         <img

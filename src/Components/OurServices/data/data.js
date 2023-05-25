@@ -27,7 +27,7 @@ export const ourServiceDetails = [
         id:4,
         title: 'Digital Services',
         message: "We offer a variety of digital services that can be customized to fit your company's needs. Our services are affordable and designed to deliver outstanding results for your company. Our digital experts are devoted to developing your business and catering to your digital needs.",
-        link: 'our-services/digital-services', //link for digital services
+        link: 'DigitalServices', //link for digital services
         image: require('./../images/digital-services.png'),
         image_name: 'digital-services_img'
     },

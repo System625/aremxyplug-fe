@@ -4,6 +4,7 @@ import { primaryColor } from "../cardIssuing/cardIssuing";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { VTU_PAY } from "../../svgs/svg1";
 import { RxDotFilled } from 'react-icons/rx';
+import {BsFillCheckCircleFill} from 'react-icons/bs'
 
 function VTU_DEV() {
 
@@ -14,6 +15,177 @@ const DifferenceHead = [
   {text:"Venture"},
   {text:`Telecom Pro`},
   {text:"Unlimited"},
+]
+
+const differenceContent = [
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
+  {
+    text:"Airtime Top-up",
+    starter:<div className="flex justify-center border-l-[1px] border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    merchant:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    venture:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><p>yes</p></div>,
+    telecom:<div className="flex justify-center  border-y-[1px] border-gray-500 py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+    unlimited:<div className="border-r-[1px] border-y-[1px] border-gray-500 flex justify-center py-2"><BsFillCheckCircleFill color="#2ED173" size={25}/></div>,
+  },
 ]
 
 const keyFeatures =[
@@ -205,7 +377,9 @@ const keyFeatures =[
 {/* VTU Payment plans */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4 justify-center">
           <div className="relative myCardShadow h-[700px] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
-            <VTU_PAY />
+            <VTU_PAY
+            color="#90D7FF"
+            />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
 <p className="text-center font-bold text-3xl my-8">Starter</p>
@@ -252,7 +426,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Data Bundles</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -262,7 +436,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Bills Payments</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -272,7 +446,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Wallet System</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -282,16 +456,18 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Automatic Pricing</p>
 </div>
 
             </div>
           </div>
           <div className="relative myCardShadow h-[700px] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
-            <VTU_PAY />
+            <VTU_PAY
+            color="#dce4ff"
+            />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
-<p className="text-center font-bold text-3xl my-8">Starter</p>
+<p className="text-center font-bold text-3xl my-8">Merchant</p>
 
 <div className="flex justify-center">
 <p
@@ -301,7 +477,7 @@ const keyFeatures =[
      
       }}
     >
-    Free
+    49,990
     </p>
 </div>
 
@@ -335,7 +511,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Data Bundles</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -345,7 +521,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Bills Payment</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -355,7 +531,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Wallet System</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -365,16 +541,38 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >NGN Virtual Accounts</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >24/7 Merchant Support</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >Plus 1year .com Domain</p>
 </div>
 
             </div>
           </div>
           <div className="relative myCardShadow h-[700px] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
-            <VTU_PAY />
+            <VTU_PAY 
+            color="#edd6ff"
+            />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
-<p className="text-center font-bold text-3xl my-8">Starter</p>
+<p className="text-center font-bold text-3xl my-8">Venture</p>
 
 <div className="flex justify-center">
 <p
@@ -384,7 +582,7 @@ const keyFeatures =[
      
       }}
     >
-    Free
+   149,990
     </p>
 </div>
 
@@ -408,7 +606,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Everything in Merchant</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -418,7 +616,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Everything in Merchant</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -428,7 +626,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Education Pins</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -438,7 +636,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Airtime Conversion</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -448,16 +646,39 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Card Payment Option</p>
 </div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >24/7 Venture Support</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >Plus 1year .com Hosting & Domain</p>
+</div>
+
 
             </div>
           </div>
           <div className="relative myCardShadow h-[700px] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
-            <VTU_PAY />
+            <VTU_PAY 
+            color="#feeebe"
+            />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
-<p className="text-center font-bold text-3xl my-8">Starter</p>
+<p className="text-center font-bold text-3xl my-8">Telecom Pro</p>
 
 <div className="flex justify-center">
 <p
@@ -467,7 +688,7 @@ const keyFeatures =[
      
       }}
     >
-    Free
+    399,990
     </p>
 </div>
 
@@ -491,7 +712,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Everything in Venture</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -501,7 +722,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Bulk SMS</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -511,7 +732,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Smile Airtime & Data</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -521,7 +742,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Mobile App & Playstore Upload</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -531,16 +752,38 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Live Chat Integration</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >24/7 Support Channel</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >Plus 1year .com Hosting & Domain</p>
 </div>
 
             </div>
           </div>
           <div className="relative myCardShadow h-[700px] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
-            <VTU_PAY />
+          <VTU_PAY 
+            color="#dbffd2"
+            />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
-<p className="text-center font-bold text-3xl my-8">Starter</p>
+<p className="text-center font-bold text-3xl my-8">Unlimited</p>
 
 <div className="flex justify-center">
 <p
@@ -550,7 +793,7 @@ const keyFeatures =[
      
       }}
     >
-    Free
+    599,990
     </p>
 </div>
 
@@ -571,7 +814,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Everything in Telecom pro</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -581,7 +824,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Spectranet Data</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -591,7 +834,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Recharge Card Printing</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -601,7 +844,7 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Android & iOS Mobile App</p>
 </div>
 <div className="flex ml-4 items-center my-4">
   <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
@@ -611,7 +854,27 @@ const keyFeatures =[
   style={{
     
   }}
-  >Airtime Top-up</p>
+  >Appstore Upload</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >Dedicated Manager</p>
+</div>
+<div className="flex ml-4 items-center my-4">
+  <img src="./Images/vtu_dev/blueCheck.png" alt="blue check" 
+  className="w-[28px] "
+  />
+  <p className="pl-4 text-xl"
+  style={{
+    
+  }}
+  >Plus 1year .com Hosting & Domain</p>
 </div>
 
             </div>
@@ -693,7 +956,7 @@ const keyFeatures =[
   {
 
 DifferenceHead.map((item,index)=>(
-  <p className={`font-bold text-lg text-zinc-900 ${index === 0 ? "col-span-2":"col-span-1"}`}
+  <p className={` font-bold text-lg text-zinc-900 ${index === 0 ? "col-span-2":"col-span-1 text-center"}`}
   key={index.toString()}
  
   >
@@ -702,13 +965,50 @@ DifferenceHead.map((item,index)=>(
 ))
   }
 
-  
 
 </div>
 
 
+
+
+  {
+
+differenceContent.map((item,index)=>(
+  <div className="mt-4 grid grid-cols-7 min-w-[800px]">
+  <p className={` font-bold text-lg text-zinc-900 col-span-2 text-center"}`}
+  key={index.toString()}
+ 
+  >
+    {item.text}
+  </p>
+  {item.starter}
+  {item.merchant}
+  {item.venture}
+  {item.telecom}
+  {item.unlimited}
+ 
+  </div>
+))
+  }
+
+
 </div>
 
+
+
+<p
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold lg:tracking-wider  text-center mt-[70px] mb-[50px]"
+          style={{
+            color: primaryColor,
+          }}
+        >
+        Do you need help choosing a plan?
+        </p>
+<div className="flex justify-center pb-[100px]">
+<Bluebutton
+text="contacts"
+/>
+</div>
       </div>
 
 
