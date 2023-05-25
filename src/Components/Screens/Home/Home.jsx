@@ -7,263 +7,8 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
-
-const items = [
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] lg:w-[30%] lg:h-[276px]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Airtime Top Up</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      With just a few clicks. Never run out of airtime. Simply top up your phone
-      online from the comfort of your home.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-20%] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-64%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Data Bundles</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Our Data Bundles service has got you covered with flexible plans to suit
-      your needs and stream like never before!
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%]  w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-40%] md:w-[40%] md:p-[3%] md:ml-[-110%] lg:w-[30%] lg:h-[276px] lg:ml-[-130%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Education Pins</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      With our Education Pins service, you can access your exam results in just
-      a few clicks.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-60%] md:w-[40%] md:p-[3%] md:ml-[-165%] lg:w-[30%] lg:h-[276px] lg:ml-[-195%] lg:gap-[18px]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">TV Subscription</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Enjoy unlimited streaming on multiple channels. Sign up now and never miss
-      your favorite show again!
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-80%] md:w-[40%] md:p-[3%] md:ml-[-220%] lg:w-[30%] lg:h-[276px] lg:ml-[-260%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Electricity Bills</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Keep track of your bills and make sure you never miss a payment. Try our
-      bills payment service right away to make life easier.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-100%] md:w-[40%] md:p-[3%] md:ml-[-275%] lg:w-[30%] lg:h-[276px] lg:ml-[-325%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Airtime Conversion</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      You can quickly convert your bulk airtime to get cash to your wallet or
-      bank account in just few minutes.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-120%] md:w-[40%] md:p-[3%] md:ml-[-330%] lg:w-[30%] lg:h-[276px] lg:ml-[-390%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Bulk SMS</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Try our bulk SMS service now and take your communication to the next
-      level.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] ml-[-140%] md:w-[40%] md:p-[3%] md:ml-[-385%] lg:w-[30%] lg:h-[276px] lg:ml-[-455%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Recharge Card Printing</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Try our RCP service today, print recharge cards with your business name
-      and make a resell without any hassle.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Buy Now
-    </div>
-  </div>,
-];
-
-const secondItems = [
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] lg:w-[30%] lg:h-[276px]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Wallet System</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      You can conveniently store, send, and receive money without any hassle by
-      using our user-friendly wallet system.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Explore
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:w-[30%] lg:h-[276px] lg:ml-[-64%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Global Virtual Accounts</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Try our global virtual accounts services today and experience hassle-free
-      banking at your fingertips.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Explore
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-40%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-110%] lg:w-[30%] lg:h-[276px] lg:ml-[-130%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Card Payment</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      Whether you're shopping online or in-store, our card payment solutions
-      offer fast and hassle-free transactions.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Explore
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-60%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-165%] lg:w-[30%] lg:h-[276px] lg:ml-[-195%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Money Transfer</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      With our dependable money transfer services, you can send and receive
-      money without any hassle.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Explore
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-80%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-220%] lg:w-[30%] lg:h-[276px] lg:ml-[-260%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">International Payment</div>
-    <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
-      With our international payment structure, you can send and receive money
-      from anywhere in the world.
-    </div>
-    <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Explore
-    </div>
-  </div>,
-];
-
-const thirdItems = [
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] lg:h-[276px] lg:w-[30%] "
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Content Marketing</div>
-    <div className="text-justify text-[12px] lg:text-[16px]">
-      Content marketing is a powerful tool for businesses looking to connect
-      with their audience and drive engagement.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-20%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-54%] lg:h-[276px] lg:w-[30%] lg:ml-[-64%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Social Media Marketing</div>
-    <div className="text-justify text-[12px] lg:text-[16px]">
-      Social media marketing can be an effective way to reach a wide audience
-      and build brand awareness.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[8px] h-[190px] m-[2%] ml-[-40%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-110%] lg:h-[276px] lg:w-[30%] lg:ml-[-130%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">SEO Marketing</div>
-    <div className="text-justify text-[12px] lg:text-[16px]">
-      SEO is the practice of optimizing your website and its content to improve
-      its visibility and ranking on search engine results pages.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-60%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-165%] lg:h-[276px] lg:w-[30%] lg:ml-[-195%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Email Marketing</div>
-    <div className="text-justify text-[12px] lg:text-[16px]">
-      Your business needs an email marketing strategy that boost sales and
-      create a bond with your customers.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-80%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-220%] lg:h-[276px] lg:w-[30%] lg:ml-[-260%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Product Design</div>
-    <div className="text-justify text-[12px] lg:text-[16px]">
-      Product design is the process of identifying a market opportunity, clearly
-      defining the problem, and validating the solution with real user
-      interfaces.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-  <div
-    className="flex flex-col justify-between gap-[10px] h-[190px] m-[2%] ml-[-100%] w-[70%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[40%] md:p-[3%] md:ml-[-275%] lg:h-[276px] lg:w-[30%] lg:ml-[-325%]"
-    style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
-  >
-    <div className="font-medium lg:text-[24px]">Graphic Design</div>
-    <div className="tracking- text-justify text-[12px] lg:text-[16px]">
-      Graphic design is the creation of visual compositions to solve problems
-      and communicate ideas through typography, imagery, color, and form.
-    </div>
-    <div className="bg-[#04177f] w-[35%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-      Learn More...
-    </div>
-  </div>,
-];
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const feedback = [
   <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
@@ -282,6 +27,45 @@ const feedback = [
     5
   </div>,
 ];
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 4,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 4,
+  },
+};
+const responsive2 = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1.5,
+  },
+};
 
 export const Home = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -307,10 +91,6 @@ export const Home = () => {
     setSecondDrop((prev) => !prev);
     setButtonTextTwo((prevText) => (prevText === "More" ? "Less" : "More"));
   }
-
-  // function handleClickThree() {
-
-  // }
 
   return (
     <>
@@ -676,9 +456,9 @@ export const Home = () => {
       </div>
 
       {/* SERVICES CONTINUED */}
-      <div className="px-[5%] pt-[10%] lg:px-[8%] lg:py-[0%] lg:pt-[5%]">
+      <div className="px-[5%] pt-[10%] lg:px-[8%] lg:pt-[5%] ">
         <div className="">
-          <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-10 text-[#04177f]">
+          <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-[44px] text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
               Telecom Services
             </div>
@@ -697,17 +477,142 @@ export const Home = () => {
         </div>
         {/* <br /> */}
         <br />
+
         {telecomIcon && (
-          <AliceCarousel
-            mouseTracking
-            disableDotsControls
-            // autoHeight
-            items={items}
-          />
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            responsive={responsive2}
+            autoPlay
+            infinite={true}
+            keyBoardControl={true}
+            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            transitionDuration={1000}
+            showDots
+            // renderDotsOutside
+          >
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Airtime Top Up</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                With just a few clicks. Never run out of airtime. Simply top up
+                your phone online from the comfort of your home.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Data Bundles</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Our Data Bundles service has got you covered with flexible plans
+                to suit your needs and stream like never before!
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:h-[276px] lg:w-[359px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Education Pins</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                With our Education Pins service, you can access your exam
+                results in just a few clicks.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] lg:gap-[18px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">TV Subscription</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Enjoy unlimited streaming on multiple channels. Sign up now and
+                never miss your favorite show again!
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF] md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Electricity Bills
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Keep track of your bills and make sure you never miss a payment.
+                Try our bills payment service right away to make life easier.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Airtime Conversion
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                You can quickly convert your bulk airtime to get cash to your
+                wallet or bank account in just few minutes.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Bulk SMS</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Try our bulk SMS service now and take your communication to the
+                next level.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Recharge Card Printing
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Try our RCP service today, print recharge cards with your
+                business name and make a resell without any hassle.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Buy Now
+              </div>
+            </div>
+          </Carousel>
         )}
       </div>
 
-      <div className="px-[5%] pt-[10%] lg:px-[8%] lg:py-[0%]">
+      <div className="px-[5%] pt-[10%] lg:px-[8%] lg:pb-[5%]">
         <div className="">
           <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-10 text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
@@ -729,18 +634,93 @@ export const Home = () => {
         <br />
         {/* <br /> */}
         {paymentIcon && (
-          <AliceCarousel
-            mouseTracking
-            disableDotsControls
-            // autoHeight
-            items={secondItems}
-          />
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            responsive={responsive2}
+            autoPlay
+            infinite={true}
+            keyBoardControl={true}
+            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            transitionDuration={1000}
+            showDots
+          >
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Wallet System</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                You can conveniently store, send, and receive money without any
+                hassle by using our user-friendly wallet system.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Explore
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Global Virtual Accounts
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Try our global virtual accounts services today and experience
+                hassle-free banking at your fingertips.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Explore
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF]  md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Card Payment</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                Whether you're shopping online or in-store, our card payment
+                solutions offer fast and hassle-free transactions.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Explore
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Money Transfer</div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                With our dependable money transfer services, you can send and
+                receive money without any hassle.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Explore
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                International Payment
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+                With our international payment structure, you can send and
+                receive money from anywhere in the world.
+              </div>
+              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Explore
+              </div>
+            </div>
+          </Carousel>
         )}
       </div>
 
-      <div className="px-[5%] py-[10%] lg:px-[8%] lg:py-[0%]">
+      <div className="px-[5%] py-[10%] lg:px-[8%] lg:pb-[5%]">
         <div className="">
-          <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-10 text-[#04177f]">
+          <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-[75px] text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
               Digital Services
             </div>
@@ -760,12 +740,103 @@ export const Home = () => {
         <br />
         {/* <br /> */}
         {digitalIcon && (
-          <AliceCarousel
-            mouseTracking
-            disableDotsControls
-            // autoHeight
-            items={thirdItems}
-          />
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            responsive={responsive2}
+            autoPlay
+            infinite={true}
+            keyBoardControl={true}
+            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            transitionDuration={1000}
+            showDots
+          >
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:w-[206px] lg:w-[359px] md:p-[3%] lg:h-[276px]  "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Content Marketing
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px]">
+                Content marketing is a powerful tool for businesses looking to
+                connect with their audience and drive engagement.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between  h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">
+                Social Media Marketing
+              </div>
+              <div className="text-justify text-[12px] lg:text-[16px]">
+                Social media marketing can be an effective way to reach a wide
+                audience and build brand awareness.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between  h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">SEO Marketing</div>
+              <div className="text-justify text-[12px] lg:text-[16px]">
+                SEO is the practice of optimizing your website and its content
+                to improve its visibility and ranking on search engine results
+                pages.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px] "
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Email Marketing</div>
+              <div className="text-justify text-[12px] lg:text-[16px]">
+                Your business needs an email marketing strategy that boost sales
+                and create a bond with your customers.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Product Design</div>
+              <div className="text-justify text-[12px] lg:text-[16px]">
+                Product design is the process of identifying a market
+                opportunity, clearly defining the problem, and validating the
+                solution with real user interfaces.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+            <div
+              className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF]  md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
+              style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
+            >
+              <div className="font-medium lg:text-[24px]">Graphic Design</div>
+              <div className="tracking- text-justify text-[12px] lg:text-[16px]">
+                Graphic design is the creation of visual compositions to solve
+                problems and communicate ideas through typography, imagery,
+                color, and form.
+              </div>
+              <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                Learn More...
+              </div>
+            </div>
+          </Carousel>
         )}
       </div>
 
@@ -913,14 +984,40 @@ export const Home = () => {
         className="flex flex-col gap-[20px] py-[20%] md:py-[5%]
       "
       >
-        <div className="text-[20px] text-[#04177f] text-center font-semibold lg:text-[30px] lg:font-bold">
+        <div className="mb-[3%] text-[20px] text-[#04177f] text-center font-semibold lg:text-[30px] lg:font-bold">
           Partners & Businesses
         </div>
-        <img
-          className="w-[60%] md:w-[50%] mx-auto lg:w-[30%]"
-          src="./Images/network.png"
-          alt="/"
-        />
+
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          responsive={responsive}
+          autoPlay
+          infinite={true}
+          removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+          transitionDuration={1000}
+        >
+          <img
+            className="w-[40.11px] h-[41.83px] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px] mx-auto "
+            src="./Images/mtn.png"
+            alt="/"
+          />
+          <img
+            className="w-[40.11px] h-[41.83px] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px] mx-auto "
+            src="./Images/airtel.png"
+            alt="/"
+          />
+          <img
+            className="w-[40.11px] h-[41.83px] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px] mx-auto "
+            src="./Images/glo.png"
+            alt="/"
+          />
+          <img
+            className="w-[38px] h-[41px] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px] mx-auto"
+            src="./Images/9mobile.png"
+            alt="/"
+          />
+        </Carousel>
       </div>
 
       <div className="px-[5%] py-[5%] flex flex-col gap-[20px] bg-[#04177f] text-[#ffffff] md:flex-row md:gap-[70px] md:jsutfiy-center md:items-center lg:gap-[90px] lg:tracking-widest ">
@@ -956,7 +1053,10 @@ export const Home = () => {
           mouseTracking
           disableButtonsControls
           items={feedback}
-          swipeExtraPadding
+          autoPlay
+          autoPlayInterval={1000}
+          infinite
+          // swipeExtraPadding
           // touchTracking
         />
       </div>
@@ -972,15 +1072,15 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl"
-                onClick={() => setThirdDrop((prev) => !prev)}
-              >
+            <div
+              className="flex "
+              onClick={() => setThirdDrop((prev) => !prev)}
+            >
+              <div className="text-[#04177f] text-2xl md:text-4xl">
                 {!thirdDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px] ">
                 What are Global Virtual Accounts?
               </div>
             </div>
@@ -998,15 +1098,15 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl"
-                onClick={() => setFourthDrop((prev) => !prev)}
-              >
+            <div
+              className="flex "
+              onClick={() => setFourthDrop((prev) => !prev)}
+            >
+              <div className="text-[#04177f] text-2xl md:text-4xl">
                 {!fourthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px] ">
                 Can I receive local and international bank transfers to my
                 global virtual accounts?
               </div>
@@ -1022,15 +1122,15 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl"
-                onClick={() => setFifthDrop((prev) => !prev)}
-              >
+            <div
+              className="flex "
+              onClick={() => setFifthDrop((prev) => !prev)}
+            >
+              <div className="text-[#04177f] text-2xl md:text-4xl">
                 {!fifthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px] ">
                 How Automated is AremxyPlug's wallet to reflect payments
                 instantly?
               </div>
@@ -1047,15 +1147,12 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl"
-                onClick={() => setSixDrop((prev) => !prev)}
-              >
+            <div className="flex " onClick={() => setSixDrop((prev) => !prev)}>
+              <div className="text-[#04177f] text-2xl md:text-4xl">
                 {!sixDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px] ">
                 How does the wallet system work?
               </div>
             </div>
@@ -1072,15 +1169,15 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl"
-                onClick={() => setSeventhDrop((prev) => !prev)}
-              >
+            <div
+              className="flex "
+              onClick={() => setSeventhDrop((prev) => !prev)}
+            >
+              <div className="text-[#04177f] text-2xl md:text-4xl">
                 {!seventhDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px]">
                 Can I send money from my wallet to another AremxyPlug user's
                 wallet?
               </div>
@@ -1096,15 +1193,15 @@ export const Home = () => {
             className="flex flex-col p-1 rounded-md md:p-4 "
             style={{ boxShadow: "0px 0px 11.14427px rgba(28, 12, 249, 0.5)" }}
           >
-            <div className="flex ">
-              <div
-                className="text-[#04177f] text-2xl md:text-4xl "
-                onClick={() => setEightDrop((prev) => !prev)}
-              >
+            <div
+              className="flex "
+              onClick={() => setEightDrop((prev) => !prev)}
+            >
+              <div className="text-[#04177f] text-2xl md:text-4xl ">
                 {!eightDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] lg:text-[25px]">
+              <div className="flex font-bold text-[15px] md:text-[20px]">
                 How can I fulfill airtime top-ups, data bundles, and bill
                 payments after funding my wallet?
               </div>

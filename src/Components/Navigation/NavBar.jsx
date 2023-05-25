@@ -13,35 +13,50 @@ export const NavBar = () => {
           zIndex: 999,
         }}
       >
-        <img
-          className="w-[85px] h-[18px]"
-          src="./Images/aremxy2.png"
-          alt="/aremxyplug"
-        />
+        <Link to="/">
+          {" "}
+          <img
+            className="w-[85px] h-[18px]"
+            src="./Images/aremxy2.png"
+            alt="/aremxyplug"
+          />
+        </Link>
         <img
           onClick={() => setNavOpen((prev) => !prev)}
           className="w-[30px] h-[17px]"
           src="./Images/aremxyNav.png"
           alt="/aremxyplug"
         />
+        {/* <div>XXX</div> */}
       </div>
 
       {navOpen && (
         <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
           <ul className="flex flex-col gap-[20px]">
-            <li>
+            <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link to="/our-services">Services</Link>
             </li>
 
-            <li>About us</li>
-            <li>Pricing</li>
-            <li>Solutions</li>
-            <li>FAQs</li>
-            <li className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md">
-              Contact Us
+            <li onClick={() => setNavOpen((prev) => !prev)}>
+              <Link>About us</Link>
+            </li>
+            <li onClick={() => setNavOpen((prev) => !prev)}>
+              <Link>Pricing</Link>
+            </li>
+            <li onClick={() => setNavOpen((prev) => !prev)}>
+              <Link>Solutions</Link>
+            </li>
+            <li onClick={() => setNavOpen((prev) => !prev)}>
+              <Link>FAQs</Link>
+            </li>
+            <li
+              onClick={() => setNavOpen((prev) => !prev)}
+              className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md"
+            >
+              <Link>Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -49,11 +64,13 @@ export const NavBar = () => {
 
       {/* Tablet & Desktop View */}
       <div className="z-[55] sticky top-0 bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%] ">
-        <img
-          className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
-          src="./Images/aremxy2.png"
-          alt="/aremxyplug"
-        />
+        <Link to="/">
+          <img
+            className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
+            src="./Images/aremxy2.png"
+            alt="/aremxyplug"
+          />
+        </Link>
         <ul className="flex gap-[31px] items-center lg:gap-[55px]">
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/">Home</Link>
