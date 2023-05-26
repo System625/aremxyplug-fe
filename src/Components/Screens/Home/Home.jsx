@@ -322,7 +322,7 @@ export const Home = () => {
                 to both individuals and businesses.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                <Link to="/our-services/card-issuing">Learn More</Link>
+                <Link to="CardIssuing">Learn More</Link>
               </div>
             </div>
           </div>
@@ -342,7 +342,7 @@ export const Home = () => {
                 fit your company's needs.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                <Link to="/our-services/digital-services">Learn More</Link>
+                <Link to="DigitalServices">Learn More</Link>
               </div>
             </div>
           </div>
@@ -361,7 +361,7 @@ export const Home = () => {
                 bundles, and bills payment platform.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                <Link to="/VTU_DEV">Learn More</Link>
+                <Link to="VTU_DEV">Learn More</Link>
               </div>
             </div>
           </div>
