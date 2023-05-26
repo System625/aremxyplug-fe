@@ -9,6 +9,7 @@ import { AiFillPlusCircle } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const feedback = [
   <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
@@ -283,7 +284,7 @@ export const Home = () => {
                 purchase.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+                <Link to="/our-services/telecoms">Learn More</Link>
               </div>
             </div>
           </div>
@@ -302,7 +303,7 @@ export const Home = () => {
                 of their finances.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+                <Link to="/our-services/payment">Learn More</Link>
               </div>
             </div>
           </div>
@@ -321,7 +322,7 @@ export const Home = () => {
                 to both individuals and businesses.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+                <Link to="/our-services/card-issuing">Learn More</Link>
               </div>
             </div>
           </div>
@@ -341,7 +342,7 @@ export const Home = () => {
                 fit your company's needs.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+                <Link to="/our-services/digital-services">Learn More</Link>
               </div>
             </div>
           </div>
@@ -360,7 +361,7 @@ export const Home = () => {
                 bundles, and bills payment platform.
               </div>
               <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+                <Link to="/VTU_DEV">Learn More</Link>
               </div>
             </div>
           </div>
@@ -402,7 +403,7 @@ export const Home = () => {
                   to fit your company's needs.
                 </div>
                 <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  Learn More
+                  <Link to="/our-services/digital-services">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -419,7 +420,7 @@ export const Home = () => {
                   data bundles, and bills payment platform.
                 </div>
                 <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  Learn More
+                  <Link to="/VTU_DEV">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -612,7 +613,7 @@ export const Home = () => {
         )}
       </div>
 
-      <div className="px-[5%] pt-[10%] lg:px-[8%] lg:pb-[5%]">
+      <div className="px-[5%] pt-[20%] lg:px-[8%] lg:pt-[5%]">
         <div className="">
           <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-10 text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
@@ -718,7 +719,7 @@ export const Home = () => {
         )}
       </div>
 
-      <div className="px-[5%] py-[10%] lg:px-[8%] lg:pb-[5%]">
+      <div className="px-[5%] pt-[20%] pb-[10%] lg:px-[8%] lg:pt-[5%]">
         <div className="">
           <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-[75px] text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
@@ -1063,7 +1064,7 @@ export const Home = () => {
 
       {/* FREQUENTLY ASKED QUESTIONS */}
       <div className="mx-[5%] mb-[25%]">
-        <div className="text-[#04177f] text-[15px] font-bold text-center md:text-[20px]">
+        <div className="text-[#04177f] text-[15px] font-bold text-center md:text-[20px] lg:text-[30px]">
           Frequently Asked Questions
         </div>
         <br />
