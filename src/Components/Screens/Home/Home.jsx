@@ -269,7 +269,7 @@ export const Home = () => {
           Our Services
         </div>
         <div className="md:grid md:grid-cols-2 flex flex-col gap-[15px] md:gap-y-[35px]">
-          <div className="flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[28%] h-[80px] lg:w-[40%] lg:h-[120px]"
               src="./Images/telecom.png"
@@ -288,7 +288,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="flex items-center gap-[5%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[34%] h-[75px] lg:w-[30%] lg:h-[90px]"
               src="./Images/payment.png"
@@ -307,7 +307,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-[4%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[30%] h-[55px] lg:w-[30%] lg:h-[90px]"
               src="./Images/cardissuing.png"
@@ -327,7 +327,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="hidden sm:flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="hidden sm:flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[28%] h-[80px] lg:w-[40%] lg:h-[120px]"
               src="./Images/digital.png"
@@ -346,7 +346,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="hidden sm:flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="hidden sm:flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[28%] h-[80px] md:h-[60px] lg:w-[30%] lg:h-[90px]"
               src="./Images/VTU.png"
@@ -365,7 +365,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="hidden sm:flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+          <div className="hidden sm:flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
             <img
               className="w-[28%] h-[80px] lg:w-[30%] lg:h-[90px]"
               src="./Images/Business.png"
@@ -388,9 +388,9 @@ export const Home = () => {
 
         {secondDrop && (
           <>
-            <div className="flex items-center gap-[3%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+            <div className="flex items-center gap-[10%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
               <img
-                className="w-[28%] h-[80px]"
+                className="w-[30%] h-[80px]"
                 src="./Images/digital.png"
                 alt="/"
               />
@@ -407,9 +407,9 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+            <div className="flex items-center gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
               <img
-                className="w-[25%] h-[60px]"
+                className="w-[28%] h-[60px]"
                 src="./Images/vtu.png"
                 alt="/"
               />
@@ -424,7 +424,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-[2%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
+            <div className="flex gap-[9%] bg-[#E2F3FF] p-[5%] mx-[5%] rounded-md">
               <img
                 className="w-[28%] h-[80px]"
                 src="./Images/Business.png"
@@ -867,7 +867,7 @@ export const Home = () => {
       {/* CROSS-BORDER PAYMENT */}
       <div className="mx-[5%] flex flex-col gap-[30px] mt-[10%] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%] lg:gap-[0%]">
         <div className="">
-          <div className="text-[20px] text-[#04177F] text-center font-medium mb-[3%] md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+          <div className="text-[20px] text-[#04177F] text-center font-medium mb-[5%] md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Cross-border Payment
           </div>
           <div className="text-justify text-[12px] md:text-[10.61px] md:w-[208px] lg:text-[18px] lg:w-[40%] ">
@@ -886,7 +886,7 @@ export const Home = () => {
       {/* CURRENCY CONVERSION */}
       <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[15%]">
         <div className="">
-          <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Currency Conversion
           </div>
           <div className="text-justify text-[12px] md:text-[10.61px] md:w-[60%] lg:text-[18px] lg:w-[50%]">
@@ -912,7 +912,7 @@ export const Home = () => {
       {/* MULTI-CURRENCY WALLETS */}
       <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%]">
         <div className="">
-          <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Multi-Currency Wallets
           </div>
           <div className="text-justify text-[12px] md:text-[10.61px] md:w-[206px] lg:text-[18px] lg:w-[55%] lg:">
