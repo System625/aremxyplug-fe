@@ -3,14 +3,15 @@ import { primaryColor } from "../cardIssuing/cardIssuing";
 import Bluebutton from "../../bluebutton/Bluebutton";
 function DigitalServices() {
   return (
-    <div>
+    <div >
       {/* digitalServicesBG1 */}
 
-      <div className="overflow-hidden h-[950px] sm:h-[1100px] md:h-[500px] lg:h-[600px] xl:h-[650px] 2xl:h-[900px]  mt-[-200px] md:mt-[-150px]  lg:mt-[-200px] ">
+      <div className="overflow-hidden h-[950px] sm:h-[1100px] md:h-[570px] lg:h-[600px] xl:h-[650px] 2xl:h-[900px]  mt-[-200px] md:mt-[-150px]  lg:mt-[-200px] ">
         <div
-          className="absolute mt-[200px] md:mt-[150px] lg:mt-[200px] grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className="absolute mt-[250px] md:mt-[180px] lg:mt-[230px] grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
        lg:px-32  px-6 sm:px-16 
+       
         "
         >
           <div className=" py-4 sm:py-6  lg:py-8 md:py-6">
@@ -189,13 +190,22 @@ function DigitalServices() {
 
         {/* section3 */}
         <div
-          className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 mb-[100px]
+       lg:px-32  px-6 sm:px-16 pb-[100px] 
         "
         >
 
-
+        {/*  */}
+        <div
+          className=" bg-left-bottom absolute bottom-0 left-0 h-[800px] w-[90%]  lg:h-[600px] md:w-[65%] lg:w-[65%]  bg-contain bg-no-repeat "
+          style={{
+            backgroundImage:
+              "url(./Images/digitalServices/digitalServicesBG3.png)",
+           
+            zIndex:-999
+          }}
+        ></div>
           
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
             <img

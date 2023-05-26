@@ -46,3 +46,10 @@ export function VTU_PAY({props,color}) {
   )
 }
 
+
+
+
+
+
+// CARD ISSUING BG 
+ 
