@@ -484,13 +484,13 @@ export const Home = () => {
             swipeable={true}
             draggable={true}
             responsive={responsive2}
-            autoPlay
+            autoPlay={true}
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
             transitionDuration={1000}
-            showDots
-            // renderDotsOutside
+            showDots={true}
+            customTransition="transform 1800ms ease-in-out"
           >
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
@@ -639,12 +639,13 @@ export const Home = () => {
             swipeable={true}
             draggable={true}
             responsive={responsive2}
-            autoPlay
+            autoPlay={true}
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
             transitionDuration={1000}
-            showDots
+            showDots={true}
+            customTransition="transform 1800ms ease-in-out"
           >
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
@@ -719,7 +720,7 @@ export const Home = () => {
         )}
       </div>
 
-      <div className="px-[5%] pt-[20%] pb-[10%] lg:px-[8%] lg:pt-[5%]">
+      <div className="px-[5%] pt-[20%] pb-[25%] md:pb-[20%]  lg:px-[8%] lg:pt-[5%]">
         <div className="">
           <div className="flex justify-between md:justify-start items-center md:space-x-5 lg:space-x-[75px] text-[#04177f]">
             <div className=" items-center  font-semibold text-[20px] lg:text-[30px]">
@@ -745,12 +746,13 @@ export const Home = () => {
             swipeable={true}
             draggable={true}
             responsive={responsive2}
-            autoPlay
+            autoPlay={true}
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
             transitionDuration={1000}
-            showDots
+            showDots={true}
+            customTransition="transform 1800ms ease-in-out"
           >
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:w-[206px] lg:w-[359px] md:p-[3%] lg:h-[276px]  "
@@ -842,7 +844,7 @@ export const Home = () => {
       </div>
 
       {/* CARD ISSUING */}
-      <div className="flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[7%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
+      <div className="flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[15%] md:py-[5%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
         <div>
           <div className="text-[20px] font-medium text-center mb-[4%] md:text-[26px] md:text-left lg:text-[45px]">
             Card Issuing
@@ -863,7 +865,7 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div className="mx-[5%] flex flex-col gap-[30px] my-[10%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%] lg:gap-[0%]">
+      <div className="mx-[5%] flex flex-col gap-[30px] mt-[10%] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%] lg:gap-[0%]">
         <div className="">
           <div className="text-[20px] text-[#04177F] text-center font-medium mb-[3%] md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Cross-border Payment
@@ -882,7 +884,7 @@ export const Home = () => {
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[10%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[15%]">
+      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[15%]">
         <div className="">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Currency Conversion
@@ -908,7 +910,7 @@ export const Home = () => {
       </div>
 
       {/* MULTI-CURRENCY WALLETS */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[10%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%]">
+      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%]">
         <div className="">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Multi-Currency Wallets
@@ -927,7 +929,7 @@ export const Home = () => {
       </div>
 
       {/* BECOME AN AGENT */}
-      <div className=" mx-[5%] mb-[15%] mt-[15%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
+      <div className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
         <div className="flex flex-col gap-[30px] md:gap-[15px] lg:gap-[40px] ">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold ">
             Become an Agent
@@ -954,7 +956,7 @@ export const Home = () => {
         />
       </div>
 
-      <div className="bg-[#04177f] text-[#ffffff] py-[5%] px-[5%] flex flex-col gap-[50px] md:flex-row md:justify-center md:items-center">
+      <div className="bg-[#04177f] text-[#ffffff] py-[15%] px-[5%] flex flex-col gap-[50px] md:py-[10%] md:flex-row md:justify-center md:items-center">
         <img
           className="w-[80%] mx-auto md:w-[40%] md:h-[40%] lg:w-[30%]"
           src="./Images/chart.png"
@@ -1021,7 +1023,7 @@ export const Home = () => {
         </Carousel>
       </div>
 
-      <div className="px-[5%] py-[5%] flex flex-col gap-[20px] bg-[#04177f] text-[#ffffff] md:flex-row md:gap-[70px] md:jsutfiy-center md:items-center lg:gap-[90px] lg:tracking-widest ">
+      <div className="px-[5%] py-[20%] flex flex-col gap-[20px] bg-[#04177f] text-[#ffffff] md:py-[10%] md:flex-row md:gap-[70px] md:jsutfiy-center md:items-center lg:gap-[90px] lg:tracking-widest ">
         <div className="flex flex-col gap-[25px]">
           <div className="text-[20px] text-center md:text-[17px] md:text-left lg:text-[30px] lg:font-bold">
             Are you a Developer?
@@ -1034,7 +1036,7 @@ export const Home = () => {
             provides clear instructions for integration and usage, with
             easy-to-use integration with your existing workflows.
           </div>
-          <div className="text-[20px] mx-auto w-[60%] md:mx-0 lg:text-[30px] lg:font-bold lg:w-[40%]">
+          <div className="text-[20px] mx-auto w-[60%] my-[10%] md:mx-0 lg:text-[30px] lg:font-bold lg:w-[40%]">
             A Well Documented Easy-to-use API
           </div>
         </div>
@@ -1046,7 +1048,7 @@ export const Home = () => {
       </div>
 
       {/* FEEDBACK */}
-      <div className="py-[15%] mx-[5%]">
+      <div className="py-[20%] mx-[5%] md:py-[10%]">
         <div className="text-[#04177f] text-center font-semibold text-[20px] lg:text-[30px] lg:font-extrabold mb-[5%]">
           Feedbacks
         </div>
@@ -1055,7 +1057,7 @@ export const Home = () => {
           disableButtonsControls
           items={feedback}
           autoPlay
-          autoPlayInterval={1000}
+          autoPlayInterval={1900}
           infinite
           // swipeExtraPadding
           // touchTracking
@@ -1063,8 +1065,8 @@ export const Home = () => {
       </div>
 
       {/* FREQUENTLY ASKED QUESTIONS */}
-      <div className="mx-[5%] mb-[25%]">
-        <div className="text-[#04177f] text-[15px] font-bold text-center md:text-[20px] lg:text-[30px]">
+      <div className="mx-[5%] mb-[25%] md:mb-[15%] lg:mx-[8%]">
+        <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
           Frequently Asked Questions
         </div>
         <br />
