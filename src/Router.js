@@ -18,7 +18,7 @@ export const Router = () => {
         <Route path="/VTU_DEV" element={<DigitalServices/>} />
         <Route path="/our-services/payment" element={<PaymentServices />} />
         <Route path="/our-services/telecoms" element={<Telecoms />} />
-        <Route path="/our-services/card-issuing" element={<CardIssuing />} />
+      
         <Route
           path="/DigitalServices"
           element={<DigitalServices />}

@@ -3,6 +3,7 @@ import "./cardIssuing.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
+
 export const primaryColor = "#04177F";
 
 const handleDragStart = (e) => e.preventDefault();
@@ -132,13 +133,13 @@ function CardIssuing() {
 
   return (
     <>
-      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-36  md:pt-44  lg:pt-64      pb-16 sm:pb-24 md:pb-28 lg:pb-32 w-full lg:px-32  px-6 sm:px-16 ">
+      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-[180px]  md:pt-[280px]  lg:pt-[300px]  pb-16 sm:pb-24 md:pb-28 lg:pb-32 w-full lg:px-32  px-6 sm:px-16 ">
         <div
-          className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className=" grid lg:grid-cols-2 lg:gap-x-8  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
         "
         >
-          <div className="rounded sm:rounded-md p-4 sm:p-6 lg:rounded-lg bg-[#fff] lg:p-8 md:p-6">
+          <div className="rounded xl:h-[350px] sm:rounded-md p-4 sm:p-6 lg:rounded-lg bg-[#f2f5ff] lg:p-8 md:p-6">
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold lg:tracking-wider  "
               style={{
@@ -156,16 +157,14 @@ function CardIssuing() {
             </p>
           </div>
 
-          <div className="rounded-lg bg-[#fff]">
-            <p
-              className=""
-              style={{
-                color: primaryColor,
-              }}
-            >
-              Card Issuing
-            </p>
+          <div className="w-full flex justify-center md:flex md:justify-end mt-[50px] md:mt-0">
+          <img src="./Images/card_issuing_images/cardIssuingBG.png" alt="backgroundImage" 
+  className="w-[70%] md:w-[90%] lg:w-[95%] "
+  />
           </div>
+
+
+  
         </div>
 
         <div className="grid mt-12  md:mt-16 lg:mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
@@ -194,6 +193,7 @@ function CardIssuing() {
           mouseTracking
           items={items}
           autoWidth
+          infinite
           touchTracking
           touchMoveDefaultEvents={false}
           disableButtonsControls

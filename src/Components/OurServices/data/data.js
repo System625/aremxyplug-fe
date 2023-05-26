@@ -19,7 +19,7 @@ export const ourServiceDetails = [
         id:3,
         title: 'Card Issuing',
         message: 'Our card issuing service can be tailored to your specific needs as an Individual or business. we issue 3D secured virtual and physical debit USD and NGN cards to spend anywhere Verve, Visa, and Mastercard are accepted, both in-store and online, anytime, anywhere.',
-        link: 'our-services/card-issuing', //link for card issuing
+        link: 'CardIssuing', //link for card issuing
         image: require('./../images/card-issuing.png'),
         image_name: 'card-issuing_img'
     },
