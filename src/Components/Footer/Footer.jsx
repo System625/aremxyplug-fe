@@ -361,7 +361,7 @@ export const Footer = () => {
                 Privacy Policy
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Terms of Services
+                Terms & Conditions
               </div>
             </div>
           </div>
@@ -388,7 +388,7 @@ export const Footer = () => {
               <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[16px] lg:w-[166px]">
                 Contact us
               </div>
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
+              <div className="w-[80px] h-[13px] text-[9px] lg:w-[100px] lg:text-[16px]">
                 Live Chat
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">

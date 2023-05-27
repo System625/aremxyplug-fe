@@ -19,7 +19,7 @@ export const ourServiceDetails = [
         id:3,
         title: 'Card Issuing',
         message: 'Our card issuing service can be tailored to your specific needs as an Individual or business. we issue 3D secured virtual and physical debit USD and NGN cards to spend anywhere Verve, Visa, and Mastercard are accepted, both in-store and online, anytime, anywhere.',
-        link: 'our-services/card-issuing', //link for card issuing
+        link: 'CardIssuing', //link for card issuing
         image: require('./../images/card-issuing.png'),
         image_name: 'card-issuing_img'
     },
@@ -27,7 +27,7 @@ export const ourServiceDetails = [
         id:4,
         title: 'Digital Services',
         message: "We offer a variety of digital services that can be customized to fit your company's needs. Our services are affordable and designed to deliver outstanding results for your company. Our digital experts are devoted to developing your business and catering to your digital needs.",
-        link: 'our-services/digital-services', //link for digital services
+        link: 'DigitalServices', //link for digital services
         image: require('./../images/digital-services.png'),
         image_name: 'digital-services_img'
     },
@@ -35,7 +35,7 @@ export const ourServiceDetails = [
         id:5,
         title: 'VTU Development',
         message: "AremxyPlug is a company that has a team of technical experts that can easily and quickly design and develop a VTU platform to start your telecom business with services like airtime top-up, data bundles, education pins, TV subscription, and bills payment platform.",
-        link: 'our-services/vtu-development', //link for vtu-development 
+        link: 'VTU_DEV', //link for vtu-development 
         image: require('./../images/vtu-development.png'),
         image_name: 'vtu-development_img'
     },
