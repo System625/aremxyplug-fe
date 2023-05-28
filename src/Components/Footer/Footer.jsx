@@ -164,7 +164,7 @@ export const Footer = () => {
             </div>
             <div className="w-[90px] h-[13px] text-[9px]">Privacy Policy</div>
             <div className="w-[80px] h-[13px] text-[9px]">
-              Terms of Services
+              Terms & Conditions
             </div>
           </div>
         </div>

@@ -29,7 +29,6 @@ export const NavBar = () => {
         />
         {/* <div>XXX</div> */}
       </div>
-
       {navOpen && (
         <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
           <ul className="flex flex-col gap-[20px]">
@@ -41,7 +40,7 @@ export const NavBar = () => {
             </li>
 
             <li onClick={() => setNavOpen((prev) => !prev)}>
-              <Link>About us</Link>
+              <Link to="/about-us">About us</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link>Pricing</Link>
@@ -78,7 +77,9 @@ export const NavBar = () => {
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/our-services">Services</Link>
           </li>
-          <li className="text-[9px] lg:text-[16px]">About us</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/about-us">About us</Link>
+          </li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
           <li className="text-[9px] lg:text-[16px]">Solutions</li>
           <li className="text-[9px] lg:text-[16px]">FAQs</li>
