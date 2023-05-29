@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom';
 
 const PaymentServices = () => {
   return (
-    <div className='w-10/12 mx-auto pt-[120px] mb-[100px] md:pt-[140px] lg:pt-[213px]'>
+    <div className='w-[90%] mx-auto pt-[15%] lg:pt-[5%] md:pt-[5%] md:w-[84%]'>
       <PaymentServiceHeader/>
-      <div className="w-full p-[10px] flex flex-col gap-[80px] bg-center bg-cover md:p-[20px] lg:p-[25px] md:gap-[120px] lg:gap-[150px]" style={{backgroundImage: `url(${bgImg})`}}>
+      <div className="w-full p-[10px] flex flex-col gap-[80px] bg-center bg-cover md:p-[20px] lg:p-[25px] md:gap-[120px] lg:gap-[150px] lg:mb-[150px] md:mb-[120px] mb-[90px]" style={{backgroundImage: `url(${bgImg})`}}>
         {/* row 1 start here*/}
         <div className="flex flex-col gap-[80px] md:flex-row lg:gap-[127px] md:gap-[73.55px] md:text-left">
           <PaymentCard 
