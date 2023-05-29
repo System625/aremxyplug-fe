@@ -15,7 +15,6 @@ export const Router = () => {
         <Route path="/our-services" element={<OurServices />} />
         <Route path="/VTU_DEV" element={<VTU_DEV/>} />
         <Route path="/CardIssuing" element={<CardIssuing/>} />
-        <Route path="/VTU_DEV" element={<DigitalServices/>} />
         <Route path="/our-services/payment" element={<PaymentServices />} />
         <Route path="/our-services/telecoms" element={<Telecoms />} />
       

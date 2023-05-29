@@ -31,7 +31,7 @@ function DigitalServices() {
               your digital needs.
             </p>
             <div className="my-6">
-            <Bluebutton text="contact sales"/>
+            <Bluebutton text="Contact Sales"/>
 
             </div>
           </div>
@@ -83,7 +83,7 @@ function DigitalServices() {
               className="w-[90%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
@@ -109,7 +109,7 @@ function DigitalServices() {
               className="w-[86%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
@@ -119,7 +119,7 @@ function DigitalServices() {
                 Social Media Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Social media marketing can be an effective way to reach a wide audience and build brand awareness.
+              Social media marketing can be an effective way to reach a wide audience and build brand awareness.<span className="text-[#dce4ff]">a marketing effective</span>
               </p>
               <div className="mt-6 flex justify-center">
                   <Bluebutton text="Explore"/>
@@ -146,7 +146,7 @@ function DigitalServices() {
               className="w-[82%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
@@ -171,7 +171,7 @@ function DigitalServices() {
               className="w-[90%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
@@ -181,7 +181,7 @@ function DigitalServices() {
                 Email Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Your business needs an email marketing strategy that boost sales and create a bond with your customers.
+              Your business needs an email marketing strategy that boost sales and create a bond with your customers.<span className="text-[#dce4ff]">a marketing</span>
               </p>
               <div className="mt-6 flex justify-center">
                   <Bluebutton text="Explore"/>
@@ -216,7 +216,7 @@ function DigitalServices() {
               className="w-[90%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
@@ -241,7 +241,7 @@ function DigitalServices() {
               className="w-[95%] md:float-right"
             />
 
-            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[340px] xl:h-[330px]">
+            <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#dce4ff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px]">
               <p
                 className="text-center text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
