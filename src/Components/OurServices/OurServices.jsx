@@ -6,11 +6,11 @@ import { ourServiceDetails } from './data/data';
 
 const OurServices = () => {
   return (
-    <>
-        <div className='w-10/12 mx-auto pt-[90px] lg:pt-[233px] md:pt-[100px]'>
+    <div>
+        <div className='w-[90%] mx-auto pt-[15%] lg:pt-[5%] md:pt-[5%] md:w-[84%]'>
             <OurServiceHeader/>
         </div>
-        <div className="w-[86.667%] mx-auto bg-cover bg-center bg-no-repeat mb-[90px]" style={{backgroundImage:`url(${bgImage})`}}>
+        <div className="w-[90%] md:w-[84%] mx-auto bg-cover bg-center bg-no-repeat mb-[90px] lg:mb-[150px] md:mb-[120px]" style={{backgroundImage:`url(${bgImage})`}}>
             <div className="p-[14.5px] md:p-[25px]">
                 <div className="flex flex-col gap-[30px] lg:gap-[165px] md:gap-[134px]">
                     { ourServiceDetails.map((data) => (
@@ -20,7 +20,7 @@ const OurServices = () => {
                 </div>
             </div>
         </div>
-    </>
+    </div>
   );
 }
 
