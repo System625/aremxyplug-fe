@@ -7,6 +7,7 @@ import Telecoms from "./Components/Screens/Telecoms/Telecoms";
 import CardIssuing from "./Components/Screens/cardIssuing/cardIssuing";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
+import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
 export const Router = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ export const Router = () => {
           path="/DigitalServices"
           element={<DigitalServices />}
         />
+        <Route path="/seo-marketing" element={<SEOMarketing/>}/>
       </Routes>
     </div>
   );
