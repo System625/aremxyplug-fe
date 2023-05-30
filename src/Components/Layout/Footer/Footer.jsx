@@ -163,8 +163,8 @@ export const Footer = () => {
               Legal
             </div>
             <div className="w-[90px] h-[13px] text-[9px]">Privacy Policy</div>
-            <div className="w-[80px] h-[13px] text-[9px]">
-              Terms of Services
+            <div className="w-[100px] h-[13px] text-[9px]">
+              Terms & Conditions
             </div>
           </div>
         </div>

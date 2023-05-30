@@ -253,7 +253,7 @@ export const Home = () => {
             aspirations in order to be the best service provider.
           </p>
           <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[40px]">
-            Learn more
+            <Link to="/about-us">Learn more</Link>
           </div>
         </div>
         <img
