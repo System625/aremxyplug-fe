@@ -404,8 +404,8 @@ function VTU_DEV() {
         </div>
       ),
       unlimited: (
-        <div className="flex justify-center border-r-[1px]  border-y-[1px] border-gray-500 py-2">
-          <p>No</p>
+        <div className="flex justify-center  border-y-[1px] border-gray-500 py-2">
+          <BsFillCheckCircleFill color="#2ED173" size={25} />
         </div>
       ),
     },
@@ -685,10 +685,7 @@ function VTU_DEV() {
             </p>
 
             <div className="my-8">
-              <Bluebutton
-                text= "contact sales"
-              
-              />
+              <Bluebutton text="Contact Sales" />
             </div>
           </div>
 
@@ -741,10 +738,7 @@ function VTU_DEV() {
             cost-effective. 
           </p>
           <div className="my-6">
-            <Bluebutton
-              text= "Start Now"
-               
-            />
+            <Bluebutton text="Start Now" />
           </div>
         </div>
 
@@ -781,10 +775,7 @@ function VTU_DEV() {
             and bills payment in just a few easy steps.
           </p>
           <div className="my-6">
-            <Bluebutton
-              text= "Set-up Now"
-            
-            />
+            <Bluebutton text="Set-up Now" />
           </div>
         </div>
 
@@ -808,7 +799,7 @@ function VTU_DEV() {
         </p>
         {/* VTU Payment plans */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 gap-y-8 md:gap-y-14 lg:gap-y-8  justify-center">
-          <div className="relative myCardShadow h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className="relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
             <VTU_PAY color="#90D7FF" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -888,7 +879,7 @@ function VTU_DEV() {
               </div>
             </div>
           </div>
-          <div className="relative myCardShadow h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className="relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
             <VTU_PAY color="#dce4ff" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -988,7 +979,7 @@ function VTU_DEV() {
               </div>
             </div>
           </div>
-          <div className="relative myCardShadow h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className="relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
             <VTU_PAY color="#edd6ff" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -1078,7 +1069,7 @@ function VTU_DEV() {
               </div>
             </div>
           </div>
-          <div className="relative  myCardShadow h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className="relative  myCardShadow h-[760px]  md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden lg:hidden">
             <VTU_PAY color="#feeebe" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -1178,7 +1169,7 @@ function VTU_DEV() {
               </div>
             </div>
           </div>
-          <div className=" md:hidden  lg:block relative myCardShadow h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className=" md:hidden  relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden lg:hidden">
             <VTU_PAY color="#dbffd2" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -1274,9 +1265,239 @@ function VTU_DEV() {
             </div>
           </div>
         </div>
+
+        {/* 
+        *
+        *
+        * *
+        * **
+        * *
+        *
+        *
+        *
+        
+        
+        
+        
+        */}
+        {/* Telecom and unlimited */}
+        <div className="mt-8 flex justify-center">
+          <div className="hidden  w-[66%] lg:flex">
+            <div className=" relative  myCardShadow h-[760px] md:w-[86%] md:h-[800px] lg:h-[760px] lg:w-[unset] bg-[#fff] rounded-lg mr-8 overflow-hidden ">
+              <VTU_PAY color="#feeebe" />
+
+              <div className="absolute top-0 bottom-0 right-0 left-0 ">
+                <p className="text-center font-bold text-3xl my-8">
+                  Telecom Pro
+                </p>
+
+                <div className="flex justify-center">
+                  <p
+                    className="myButtonShadow text-[#000] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    399,990
+                  </p>
+                </div>
+
+                <div className="flex justify-center my-8">
+                  <p
+                    className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    Get Started
+                  </p>
+                </div>
+
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Everything in Venture
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Bulk SMS
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Smile Airtime & Data
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Mobile App & Playstore Upload
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Live Chat Integration
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    24/7 Support Channel
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Plus 1year .com Hosting & Domain
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="md:hidden  relative  myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden hidden lg:block">
+              <VTU_PAY color="#dbffd2" />
+
+              <div className="absolute top-0 bottom-0 right-0 left-0 ">
+                <p className="text-center font-bold text-3xl my-8">Unlimited</p>
+
+                <div className="flex justify-center">
+                  <p
+                    className="myButtonShadow text-[#000] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    599,990
+                  </p>
+                </div>
+
+                <div className="flex justify-center my-8">
+                  <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
+                    Get Started
+                  </p>
+                </div>
+
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Everything in Telecom pro
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Spectranet Data
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Recharge Card Printing
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Android & iOS Mobile App
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Appstore Upload
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Dedicated Manager
+                  </p>
+                </div>
+                <div className="flex ml-4 items-center my-4">
+                  <img
+                    src="./Images/vtu_dev/blueCheck.png"
+                    alt="blue check"
+                    className="w-[25px] "
+                  />
+                  <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                    Plus 1year .com Hosting & Domain
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 
+        *
+        *
+        *
+        *
+        * *
+        *
+        * **
+        * *
+        
+        */}
+
         {/* last plan */}
         <div className="mt-14 flex justify-center">
-          <div className="hidden md:block  lg:hidden relative myCardShadow h-[760px] md:w-[42%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden ml-[-40px]">
+          <div className="hidden md:block  lg:hidden relative myCardShadow h-[760px] md:w-[42%] md:h-[800px] lg:h-[760px] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden ml-[-40px]">
             <VTU_PAY color="#dbffd2" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
@@ -1459,11 +1680,8 @@ function VTU_DEV() {
           Do you need help choosing a plan?
         </p>
 
-        
         <div className="flex justify-center pb-[100px]">
-        <Bluebutton
-              text="contact sales"
-            />
+          <Bluebutton text="Contact Sales" />
         </div>
       </div>
 
