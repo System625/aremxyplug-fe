@@ -39,7 +39,7 @@ export const AboutUs = () => {
     <>
       <div className={styles.hero2}>
         <div className="mx-[10%] md:mx-[15%] leading-5 lg:leading-6">
-          <div className="font-semibold text-[20px] flex justify-center pt-[20%] md:text-[26.06px] lg:pt-[15%] lg:text-[45px]">
+          <div className="font-semibold text-[25px] flex justify-center pt-[20%] md:text-[26.06px] lg:pt-[15%] lg:text-[45px]">
             About Us
           </div>
           <br></br>
@@ -62,7 +62,7 @@ export const AboutUs = () => {
       {/* OUR VISION */}
       <div className="mb-[20%] mx-[5%] mt-[6%] md:flex md:gap-[15%] md:justify-center md:items-center lg:mx-[8%] lg:mb-[15%]">
         <div className="md:h-[150px] leading-5 lg:leading-7">
-          <div className="font-extrabold text-[20px] text-center md:text-left md:text-[17px] lg:text-[30px]">
+          <div className="font-semibold text-[20px] text-center md:text-left md:text-[17px] lg:text-[30px]">
             Our Vision
           </div>
           <br></br>
@@ -83,7 +83,7 @@ export const AboutUs = () => {
       {/* OUR MISSION */}
       <div className="mb-[20%] mx-[5%] mt-[6%] md:flex md:flex-row-reverse md:gap-[15%] md:justify-center md:items-center lg:mx-[8%] lg:mb-[15%]">
         <div className="md:h-[150px] leading-5 lg:leading-7">
-          <div className="font-extrabold text-[20px] text-center md:text-left md:text-[17px] lg:text-[30px]">
+          <div className="font-semibold text-[20px] text-center md:text-left md:text-[17px] lg:text-[30px]">
             Our Mission
           </div>
           <br></br>
@@ -104,12 +104,11 @@ export const AboutUs = () => {
 
       {/* OUR VALUES */}
       <div className=" md:flex md:flex-row-reverse md:ml-[%] leading-3 lg:flex lg:justify-center lg:items-center">
-        <div className="mb-[15%] mx-[5%] mt-[6%] md:mt-[0%] lg:mb-[0%]">
-          <div className=" font-extrabold text-[20px] text-center md:hidden ">
+        <div className="mb-[20%] mx-[5%] mt-[6%] md:mt-[0%] lg:mb-[0%]">
+          <div className="mb-[20%] font-semibold text-[20px] text-center md:hidden ">
             Our Values
           </div>
-          <br></br>
-          <br></br>
+
           <img
             className="w-[700px] h-[250px] lg:w-[1350px] lg:h-[440px]"
             src="./Images/aboutimages/skytop.png"
@@ -118,9 +117,10 @@ export const AboutUs = () => {
         </div>
 
         <div className=" lg:h-[420px] mx-[5%]">
-          <div className="hidden font-extrabold text-[20px] text-center md:text-[17px] lg:block lg:text-[30px] lg:mb-10">
+          <div className="hidden font-semibold text-[20px] text-center md:text-[17px] md:block md:text-left md:mx-[5%] lg:block lg:text-[30px] lg:mb-10">
             Our Values
           </div>
+          <br></br>
           <br></br>
           <div className="flex flex-col gap-[9px] mx-[5%] mb-[15%] text-center md:text-left md:flex md:flex-col md:gap-[5px] md:mb-[5%] lg:flex lg:flex-col lg:gap-[12px]">
             <div className="text-15px font-bold md:text-[10px] lg:text-[18px]">
@@ -170,7 +170,7 @@ export const AboutUs = () => {
       {/* OUR TEAM */}
       <div className="lg:mt-[10%]">
         <div className="mx-[5%] lg:mx-[8%]">
-          <div className="text-[20px] text-center md:text-left lg:text-left lg:text-[30px]">
+          <div className="font-semibold text-[20px] text-center md:text-left lg:text-left lg:text-[30px]">
             Our Team
           </div>
           <br></br>
@@ -318,7 +318,7 @@ export const AboutUs = () => {
       </div>
       <br></br>
       <div
-        className="flex ml-[5%] items-center gap-[2%] w-[15%] p-[1%] text-[12px] rounded-md md:text-[20px] md:w-[13%] lg:ml-[8%] lg:gap-[10%] lg:w-[10%]"
+        className=" mb-[10%] md:mb-[0%] flex ml-[5%] items-center gap-[2%] w-[15%] p-[1%] text-[12px] rounded-md md:text-[20px] md:w-[13%] lg:ml-[8%] lg:gap-[10%] lg:w-[10%]"
         style={{
           boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
         }}
@@ -331,7 +331,7 @@ export const AboutUs = () => {
       {/* OUR STORY */}
       <div className="mb-[20%] md:flex md:flex-row-reverse md:gap-[5%] md:mx-[5%] md:items-center lg:flex lg:justify-center lg:mx-[0] lg:mb-[] lg:items-center lg:gap-[10%] ">
         <div>
-          <div className="mb-[10%] text-[20px] text-center md:text-[17px] md:hidden lg:text-[30px]">
+          <div className="font-semibold mb-[20%] text-[20px] text-center md:text-[17px] md:hidden lg:text-[30px]">
             Our Story
           </div>
           <div className="flex mx-[8%] gap-[5%] justify-center lg:mx-[0]">
@@ -348,8 +348,8 @@ export const AboutUs = () => {
           </div>
         </div>
 
-        <div className="mt-[15%] md:mt-[20%] lg:mt-[5%]">
-          <div className="hidden md:flex mb-[10%] text-[20px] text-center md:text-[17px] md:mb-[3%] md:mx-[%] lg:text-[30px]">
+        <div className="mt-[15%] md:mt-[10%] lg:mt-[12%]">
+          <div className="font-semibold hidden md:flex mb-[10%] text-[20px] text-center md:text-[17px] md:mb-[3%] md:mx-[%] lg:text-[30px]">
             Our Story
           </div>
           <div className="text-[12px] mx-[5%] text-justify md:text-[10px] md:mx-[0] md:w-[281px] lg:text-[18px] lg:w-[486px] lg:mx-[]">
@@ -497,7 +497,9 @@ export const AboutUs = () => {
 
       {/* OUR SOLUTION */}
       <div className="mt-[15%] mb-[15%] md:flex md:flex-row-reverse md:justify-center md:items-center lg:mt-[12%] lg:ml-[5%] lg:gap-[%]">
-        <div className="text-[31px] text-center md:hidden">Our Solution</div>
+        <div className="font-semibold text-[31px] text-center md:hidden">
+          Our Solution
+        </div>
         <div>
           <img
             className="w-[80%] mx-auto mt-[10%] md:w-[70%] lg:w-[60%] lg:mr-[8%]"
@@ -506,7 +508,7 @@ export const AboutUs = () => {
           />
         </div>
         <div>
-          <div className="hidden text-[31px] text-center md:block md:text-[20px] md:text-left md:mx-[8%] lg:text-[30px]">
+          <div className="font-semibold hidden text-[20px] text-center md:block md:text-[20px] md:text-left md:mx-[8%] lg:text-[30px]">
             Our Solution
           </div>
           <img
@@ -519,7 +521,9 @@ export const AboutUs = () => {
 
       {/* OUR PRODUCT */}
       <div className="md:flex md:flex-row md:mx-[5%] md:gap-[10%] md:justify-center md:items-center">
-        <div className="text-[31px] text-center md:hidden">Our Product</div>
+        <div className="font-semibold text-[31px] text-center md:hidden">
+          Our Product
+        </div>
         <div>
           <img
             className="w-[90%] mx-auto mt-[10%]"
@@ -539,7 +543,9 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bg-[#04177f] w-[20%] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:text-[13px] lg:rounded-md">Contact Us</div>
+      <div className="bg-[#04177f] w-[20%] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:text-[13px] lg:rounded-md">
+        Contact Us
+      </div>
     </>
   );
 };

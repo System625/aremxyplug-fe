@@ -8,6 +8,7 @@ import CardIssuing from "./Components/Screens/cardIssuing/cardIssuing";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
 import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
+import { Solution } from "./Components/Screens/Solutions/Solution";
 export const Router = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ export const Router = () => {
           element={<DigitalServices />}
         />
         <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/solutions" element={<Solution/>} />
       </Routes>
     </div>
   );

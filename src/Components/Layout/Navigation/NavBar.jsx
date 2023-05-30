@@ -1,14 +1,37 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  function handleScroll() {
+    if (
+      (document.documentElement && document.documentElement.scrollTop > 70) ||
+      document.body.scrollTop > 70
+    ) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    //  bg-[#ffffff4a]
     <>
       {/* Mobile View */}
       <div
-        className="bg-[#ffffff] sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden"
+        className={`${
+          scrolled ? "bg-[#ffffff]" : "bg-transparent"
+        } sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden h-[70px]`}
         style={{
           zIndex: 999,
         }}
@@ -46,7 +69,7 @@ export const NavBar = () => {
               <Link>Pricing</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
-              <Link>Solutions</Link>
+              <Link to="/solutions">Solutions</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link>FAQs</Link>
@@ -62,7 +85,11 @@ export const NavBar = () => {
       )}
 
       {/* Tablet & Desktop View */}
-      <div className="z-[55] sticky top-0 bg-[white] hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%] ">
+      <div
+        className={`${
+          scrolled ? "bg-[#ffffff]" : "bg-transparent"
+        } z-[55] sticky top-0 hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%]`}
+      >
         <Link to="/">
           <img
             className="md:w-[94px] h-[20px] lg:w-[164px] lg:h-[30px]"
@@ -81,7 +108,9 @@ export const NavBar = () => {
             <Link to="/about-us">About us</Link>
           </li>
           <li className="text-[9px] lg:text-[16px]">Pricing</li>
-          <li className="text-[9px] lg:text-[16px]">Solutions</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/solutions">Solutions</Link>
+          </li>
           <li className="text-[9px] lg:text-[16px]">FAQs</li>
         </ul>
         <div className="flex justify-center bg-[#04177F] rounded-md text-[#ffffff] text-[7px] p-[1%] w-[14%] lg:w-[14.5%] lg:text-[13px]">
