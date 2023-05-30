@@ -39,7 +39,7 @@ export const AboutUs = () => {
     <>
       <div className={styles.hero2}>
         <div className="mx-[10%] md:mx-[15%] leading-5 lg:leading-6">
-          <div className="font-semibold text-[25px] flex justify-center pt-[20%] md:text-[26.06px] lg:pt-[15%] lg:text-[45px]">
+          <div className="font-semibold text-[25px] flex justify-center pt-[40%] md:text-[26.06px] md:pt-[] lg:pt-[40%] lg:text-[45px]">
             About Us
           </div>
           <br></br>

@@ -50,7 +50,7 @@ export const NavBar = () => {
           src="./Images/aremxyNav.png"
           alt="/aremxyplug"
         />
-        {/* <div>XXX</div> */}
+        
       </div>
       {navOpen && (
         <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
