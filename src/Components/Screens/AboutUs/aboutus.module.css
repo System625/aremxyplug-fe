@@ -4,7 +4,9 @@
           background-size:cover;
           background-position: "center";
           width: 100%;
-          height: 400px;
+          height: 451px;
+          /* position: relative; */
+          margin-top: -20%;
          
 }
 
@@ -17,18 +19,20 @@
     background-size:cover;
     /* background-position:  ; */
     width: 100%;
-    height: 450px;
+    height: 560px;
+    margin-top: -20%;
     }
 }
 
 /* DESKTOP VIEW */
 @media (min-width: 1024px){
     .hero2{
-    background: url("/public/Images/aboutimages/aboutusBG.png");
+    background: url("/public/Images/aboutimages/altbg.png");
     background-repeat: no-repeat;
-    background-size:cover;
-    /* background-position:  ; */
+    background-size:contain;
+    background-position: center;
     width: 100%;
-    height: 600px;
+    height: 900px;
+    margin-top: -20%;
     }
 }   
