@@ -107,10 +107,10 @@ export const Home = () => {
             money internationally.
           </div>
           <div className="flex gap-[6%] mt-[5%]">
-            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%]">
+            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
               Sign up
             </button>
-            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%]">
+            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
               Sign in
             </button>
           </div>
@@ -252,7 +252,7 @@ export const Home = () => {
             ensure that our services take our customers to the pinnacle of their
             aspirations in order to be the best service provider.
           </p>
-          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[40px]">
+          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
             <Link to="/about-us">Learn more</Link>
           </div>
         </div>
@@ -283,7 +283,7 @@ export const Home = () => {
                 We offer secure VTU development, affordable airtime, and data
                 purchase.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="/our-services/telecoms">Learn More</Link>
               </div>
             </div>
@@ -302,7 +302,7 @@ export const Home = () => {
                 Our payment solutions ensure our clients have the utmost control
                 of their finances.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="/our-services/payment">Learn More</Link>
               </div>
             </div>
@@ -321,7 +321,7 @@ export const Home = () => {
                 We issue 3D secured virtual and physical debit USD and NGN cards
                 to both individuals and businesses.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="CardIssuing">Learn More</Link>
               </div>
             </div>
@@ -341,7 +341,7 @@ export const Home = () => {
                 We offer a variety of digital services that can be customized to
                 fit your company's needs.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="DigitalServices">Learn More</Link>
               </div>
             </div>
@@ -360,7 +360,7 @@ export const Home = () => {
                 We develop a VTU website with services like airtime top-up, data
                 bundles, and bills payment platform.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="VTU_DEV">Learn More</Link>
               </div>
             </div>
@@ -379,8 +379,8 @@ export const Home = () => {
                 When it comes to business development, trust us to save you time
                 and stress.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
+                <Link to="/businessDev">Learn More</Link>
               </div>
             </div>
           </div>
@@ -402,7 +402,7 @@ export const Home = () => {
                   We offer a variety of digital services that can be customized
                   to fit your company's needs.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
                   <Link to="/our-services/digital-services">Learn More</Link>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export const Home = () => {
                   We develop a VTU website with services like airtime top-up,
                   data bundles, and bills payment platform.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
                   <Link to="/VTU_DEV">Learn More</Link>
                 </div>
               </div>
@@ -438,8 +438,8 @@ export const Home = () => {
                   When it comes to business development, trust us to save you
                   time and stress.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  Learn More
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
+                  <Link to="/businessDev">Learn More</Link>
                 </div>
               </div>
             </div>{" "}
@@ -524,7 +524,9 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:h-[276px] lg:w-[359px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Education Pins</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Education Pins
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 With our Education Pins service, you can access your exam
                 results in just a few clicks.
@@ -538,7 +540,9 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] lg:gap-[18px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">TV Subscription</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                TV Subscription
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Enjoy unlimited streaming on multiple channels. Sign up now and
                 never miss your favorite show again!
@@ -568,7 +572,7 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 Airtime Conversion
               </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
@@ -584,7 +588,9 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] "
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Bulk SMS</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Bulk SMS
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Try our bulk SMS service now and take your communication to the
                 next level.
@@ -692,7 +698,9 @@ export const Home = () => {
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Money Transfer</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Money Transfer
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 With our dependable money transfer services, you can send and
                 receive money without any hassle.
@@ -705,7 +713,7 @@ export const Home = () => {
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 International Payment
               </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
@@ -746,7 +754,7 @@ export const Home = () => {
             swipeable={true}
             draggable={true}
             responsive={responsive2}
-            autoPlay={true}
+            // autoPlay={true}
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
@@ -788,7 +796,9 @@ export const Home = () => {
               className="flex flex-col justify-between  h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">SEO Marketing</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[5%]">
+                SEO Marketing
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px]">
                 SEO is the practice of optimizing your website and its content
                 to improve its visibility and ranking on search engine results
@@ -816,7 +826,7 @@ export const Home = () => {
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
               <div className="font-medium lg:text-[24px]">Product Design</div>
-              <div className="text-justify text-[12px] lg:text-[16px]">
+              <div className="text-justify text-[12px] lg:text-[16px] lg:mb-[-5%]">
                 Product design is the process of identifying a market
                 opportunity, clearly defining the problem, and validating the
                 solution with real user interfaces.
@@ -829,7 +839,9 @@ export const Home = () => {
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF]  md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Graphic Design</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[5%]">
+                Graphic Design
+              </div>
               <div className="tracking- text-justify text-[12px] lg:text-[16px]">
                 Graphic design is the creation of visual compositions to solve
                 problems and communicate ideas through typography, imagery,
@@ -877,55 +889,56 @@ export const Home = () => {
           </div>
         </div>
         <img
-          className=" w-[50%] mx-auto md:w-[25%] lg:h-[366.36px] lg:w-[30%] "
-          src="./Images/Group2.png"
+          className=" w-[60%] h-[240px] mx-auto md:w-[25%] lg:h-[366.36px] lg:w-[28%] "
+          src="./Images/crossborder.png"
           alt="/"
         />
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[15%]">
+      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[0%]">
         <div className="">
           <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Currency Conversion
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[60%] lg:text-[18px] lg:w-[50%]">
+          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[60%] lg:text-[18px] lg:w-[40%] lg:">
             With our currency conversion service, you can get the most
             convenient exchange rates and convert any currency in a matter of
             seconds with no hidden fees.
           </div>
         </div>
-        <div className="flex md:gap-[44%] md:justify-center lg:gap-[30%]">
-          <img
-            className="w-[40%] mx-auto md:w-[180px] md:h-[166.39px] lg:h-[282.36px] lg:w-[213px]"
-            src="./Images/currency1.png"
-            alt="/"
-          />
-          <img
+
+        <img
+          className="w-[60%] h-[240px] mx-auto md:w-[180px] md:h-[166.39px] lg:mr-[] lg:h-[324px] lg:w-[35%]"
+          src="./Images/currency.png"
+          alt="/"
+        />
+        {/* <img
             className="w-[40%] mx-auto md:w-[180px] md:h-[166.39px] lg:h-[282.36px] lg:w-[213px]"
             src="./Images/currency2.png"
             alt="/"
-          />
-        </div>
+          /> */}
       </div>
 
       {/* MULTI-CURRENCY WALLETS */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%]">
+      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[px] md:mx-[8%]">
         <div className="">
           <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
             Multi-Currency Wallets
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[206px] lg:text-[18px] lg:w-[55%] lg:">
+          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[px] lg:text-[18px] lg:w-[40%] ">
             Our Multi-Currency Wallets services are the best way to manage all
             your currencies, keep a track and conveniently store, send, and
             receive digital assets in one location.
           </div>
         </div>
-        <img
-          className="w-[60%] mx-auto md:w-[25%]"
-          src="./Images/currency3.png"
-          alt="/"
-        />
+        <div className="bg-red-500 w-[100%] h-[100%] ">
+          <img
+            className="w-[60%] mx-auto md:w-[268px%] md:h-[287] lg:mx-"
+            src="./Images/currency3.png"
+            alt="/"
+          />
+        </div>
       </div>
 
       {/* BECOME AN AGENT */}

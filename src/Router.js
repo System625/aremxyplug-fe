@@ -9,6 +9,7 @@ import DigitalServices from "./Components/Screens/digitalServices/DigitalService
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
 import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
+import { BusinessDev } from "./Components/Screens/BusinessDev/busdev";
 export const Router = () => {
   return (
     <div>
@@ -26,6 +27,9 @@ export const Router = () => {
         />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/solutions" element={<Solution/>} />
+        <Route path="/businessDev" element={<BusinessDev/>} />
+        
+        
       </Routes>
     </div>
   );
