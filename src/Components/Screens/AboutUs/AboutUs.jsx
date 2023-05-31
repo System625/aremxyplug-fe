@@ -497,7 +497,7 @@ export const AboutUs = () => {
 
       {/* OUR SOLUTION */}
       <div className="mt-[15%] mb-[15%] md:flex md:flex-row-reverse md:justify-center md:items-center lg:mt-[12%] lg:ml-[5%] lg:gap-[%]">
-        <div className="font-semibold text-[31px] text-center md:hidden">
+        <div className="font-semibold text-[20px] text-center md:hidden">
           Our Solution
         </div>
         <div>
@@ -521,7 +521,7 @@ export const AboutUs = () => {
 
       {/* OUR PRODUCT */}
       <div className="md:flex md:flex-row md:mx-[5%] md:gap-[10%] md:justify-center md:items-center">
-        <div className="font-semibold text-[31px] text-center md:hidden">
+        <div className="font-semibold text-[20px] text-center md:hidden">
           Our Product
         </div>
         <div>
@@ -532,7 +532,7 @@ export const AboutUs = () => {
           />
         </div>
         <div>
-          <div className="hidden text-[31px] text-center md:block md:text-[20px] md:text-left md:ml-[8%] lg:ml-[0] lg:text-[30px]">
+          <div className="font-semibold hidden text-[31px] text-center md:block md:text-[20px] md:text-left md:ml-[8%] lg:ml-[0] lg:text-[30px]">
             Our Product
           </div>
           <img
