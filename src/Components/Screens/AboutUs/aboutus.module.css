@@ -1,5 +1,5 @@
 .hero2{
-    background-image: url("/public/Images/aboutimages/aboutusBG.png");
+    background-image: url("/public/images/aboutimages/aboutusBG.png");
           background-repeat: "no-repeat";
           background-size:cover;
           background-position: "center";
@@ -14,7 +14,7 @@
 
 @media (min-width: 768px){
     .hero2{
-    background: url("/public/Images/aboutimages/aboutusBG.png");
+    background: url("/public/images/aboutimages/aboutusBG.png");
     background-repeat: no-repeat;
     background-size:cover;
     /* background-position:  ; */
@@ -27,7 +27,7 @@
 /* DESKTOP VIEW */
 @media (min-width: 1024px){
     .hero2{
-    background: url("/public/Images/aboutimages/altbg.png");
+    background: url("/public/images/aboutimages/altbg.png");
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;

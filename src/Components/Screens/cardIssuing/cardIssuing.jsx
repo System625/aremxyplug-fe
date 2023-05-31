@@ -219,6 +219,7 @@ function CardIssuing() {
         </p>
 
         <AliceCarousel
+        animationDuration ={2000}
           autoPlayInterval={2000}
           autoPlay ={true}
           mouseTracking
