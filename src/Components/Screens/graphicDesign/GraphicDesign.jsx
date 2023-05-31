@@ -1,8 +1,8 @@
 import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
-import "./EmailMarketing.css"
-function EmailMarketing() {
+import "./GraphicDesign.css"
+function GraphicDesign() {
   return (
     <>
       <div>
@@ -23,13 +23,10 @@ function EmailMarketing() {
                 color: primaryColor,
               }}
             >
-              Email Marketing
+             Graphic Design
             </p>
             <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-4 sm:mt-6 md:mt-10  lg:mt-12 ">
-              Email marketing is one of the most directive and effective way to
-              connect with leads, turning them into potential customers. Your
-              business needs an email marketing strategy that boost sales and
-              create a bond with your customers.
+            Graphic design is the creation of visual compositions to solve problems and communicate ideas through typography, imagery, color, and form.  Design can be used for message delivery, brand identity development, product promotion and sales. Take a look at a successful company and analyze the role graphic design plays in both its branding and innovative design choices.
             </p>
             <div className="my-6">
               <Bluebutton text="Contact Sales" />
@@ -38,7 +35,7 @@ function EmailMarketing() {
           {/* EMAIL AND LADY IMAGE */}
           <div className="rounded-lg flex flex-col items-center  md:block ">
             <img
-              src="./Images/email_marketing/emailMarketingImage2.png"
+              src="./Images/graphic_design/graphicsDesignImage.png"
               alt="background_image "
               className="w-[100%]   "
             />
@@ -46,7 +43,7 @@ function EmailMarketing() {
         </div>
       </div>
 
-      {/* Build a meaningful relationships with your customers.*/}
+      {/*   We design a visual identity that reflects your company's mission and values.*/}
       <div
         className=" grid  lg:gap-x-4 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4    
     grid-cols-1 gap-y-4 
@@ -55,17 +52,13 @@ function EmailMarketing() {
       >
         <div
           // className="rounded-lg flex flex-col items-center  md:block lg:col-span-2"
-          className="row-start-2 md:row-start-1 h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat lg:col-span-2"
+          className="row-start-2 md:row-start-1  h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat lg:col-span-2"
           style={{
             backgroundImage:
-              "url(./Images/email_marketing/customerRelationImage.png)",
+              "url(./Images/graphic_design/weDesignImage.png)",
           }}
         >
-          {/* <img
-            src="./Images/email_marketing/customerRelationImage.png"
-            alt="background_image "
-            className="w-[60%]  md:w-[100%]"
-          /> */}
+      
         </div>
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6 lg:col-span-3 ">
           <p
@@ -74,19 +67,18 @@ function EmailMarketing() {
               color: "#000",
             }}
           >
-            Build a meaningful relationships with your customers.
+            We design a visual identity that reflects your company's mission and values.
           </p>
           <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-4 sm:mt-6 md:mt-10 sm:text:lg  lg:mt-12 ">
-            Digital recharge is now a well-liked method of purchasing airtime,
-            data bundles, and bills payments. We make it easy for you to start
-            your telecom business without any hassle. You can start right away
-            with any of our plans, very secured, convenient, flexible, and
-            cost-effective. 
+          Our experts create designs that boost brand awareness and name recognition. Strong visuals grab the attention of your audience, making you stand out against your competitor.
+
           </p>
         </div>
       </div>
 
-      {/*Communicating with your customers*/}
+ 
+
+      {/*    Build Trust And Credibility*/}
 
       <div
         className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
@@ -95,7 +87,7 @@ function EmailMarketing() {
        
      "
       >
-        <div className="row-start-2 md:row-start-1  py-4 sm:py-6  lg:py-8 md:py-6  ">
+        <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
           {/* Text content 1 */}
           <div>
             <p
@@ -104,46 +96,28 @@ function EmailMarketing() {
                 color: "#000",
               }}
             >
-              Communicating with your customers
+              Build Trust And Credibility
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-              Effective communication builds trust, understanding, and loyalty.
-              Listen actively, provide clear information, and promptly address
-              concerns to foster meaningful and lasting relationships with your
-              customers.
+            You must develop trust and credibility with your clientele. A thoughtful design and aesthetic pleasing logo can inspire your customer’s confidence. Our experts are available to provide you with first-rate service for your visual brand identity.
             </p>
           </div>
 
-          {/* Text content 2 */}
-          <div className="mt-[30px] md:mt-[50px]">
-            <p
-              className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
-              style={{
-                color: "#000",
-              }}
-            >
-              Sending timely campaigns
-            </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px] ">
-              Sending timely campaigns is crucial for engaging customers and
-              achieving desired results. Understanding their preferences and
-              aligning content with relevant events maximizes impact and
-              conversion rates.
-            </p>
-          </div>
+  
         </div>
         {/* Background image */}
         <div
           className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(./Images/email_marketing/communicatingImage.png)",
+              "url(./Images/graphic_design/buildTrustImage.png)",
           }}
         ></div>
       </div>
 
+    
 
-      {/*Increase leads and product cost*/}
+      {/* Tells Your Brand Story*/}
 
       <div
         className=" grid  lg:gap-x-4  md:grid-cols-2  xl:gap-x-4    
@@ -154,10 +128,10 @@ function EmailMarketing() {
       >
         {/* Background image */}
         <div
-          className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
+          className="row-start-2 md:row-start-1 h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(./Images/email_marketing/increaseLeadsImage.png)",
+              "url(./Images/graphic_design/brandStoryImage.png)",
           }}
         ></div>
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
@@ -169,36 +143,18 @@ function EmailMarketing() {
                 color: "#000",
               }}
             >
-              Increase leads
+             Tells Your Brand Story
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-              Boost your lead generation efforts with targeted marketing
-              campaigns, compelling content, effective lead capture forms, and
-              strategic partnerships to maximize your potential for increased
-              leads.
+            The story behind your brand is more effectively told through graphic design. Customers are interested in the "why" behind the goods and services you offer. Your brand messages may change from design to design, but the brand story will still remain the same over decades.
+
             </p>
           </div>
 
-          {/* Text content 2 */}
-          <div className="mt-[30px] md:mt-[50px]">
-            <p
-              className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
-              style={{
-                color: "#000",
-              }}
-            >
-              Product cost-effective campaigns
-            </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px] ">
-              Product cost-effective campaigns utilize strategic planning and
-              targeted marketing techniques to maximize ROI and minimize
-              expenses, optimizing resources for maximum impact.
-            </p>
-          </div>
         </div>
       </div>
 
-      {/*Providing more value to your customers*/}
+      {/*      Saves Time And Money*/}
 
       <div
         className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
@@ -207,7 +163,7 @@ function EmailMarketing() {
        
      "
       >
-        <div className="row-start-2 md:row-start-1  py-4 sm:py-6  lg:py-8 md:py-6  ">
+        <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
           {/* Text content 1 */}
           <div>
             <p
@@ -216,47 +172,64 @@ function EmailMarketing() {
                 color: "#000",
               }}
             >
-              Communicating with your customers
+             Saves Time And Money
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-              Effective communication builds trust, understanding, and loyalty.
-              Listen actively, provide clear information, and promptly address
-              concerns to foster meaningful and lasting relationships with your
-              customers.
+            A design that is captivated and timeless is essential in the ever-evolving digital world. Save time and money by investing in a vetted and professional graphic designer from the start, and avoid poorly designs that likely steer customers away from your business.
             </p>
           </div>
 
-          {/* Text content 2 */}
-          <div className="mt-[30px] md:mt-[50px]">
-            <p
-              className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
-              style={{
-                color: "#000",
-              }}
-            >
-              Sending timely campaigns
-            </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px] ">
-              Sending timely campaigns is crucial for engaging customers and
-              achieving desired results. Understanding their preferences and
-              aligning content with relevant events maximizes impact and
-              conversion rates.
-            </p>
-          </div>
         </div>
         {/* Background image */}
         <div
           className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(./Images/email_marketing/providingMoreImage.png)",
+              "url(./Images/graphic_design/savesTimeImage.png)",
           }}
         ></div>
       </div>
 
-    
+   
+      {/*      Boost Brand Awareness*/}
+
+      <div
+        className=" grid  lg:gap-x-4  md:grid-cols-2  xl:gap-x-4    
+        grid-cols-1 gap-y-4 
+        lg:px-24 px-6 sm:px-16  mt-[50px]  md:mt-[80px] lg:mt-[100px] 
+       
+     "
+      >
+        {/* Background image */}
+        <div
+          className="row-start-2 md:row-start-1 h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url(./Images/graphic_design/boostBrandImage.png)",
+          }}
+        ></div>
+        <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
+          {/* Text content 1 */}
+          <div>
+            <p
+              className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
+              style={{
+                color: "#000",
+              }}
+            >
+          Boost Brand Awareness
+            </p>
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            Graphic design helps you connect with your audience by effectively communicating with them through some illustrative designs. Your brand will be reinforced, and your audience will be persuaded to interact with your product which in result boost your brand awareness.
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+
 {/* Our Key Features */}
-      <div className="bg-[#92ABFE] my-[50px] md:my-[70px]">
+      <div className="keyFeaturesGradient  my-[50px] md:my-[70px]">
         <p
           className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
            "
@@ -283,11 +256,10 @@ function EmailMarketing() {
                   color: "#000",
                 }}
               >
-                Email Campaign Strategy
+                Branding and Identity
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px] ">
-                Help in developing effective email marketing strategies,
-                including audience segmentation and personalized content.
+              AremxyPlug helps businesses establish a cohesive brand identity through logo design, visual style guidelines, and brand assets.
               </p>
             </div>
 
@@ -299,12 +271,10 @@ function EmailMarketing() {
                   color: "#000",
                 }}
               >
-                Email Design and Development
+               Print and Digital Collateral
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px]  ">
-                Designing visually appealing and responsive email templates and
-                coding them for compatibility across your customer’s various
-                emails.
+              Designing of marketing materials such as brochures, flyers, banners, social media graphics, and more.
               </p>
             </div>
 
@@ -316,11 +286,10 @@ function EmailMarketing() {
                   color: "#000",
                 }}
               >
-                List Management and Automation
+                UI/UX Design
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px] ">
-                Manage your customers email lists, implement automation
-                workflows, and track performance metrics.
+              Creation of visually appealing and functional interfaces for websites, applications, and digital platforms.
               </p>
             </div>
 
@@ -332,11 +301,10 @@ function EmailMarketing() {
                   color: "#000",
                 }}
               >
-                A/B Testing and Optimization
+               Illustrations and Infographics
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px]     ">
-                Conducts A/B tests to optimize your email campaigns, improve
-                your open rates, click-through rates, and conversion rates.
+              We design custom illustrations and infographics to visually communicate complex information and ideas.
               </p>
             </div>
           </div>
@@ -345,15 +313,14 @@ function EmailMarketing() {
             className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "url(./Images/email_marketing/keyFeaturesImage.png)",
+                "url(./Images/graphic_design/keyFeatureImage2.png)",
             }}
           ></div>
         </div>
 
 
-
       </div>
-{/*   AremxyPlug Email Marketing Service */}
+{/*  Let’s Manage your Brand visibility with Captivating Graphic Designs */}
 
 <div className="lg:px-24 px-6 sm:px-16">
 
@@ -365,10 +332,10 @@ function EmailMarketing() {
                   color: primaryColor,
                 }}
               >
-             AremxyPlug Email Marketing Service
+          Let’s Manage your Brand visibility with Captivating Graphic Designs
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              You can connect and communicate with your current customers through email marketing while also attracting new ones. Our email marketing expert got you covered. Contact our sales team right away! 
+              Our graphic design experts craft captivating images, enhancing credibility and trust, attracting customers, and expanding markets with effective messaging and positive impressions.
               </p>
               <div className="mt-6  flex justify-center">
                   <Bluebutton text="Contact Sales"/>
@@ -385,4 +352,4 @@ function EmailMarketing() {
   );
 }
 
-export default EmailMarketing;
+export default GraphicDesign;

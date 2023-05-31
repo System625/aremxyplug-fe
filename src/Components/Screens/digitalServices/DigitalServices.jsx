@@ -258,9 +258,12 @@ function DigitalServices() {
                 problems and communicate ideas through typography, imagery,
                 color, and form.
               </p>
+              <Link to="/GraphicDesign">
               <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
         </div>
