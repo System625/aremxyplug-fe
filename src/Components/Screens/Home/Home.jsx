@@ -403,7 +403,7 @@ export const Home = () => {
                   to fit your company's needs.
                 </div>
                 <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  <Link to="/our-services/digital-services">Learn More</Link>
+                  <Link to="DigitalServices">Learn More</Link>
                 </div>
               </div>
             </div>

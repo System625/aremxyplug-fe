@@ -1,6 +1,7 @@
 import React from "react";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import Bluebutton from "../../bluebutton/Bluebutton";
+import { Link } from "react-router-dom";
 function DigitalServices() {
   return (
     <div>
@@ -181,9 +182,12 @@ function DigitalServices() {
                 and create a bond with your customers.
                 <span className="text-[#dce4ff]">a marketing</span>
               </p>
+              <Link to="/EmailMarketing">
               <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+       
             </div>
           </div>
         </div>
@@ -254,9 +258,12 @@ function DigitalServices() {
                 problems and communicate ideas through typography, imagery,
                 color, and form.
               </p>
+              <Link to="/GraphicDesign">
               <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
         </div>
