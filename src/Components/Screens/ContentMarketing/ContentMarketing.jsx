@@ -27,7 +27,7 @@ const ContentMarketing = () => {
                 <ContentMarketingCard key={item.id} cardDetails={item}/>
             ))}
         </div>
-        <div className="w-[90%] mx-auto md:w-[84%] mb-[100px]">
+        <div className="w-[90%] mx-auto md:w-[84%] mb-[25%] md:mb-[15%]">
             <h2 className="text-center text-primary text-[26px] leading-[39px] font-bold mb-[20px] md:mb-[29.96px] lg:mb-[100px]">Our Key Features</h2>
             <div className="flex flex-col gap-[100px] lg:gap-[150px]">
                 <div className="flex flex-col gap-[20px] md:flex-row">

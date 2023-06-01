@@ -13,7 +13,7 @@ const Telecoms = () => {
         <div className='w-[90%] mx-auto pt-[15%] lg:pt-[5%] md:pt-[5%] md:w-[84%]'>
             <TelecomsHeader/>
         </div>
-        <div className="w-[90%] mx-auto mb-[90px] lg:mb-[150px] md:mb-[120px]">
+        <div className="w-[90%] mx-auto mb-[25%] md:mb-[15%]">
             <div className="w-full bg-white md:hidden bg-center bg-no-repeat bg-cover p-[11px]" style={{backgroundImage: `url(${mobileBg})`}}>
                 <div className="flex flex-col gap-[80px] mb-[80px]">
                     { mobileData.map((data) => (
