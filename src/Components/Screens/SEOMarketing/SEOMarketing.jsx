@@ -27,7 +27,7 @@ const SEOMarketing = () => {
     </div>
 
     {/* seo content */}
-    <div className='pt-[62.94px] pb-[120px] md:pt-[111.23px] md:pb-[150px]'>
+    <div className='pt-[62.94px] mb-[25%] md:pt-[111.23px] md:mb-[15%]'>
         <div className='w-[90%] mx-auto flex flex-col gap-[80px] md:w-[84%]'>
             { seoData.map((item) => (
                 <SEOCard key={item.id} cardDetail={item}/>
@@ -47,7 +47,7 @@ const SEOMarketing = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="mt-[40px] w-full shadow-lg border rounded-[11.58px] px-[10px] py-[30px] md:w-[80%] md:mx-auto lg:w-[85%]">
+                        <div className="mt-[40px] w-full rounded-[11.58px] px-[10px] py-[30px] md:w-[80%] md:mx-auto lg:w-[85%]" style={{ boxShadow: "0px 0px 11.676px rgba(0, 0, 0, 0.5)" }}>
                             <h2 className='text-center text-primary text-[17.02px] font-bold leading-[25.53px] mb-[25px] lg:text-[30px]'>AremxyPlug SEO Marketing Service</h2>
                             <p className='text-[10.21px] mb-[25px] md:text-center lg:text-[18px]'>Let our experts use SEO's best practices to improve your business online visibility and reach more consumers. With SEO, you to attract more worthwhile visitors to your website. </p>
                             <div className='text-center'>

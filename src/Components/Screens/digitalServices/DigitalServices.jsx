@@ -1,9 +1,10 @@
 import React from "react";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import Bluebutton from "../../bluebutton/Bluebutton";
+import { Link } from "react-router-dom";
 function DigitalServices() {
   return (
-    <div >
+    <div>
       {/* digitalServicesBG1 */}
 
       <div className="overflow-hidden h-[950px] sm:h-[1100px] md:h-[570px] lg:h-[600px] xl:h-[650px] 2xl:h-[900px]  mt-[-200px] md:mt-[-150px]  lg:mt-[-200px] ">
@@ -31,8 +32,7 @@ function DigitalServices() {
               your digital needs.
             </p>
             <div className="my-6">
-            <Bluebutton text="Contact Sales"/>
-
+              <Bluebutton text="Contact Sales" />
             </div>
           </div>
 
@@ -73,9 +73,6 @@ function DigitalServices() {
        lg:px-32  px-6 sm:px-16 
         "
         >
-
-
-          
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
             <img
               src="./Images/digitalServices/contentMarketing.png"
@@ -93,12 +90,12 @@ function DigitalServices() {
                 Content Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Content marketing is a powerful tool for businesses looking to connect with their audience and drive engagement. 
+                Content marketing is a powerful tool for businesses looking to
+                connect with their audience and drive engagement.
               </p>
               <div className="mt-6  flex justify-center">
-                  <Bluebutton text="Explore"/>
+                <Bluebutton text="Explore" />
               </div>
-              
             </div>
           </div>
 
@@ -119,26 +116,24 @@ function DigitalServices() {
                 Social Media Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Social media marketing can be an effective way to reach a wide audience and build brand awareness.<span className="text-[#dce4ff]">a marketing effective</span>
+                Social media marketing can be an effective way to reach a wide
+                audience and build brand awareness.
+                <span className="text-[#dce4ff]">a marketing effective</span>
               </p>
               <div className="mt-6 flex justify-center">
-                  <Bluebutton text="Explore"/>
+                <Bluebutton text="Explore" />
               </div>
             </div>
           </div>
         </div>
 
-
-{/* section2 */}
+        {/* section2 */}
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
        lg:px-32  px-6 sm:px-16 
         "
         >
-
-
-          
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
             <img
               src="./Images/digitalServices/SEO.png"
@@ -156,11 +151,15 @@ function DigitalServices() {
                 SEO Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              SEO is the practice of optimizing your website and its content to improve its visibility and ranking on search engine results pages.
+                SEO is the practice of optimizing your website and its content
+                to improve its visibility and ranking on search engine results
+                pages.
               </p>
-              <div className="mt-6  flex justify-center">
-                  <Bluebutton text="Explore"/>
+              <Link to="/seo-marketing">
+              <div className="mt-6 flex justify-center">
+                <Bluebutton text="Explore" />
               </div>
+              </Link>
             </div>
           </div>
 
@@ -181,11 +180,16 @@ function DigitalServices() {
                 Email Marketing
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Your business needs an email marketing strategy that boost sales and create a bond with your customers.<span className="text-[#dce4ff]">a marketing</span>
+                Your business needs an email marketing strategy that boost sales
+                and create a bond with your customers.
+                <span className="text-[#dce4ff]">a marketing</span>
               </p>
+              <Link to="/EmailMarketing">
               <div className="mt-6 flex justify-center">
-                  <Bluebutton text="Explore"/>
+                <Bluebutton text="Explore" />
               </div>
+              </Link>
+       
             </div>
           </div>
         </div>
@@ -197,18 +201,17 @@ function DigitalServices() {
        lg:px-32  px-6 sm:px-16 pb-[100px] 
         "
         >
+          {/*  */}
+          <div
+            className=" bg-left-bottom absolute bottom-0 left-0 h-[800px] w-[90%]  lg:h-[600px] md:w-[65%] lg:w-[65%]  bg-contain bg-no-repeat "
+            style={{
+              backgroundImage:
+                "url(./Images/digitalServices/digitalServicesBG3.png)",
 
-        {/*  */}
-        <div
-          className=" bg-left-bottom absolute bottom-0 left-0 h-[800px] w-[90%]  lg:h-[600px] md:w-[65%] lg:w-[65%]  bg-contain bg-no-repeat "
-          style={{
-            backgroundImage:
-              "url(./Images/digitalServices/digitalServicesBG3.png)",
-           
-            zIndex:-999
-          }}
-        ></div>
-          
+              zIndex: -999,
+            }}
+          ></div>
+
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
             <img
               src="./Images/digitalServices/productDesign.png"
@@ -226,10 +229,12 @@ function DigitalServices() {
                 Product Design
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Product design is the process of identifying a market opportunity, clearly defining the problem, and validating the solution with real user interfaces. 
+                Product design is the process of identifying a market
+                opportunity, clearly defining the problem, and validating the
+                solution with real user interfaces.
               </p>
               <div className="mt-6  flex justify-center">
-                  <Bluebutton text="Explore"/>
+                <Bluebutton text="Explore" />
               </div>
             </div>
           </div>
@@ -251,11 +256,16 @@ function DigitalServices() {
                 Graphic Design
               </p>
               <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Graphic design is the creation of visual compositions to solve problems and communicate ideas through typography, imagery, color, and form.
+                Graphic design is the creation of visual compositions to solve
+                problems and communicate ideas through typography, imagery,
+                color, and form.
               </p>
+              <Link to="/GraphicDesign">
               <div className="mt-6 flex justify-center">
-                  <Bluebutton text="Explore"/>
+                <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
         </div>

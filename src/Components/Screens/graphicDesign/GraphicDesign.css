@@ -1,0 +1,7 @@
+.EmailBoxShadow{
+    box-shadow: 0px 0px 11.5833px rgba(0, 0, 0, 0.25);
+}
+
+.keyFeaturesGradient{
+    background: linear-gradient(180deg, rgba(255, 149, 73, 0.33) 0%, rgba(255, 215, 3, 0.44) 100%);
+}
