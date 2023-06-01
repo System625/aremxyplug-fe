@@ -93,9 +93,11 @@ function DigitalServices() {
                 Content marketing is a powerful tool for businesses looking to
                 connect with their audience and drive engagement.
               </p>
-              <div className="mt-6  flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+              <Link to="/content-marketing">
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -155,9 +157,11 @@ function DigitalServices() {
                 to improve its visibility and ranking on search engine results
                 pages.
               </p>
-              <div className="mt-6  flex justify-center">
+              <Link to="/seo-marketing">
+              <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
             </div>
           </div>
 
@@ -183,11 +187,10 @@ function DigitalServices() {
                 <span className="text-[#dce4ff]">a marketing</span>
               </p>
               <Link to="/EmailMarketing">
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
               </Link>
-       
             </div>
           </div>
         </div>

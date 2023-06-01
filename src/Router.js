@@ -1,17 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./Components/Screens/Home/Home";
+import EmailMarketing from "./Components/Screens/emailMarketing/EmailMarketing";
+import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
+import { Solution } from "./Components/Screens/Solutions/Solution";
+import GraphicDesign from "./Components/Screens/graphicDesign/GraphicDesign";
 import OurServices from "./Components/Screens/OurServices/OurServices";
 import PaymentServices from "./Components/Screens/PaymentServices/PaymentServices";
 import Telecoms from "./Components/Screens/Telecoms/Telecoms";
 import CardIssuing from "./Components/Screens/cardIssuing/cardIssuing";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
-import EmailMarketing from "./Components/Screens/emailMarketing/EmailMarketing";
-import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
-import { Solution } from "./Components/Screens/Solutions/Solution";
-import GraphicDesign from "./Components/Screens/graphicDesign/GraphicDesign";
+
 import ProductDesign from "./Components/Screens/productDesign/ProductDesign";
+import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
+import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
 export const Router = () => {
   return (
     <div>
@@ -32,7 +35,9 @@ export const Router = () => {
         <Route path="/ProductDesign" element={<ProductDesign />}
         />
         <Route path="/about-us" element={<AboutUs/>} />
-        <Route path="/solutions" element={<Solution/>} />
+        <Route path="/solutions" element={<Solution />} />
+        <Route path="/seo-marketing" element={<SEOMarketing/>}/>
+        <Route path="/content-marketing" element={<ContentMarketing />}/>
       </Routes>
 
 
