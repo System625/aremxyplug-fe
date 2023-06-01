@@ -15,16 +15,20 @@ const items = [
     className="w-[280px]   pr-4 md:pr-8 "
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[200px] md:h-[260px] lg:h-[350px] ">
-      <div className="flex pl-2 space-x-4">
-        <img
-          src="./Images/card_issuing_images/cardActivation.png"
-          alt="icon"
-          className="w-[35px] "
-        />
-        <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Card Activation</p>
+      <div className="flex justify-center  h-[60px]">
+        <div className="w-full flex pl-2 space-x-4 ">
+          <img
+            src="./Images/card_issuing_images/cardActivation.png"
+            alt="icon"
+            className="h-[23px] "
+          />
+          <p className=" font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+            Card Activation
+          </p>
+        </div>
       </div>
 
-      <p className="mt-8 text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+      <p className="text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
         Sign up on our platform, navigate the cards feature, provide the
         appropriate details as a business or individual, get verified, activate
         your cards, fund your cards, and start spending with your cards
@@ -38,16 +42,20 @@ const items = [
     className="w-[280px]  pr-4 md:pr-8"
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[200px] md:h-[260px] lg:h-[350px]">
-      <div className="flex pl-2 space-x-4">
-        <img
-          src="./Images/card_issuing_images/cardTopUPIcon.png"
-          alt="icon"
-          className="w-[35px] "
-        />
-        <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Card Top Up</p>
+      <div className="flex justify-center  h-[60px]">
+        <div className="w-full flex pl-2 space-x-4 ">
+          <img
+            src="./Images/card_issuing_images/cardTopUPIcon.png"
+            alt="icon"
+            className="h-[23px] "
+          />
+          <p className=" font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+            Card Top Up
+          </p>
+        </div>
       </div>
 
-      <p className="mt-8 text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+      <p className="text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
         You can seamlessly Top-Up your cards from your wallet. Our 3D secure
         virtual cards are accepted in all online platforms anywhere Verve, Visa,
         and Mastercard are accepted globally.
@@ -61,20 +69,26 @@ const items = [
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[200px] md:h-[260px] lg:h-[350px]">
       <div className="flex pl-2 space-x-4">
-        <div>
-          <img
-            src="./Images/card_issuing_images/paymentIcon.png"
-            alt="icon"
-            className="w-[35px] "
-          />
-        </div>
-        <div className="w-[60%] ">
-          <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Payment</p>
-          <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Authorization</p>
+        <div className="flex justify-center  h-[60px]">
+          <div className="w-full flex pl-2 space-x-4 ">
+            <img
+              src="./Images/card_issuing_images/paymentIcon.png"
+              alt="icon"
+              className="h-[23px] "
+            />
+            <div className="w-[60%] ">
+              <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+                Payment
+              </p>
+              <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+                Authorization
+              </p>
+            </div>{" "}
+          </div>
         </div>
       </div>
 
-      <p className="mt-8 text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+      <p className="text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
         All your card payments will be deducted from your card balance, confirm
         each transaction with an OTP code via your phone number or email to
         authorize and complete each of the transactions.
@@ -87,39 +101,51 @@ const items = [
     className="w-[280px] pr-4 md:pr-8"
   >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[200px] md:h-[260px] lg:h-[350px]">
-      <div className="flex pl-2 space-x-4">
-        <div>
+      <div className="flex justify-center  h-[60px]">
+        <div className="w-full flex pl-2 space-x-4 ">
           <img
             src="./Images/card_issuing_images/automateIcon.png"
             alt="icon"
-            className="w-[35px] "
+            className="h-[23px] "
           />
-        </div>
-        <div className="w-[60%] ">
-          <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Automate </p>
-          <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Card Usage</p>
+          <div className="w-[60%] ">
+            <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+              Automate{" "}
+            </p>
+            <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+              Card Usage
+            </p>
+          </div>{" "}
         </div>
       </div>
 
-      <p className="mt-8 text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+      <p className="text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
         Track your spendings by setting up your daily, weekly, and monthly
         spending limits on your cards, depending on your choice, you are free to
         seamlessly manage your card spending patterns.
       </p>
     </div>
   </div>,
-  <div onDragStart={handleDragStart} role="presentation" className="w-[280px] pr-4 md:pr-8">
+  <div
+    onDragStart={handleDragStart}
+    role="presentation"
+    className="w-[280px] pr-4 md:pr-8"
+  >
     <div className="card_activation_boxshadow w rounded sm:rounded-md md:rounded-lg lg:rounded-lg border-[1px] border-[#92ABFE] p-4 h-[200px] md:h-[260px] lg:h-[350px]">
-      <div className="flex pl-2 space-x-4">
-        <img
-          src="./Images/card_issuing_images/cardStatementIcon.png"
-          alt="icon"
-          className="w-[35px] "
-        />
-        <p className="font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">Card Statement</p>
+      <div className="flex justify-center  h-[60px]">
+        <div className="w-full flex pl-2 space-x-4 ">
+          <img
+            src="./Images/card_issuing_images/cardStatementIcon.png"
+            alt="icon"
+            className="h-[23px] "
+          />
+          <p className=" font-bold tracking-wide text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+            Card Statement
+          </p>
+        </div>
       </div>
 
-      <p className="mt-8 text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
+      <p className="text-justify text-[9.55px] md:text-[10.53px]  lg:text-[18px]">
         You can always request for your card statements on our card issuing
         page, all your cards transactions are safe and secured, You can track
         all your spendings without any hassle.
@@ -144,14 +170,15 @@ function CardIssuing() {
               className="text-[20px]  md:text-[26.06px] lg:text-[45px] font-bold lg:tracking-wider  "
               style={{
                 color: primaryColor,
-               
               }}
             >
               Card Issuing
             </p>
-            <p className="text-[#000] text-justify  
+            <p
+              className="text-[#000] text-justify  
             text-[10.53px] md:text-[12px] lg:text-lg
-            mt-4 sm:mt-6 md:mt-10   lg:mt-12 ">
+            mt-4 sm:mt-6 md:mt-10   lg:mt-12 "
+            >
               Our card issuing service can be tailored to your specific needs as
               an Individual or business. we issue 3D secured virtual and
               physical debit USD and NGN cards to spend anywhere Verve, Visa,
@@ -161,13 +188,12 @@ function CardIssuing() {
           </div>
 
           <div className="w-full flex justify-center md:flex md:justify-end mt-[50px] md:mt-0">
-          <img src="./Images/card_issuing_images/cardIssuingBG.png" alt="backgroundImage" 
-  className="w-[70%] md:w-[90%] lg:w-[95%] "
-  />
+            <img
+              src="./Images/card_issuing_images/cardIssuingBG.png"
+              alt="backgroundImage"
+              className="w-[70%] md:w-[90%] lg:w-[95%] "
+            />
           </div>
-
-
-  
         </div>
 
         <div className="grid mt-12  md:mt-16 lg:mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
@@ -193,6 +219,9 @@ function CardIssuing() {
         </p>
 
         <AliceCarousel
+        animationDuration ={2000}
+          autoPlayInterval={2000}
+          autoPlay ={true}
           mouseTracking
           items={items}
           autoWidth
@@ -239,9 +268,7 @@ function CardIssuing() {
         </div> */}
 
         <div className="flex justify-center my-14">
-          <Bluebutton text="Get Your Card Now"
-          
-          />
+          <Bluebutton text="Get Your Card Now" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 sm:gap-y-14 lg:gap-y-20  md:gap-x-14 lg:gap-x-20">
           <div
@@ -352,7 +379,7 @@ function CardIssuing() {
         </div>
 
         <div className="flex justify-center my-14">
-        <Bluebutton text="Explore Pricing" />
+          <Bluebutton text="Explore Pricing" />
         </div>
       </div>
     </>
