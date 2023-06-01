@@ -402,8 +402,8 @@ export const Home = () => {
                   We offer a variety of digital services that can be customized
                   to fit your company's needs.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
-                  <Link to="/our-services/digital-services">Learn More</Link>
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
+                  <Link to="DigitalServices">Learn More</Link>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import Bluebutton from "../../bluebutton/Bluebutton";
+import { Link } from "react-router-dom";
 function DigitalServices() {
   return (
     <div>
@@ -92,9 +93,11 @@ function DigitalServices() {
                 Content marketing is a powerful tool for businesses looking to
                 connect with their audience and drive engagement.
               </p>
-              <div className="mt-6  flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+              <Link to="/content-marketing">
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -154,9 +157,11 @@ function DigitalServices() {
                 to improve its visibility and ranking on search engine results
                 pages.
               </p>
-              <div className="mt-6  flex justify-center">
+              <Link to="/seo-marketing">
+              <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
             </div>
           </div>
 
@@ -181,9 +186,11 @@ function DigitalServices() {
                 and create a bond with your customers.
                 <span className="text-[#dce4ff]">a marketing</span>
               </p>
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+              <Link to="/EmailMarketing">
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -192,7 +199,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 pb-[100px] 
+       lg:px-32  px-6 sm:px-16 lg:pb-[25%] pb-[35%]
         "
         >
           {/*  */}
@@ -227,9 +234,12 @@ function DigitalServices() {
                 opportunity, clearly defining the problem, and validating the
                 solution with real user interfaces.
               </p>
+              <Link to="/ProductDesign">
               <div className="mt-6  flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
 
@@ -254,9 +264,12 @@ function DigitalServices() {
                 problems and communicate ideas through typography, imagery,
                 color, and form.
               </p>
+              <Link to="/GraphicDesign">
               <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
         </div>
