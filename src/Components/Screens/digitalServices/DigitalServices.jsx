@@ -157,9 +157,11 @@ function DigitalServices() {
                 to improve its visibility and ranking on search engine results
                 pages.
               </p>
-              <div className="mt-6  flex justify-center">
+              <Link to="/seo-marketing">
+              <div className="mt-6 flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
             </div>
           </div>
 
