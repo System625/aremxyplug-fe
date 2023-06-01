@@ -856,7 +856,7 @@ export const Home = () => {
       </div>
 
       {/* CARD ISSUING */}
-      <div className="flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[15%] md:py-[5%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
+      <div className="mb-[20%] flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[15%] md:py-[5%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
         <div>
           <div className="text-[20px] font-medium text-center mb-[4%] md:text-[26px] md:text-left lg:text-[45px]">
             Card Issuing
@@ -877,64 +877,61 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mt-[10%] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%] lg:gap-[0%]">
-        <div className="">
-          <div className="text-[20px] text-[#04177F] text-center font-medium mb-[5%] md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center md:text-[17px] md:font-semibold md:text-left lg:text-[30px] ">
             Cross-border Payment
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[208px] lg:text-[18px] lg:w-[40%] ">
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
             Our cross-border payment services make it simple and practical to
             send money to family and friends, receive money both locally and
             internationally.
           </div>
         </div>
         <img
-          className=" w-[60%] h-[240px] mx-auto md:w-[25%] lg:h-[366.36px] lg:w-[28%] "
+          className="w-[248px] h-[162px] mx-auto md:mx-0 lg:w-[433px] lg:h-[284px]"
           src="./Images/crossborder.png"
           alt="/"
         />
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[0%]">
-        <div className="">
-          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center lg:text-[30px] lg:text-left">
             Currency Conversion
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[60%] lg:text-[18px] lg:w-[40%] lg:">
-            With our currency conversion service, you can get the most
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
+            With our currency conversion service, You can get the most
             convenient exchange rates and convert any currency in a matter of
             seconds with no hidden fees.
           </div>
         </div>
-
         <img
-          className="w-[60%] h-[240px] mx-auto md:w-[180px] md:h-[166.39px] lg:mr-[] lg:h-[324px] lg:w-[35%]"
+          className="w-[268px] h-[190px] mx-auto md:mx-0 lg:w-[470px] lg:h-[333px]"
           src="./Images/currency.png"
           alt="/"
         />
-        {/* <img
-            className="w-[40%] mx-auto md:w-[180px] md:h-[166.39px] lg:h-[282.36px] lg:w-[213px]"
-            src="./Images/currency2.png"
-            alt="/"
-          /> */}
       </div>
 
       {/* MULTI-CURRENCY WALLETS */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[px] md:mx-[8%]">
-        <div className="">
-          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center w-[200px] mx-auto leading-[30px] md:w-[100%] lg:text-[30px] lg:text-left">
             Multi-Currency Wallets
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[px] lg:text-[18px] lg:w-[40%] ">
-            Our Multi-Currency Wallets services are the best way to manage all
-            your currencies, keep a track and conveniently store, send, and
-            receive digital assets in one location.
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
+            With our currency conversion service, You can get the most
+            convenient exchange rates and convert any currency in a matter of
+            seconds with no hidden fees.
           </div>
         </div>
-        <div className="bg-red-500 w-[100%] h-[100%] ">
+        <div className="px-[10%]">
           <img
-            className="w-[60%] mx-auto md:w-[268px%] md:h-[287] lg:mx-"
+            className="w-[157px] h-[169px] mx-auto md:mx-0 lg:w-[275px] lg:h-[295px]"
             src="./Images/currency3.png"
             alt="/"
           />
@@ -958,7 +955,7 @@ export const Home = () => {
             accounts, making payments using digital tools that can simplify
             their lives and work at your own schedule. 
           </div>
-          <div className="text-[10px] bg-[#04177f] w-[35%] text-center text-[#ffffff] p-[2%] rounded-md mx-auto md:mx-0 lg:text-[15px] lg:font-semibold">
+          <div className="text-[10px] bg-[#04177f] w-[197px] text-center text-[#ffffff] p-[2%] rounded-md mx-auto md:mx-0 lg:text-[15px] lg:font-semibold lg:w-[247px]">
             Join Our Agent Program
           </div>
         </div>
@@ -1078,7 +1075,7 @@ export const Home = () => {
       </div>
 
       {/* FREQUENTLY ASKED QUESTIONS */}
-      <div className="mx-[5%] mb-[25%] md:mb-[15%] lg:mx-[8%]">
+      <div className="mx-[5%] mb-[35%] md:mb-[25%] lg:mx-[8%]">
         <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
           Frequently Asked Questions
         </div>
