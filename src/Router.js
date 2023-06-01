@@ -12,6 +12,7 @@ import CardIssuing from "./Components/Screens/cardIssuing/cardIssuing";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
 import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
+import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
 export const Router = () => {
   return (
     <div>
@@ -28,7 +29,7 @@ export const Router = () => {
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/solutions" element={<Solution />} />
         <Route path="/seo-marketing" element={<SEOMarketing/>}/>
-        
+        <Route path="/content-marketing" element={<ContentMarketing />}/>
       </Routes>
 
 
