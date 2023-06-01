@@ -199,7 +199,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 lg:pb-[25%] pb-[35%]
+       lg:px-32  px-6 sm:px-16 md:pb-[15%] pb-[25%]
         "
         >
           {/*  */}
