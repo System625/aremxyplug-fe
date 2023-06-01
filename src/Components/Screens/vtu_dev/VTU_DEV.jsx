@@ -1680,7 +1680,7 @@ function VTU_DEV() {
           Do you need help choosing a plan?
         </p>
 
-        <div className="flex justify-center pb-[100px]">
+        <div className="flex justify-center lg:mb-[25%] mb-[35%]">
           <Bluebutton text="Contact Sales" />
         </div>
       </div>

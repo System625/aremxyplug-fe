@@ -199,7 +199,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 pb-[100px] 
+       lg:px-32  px-6 sm:px-16 lg:pb-[25%] pb-[35%]
         "
         >
           {/*  */}
@@ -234,9 +234,12 @@ function DigitalServices() {
                 opportunity, clearly defining the problem, and validating the
                 solution with real user interfaces.
               </p>
+              <Link to="/ProductDesign">
               <div className="mt-6  flex justify-center">
                 <Bluebutton text="Explore" />
               </div>
+              </Link>
+
             </div>
           </div>
 
