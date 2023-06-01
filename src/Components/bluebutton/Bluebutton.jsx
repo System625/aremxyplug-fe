@@ -5,12 +5,17 @@ function Bluebutton({...props}) {
   return (
     
     <div
-      className="text-[#fff] w-[200px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+    className=" inline-flex justify-center items-center h-[46px] text-[#fff] text-[7.82px] md:text-[7.34px] lg:text-[12.66px]  text-center rounded-md  font-[400]  cursor-pointer px-10 "
       style={{
         backgroundColor: primaryColor,
       }}
     >
-     {props.text}
+    <p> {props.text}</p>
+
+
+   
+
+
     </div>
 
   )

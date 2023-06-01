@@ -243,7 +243,7 @@ export const Solution = () => {
           </div>
         </div>
       </div>
-
+      
       {/* LAST SECTION */}
       <div
         className="mb-[35%] w-[100%] rounded-xl h-[254px] flex flex-col gap-[40px] md:gap-[0px] md:w-[648px] md:h-[135px] md:mx-auto lg:w-[1101px] lg:h-[227px] lg:gap-[50px] lg:mb-[25%]"

@@ -11,6 +11,7 @@ import EmailMarketing from "./Components/Screens/emailMarketing/EmailMarketing";
 import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
 import GraphicDesign from "./Components/Screens/graphicDesign/GraphicDesign";
+import ProductDesign from "./Components/Screens/productDesign/ProductDesign";
 export const Router = () => {
   return (
     <div>
@@ -27,6 +28,8 @@ export const Router = () => {
         <Route path="/EmailMarketing" element={<EmailMarketing />}
         />
         <Route path="/GraphicDesign" element={<GraphicDesign />}
+        />
+        <Route path="/ProductDesign" element={<ProductDesign />}
         />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/solutions" element={<Solution/>} />

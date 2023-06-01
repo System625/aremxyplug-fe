@@ -69,7 +69,7 @@ function GraphicDesign() {
           >
             We design a visual identity that reflects your company's mission and values.
           </p>
-          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-4 sm:mt-6 md:mt-10 sm:text:lg  lg:mt-12 ">
+          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px]">
           Our experts create designs that boost brand awareness and name recognition. Strong visuals grab the attention of your audience, making you stand out against your competitor.
 
           </p>
@@ -325,7 +325,7 @@ function GraphicDesign() {
 <div className="lg:px-24 px-6 sm:px-16">
 
 
-<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] mb-[70px] md:mb-[100px] xl:mb-[130px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
+<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] lg:mb-[25%] mb-[35%] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
               <p
                 className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{
