@@ -1024,6 +1024,16 @@ function VTU_DEV() {
                   className="w-[25px] "
                 />
                 <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                  TV Subscription
+                </p>
+              </div>
+              <div className="flex ml-4 items-center my-4">
+                <img
+                  src="./images/vtu_dev/blueCheck.png"
+                  alt="blue check"
+                  className="w-[25px] "
+                />
+                <p className="px-4 md:text-lg lg:text-xl" style={{}}>
                   Education Pins
                 </p>
               </div>
