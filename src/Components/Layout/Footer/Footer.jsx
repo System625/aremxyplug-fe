@@ -40,7 +40,7 @@ export const Footer = () => {
         <div className="flex flex-wrap gap-[20%] h-[] w-[261px] pt-[15px] mx-auto ">
           <div className="flex flex-col gap-[15px] mb-[10%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
-              AremxyPlug
+              <Link to="/">AremxyPlug</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px]">About us</div>
             <div className="w-[40px] h-[13px] text-[9px]">Careers</div>
@@ -93,14 +93,11 @@ export const Footer = () => {
                 <div className="w-[96px] h-[13px] text-[9px]">
                   International Payment
                 </div>
-                <Link to="/VTU_DEV">
-                  <div className="w-[94px] h-[13px] text-[9px] cursor-pointer">
-                    VTU development
-                  </div>
-                </Link>
-
+                <div className="w-[94px] h-[13px] text-[9px]">
+                  VTU development
+                </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  Business Development
+                  <Link to="/businessDev">Business Development</Link>
                 </div>
               </div>
             )}
@@ -114,7 +111,7 @@ export const Footer = () => {
 
           <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
-              Solutions
+              <Link to="/solutions">Solutions</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px]">Baas</div>
             <div className="w-[40px] h-[13px] text-[9px]">Saas</div>
@@ -242,10 +239,10 @@ export const Footer = () => {
         <div className="flex gap-[10%] w-[85%] pt-[15px] ml-[%] lg:gap-[100px] mx-auto">
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
-              AremxyPlug
+              <Link to="/">AremxyPlug</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              About us
+              <Link to="/about-us">About us</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               Careers
@@ -275,22 +272,17 @@ export const Footer = () => {
               Product
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Telecom
+              <Link to="/our-services/telecoms">Telecom</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Payment
+              <Link to="/our-services/payment">Payment</Link>
             </div>
-            <Link to="/CardIssuing">
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                Card issuing
-              </div>
-            </Link>
-            <Link to="/DigitalServices">
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                Digital Service
-              </div>
-            </Link>
-
+            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+              Card issuing
+            </div>
+            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+              Digital Service
+            </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
               Virtual Account
             </div>
@@ -298,27 +290,26 @@ export const Footer = () => {
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 Currency conversion
               </div>
-              <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Multi-Currency Wallet
-              </div>
+              <Link to="/home#multicurrency">
+                <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                  Multi-Currency Wallet
+                </div>
+              </Link>
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
-              <Link to="/VTU_DEV">
-                <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                  VTU development
-                </div>
-              </Link>
-
+              <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                VTU development
+              </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Business Development
+                <Link to="/businessDev">Business Development</Link>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
-              Solutions
+              <Link to="/solutions">Solutions</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               Baas
@@ -429,16 +420,33 @@ export const Footer = () => {
             <div className="text-[14px] lg:text-[25px]">Follow Us on</div>
             <div className="flex gap-[12px] lg:gap-[15px]">
               <div className="text-lg lg:text-3xl">
-                <SiLinkedin />
+                <a
+                  href="/https://www.linkedin.com/company/aremxyplug-business-enterprises/"
+                  target="_blank"
+                >
+                  <SiLinkedin />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <ImFacebook2 />
+                <a
+                  href="/https://m.facebook.com/102536649209580/"
+                  target="_blank"
+                >
+                  <ImFacebook2 />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <ImInstagram />
+                <a href="/https://www.instagram.com/aremxyplug" target="_blank">
+                  <ImInstagram />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <SiTwitter />
+                <a
+                  href="/https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
+                  target="_blank"
+                >
+                  <SiTwitter />
+                </a>
               </div>
               <div className="text-[20px] lg:text-3xl">
                 <GrMail />
