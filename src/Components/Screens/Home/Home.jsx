@@ -897,7 +897,7 @@ export const Home = () => {
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div id="currencyconvert" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center lg:text-[30px] lg:text-left">
             Currency Conversion
