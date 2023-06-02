@@ -122,9 +122,11 @@ function DigitalServices() {
                 audience and build brand awareness.
                 <span className="text-[#dce4ff]">a marketing effective</span>
               </p>
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+              <Link to='/social-media-marketing'>
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
