@@ -1073,7 +1073,7 @@ export const Home = () => {
           // touchTracking
         />
       </div>
-
+      
       {/* FREQUENTLY ASKED QUESTIONS */}
       <div className="mx-[5%] mb-[35%] md:mb-[25%] lg:mx-[8%]">
         <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
