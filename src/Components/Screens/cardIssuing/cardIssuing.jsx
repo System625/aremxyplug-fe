@@ -159,7 +159,7 @@ function CardIssuing() {
 
   return (
     <>
-      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-[180px]  md:pt-[280px]  lg:pt-[300px] md:pb-[15%] pb-[25%]  w-full lg:px-32  px-6 sm:px-16 ">
+      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-[180px]  md:pt-[280px]  lg:pt-[300px] md:pb-[15%] pb-[25%]  w-full lg:px-[8%] px-[5%] ">
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-8  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
@@ -199,7 +199,7 @@ function CardIssuing() {
         <div className="grid mt-12  md:mt-16 lg:mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           <div className="grid lg:col-span-2">
             <p
-              className="text-[20px]  md:text-[17.38px] lg:text-2xl font-bold lg:tracking-wider  "
+              className="text-[20px]  md:text-[17.38px] lg:text-[30px] font-bold lg:tracking-wider  "
               style={{
                 color: primaryColor,
               }}

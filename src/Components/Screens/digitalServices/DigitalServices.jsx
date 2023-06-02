@@ -11,7 +11,7 @@ function DigitalServices() {
         <div
           className="absolute mt-[250px] md:mt-[180px] lg:mt-[230px] grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
        
         "
         >
@@ -70,7 +70,7 @@ function DigitalServices() {
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
         "
         >
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
@@ -135,7 +135,7 @@ function DigitalServices() {
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
         "
         >
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
@@ -201,7 +201,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 md:pb-[15%] pb-[25%]
+       lg:px-[8%] px-[5%]md:pb-[15%] pb-[25%]
         "
         >
           {/*  */}

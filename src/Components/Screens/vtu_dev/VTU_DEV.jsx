@@ -656,18 +656,18 @@ function VTU_DEV() {
         "The VTU system is designed to handle high volumes of transactions while ensuring data security and privacy.",
     },
   ];
-
+ 
   return (
     <>
       {/* HEADER */}
-      <div className="bgClass h-[1200px] md:h-[800px] lg:h-[1200px] mt-[-100px] md:mt-[-170px] lg:mt-[-200px]   px-6 md:px-8 lg:px-16  xl:px-32">
+      <div className="bgClass h-[1200px] md:h-[800px] lg:h-[1200px] mt-[-100px] md:mt-[-170px] lg:mt-[-200px]    lg:px-[8%] px-[5%]  ">
         <div
-          className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className=" grid lg:grid-cols-2   lg:gap-x-4 md:gap-x-4  md:grid-cols-2  
        grid-cols-1 gap-y-4 
       
         "
         >
-          <div className="rounded sm:rounded-md p-4 sm:p-6 lg:rounded-lg  lg:p-8 md:p-6    mt-[150px] md:mt-[220px] lg:mt-[250px]">
+          <div className="rounded sm:rounded-md  lg:rounded-lg     mt-[150px] md:mt-[220px] lg:mt-[250px]">
             <p
               className="text-[20px]  md:text-[26.06px] lg:text-[45px] font-bold lg:tracking-wider  "
               style={{
@@ -699,7 +699,7 @@ function VTU_DEV() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3">
-          <div className="mt-[100px] md:mt-[unset] rounded sm:rounded-md p-4 sm:p-6 lg:rounded-lg  lg:p-8 md:p-6 md:col-span-2">
+          <div className="mt-[100px] md:mt-[unset] rounded sm:rounded-md  lg:rounded-lg   md:col-span-2">
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold lg:tracking-wider  text-[#000]">
               Own a VTU platform to start your telecom business
             </p>
@@ -718,7 +718,7 @@ function VTU_DEV() {
       <div
         className=" grid  lg:gap-x-4  md:grid-cols-3 md:gap-x-4    
     grid-cols-1 gap-y-4 
-    lg:px-32  px-6 sm:px-16 
+    px-[5%] lg:px-[8%]
      "
       >
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6 md:col-span-2 ">
@@ -755,7 +755,7 @@ function VTU_DEV() {
       <div
         className=" grid  lg:gap-x-4  md:grid-cols-3 md:gap-x-4    
     grid-cols-1 gap-y-4 
-    lg:px-32  px-6 sm:px-16 
+    lg:px-[8%]  px-[5%]
      "
       >
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6 md:col-span-2 ">
@@ -788,7 +788,7 @@ function VTU_DEV() {
         </div>
       </div>
 
-      <div className="lg:px-32  px-6 sm:px-16 ">
+      <div className="lg:px-[8%]  px-[5%] ">
         <p
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold lg:tracking-wider  text-center mt-[70px] mb-[50px]"
           style={{
@@ -1506,7 +1506,7 @@ function VTU_DEV() {
         */}
 
         {/* last plan */}
-        <div className="mt-14 flex justify-center">
+        <div className="mt-[18px] flex justify-center">
           <div className="hidden md:block  lg:hidden relative myCardShadow h-[760px] md:w-[42%] md:h-[800px] lg:h-[760px] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden ml-[-40px]">
             <VTU_PAY color="#dbffd2" />
 
@@ -1607,7 +1607,7 @@ function VTU_DEV() {
       </div>
 
       {/*  Our Key Features Includes */}
-      <div className="px-6 md:px-8 lg:px-16  xl:px-32">
+      <div className=" lg:px-[8%] px-[5%]  ">
         <p
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold lg:tracking-wider  text-center mt-[70px] mb-[50px]"
           style={{
@@ -1640,7 +1640,7 @@ function VTU_DEV() {
       {/*  Our Key Features Includes ends here */}
 
       {/*   Difference Key Features  starts here */}
-      <div className="px-6 md:px-8 lg:px-16  xl:px-32">
+      <div className=" lg:px-[8%] px-[5%]  ">
         <p
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold lg:tracking-wider  text-center mt-[70px] mb-[50px]"
           style={{
