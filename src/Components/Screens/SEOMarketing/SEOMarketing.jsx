@@ -28,15 +28,15 @@ const SEOMarketing = () => {
 
     {/* seo content */}
     <div className='pt-[62.94px] mb-[25%] md:pt-[111.23px] md:mb-[15%]'>
-        <div className='w-[90%] mx-auto flex flex-col gap-[80px] md:w-[84%]'>
+        <div className='w-[90%] mx-auto flex flex-col gap-[50px] md:w-[84%] md:gap-[80px]'>
             { seoData.map((item) => (
                 <SEOCard key={item.id} cardDetail={item}/>
             ))}
             {/* key feature section */}
             <div className='mt-[20px] flex flex-col gap-[100px]'>
-                <div className="flex flex-col gap-[60px]">
+                <div className="flex flex-col gap-[50px]">
                     <h2 className="text-primary text-center text-[30px] font-bold md:text-[18.16px] lg:text-[32px]">Our Key Features</h2>
-                    <div className='flex flex-col gap-[60px]'>
+                    <div className='flex flex-col gap-[50px]'>
                         <div className= 'md:flex md:flex-row-reverse md:w-[550.69px] mx-auto md:h-[247.8px] md:gap-[17px] md:items-center lg:w-[80%] lg:gap-[30px] lg:h-[442px] lg:justify-between'>
                             <div className='w-[235.93px] h-[215.6px] mx-auto md:mx-0 lg:w-[415px] lg:h-[380px]'>
                                 <img src={keyFeatureImg} alt="key_feature" className='w-full h-full object-contain'/>
