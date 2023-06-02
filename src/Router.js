@@ -19,7 +19,7 @@ export const Router = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/our-services" element={<OurServices />} />
         <Route path="/VTU_DEV" element={<VTU_DEV />} />
         <Route path="/CardIssuing" element={<CardIssuing />} />
