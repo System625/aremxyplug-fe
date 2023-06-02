@@ -12,7 +12,7 @@ function EmailMarketing() {
         <div
           className=" mt-[40px] md:mt-[50px] lg:mt-[80px] grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-24 px-6 sm:px-16 
+        lg:px-[8%] px-[5%]
        
         "
         >
@@ -91,7 +91,7 @@ function EmailMarketing() {
       <div
         className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
         grid-cols-1 gap-y-4 
-        lg:px-24 px-6 sm:px-16  mt-[50px]  md:mt-[80px] lg:mt-[100px] 
+         lg:px-[8%] px-[5%] mt-[50px]  md:mt-[80px] lg:mt-[100px] 
        
      "
       >
@@ -148,7 +148,7 @@ function EmailMarketing() {
       <div
         className=" grid  lg:gap-x-4  md:grid-cols-2  xl:gap-x-4    
         grid-cols-1 gap-y-4 
-        lg:px-24 px-6 sm:px-16  mt-[50px]  md:mt-[80px] lg:mt-[100px] 
+         lg:px-[8%] px-[5%] mt-[50px]  md:mt-[80px] lg:mt-[100px] 
        
      "
       >
@@ -203,7 +203,7 @@ function EmailMarketing() {
       <div
         className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
         grid-cols-1 gap-y-4 
-        lg:px-24 px-6 sm:px-16  mt-[50px]  md:mt-[80px] lg:mt-[100px] 
+         lg:px-[8%] px-[5%] mt-[50px]  md:mt-[80px] lg:mt-[100px] 
        
      "
       >
@@ -270,7 +270,7 @@ function EmailMarketing() {
         <div
           className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
         grid-cols-1 gap-y-4 
-        lg:px-24 px-6 sm:px-16  mt-[10px]  md:mt-[30px] lg:mt-[50px] 
+         lg:px-[8%] px-[5%] mt-[10px]  md:mt-[30px] lg:mt-[50px] 
        
      "
         >
@@ -355,10 +355,10 @@ function EmailMarketing() {
       </div>
 {/*   AremxyPlug Email Marketing Service */}
 
-<div className="lg:px-24 px-6 sm:px-16">
+<div className=" lg:px-[8%] px-[5%] md:mb-[15%] mb-[25%]">
 
 
-<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] lg:mb-[25%] mb-[35%] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
+<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
               <p
                 className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{

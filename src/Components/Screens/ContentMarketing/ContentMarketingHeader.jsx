@@ -13,7 +13,7 @@ const ContentMarketingHeader = () => {
                     <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]'>Contact Sales</Link>
                 </div>
             </div>
-            <div className="h-[265.33px] md:w-[288.75px] md:h-[266.55px] lg:w-[504px] lg:h-[456px]">
+            <div className='w-[77.78%] mx-auto md:w-[39%] md:mx-0'>
                 <img src={contentMain} alt="content_main" className='w-full h-full object-contain'/>
             </div>
         </div>

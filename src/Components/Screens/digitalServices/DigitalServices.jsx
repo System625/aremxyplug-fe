@@ -11,7 +11,7 @@ function DigitalServices() {
         <div
           className="absolute mt-[250px] md:mt-[180px] lg:mt-[230px] grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
        
         "
         >
@@ -70,7 +70,7 @@ function DigitalServices() {
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
         "
         >
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
@@ -122,9 +122,11 @@ function DigitalServices() {
                 audience and build brand awareness.
                 <span className="text-[#dce4ff]">a marketing effective</span>
               </p>
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+              <Link to='/social-media-marketing'>
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -133,7 +135,7 @@ function DigitalServices() {
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 
+       lg:px-[8%] px-[5%]
         "
         >
           <div className="  flex flex-col items-center  border-r border-gray-300 pr-[20px] ">
@@ -199,7 +201,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-32  px-6 sm:px-16 lg:pb-[25%] pb-[35%]
+       lg:px-[8%] px-[5%]md:pb-[15%] pb-[25%]
         "
         >
           {/*  */}

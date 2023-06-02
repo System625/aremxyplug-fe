@@ -71,8 +71,16 @@ export const Footer = () => {
             </div>
             <div className="w-[40px] h-[13px] text-[9px]">Telecom</div>
             <div className="w-[40px] h-[13px] text-[9px]">Payment</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Card issuing</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Digital Service</div>
+            <Link to="/CardIssuing">
+              <div className="w-[80px] h-[13px] text-[9px] cursor-pointer">
+                Card issuing
+              </div>
+            </Link>
+            <Link to="/DigitalServices">
+              <div className="w-[80px] h-[13px] text-[9px]">
+                Digital Service
+              </div>
+            </Link>
             <div className="w-[80px] h-[13px] text-[9px]">Virtual Account</div>
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
@@ -86,7 +94,7 @@ export const Footer = () => {
                   International Payment
                 </div>
                 <div className="w-[94px] h-[13px] text-[9px]">
-                  <Link to="/VTU_DEV">VTU development</Link>
+                  VTU development
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
                   <Link to="/businessDev">Business Development</Link>
@@ -270,10 +278,10 @@ export const Footer = () => {
               <Link to="/our-services/payment">Payment</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              <Link to="/CardIssuing">Card issuing</Link>
+              Card issuing
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              <Link to="/DigitalServices">Digital Service</Link>
+              Digital Service
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
               Virtual Account
@@ -291,7 +299,7 @@ export const Footer = () => {
                 International Payment
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                <Link to="/VTU_DEV">VTU development</Link>
+                VTU development
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 <Link to="/businessDev">Business Development</Link>
