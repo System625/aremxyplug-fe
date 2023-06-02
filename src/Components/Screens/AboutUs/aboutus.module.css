@@ -10,6 +10,7 @@
          
 }
 
+
 /* TABLET view */
 
 @media (min-width: 768px){
@@ -24,7 +25,9 @@
     }
 }
 
+
 /* DESKTOP VIEW */
+
 @media (min-width: 1024px){
     .hero2{
     background: url("/public/Images/aboutimages/altbg.png");

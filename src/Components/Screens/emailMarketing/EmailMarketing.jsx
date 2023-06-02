@@ -355,10 +355,10 @@ function EmailMarketing() {
       </div>
 {/*   AremxyPlug Email Marketing Service */}
 
-<div className="lg:px-24 px-6 sm:px-16">
+<div className="lg:px-24 px-6 sm:px-16 md:mb-[15%] mb-[25%]">
 
 
-<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] lg:mb-[25%] mb-[35%] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
+<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
               <p
                 className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
                 style={{

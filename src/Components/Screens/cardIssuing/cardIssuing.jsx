@@ -159,7 +159,7 @@ function CardIssuing() {
 
   return (
     <>
-      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-[180px]  md:pt-[280px]  lg:pt-[300px] lg:pb-[25%] pb-[35%] w-full lg:px-32  px-6 sm:px-16 ">
+      <div className="page_overall_root_background_gradient mt-[-100px] md:mt-[-170px] lg:mt-[-200px] pt-[180px]  md:pt-[280px]  lg:pt-[300px] md:pb-[15%] pb-[25%]  w-full lg:px-32  px-6 sm:px-16 ">
         <div
           className=" grid lg:grid-cols-2 lg:gap-x-8  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
@@ -378,7 +378,7 @@ function CardIssuing() {
           </div>
         </div>
 
-        <div className="flex justify-center my-14">
+        <div className="flex justify-center mt-14">
           <Bluebutton text="Explore Pricing" />
         </div>
       </div>

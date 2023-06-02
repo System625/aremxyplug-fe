@@ -6,6 +6,7 @@ import { ImFacebook2 } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import { SiTwitter } from "react-icons/si";
 import { GrMail } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -70,8 +71,16 @@ export const Footer = () => {
             </div>
             <div className="w-[40px] h-[13px] text-[9px]">Telecom</div>
             <div className="w-[40px] h-[13px] text-[9px]">Payment</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Card issuing</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Digital Service</div>
+            <Link to="/CardIssuing">
+              <div className="w-[80px] h-[13px] text-[9px] cursor-pointer">
+                Card issuing
+              </div>
+            </Link>
+            <Link to="/DigitalServices">
+              <div className="w-[80px] h-[13px] text-[9px]">
+                Digital Service
+              </div>
+            </Link>
             <div className="w-[80px] h-[13px] text-[9px]">Virtual Account</div>
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
@@ -84,9 +93,12 @@ export const Footer = () => {
                 <div className="w-[96px] h-[13px] text-[9px]">
                   International Payment
                 </div>
-                <div className="w-[94px] h-[13px] text-[9px]">
-                  VTU development
-                </div>
+                <Link to="/VTU_DEV">
+                  <div className="w-[94px] h-[13px] text-[9px] cursor-pointer">
+                    VTU development
+                  </div>
+                </Link>
+
                 <div className="w-[100px] h-[13px] text-[9px]">
                   Business Development
                 </div>
@@ -268,12 +280,17 @@ export const Footer = () => {
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               Payment
             </div>
-            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Card issuing
-            </div>
-            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Digital Service
-            </div>
+            <Link to="/CardIssuing">
+              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
+                Card issuing
+              </div>
+            </Link>
+            <Link to="/DigitalServices">
+              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
+                Digital Service
+              </div>
+            </Link>
+
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
               Virtual Account
             </div>
@@ -287,9 +304,12 @@ export const Footer = () => {
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
-              <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                VTU development
-              </div>
+              <Link to="/VTU_DEV">
+                <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
+                  VTU development
+                </div>
+              </Link>
+
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 Business Development
               </div>

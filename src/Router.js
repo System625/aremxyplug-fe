@@ -11,6 +11,7 @@ import Telecoms from "./Components/Screens/Telecoms/Telecoms";
 import CardIssuing from "./Components/Screens/cardIssuing/cardIssuing";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import VTU_DEV from "./Components/Screens/vtu_dev/VTU_DEV";
+import { BusinessDev } from "./Components/Screens/BusinessDev/busdev";
 import ProductDesign from "./Components/Screens/productDesign/ProductDesign";
 import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
 import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
@@ -34,10 +35,8 @@ export const Router = () => {
         <Route path="/seo-marketing" element={<SEOMarketing/>}/>
         <Route path="/content-marketing" element={<ContentMarketing />}/>
         <Route path="/social-media-marketing" element={<SocialMediaMarketing />}/>
+        <Route path="/businessDev" element={<BusinessDev />} />
       </Routes>
-
-
-
     </div>
   );
 };

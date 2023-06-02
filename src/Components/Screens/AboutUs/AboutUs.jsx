@@ -497,7 +497,7 @@ export const AboutUs = () => {
 
       {/* OUR SOLUTION */}
       <div className="mt-[15%] mb-[15%] md:flex md:flex-row-reverse md:justify-center md:items-center lg:mt-[12%] lg:ml-[5%] lg:gap-[%]">
-        <div className="font-semibold text-[31px] text-center md:hidden">
+        <div className="font-semibold text-[20px] text-center md:hidden">
           Our Solution
         </div>
         <div>
@@ -521,7 +521,7 @@ export const AboutUs = () => {
 
       {/* OUR PRODUCT */}
       <div className="md:flex md:flex-row md:mx-[5%] md:gap-[10%] md:justify-center md:items-center">
-        <div className="font-semibold text-[31px] text-center md:hidden">
+        <div className="font-semibold text-[20px] text-center md:hidden">
           Our Product
         </div>
         <div>
@@ -532,7 +532,7 @@ export const AboutUs = () => {
           />
         </div>
         <div>
-          <div className="hidden text-[31px] text-center md:block md:text-[20px] md:text-left md:ml-[8%] lg:ml-[0] lg:text-[30px]">
+          <div className="font-semibold hidden text-[31px] text-center md:block md:text-[20px] md:text-left md:ml-[8%] lg:ml-[0] lg:text-[30px]">
             Our Product
           </div>
           <img
@@ -543,7 +543,7 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+      <div className="mb-[35%] lg:mb-[25%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
         Contact Us
       </div>
     </>

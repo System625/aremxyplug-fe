@@ -1024,6 +1024,16 @@ function VTU_DEV() {
                   className="w-[25px] "
                 />
                 <p className="px-4 md:text-lg lg:text-xl" style={{}}>
+                  TV Subscription
+                </p>
+              </div>
+              <div className="flex ml-4 items-center my-4">
+                <img
+                  src="./images/vtu_dev/blueCheck.png"
+                  alt="blue check"
+                  className="w-[25px] "
+                />
+                <p className="px-4 md:text-lg lg:text-xl" style={{}}>
                   Education Pins
                 </p>
               </div>
@@ -1680,7 +1690,7 @@ function VTU_DEV() {
           Do you need help choosing a plan?
         </p>
 
-        <div className="flex justify-center lg:mb-[25%] mb-[35%]">
+        <div className="flex justify-center md:mb-[15%] mb-[25%]">
           <Bluebutton text="Contact Sales" />
         </div>
       </div>
