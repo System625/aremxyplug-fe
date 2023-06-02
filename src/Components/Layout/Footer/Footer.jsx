@@ -7,6 +7,7 @@ import { ImInstagram } from "react-icons/im";
 import { SiTwitter } from "react-icons/si";
 import { GrMail } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -85,10 +86,10 @@ export const Footer = () => {
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
-                  Currency conversion
+                  <HashLink to="currencyconvert">Currency conversion</HashLink>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  Multi-Currency Wallet
+                  <HashLink to="#multicurrency">Multi-Currency Wallet</HashLink>
                 </div>
                 <div className="w-[96px] h-[13px] text-[9px]">
                   International Payment
@@ -290,11 +291,11 @@ export const Footer = () => {
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 Currency conversion
               </div>
-              <Link to="/home#multicurrency">
+              
                 <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                  Multi-Currency Wallet
+                  <HashLink to="/#multicurrency">Multi-Currency Wallet</HashLink>
                 </div>
-              </Link>
+             
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
