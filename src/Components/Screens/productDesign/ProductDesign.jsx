@@ -88,7 +88,7 @@ function ProductDesign() {
           <div
             className=" grid  lg:gap-x-4 md:grid-cols-2 lg:grid-cols-5 md:gap-x-4    
     grid-cols-1 gap-y-4 
-    lg:px-[8%] px-[5%] mt-[50px] lg:pl-12 md:mt-[80px] lg:mt-[100px]
+    lg:px-[8%] px-[5%] mt-[50px]  md:mt-[80px] lg:mt-[100px]
      "
           >
             <div className=" py-4 sm:py-6  lg:py-8 md:py-6 lg:col-span-3 ">
