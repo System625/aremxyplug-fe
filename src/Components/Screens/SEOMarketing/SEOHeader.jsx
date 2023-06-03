@@ -10,7 +10,7 @@ const SEOHeader = () => {
                 <h2 className="font-bold text-primary text-[20px] leading-[30px] w-[146.02px] lg:text-[45px] lg:leading-[67.5px] md:text-[25.53px] md:leading-[38.3px]">SEO Marketing</h2>
                 <p className="text-[12px] text-justify lg:text-[18px] lg:leading-[27px] md:text-[10px]">SEO is the practice of optimizing your website and its content to improve its visibility and ranking on search engine results pages. You can raise your brand's visibility and position within the top search engines by utilizing tried-and-true SEO strategies.</p>
                 <div>
-                    <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]'>Contact Sales</Link>
+                    <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
                 </div>
             </div>
             <div className='w-[77.78%] mx-auto md:w-[39%] md:mx-0'>

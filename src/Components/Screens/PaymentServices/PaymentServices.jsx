@@ -56,7 +56,7 @@ const PaymentServices = () => {
 
         {/* cta link */}
         <div className='flex justify-center'>
-          <Link to={`/pricing`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]'>Explore</Link>
+          <Link to={`/pricing`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Explore</Link>
         </div>
       </div>
     </div>
