@@ -13,7 +13,7 @@ const OurServiceCard = ({cardDetails:{title, image, link, message, image_name}})
             <h2 className="hidden md:text-[16.51px] md:leading-[24.76px] text-primary font-bold text-center md:text-left md:block lg:text-[30px] lg:leading-[45px]">{title}</h2>
             <p className='text-[12px] lg:text-[18px] md:text-[11px] text-justify'>{message}</p>
             <div className="text-center md:text-left">
-              <Link to={`/${link}`} className='inline-block py-[9px] px-[21px] bg-primary text-white font-bold capitalize rounded-[4.73px] lg:py-[15px] lg:px-[37px] lg:text-[14px] md:py-[9px] md:px-[21px] md:text-[8px]'>Explore</Link>
+              <Link to={`/${link}`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]'>Explore</Link>
                 {/* each of the explore will link to separate page related to them */}
             </div>
         </div>
