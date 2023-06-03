@@ -117,7 +117,7 @@ export const Home = () => {
         </div>
         <img
           className="mx-auto mt-[12%] md:w-[40%] md:h-[30%] lg:w-[50%] lg:h-[40%]"
-          src="./Images/macpro.png"
+          src="./Images/groupOne.png"
           alt="/"
         />
       </div>
@@ -125,7 +125,7 @@ export const Home = () => {
       {/* WHY CHOOSE US */}
       <div className="flex flex-col bg-[#04177F] text-[#ffffff] px-[5%] py-[15%] gap-[30px] md:py-[8%] lg:py-[8%] lg:px-[8%]">
         <div>
-          <p className="text-[20px] font-semibold text-center md:text-[26px] lg:text-[45px]">
+          <p className="mb-[5%] text-[20px] font-semibold text-center md:text-[26px] lg:text-[35px]">
             Why Choose Us?
           </p>
           <div className="text-justify md:text-center text-[12px] w-[95%] md:text-[10.33px] lg:text-[18px]">
@@ -137,7 +137,7 @@ export const Home = () => {
         </div>
         <div className="md:grid md:grid-cols-3 md:my-[3%] md:gap-y-[25%] lg:gap-x-[10%]">
           <div className="mb-[20px]">
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Reliable
             </p>
             <div className="text-[12px] text-center w-[95%] md:w-[200px] md:text-[10px] md:text-justify lg:text-[16px] lg:w-[100%]">
@@ -146,7 +146,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="mb-[20px]">
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Trusted
             </p>
             <div className="text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -155,7 +155,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Affordable
             </p>
             <div className="text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -164,7 +164,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Swift 24/7 Delivery
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%] ">
@@ -173,7 +173,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Secure and Automated
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -182,7 +182,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Customer Support
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -194,7 +194,7 @@ export const Home = () => {
         {firstDrop && (
           <>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Swift 24/7 Delivery
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -203,7 +203,7 @@ export const Home = () => {
               </div>
             </div>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Secure and Automated
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -212,7 +212,7 @@ export const Home = () => {
               </div>
             </div>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Customer Support
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -236,7 +236,7 @@ export const Home = () => {
       {/* ABOUT US */}
       <div className="px-[5%] flex flex-col gap-[20px] py-[20%] md:flex-row md:justify-center md:items-center md:py-[10%] lg:py-[5%] lg:gap-[10px] lg:px-[8%]">
         <div className="flex flex-col gap-[15px]">
-          <div className="text-[20px] font-semibold text-center text-[#04177F] md:text-left md:text-[26px] lg:text-[45px]">
+          <div className="mb-[5%] text-[20px] font-semibold text-center text-[#04177F] md:text-left md:text-[26px] lg:text-[45px]">
             About Us
           </div>
           <p className="text-justify text-[14px] md:text-[10px] lg:text-[16px] lg:w-[80%]">
@@ -265,7 +265,7 @@ export const Home = () => {
 
       {/* OUR SERVICE */}
       <div className="bg-[#04177f] flex flex-col gap-[15px] py-[7%] h-[] lg:px-[8%]">
-        <div className="text-[20px] text-[#ffffff] font-semibold text-center md:text-[25px] lg:text-[45px]">
+        <div className="mb-[5%] text-[20px] text-[#ffffff] font-semibold text-center md:text-[25px] lg:text-[45px]">
           Our Services
         </div>
         <div className="md:grid md:grid-cols-2 flex flex-col gap-[15px] md:gap-y-[35px]">
@@ -527,7 +527,7 @@ export const Home = () => {
               <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 Education Pins
               </div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="mt-[-7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 With our Education Pins service, you can access your exam
                 results in just a few clicks.
               </div>
@@ -559,7 +559,7 @@ export const Home = () => {
               <div className="font-medium lg:text-[24px]">
                 Electricity Bills
               </div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="mt-[7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Keep track of your bills and make sure you never miss a payment.
                 Try our bills payment service right away to make life easier.
               </div>
@@ -591,7 +591,7 @@ export const Home = () => {
               <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 Bulk SMS
               </div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="mt-[-7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Try our bulk SMS service now and take your communication to the
                 next level.
               </div>
@@ -754,7 +754,7 @@ export const Home = () => {
             swipeable={true}
             draggable={true}
             responsive={responsive2}
-            // autoPlay={true}
+            autoPlay={true}
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
@@ -774,7 +774,7 @@ export const Home = () => {
                 connect with their audience and drive engagement.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/content-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -789,7 +789,7 @@ export const Home = () => {
                 audience and build brand awareness.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/social-media-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -805,7 +805,7 @@ export const Home = () => {
                 pages.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/seo-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -818,7 +818,7 @@ export const Home = () => {
                 and create a bond with your customers.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/EmailMarketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -826,13 +826,13 @@ export const Home = () => {
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
               <div className="font-medium lg:text-[24px]">Product Design</div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:mb-[-5%]">
+              <div className="mt-[7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:mb-[-5%]">
                 Product design is the process of identifying a market
                 opportunity, clearly defining the problem, and validating the
                 solution with real user interfaces.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+               <Link to="/ProductDesign">Learn More...</Link>
               </div>
             </div>
             <div
@@ -842,13 +842,13 @@ export const Home = () => {
               <div className="font-medium lg:text-[24px] lg:mb-[5%]">
                 Graphic Design
               </div>
-              <div className="tracking- text-justify text-[12px] lg:text-[16px]">
+              <div className="mt-[7%] md:mt-0 tracking- text-justify text-[12px] lg:text-[16px]">
                 Graphic design is the creation of visual compositions to solve
                 problems and communicate ideas through typography, imagery,
                 color, and form.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/GraphicDesign">Learn More...</Link>
               </div>
             </div>
           </Carousel>
@@ -877,7 +877,7 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div id="crossborder" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center md:text-[17px] md:font-semibold md:text-left lg:text-[30px] ">
             Cross-border Payment
@@ -891,13 +891,13 @@ export const Home = () => {
         </div>
         <img
           className="w-[248px] h-[162px] mx-auto md:mx-0 lg:w-[433px] lg:h-[284px]"
-          src="./Images/crossborder.png"
+          src="./Images/newCurrency.png"
           alt="/"
         />
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div id="currencyconvert" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center lg:text-[30px] lg:text-left">
             Currency Conversion
@@ -911,13 +911,13 @@ export const Home = () => {
         </div>
         <img
           className="w-[268px] h-[190px] mx-auto md:mx-0 lg:w-[470px] lg:h-[333px]"
-          src="./Images/currency.png"
+          src="./Images/newCurrency2.png"
           alt="/"
         />
       </div>
 
       {/* MULTI-CURRENCY WALLETS */}
-      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div id="multicurrency" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center w-[200px] mx-auto leading-[30px] md:w-[100%] lg:text-[30px] lg:text-left">
             Multi-Currency Wallets
@@ -939,7 +939,7 @@ export const Home = () => {
       </div>
 
       {/* BECOME AN AGENT */}
-      <div className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
+      <div id="becomeAgent" className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
         <div className="flex flex-col gap-[30px] md:gap-[15px] lg:gap-[40px] ">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold ">
             Become an Agent
@@ -993,7 +993,7 @@ export const Home = () => {
       </div>
 
       {/* OUR PARTNERS */}
-      <div
+      <div id="partners"
         className="flex flex-col gap-[20px] py-[20%] md:py-[5%]
       "
       >
@@ -1075,7 +1075,7 @@ export const Home = () => {
       </div>
       
       {/* FREQUENTLY ASKED QUESTIONS */}
-      <div className="mx-[5%] mb-[35%] md:mb-[25%] lg:mx-[8%]">
+      <div className="mx-[5%] mb-[25%] md:mb-[15%] lg:mx-[8%]">
         <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
           Frequently Asked Questions
         </div>

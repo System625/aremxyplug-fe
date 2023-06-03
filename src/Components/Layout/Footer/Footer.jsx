@@ -7,6 +7,7 @@ import { ImInstagram } from "react-icons/im";
 import { SiTwitter } from "react-icons/si";
 import { GrMail } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -40,13 +41,13 @@ export const Footer = () => {
         <div className="flex flex-wrap gap-[20%] h-[] w-[261px] pt-[15px] mx-auto ">
           <div className="flex flex-col gap-[15px] mb-[10%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
-              AremxyPlug
+              <Link to="/">AremxyPlug</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">About us</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/about-us">About us</Link></div>
             <div className="w-[40px] h-[13px] text-[9px]">Careers</div>
             <div className="w-[40px] h-[13px] text-[9px]">Customers</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Partners</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Become an Agent</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/#partners">Partners</HashLink></div>
+            <div className="w-[80px] h-[13px] text-[9px]"><HashLink to="/#becomeAgent">Become an Agent</HashLink></div>
             {firstDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[90px] h-[13px] text-[9px]">
@@ -69,8 +70,8 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold ">
               Product
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">Telecom</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Payment</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/telecoms">Telecom</Link></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/payment">Payment</Link></div>
             <Link to="/CardIssuing">
               <div className="w-[80px] h-[13px] text-[9px] cursor-pointer">
                 Card issuing
@@ -85,22 +86,19 @@ export const Footer = () => {
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
-                  Currency conversion
+                  <HashLink to="#currencyconvert">Currency conversion</HashLink>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  Multi-Currency Wallet
+                  <HashLink to="#multicurrency">Multi-Currency Wallet</HashLink>
                 </div>
                 <div className="w-[96px] h-[13px] text-[9px]">
                   International Payment
                 </div>
-                <Link to="/VTU_DEV">
-                  <div className="w-[94px] h-[13px] text-[9px] cursor-pointer">
-                    VTU development
-                  </div>
-                </Link>
-
+                <div className="w-[94px] h-[13px] text-[9px]">
+                  <Link to="/VTU_DEV">VTU development</Link>
+                </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  Business Development
+                  <Link to="/businessDev">Business Development</Link>
                 </div>
               </div>
             )}
@@ -114,20 +112,20 @@ export const Footer = () => {
 
           <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
-              Solutions
+              <Link to="/solutions">Solutions</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">Baas</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Saas</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Businesses</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Individuals</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Ecommerce</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#baas">Baas</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Saas</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Businesses</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#businesses">Individuals</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#ecommerce">Ecommerce</HashLink></div>
             {thirdDrop && (
               <div className="flex flex-col gap-[20px]">
-                <div className="w-[96px] h-[13px] text-[9px]">Collect</div>
-                <div className="w-[100px] h-[13px] text-[9px]">Purchase</div>
-                <div className="w-[96px] h-[13px] text-[9px]">Automate</div>
+                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Collect</HashLink></div>
+                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Purchase</HashLink></div>
+                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#purchase">Automate</HashLink></div>
                 <div className="w-[94px] h-[13px] text-[9px]">Convert</div>
-                <div className="w-[100px] h-[13px] text-[9px]">Transfer</div>
+                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions/#automate">Transfer</HashLink></div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -242,10 +240,10 @@ export const Footer = () => {
         <div className="flex gap-[10%] w-[85%] pt-[15px] ml-[%] lg:gap-[100px] mx-auto">
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
-              AremxyPlug
+              <Link to="/">AremxyPlug</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              About us
+              <Link to="/about-us">About us</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               Careers
@@ -254,10 +252,10 @@ export const Footer = () => {
               Customers
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Partners
+              <HashLink to="/#partners">Partners</HashLink>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Become an Agent
+              <HashLink to="/#becomeAgent">Become an Agent</HashLink>
             </div>
 
             <div className="flex flex-col gap-[20px]">
@@ -275,79 +273,73 @@ export const Footer = () => {
               Product
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Telecom
+              <Link to="/our-services/telecoms">Telecom</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Payment
+              <Link to="/our-services/payment">Payment</Link>
             </div>
-            <Link to="/CardIssuing">
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                Card issuing
-              </div>
-            </Link>
-            <Link to="/DigitalServices">
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                Digital Service
-              </div>
-            </Link>
-
+            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+              <Link to="/CardIssuing">Card issuing</Link>
+            </div>
+            <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+              <Link to="/DigitalServices">Digital Service</Link>
+            </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
               Virtual Account
             </div>
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Currency conversion
+                <HashLink to="/#crossborder">Currency conversion</HashLink>
               </div>
-              <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Multi-Currency Wallet
-              </div>
+              
+                <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                  <HashLink to="/#currencyconvert">Multi-Currency Wallet</HashLink>
+                </div>
+             
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
-              <Link to="/VTU_DEV">
-                <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px] cursor-pointer">
-                  VTU development
-                </div>
-              </Link>
-
+              <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                <Link to="/VTU_DEV">VTU development</Link>
+              </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Business Development
+                <Link to="/businessDev">Business Development</Link>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-[15px] lg:gap-[25px]">
             <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[25px]">
-              Solutions
+              <Link to="/solutions">Solutions</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Baas
+              <HashLink to="/solutions/#baas">Baas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Saas
+            <HashLink to="/solutions/#baas">saas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Businesses
+              <HashLink to="/solutions/#saas">Businesses</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Individuals
+            <HashLink to="/solutions/#saas">Individuals</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Ecommerce
+              <HashLink to="/solutions/#ecommerce">Ecommerce</HashLink>
             </div>
 
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Collect
+                <HashLink to="/solutions/#collect">Collect</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Purchase
+              <HashLink to="/solutions/#collect">Purchase</HashLink>
               </div>
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Automate
+                <HashLink to="/solutions/#automate">Automate</HashLink>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Convert
+                <HashLink to="/solutions/#convert">Convert</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Transfer
@@ -429,16 +421,33 @@ export const Footer = () => {
             <div className="text-[14px] lg:text-[25px]">Follow Us on</div>
             <div className="flex gap-[12px] lg:gap-[15px]">
               <div className="text-lg lg:text-3xl">
-                <SiLinkedin />
+                <a
+                  href="/https://www.linkedin.com/company/aremxyplug-business-enterprises/"
+                  target="_blank"
+                >
+                  <SiLinkedin />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <ImFacebook2 />
+                <a
+                  href="/https://m.facebook.com/102536649209580/"
+                  target="_blank"
+                >
+                  <ImFacebook2 />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <ImInstagram />
+                <a href="/https://www.instagram.com/aremxyplug" target="_blank">
+                  <ImInstagram />
+                </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <SiTwitter />
+                <a
+                  href="/https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
+                  target="_blank"
+                >
+                  <SiTwitter />
+                </a>
               </div>
               <div className="text-[20px] lg:text-3xl">
                 <GrMail />
