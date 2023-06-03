@@ -30,7 +30,7 @@ export const Solution = () => {
       </div>
 
       {/* WELCOME TO AREMZY PLUG */}
-      <div className="mb-[30%] md:flex md:flex-row-reverse md:justify-center md:items-center md:gap-[80px] md:mb-[20%]">
+      <div id="baas" className="mb-[30%] md:flex md:flex-row-reverse md:justify-center md:items-center md:gap-[80px] md:mb-[20%]">
         <div>
           <div className="text-[20px] font-semibold md:text-[26px] md:w-[330px] lg:text-[45px] lg:w-[562px]">
             Welcome to AremxyPlug
@@ -69,7 +69,7 @@ export const Solution = () => {
             commissions.
           </div>
         </div>
-        <div className="flex flex-col gap-[15px] lg:gap-[20px]">
+        <div id="saas" className="flex flex-col gap-[15px] lg:gap-[20px]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Saas (Software as a services)
           </div>
@@ -89,7 +89,7 @@ export const Solution = () => {
 
       {/* BUSINESSED AND INDIVIDUALS */}
       <div className="md:flex mb-[25%] md:mb-[20%] md:gap-[25%]">
-        <div className="mb-[25%] flex flex-col gap-[15px] lg:gap-[20px] md:mb-[0]">
+        <div id="businesses" className="mb-[25%] flex flex-col gap-[15px] lg:gap-[20px] md:mb-[0]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Businesses
           </div>
@@ -105,7 +105,7 @@ export const Solution = () => {
             commercial, and industrial business activities.
           </div>
         </div>
-        <div className="flex flex-col gap-[15px]">
+        <div id="individual" className="flex flex-col gap-[15px]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Individuals
           </div>
@@ -125,7 +125,7 @@ export const Solution = () => {
       </div>
 
       {/* ECOMMERCE */}
-      <div className="bg-[#ffcc8997] mb-[30%] mx-[-6%] py-[10%] md:mb-[20%] md:flex md:justify-center md:items-center lg:mx-[-10%] lg:px-[5%] lg:py-[5%]">
+      <div id="ecommerce" className="bg-[#ffcc8997] mb-[30%] mx-[-6%] py-[10%] md:mb-[20%] md:flex md:justify-center md:items-center lg:mx-[-10%] lg:px-[5%] lg:py-[5%]">
         <img
           className="mb-[10%] h-[240px] w-[237px] mx-auto md:mb-[0] lg:w-[395px] lg:h-[400px]"
           src="./Images/solutionimages/Image.png"
@@ -148,7 +148,7 @@ export const Solution = () => {
 
       {/* COLLECT & PURCHASE */}
       <div className="mb-[25%] md:flex md:mb-[15%] md:gap-[25%]">
-        <div className="mb-[25%] flex flex-col gap-[15px] lg:gap-[20px] md:mb-[0]">
+        <div id="collect" className="mb-[25%] flex flex-col gap-[15px] lg:gap-[20px] md:mb-[0]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Collect
           </div>
@@ -165,7 +165,7 @@ export const Solution = () => {
             money in your pocket.
           </div>
         </div>
-        <div className="flex flex-col gap-[15px] lg:gap-[20px]">
+        <div id="purchase" className="flex flex-col gap-[15px] lg:gap-[20px]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Purchase
           </div>
@@ -185,7 +185,7 @@ export const Solution = () => {
       </div>
 
       {/* AUTOMATE & TRANSFER */}
-      <div className="md:flex mb-[25%] md:mb-[20%] md:gap-[25%]">
+      <div id="automate" className="md:flex mb-[25%] md:mb-[20%] md:gap-[25%]">
         <div className="mb-[25%] flex flex-col gap-[15px] lg:gap-[20px] md:mb-[0]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Automate
@@ -224,7 +224,7 @@ export const Solution = () => {
       </div>
 
       {/* CONVERT */}
-      <div className="bg-[#0CBC8B] mb-[30%] mx-[-6%] py-[10%] md:mb-[20%] md:flex md:justify-center md:items-center lg:mx-[-10%] lg:px-[5%] lg:py-[5%]">
+      <div id="convert" className="bg-[#0CBC8B] mb-[30%] mx-[-6%] py-[10%] md:mb-[20%] md:flex md:justify-center md:items-center lg:mx-[-10%] lg:px-[5%] lg:py-[5%]">
         <img
           className="mb-[10%] h-[240px] w-[237px] mx-auto md:mb-[0] lg:w-[395px] lg:h-[400px]"
           src="./Images/solutionimages/Image2.png"

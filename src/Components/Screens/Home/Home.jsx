@@ -774,7 +774,7 @@ export const Home = () => {
                 connect with their audience and drive engagement.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/content-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -789,7 +789,7 @@ export const Home = () => {
                 audience and build brand awareness.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/social-media-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -805,7 +805,7 @@ export const Home = () => {
                 pages.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/seo-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -818,7 +818,7 @@ export const Home = () => {
                 and create a bond with your customers.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/EmailMarketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -832,7 +832,7 @@ export const Home = () => {
                 solution with real user interfaces.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+               <Link to="/ProductDesign">Learn More...</Link>
               </div>
             </div>
             <div
@@ -848,7 +848,7 @@ export const Home = () => {
                 color, and form.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/GraphicDesign">Learn More...</Link>
               </div>
             </div>
           </Carousel>
@@ -877,7 +877,7 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div id="crossborder" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center md:text-[17px] md:font-semibold md:text-left lg:text-[30px] ">
             Cross-border Payment
@@ -939,7 +939,7 @@ export const Home = () => {
       </div>
 
       {/* BECOME AN AGENT */}
-      <div className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
+      <div id="becomeAgent" className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
         <div className="flex flex-col gap-[30px] md:gap-[15px] lg:gap-[40px] ">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold ">
             Become an Agent
@@ -993,7 +993,7 @@ export const Home = () => {
       </div>
 
       {/* OUR PARTNERS */}
-      <div
+      <div id="partners"
         className="flex flex-col gap-[20px] py-[20%] md:py-[5%]
       "
       >

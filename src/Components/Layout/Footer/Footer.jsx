@@ -43,11 +43,11 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               <Link to="/">AremxyPlug</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">About us</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/about-us">About us</Link></div>
             <div className="w-[40px] h-[13px] text-[9px]">Careers</div>
             <div className="w-[40px] h-[13px] text-[9px]">Customers</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Partners</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Become an Agent</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/#partners">Partners</HashLink></div>
+            <div className="w-[80px] h-[13px] text-[9px]"><HashLink to="/#becomeAgent">Become an Agent</HashLink></div>
             {firstDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[90px] h-[13px] text-[9px]">
@@ -70,8 +70,8 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold ">
               Product
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">Telecom</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Payment</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/telecoms">Telecom</Link></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/payment">Payment</Link></div>
             <Link to="/CardIssuing">
               <div className="w-[80px] h-[13px] text-[9px] cursor-pointer">
                 Card issuing
@@ -86,7 +86,7 @@ export const Footer = () => {
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
-                  <HashLink to="currencyconvert">Currency conversion</HashLink>
+                  <HashLink to="#currencyconvert">Currency conversion</HashLink>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
                   <HashLink to="#multicurrency">Multi-Currency Wallet</HashLink>
@@ -95,7 +95,7 @@ export const Footer = () => {
                   International Payment
                 </div>
                 <div className="w-[94px] h-[13px] text-[9px]">
-                  VTU development
+                  <Link to="/VTU_DEV">VTU development</Link>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
                   <Link to="/businessDev">Business Development</Link>
@@ -114,18 +114,18 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               <Link to="/solutions">Solutions</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">Baas</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Saas</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Businesses</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Individuals</div>
-            <div className="w-[40px] h-[13px] text-[9px]">Ecommerce</div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#baas">Baas</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Saas</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Businesses</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#businesses">Individuals</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#ecommerce">Ecommerce</HashLink></div>
             {thirdDrop && (
               <div className="flex flex-col gap-[20px]">
-                <div className="w-[96px] h-[13px] text-[9px]">Collect</div>
-                <div className="w-[100px] h-[13px] text-[9px]">Purchase</div>
-                <div className="w-[96px] h-[13px] text-[9px]">Automate</div>
+                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Collect</HashLink></div>
+                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Purchase</HashLink></div>
+                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#purchase">Automate</HashLink></div>
                 <div className="w-[94px] h-[13px] text-[9px]">Convert</div>
-                <div className="w-[100px] h-[13px] text-[9px]">Transfer</div>
+                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions/#automate">Transfer</HashLink></div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -252,10 +252,10 @@ export const Footer = () => {
               Customers
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Partners
+              <HashLink to="/#partners">Partners</HashLink>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Become an Agent
+              <HashLink to="/#becomeAgent">Become an Agent</HashLink>
             </div>
 
             <div className="flex flex-col gap-[20px]">
@@ -279,28 +279,28 @@ export const Footer = () => {
               <Link to="/our-services/payment">Payment</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Card issuing
+              <Link to="/CardIssuing">Card issuing</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Digital Service
+              <Link to="/DigitalServices">Digital Service</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
               Virtual Account
             </div>
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Currency conversion
+                <HashLink to="/#crossborder">Currency conversion</HashLink>
               </div>
               
                 <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                  <HashLink to="/#multicurrency">Multi-Currency Wallet</HashLink>
+                  <HashLink to="/#currencyconvert">Multi-Currency Wallet</HashLink>
                 </div>
              
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                VTU development
+                <Link to="/VTU_DEV">VTU development</Link>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 <Link to="/businessDev">Business Development</Link>
@@ -313,33 +313,33 @@ export const Footer = () => {
               <Link to="/solutions">Solutions</Link>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Baas
+              <HashLink to="/solutions/#baas">Baas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Saas
+            <HashLink to="/solutions/#baas">saas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Businesses
+              <HashLink to="/solutions/#saas">Businesses</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Individuals
+            <HashLink to="/solutions/#saas">Individuals</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              Ecommerce
+              <HashLink to="/solutions/#ecommerce">Ecommerce</HashLink>
             </div>
 
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Collect
+                <HashLink to="/solutions/#collect">Collect</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Purchase
+              <HashLink to="/solutions/#collect">Purchase</HashLink>
               </div>
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Automate
+                <HashLink to="/solutions/#automate">Automate</HashLink>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Convert
+                <HashLink to="/solutions/#convert">Convert</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Transfer
