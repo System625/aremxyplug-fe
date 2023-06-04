@@ -246,7 +246,7 @@ export const Solution = () => {
       
       {/* LAST SECTION */}
       <div
-        className="mb-[25%] w-[100%] rounded-xl h-[254px] flex flex-col gap-[40px] md:gap-[0px] md:w-[648px] md:h-[135px] md:mx-auto lg:w-[1101px] lg:h-[227px] lg:gap-[50px] md:mb-[15%]"
+        className="mb-[25%] w-[100%] rounded-xl h-[254px] flex flex-col gap-[40px] md:gap-[0px] md:w-[648px] md:h-[135px] md:mx-auto lg:w-[100%] lg:h-[227px] lg:gap-[50px] md:mb-[15%]"
         style={{ boxShadow: "0px 0px 11.5833px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="text-[10px] text-center w-[294px] h-[97px] mx-auto pt-[10%] md:text-[10px] md:pt-[3%] md:w-[584px] lg:text-[18px] lg:w-[1009px] lg:h-[81px]">

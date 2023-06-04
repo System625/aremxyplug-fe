@@ -39,7 +39,7 @@ export const AboutUs = () => {
     <>
       <div className={styles.hero2}>
         <div className="mx-[10%] md:mx-[15%] leading-5 lg:leading-6">
-          <div className="font-semibold text-[25px] flex justify-center pt-[40%] md:text-[26.06px] md:pt-[] lg:pt-[40%] lg:text-[45px]">
+          <div className="mb-[5%] font-semibold text-[25px] flex justify-center pt-[40%] md:text-[26.06px] md:pt-[] lg:pt-[40%] lg:text-[45px]">
             About Us
           </div>
           <br></br>
@@ -387,7 +387,7 @@ export const AboutUs = () => {
       {/* WHY CHOOSE US? */}
       <div className="flex flex-col bg-[#04177F] text-[#ffffff] px-[5%] py-[15%] gap-[30px] md:py-[8%] lg:py-[8%] lg:px-[8%]">
         <div>
-          <p className="text-[20px] font-semibold text-center md:text-[26px] lg:text-[45px]">
+          <p className="mb-[5%] text-[20px] font-semibold text-center md:text-[26px] lg:text-[45px]">
             Why Choose Us?
           </p>
           <div className="text-justify md:text-center text-[12px] w-[95%] md:text-[10.33px] lg:text-[18px]">
