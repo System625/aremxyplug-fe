@@ -122,7 +122,7 @@ function DigitalServices() {
                 audience and build brand awareness.
                 <span className="text-[#dce4ff]">a marketing effective</span>
               </p>
-              <Link to='/social-media-marketing'>
+              <Link to="/social-media-marketing">
                 <div className="mt-6 flex justify-center">
                   <Bluebutton text="Explore" />
                 </div>
@@ -160,9 +160,9 @@ function DigitalServices() {
                 pages.
               </p>
               <Link to="/seo-marketing">
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
               </Link>
             </div>
           </div>
@@ -201,7 +201,7 @@ function DigitalServices() {
         <div
           className="relative grid lg:grid-cols-2 lg:gap-x-4  md:grid-cols-2 md:gap-x-4    
        grid-cols-1 gap-y-4 
-       lg:px-[8%] px-[5%]md:pb-[15%] pb-[25%]
+       lg:px-[8%] px-[5%] md:pb-[15%] pb-[25%]
         "
         >
           {/*  */}
@@ -237,11 +237,10 @@ function DigitalServices() {
                 solution with real user interfaces.
               </p>
               <Link to="/ProductDesign">
-              <div className="mt-6  flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+                <div className="mt-6  flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
               </Link>
-
             </div>
           </div>
 
@@ -267,11 +266,10 @@ function DigitalServices() {
                 color, and form.
               </p>
               <Link to="/GraphicDesign">
-              <div className="mt-6 flex justify-center">
-                <Bluebutton text="Explore" />
-              </div>
+                <div className="mt-6 flex justify-center">
+                  <Bluebutton text="Explore" />
+                </div>
               </Link>
-
             </div>
           </div>
         </div>
