@@ -415,7 +415,7 @@ function ProductDesign() {
         {/*  Let’s Manage your Brand visibility with Captivating Graphic Designs */}
 
         <div className="lg:px-[8%] px-[5%] md:mb-[15%] mb-[25%]">
-          <div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
+          <div className="px-4 sm:px-6  lg:px-8 py-4 sm:py-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  EmailBoxShadow">
             <p
               className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
               style={{

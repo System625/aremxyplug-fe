@@ -1,11 +1,10 @@
 import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
-import "./GraphicDesign.css"
+import "./GraphicDesign.css";
 function GraphicDesign() {
   return (
     <>
-    
       <div>
         {/* <div className="h-[100vh] relative"> */}
 
@@ -24,10 +23,15 @@ function GraphicDesign() {
                 color: primaryColor,
               }}
             >
-             Graphic Design
+              Graphic Design
             </p>
             <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-4 sm:mt-6 md:mt-10  lg:mt-12 ">
-            Graphic design is the creation of visual compositions to solve problems and communicate ideas through typography, imagery, color, and form.  Design can be used for message delivery, brand identity development, product promotion and sales. Take a look at a successful company and analyze the role graphic design plays in both its branding and innovative design choices.
+              Graphic design is the creation of visual compositions to solve
+              problems and communicate ideas through typography, imagery, color,
+              and form. Design can be used for message delivery, brand identity
+              development, product promotion and sales. Take a look at a
+              successful company and analyze the role graphic design plays in
+              both its branding and innovative design choices.
             </p>
             <div className="my-6">
               <Bluebutton text="Contact Sales" />
@@ -55,12 +59,9 @@ function GraphicDesign() {
           // className="rounded-lg flex flex-col items-center  md:block lg:col-span-2"
           className="row-start-2 md:row-start-1  h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat lg:col-span-2"
           style={{
-            backgroundImage:
-              "url(./Images/graphic_design/weDesignImage.png)",
+            backgroundImage: "url(./Images/graphic_design/weDesignImage.png)",
           }}
-        >
-      
-        </div>
+        ></div>
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6 lg:col-span-3 ">
           <p
             className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
@@ -68,16 +69,16 @@ function GraphicDesign() {
               color: "#000",
             }}
           >
-            We design a visual identity that reflects your company's mission and values.
+            We design a visual identity that reflects your company's mission and
+            values.
           </p>
           <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px]">
-          Our experts create designs that boost brand awareness and name recognition. Strong visuals grab the attention of your audience, making you stand out against your competitor.
-
+            Our experts create designs that boost brand awareness and name
+            recognition. Strong visuals grab the attention of your audience,
+            making you stand out against your competitor.
           </p>
         </div>
       </div>
-
- 
 
       {/*    Build Trust And Credibility*/}
 
@@ -100,23 +101,21 @@ function GraphicDesign() {
               Build Trust And Credibility
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-            You must develop trust and credibility with your clientele. A thoughtful design and aesthetic pleasing logo can inspire your customer’s confidence. Our experts are available to provide you with first-rate service for your visual brand identity.
+              You must develop trust and credibility with your clientele. A
+              thoughtful design and aesthetic pleasing logo can inspire your
+              customer’s confidence. Our experts are available to provide you
+              with first-rate service for your visual brand identity.
             </p>
           </div>
-
-  
         </div>
         {/* Background image */}
         <div
           className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(./Images/graphic_design/buildTrustImage.png)",
+            backgroundImage: "url(./Images/graphic_design/buildTrustImage.png)",
           }}
         ></div>
       </div>
-
-    
 
       {/* Tells Your Brand Story*/}
 
@@ -131,8 +130,7 @@ function GraphicDesign() {
         <div
           className="row-start-2 md:row-start-1 h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(./Images/graphic_design/brandStoryImage.png)",
+            backgroundImage: "url(./Images/graphic_design/brandStoryImage.png)",
           }}
         ></div>
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
@@ -144,14 +142,16 @@ function GraphicDesign() {
                 color: "#000",
               }}
             >
-             Tells Your Brand Story
+              Tells Your Brand Story
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-            The story behind your brand is more effectively told through graphic design. Customers are interested in the "why" behind the goods and services you offer. Your brand messages may change from design to design, but the brand story will still remain the same over decades.
-
+              The story behind your brand is more effectively told through
+              graphic design. Customers are interested in the "why" behind the
+              goods and services you offer. Your brand messages may change from
+              design to design, but the brand story will still remain the same
+              over decades.
             </p>
           </div>
-
         </div>
       </div>
 
@@ -173,25 +173,26 @@ function GraphicDesign() {
                 color: "#000",
               }}
             >
-             Saves Time And Money
+              Saves Time And Money
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-            A design that is captivated and timeless is essential in the ever-evolving digital world. Save time and money by investing in a vetted and professional graphic designer from the start, and avoid poorly designs that likely steer customers away from your business.
+              A design that is captivated and timeless is essential in the
+              ever-evolving digital world. Save time and money by investing in a
+              vetted and professional graphic designer from the start, and avoid
+              poorly designs that likely steer customers away from your
+              business.
             </p>
           </div>
-
         </div>
         {/* Background image */}
         <div
           className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(./Images/graphic_design/savesTimeImage.png)",
+            backgroundImage: "url(./Images/graphic_design/savesTimeImage.png)",
           }}
         ></div>
       </div>
 
-   
       {/*      Boost Brand Awareness*/}
 
       <div
@@ -205,8 +206,7 @@ function GraphicDesign() {
         <div
           className="row-start-2 md:row-start-1 h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(./Images/graphic_design/boostBrandImage.png)",
+            backgroundImage: "url(./Images/graphic_design/boostBrandImage.png)",
           }}
         ></div>
         <div className=" py-4 sm:py-6  lg:py-8 md:py-6  ">
@@ -218,18 +218,20 @@ function GraphicDesign() {
                 color: "#000",
               }}
             >
-          Boost Brand Awareness
+              Boost Brand Awareness
             </p>
             <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
-            Graphic design helps you connect with your audience by effectively communicating with them through some illustrative designs. Your brand will be reinforced, and your audience will be persuaded to interact with your product which in result boost your brand awareness.
-
+              Graphic design helps you connect with your audience by effectively
+              communicating with them through some illustrative designs. Your
+              brand will be reinforced, and your audience will be persuaded to
+              interact with your product which in result boost your brand
+              awareness.
             </p>
           </div>
-
         </div>
       </div>
 
-{/* Our Key Features */}
+      {/* Our Key Features */}
       <div className="keyFeaturesGradient  my-[50px] md:my-[70px]">
         <p
           className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
@@ -260,7 +262,8 @@ function GraphicDesign() {
                 Branding and Identity
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px] ">
-              AremxyPlug helps businesses establish a cohesive brand identity through logo design, visual style guidelines, and brand assets.
+                AremxyPlug helps businesses establish a cohesive brand identity
+                through logo design, visual style guidelines, and brand assets.
               </p>
             </div>
 
@@ -272,10 +275,11 @@ function GraphicDesign() {
                   color: "#000",
                 }}
               >
-               Print and Digital Collateral
+                Print and Digital Collateral
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px]  ">
-              Designing of marketing materials such as brochures, flyers, banners, social media graphics, and more.
+                Designing of marketing materials such as brochures, flyers,
+                banners, social media graphics, and more.
               </p>
             </div>
 
@@ -290,7 +294,8 @@ function GraphicDesign() {
                 UI/UX Design
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px] ">
-              Creation of visually appealing and functional interfaces for websites, applications, and digital platforms.
+                Creation of visually appealing and functional interfaces for
+                websites, applications, and digital platforms.
               </p>
             </div>
 
@@ -302,10 +307,11 @@ function GraphicDesign() {
                   color: "#000",
                 }}
               >
-               Illustrations and Infographics
+                Illustrations and Infographics
               </p>
               <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[5px] md:mt-[10px]   lg:mt-[15px]     ">
-              We design custom illustrations and infographics to visually communicate complex information and ideas.
+                We design custom illustrations and infographics to visually
+                communicate complex information and ideas.
               </p>
             </div>
           </div>
@@ -318,37 +324,29 @@ function GraphicDesign() {
             }}
           ></div>
         </div>
-
-
       </div>
-{/*  Let’s Manage your Brand visibility with Captivating Graphic Designs */}
+      {/*  Let’s Manage your Brand visibility with Captivating Graphic Designs */}
 
-<div className="lg:px-[8%] px-[5%]  md:mb-[15%] mb-[25%] ">
-
-
-<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px] h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
-              <p
-                className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
-                style={{
-                  color: primaryColor,
-                }}
-              >
-          Let’s Manage your Brand visibility with Captivating Graphic Designs
-              </p>
-              <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              Our graphic design experts craft captivating images, enhancing credibility and trust, attracting customers, and expanding markets with effective messaging and positive impressions.
-              </p>
-              <div className="mt-6  flex justify-center">
-                  <Bluebutton text="Contact Sales"/>
-              </div>
-              
-            </div>
-
-
-</div>
- 
-
-
+      <div className="lg:px-[8%] px-[5%]  md:mb-[15%] mb-[25%] ">
+        <div className=" px-4 sm:px-6  lg:px-8 py-4 sm:py-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  EmailBoxShadow">
+          <p
+            className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
+            style={{
+              color: primaryColor,
+            }}
+          >
+            Let’s Manage your Brand visibility with Captivating Graphic Designs
+          </p>
+          <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
+            Our graphic design experts craft captivating images, enhancing
+            credibility and trust, attracting customers, and expanding markets
+            with effective messaging and positive impressions.
+          </p>
+          <div className="mt-6  flex justify-center">
+            <Bluebutton text="Contact Sales" />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
