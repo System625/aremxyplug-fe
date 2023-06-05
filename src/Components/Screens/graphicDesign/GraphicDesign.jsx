@@ -72,7 +72,7 @@ function GraphicDesign() {
             We design a visual identity that reflects your company's mission and
             values.
           </p>
-          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px]">
+          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
             Our experts create designs that boost brand awareness and name
             recognition. Strong visuals grab the attention of your audience,
             making you stand out against your competitor.
@@ -100,7 +100,7 @@ function GraphicDesign() {
             >
               Build Trust And Credibility
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               You must develop trust and credibility with your clientele. A
               thoughtful design and aesthetic pleasing logo can inspire your
               customer’s confidence. Our experts are available to provide you
@@ -144,7 +144,7 @@ function GraphicDesign() {
             >
               Tells Your Brand Story
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               The story behind your brand is more effectively told through
               graphic design. Customers are interested in the "why" behind the
               goods and services you offer. Your brand messages may change from
@@ -175,7 +175,7 @@ function GraphicDesign() {
             >
               Saves Time And Money
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               A design that is captivated and timeless is essential in the
               ever-evolving digital world. Save time and money by investing in a
               vetted and professional graphic designer from the start, and avoid
@@ -220,7 +220,7 @@ function GraphicDesign() {
             >
               Boost Brand Awareness
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               Graphic design helps you connect with your audience by effectively
               communicating with them through some illustrative designs. Your
               brand will be reinforced, and your audience will be persuaded to

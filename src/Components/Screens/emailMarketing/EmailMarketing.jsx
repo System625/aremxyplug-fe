@@ -25,7 +25,7 @@ function EmailMarketing() {
             >
               Email Marketing
             </p>
-            <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-4 sm:mt-6 md:mt-10  lg:mt-12 ">
+            <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               Email marketing is one of the most directive and effective way to
               connect with leads, turning them into potential customers. Your
               business needs an email marketing strategy that boost sales and
@@ -76,7 +76,7 @@ function EmailMarketing() {
           >
             Build a meaningful relationships with your customers.
           </p>
-          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-4 sm:mt-6 md:mt-10 sm:text:lg  lg:mt-12 ">
+          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg sm:text:lg   mt-[14px] lg:mt-[25px]">
             Digital recharge is now a well-liked method of purchasing airtime,
             data bundles, and bills payments. We make it easy for you to start
             your telecom business without any hassle. You can start right away
@@ -106,7 +106,7 @@ function EmailMarketing() {
             >
               Communicating with your customers
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Effective communication builds trust, understanding, and loyalty.
               Listen actively, provide clear information, and promptly address
               concerns to foster meaningful and lasting relationships with your
@@ -170,7 +170,7 @@ function EmailMarketing() {
             >
               Increase leads
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Boost your lead generation efforts with targeted marketing
               campaigns, compelling content, effective lead capture forms, and
               strategic partnerships to maximize your potential for increased
@@ -217,7 +217,7 @@ function EmailMarketing() {
             >
               Communicating with your customers
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Effective communication builds trust, understanding, and loyalty.
               Listen actively, provide clear information, and promptly address
               concerns to foster meaningful and lasting relationships with your
