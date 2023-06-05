@@ -107,17 +107,17 @@ export const Home = () => {
             money internationally.
           </div>
           <div className="flex gap-[6%] mt-[5%]">
-            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%]">
+            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
               Sign up
             </button>
-            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%]">
+            <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
               Sign in
             </button>
           </div>
         </div>
         <img
           className="mx-auto mt-[12%] md:w-[40%] md:h-[30%] lg:w-[50%] lg:h-[40%]"
-          src="./Images/macpro.png"
+          src="./Images/groupOne.png"
           alt="/"
         />
       </div>
@@ -125,7 +125,7 @@ export const Home = () => {
       {/* WHY CHOOSE US */}
       <div className="flex flex-col bg-[#04177F] text-[#ffffff] px-[5%] py-[15%] gap-[30px] md:py-[8%] lg:py-[8%] lg:px-[8%]">
         <div>
-          <p className="text-[20px] font-semibold text-center md:text-[26px] lg:text-[45px]">
+          <p className="mb-[5%] text-[20px] font-semibold text-center md:text-[26px] lg:text-[35px]">
             Why Choose Us?
           </p>
           <div className="text-justify md:text-center text-[12px] w-[95%] md:text-[10.33px] lg:text-[18px]">
@@ -137,7 +137,7 @@ export const Home = () => {
         </div>
         <div className="md:grid md:grid-cols-3 md:my-[3%] md:gap-y-[25%] lg:gap-x-[10%]">
           <div className="mb-[20px]">
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Reliable
             </p>
             <div className="text-[12px] text-center w-[95%] md:w-[200px] md:text-[10px] md:text-justify lg:text-[16px] lg:w-[100%]">
@@ -146,7 +146,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="mb-[20px]">
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Trusted
             </p>
             <div className="text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -155,7 +155,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Affordable
             </p>
             <div className="text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -164,7 +164,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Swift 24/7 Delivery
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%] ">
@@ -173,7 +173,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Secure and Automated
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -182,7 +182,7 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] md:mb-[5%] lg:text-[24px]">
+            <p className="hidden md:block lg:block text-[20px] font-semibold text-center md:text-left md:text-[14px] mb-[5%] lg:text-[24px]">
               Customer Support
             </p>
             <div className="hidden md:block lg:block text-[12px] text-center w-[95%] md:text-justify md:w-[200px] md:text-[10px] lg:text-[16px] lg:w-[100%]">
@@ -194,7 +194,7 @@ export const Home = () => {
         {firstDrop && (
           <>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Swift 24/7 Delivery
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -203,7 +203,7 @@ export const Home = () => {
               </div>
             </div>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Secure and Automated
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -212,7 +212,7 @@ export const Home = () => {
               </div>
             </div>
             <div>
-              <p className="text-[20px] font-semibold text-center">
+              <p className="mb-[5%] text-[20px] font-semibold text-center">
                 Customer Support
               </p>
               <div className="text-[12px] text-center w-[95%]">
@@ -236,7 +236,7 @@ export const Home = () => {
       {/* ABOUT US */}
       <div className="px-[5%] flex flex-col gap-[20px] py-[20%] md:flex-row md:justify-center md:items-center md:py-[10%] lg:py-[5%] lg:gap-[10px] lg:px-[8%]">
         <div className="flex flex-col gap-[15px]">
-          <div className="text-[20px] font-semibold text-center text-[#04177F] md:text-left md:text-[26px] lg:text-[45px]">
+          <div className="mb-[5%] text-[20px] font-semibold text-center text-[#04177F] md:text-left md:text-[26px] lg:text-[45px]">
             About Us
           </div>
           <p className="text-justify text-[14px] md:text-[10px] lg:text-[16px] lg:w-[80%]">
@@ -252,8 +252,8 @@ export const Home = () => {
             ensure that our services take our customers to the pinnacle of their
             aspirations in order to be the best service provider.
           </p>
-          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[40px]">
-            Learn more
+          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
+            <Link to="/about-us">Learn more</Link>
           </div>
         </div>
         <img
@@ -265,7 +265,7 @@ export const Home = () => {
 
       {/* OUR SERVICE */}
       <div className="bg-[#04177f] flex flex-col gap-[15px] py-[7%] h-[] lg:px-[8%]">
-        <div className="text-[20px] text-[#ffffff] font-semibold text-center md:text-[25px] lg:text-[45px]">
+        <div className="mb-[5%] text-[20px] text-[#ffffff] font-semibold text-center md:text-[25px] lg:text-[45px]">
           Our Services
         </div>
         <div className="md:grid md:grid-cols-2 flex flex-col gap-[15px] md:gap-y-[35px]">
@@ -283,7 +283,7 @@ export const Home = () => {
                 We offer secure VTU development, affordable airtime, and data
                 purchase.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="/our-services/telecoms">Learn More</Link>
               </div>
             </div>
@@ -302,7 +302,7 @@ export const Home = () => {
                 Our payment solutions ensure our clients have the utmost control
                 of their finances.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="/our-services/payment">Learn More</Link>
               </div>
             </div>
@@ -321,7 +321,7 @@ export const Home = () => {
                 We issue 3D secured virtual and physical debit USD and NGN cards
                 to both individuals and businesses.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="CardIssuing">Learn More</Link>
               </div>
             </div>
@@ -341,7 +341,7 @@ export const Home = () => {
                 We offer a variety of digital services that can be customized to
                 fit your company's needs.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="DigitalServices">Learn More</Link>
               </div>
             </div>
@@ -360,7 +360,7 @@ export const Home = () => {
                 We develop a VTU website with services like airtime top-up, data
                 bundles, and bills payment platform.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
                 <Link to="VTU_DEV">Learn More</Link>
               </div>
             </div>
@@ -379,8 +379,8 @@ export const Home = () => {
                 When it comes to business development, trust us to save you time
                 and stress.
               </div>
-              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px]">
-                Learn More
+              <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]">
+                <Link to="/businessDev">Learn More</Link>
               </div>
             </div>
           </div>
@@ -403,7 +403,7 @@ export const Home = () => {
                   to fit your company's needs.
                 </div>
                 <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  <Link to="/our-services/digital-services">Learn More</Link>
+                  <Link to="DigitalServices">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -419,7 +419,7 @@ export const Home = () => {
                   We develop a VTU website with services like airtime top-up,
                   data bundles, and bills payment platform.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
                   <Link to="/VTU_DEV">Learn More</Link>
                 </div>
               </div>
@@ -438,8 +438,8 @@ export const Home = () => {
                   When it comes to business development, trust us to save you
                   time and stress.
                 </div>
-                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
-                  Learn More
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
+                  <Link to="/businessDev">Learn More</Link>
                 </div>
               </div>
             </div>{" "}
@@ -524,8 +524,10 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:h-[276px] lg:w-[359px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Education Pins</div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Education Pins
+              </div>
+              <div className="mt-[-7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 With our Education Pins service, you can access your exam
                 results in just a few clicks.
               </div>
@@ -538,7 +540,9 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] lg:gap-[18px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">TV Subscription</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                TV Subscription
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Enjoy unlimited streaming on multiple channels. Sign up now and
                 never miss your favorite show again!
@@ -555,7 +559,7 @@ export const Home = () => {
               <div className="font-medium lg:text-[24px]">
                 Electricity Bills
               </div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="mt-[7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Keep track of your bills and make sure you never miss a payment.
                 Try our bills payment service right away to make life easier.
               </div>
@@ -568,7 +572,7 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 Airtime Conversion
               </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
@@ -584,8 +588,10 @@ export const Home = () => {
               className="flex flex-col justify-between gap-[10px] h-[190px] w-[209px] m-[2%] p-[5%] rounded-md bg-[#F2FAFF]  md:w-[206px] md:p-[3%] lg:w-[359px] lg:h-[276px] "
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Bulk SMS</div>
-              <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Bulk SMS
+              </div>
+              <div className="mt-[-7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 Try our bulk SMS service now and take your communication to the
                 next level.
               </div>
@@ -692,7 +698,9 @@ export const Home = () => {
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Money Transfer</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
+                Money Transfer
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
                 With our dependable money transfer services, you can send and
                 receive money without any hassle.
@@ -705,7 +713,7 @@ export const Home = () => {
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">
+              <div className="font-medium lg:text-[24px] lg:mb-[-5%]">
                 International Payment
               </div>
               <div className="text-justify text-[12px] lg:text-[16px] lg:tracking-widest">
@@ -766,7 +774,7 @@ export const Home = () => {
                 connect with their audience and drive engagement.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/content-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -781,21 +789,23 @@ export const Home = () => {
                 audience and build brand awareness.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/social-media-marketing">Learn More...</Link>
               </div>
             </div>
             <div
               className="flex flex-col justify-between  h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">SEO Marketing</div>
+              <div className="font-medium lg:text-[24px] lg:mb-[5%]">
+                SEO Marketing
+              </div>
               <div className="text-justify text-[12px] lg:text-[16px]">
                 SEO is the practice of optimizing your website and its content
                 to improve its visibility and ranking on search engine results
                 pages.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/seo-marketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -808,7 +818,7 @@ export const Home = () => {
                 and create a bond with your customers.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/EmailMarketing">Learn More...</Link>
               </div>
             </div>
             <div
@@ -816,27 +826,29 @@ export const Home = () => {
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
               <div className="font-medium lg:text-[24px]">Product Design</div>
-              <div className="text-justify text-[12px] lg:text-[16px]">
+              <div className="mt-[7%] md:mt-0 text-justify text-[12px] lg:text-[16px] lg:mb-[-5%]">
                 Product design is the process of identifying a market
                 opportunity, clearly defining the problem, and validating the
                 solution with real user interfaces.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+               <Link to="/ProductDesign">Learn More...</Link>
               </div>
             </div>
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF]  md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
               style={{ boxShadow: "0px 0px 11.676px rgba(28, 12, 249, 0.5)" }}
             >
-              <div className="font-medium lg:text-[24px]">Graphic Design</div>
-              <div className="tracking- text-justify text-[12px] lg:text-[16px]">
+              <div className="font-medium lg:text-[24px] lg:mb-[5%]">
+                Graphic Design
+              </div>
+              <div className="mt-[7%] md:mt-0 tracking- text-justify text-[12px] lg:text-[16px]">
                 Graphic design is the creation of visual compositions to solve
                 problems and communicate ideas through typography, imagery,
                 color, and form.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Learn More...
+                <Link to="/GraphicDesign">Learn More...</Link>
               </div>
             </div>
           </Carousel>
@@ -844,7 +856,7 @@ export const Home = () => {
       </div>
 
       {/* CARD ISSUING */}
-      <div className="flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[15%] md:py-[5%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
+      <div className="mb-[20%] flex flex-col gap-[50px] bg-[#04177f] px-[5%] text-[#ffffff] py-[15%] md:py-[5%] md:flex-row md:px-[8%] md:gap-[10px] lg:gap-[30px]">
         <div>
           <div className="text-[20px] font-medium text-center mb-[4%] md:text-[26px] md:text-left lg:text-[45px]">
             Card Issuing
@@ -865,71 +877,69 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mt-[10%] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%] lg:gap-[0%]">
-        <div className="">
-          <div className="text-[20px] text-[#04177F] text-center font-medium mb-[5%] md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+      <div id="crossborder" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center md:text-[17px] md:font-semibold md:text-left lg:text-[30px] ">
             Cross-border Payment
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[208px] lg:text-[18px] lg:w-[40%] ">
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
             Our cross-border payment services make it simple and practical to
             send money to family and friends, receive money both locally and
             internationally.
           </div>
         </div>
         <img
-          className=" w-[50%] mx-auto md:w-[25%] lg:h-[366.36px] lg:w-[30%] "
-          src="./Images/Group2.png"
+          className="w-[248px] h-[162px] mx-auto md:mx-0 lg:w-[433px] lg:h-[284px]"
+          src="./Images/newCurrency.png"
           alt="/"
         />
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[5%] md:flex-row md:justify-center md:items-center md:gap-[25%] md:w-[80%] md:mx-[8%] lg:gap-[15%]">
-        <div className="">
-          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
+      <div id="currencyconvert" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center lg:text-[30px] lg:text-left">
             Currency Conversion
           </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[60%] lg:text-[18px] lg:w-[50%]">
-            With our currency conversion service, you can get the most
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
+            With our currency conversion service, You can get the most
             convenient exchange rates and convert any currency in a matter of
             seconds with no hidden fees.
           </div>
         </div>
-        <div className="flex md:gap-[44%] md:justify-center lg:gap-[30%]">
-          <img
-            className="w-[40%] mx-auto md:w-[180px] md:h-[166.39px] lg:h-[282.36px] lg:w-[213px]"
-            src="./Images/currency1.png"
-            alt="/"
-          />
-          <img
-            className="w-[40%] mx-auto md:w-[180px] md:h-[166.39px] lg:h-[282.36px] lg:w-[213px]"
-            src="./Images/currency2.png"
-            alt="/"
-          />
-        </div>
-      </div>
-
-      {/* MULTI-CURRENCY WALLETS */}
-      <div className="mx-[5%] flex flex-col gap-[30px] mb-[25%] md:mb-[0%] md:flex-row md:justify-center md:items-center md:gap-[263.41px] md:mx-[8%]">
-        <div className="">
-          <div className="text-[20px] mb-[5%] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold">
-            Multi-Currency Wallets
-          </div>
-          <div className="text-justify text-[12px] md:text-[10.61px] md:w-[206px] lg:text-[18px] lg:w-[55%] lg:">
-            Our Multi-Currency Wallets services are the best way to manage all
-            your currencies, keep a track and conveniently store, send, and
-            receive digital assets in one location.
-          </div>
-        </div>
         <img
-          className="w-[60%] mx-auto md:w-[25%]"
-          src="./Images/currency3.png"
+          className="w-[268px] h-[190px] mx-auto md:mx-0 lg:w-[470px] lg:h-[333px]"
+          src="./Images/newCurrency2.png"
           alt="/"
         />
       </div>
 
+      {/* MULTI-CURRENCY WALLETS */}
+      <div id="multicurrency" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+        <div>
+          <div className="text-[20px] font-semibold text-[#04177f] text-center w-[200px] mx-auto leading-[30px] md:w-[100%] lg:text-[30px] lg:text-left">
+            Multi-Currency Wallets
+          </div>
+          <br></br>
+          <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
+            With our currency conversion service, You can get the most
+            convenient exchange rates and convert any currency in a matter of
+            seconds with no hidden fees.
+          </div>
+        </div>
+        <div className="px-[10%]">
+          <img
+            className="w-[157px] h-[169px] mx-auto md:mx-0 lg:w-[275px] lg:h-[295px]"
+            src="./Images/currency3.png"
+            alt="/"
+          />
+        </div>
+      </div>
+
       {/* BECOME AN AGENT */}
-      <div className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
+      <div id="becomeAgent" className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
         <div className="flex flex-col gap-[30px] md:gap-[15px] lg:gap-[40px] ">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold ">
             Become an Agent
@@ -945,7 +955,7 @@ export const Home = () => {
             accounts, making payments using digital tools that can simplify
             their lives and work at your own schedule. 
           </div>
-          <div className="text-[10px] bg-[#04177f] w-[35%] text-center text-[#ffffff] p-[2%] rounded-md mx-auto md:mx-0 lg:text-[15px] lg:font-semibold">
+          <div className="text-[10px] bg-[#04177f] w-[197px] text-center text-[#ffffff] p-[2%] rounded-md mx-auto md:mx-0 lg:text-[15px] lg:font-semibold lg:w-[247px]">
             Join Our Agent Program
           </div>
         </div>
@@ -983,7 +993,7 @@ export const Home = () => {
       </div>
 
       {/* OUR PARTNERS */}
-      <div
+      <div id="partners"
         className="flex flex-col gap-[20px] py-[20%] md:py-[5%]
       "
       >
@@ -1063,7 +1073,7 @@ export const Home = () => {
           // touchTracking
         />
       </div>
-
+      
       {/* FREQUENTLY ASKED QUESTIONS */}
       <div className="mx-[5%] mb-[25%] md:mb-[15%] lg:mx-[8%]">
         <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
