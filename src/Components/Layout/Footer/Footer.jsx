@@ -43,11 +43,17 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               <Link to="/">AremxyPlug</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/about-us">About us</Link></div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <Link to="/about-us">About us</Link>
+            </div>
             <div className="w-[40px] h-[13px] text-[9px]">Careers</div>
             <div className="w-[40px] h-[13px] text-[9px]">Customers</div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/#partners">Partners</HashLink></div>
-            <div className="w-[80px] h-[13px] text-[9px]"><HashLink to="/#becomeAgent">Become an Agent</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/#partners">Partners</HashLink>
+            </div>
+            <div className="w-[80px] h-[13px] text-[9px]">
+              <HashLink to="/#becomeAgent">Become an Agent</HashLink>
+            </div>
             {firstDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[90px] h-[13px] text-[9px]">
@@ -70,8 +76,12 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold ">
               Product
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/telecoms">Telecom</Link></div>
-            <div className="w-[40px] h-[13px] text-[9px]"><Link to="/our-services/payment">Payment</Link></div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <Link to="/our-services/telecoms">Telecom</Link>
+            </div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <Link to="/our-services/payment">Payment</Link>
+            </div>
             <Link to="/CardIssuing">
               <div className="w-[80px] h-[13px] text-[9px] cursor-pointer">
                 Card issuing
@@ -114,18 +124,36 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               <Link to="/solutions">Solutions</Link>
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#baas">Baas</HashLink></div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Saas</HashLink></div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#saas">Businesses</HashLink></div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#businesses">Individuals</HashLink></div>
-            <div className="w-[40px] h-[13px] text-[9px]"><HashLink to="/solutions#ecommerce">Ecommerce</HashLink></div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/solutions#baas">Baas</HashLink>
+            </div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/solutions#saas">Saas</HashLink>
+            </div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/solutions#saas">Businesses</HashLink>
+            </div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/solutions#businesses">Individuals</HashLink>
+            </div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <HashLink to="/solutions#ecommerce">Ecommerce</HashLink>
+            </div>
             {thirdDrop && (
               <div className="flex flex-col gap-[20px]">
-                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Collect</HashLink></div>
-                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions#collect">Purchase</HashLink></div>
-                <div className="w-[96px] h-[13px] text-[9px]"><HashLink to="/solutions#purchase">Automate</HashLink></div>
+                <div className="w-[96px] h-[13px] text-[9px]">
+                  <HashLink to="/solutions#collect">Collect</HashLink>
+                </div>
+                <div className="w-[100px] h-[13px] text-[9px]">
+                  <HashLink to="/solutions#collect">Purchase</HashLink>
+                </div>
+                <div className="w-[96px] h-[13px] text-[9px]">
+                  <HashLink to="/solutions#purchase">Automate</HashLink>
+                </div>
+                <div className="w-[100px] h-[13px] text-[9px]">
+                  <HashLink to="/solutions/#automate">Transfer</HashLink>
+                </div>
                 <div className="w-[94px] h-[13px] text-[9px]">Convert</div>
-                <div className="w-[100px] h-[13px] text-[9px]"><HashLink to="/solutions/#automate">Transfer</HashLink></div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -291,11 +319,13 @@ export const Footer = () => {
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 <HashLink to="/#crossborder">Currency conversion</HashLink>
               </div>
-              
-                <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                  <HashLink to="/#currencyconvert">Multi-Currency Wallet</HashLink>
-                </div>
-             
+
+              <div className="w-[100px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                <HashLink to="/#currencyconvert">
+                  Multi-Currency Wallet
+                </HashLink>
+              </div>
+
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 International Payment
               </div>
@@ -316,13 +346,13 @@ export const Footer = () => {
               <HashLink to="/solutions/#baas">Baas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-            <HashLink to="/solutions/#baas">saas</HashLink>
+              <HashLink to="/solutions/#baas">saas</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               <HashLink to="/solutions/#saas">Businesses</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-            <HashLink to="/solutions/#saas">Individuals</HashLink>
+              <HashLink to="/solutions/#saas">Individuals</HashLink>
             </div>
             <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
               <HashLink to="/solutions/#ecommerce">Ecommerce</HashLink>
@@ -333,16 +363,16 @@ export const Footer = () => {
                 <HashLink to="/solutions/#collect">Collect</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-              <HashLink to="/solutions/#collect">Purchase</HashLink>
+                <HashLink to="/solutions/#collect">Purchase</HashLink>
               </div>
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 <HashLink to="/solutions/#automate">Automate</HashLink>
               </div>
-              <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                <HashLink to="/solutions/#convert">Convert</HashLink>
-              </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Transfer
+              </div>
+              <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
+                <HashLink to="/solutions/#convert">Convert</HashLink>
               </div>
             </div>
           </div>

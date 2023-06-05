@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
+import { Player } from "@lottiefiles/react-lottie-player";
 import styles from "../BusinessDev/busdev.module.css";
 
 export const BusinessDev = () => {
@@ -69,11 +70,17 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg2.png"
             alt="/"
-          />
+          /> */}
+          <Player
+            autoplay
+            loop
+            src="https://assets6.lottiefiles.com/packages/lf20_pqpwalcv.json"
+            style={{ height: "300px", width: "300px" }}
+          ></Player>
         </div>
 
         <div className="md:flex md:flex-row-reverse mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -88,11 +95,19 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg3.png"
             alt="/"
-          />
+          /> */}
+          <Player
+            autoplay
+            loop
+            src="https://assets5.lottiefiles.com/packages/lf20_NAl0oidcCj.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -107,11 +122,19 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg4.png"
             alt="/"
-          />
+          /> */}
+           <Player
+            autoplay
+            loop
+            src="https://assets2.lottiefiles.com/packages/lf20_ER8E6HKqBl.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
 
         <div className="md:flex md:flex-row-reverse mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -127,11 +150,19 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg5.png"
             alt="/"
-          />
+          /> */}
+          <Player
+            autoplay
+            loop
+            src="https://assets8.lottiefiles.com/packages/lf20_w98qte06.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -147,11 +178,20 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg6.png"
             alt="/"
-          />
+          /> */}
+           <Player
+           speed={5}
+            autoplay
+            loop
+            src="https://assets2.lottiefiles.com/packages/lf20_yqoxehdn.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
 
         <div className="md:flex md:flex-row-reverse mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -166,11 +206,19 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg7.png"
             alt="/"
-          />
+          /> */}
+          <Player
+            autoplay
+            loop
+            src="https://assets10.lottiefiles.com/packages/lf20_vLxVkbToAJ.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -186,16 +234,24 @@ export const BusinessDev = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             className="w-[234.11px] h-[234.11px] mx-auto md:w-[188px] md:h-[188px] md:mx-0 lg:w-[325px] lg:h-[325px]"
             src="/Images/businessimages/busimg8.png"
             alt="/"
-          />
+          /> */}
+          <Player
+            autoplay
+            loop
+            src="https://assets9.lottiefiles.com/packages/lf20_uf2ng6jq.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            
+          </Player>
         </div>
       </div>
 
       {/* SECTION THREE */}
-      <div className="my-[15%]">
+      <div className="my-[15%] md:my-[10%]">
         <div className=" text-[20px] text-[#04177f] text-center lg:text-[30px]">
           Our Key Features
         </div>
@@ -299,7 +355,7 @@ export const BusinessDev = () => {
         </div>
 
         {/* product development */}
-        <div className={styles.img}>
+        <div className={styles.img2}>
           <img
             className="w-[260px] md:w-[200px] lg:w-[293px]"
             src="/Images/businessimages/5.png"
@@ -318,7 +374,7 @@ export const BusinessDev = () => {
         </div>
 
         {/* financial analysis */}
-        <div className={styles.img}>
+        <div className={styles.img2}>
           <img
             className="w-[240px] md:w-[200px] lg:w-[293px]"
             src="/Images/businessimages/6.png"
@@ -341,7 +397,7 @@ export const BusinessDev = () => {
         </div>
 
         {/* training and skill */}
-        <div className={styles.img}>
+        <div className={styles.img2}>
           <img
             className="w-[240px] md:w-[200px] lg:w-[293px]"
             src="/Images/businessimages/7.png"
@@ -361,7 +417,7 @@ export const BusinessDev = () => {
         </div>
 
         {/* performance monitoring */}
-        <div className={styles.img}>
+        <div className={styles.img2}>
           <img
             className="w-[240px] md:w-[200px] lg:w-[293px]"
             src="/Images/businessimages/8.png"
