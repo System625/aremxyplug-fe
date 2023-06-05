@@ -16,6 +16,7 @@ import ProductDesign from "./Components/Screens/productDesign/ProductDesign";
 import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
 import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
 import SocialMediaMarketing from "./Components/Screens/SocialMediaMarketing/SocialMediaMarketing";
+import ContactUs from "./Components/Screens/contactUs/ContactUs";
 export const Router = () => {
   return (
     <div>
@@ -36,6 +37,7 @@ export const Router = () => {
         <Route path="/content-marketing" element={<ContentMarketing />}/>
         <Route path="/social-media-marketing" element={<SocialMediaMarketing />}/>
         <Route path="/businessDev" element={<BusinessDev />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
     </div>
   );

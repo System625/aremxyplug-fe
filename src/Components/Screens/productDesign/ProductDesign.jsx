@@ -59,6 +59,7 @@ function ProductDesign() {
         >
           <div className="grid grid-cols-1  md:grid-cols-5 ">
             <div className="md:col-span-3 ">
+              {/* class="text-[20px] leading-[30px] font-bold mx-auto text-center                  w-[80%] md:px-0 md:text-left md:mx-0 md:w-full lg:text-[30px] lg:w-[70%] " */}
               <p
                 className="text-[15px] md:text-[13.9px] lg:text-[24px] font-bold lg:tracking-wider  "
                 style={{
@@ -67,7 +68,7 @@ function ProductDesign() {
               >
                 Experience a well-designed captivating products.
               </p>
-              <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-2 sm:mt-2 md:mt-4   lg:mt-4 ">
+              <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                 Product design is a combination of improving the aesthetics of a
                 product, its functionality, and its performance. Below are some
                 key functions where product design could add value to your
@@ -100,7 +101,7 @@ function ProductDesign() {
               >
                 Visual Appealing
               </p>
-              <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px]">
+              <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
                 Improve the sale-ability of your product by modernizing its
                 design, and increasing its appeal to your target market. You are
                 a lot more likely to establish a long-lasting relationship with
@@ -148,7 +149,7 @@ function ProductDesign() {
                 >
                   Improved Performance
                 </p>
-                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                   A high-performing product provides an edge over your
                   competitors. In order to prevent any challenges during the
                   development process, our experts will carefully review your
@@ -178,7 +179,7 @@ function ProductDesign() {
                 >
                   Flexibility and Scalability
                 </p>
-                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                   Being able to quickly adapt to a changing environment is
                   essential for remaining afloat and staying one step ahead of
                   your rivals. We offer a variety of creative solutions that
@@ -226,7 +227,7 @@ function ProductDesign() {
                 >
                   Increase Sales
                 </p>
-                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                   Customers are frequently willing to pay more for products that
                   are well-designed and offer better usability, functionality,
                   and a pleasant visual experience. This result in increasing
@@ -257,7 +258,7 @@ function ProductDesign() {
                 >
                   Influences Customer Behavior
                 </p>
-                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                   It is well known that product design has a significant impact
                   on customers behavior. Brands that make greater design
                   investments in their products and involve or include their
@@ -306,7 +307,7 @@ function ProductDesign() {
                 >
                   Lower Costs
                 </p>
-                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+                <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px] ">
                   The ability to spend less on advertising to attract new
                   customers is a crucial component of product design. Your
                   budget may be used in other areas if you know how to make your
