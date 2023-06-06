@@ -5,6 +5,11 @@ import "react-multi-carousel/lib/styles.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
+import { TiSocialInstagram } from "react-icons/ti";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { GrMail } from "react-icons/gr";
 
 const responsive = {
   superLargeDesktop: {
@@ -14,7 +19,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3.2,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -22,7 +27,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 2,
+    items: 1.5,
   },
 };
 
@@ -197,120 +202,167 @@ export const AboutUs = () => {
             customTransition="transform 1800ms ease-in-out"
           >
             <div
-              className="mx-[3%] my-[5%] flex flex-col gap-[6px]"
+              className="w-[169px] mx-[3%] my-[5%] pt-[10%] pb-[5%] flex flex-col gap-[6px] rounded-t-[34px] lg:w-[486px] lg:rounded-t-[100px]"
               style={{
                 boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
               }}
             >
               <img
-                className="h-[84.37px] w-[150.69px] mx-auto md:w-[250px] md:h-[140px] lg:w-[390px] lg:h-[215px]"
-                src="./Images/aboutimages/team1.png"
+                className="z-50 h-[86px] w-[86x] mx-auto md:w-[143px] md:h-[143px] lg:w-[248px] lg:h-[248px]"
+                src="./Images/aboutimages/dummyimg.png"
                 alt="/"
               />
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Name
-              </div>
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Business Consultant
-              </div>
-              <div className="text-[7.06px] text-justify w-[101px] mx-auto md:text-[10px] md:w-[180px] lg:text-[18px] lg:w-[257px]">
-                Lorem ipsum dolor sit amet consectetur. Congue morbi
-                nequevenenatis faucibus proin. Neque feugiat vel volutpat at
-                aliquam. Consequat al.
+              <div className="flex flex-col gap-[5px] bg-[#EEEBEB] mt-[-18%] pt-[16%] lg:gap-[15px]">
+                <div className="font-semibold text-[9.42px] text-[#04177f] text-center md:text-[13px] lg:text-[24px]">
+                  Habib Kamaldeen
+                </div>
+                <div className="font-semibold text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
+                  Founder & CEO
+                </div>
+                <div className="mb-[7%] text-[7.06px] text-justify w-[90%] mx-auto md:w-[80%] md:text-[10px] lg:text-[18px] lg:w-[421px] lg:leading-[30px]">
+                  Lorem ipsum dolor sit amet consectetur. Congue morbi
+                  nequevenenatis faucibus proin. Neque feugiat vel volutpat at
+                  aliquam. Consequat al.
+                </div>
+                <div className="flex justify-center items-center bg-[#04177f] text-[#ffffff] p-1 gap-[5px] lg:h-[64px] lg:text-5xl lg:gap-[15px]">
+                  <AiFillLinkedin />
+                  <AiFillFacebook />
+                  <TiSocialInstagram />
+                  <AiOutlineTwitter />
+                  <GrMail />
+                </div>
               </div>
             </div>
 
             <div
-              className="mx-[3%] my-[5%] flex flex-col gap-[6px]"
+              className="w-[169px] mx-[3%] my-[5%] pt-[10%] pb-[5%] flex flex-col gap-[6px] rounded-t-[34px] lg:w-[486px] lg:rounded-t-[100px]"
               style={{
                 boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
               }}
             >
               <img
-                className="h-[84.37px] w-[150.69px] mx-auto  md:w-[250px] md:h-[140px] lg:w-[390px] lg:h-[215px]"
-                src="./Images/aboutimages/team2.png"
+                className="z-50 h-[86px] w-[86x] mx-auto md:w-[143px] md:h-[143px] lg:w-[248px] lg:h-[248px]"
+                src="./Images/aboutimages/dummyimg.png"
                 alt="/"
               />
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Name
-              </div>
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Developer
-              </div>
-              <div className="text-[7.06px] text-justify w-[101px] mx-auto md:text-[10px] md:w-[180px] lg:text-[18px] lg:w-[257px]">
-                Lorem ipsum dolor sit amet consectetur. Congue morbi
-                nequevenenatis faucibus proin. Neque feugiat vel volutpat at
-                aliquam. Consequat al.
+              <div className="flex flex-col gap-[5px] bg-[#EEEBEB] mt-[-18%] pt-[16%] lg:gap-[15px]">
+                <div className="font-semibold text-[9.42px] text-[#04177f] text-center md:text-[13px] lg:text-[24px]">
+                  Habibat Kamaldeen Raji
+                </div>
+                <div className="font-semibold text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
+                  CFO/Accountant
+                </div>
+                <div className="mb-[7%] text-[7.06px] text-justify w-[90%] mx-auto md:text-[10px] md:w-[80%] lg:text-[18px] lg:w-[421px] lg:leading-[30px]">
+                  Lorem ipsum dolor sit amet consectetur. Congue morbi
+                  nequevenenatis faucibus proin. Neque feugiat vel volutpat at
+                  aliquam. Consequat al.
+                </div>
+                <div className="flex justify-center items-center bg-[#04177f] text-[#ffffff] p-1 gap-[5px] lg:h-[64px] lg:text-5xl lg:gap-[15px]">
+                  <AiFillLinkedin />
+                  <AiFillFacebook />
+                  <TiSocialInstagram />
+                  <AiOutlineTwitter />
+                  <GrMail />
+                </div>
               </div>
             </div>
 
             <div
-              className="mx-[3%] my-[5%] flex flex-col gap-[6px]"
+              className="w-[169px] mx-[3%] my-[5%] pt-[10%] pb-[5%] flex flex-col gap-[6px] rounded-t-[34px] lg:w-[486px] lg:rounded-t-[100px]"
               style={{
                 boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
               }}
             >
               <img
-                className="h-[84.37px] w-[150.69px] mx-auto  md:w-[250px] md:h-[140px] lg:w-[390px] lg:h-[215px]"
-                src="./Images/aboutimages/team3.png"
+                className="z-50 h-[86px] w-[86x] mx-auto md:w-[143px] md:h-[143px] lg:w-[248px] lg:h-[248px]"
+                src="./Images/aboutimages/dummyimg.png"
                 alt="/"
               />
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Name
-              </div>
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Product Design
-              </div>
-              <div className="text-[7.06px] text-justify w-[101px] mx-auto md:text-[10px] md:w-[180px] lg:text-[18px] lg:w-[257px]">
-                Lorem ipsum dolor sit amet consectetur. Congue morbi
-                nequevenenatis faucibus proin. Neque feugiat vel volutpat at
-                aliquam. Consequat al.
+              <div className="flex flex-col gap-[5px] bg-[#EEEBEB] mt-[-18%] pt-[16%] lg:gap-[15px]">
+                <div className="font-semibold text-[9.42px] text-[#04177f] text-center md:text-[13px] lg:text-[24px]">
+                  Habibat Kamaldeen Raji
+                </div>
+                <div className="font-semibold text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
+                  CFO/Accountant
+                </div>
+                <div className="mb-[7%] text-[7.06px] text-justify w-[90%] mx-auto md:text-[10px] md:w-[80%] lg:text-[18px] lg:w-[421px] lg:leading-[30px]">
+                  Lorem ipsum dolor sit amet consectetur. Congue morbi
+                  nequevenenatis faucibus proin. Neque feugiat vel volutpat at
+                  aliquam. Consequat al.
+                </div>
+                <div className="flex justify-center items-center bg-[#04177f] text-[#ffffff] p-1 gap-[5px] lg:h-[64px] lg:text-5xl lg:gap-[15px]">
+                  <AiFillLinkedin />
+                  <AiFillFacebook />
+                  <TiSocialInstagram />
+                  <AiOutlineTwitter />
+                  <GrMail />
+                </div>
               </div>
             </div>
+
             <div
-              className="mx-[3%] my-[5%] flex flex-col gap-[6px]"
+              className="w-[169px] mx-[3%] my-[5%] pt-[10%] pb-[5%] flex flex-col gap-[6px] rounded-t-[34px] lg:w-[486px] lg:rounded-t-[100px] "
               style={{
                 boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
               }}
             >
               <img
-                className="h-[84.37px] w-[150.69px] mx-auto  md:w-[250px] md:h-[140px] lg:w-[390px] lg:h-[215px]"
-                src="./Images/aboutimages/team4.png"
+                className="z-50 h-[86px] w-[86x] mx-auto md:w-[143px] md:h-[143px] lg:w-[248px] lg:h-[248px]"
+                src="./Images/aboutimages/dummyimg.png"
                 alt="/"
               />
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Name
-              </div>
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Developer
-              </div>
-              <div className="text-[7.06px] text-justify w-[101px] mx-auto md:text-[10px] md:w-[180px] lg:text-[18px] lg:w-[257px]">
-                Lorem ipsum dolor sit amet consectetur. Congue morbi
-                nequevenenatis faucibus proin. Neque feugiat vel volutpat at
-                aliquam. Consequat al.
+              <div className="font-semibold flex flex-col gap-[5px] bg-[#EEEBEB] mt-[-18%] pt-[16%] lg:gap-[15px]">
+                <div className="text-[9.42px] text-[#04177f] text-center md:text-[13px] lg:text-[24px]">
+                  Habibat Kamaldeen Raji
+                </div>
+                <div className="font-semibold text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
+                  CFO/Accountant
+                </div>
+                <div className="mb-[7%] text-[7.06px] text-justify w-[90%] mx-auto md:text-[10px] md:w-[80%] lg:text-[18px] lg:w-[421px] lg:leading-[30px]">
+                  Lorem ipsum dolor sit amet consectetur. Congue morbi
+                  nequevenenatis faucibus proin. Neque feugiat vel volutpat at
+                  aliquam. Consequat al.
+                </div>
+                <div className="flex justify-center items-center bg-[#04177f] text-[#ffffff] p-1 gap-[5px] lg:h-[64px] lg:text-5xl lg:gap-[15px]">
+                  <AiFillLinkedin />
+                  <AiFillFacebook />
+                  <TiSocialInstagram />
+                  <AiOutlineTwitter />
+                  <GrMail />
+                </div>
               </div>
             </div>
+
             <div
-              className="mx-[3%] my-[5%] flex flex-col gap-[6px]"
+              className="w-[169px] mx-[3%] my-[5%] pt-[10%] pb-[5%] flex flex-col gap-[6px] rounded-t-[34px] lg:w-[486px] lg:rounded-t-[100px]"
               style={{
-                boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
+                boxShadow: "0px 0px 15.84859px rgba(0, 0, 0, 0.25)",
               }}
             >
               <img
-                className="h-[84.37px] w-[150.69px] mx-auto  md:w-[250px] md:h-[140px] lg:w-[390px] lg:h-[215px]"
-                src="./Images/aboutimages/team5.png"
+                className="z-50 h-[86px] w-[86x] mx-auto md:w-[143px] md:h-[143px] lg:w-[248px] lg:h-[248px]"
+                src="./Images/aboutimages/dummyimg.png"
                 alt="/"
               />
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Name
-              </div>
-              <div className="text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
-                Developer
-              </div>
-              <div className="text-[7.06px] text-justify w-[101px] mx-auto md:text-[10px] md:w-[180px] lg:text-[18px] lg:w-[257px]">
-                Lorem ipsum dolor sit amet consectetur. Congue morbi
-                nequevenenatis faucibus proin. Neque feugiat vel volutpat at
-                aliquam. Consequat al.
+              <div className="flex flex-col gap-[5px] bg-[#EEEBEB] mt-[-18%] pt-[16%] lg:gap-[15px]">
+                <div className="font-semibold text-[9.42px] text-[#04177f] text-center md:text-[13px] lg:text-[24px]">
+                  Habibat Kamaldeen Raji
+                </div>
+                <div className="font-semibold text-[9.42px] text-center md:text-[13px] lg:text-[24px]">
+                  CFO/Accountant
+                </div>
+                <div className="mb-[7%] text-[7.06px] text-justify w-[90%] mx-auto md:text-[10px] md:w-[80%] lg:text-[18px] lg:w-[421px] lg:leading-[30px]">
+                  Lorem ipsum dolor sit amet consectetur. Congue morbi
+                  nequevenenatis faucibus proin. Neque feugiat vel volutpat at
+                  aliquam. Consequat al.
+                </div>
+                <div className="flex justify-center items-center bg-[#04177f] text-[#ffffff] p-1 gap-[5px] lg:h-[64px] lg:text-5xl lg:gap-[15px]">
+                  <AiFillLinkedin />
+                  <AiFillFacebook />
+                  <TiSocialInstagram />
+                  <AiOutlineTwitter />
+                  <GrMail />
+                </div>
               </div>
             </div>
           </Carousel>
