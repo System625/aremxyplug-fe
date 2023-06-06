@@ -610,7 +610,7 @@ export const Pricing = () => {
         />
 
         {/* ===========================BULK SMS================================ */}
-        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
+        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%] lg:mb-5 lg:gap-[20px]">
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
             &#x2022; Bulk SMS
           </div>
@@ -620,13 +620,13 @@ export const Pricing = () => {
           </div>
         </div>
 
-        <p className="text-[8px]">
+        <p className="text-[8px] lg:text-[18px]">
           Pricing:{" "}
           <span className="font-extrabold text-[#04177f]">Coming soon...</span>
         </p>
 
         {/* ===========================REACHARGE CARD PRINTING========================= */}
-        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
+        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%] lg:gap-[25px]">
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
             &#x2022; Recharge Card Printing
           </div>
@@ -637,22 +637,23 @@ export const Pricing = () => {
         </div>
       </div>
       <img
-        className="z-[0px] w-[481px] h-[473px] mt-[16%] md:w-[1078px] md:h-[1062px]"
+        className="z-[0px] w-[481px] h-[473px] mt-[16%] md:w-[1078px] md:h-[1062px] lg:w-[1910px] lg:h-[1881px] lg:mt-[5%]"
         src="/Images/pricngimages/section2bg.png"
         alt="/"
       />
-      <div className="mt-[-135%] mx-[5%]">
+      <div className="mt-[-135%] mx-[5%] lg:mx-[8%]">
         <img
           className="z-50 bg-[#ffffff]"
           src="/Images/pricngimages/reachargecard.png"
           alt="/"
         />
         <br></br>
-        <p className="z-50 text-[8px]">
+        <p className="z-50 text-[8px] lg:text-[18px]">
           Pricing:{" "}
           <span className="font-extrabold text-[#04177f]">Coming soon...</span>
         </p>
 
+<p className="hidden md:block font-semibold mt-[12%] text-[#04177f] text-[30px] text-center">PAYMENT PRICING</p>
         {/* ==========================WALLET SYSTEM=================== */}
         <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
@@ -667,8 +668,16 @@ export const Pricing = () => {
             &#x2022; Global Virtual Accounts{" "}
           </div>
           <div className="flex items-center justify-between">
-            <img className="w-[103px] h-[93px] md:w-[220px] md:h-[190px]" src="/Images/pricngimages/globalframe.png" alt="/" />
-            <img className="w-[100px] h-[103px] mr-[4%] md:w-[220px] md:h-[200px]" src="/Images/pricngimages/globalframe2.png" alt="/" />
+            <img
+              className="w-[103px] h-[93px] md:w-[220px] md:h-[190px] lg:w-[411px] lg:h-[370px]"
+              src="/Images/pricngimages/globalframe.png"
+              alt="/"
+            />
+            <img
+              className="w-[100px] h-[103px] mr-[4%] md:w-[220px] md:h-[200px] lg:w-[400px] lg:h-[409px]"
+              src="/Images/pricngimages/globalframe2.png"
+              alt="/"
+            />
           </div>
         </div>
 
@@ -677,7 +686,28 @@ export const Pricing = () => {
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
             &#x2022; Card Payment{" "}
           </div>
-          <img className="w-[88px] h-[56px] mx-auto md:w-[150px] md:h-[100px]" src="/Images/pricngimages/cardpayment.png" alt="/"/>
+          <img
+            className="w-[88px] h-[56px] mx-auto md:w-[150px] md:h-[100px] lg:w-[352px] lg:h-[223px]"
+            src="/Images/pricngimages/cardpayment.png"
+            alt="/"
+          />
+        </div>
+
+
+{/* =========================MONEY TRANSFER================= */}
+        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
+          <div className="flex flex-col lg:gap-[25px]">
+          <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
+            &#x2022; Money Transfer
+          </div>
+          <div className="text-[8px] lg:text-[18px] leading-[9.6px] w-[312px] lg:w-[100%]">
+            Currency: NGN
+          </div>
+          </div>
+          <div className="flex justify-between lg:mt-[5%]">
+            <img className="w-[117px] h-[90px] md:w-[254px] md:h-[189px] lg:w-[450px] lg:h-[340px]" src="./Images/pricngimages/moneytransfer1.png" alt="/" />
+            <img className="mt-[-10%] w-[118px] h-[118px] md:w-[257px] md:h-[257px] lg:w-[456px] lg:h-[456px]" src="./Images/pricngimages/moneytransfer2.png" alt="/" />
+          </div>
         </div>
       </div>
     </>

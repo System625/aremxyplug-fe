@@ -1,7 +1,7 @@
 import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
-import "./EmailMarketing.css"
+import "./EmailMarketing.css";
 function EmailMarketing() {
   return (
     <>
@@ -25,7 +25,7 @@ function EmailMarketing() {
             >
               Email Marketing
             </p>
-            <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-4 sm:mt-6 md:mt-10  lg:mt-12 ">
+            <p className="text-[#000] text-justify text-[10.53px] md:text-[12px] lg:text-lg mt-[14px] lg:mt-[25px] ">
               Email marketing is one of the most directive and effective way to
               connect with leads, turning them into potential customers. Your
               business needs an email marketing strategy that boost sales and
@@ -76,7 +76,7 @@ function EmailMarketing() {
           >
             Build a meaningful relationships with your customers.
           </p>
-          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-4 sm:mt-6 md:mt-10 sm:text:lg  lg:mt-12 ">
+          <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg sm:text:lg   mt-[14px] lg:mt-[25px]">
             Digital recharge is now a well-liked method of purchasing airtime,
             data bundles, and bills payments. We make it easy for you to start
             your telecom business without any hassle. You can start right away
@@ -106,7 +106,7 @@ function EmailMarketing() {
             >
               Communicating with your customers
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Effective communication builds trust, understanding, and loyalty.
               Listen actively, provide clear information, and promptly address
               concerns to foster meaningful and lasting relationships with your
@@ -142,7 +142,6 @@ function EmailMarketing() {
         ></div>
       </div>
 
-
       {/*Increase leads and product cost*/}
 
       <div
@@ -171,7 +170,7 @@ function EmailMarketing() {
             >
               Increase leads
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Boost your lead generation efforts with targeted marketing
               campaigns, compelling content, effective lead capture forms, and
               strategic partnerships to maximize your potential for increased
@@ -218,7 +217,7 @@ function EmailMarketing() {
             >
               Communicating with your customers
             </p>
-            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[10px] md:mt-[20px]   lg:mt-[50px] ">
+            <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg mt-[14px] lg:mt-[25px]">
               Effective communication builds trust, understanding, and loyalty.
               Listen actively, provide clear information, and promptly address
               concerns to foster meaningful and lasting relationships with your
@@ -254,8 +253,7 @@ function EmailMarketing() {
         ></div>
       </div>
 
-    
-{/* Our Key Features */}
+      {/* Our Key Features */}
       <div className="bg-[#92ABFE] my-[50px] md:my-[70px]">
         <p
           className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
@@ -349,38 +347,29 @@ function EmailMarketing() {
             }}
           ></div>
         </div>
-
-
-
       </div>
-{/*   AremxyPlug Email Marketing Service */}
+      {/*   AremxyPlug Email Marketing Service */}
 
-<div className=" lg:px-[8%] px-[5%] md:mb-[15%] mb-[25%]">
-
-
-<div className=" p-4 sm:p-6  lg:p-8 md:p-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  h-[200px] md:h-[270px] lg:h-[370px] xl:h-[330px] EmailBoxShadow">
-              <p
-                className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
-                style={{
-                  color: primaryColor,
-                }}
-              >
-             AremxyPlug Email Marketing Service
-              </p>
-              <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
-              You can connect and communicate with your current customers through email marketing while also attracting new ones. Our email marketing expert got you covered. Contact our sales team right away! 
-              </p>
-              <div className="mt-6  flex justify-center">
-                  <Bluebutton text="Contact Sales"/>
-              </div>
-              
-            </div>
-
-
-</div>
- 
-
-
+      <div className=" lg:px-[8%] px-[5%] md:mb-[15%] mb-[25%]">
+        <div className=" px-4 sm:px-6  lg:px-8 py-4 sm:py-6  bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]   EmailBoxShadow">
+          <p
+            className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
+            style={{
+              color: primaryColor,
+            }}
+          >
+            AremxyPlug Email Marketing Service
+          </p>
+          <p className="text-[#000] text-justify  mt-4 sm:mt-6 md:mt-10 text-[11.23px] md:text-[10.44px] lg:text-[18px] lg:mt-12 ">
+            You can connect and communicate with your current customers through
+            email marketing while also attracting new ones. Our email marketing
+            expert got you covered. Contact our sales team right away!
+          </p>
+          <div className="mt-6  flex justify-center">
+            <Bluebutton text="Contact Sales" />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

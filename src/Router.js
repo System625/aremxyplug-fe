@@ -18,7 +18,7 @@ import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarke
 import SocialMediaMarketing from "./Components/Screens/SocialMediaMarketing/SocialMediaMarketing";
 import { Pricing } from "./Components/Screens/pricings/Pricing";
 import { Faq } from "./Components/Screens/FAQs/Faq";
-
+import ContactUs from "./Components/Screens/contactUs/ContactUs";
 export const Router = () => {
   return (
     <div>
@@ -43,7 +43,7 @@ export const Router = () => {
         />
         <Route path="/businessDev" element={<BusinessDev />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/faq" element={<Faq/>}/>
+        <Route path="/faq" element={<Faq />} />
       </Routes>
     </div>
   );

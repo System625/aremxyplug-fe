@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./Faq.module.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { ContextProvider } from "../../Context";
 import { useContext } from "react";
-import Bluebutton from "../../bluebutton/Bluebutton";
- 
 
 export const Faq = () => {
   const {
@@ -599,7 +597,7 @@ export const Faq = () => {
       </div>
 
       {/* ===============================ROW TWENTY=============================== */}
-      <div className="mb-[5%]">
+      <div className="mb-[3%] lg:mb-[5%]">
         {" "}
         <div className={style.faq2} onClick={setDropHandler20}>
           <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
@@ -627,7 +625,9 @@ export const Faq = () => {
         )}
       </div>
 
-<Bluebutton/>
+      <div className="mx-auto text-[7.3px] bg-[#04177f] text-[#ffffff] font-bold flex justify-center items-center w-[77px] h-[22px] rounded-[2.2px] lg:text-[12.5px] lg:rounded-[7px] lg:w-[164px] lg:h-[45px] lg:font-extrabold">
+        Contact Us
+      </div>
     </div>
   );
 };
