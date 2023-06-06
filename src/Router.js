@@ -17,6 +17,7 @@ import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
 import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
 import SocialMediaMarketing from "./Components/Screens/SocialMediaMarketing/SocialMediaMarketing";
 import ContactUs from "./Components/Screens/contactUs/ContactUs";
+import OwnVTU from "./Components/Screens/ownVTU/OwnVTU";
 export const Router = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ export const Router = () => {
         <Route path="/social-media-marketing" element={<SocialMediaMarketing />}/>
         <Route path="/businessDev" element={<BusinessDev />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/OwnVTU" element={<OwnVTU />} />
       </Routes>
     </div>
   );

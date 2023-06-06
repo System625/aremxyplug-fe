@@ -38,7 +38,7 @@ function GraphicDesign() {
             </div>
           </div>
           {/* EMAIL AND LADY IMAGE */}
-          <div className="rounded-lg flex flex-col items-center  md:block ">
+          <div className="rounded-lg flex flex-col items-center   ">
             <img
               src="./Images/graphic_design/graphicsDesignImage.png"
               alt="background_image "
