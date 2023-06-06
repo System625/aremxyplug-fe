@@ -31,9 +31,10 @@ export default DIGITAL_SERVICES_BG
 export function VTU_PAY({props,color}) {
   return (
     <svg
-      width={380}
-      height={319}
-      viewBox="0 0 380 319"
+    // className="absolute w-[100%]" viewBox="0 0 0 319"
+       width={380}
+       height={319}
+       viewBox="0 0 380 319"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
