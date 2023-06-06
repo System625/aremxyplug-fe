@@ -17,6 +17,7 @@ import SEOMarketing from "./Components/Screens/SEOMarketing/SEOMarketing";
 import ContentMarketing from "./Components/Screens/ContentMarketing/ContentMarketing";
 import SocialMediaMarketing from "./Components/Screens/SocialMediaMarketing/SocialMediaMarketing";
 import ContactUs from "./Components/Screens/contactUs/ContactUs";
+import PrivacyPolicy from "./Components/Screens/PrivacyPolicy/PrivacyPolicy";
 export const Router = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ export const Router = () => {
         <Route path="/social-media-marketing" element={<SocialMediaMarketing />}/>
         <Route path="/businessDev" element={<BusinessDev />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );
