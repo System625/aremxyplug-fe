@@ -446,8 +446,9 @@ export const Faq = () => {
         {fourteenDrop && (
           <div className={style.faq}>
             <p className="text-[10px] text-justify p-3 lg:text-[16px] lg:w-[540px] lg:p-[3%]">
-              Yes, you can connect your bank account to receive payments
-              instantly.
+              Yes, upgrading your AremxyPlug account gives you access to
+              additional features and services, such as higher transaction
+              limits and lower fees.
             </p>
           </div>
         )}
@@ -598,7 +599,7 @@ export const Faq = () => {
       </div>
 
       {/* ===============================ROW TWENTY=============================== */}
-      <div className="mb-[3%] lg:mb-[5%]">
+      <div className="mb-[3%] lg:mb-[]">
         {" "}
         <div className={style.faq2} onClick={setDropHandler20}>
           <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
@@ -626,9 +627,11 @@ export const Faq = () => {
         )}
       </div>
 
-      <Link to="/contact-us"><div className="mx-auto text-[7.3px] bg-[#04177f] text-[#ffffff] font-bold flex justify-center items-center w-[77px] h-[22px] rounded-[2.2px] lg:text-[12.5px] lg:rounded-[7px] lg:w-[164px] lg:h-[45px] lg:font-extrabold">
-        Contact Us
-      </div></Link>
+      <Link to="/contact-us">
+        <div className=" bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center text-[7px] lg:mt-[3%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+          Contact Us
+        </div>
+      </Link>
     </div>
   );
 };

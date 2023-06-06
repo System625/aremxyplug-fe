@@ -129,7 +129,7 @@ export const AboutUs = () => {
           <br></br>
           <div className="flex flex-col gap-[9px] mx-[5%] mb-[15%] text-center md:text-left md:flex md:flex-col md:gap-[5px] md:mb-[5%] lg:flex lg:flex-col lg:gap-[12px]">
             <div className="text-15px font-bold md:text-[10px] lg:text-[18px]">
-              Efficient
+              Efficiency
             </div>
             <div className="text-[10px] text-[#04177f] lg:text-[12px]">
               Swift and Automated.
