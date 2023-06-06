@@ -65,13 +65,13 @@ export const NavBar = () => {
               <Link to="/about-us">About us</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
-              <Link>Pricing</Link>
+              <Link to="/pricing">Pricing</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link to="/solutions">Solutions</Link>
             </li>
             <li onClick={() => setNavOpen((prev) => !prev)}>
-              <Link>FAQs</Link>
+              <Link to="/faq">FAQs</Link>
             </li>
             <Link to="/ContactUs">
             <li
@@ -108,11 +108,15 @@ export const NavBar = () => {
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/about-us">About us</Link>
           </li>
-          <li className="text-[9px] lg:text-[16px]">Pricing</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/pricing">Pricing</Link>
+          </li>
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/solutions">Solutions</Link>
           </li>
-          <li className="text-[9px] lg:text-[16px]">FAQs</li>
+          <li className="text-[9px] lg:text-[16px]">
+            <Link to="/faq">FAQs</Link>
+          </li>
         </ul>
 
        

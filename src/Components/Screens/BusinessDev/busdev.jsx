@@ -442,7 +442,7 @@ export const BusinessDev = () => {
             {/* product development */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/5.png"
                 alt="/"
               />
@@ -505,7 +505,7 @@ export const BusinessDev = () => {
             {/* performance monitoring */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/8.png"
                 alt="/"
               />
