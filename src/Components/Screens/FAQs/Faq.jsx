@@ -61,9 +61,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            1. What are Global Virtual Accounts?
-          </p>
           {!firstDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -73,6 +70,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            What are Global Virtual Accounts?
+          </p>
         </div>
         {firstDrop && (
           <div className={style.faq}>
@@ -91,10 +91,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler2}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            2. Can I receive local and international bank transfers to my global
-            virtual accounts?
-          </p>
           {!secondDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -104,6 +100,10 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Can I receive local and international bank transfers to my global
+            virtual accounts?
+          </p>
         </div>
         {secondDrop && (
           <div className={style.faq}>
@@ -119,10 +119,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler3}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            3. How Automated is AremxyPlug's wallet to reflect payments
-            instantly?
-          </p>
           {!thirdDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -132,6 +128,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How Automated is AremxyPlug's wallet to reflect payments instantly?
+          </p>
         </div>
         {thirdDrop && (
           <div className={style.faq}>
@@ -148,9 +147,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler4}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            4. How does the wallet system work?
-          </p>
           {!fourthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -160,6 +156,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How does the wallet system work?
+          </p>
         </div>
         {fourthDrop && (
           <div className={style.faq}>
@@ -177,10 +176,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler5}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            5. Can I send money from my wallet to another AremxyPlug user's
-            wallet?
-          </p>
           {!fifthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -190,6 +185,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Can I send money from my wallet to another AremxyPlug user's wallet?
+          </p>
         </div>
         {fifthDrop && (
           <div className={style.faq}>
@@ -205,10 +203,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler6}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            6. How can I fulfill airtime top-ups, data bundles, and bill
-            payments after funding my wallet?
-          </p>
           {!sixthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -218,6 +212,10 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How can I fulfill airtime top-ups, data bundles, and bill payments
+            after funding my wallet?
+          </p>
         </div>
         {sixthDrop && (
           <div className={style.faq}>
@@ -235,9 +233,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler7}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            7. How do I create Virtual and Physical debit USD and NGN cards?
-          </p>
           {!seventhDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -247,6 +242,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How do I create Virtual and Physical debit USD and NGN cards?
+          </p>
         </div>
         {seventhDrop && (
           <div className={style.faq}>
@@ -264,9 +262,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler8}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            8. Do I need a bank account to carry out any transactions?
-          </p>
           {!eigthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -276,6 +271,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Do I need a bank account to carry out any transactions?
+          </p>
         </div>
         {eigthDrop && (
           <div className={style.faq}>
@@ -292,9 +290,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler9}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            9. Can I connect my bank account to receive payments instantly?
-          </p>
           {!ninethDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -304,6 +299,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Can I connect my bank account to receive payments instantly?
+          </p>
         </div>
         {ninethDrop && (
           <div className={style.faq}>
@@ -319,9 +317,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler10}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            10. Do I get charged for creating a card?
-          </p>
           {!tenthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -331,6 +326,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Do I get charged for creating a card?
+          </p>
         </div>
         {tenthDrop && (
           <div className={style.faq}>
@@ -346,9 +344,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler11}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            11. How do I fund my virtual and physical debit USD and NGN cards?
-          </p>
           {!eleventhDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -358,6 +353,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How do I fund my virtual and physical debit USD and NGN cards?
+          </p>
         </div>
         {eleventhDrop && (
           <div className={style.faq}>
@@ -373,10 +371,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler12}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            12. Are there any charges that apply to virtual USD and NGN card
-            transactions?
-          </p>
           {!twelvethDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -386,6 +380,10 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Are there any charges that apply to virtual USD and NGN card
+            transactions?
+          </p>
         </div>
         {twelvethDrop && (
           <div className={style.faq}>
@@ -402,9 +400,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler13}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            13. How can I fund my wallet using ATM card payments?
-          </p>
           {!thirteenDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -414,6 +409,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How can I fund my wallet using ATM card payments?
+          </p>
         </div>
         {thirteenDrop && (
           <div className={style.faq}>
@@ -430,9 +428,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler14}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            14. Are there any benefits to upgrading my account?
-          </p>
           {!fourteenDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -442,6 +437,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Are there any benefits to upgrading my account?
+          </p>
         </div>
         {fourteenDrop && (
           <div className={style.faq}>
@@ -458,9 +456,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler15}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            15. What are the benefits of becoming an agent?
-          </p>
           {!fiftheenDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -470,6 +465,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            What are the benefits of becoming an agent?
+          </p>
         </div>
         {fiftheenDrop && (
           <div className={style.faq}>
@@ -485,9 +483,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler16}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            16. How can I become a merchant?
-          </p>
           {!sixteenthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -497,6 +492,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How can I become a merchant?
+          </p>
         </div>
         {sixteenthDrop && (
           <div className={style.faq}>
@@ -513,9 +511,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler17}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            17. Are there any specific rates for currency conversion?
-          </p>
           {!seventeenthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -525,6 +520,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Are there any specific rates for currency conversion?
+          </p>
         </div>
         {seventeenthDrop && (
           <div className={style.faq}>
@@ -542,10 +540,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler18}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            18. Are there any additional charges for converting one currency to
-            another?
-          </p>
           {!eighteenthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -555,6 +549,10 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Are there any additional charges for converting one currency to
+            another?
+          </p>
         </div>
         {eighteenthDrop && (
           <div className={style.faq}>
@@ -572,10 +570,6 @@ export const Faq = () => {
       <div>
         {" "}
         <div className={style.faq2} onClick={setDropHandler19}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            19. How often are AremxyPlug's business development and digital
-            services encrypted, safe, and trusted?
-          </p>
           {!ninteenthDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -585,6 +579,10 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            How often are AremxyPlug's business development and digital services
+            encrypted, safe, and trusted?
+          </p>
         </div>
         {ninteenthDrop && (
           <div className={style.faq}>
@@ -602,9 +600,6 @@ export const Faq = () => {
       <div className="mb-[3%] lg:mb-[]">
         {" "}
         <div className={style.faq2} onClick={setDropHandler20}>
-          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
-            20. Your inquiry is not addressed on this page?
-          </p>
           {!twentiethDrop ? (
             <div className="lg:text-3xl lg:w-[30px]">
               <RiArrowDropDownLine />
@@ -614,6 +609,9 @@ export const Faq = () => {
               <RiArrowDropUpLine />
             </div>
           )}
+          <p className="text-[12px] font-semibold lg:text-[18px] lg:text-left">
+            Your inquiry is not addressed on this page?
+          </p>
         </div>
         {twentiethDrop && (
           <div className={style.faq}>
