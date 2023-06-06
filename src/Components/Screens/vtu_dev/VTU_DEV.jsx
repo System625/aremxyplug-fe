@@ -5,6 +5,7 @@ import Bluebutton from "../../bluebutton/Bluebutton";
 import { VTU_PAY } from "../../svgs/svg1";
 import { RxDotFilled } from "react-icons/rx";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function VTU_DEV() {
   const DifferenceHead = [
@@ -656,11 +657,11 @@ function VTU_DEV() {
         "The VTU system is designed to handle high volumes of transactions while ensuring data security and privacy.",
     },
   ];
- 
+
   return (
     <>
       {/* HEADER */}
-      <div className="bgClass h-[1200px] md:h-[800px] lg:h-[1200px] mt-[-100px] md:mt-[-170px] lg:mt-[-200px]    lg:px-[8%] px-[5%]  ">
+      <div className="bgClass h-[1050px] md:h-[800px] lg:h-[1200px] mt-[-100px] md:mt-[-170px] lg:mt-[-200px]    lg:px-[8%] px-[5%]  ">
         <div
           className=" grid lg:grid-cols-2   lg:gap-x-4 md:gap-x-4  md:grid-cols-2  
        grid-cols-1 gap-y-4 
@@ -685,7 +686,9 @@ function VTU_DEV() {
             </p>
 
             <div className="my-8">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/ContactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
 
@@ -738,7 +741,9 @@ function VTU_DEV() {
             cost-effective. 
           </p>
           <div className="my-6">
-            <Bluebutton text="Start Now" />
+            <Link to="/OwnVTU">
+              <Bluebutton text="Start Now" />
+            </Link>
           </div>
         </div>
 
@@ -775,7 +780,9 @@ function VTU_DEV() {
             and bills payment in just a few easy steps.
           </p>
           <div className="my-6">
-            <Bluebutton text="Set-up Now" />
+          <Link to="/OwnVTU">
+              <Bluebutton text="Set-up Now" />
+            </Link>
           </div>
         </div>
 
@@ -798,6 +805,7 @@ function VTU_DEV() {
           Choose Plan
         </p>
         {/* VTU Payment plans */}
+
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 gap-y-8 md:gap-y-14 lg:gap-y-8  justify-center">
           <div className="relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
             <VTU_PAY color="#90D7FF" />
@@ -879,7 +887,7 @@ function VTU_DEV() {
               </div>
             </div>
           </div>
-          <div className="relative myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
+          <div className="relative  myCardShadow h-[760px] md:h-[800px] lg:h-[760px] md:w-[86%] lg:w-[unset] bg-[#fff] rounded-lg gap-x-2 overflow-hidden">
             <VTU_PAY color="#dce4ff" />
 
             <div className="absolute top-0 bottom-0 right-0 left-0 ">
