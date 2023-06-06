@@ -1242,12 +1242,12 @@ export const Home = () => {
             )}
           </div>
         </div>
-        <div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
+        <Link to="/faq"><div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
           <div className="flex justify-center items-center gap-[10px] ">
             More
             <AiOutlineArrowRight />
           </div>
-        </div>
+        </div></Link>
       </div>
     </>
   );

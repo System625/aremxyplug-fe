@@ -41,6 +41,7 @@ export const Router = () => {
           path="/social-media-marketing"
           element={<SocialMediaMarketing />}
         />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/businessDev" element={<BusinessDev />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<Faq />} />

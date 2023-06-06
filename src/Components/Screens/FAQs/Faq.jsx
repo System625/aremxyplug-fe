@@ -4,6 +4,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { ContextProvider } from "../../Context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export const Faq = () => {
   const {
@@ -625,9 +626,9 @@ export const Faq = () => {
         )}
       </div>
 
-      <div className="mx-auto text-[7.3px] bg-[#04177f] text-[#ffffff] font-bold flex justify-center items-center w-[77px] h-[22px] rounded-[2.2px] lg:text-[12.5px] lg:rounded-[7px] lg:w-[164px] lg:h-[45px] lg:font-extrabold">
+      <Link to="/contact-us"><div className="mx-auto text-[7.3px] bg-[#04177f] text-[#ffffff] font-bold flex justify-center items-center w-[77px] h-[22px] rounded-[2.2px] lg:text-[12.5px] lg:rounded-[7px] lg:w-[164px] lg:h-[45px] lg:font-extrabold">
         Contact Us
-      </div>
+      </div></Link>
     </div>
   );
 };
