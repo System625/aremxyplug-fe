@@ -653,7 +653,9 @@ export const Pricing = () => {
           <span className="font-extrabold text-[#04177f]">Coming soon...</span>
         </p>
 
-<p className="hidden md:block font-semibold mt-[12%] text-[#04177f] text-[30px] text-center">PAYMENT PRICING</p>
+        <p className="hidden md:block font-semibold mt-[12%] text-[#04177f] text-[30px] text-center">
+          PAYMENT PRICING
+        </p>
         {/* ==========================WALLET SYSTEM=================== */}
         <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
@@ -693,21 +695,94 @@ export const Pricing = () => {
           />
         </div>
 
-
-{/* =========================MONEY TRANSFER================= */}
+        {/* =========================MONEY TRANSFER================= */}
         <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
           <div className="flex flex-col lg:gap-[25px]">
-          <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
-            &#x2022; Money Transfer
-          </div>
-          <div className="text-[8px] lg:text-[18px] leading-[9.6px] w-[312px] lg:w-[100%]">
-            Currency: NGN
-          </div>
+            <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
+              &#x2022; Money Transfer
+            </div>
+            <div className="text-[8px] lg:text-[18px] leading-[9.6px] w-[312px] lg:w-[100%]">
+              Currency: NGN
+            </div>
           </div>
           <div className="flex justify-between lg:mt-[5%]">
-            <img className="w-[117px] h-[90px] md:w-[254px] md:h-[189px] lg:w-[450px] lg:h-[340px]" src="./Images/pricngimages/moneytransfer1.png" alt="/" />
-            <img className="mt-[-10%] w-[118px] h-[118px] md:w-[257px] md:h-[257px] lg:w-[456px] lg:h-[456px]" src="./Images/pricngimages/moneytransfer2.png" alt="/" />
+            <img
+              className="w-[117px] h-[90px] md:w-[254px] md:h-[189px] lg:w-[450px] lg:h-[340px]"
+              src="./Images/pricngimages/moneytransfer1.png"
+              alt="/"
+            />
+            <img
+              className="mt-[-10%] w-[118px] h-[118px] md:w-[257px] md:h-[257px] lg:w-[456px] lg:h-[456px]"
+              src="./Images/pricngimages/moneytransfer2.png"
+              alt="/"
+            />
           </div>
+        </div>
+
+        {/* =========================INTERNATIONAL PAYMENT=============== */}
+        <div className="mt-[12%] flex items-center gap-[7px] mb-[5%]">
+          <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
+            &#x2022; International Payments{" "}
+          </div>
+          <img
+            className="w-[11px] h-[12px] lg:w-[50px] lg:h-[50px]"
+            src="./Images/pricngimages/ball.png"
+            alt="/"
+          />
+        </div>
+
+        <img
+          className="w-[330px] h-[65px] lg:hidden"
+          src="Images/pricngimages/itpayment.png"
+          alt="/"
+        />
+        <img
+          className="hidden lg:block w-[330px] h-[65px] lg:w-[1200px] lg:h-[270px]"
+          src="Images/pricngimages/itpayment2.png"
+          alt="/"
+        />
+
+        {/* ==========================CARD ISSUING PRICING====================== */}
+        <p className="text-[20px] md:block font-semibold mt-[12%] text-[#04177f] lg:text-[30px] text-center">
+          Card Issuing Pricing
+        </p>
+
+        {/* ================PRODUCTS================= */}
+        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
+          <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
+            &#x2022; Products:{" "}
+          </div>
+        </div>
+        <img
+          className="w-[230px] h-[88px] mx-auto lg:hidden"
+          src="./Images/pricngimages/products.png"
+          alt="/"
+        />
+        <img
+          className="hidden w-[917px] h-[349px] mx-auto lg:block"
+          src="./Images/pricngimages/product2.png"
+          alt="/"
+        />
+        {/* ======================PRICING===================== */}
+        <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
+          <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
+            &#x2022; Pricing:{" "}
+          </div>
+        </div>
+
+        <img
+          className="hidden w-[739px] h-[517px] mx-auto lg:block"
+          src="./Images/pricngimages/pricingtable.png"
+          alt="/"
+        />
+        <img
+          className="w-[185px] h-[130px] mx-auto lg:hidden"
+          src="./Images/pricngimages/pricingtable.png"
+          alt="/"
+        />
+
+        <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+          Contact Sales
         </div>
       </div>
     </>
