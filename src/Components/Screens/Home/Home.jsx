@@ -832,7 +832,7 @@ export const Home = () => {
                 solution with real user interfaces.
               </div>
               <div className="bg-[#04177f] w-[40%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-               <Link to="/ProductDesign">Learn More...</Link>
+                <Link to="/ProductDesign">Learn More...</Link>
               </div>
             </div>
             <div
@@ -877,7 +877,10 @@ export const Home = () => {
       </div>
 
       {/* CROSS-BORDER PAYMENT */}
-      <div id="crossborder" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]">
+      <div
+        id="crossborder"
+        className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]"
+      >
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center md:text-[17px] md:font-semibold md:text-left lg:text-[30px] ">
             Cross-border Payment
@@ -897,7 +900,10 @@ export const Home = () => {
       </div>
 
       {/* CURRENCY CONVERSION */}
-      <div id="currencyconvert" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]">
+      <div
+        id="currencyconvert"
+        className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between lg:mb-[10%]"
+      >
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center lg:text-[30px] lg:text-left">
             Currency Conversion
@@ -917,16 +923,19 @@ export const Home = () => {
       </div>
 
       {/* MULTI-CURRENCY WALLETS */}
-      <div id="multicurrency" className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between">
+      <div
+        id="multicurrency"
+        className="mb-[20%] mx-[5%] lg:mx-[8%] flex flex-col gap-[20px] md:flex-row md:justify-between"
+      >
         <div>
           <div className="text-[20px] font-semibold text-[#04177f] text-center w-[200px] mx-auto leading-[30px] md:w-[100%] lg:text-[30px] lg:text-left">
             Multi-Currency Wallets
           </div>
           <br></br>
           <div className="text-[12px] text-justify md:w-[205px] md:text-[10px] lg:text-[18px] lg:w-[360px]">
-            With our currency conversion service, You can get the most
-            convenient exchange rates and convert any currency in a matter of
-            seconds with no hidden fees.
+            Our Multi-Currency Wallets services are the best way to manage all
+            your currencies, keep a track and conveniently store, send, and
+            receive digital assets in one location.
           </div>
         </div>
         <div className="px-[10%]">
@@ -939,7 +948,10 @@ export const Home = () => {
       </div>
 
       {/* BECOME AN AGENT */}
-      <div id="becomeAgent" className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]">
+      <div
+        id="becomeAgent"
+        className=" mx-[5%] mb-[25%] mt-[15%] md:mb-[10%] md:flex md:flex-row md:justify-center md:items-center md:gap-[15%] md:mx-[8%] lg:gap-[10%]"
+      >
         <div className="flex flex-col gap-[30px] md:gap-[15px] lg:gap-[40px] ">
           <div className="text-[20px] text-[#04177F] text-center font-medium md:text-[18px] md:text-left lg:text-[30px] lg:font-extrabold ">
             Become an Agent
@@ -993,7 +1005,8 @@ export const Home = () => {
       </div>
 
       {/* OUR PARTNERS */}
-      <div id="partners"
+      <div
+        id="partners"
         className="flex flex-col gap-[20px] py-[20%] md:py-[5%]
       "
       >
@@ -1073,7 +1086,7 @@ export const Home = () => {
           // touchTracking
         />
       </div>
-      
+
       {/* FREQUENTLY ASKED QUESTIONS */}
       <div className="mx-[5%] mb-[25%] md:mb-[15%] lg:mx-[8%]">
         <div className="text-[#04177f] text-[20px] font-bold text-center md:text-[20px] lg:text-[30px]">
@@ -1229,12 +1242,12 @@ export const Home = () => {
             )}
           </div>
         </div>
-        <div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
+        <Link to="/faq"><div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
           <div className="flex justify-center items-center gap-[10px] ">
             More
             <AiOutlineArrowRight />
           </div>
-        </div>
+        </div></Link>
       </div>
     </>
   );
