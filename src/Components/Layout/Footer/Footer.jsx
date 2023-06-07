@@ -383,7 +383,7 @@ export const Footer = () => {
                 Resources
               </div>
               <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Pricing
+                <Link to="/pricing">Pricing</Link>
               </div>
               <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Support
@@ -392,7 +392,7 @@ export const Footer = () => {
                 Blog
               </div>
               <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                FAQs
+                <Link to="/faq">FAQs</Link>
               </div>
             </div>
             <div className="flex flex-col gap-[15px] lg:gap-[20px]">

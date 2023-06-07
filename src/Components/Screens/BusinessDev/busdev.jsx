@@ -3,6 +3,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { Player } from "@lottiefiles/react-lottie-player";
 import styles from "../BusinessDev/busdev.module.css";
+import { Link } from "react-router-dom";
 
 export const BusinessDev = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -27,9 +28,12 @@ export const BusinessDev = () => {
             business capabilities within your company. When it comes to business
             development, trust us to save you time and stress.
           </div>
-          <div className="text-white bg-[#04177f] text-[7.9px] w-[122px] h-[28px] rounded-md flex justify-center items-center lg:w-[196px] lg:h-[45px] lg:text-[12px] lg:font-bold">
-            Talk to an Expert Today!
-          </div>
+          <Link to="/ContactUs">
+            {" "}
+            <div className="text-white bg-[#04177f] text-[7.9px] w-[122px] h-[28px] rounded-md flex justify-center items-center lg:w-[196px] lg:h-[45px] lg:text-[12px] lg:font-bold">
+              Talk to an Expert Today!
+            </div>
+          </Link>
         </div>
         <img
           className="w-[270px] h-[185px] my-[20%] mx-auto md:my-[0] md:w-[318px] md:h-[219px] lg:w-[550px] lg:h-[379px]"
@@ -58,7 +62,7 @@ export const BusinessDev = () => {
             "url(.png), linear-gradient(90.67deg, #92ABFE 0.49%, #05E2FF 99.34%)",
         }}
       >
-        <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
+        <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[300px] lg:mb-[10%]">
           <div className="flex flex-col gap-[20px]">
             <div className="text-[20px] font-semibold text-center w-[233px] mx-auto md:text-[17px] md:w-[286px] lg:text-[30px] lg:w-[494px] lg:text-left">
               Critical and Innovative Thinking
@@ -78,8 +82,8 @@ export const BusinessDev = () => {
           <Player
             autoplay
             loop
-            src="https://assets6.lottiefiles.com/packages/lf20_pqpwalcv.json"
-            style={{ height: "300px", width: "300px" }}
+            src="https://assets3.lottiefiles.com/packages/lf20_o18imdcr.json"
+            style={{ height: "350px", width: "350px" }}
           ></Player>
         </div>
 
@@ -105,9 +109,7 @@ export const BusinessDev = () => {
             loop
             src="https://assets5.lottiefiles.com/packages/lf20_NAl0oidcCj.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -127,14 +129,12 @@ export const BusinessDev = () => {
             src="/Images/businessimages/busimg4.png"
             alt="/"
           /> */}
-           <Player
+          <Player
             autoplay
             loop
             src="https://assets2.lottiefiles.com/packages/lf20_ER8E6HKqBl.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
 
         <div className="md:flex md:flex-row-reverse mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -160,9 +160,7 @@ export const BusinessDev = () => {
             loop
             src="https://assets8.lottiefiles.com/packages/lf20_w98qte06.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -183,15 +181,13 @@ export const BusinessDev = () => {
             src="/Images/businessimages/busimg6.png"
             alt="/"
           /> */}
-           <Player
-           speed={5}
+          <Player
+            speed={5}
             autoplay
             loop
             src="https://assets2.lottiefiles.com/packages/lf20_yqoxehdn.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
 
         <div className="md:flex md:flex-row-reverse mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -216,9 +212,7 @@ export const BusinessDev = () => {
             loop
             src="https://assets10.lottiefiles.com/packages/lf20_vLxVkbToAJ.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
 
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[350px] lg:mb-[10%]">
@@ -244,9 +238,7 @@ export const BusinessDev = () => {
             loop
             src="https://assets9.lottiefiles.com/packages/lf20_uf2ng6jq.json"
             style={{ height: "300px", width: "300px" }}
-          >
-            
-          </Player>
+          ></Player>
         </div>
       </div>
 
@@ -442,7 +434,7 @@ export const BusinessDev = () => {
             {/* product development */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/5.png"
                 alt="/"
               />
@@ -505,7 +497,7 @@ export const BusinessDev = () => {
             {/* performance monitoring */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/8.png"
                 alt="/"
               />
@@ -566,9 +558,9 @@ export const BusinessDev = () => {
           Book a session with us, we are so keen to help you to crush the
           adventure!
         </div>
-        <div className="w-[95px] h-[26px] bg-[#04177f] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[169px] lg:h-[45px] lg:text-[13px]">
+        <Link to="/ContactUs"><div className="w-[95px] h-[26px] bg-[#04177f] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[169px] lg:h-[45px] lg:text-[13px]">
           Contact sales
-        </div>
+        </div></Link>
       </div>
     </div>
   );

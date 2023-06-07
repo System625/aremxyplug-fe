@@ -1,0 +1,79 @@
+.bg{
+    background-image: url("/public/Images/pricngimages/pricingBG.png");
+    height:519px;
+    margin-top: -22%;
+    background-size: cover;
+    background-position: center;
+    padding: 0 6%;
+    margin-left: -6%;
+    margin-right: -6%;
+}
+
+.pricebg{
+    background-image: url(/public/Images/pricngimages/section1bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 473px;
+    margin: 0 -5%;
+}
+
+.pricebg2{
+    background: url(/public/Images/pricngimages/section2bg.png);
+    background-size: cover;
+    background-position: center;
+    /* position:; */
+    /* top: 1801px; */
+    width: 375px;
+    height: 473px;
+    margin-top:20%;
+    margin-left:-5%;
+    margin-right:-10%
+    /* z-index: 99px; */
+    /* left: calc(50% - 481.28px/2 + 482.75px); */
+    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+
+    /* margin: -50 -5%; */
+}
+@media (min-width: 768px){
+    .bg{
+        background-image: url("/public/Images/pricngimages/pricingBG.png");
+        height:900px;
+        margin-top: -20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0 5%;
+        margin-left: -6%;
+        margin-right: -6%;
+    }
+
+    .pricebg{
+        background-image: url(/public/Images/pricngimages/section1bg.png);
+        background-size: cover;
+        background-position: center;
+        height: 1062px;
+        margin: 0 -5%;
+    }
+}
+
+@media (min-width: 1024px){
+    .bg{
+        background-image: url("/public/Images/pricngimages/pricingBG2.png");
+        height:1600px;
+        margin-top: -20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0 10%;
+        margin-left: -10%;
+        margin-right: -10%;
+    }
+
+    .pricebg{
+        background-image: url(/public/Images/pricngimages/section1bg.png);
+        background-size: cover;
+        background-position: center;
+        height: 1881px;
+       margin: 0 -10%;
+    }
+}
