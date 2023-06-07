@@ -21,6 +21,7 @@ import { Faq } from "./Components/Screens/FAQs/Faq";
 import ContactUs from "./Components/Screens/contactUs/ContactUs";
 import OwnVTU from "./Components/Screens/ownVTU/OwnVTU";
 import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCondition"
+
 export const Router = () => {
   return (
     <div>
