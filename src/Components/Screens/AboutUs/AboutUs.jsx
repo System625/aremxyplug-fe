@@ -10,6 +10,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { TiSocialInstagram } from "react-icons/ti";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -129,7 +130,7 @@ export const AboutUs = () => {
           <br></br>
           <div className="flex flex-col gap-[9px] mx-[5%] mb-[15%] text-center md:text-left md:flex md:flex-col md:gap-[5px] md:mb-[5%] lg:flex lg:flex-col lg:gap-[12px]">
             <div className="text-15px font-bold md:text-[10px] lg:text-[18px]">
-              Efficient
+              Efficiency
             </div>
             <div className="text-[10px] text-[#04177f] lg:text-[12px]">
               Swift and Automated.
@@ -595,9 +596,11 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
-        Contact Us
-      </div>
+      <Link to="/ContactUs">
+        <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+          Contact Us
+        </div>
+      </Link>
     </>
   );
 };

@@ -252,9 +252,11 @@ export const Home = () => {
             ensure that our services take our customers to the pinnacle of their
             aspirations in order to be the best service provider.
           </p>
-          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
-            <Link to="/about-us">Learn more</Link>
-          </div>
+          <Link to="/about-us">
+            <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
+              Learn more
+            </div>
+          </Link>
         </div>
         <img
           className="w-[65%] mx-auto py-[5%] md:w-[50%]"
@@ -1106,12 +1108,12 @@ export const Home = () => {
                 {!thirdDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] ">
+              <div className="flex font-semibold text-[12px] md:text-[18px] ">
                 What are Global Virtual Accounts?
               </div>
             </div>
             {thirdDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[10px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 Global Virtual Accounts are virtual bank accounts that allow
                 users to send, receive, and store money securely, without having
                 to open a physical bank account. They are designed to simplify
@@ -1132,13 +1134,13 @@ export const Home = () => {
                 {!fourthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] ">
+              <div className="flex font-semibold text-[12px] md:text-[18px] ">
                 Can I receive local and international bank transfers to my
                 global virtual accounts?
               </div>
             </div>
             {fourthDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[10px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 Yes, you can receive both local and international bank transfers
                 to your global virtual account.
               </div>
@@ -1156,13 +1158,13 @@ export const Home = () => {
                 {!fifthDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] ">
+              <div className="flex font-semibold text-[12px] md:text-[18px] ">
                 How Automated is AremxyPlug's wallet to reflect payments
                 instantly?
               </div>
             </div>
             {fifthDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 AremxyPlug's wallet system is fully automated and designed to
                 reflect payments instantly. Once a payment is made, it is
                 immediately reflected in your wallet balance.
@@ -1178,12 +1180,12 @@ export const Home = () => {
                 {!sixDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px] ">
+              <div className="flex font-semibold text-[12px] md:text-[18px] ">
                 How does the wallet system work?
               </div>
             </div>
             {sixDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[10px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 The wallet system allows you to store funds securely and make
                 payments for goods and services. You can fund your wallet using
                 various payment methods, such as bank transfer, card payment, or
@@ -1203,13 +1205,13 @@ export const Home = () => {
                 {!seventhDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px]">
+              <div className="flex font-semibold text-[12px] md:text-[18px]">
                 Can I send money from my wallet to another AremxyPlug user's
                 wallet?
               </div>
             </div>
             {seventhDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[10px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 Yes, you can send money from your wallet to another AremxyPlug
                 user's wallet instantly and free of charge.
               </div>
@@ -1227,13 +1229,13 @@ export const Home = () => {
                 {!eightDrop ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
               </div>
 
-              <div className="flex font-bold text-[15px] md:text-[20px]">
+              <div className="flex font-semibold text-[12px] md:text-[18px]">
                 How can I fulfill airtime top-ups, data bundles, and bill
                 payments after funding my wallet?
               </div>
             </div>
             {eightDrop && (
-              <div className="text-[12px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[16px] lg:text-[18px]">
+              <div className="text-[10px] mt-[5%] mb-[5%] text-justify mx-[5%] md:text-[14px] lg:text-[16px]">
                 You can fulfill airtime top-ups, data bundles, and bill payments
                 by selecting the appropriate service from the AremxyPlug app or
                 website and entering the necessary information. The payment will
@@ -1242,12 +1244,14 @@ export const Home = () => {
             )}
           </div>
         </div>
-        <Link to="/faq"><div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
-          <div className="flex justify-center items-center gap-[10px] ">
-            More
-            <AiOutlineArrowRight />
+        <Link to="/faq">
+          <div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
+            <div className="flex justify-center items-center gap-[10px] ">
+              More
+              <AiOutlineArrowRight />
+            </div>
           </div>
-        </div></Link>
+        </Link>
       </div>
     </>
   );
