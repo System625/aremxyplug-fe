@@ -2,7 +2,22 @@ import React from "react";
 import "./contactUs.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
+// import Select from 'react-select-country-list';
+// import ReactFlagsSelect from "react-flags-select";
+
+
+
+
 function ContactUs() {
+
+  // const [countryValue, setCountryValue] =useState(null)
+
+  // const handleCountryChange = (country) => {
+  //   console.log('Selected country:', country);
+  // };
+
+
+
   return (
     <div className="lg:px-[8%] px-[5%]">
       {/* Do you want to reach us?*/}
@@ -71,16 +86,30 @@ function ContactUs() {
           {/* Last name ends here*/}
 
           {/* Country starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
+          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px] ">
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Country
             </p>
             <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
-              <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
-                type="text"
-                // placeholder="enter your country"
-              />
+              <div className="w-full ">
+
+              {/* <Select
+        value=""
+        onChange={handleCountryChange}
+        // classes="my-select"
+        showFlag={true}
+      /> */}
+              {/* <ReactFlagsSelect
+              selected={countryValue}
+              onSelect={(value)=>
+                {
+                  setCountryValue(value)
+                  console.log(value)
+                }}
+           
+              /> */}
+              </div>
+   
             </div>
           </div>
           {/* Country ends here*/}

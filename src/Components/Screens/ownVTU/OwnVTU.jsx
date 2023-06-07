@@ -1,8 +1,24 @@
-import React from "react";
-import "./ownVTU.css";
+import React, { useState } from "react";
+
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
+import Select from "react-select";
+import "./ownVTU.css";
+
 function OwnVTU() {
+  const [choosePlan, setChoosePlan] = useState(null);
+
+  const options = [
+    { value: "Merchant", label: "Merchant - 49,990" },
+    { value: "Venture", label: "Venture - 149,990 " },
+    { value: "TelecomPro", label: "Telecom pro - 399,990" },
+    { value: "Unlimited", label: "Unlimited - 599,990" },
+  ];
+
+  // const colorStyles ={
+  //   control:(styles)=>({...styles,backgoundColor:"red"})
+  // }
+
   return (
     <div className="lg:px-[8%] px-[5%]">
       {/* Do you want to reach us?*/}
@@ -14,10 +30,11 @@ function OwnVTU() {
               color: "#000",
             }}
           >
-          Own a VTU Platform Today!
+            Own a VTU Platform Today!
           </p>
           <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg sm:text:lg   mt-[14px] lg:mt-[25px]">
-          Get in touch with us today to develop your new VTU platform for your telecom business.
+            Get in touch with us today to develop your new VTU platform for your
+            telecom business.
           </p>
         </div>
       </div>
@@ -44,21 +61,46 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Choose a plan
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px]  border-[1px] border-[#a1a1a1]  rounded  flex items-center">
-              <input
+            <div className="inputBoxShadow2 w-[67%] h-[38px] lg:h-[43px]  flex items-center">
+              <div className="w-full ">
+                <Select
+                  defaultValue={choosePlan}
+                  onChange={setChoosePlan}
+                  options={options}
+                  placeholder=""
+                  className="text-[8.93px] md:text-[11.58px] lg:text-[20px] text-[#403f3f]"
+                  styles={{
+                    placeholder: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: "#403f3f",
+                    }),
+                    valueContainer: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: "#403f3f",
+                    }),
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: "red",
+                    }),
+               
+                  }}
+                />
+              </div>
+
+              {/* <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
                 // placeholder="Enter your first name"
-              />
+              /> */}
             </div>
           </div>
           {/* Choose a plan ends here*/}
-          {/* First name starts here*/}
+          {/* First name starts here 268455*/}
           <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               First Name
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px]  border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px]  border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -73,7 +115,7 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Last Name
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -88,7 +130,7 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Country
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -103,7 +145,7 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Phone No
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -118,7 +160,7 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Comapany
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -133,7 +175,7 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Work Email
             </p>
-            <div className="inputBoxShadow w-[67%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -149,21 +191,21 @@ function OwnVTU() {
               Proposed website names
             </p>
             <div className="w-[67%] grid grid-cols-3 gap-x-[3px]">
-              <div className="inputBoxShadow  h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+              <div className="inputBoxShadow  h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
                 <input
                   className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                   type="text"
                   placeholder="example.com"
                 />
               </div>
-              <div className="inputBoxShadow   h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+              <div className="inputBoxShadow   h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
                 <input
                   className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                   type="text"
                   placeholder="example.com"
                 />
               </div>
-              <div className="inputBoxShadow   h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+              <div className="inputBoxShadow   h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
                 <input
                   className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
                   type="text"
@@ -181,7 +223,7 @@ function OwnVTU() {
               Message
             </p>
             <div className=" w-[67%]    flex flex-col justify-center">
-              <div className="inputBoxShadow border-[1px] border-[#a1a1a1]  rounded">
+              <div className="inputBoxShadow border-[1px] border-[#cdcdcd]  rounded">
                 {" "}
                 <textarea
                   id="message"
@@ -211,7 +253,10 @@ function OwnVTU() {
             General Communication
           </p>
           <p className="text-[#000] text-justify text-[12px] md:text-[9.34px] lg:text-lg sm:text:lg   mt-[14px] lg:mt-[25px]">
-          We offer a variety of channels for communication with our customers, including phone, email, live chat, and social media. You can choose the channel that works best for you and your preferred mode of communication.
+            We offer a variety of channels for communication with our customers,
+            including phone, email, live chat, and social media. You can choose
+            the channel that works best for you and your preferred mode of
+            communication.
           </p>
         </div>
       </div>
