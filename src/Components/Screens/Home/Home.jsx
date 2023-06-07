@@ -252,9 +252,11 @@ export const Home = () => {
             ensure that our services take our customers to the pinnacle of their
             aspirations in order to be the best service provider.
           </p>
-          <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
-            <Link to="/about-us">Learn more</Link>
-          </div>
+          <Link to="/about-us">
+            <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
+              Learn more
+            </div>
+          </Link>
         </div>
         <img
           className="w-[65%] mx-auto py-[5%] md:w-[50%]"
@@ -1242,12 +1244,14 @@ export const Home = () => {
             )}
           </div>
         </div>
-        <Link to="/faq"><div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
-          <div className="flex justify-center items-center gap-[10px] ">
-            More
-            <AiOutlineArrowRight />
+        <Link to="/faq">
+          <div className="bg-[#04177f] mt-[5%] w-[35%] text-[9px] text-[#ffffff] p-[3%] font-bold rounded-md md:text-[18px] md:p-[2%] lg:text-[16px] lg:w-[15%] lg:p-[1%]">
+            <div className="flex justify-center items-center gap-[10px] ">
+              More
+              <AiOutlineArrowRight />
+            </div>
           </div>
-        </div></Link>
+        </Link>
       </div>
     </>
   );
