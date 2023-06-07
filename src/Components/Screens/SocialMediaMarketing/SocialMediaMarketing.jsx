@@ -17,7 +17,7 @@ const SocialMediaMarketing = () => {
 
         {/* bottom message ofthe header */}
         <div className='md:w-[53%]'>
-            <h2 className="font-bold text-[15px] leading-[22.5px] font-bold mb-[15px] text-justify lg:text-[24px] lg:leading-[36px] lg:mb-[25px]">Let’s help you to bring remarkable success to your business.</h2>
+            <h2 className="text-[15px] leading-[22.5px] font-bold mb-[15px] text-justify lg:text-[24px] lg:leading-[36px] lg:mb-[25px]">Let’s help you to bring remarkable success to your business.</h2>
             <p className="text-[12px] leading-[18px] text-justify md:text-[10px] md:leading-[15.47px] lg:text-[18px] lg:leading-[27px]">Great marketing on social media can bring remarkable success to your business, creating devoted brand advocates and even increasing leads and sales.</p>
         </div>
 

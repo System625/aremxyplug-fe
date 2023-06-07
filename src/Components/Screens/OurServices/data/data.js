@@ -43,7 +43,7 @@ export const ourServiceDetails = [
         id:6,
         title: 'Business Development',
         message: "Our team of business experts will develop the best strategies to assist you in developing, implementing, and enhancing your digital business capabilities within your company. When it comes to business development, trust us to save you time and stress.",
-        link: 'our-services/business-development', //link for business development
+        link: 'businessDev', //link for business development
         image: require('./../images/biz-development.png'),
         image_name: 'business-development_img'
     },

@@ -20,6 +20,7 @@ import { Pricing } from "./Components/Screens/pricings/Pricing";
 import { Faq } from "./Components/Screens/FAQs/Faq";
 import ContactUs from "./Components/Screens/contactUs/ContactUs";
 import OwnVTU from "./Components/Screens/ownVTU/OwnVTU";
+import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCondition"
 export const Router = () => {
   return (
     <div>
@@ -38,16 +39,14 @@ export const Router = () => {
         <Route path="/solutions" element={<Solution />} />
         <Route path="/seo-marketing" element={<SEOMarketing />} />
         <Route path="/content-marketing" element={<ContentMarketing />} />
-        <Route
-          path="/social-media-marketing"
-          element={<SocialMediaMarketing />}
-        />
+        <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/businessDev" element={<BusinessDev />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/OwnVTU" element={<OwnVTU />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/terms-and-condition" element={<TermsAndCondition/>}/>
       </Routes>
     </div>
   );
