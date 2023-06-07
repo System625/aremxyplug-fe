@@ -142,7 +142,7 @@ export const Pricing = () => {
                 </p>
                 <img
                   className="w-[28px] h-[28px] md:w-[50px] md:h-[50px] lg:w-[100px] lg:h-[100px]"
-                  src="./Images/pricngimages/mtn.logo.png"
+                  src="./Images/pricngimages/international.logo.png"
                   alt="/"
                 />
                 <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px]  md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
