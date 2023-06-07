@@ -74,12 +74,12 @@ export const NavBar = () => {
               <Link to="/faq">FAQs</Link>
             </li>
             <Link to="/ContactUs">
-            <li
-             onClick={() => setNavOpen((prev) => !prev)}
-              className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md"
-            >
-              Contact Us
-            </li>
+              <li
+                onClick={() => setNavOpen((prev) => !prev)}
+                className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md"
+              >
+                Contact Us
+              </li>
             </Link>
           </ul>
         </div>
@@ -119,12 +119,9 @@ export const NavBar = () => {
           </li>
         </ul>
 
-       
         <div className="flex justify-center bg-[#04177F] rounded-md text-[#ffffff] text-[7px] p-[1%] w-[14%] lg:w-[14.5%] lg:text-[13px]">
-        <Link to="/ContactUs">Contact Us</Link>
+          <Link to="/ContactUs">Contact Us</Link>
         </div>
-    
-
       </div>
     </>
   );

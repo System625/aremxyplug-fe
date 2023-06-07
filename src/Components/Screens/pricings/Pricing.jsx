@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "../pricings/pricing.module.css";
 
 export const Pricing = () => {
@@ -653,9 +654,9 @@ export const Pricing = () => {
           <span className="font-extrabold text-[#04177f]">Coming soon...</span>
         </p>
 
-        <p className="hidden md:block font-semibold mt-[12%] text-[#04177f] text-[30px] text-center">
-          PAYMENT PRICING
-        </p>
+        <div className="text-center text-[10px] text-[#04177f] font-semibold md:text-[16px] lg:text-[30px] mt-[10%]">
+          Payment Pricing
+        </div>
         {/* ==========================WALLET SYSTEM=================== */}
         <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
           <div className="text-[10px] font-semibold lg:font-bold lg:text-[24px]">
@@ -743,9 +744,9 @@ export const Pricing = () => {
         />
 
         {/* ==========================CARD ISSUING PRICING====================== */}
-        <p className="text-[20px] md:block font-semibold mt-[12%] text-[#04177f] lg:text-[30px] text-center">
+        <div className="text-center mt-[10%] text-[10px] text-[#04177f] font-semibold md:text-[16px] lg:text-[30px] ">
           Card Issuing Pricing
-        </p>
+        </div>
 
         {/* ================PRODUCTS================= */}
         <div className="mt-[12%] flex flex-col gap-[7px] mb-[5%]">
@@ -781,9 +782,11 @@ export const Pricing = () => {
           alt="/"
         />
 
-        <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
-          Contact Sales
-        </div>
+        <Link to="/ContactUs">
+          <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+            Contact Sales
+          </div>
+        </Link>
       </div>
     </>
   );
