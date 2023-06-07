@@ -31,7 +31,7 @@ const ContentMarketing = () => {
         </div>
         {/* key features */}
         <div className="w-[90%] mx-auto md:w-[84%] mb-[25%] md:mb-[15%]">
-            <h2 className="text-center text-primary text-[26px] leading-[39px] font-bold mb-[20px] md:mb-[29.96px] lg:mb-[100px] font-bold lg:text-[32px] lg:leading-[48px]">Our Key Features</h2>
+            <h2 className="text-center text-primary text-[26px] leading-[39px] mb-[20px] md:mb-[29.96px] lg:mb-[100px] font-bold lg:text-[32px] lg:leading-[48px]">Our Key Features</h2>
             <div className="flex flex-col gap-[100px] lg:gap-[150px]">
                 <div className="flex flex-col gap-[25px] md:flex-row lg:gap-[30px]">
                     { keyData.map((item) => (
