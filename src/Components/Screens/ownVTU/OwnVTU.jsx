@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ownVTU.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
