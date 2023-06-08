@@ -10,6 +10,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { TiSocialInstagram } from "react-icons/ti";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 
 const responsive = {
   superLargeDesktop: {
@@ -375,8 +376,10 @@ export const AboutUs = () => {
           boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
         }}
       >
-        More
-        <AiOutlineArrowRight />
+        <Link to='/team' className="flex items-center gap-[20px]">
+          More
+          <AiOutlineArrowRight />
+        </Link>
       </div>
       <br></br>
       <br></br>
