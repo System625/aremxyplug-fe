@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Solution = () => {
   return (
@@ -255,9 +256,9 @@ export const Solution = () => {
           us today, we have all the solutions you need to grow your business as
           an individual or company, let help you to increase your revenue!
         </div>
-        <div className="bg-[#04177f] text-[#ffffff] h-[26px] w-[95px] text-[7px] mx-auto rounded-md flex justify-center items-center lg:w-[165px] lg:h-[45px] lg:text-[12px]">
+        <Link to="/ContactUs"><div className="bg-[#04177f] text-[#ffffff] h-[26px] w-[95px] text-[7px] mx-auto rounded-md flex justify-center items-center lg:w-[165px] lg:h-[45px] lg:text-[12px]">
           Contact sales
-        </div>
+        </div></Link>
       </div>
     </div>
   );

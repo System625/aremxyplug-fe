@@ -20,7 +20,9 @@ import { Pricing } from "./Components/Screens/pricings/Pricing";
 import { Faq } from "./Components/Screens/FAQs/Faq";
 import ContactUs from "./Components/Screens/contactUs/ContactUs";
 import OwnVTU from "./Components/Screens/ownVTU/OwnVTU";
-import Team from './Components/Screens/Team/Team'
+import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCondition"
+import PrivacyPolicy from "./Components/Screens/PrivacyPolicy/PrivacyPolicy";
+import Team from './Components/Screens/Team/Team';
 
 export const Router = () => {
   return (
@@ -47,6 +49,8 @@ export const Router = () => {
         <Route path="/OwnVTU" element={<OwnVTU />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/terms-and-condition" element={<TermsAndCondition/>}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/team" element={<Team/>}/>
       </Routes>
     </div>

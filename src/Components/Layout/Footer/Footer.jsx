@@ -385,7 +385,7 @@ export const Footer = () => {
                 Resources
               </div>
               <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Pricing
+                <Link to="/pricing">Pricing</Link>
               </div>
               <div className="w-[40px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Support

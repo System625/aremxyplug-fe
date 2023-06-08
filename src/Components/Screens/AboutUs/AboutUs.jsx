@@ -598,9 +598,11 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
-        Contact Us
-      </div>
+      <Link to="/ContactUs">
+        <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+          Contact Us
+        </div>
+      </Link>
     </>
   );
 };
