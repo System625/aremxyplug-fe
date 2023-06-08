@@ -402,10 +402,10 @@ export const Footer = () => {
                 Legal
               </div>
               <div className="w-[90px] h-[13px] text-[9px] lg:w-[100%] lg:text-[16px]">
-                Privacy Policy
+                <Link to='/privacy-policy'>Privacy Policy</Link>
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Terms & Conditions
+                <Link to='/terms-and-condition'>Terms & Condition</Link>
               </div>
             </div>
           </div>
