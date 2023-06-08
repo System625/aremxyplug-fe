@@ -206,7 +206,9 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Legal
             </div>
-            <div className="w-[90px] h-[13px] text-[9px]">Privacy Policy</div>
+            <div className="w-[90px] h-[13px] text-[9px]">
+              <Link to='/privacy-policy'>Privacy Policy</Link>
+            </div>
             <div className="w-[100px] h-[13px] text-[9px]">
               <Link to="/terms-and-condition">Terms & Conditions</Link>
             </div>
