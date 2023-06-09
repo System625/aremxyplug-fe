@@ -168,18 +168,24 @@ export const Footer = () => {
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
               Resources
             </div>
-            <div className="w-[40px] h-[13px] text-[9px]">Pricing</div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <Link to="/pricing">Pricing</Link>
+            </div>
             <div className="w-[40px] h-[13px] text-[9px]">Support</div>
             <div className="w-[40px] h-[13px] text-[9px]">Blog</div>
-            <div className="w-[40px] h-[13px] text-[9px]">FAQs</div>
+            <div className="w-[40px] h-[13px] text-[9px]">
+              <Link to="/faq">FAQs</Link>
+            </div>
           </div>
 
           <div className="flex flex-col gap-[15px] mb-[15%]">
             <div className="w-[81px] h-[16px] text-[13px] font-semibold">
-              Contact us
+              <Link to="/ContactUs">Contact us</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px]">Live Chat</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Contact Sales</div>
+            <div className="w-[80px] h-[13px] text-[9px]">
+              <Link to="/ContactUs">Contact Sales</Link>
+            </div>
             <div className="w-[80px] h-[13px] text-[9px]">Phone</div>
             <div className="w-[80px] h-[13px] text-[9px]">Email</div>
           </div>
@@ -204,7 +210,7 @@ export const Footer = () => {
               <Link to='/privacy-policy'>Privacy Policy</Link>
             </div>
             <div className="w-[100px] h-[13px] text-[9px]">
-              <Link to='/terms-and-condition'>Terms & Condition</Link>
+              <Link to="/terms-and-condition">Terms & Conditions</Link>
             </div>
           </div>
         </div>
@@ -429,15 +435,19 @@ export const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-[15px]">
-              <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[16px] lg:w-[166px]">
-                Contact us
-              </div>
+              <Link to="/ContactUs">
+                <div className="w-[81px] h-[16px] text-[14px] font-semibold lg:text-[16px] lg:w-[166px]">
+                  Contact us
+                </div>
+              </Link>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[100px] lg:text-[16px]">
                 Live Chat
               </div>
-              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                Contact Sales
-              </div>
+              <Link to="/ContactUs">
+                <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                  Contact Sales
+                </div>
+              </Link>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 Phone
               </div>
@@ -453,18 +463,12 @@ export const Footer = () => {
             <div className="text-[14px] lg:text-[25px]">Follow Us on</div>
             <div className="flex gap-[12px] lg:gap-[15px]">
               <div className="text-lg lg:text-3xl">
-                <a
-                  href="/https://www.linkedin.com/company/aremxyplug-business-enterprises/"
-                  target="_blank"
-                >
+                <a href="/https://www.linkedin.com/company/aremxyplug-business-enterprises/">
                   <SiLinkedin />
                 </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <a
-                  href="/https://m.facebook.com/102536649209580/"
-                  target="_blank"
-                >
+                <a href="/https://m.facebook.com/102536649209580/">
                   <ImFacebook2 />
                 </a>
               </div>

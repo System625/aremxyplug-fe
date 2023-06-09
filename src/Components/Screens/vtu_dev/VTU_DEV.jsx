@@ -780,7 +780,7 @@ function VTU_DEV() {
             and bills payment in just a few easy steps.
           </p>
           <div className="my-6">
-          <Link to="/OwnVTU">
+            <Link to="/OwnVTU">
               <Bluebutton text="Set-up Now" />
             </Link>
           </div>
@@ -1673,10 +1673,12 @@ function VTU_DEV() {
           </div>
 
           {differenceContent.map((item, index) => (
-            <div className="mt-4 grid grid-cols-7 min-w-[800px]">
+            <div
+              className="mt-4 grid grid-cols-7 min-w-[800px]"
+              key={index.toString()}
+            >
               <p
                 className={` font-bold text-lg text-zinc-900 col-span-2 text-center"}`}
-                key={index.toString()}
               >
                 {item.text}
               </p>

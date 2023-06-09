@@ -664,9 +664,11 @@ export const Home = () => {
                 You can conveniently store, send, and receive money without any
                 hassle by using our user-friendly wallet system.
               </div>
-              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Explore
-              </div>
+              <Link to="/our-services/payment">
+                <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                  Explore
+                </div>
+              </Link>
             </div>
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px] "
@@ -679,9 +681,11 @@ export const Home = () => {
                 Try our global virtual accounts services today and experience
                 hassle-free banking at your fingertips.
               </div>
-              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Explore
-              </div>
+              <Link to="/our-services/payment">
+                <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                  Explore
+                </div>
+              </Link>
             </div>
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF]  md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
@@ -692,9 +696,11 @@ export const Home = () => {
                 Whether you're shopping online or in-store, our card payment
                 solutions offer fast and hassle-free transactions.
               </div>
-              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Explore
-              </div>
+              <Link to="/our-services/payment">
+                <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                  Explore
+                </div>
+              </Link>
             </div>
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
@@ -707,9 +713,11 @@ export const Home = () => {
                 With our dependable money transfer services, you can send and
                 receive money without any hassle.
               </div>
-              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Explore
-              </div>
+              <Link to="/our-services/payment">
+                <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                  Explore
+                </div>
+              </Link>
             </div>
             <div
               className="flex flex-col justify-between h-[190px] m-[2%] w-[209px] p-[5%] rounded-md bg-[#F2FAFF] md:p-[3%] md:w-[206px] lg:w-[359px] lg:h-[276px]"
@@ -722,9 +730,11 @@ export const Home = () => {
                 With our international payment structure, you can send and
                 receive money from anywhere in the world.
               </div>
-              <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
-                Explore
-              </div>
+              <Link to="/our-services/payment">
+                <div className="bg-[#04177f] w-[30%] text-[9px] mt-[10%] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:font-bold lg:w-[50%] lg:p-[4%] lg:rounded-lg">
+                  Explore
+                </div>
+              </Link>
             </div>
           </Carousel>
         )}
