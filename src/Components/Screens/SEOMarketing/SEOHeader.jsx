@@ -18,7 +18,7 @@ const SEOHeader = () => {
             </div>
         </div>
         <div className='mb-[37.06px] md:w-[425.52px] lg:w-[750px]'>
-            <h2 className="text-justify font-bold text-[15px] leading-[22.5px] mb-[11px] lg:text-[24px] lg:mb-[25px] md:text-[13.62px]">Increased your business growth and revenue with SEO best practices.</h2>
+            <h2 className="text-justify font-bold text-[15px] leading-[22.5px] mb-[11px] lg:text-[30px] lg:leading-[45px] md:text-[13.62px]">Increased your business growth and revenue with SEO best practices.</h2>
             <p className='text-[12px] text-justify lg:text-[18px]'>By understanding the basic principles of SEO, we can help you develop appealing and high-ranking content to reach your target audience in a way that meets their needs.</p>
         </div>
     </div>

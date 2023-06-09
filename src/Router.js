@@ -22,6 +22,7 @@ import ContactUs from "./Components/Screens/contactUs/ContactUs";
 import OwnVTU from "./Components/Screens/ownVTU/OwnVTU";
 import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCondition"
 import PrivacyPolicy from "./Components/Screens/PrivacyPolicy/PrivacyPolicy";
+import Team from './Components/Screens/Team/Team';
 
 export const Router = () => {
   return (
@@ -50,6 +51,7 @@ export const Router = () => {
         <Route path="/faq" element={<Faq />} />
         <Route path="/terms-and-condition" element={<TermsAndCondition/>}/>
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/team" element={<Team/>}/>
       </Routes>
     </div>
   );

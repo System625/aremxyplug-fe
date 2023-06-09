@@ -10,7 +10,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { TiSocialInstagram } from "react-icons/ti";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const responsive = {
   superLargeDesktop: {
@@ -376,8 +376,10 @@ export const AboutUs = () => {
           boxShadow: "0px 0px 7.84859px rgba(0, 0, 0, 0.25)",
         }}
       >
-        More
-        <AiOutlineArrowRight />
+        <Link to='/team' className="flex items-center gap-[20px]">
+          More
+          <AiOutlineArrowRight />
+        </Link>
       </div>
       <br></br>
       <br></br>
@@ -597,10 +599,10 @@ export const AboutUs = () => {
       </div>
 
       <Link to="/ContactUs">
-        <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center my-[25%] text-[7px] lg:my-[10%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
-          Contact Us
-        </div>
-      </Link>
+          <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[170.54px] lg:h-[47px] lg:text-[13px] lg:rounded-md">
+            Contact Us
+          </div>
+        </Link>
     </>
   );
 };
