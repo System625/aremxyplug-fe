@@ -407,17 +407,12 @@ export const Footer = () => {
               <div className="w-[81px] h-[13px] text-[14px] font-semibold lg:text-[18px]">
                 Legal
               </div>
-              <Link to="/privacy-policy">
-                <div className="w-[90px] h-[13px] text-[9px] lg:w-[100%] lg:text-[16px]">
-                  Privacy Policy
-                </div>
-              </Link>
-              <Link to="/terms-and-condition">
-                {" "}
-                <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                  Terms & Conditions
-                </div>
-              </Link>
+              <div className="w-[90px] h-[13px] text-[9px] lg:w-[100%] lg:text-[16px]">
+                <Link to='/privacy-policy'>Privacy Policy</Link>
+              </div>
+              <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
+                <Link to='/terms-and-condition'>Terms & Condition</Link>
+              </div>
             </div>
           </div>
 
