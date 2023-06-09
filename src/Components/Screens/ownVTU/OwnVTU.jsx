@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./ownVTU.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
@@ -7,6 +7,16 @@ import "./ownVTU.css";
 import ReactFlagsSelect from "chima-flags-select";
 
 function OwnVTU() {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
   const [choosePlan, setChoosePlan] = useState(null);
   const [country, setCountry] = useState(null);
 
@@ -125,7 +135,15 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Country
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center ${
+                isFocused
+                  ? "border-[#0060df] border-2"
+                  : "border-[#cdcdcd] border-[1px] "
+              }`}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            >
               <div className="w-full pt-[5px]">
                 <ReactFlagsSelect
                   selected={country}
