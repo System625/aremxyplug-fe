@@ -91,7 +91,7 @@ const SocialMediaMarketing = () => {
                         <img src={marketingChartImg} alt="marketing_chart"/>
                     </div>
                     <div className='text-center'>
-                        <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
+                        <Link to={`/ContactUstea`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
                     </div>
                 </div>
       </div>
