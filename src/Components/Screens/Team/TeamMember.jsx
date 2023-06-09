@@ -8,12 +8,12 @@ import email from './images/aremxy_mail.svg'
 const TeamMember = ({memberData: {name, role, desc, linkedin_link, twitter_link, facebook_link, email_link, instagram_link}}) => {
   return (
     <div className='w-full border-[4px] h-[467.36px] md:h-[408.8px] lg:h-[728px] rounded-t-[64.19px] rounded-b-[6px] flex flex-col border-[#d4d1d1] lg:border-[7px]'>
-      <div className="h-[36.27%] z-50">
+      <div className="h-[36.27%] z-[30]">
         <div className="lg:border-[7px] w-[159.2px] mt-[46.22px] md:w-[139.36px] lg:w-[248px] lg:h-[248px] md:h-[139.36px] md:mt-[38.43px] h-full rounded-full border-[4px] mx-auto lg:mt-[72px] border-[#d4d1d1] bg-[#eeebeb] flex items-center justify-center">
             image
         </div>
       </div>
-      <div className='pt-[50.2px] h-[63.73%] bg-[#eeebeb] z-20 md:pt-[36.5px] lg:pt-[83px]'>
+      <div className='pt-[50.2px] h-[63.73%] bg-[#eeebeb] z-[20] md:pt-[36.5px] lg:pt-[83px]'>
         <h2 className='text-center mb-[10px] text-primary font-bold lg:mb-[19px] text-[15.41px] leading-[18.49px] lg:text-[24px] lg:leading-[28.8px]'>{name}</h2>
         <h2 className='text-center mb-[16.95px] md:mb-[13.5px] text-[15.41px] leading-[18.49px] lg:text-[24px] lg:leading-[28.8px] font-bold'>{role}</h2>
         <p className='mx-[18px] mb-[40.2px] lg:mb-[61px] text-justify md:mb-[33.6px] text-[12px] leading-[18px] md:text-[11px] md:leading-[16.5px] lg:text-[20px] lg:leading-[30px]'>{desc}</p>
