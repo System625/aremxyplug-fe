@@ -1,22 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contactUs.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
-// import Select from 'react-select-country-list';
-// import ReactFlagsSelect from "react-flags-select";
-
-
-
+import ReactFlagsSelect from "chima-flags-select";
 
 function ContactUs() {
-
-  // const [countryValue, setCountryValue] =useState(null)
-
-  // const handleCountryChange = (country) => {
-  //   console.log('Selected country:', country);
-  // };
-
-
+  const [country, setCountry] = useState(null);
 
   return (
     <div className="lg:px-[8%] px-[5%]">
@@ -60,11 +49,11 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               First Name
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px]  border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]    rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
-                // placeholder="Enter your first name"
+                // placeholder="Enter your last name"
               />
             </div>
           </div>
@@ -75,7 +64,7 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Last Name
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -90,26 +79,16 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Country
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
-              <div className="w-full ">
-
-              {/* <Select
-        value=""
-        onChange={handleCountryChange}
-        // classes="my-select"
-        showFlag={true}
-      /> */}
-              {/* <ReactFlagsSelect
-              selected={countryValue}
-              onSelect={(value)=>
-                {
-                  setCountryValue(value)
-                  console.log(value)
-                }}
-           
-              /> */}
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center justify-center">
+              <div className="w-full pt-[5px]">
+                <ReactFlagsSelect
+                  selected={country}
+                  onSelect={(value) => setCountry(value)}
+                  className="w-[95%]"
+                  placeholder=" "
+                  searchable
+                />
               </div>
-   
             </div>
           </div>
           {/* Country ends here*/}
@@ -119,7 +98,7 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Phone No
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -134,7 +113,7 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Comapany
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -149,7 +128,7 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Work Email
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -164,7 +143,7 @@ function ContactUs() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
               Website
             </p>
-            <div className="inputBoxShadow w-[70%] h-[27px] md:h-[35px] lg:h-[40px] border-[1px] border-[#a1a1a1]  rounded  flex items-center">
+            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
               <input
                 className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
                 type="text"
@@ -181,7 +160,7 @@ function ContactUs() {
               Message
             </p>
             <div className=" w-[70%]    flex flex-col justify-center">
-              <div className="inputBoxShadow border-[1px] border-[#a1a1a1]  rounded">
+              <div className="inputBoxShadow   rounded">
                 {" "}
                 <textarea
                   id="message"
@@ -219,8 +198,7 @@ function ContactUs() {
         </div>
       </div>
 
-
-{/* /////////////////////////////////////////////////////////////////////// */}
+      {/* /////////////////////////////////////////////////////////////////////// */}
       <div className=" grid grid-cols-2 md:grid-cols-4 gap-y-[20px] mt-[50px] lg:mt-[100px] md:mb-[15%] mb-[25%]">
         <div>
           <p
@@ -241,7 +219,7 @@ function ContactUs() {
             Customer Support
           </p>
           <p className="mt-[4.5px] md:mt-[7px] lg:mt-[10px]  lg:text-[18px] md:text-[11.45px] text-[10.01px]">
-          support@aremxyplug.com
+            support@aremxyplug.com
           </p>
         </div>
         <div>
@@ -252,7 +230,7 @@ function ContactUs() {
             Partnership
           </p>
           <p className="mt-[4.5px] md:mt-[7px] lg:mt-[10px]  lg:text-[18px] md:text-[11.45px] text-[10.01px]">
-          partnership@aremxyplug.com
+            partnership@aremxyplug.com
           </p>
         </div>
         <div>
@@ -260,10 +238,10 @@ function ContactUs() {
             className="text-[14.13px] font-[600] md:text-[15.2px] lg:text-[24px]"
             style={{ color: "#000" }}
           >
-           General Inquiry
+            General Inquiry
           </p>
           <p className="mt-[4.5px] md:mt-[7px] lg:mt-[10px]  lg:text-[18px] md:text-[11.45px] text-[10.01px]">
-          hello@aremxyplug.com
+            hello@aremxyplug.com
           </p>
         </div>
       </div>
