@@ -2,6 +2,7 @@ import React from 'react';
 import TeamMember from './TeamMember';
 import { memberData } from './data/data';
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const Team = () => {
   const halfData = memberData.slice(0, 10);
@@ -33,13 +34,26 @@ const Team = () => {
                 <TeamMember key={item.id} memberData={item}/> 
               ))}
             </div>
-            <span className='cursor-pointer bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]' onClick={()=> setShow(false)}>show less</span>
+            <button className='cursor-pointer bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[16px] py-[11px] inline-flex gap-[10px] items-center rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]' onClick={()=> setShow(false)}>
+              Less
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+              </svg>
+            </button>
           </div>
           :
           <div className="text-center">
-            <span className='cursor-pointer bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]' onClick={()=> setShow(true)}>show more</span>
+            <button className='cursor-pointer bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[16px] py-[11px] inline-flex gap-[10px] items-center rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]' onClick={()=> setShow(true)}>
+              More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[14px] h-[14px]">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
           </div>
         }
+      </div>
+      <div className='flex justify-center mt-[100px]'>
+          <Link to={`/ContactUs`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Us</Link>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentMarketingHeader from './ContentMarketingHeader';
 import { Link } from 'react-router-dom';
-import  ContentMain from './images/contentMain2.svg'
+import  ContentMain from './images/contentMain2.png'
 import ContentMarketingCard from './ContentMarketingCard';
 import KeyFeatureCard from './KeyFeatureCard';
 import { contentData } from './data/data';
@@ -43,7 +43,7 @@ const ContentMarketing = () => {
                     <h2 className="text-primary text-[20px] leading-[30px] text-center font-bold lg:text-[30px] lg:leading-[45px]">Audit Your Content Strategies and Campaigns</h2>
                     <p className="text-[10.42px] leading-[15.64px] text-center lg:text-[18px] lg:leading-[27px]">Content audit is the process of systematically analyzing and assessing all the content on your website. Let’s take your business to a milestone with a well-organized content audit, and enjoy excellent content results.</p>
                     <div className='text-center'>
-                        <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
+                        <Link to={`/ContactUs`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
                     </div>
                 </div>
             </div>
