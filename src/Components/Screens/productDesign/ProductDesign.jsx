@@ -2,6 +2,7 @@ import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./ProductDesign.css";
+import { Link } from "react-router-dom";
 function ProductDesign() {
   return (
     <>
@@ -432,7 +433,9 @@ function ProductDesign() {
               AremxyPlug.
             </p>
             <div className="mt-6  flex justify-center">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/contactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./EmailMarketing.css";
+import { Link } from "react-router-dom";
 function EmailMarketing() {
   return (
     <>
@@ -366,7 +367,9 @@ function EmailMarketing() {
             expert got you covered. Contact our sales team right away!
           </p>
           <div className="mt-6  flex justify-center">
-            <Bluebutton text="Contact Sales" />
+            <Link to="/contactUs">
+              <Bluebutton text="Contact Sales" />
+            </Link>
           </div>
         </div>
       </div>
