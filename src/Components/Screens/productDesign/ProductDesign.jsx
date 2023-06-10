@@ -418,7 +418,7 @@ function ProductDesign() {
         <div className="lg:px-[8%] px-[5%] md:mb-[15%] mb-[25%]">
           <div className="px-4 sm:px-6  lg:px-8 py-4 sm:py-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  EmailBoxShadow">
             <p
-              className="text-center  text-[12px] md:text-[17.4px] lg:text-[30px] font-black tracking-wide lg:tracking-wider"
+              className="text-center  text-[20px]  lg:text-[30px] font-black tracking-wide lg:tracking-wider"
               style={{
                 color: primaryColor,
               }}
