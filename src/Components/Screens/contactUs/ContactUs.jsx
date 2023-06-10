@@ -64,7 +64,7 @@ function ContactUs() {
               First Name
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center hover:border-[#b3b3b3] duration-300 
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
             ${
               isFocused.includes(1)
                 ? "border-[#2684fe] border-2"
@@ -88,7 +88,7 @@ function ContactUs() {
               Last Name
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center hover:border-[#b3b3b3] duration-300
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
              ${
                isFocused.includes(2)
                  ? "border-[#2684fe] border-2"
@@ -112,7 +112,7 @@ function ContactUs() {
               Country
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center hover:border-[#b3b3b3] duration-300 ${
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
                 isFocused.includes(3)
                   ? "border-[#2684fe] border-2"
                   : "border-[#cdcdcd] border-[1px] "
@@ -139,7 +139,7 @@ function ContactUs() {
               Phone No
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center hover:border-[#b3b3b3] duration-300
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
                    ${
                      isFocused.includes(4)
                        ? "border-[#2684fe] border-2"
@@ -163,7 +163,7 @@ function ContactUs() {
               Comapany
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center hover:border-[#b3b3b3] duration-300
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
                    ${
                      isFocused.includes(5)
                        ? "border-[#2684fe] border-2"
@@ -187,7 +187,7 @@ function ContactUs() {
               Work Email
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center hover:border-[#b3b3b3] duration-300
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
                    ${
                      isFocused.includes(6)
                        ? "border-[#2684fe] border-2"
@@ -211,7 +211,7 @@ function ContactUs() {
               Website
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center hover:border-[#b3b3b3] duration-300
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
             
             ${
               isFocused.includes(7)
@@ -243,7 +243,7 @@ function ContactUs() {
                 <textarea
                   id="message"
                   name="message"
-                  className={`inputBoxShadow resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] outline-none hover:border-[#b3b3b3] duration-300 ${
+                  className={`inputBoxShadow resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] outline-none lg:hover:border-[#b3b3b3] lg:duration-300 ${
                     isFocused.includes(8)
                       ? "border-[#2684fe] border-2"
                       : "border-[#cdcdcd] border-[1px] "
