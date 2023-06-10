@@ -3,6 +3,7 @@ import "./cardIssuing.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
+import { Link } from "react-router-dom";
 
 export const primaryColor = "#04177F";
 
@@ -219,9 +220,9 @@ function CardIssuing() {
         </p>
 
         <AliceCarousel
-        animationDuration ={2000}
+          animationDuration={2000}
           autoPlayInterval={2000}
-          autoPlay ={true}
+          autoPlay={true}
           mouseTracking
           items={items}
           autoWidth
@@ -379,7 +380,9 @@ function CardIssuing() {
         </div>
 
         <div className="flex justify-center mt-14">
-          <Bluebutton text="Explore Pricing" />
+          <Link to="/pricing">
+            <Bluebutton text="Explore Pricing" />
+          </Link>
         </div>
       </div>
     </>

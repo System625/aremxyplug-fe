@@ -2,6 +2,7 @@ import React from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./GraphicDesign.css";
+import { Link } from "react-router-dom";
 function GraphicDesign() {
   return (
     <>
@@ -330,7 +331,7 @@ function GraphicDesign() {
       <div className="lg:px-[8%] px-[5%]  md:mb-[15%] mb-[25%] ">
         <div className=" px-4 sm:px-6  lg:px-8 py-4 sm:py-6 bg-[#fff] rounded-lg lg:rounded-2xl mt-[50px] md:mt-[70px] xl:mt-[100px]  EmailBoxShadow">
           <p
-            className="text-center  text-[10.97px] md:text-[17.4px] lg:text-[30px] font-bold lg:tracking-wider  "
+            className="text-center   text-[20px]  lg:text-[30px] font-black tracking-wide  lg:tracking-wider"
             style={{
               color: primaryColor,
             }}
@@ -343,7 +344,9 @@ function GraphicDesign() {
             with effective messaging and positive impressions.
           </p>
           <div className="mt-6  flex justify-center">
-            <Bluebutton text="Contact Sales" />
+            <Link to="/contactUs">
+              <Bluebutton text="Contact Sales" />
+            </Link>
           </div>
         </div>
       </div>
