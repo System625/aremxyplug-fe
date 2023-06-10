@@ -7,14 +7,18 @@ import "./ownVTU.css";
 import ReactFlagsSelect from "chima-flags-select";
 
 function OwnVTU() {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState([]);
 
-  const handleFocus = () => {
-    setIsFocused(true);
+  const handleFocus = (index) => {
+    if (!isFocused.includes(index)) {
+      setIsFocused([...isFocused, index]);
+    }
   };
 
-  const handleBlur = () => {
-    setIsFocused(false);
+  const handleBlur = (index) => {
+    if (isFocused.includes(index)) {
+      setIsFocused(isFocused.filter((item) => item !== index));
+    }
   };
 
   const [choosePlan, setChoosePlan] = useState(null);
@@ -80,7 +84,7 @@ function OwnVTU() {
                   onChange={setChoosePlan}
                   options={options}
                   placeholder=""
-                  className="text-[8.93px] md:text-[11.58px] lg:text-[20px] text-[#403f3f]"
+                  className="text-[8.93px] md:text-[11.58px] lg:text-[20px] text-[#403f3f] outline-none"
                   styles={{
                     placeholder: (baseStyles, state) => ({
                       ...baseStyles,
@@ -105,9 +109,18 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               First Name
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px]  border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+            ${
+              isFocused.includes(1)
+                ? "border-[#2684fe] border-2"
+                : "border-[#cdcdcd] border-[1px] "
+            }`}
+              onFocus={() => handleFocus(1)}
+              onBlur={() => handleBlur(1)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter your first name"
               />
@@ -120,9 +133,18 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Last Name
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+             ${
+               isFocused.includes(2)
+                 ? "border-[#2684fe] border-2"
+                 : "border-[#cdcdcd] border-[1px] "
+             }`}
+              onFocus={() => handleFocus(2)}
+              onBlur={() => handleBlur(2)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter your last name"
               />
@@ -136,13 +158,13 @@ function OwnVTU() {
               Country
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center ${
-                isFocused
-                  ? "border-[#0060df] border-2"
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                isFocused.includes(3)
+                  ? "border-[#2684fe] border-2"
                   : "border-[#cdcdcd] border-[1px] "
               }`}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
+              onFocus={() => handleFocus(3)}
+              onBlur={() => handleBlur(3)}
             >
               <div className="w-full pt-[5px]">
                 <ReactFlagsSelect
@@ -162,9 +184,18 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Phone No
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+                   ${
+                     isFocused.includes(4)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px] "
+                   }`}
+              onFocus={() => handleFocus(4)}
+              onBlur={() => handleBlur(4)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter your Phone number"
               />
@@ -177,24 +208,42 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Comapany
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+                   ${
+                     isFocused.includes(5)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px] "
+                   }`}
+              onFocus={() => handleFocus(5)}
+              onBlur={() => handleBlur(5)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter Company name"
               />
             </div>
           </div>
-          {/* Comapany starts ends here*/}
+          {/* Comapany  ends here*/}
 
           {/* Work email starts here*/}
           <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Work Email
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+                   ${
+                     isFocused.includes(6)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px] "
+                   }`}
+              onFocus={() => handleFocus(6)}
+              onBlur={() => handleBlur(6)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="First name"
               />
@@ -208,23 +257,47 @@ function OwnVTU() {
               Proposed website names
             </p>
             <div className="w-[67%] grid grid-cols-3 gap-x-[3px]">
-              <div className="inputBoxShadow  h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+              <div
+                className={`inputBoxShadow  h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                  isFocused.includes(7)
+                    ? "border-[#2684fe] border-2"
+                    : "border-[#cdcdcd] border-[1px] "
+                }`}
+                onFocus={() => handleFocus(7)}
+                onBlur={() => handleBlur(7)}
+              >
                 <input
-                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                   type="text"
                   placeholder="example.com"
                 />
               </div>
-              <div className="inputBoxShadow   h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+              <div
+                className={`inputBoxShadow  h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                  isFocused.includes(8)
+                    ? "border-[#2684fe] border-2"
+                    : "border-[#cdcdcd] border-[1px] "
+                }`}
+                onFocus={() => handleFocus(8)}
+                onBlur={() => handleBlur(8)}
+              >
                 <input
-                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                   type="text"
                   placeholder="example.com"
                 />
               </div>
-              <div className="inputBoxShadow   h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
+              <div
+                className={`inputBoxShadow  h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                  isFocused.includes(9)
+                    ? "border-[#2684fe] border-2"
+                    : "border-[#cdcdcd] border-[1px] "
+                }`}
+                onFocus={() => handleFocus(9)}
+                onBlur={() => handleBlur(9)}
+              >
                 <input
-                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
+                  className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                   type="text"
                   placeholder="example.com"
                 />
@@ -240,12 +313,18 @@ function OwnVTU() {
               Message
             </p>
             <div className=" w-[67%]    flex flex-col justify-center">
-              <div className="inputBoxShadow border-[1px] border-[#cdcdcd]  rounded">
+              <div>
                 {" "}
                 <textarea
                   id="message"
                   name="message"
-                  className="resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] "
+                  className={`inputBoxShadow resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] outline-none lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                    isFocused.includes(10)
+                      ? "border-[#2684fe] border-2"
+                      : "border-[#cdcdcd] border-[1px] "
+                  }`}
+                  onFocus={() => handleFocus(10)}
+                  onBlur={() => handleBlur(10)}
                 />
               </div>
               <div className="flex justify-center mt-[20px] lg:mt-[25px]">
