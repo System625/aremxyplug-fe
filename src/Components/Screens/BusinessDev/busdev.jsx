@@ -56,10 +56,15 @@ export const BusinessDev = () => {
 
       {/* SECTION TWO */}
       <div
-        className="mx-[-6%] px-[5%] py-[10%] md:px-[10%] lg:mx-[-9.5%]"
+        className="special mx-[-6%] px-[5%] py-[10%] md:px-[10%] lg:mx-[-9.5%]"
         style={{
-          background:
-            "url(.png), linear-gradient(90.67deg, #92ABFE 0.49%, #05E2FF 99.34%)",
+          backgroundImage:"url(./Images/businessimages/dottedBG.png)",
+          backgroundRepeat:"no-repeat",
+          backgroundPosition:"center",
+          backgroundSize:"cover"
+          // width:"100%"
+
+            // "url(.png), linear-gradient(90.67deg, #92ABFE 0.49%, #05E2FF 99.34%)",
         }}
       >
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[300px] lg:mb-[10%]">
@@ -434,7 +439,7 @@ export const BusinessDev = () => {
             {/* product development */}
             <div className={styles.img}>
               <img
-                className="w-[280px]"
+                className="w-[260px]"
                 src="/Images/businessimages/5.png"
                 alt="/"
               />
@@ -454,7 +459,7 @@ export const BusinessDev = () => {
             {/* financial analysis */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/6.png"
                 alt="/"
               />
@@ -477,7 +482,7 @@ export const BusinessDev = () => {
             {/* training and skill */}
             <div className={styles.img}>
               <img
-                className="w-[240px]"
+                className="w-[280px]"
                 src="/Images/businessimages/7.png"
                 alt="/"
               />

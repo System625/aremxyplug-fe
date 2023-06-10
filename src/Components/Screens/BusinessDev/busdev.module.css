@@ -23,6 +23,13 @@
     height: "250px";
 }
 
+.special{
+    background-image: url("../../../../public/Images/businessimages/dottedBG.png");
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media (min-width: 768px){
     .img2{
