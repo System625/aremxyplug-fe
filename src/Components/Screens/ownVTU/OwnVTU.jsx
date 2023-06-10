@@ -1,12 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./ownVTU.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import Select from "react-select";
 import "./ownVTU.css";
+import ReactFlagsSelect from "chima-flags-select";
 
 function OwnVTU() {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
   const [choosePlan, setChoosePlan] = useState(null);
+  const [country, setCountry] = useState(null);
 
   const options = [
     { value: "Merchant", label: "Merchant - 49,990" },
@@ -82,16 +94,9 @@ function OwnVTU() {
                       ...baseStyles,
                       color: "red",
                     }),
-               
                   }}
                 />
               </div>
-
-              {/* <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
-                type="text"
-                // placeholder="Enter your first name"
-              /> */}
             </div>
           </div>
           {/* Choose a plan ends here*/}
@@ -130,12 +135,24 @@ function OwnVTU() {
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Country
             </p>
-            <div className="inputBoxShadow w-[67%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]  rounded  flex items-center">
-              <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] "
-                type="text"
-                // placeholder="enter your country"
-              />
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center ${
+                isFocused
+                  ? "border-[#0060df] border-2"
+                  : "border-[#cdcdcd] border-[1px] "
+              }`}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            >
+              <div className="w-full pt-[5px]">
+                <ReactFlagsSelect
+                  selected={country}
+                  onSelect={(value) => setCountry(value)}
+                  className="w-[95%]"
+                  placeholder=" "
+                  searchable
+                />
+              </div>
             </div>
           </div>
           {/* Country ends here*/}

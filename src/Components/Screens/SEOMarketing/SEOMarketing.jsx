@@ -51,7 +51,7 @@ const SEOMarketing = () => {
                             <h2 className='text-center text-primary text-[17.02px] font-bold leading-[25.53px] mb-[25px] lg:text-[30px]'>AremxyPlug SEO Marketing Service</h2>
                             <p className='text-[10.21px] mb-[25px] md:text-center lg:text-[18px]'>Let our experts use SEO's best practices to improve your business online visibility and reach more consumers. With SEO, you to attract more worthwhile visitors to your website. </p>
                             <div className='text-center'>
-                                <Link to={`/sales`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
+                                <Link to={`/ContactUs`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Sales</Link>
                             </div>
                         </div>
                     </div>
