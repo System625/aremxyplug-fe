@@ -599,7 +599,7 @@ export const AboutUs = () => {
       </div>
 
       <Link to="/ContactUs">
-          <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[170.54px] lg:h-[47px] lg:text-[13px] lg:rounded-md">
+          <div className="mb-[25%] lg:mb-[15%] bg-[#04177f] w-[75px] h-[24px] text-white p-[2%] rounded-sm mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[170.54px] lg:h-[47px] lg:text-[13px] lg:rounded-md">
             Contact Us
           </div>
         </Link>

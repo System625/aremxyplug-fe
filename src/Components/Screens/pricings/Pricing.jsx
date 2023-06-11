@@ -170,7 +170,7 @@ export const Pricing = () => {
             {/* ===========================MTN==================== */}
             <div className="grid grid-cols-3 pt-[10%] mx-[4%] gap-[15px] lg:mx-[8%] lg:pt-[4%] lg:gap-[20px]">
               <div
-                className="mt-[] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className="mt-[] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
@@ -213,7 +213,7 @@ export const Pricing = () => {
 
               {/* ======================AIRTEL======================= */}
               <div
-                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
@@ -256,7 +256,7 @@ export const Pricing = () => {
 
               {/* =======================GLO===================== */}
               <div
-                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
@@ -299,7 +299,7 @@ export const Pricing = () => {
 
               {/* ========================9MOBILE======================== */}
               <div
-                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
@@ -342,7 +342,7 @@ export const Pricing = () => {
 
               {/* =============================SMILE=============================== */}
               <div
-                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
@@ -385,7 +385,7 @@ export const Pricing = () => {
 
               {/* ====================================SPECTRANET================================= */}
               <div
-                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-sm md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
+                className=" bg-[#ffffff] flex flex-col gap-[6px] w-[98px] h-[140px] px-[13px] py-[7px] rounded-md md:w-[212px] md:h-[290px] md:gap-[14px] lg:w-[376px] lg:h-[550px] lg:gap-[25px] lg:rounded-xl lg:border-[1px] lg:border-[#00000095] lg:py-[25px] lg:px-[50px]"
                 style={{ boxShadow: "0px 0px 25.20828px rgba(0, 0, 0, 0.25)" }}
               >
                 <ul className="flex flex-col gap-[6px] justify-center items-center md:gap-[14px] lg:gap-[25px]">
