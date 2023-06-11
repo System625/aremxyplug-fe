@@ -204,7 +204,7 @@ export const Solution = () => {
             time to pursue other endeavours. 
           </div>
         </div>
-        <div className="flex flex-col gap-[15px]">
+        <div id="transfer" className="flex flex-col gap-[15px]">
           <div className="text-[20px] font-semibold text-center md:text-left lg:text-[30px]">
             Transfer
           </div>
