@@ -92,7 +92,7 @@ export const Footer = () => {
                 Digital Service
               </div>
             </Link>
-            <div className="w-[80px] h-[13px] text-[9px]">Virtual Account</div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/our-services/payment">Virtual Account</Link></div>
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
@@ -102,7 +102,7 @@ export const Footer = () => {
                   <HashLink to="#multicurrency">Multi-Currency Wallet</HashLink>
                 </div>
                 <div className="w-[96px] h-[13px] text-[9px]">
-                  International Payment
+                  <Link to="/our-services/payment">International Payment</Link>
                 </div>
                 <div className="w-[94px] h-[13px] text-[9px]">
                   <Link to="/VTU_DEV">VTU development</Link>
@@ -151,9 +151,9 @@ export const Footer = () => {
                   <HashLink to="/solutions#purchase">Automate</HashLink>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  <HashLink to="/solutions/#automate">Transfer</HashLink>
+                  <HashLink to="/solutions/#transfer">Transfer</HashLink>
                 </div>
-                <div className="w-[94px] h-[13px] text-[9px]">Convert</div>
+                <div className="w-[94px] h-[13px] text-[9px]"><HashLink to="/solutions/#convert">Convert</HashLink></div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -186,8 +186,8 @@ export const Footer = () => {
             <div className="w-[80px] h-[13px] text-[9px]">
               <Link to="/ContactUs">Contact Sales</Link>
             </div>
-            <div className="w-[80px] h-[13px] text-[9px]">Phone</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Email</div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/ContactUS">Phone</Link></div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link>Email</Link></div>
           </div>
 
           <div className="flex flex-col gap-[15px]">
@@ -351,7 +351,7 @@ export const Footer = () => {
               <Link to="/DigitalServices">Digital Service</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Virtual Account
+              <Link to="/our-services/payment">Virtual Account</Link>
             </div>
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
@@ -365,7 +365,7 @@ export const Footer = () => {
               </div>
 
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                International Payment
+                <Link to="/our-servcies/payment">International Payment</Link>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 <Link to="/VTU_DEV">VTU development</Link>
@@ -407,7 +407,7 @@ export const Footer = () => {
                 <HashLink to="/solutions/#automate">Automate</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Transfer
+                <HashLink to="/solutions/#automate">Transfer</HashLink>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 <HashLink to="/solutions/#convert">Convert</HashLink>
@@ -479,7 +479,7 @@ export const Footer = () => {
                 </div>
               </Link>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Phone
+                <Link to="/ContactUs">Phone</Link>
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 <Link to="/ContactUs">Email</Link>
@@ -495,8 +495,7 @@ export const Footer = () => {
               <div className="text-lg lg:text-3xl">
                 <a
                   href="https://www.linkedin.com/company/aremxyplug-business-enterprises/"
-                  target="_blank"
-                  rel="noreferrer"
+                  target="_blank" rel="noreferrer"
                 >
                   <SiLinkedin />
                 </a>
