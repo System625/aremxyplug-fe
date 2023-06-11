@@ -8,6 +8,10 @@
 .PhoneInputInput:focus {
   outline: none;
 }
+
+.PhoneInputCountrySelect {
+  color: #403f3f;
+}
 .PhoneInputInput {
   color: #403f3f;
 
@@ -31,6 +35,9 @@
   .PhoneInputInput {
     font-size: 8.93px;
   }
+  .PhoneInputCountrySelect {
+    font-size: 8.93px;
+  }
 }
 
 /* Tablets (768px to 1023px) */
@@ -38,11 +45,17 @@
   .PhoneInputInput {
     font-size: 11.58px;
   }
+  .PhoneInputCountrySelect {
+    font-size: 11.58px;
+  }
 }
 
 /* Desktops (1024px and above) */
 @media (min-width: 1024px) {
   .PhoneInputInput {
+    font-size: 20px;
+  }
+  .PhoneInputCountrySelect {
     font-size: 20px;
   }
 }
