@@ -354,7 +354,7 @@ export const BusinessDev = () => {
         {/* product development */}
         <div className={styles.img2}>
           <img
-            className="w-[260px] md:w-[200px] lg:w-[330px]"
+            className="w-[270px] md:w-[200px] lg:w-[330px]"
             src="/Images/businessimages/5.png"
             alt="/"
           />
@@ -416,7 +416,7 @@ export const BusinessDev = () => {
         {/* performance monitoring */}
         <div className={styles.img2}>
           <img
-            className="w-[240px] md:w-[200px] lg:w-[330px]"
+            className="w-[260px] md:w-[200px] lg:w-[350px]"
             src="/Images/businessimages/8.png"
             alt="/"
           />
@@ -439,7 +439,7 @@ export const BusinessDev = () => {
             {/* product development */}
             <div className={styles.img}>
               <img
-                className="w-[260px]"
+                className="w-[300px]"
                 src="/Images/businessimages/5.png"
                 alt="/"
               />
@@ -502,7 +502,7 @@ export const BusinessDev = () => {
             {/* performance monitoring */}
             <div className={styles.img}>
               <img
-                className="w-[280px]"
+                className="w-[330px]"
                 src="/Images/businessimages/8.png"
                 alt="/"
               />

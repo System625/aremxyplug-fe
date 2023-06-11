@@ -232,6 +232,7 @@ function OwnVTU() {
                   }}
                   dropdownStyle={{
                     color: "#403f3f",
+                    fontSize: textSize,
                   }}
                 />
               </form>
