@@ -1,12 +1,16 @@
+import "react-phone-number-input/style.css";
 import React, { useState } from "react";
 import "./contactUs.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import ReactFlagsSelect from "chima-flags-select";
+import PhoneInput from "react-phone-number-input";
+// import { BiSolidDownArrow } from "react-icons/b";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 function ContactUs() {
-  const [country, setCountry] = useState(null);
-
+  const [country, setCountry] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(null);
   const [isFocused, setIsFocused] = useState([]);
 
   const handleFocus = (index) => {
@@ -112,13 +116,8 @@ function ContactUs() {
               Country
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 ${
-                isFocused.includes(3)
-                  ? "border-[#2684fe] border-2"
-                  : "border-[#cdcdcd] border-[1px] "
-              }`}
-              onFocus={() => handleFocus(3)}
-              onBlur={() => handleBlur(3)}
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px]
+              `}
             >
               <div className="w-full pt-[5px]">
                 <ReactFlagsSelect
@@ -139,20 +138,23 @@ function ContactUs() {
               Phone No
             </p>
             <div
-              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+              className={`relative inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 pl-2
                    ${
                      isFocused.includes(4)
                        ? "border-[#2684fe] border-2"
-                       : "border-[#cdcdcd] border-[1px] "
+                       : "border-[#cdcdcd] border-[1px]  "
                    }`}
               onFocus={() => handleFocus(4)}
               onBlur={() => handleBlur(4)}
             >
-              <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
-                type="text"
-                // placeholder="Enter your Phone number"
-              />
+              <AiOutlineCaretDown className="absolute w-4 h-4 ml-2 text-[#4d4d4d]" />
+              <form>
+                <PhoneInput
+                  international
+                  value={phoneNumber}
+                  onChange={(val) => setPhoneNumber(val)}
+                />
+              </form>
             </div>
           </div>
           {/* Phone number ends here*/}
