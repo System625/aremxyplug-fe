@@ -92,7 +92,7 @@ export const Footer = () => {
                 Digital Service
               </div>
             </Link>
-            <div className="w-[80px] h-[13px] text-[9px]">Virtual Account</div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/our-services/payment">Virtual Account</Link></div>
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
@@ -102,7 +102,7 @@ export const Footer = () => {
                   <HashLink to="#multicurrency">Multi-Currency Wallet</HashLink>
                 </div>
                 <div className="w-[96px] h-[13px] text-[9px]">
-                  International Payment
+                  <Link to="/our-services/payment">International Payment</Link>
                 </div>
                 <div className="w-[94px] h-[13px] text-[9px]">
                   <Link to="/VTU_DEV">VTU development</Link>
@@ -151,9 +151,9 @@ export const Footer = () => {
                   <HashLink to="/solutions#purchase">Automate</HashLink>
                 </div>
                 <div className="w-[100px] h-[13px] text-[9px]">
-                  <HashLink to="/solutions/#automate">Transfer</HashLink>
+                  <HashLink to="/solutions/#transfer">Transfer</HashLink>
                 </div>
-                <div className="w-[94px] h-[13px] text-[9px]">Convert</div>
+                <div className="w-[94px] h-[13px] text-[9px]"><HashLink to="/solutions/#convert">Convert</HashLink></div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -186,8 +186,8 @@ export const Footer = () => {
             <div className="w-[80px] h-[13px] text-[9px]">
               <Link to="/ContactUs">Contact Sales</Link>
             </div>
-            <div className="w-[80px] h-[13px] text-[9px]">Phone</div>
-            <div className="w-[80px] h-[13px] text-[9px]">Email</div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/ContactUS">Phone</Link></div>
+            <div className="w-[80px] h-[13px] text-[9px]"><Link>Email</Link></div>
           </div>
 
           <div className="flex flex-col gap-[15px]">
@@ -207,7 +207,7 @@ export const Footer = () => {
               Legal
             </div>
             <div className="w-[90px] h-[13px] text-[9px]">
-              <Link to='/privacy-policy'>Privacy Policy</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </div>
             <div className="w-[100px] h-[13px] text-[9px]">
               <Link to="/terms-and-condition">Terms & Conditions</Link>
@@ -220,19 +220,49 @@ export const Footer = () => {
             <div className="text-[10px]">Follow Us on</div>
             <div className="flex gap-[12px]">
               <div className="text-lg">
-                <SiLinkedin />
+                <a
+                  href="https://www.linkedin.com/company/aremxyplug-business-enterprises/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SiLinkedin />
+                </a>
               </div>
               <div className="text-lg">
-                <ImFacebook2 />
+                <a
+                  href="https://m.facebook.com/102536649209580/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ImFacebook2 />
+                </a>
               </div>
               <div className="text-lg">
-                <ImInstagram />
+                <a
+                  href="https://www.instagram.com/aremxyplug"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ImInstagram />
+                </a>
               </div>
               <div className="text-lg">
-                <SiTwitter />
+                <a
+                  href="https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SiTwitter />
+                </a>
               </div>
               <div className="text-lg">
-                <GrMail />
+                <a
+                  href="mailto:hello@aremxyplug.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GrMail />
+                </a>
               </div>
             </div>
             <div className="text-[8px]">Email us at: hello@aremxyplug.com</div>
@@ -321,7 +351,7 @@ export const Footer = () => {
               <Link to="/DigitalServices">Digital Service</Link>
             </div>
             <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-              Virtual Account
+              <Link to="/our-services/payment">Virtual Account</Link>
             </div>
             <div className="flex flex-col gap-[20px]">
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
@@ -335,7 +365,7 @@ export const Footer = () => {
               </div>
 
               <div className="w-[96px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                International Payment
+                <Link to="/our-servcies/payment">International Payment</Link>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
                 <Link to="/VTU_DEV">VTU development</Link>
@@ -377,7 +407,7 @@ export const Footer = () => {
                 <HashLink to="/solutions/#automate">Automate</HashLink>
               </div>
               <div className="w-[100px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Transfer
+                <HashLink to="/solutions/#automate">Transfer</HashLink>
               </div>
               <div className="w-[94px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
                 <HashLink to="/solutions/#convert">Convert</HashLink>
@@ -408,10 +438,10 @@ export const Footer = () => {
                 Legal
               </div>
               <div className="w-[90px] h-[13px] text-[9px] lg:w-[100%] lg:text-[16px]">
-                <Link to='/privacy-policy'>Privacy Policy</Link>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
-                <Link to='/terms-and-condition'>Terms & Condition</Link>
+                <Link to="/terms-and-condition">Terms & Condition</Link>
               </div>
             </div>
           </div>
@@ -441,7 +471,7 @@ export const Footer = () => {
                 </div>
               </Link>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[100px] lg:text-[16px]">
-                Live Chat
+                <Link to="/ContactUs">Live Chat</Link>
               </div>
               <Link to="/ContactUs">
                 <div className="w-[80px] h-[13px] text-[9px] lg:w-[166px] lg:text-[16px]">
@@ -449,10 +479,10 @@ export const Footer = () => {
                 </div>
               </Link>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Phone
+                <Link to="/ContactUs">Phone</Link>
               </div>
               <div className="w-[80px] h-[13px] text-[9px] lg:w-[71px] lg:text-[16px]">
-                Email
+                <Link to="/ContactUs">Email</Link>
               </div>
             </div>
           </div>
@@ -463,30 +493,48 @@ export const Footer = () => {
             <div className="text-[14px] lg:text-[25px]">Follow Us on</div>
             <div className="flex gap-[12px] lg:gap-[15px]">
               <div className="text-lg lg:text-3xl">
-                <a href="/https://www.linkedin.com/company/aremxyplug-business-enterprises/">
+                <a
+                  href="https://www.linkedin.com/company/aremxyplug-business-enterprises/"
+                  target="_blank" rel="noreferrer"
+                >
                   <SiLinkedin />
                 </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <a href="/https://m.facebook.com/102536649209580/">
+                <a
+                  href="https://m.facebook.com/102536649209580/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <ImFacebook2 />
                 </a>
               </div>
               <div className="text-lg lg:text-3xl">
-                <a href="/https://www.instagram.com/aremxyplug" target="_blank">
+                <a
+                  href="https://www.instagram.com/aremxyplug"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <ImInstagram />
                 </a>
               </div>
               <div className="text-lg lg:text-3xl">
                 <a
-                  href="/https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
+                  href="https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <SiTwitter />
                 </a>
               </div>
               <div className="text-[20px] lg:text-3xl">
-                <GrMail />
+                <a
+                  href="mailto:hello@aremxyplug.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GrMail />
+                </a>
               </div>
             </div>
             <div className="text-[11px] lg:text-[20px] lg:w-[356px]">

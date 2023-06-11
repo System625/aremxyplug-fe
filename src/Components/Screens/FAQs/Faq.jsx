@@ -626,7 +626,7 @@ export const Faq = () => {
       </div>
 
       <Link to="/ContactUs">
-        <div className=" bg-[#04177f] w-[65px] h-[17px] text-white p-[1%] rounded-sm mx-auto text-center text-[7px] lg:mt-[3%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
+        <div className=" bg-[#04177f] w-[65px] h-[20px] text-white p-[1%] rounded-sm mx-auto text-center text-[7px] lg:mt-[3%] lg:w-[164.54px] lg:h-[45px] lg:text-[13px] lg:rounded-md">
           Contact Us
         </div>
       </Link>

@@ -1,11 +1,29 @@
+import "react-phone-number-input/style.css";
 import React, { useState } from "react";
 import "./contactUs.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import ReactFlagsSelect from "chima-flags-select";
+import PhoneInput from "react-phone-number-input";
+// import { BiSolidDownArrow } from "react-icons/b";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 function ContactUs() {
-  const [country, setCountry] = useState(null);
+  const [country, setCountry] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(null);
+  const [isFocused, setIsFocused] = useState([]);
+
+  const handleFocus = (index) => {
+    if (!isFocused.includes(index)) {
+      setIsFocused([...isFocused, index]);
+    }
+  };
+
+  const handleBlur = (index) => {
+    if (isFocused.includes(index)) {
+      setIsFocused(isFocused.filter((item) => item !== index));
+    }
+  };
 
   return (
     <div className="lg:px-[8%] px-[5%]">
@@ -44,29 +62,47 @@ function ContactUs() {
           />
         </div>
         <div className=" md:col-span-3">
-          {/* First name starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          {/* First name starts here 268455*/}
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               First Name
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]    rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
+            ${
+              isFocused.includes(1)
+                ? "border-[#2684fe] border-2"
+                : "border-[#cdcdcd] border-[1px] "
+            }`}
+              onFocus={() => handleFocus(1)}
+              onBlur={() => handleBlur(1)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
-                // placeholder="Enter your last name"
+                // placeholder="Enter your first name"
               />
             </div>
           </div>
           {/* First name ends here*/}
 
           {/* Last name starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Last Name
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+             ${
+               isFocused.includes(2)
+                 ? "border-[#2684fe] border-2"
+                 : "border-[#cdcdcd] border-[1px] "
+             }`}
+              onFocus={() => handleFocus(2)}
+              onBlur={() => handleBlur(2)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter your last name"
               />
@@ -75,11 +111,14 @@ function ContactUs() {
           {/* Last name ends here*/}
 
           {/* Country starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px] ">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Country
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center justify-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px]
+              `}
+            >
               <div className="w-full pt-[5px]">
                 <ReactFlagsSelect
                   selected={country}
@@ -94,43 +133,73 @@ function ContactUs() {
           {/* Country ends here*/}
 
           {/* Phone number starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Phone No
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
-              <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
-                type="text"
-                // placeholder="Enter your Phone number"
-              />
+            <div
+              className={`relative inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 pl-2
+                   ${
+                     isFocused.includes(4)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px]  "
+                   }`}
+              onFocus={() => handleFocus(4)}
+              onBlur={() => handleBlur(4)}
+            >
+              <AiOutlineCaretDown className="absolute w-4 h-4 ml-2 text-[#4d4d4d]" />
+              <form>
+                <PhoneInput
+                  international
+                  value={phoneNumber}
+                  onChange={(val) => setPhoneNumber(val)}
+                />
+              </form>
             </div>
           </div>
           {/* Phone number ends here*/}
 
           {/* Comapany starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Comapany
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+                   ${
+                     isFocused.includes(5)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px] "
+                   }`}
+              onFocus={() => handleFocus(5)}
+              onBlur={() => handleBlur(5)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="Enter Company name"
               />
             </div>
           </div>
-          {/* Comapany starts ends here*/}
+          {/* Comapany  ends here*/}
 
           {/* Work email starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Work Email
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+                   ${
+                     isFocused.includes(6)
+                       ? "border-[#2684fe] border-2"
+                       : "border-[#cdcdcd] border-[1px] "
+                   }`}
+              onFocus={() => handleFocus(6)}
+              onBlur={() => handleBlur(6)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
                 type="text"
                 // placeholder="First name"
               />
@@ -139,13 +208,24 @@ function ContactUs() {
           {/* Work email ends here*/}
 
           {/* Website starts here*/}
-          <div className="flex items-center mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex items-center justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Website
             </p>
-            <div className="inputBoxShadow w-[70%] h-[40px] lg:h-[45px] border-[1px] border-[#cdcdcd]   rounded  flex items-center">
+            <div
+              className={`inputBoxShadow w-[67%] h-[40px] lg:h-[45px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300
+            
+            ${
+              isFocused.includes(7)
+                ? "border-[#2684fe] border-2"
+                : "border-[#cdcdcd] border-[1px] "
+            }`}
+              onFocus={() => handleFocus(7)}
+              onBlur={() => handleBlur(7)}
+            >
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded  text-[#403f3f] "
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[10px] rounded 
+                 text-[#403f3f] outline-none"
                 type="text"
                 // placeholder="Enter Company's website"
               />
@@ -155,17 +235,23 @@ function ContactUs() {
 
           {/* Mesage starts here*/}
 
-          <div className="flex  mb-[20px] md:mb-[24px] lg:mb-[26px]">
-            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[20%]">
+          <div className="flex  justify-between mb-[20px] md:mb-[24px] lg:mb-[26px]">
+            <p className="text-[8.93px] md:text-[11.58px] lg:text-[20px] font-[600] w-[30%]">
               Message
             </p>
-            <div className=" w-[70%]    flex flex-col justify-center">
-              <div className="inputBoxShadow   rounded">
+            <div className=" w-[67%]    flex flex-col justify-center">
+              <div>
                 {" "}
                 <textarea
                   id="message"
                   name="message"
-                  className="resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] "
+                  className={`inputBoxShadow resize-none w-[100%] h-[150px] md:h-[170px] lg:h-[220px] text-[8.93px] md:text-[11.58px] lg:text-[20px] p-[10px] rounded  text-[#403f3f] outline-none lg:hover:border-[#b3b3b3] lg:duration-300 ${
+                    isFocused.includes(8)
+                      ? "border-[#2684fe] border-2"
+                      : "border-[#cdcdcd] border-[1px] "
+                  }`}
+                  onFocus={() => handleFocus(8)}
+                  onBlur={() => handleBlur(8)}
                 />
               </div>
               <div className="flex justify-center mt-[20px] lg:mt-[25px]">

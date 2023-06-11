@@ -825,14 +825,16 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p
-                  className="myButton2 text-[#fff] myButtonShadow  text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
-                  style={{
-                    backgroundColor: "#fff",
-                  }}
-                >
-                  Get Started
-                </p>
+                <Link to="/ContactUs">
+                  <p
+                    className="myButton2 text-[#fff] myButtonShadow  text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
@@ -905,14 +907,16 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p
-                  className="myButton2 text-[#fff] myButtonShadow  text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
-                  style={{
-                    backgroundColor: "#fff",
-                  }}
-                >
-                  Get Started
-                </p>
+                <Link to="/ContactUs">
+                  <p
+                    className="myButton2 text-[#fff] myButtonShadow  text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
@@ -1005,14 +1009,16 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p
-                  className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
-                  style={{
-                    backgroundColor: "#fff",
-                  }}
-                >
-                  Get Started
-                </p>
+                <Link to="/contactUs">
+                  <p
+                    className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
@@ -1105,14 +1111,16 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p
-                  className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
-                  style={{
-                    backgroundColor: "#fff",
-                  }}
-                >
-                  Get Started
-                </p>
+                <Link to="/contactUs">
+                  <p
+                    className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                    style={{
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
@@ -1205,9 +1213,11 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
-                  Get Started
-                </p>
+                <Link to="/contactUs">
+                  <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
@@ -1321,14 +1331,16 @@ function VTU_DEV() {
                 </div>
 
                 <div className="flex justify-center my-8">
-                  <p
-                    className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
-                    style={{
-                      backgroundColor: "#fff",
-                    }}
-                  >
-                    Get Started
-                  </p>
+                  <Link to="/contactUs">
+                    <p
+                      className="myButton2 text-[#fff] myButtonShadow text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer"
+                      style={{
+                        backgroundColor: "#fff",
+                      }}
+                    >
+                      Get Started
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="flex ml-4 items-center my-4">
@@ -1421,9 +1433,11 @@ function VTU_DEV() {
                 </div>
 
                 <div className="flex justify-center my-8">
-                  <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
-                    Get Started
-                  </p>
+                  <Link to="/contactUs">
+                    <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
+                      Get Started
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="flex ml-4 items-center my-4">
@@ -1533,9 +1547,11 @@ function VTU_DEV() {
               </div>
 
               <div className="flex justify-center my-8">
-                <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
-                  Get Started
-                </p>
+                <Link to="/contactUs">
+                  <p className="myButton2 myButtonShadow text-[#fff] text-xl w-[150px] text-center rounded-lg py-2 font-semibold  cursor-pointer">
+                    Get Started
+                  </p>
+                </Link>
               </div>
 
               <div className="flex ml-4 items-center my-4">
