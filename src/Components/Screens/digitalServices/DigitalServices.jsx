@@ -31,8 +31,11 @@ function DigitalServices() {
               experts are devoted to developing your business and catering to
               your digital needs.
             </p>
+
             <div className="my-6">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/contactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
 

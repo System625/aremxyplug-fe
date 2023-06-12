@@ -1717,7 +1717,9 @@ function VTU_DEV() {
         </p>
 
         <div className="flex justify-center md:mb-[15%] mb-[25%]">
-          <Bluebutton text="Contact Sales" />
+          <Link to="/OwnVTU">
+            <Bluebutton text="Contact Sales" />
+          </Link>
         </div>
       </div>
 

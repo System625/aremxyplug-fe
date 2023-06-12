@@ -35,7 +35,9 @@ function GraphicDesign() {
               both its branding and innovative design choices.
             </p>
             <div className="my-6">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/contactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
           {/* EMAIL AND LADY IMAGE */}

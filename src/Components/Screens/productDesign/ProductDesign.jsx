@@ -40,7 +40,9 @@ function ProductDesign() {
               and provide seamless interactions across various platforms.
             </p>
             <div className="mt-6">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/contactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
           {/* MAN IN SUIT */}
