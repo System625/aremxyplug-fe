@@ -3181,7 +3181,7 @@ check-types@^11.1.1:
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.2.2.tgz#7afc0b6a860d686885062f2dba888ba5710335b4"
   integrity sha512-HBiYvXvn9Z70Z88XKjz3AEKd4HJhBXsa3j7xFnITAzoS8+q6eIGi8qDB8FKPBAjtuxjI/zFpwuiCb8oDtKOYrA==
 
-chima-flags-select@1.0.2:
+chima-flags-select@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/chima-flags-select/-/chima-flags-select-1.0.2.tgz#bc70435ebc4d8100f6a6759763c85e0f007e626b"
   integrity sha512-vEtCAm1oZr16fdBBgcGvn0sGHnOPCagRxRJ3hUUkAvhqn5q5c997TXSBvvej4Bn3KrT1UmBFvjAv8m2WlOBA/A==
