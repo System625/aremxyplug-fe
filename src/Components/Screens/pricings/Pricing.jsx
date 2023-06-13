@@ -55,7 +55,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/mtn.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -73,7 +73,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/airtel.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -91,7 +91,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/glo.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -109,7 +109,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/9mobile.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -127,7 +127,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/smile.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px] md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -145,7 +145,7 @@ export const Pricing = () => {
                   src="./Images/pricngimages/international.logo.png"
                   alt="/"
                 />
-                <div className="flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px]  md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
+                <div className="rounded-[2px] flex justify-center items-center text-[3px] font-bold text-[#ffffff] bg-[#04177f] w-[35px] h-[13px]  md:w-[70px] md:h-[25px] md:text-[7px] lg:w-[125px] lg:h-[45px] lg:text-[12px] lg:rounded-md">
                   Buy Now
                 </div>
               </div>
@@ -197,7 +197,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -206,7 +206,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
@@ -240,7 +240,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -249,7 +249,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
@@ -283,7 +283,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -292,7 +292,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
@@ -326,7 +326,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -335,7 +335,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
@@ -369,7 +369,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -378,7 +378,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
@@ -412,7 +412,7 @@ export const Pricing = () => {
                     Validity: Monthly
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
-                    Network: 4G LITE
+                    Network: 4G-5G LITE
                   </li>
                   <li className="text-[5px] font-medium md:text-[10px] lg:text-[18px]">
                     Hotspot: Accessible
@@ -421,7 +421,7 @@ export const Pricing = () => {
                     Usage: Desktop, Tablet, Mobile
                   </li>
                 </ul>
-                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] ">
+                <div className="mx-auto text-[#ffffff] text-[3.77px] font-bold bg-[#04177f] w-[42px] h-[11.81px] py-[4px] flex justify-center items-center rounded-sm md:text-[7px] md:w-[92px] md:h-[25px] lg:w-[164px] lg:h-[45px] lg:text-[13px] md:rounded-md">
                   Subscribe Now
                 </div>
               </div>
