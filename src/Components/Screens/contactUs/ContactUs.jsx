@@ -1,18 +1,44 @@
-import "react-phone-number-input/style.css";
-import React, { useState } from "react";
+import "react-phone-input-2/lib/style.css";
+import React, { useEffect, useState } from "react";
 import "./contactUs.css";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import ReactFlagsSelect from "chima-flags-select";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput from "react-phone-input-2";
+
 // import { BiSolidDownArrow } from "react-icons/b";
-import { AiOutlineCaretDown } from "react-icons/ai";
+// import { AiOutlineCaretDown } from "react-icons/ai";
 
 function ContactUs() {
-  const [country, setCountry] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState(null);
-  const [isFocused, setIsFocused] = useState([]);
+  const [textSize, setTextSize] = useState("");
 
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let newSize = "";
+
+      if (width < 768) {
+        newSize = 8.93;
+      } else if (width >= 768 && width < 1024) {
+        newSize = 11.58;
+      } else {
+        newSize = 20;
+      }
+
+      setTextSize(newSize);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const [country, setCountry] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("234");
+  const [isFocused, setIsFocused] = useState([]);
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
       setIsFocused([...isFocused, index]);
@@ -138,21 +164,33 @@ function ContactUs() {
               Phone No
             </p>
             <div
-              className={`relative inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 pl-2
-                   ${
-                     isFocused.includes(4)
-                       ? "border-[#2684fe] border-2"
-                       : "border-[#cdcdcd] border-[1px]  "
-                   }`}
-              onFocus={() => handleFocus(4)}
-              onBlur={() => handleBlur(4)}
+              className={` inputBoxShadow w-[67%] h-[40px] lg:h-[45px]   rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300  border-[#cdcdcd] border-[1px] `}
             >
-              <AiOutlineCaretDown className="absolute w-4 h-4 ml-2 text-[#4d4d4d]" />
+              {/* <AiOutlineCaretDown className="absolute w-4 h-4 ml-2 text-[#4d4d4d]" /> */}
               <form>
                 <PhoneInput
-                  international
                   value={phoneNumber}
+                  placeholder=""
                   onChange={(val) => setPhoneNumber(val)}
+                  enableSearch
+                  disableSearchIcon
+                  className="inputClass"
+                  searchNotFound
+                  inputStyle={{
+                    fontSize: textSize,
+                    color: "#403f3f",
+                    border: "none",
+                    width: "100%",
+                    paddingTop: 2,
+                  }}
+                  buttonStyle={{
+                    border: "none",
+                    backgroundColor: "#fff",
+                  }}
+                  dropdownStyle={{
+                    color: "#403f3f",
+                    fontSize: textSize,
+                  }}
                 />
               </form>
             </div>

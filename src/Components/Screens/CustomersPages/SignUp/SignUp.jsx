@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactFlagsSelect from "chima-flags-select";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
@@ -153,14 +153,35 @@ export const SignUp = () => {
                 type="number"
               /> */}
 
-              <AiOutlineCaretDown className="absolute w-4 h-4 mr-[85%] text-[#4d4d4d]" />
-              <form>
+              {/* <AiOutlineCaretDown className="absolute w-4 h-4 mr-[85%] text-[#4d4d4d]" /> */}
+              
                 <PhoneInput
-                  international
                   value={phoneNumber}
+                  placeholder=""
                   onChange={(val) => setPhoneNumber(val)}
+                  enableSearch
+                  disableSearchIcon
+                  className="inputClass"
+                  searchNotFound
+                  inputStyle={{
+                    fontSize:"18px",
+                    color: "#403f3f",
+                    border: "none",
+                    width: "100%",
+                    // paddingTop: 2,
+                  }}
+                  buttonStyle={{
+                    marginLeft: "-1%",
+                    border: "none",
+                    fontSize:"40px",
+                    backgroundColor: "#fff",
+                  }}
+                  dropdownStyle={{
+                    color: "#403f3f",
+                    fontSize: "18px",
+                  }}
                 />
-              </form>
+              
             </div>
           </div>
           {/* ==============Phone Number end=========== */}

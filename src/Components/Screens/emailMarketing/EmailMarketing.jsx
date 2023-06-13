@@ -33,7 +33,9 @@ function EmailMarketing() {
               create a bond with your customers.
             </p>
             <div className="my-6">
-              <Bluebutton text="Contact Sales" />
+              <Link to="/contactUs">
+                <Bluebutton text="Contact Sales" />
+              </Link>
             </div>
           </div>
           {/* EMAIL AND LADY IMAGE */}

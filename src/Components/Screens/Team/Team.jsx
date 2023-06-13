@@ -53,7 +53,7 @@ const Team = () => {
         }
       </div>
       <div className='flex justify-center mt-[100px]'>
-          <Link to={`/ContactUs`} className='bg-primary text-[10px] font-bold leading-[11.31px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Us</Link>
+          <Link to={`/ContactUs`} className='bg-primary text-[10px] font-bold leading-[15px] text-white px-[35px] py-[12px] inline-block rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px] lg:leading-[16px]'>Contact Us</Link>
       </div>
     </div>
   );
