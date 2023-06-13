@@ -108,8 +108,9 @@ export const Home = () => {
           </div>
           <div className="flex gap-[6%] mt-[5%]">
             <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
-              Sign up
+              <Link to="/signUp">Sign up</Link>
             </button>
+
             <button className="bg-[#04177F] text-[#ffffff] p-[3%] rounded-lg w-[108px] text-[10px] lg:w-[25%] lg:text-[20px] lg:p-[1%] lg:h-[45px]">
               Sign in
             </button>
