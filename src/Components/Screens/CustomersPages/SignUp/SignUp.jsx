@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { AiOutlineCaretDown } from "react-icons/ai";
+// import { AiOutlineCaretDown } from "react-icons/ai";
 import "./SignUp.css";
 
 export const SignUp = () => {
