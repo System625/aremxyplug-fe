@@ -13,7 +13,6 @@ export const SignUp = () => {
   const [isFocused, setIsFocused] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
-  
 
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
@@ -148,40 +147,28 @@ export const SignUp = () => {
               onFocus={() => handleFocus(4)}
               onBlur={() => handleBlur(4)}
             >
-              {/* <input
-                className="outline-none flex justify-center items-center text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
-                type="number"
-              /> */}
-
-              {/* <AiOutlineCaretDown className="absolute w-4 h-4 mr-[85%] text-[#4d4d4d]" /> */}
-              
-                <PhoneInput
-                  value={phoneNumber}
-                  placeholder=""
-                  onChange={(val) => setPhoneNumber(val)}
-                  enableSearch
-                  disableSearchIcon
-                  className="inputClass"
-                  searchNotFound
-                  inputStyle={{
-                    fontSize:"18px",
-                    color: "#403f3f",
-                    border: "none",
-                    width: "100%",
-                    // paddingTop: 2,
-                  }}
-                  buttonStyle={{
-                    marginLeft: "-1%",
-                    border: "none",
-                    fontSize:"40px",
-                    backgroundColor: "#fff",
-                  }}
-                  dropdownStyle={{
-                    color: "#403f3f",
-                    fontSize: "18px",
-                  }}
-                />
-              
+              <PhoneInput
+                value={phoneNumber}
+                placeholder=""
+                onChange={(val) => setPhoneNumber(val)}
+                enableSearch
+                disableSearchIcon
+                className="inputClass bg-black "
+                inputStyle={{
+                  fontSize: "16px",
+                  color: "#403f3f",
+                  border: "none",
+                  height: "19px",
+                  width: "100%",
+                }}
+                containerStyle={{
+                  backgroundColor: "transparent",
+                }}
+                dropdownStyle={{
+                  color: "#04177f",
+                  fontSize: "18px",
+                }}
+              />
             </div>
           </div>
           {/* ==============Phone Number end=========== */}
@@ -287,7 +274,7 @@ export const SignUp = () => {
             Forget password ?
           </p>
         </div>
-        <div className="mb-[5%] lg:mb-[2%] bg-[#04177f] w-[65px] h-[19px] text-white p-[1%] rounded-[4px] mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[113px] lg:h-[38px] lg:text-[13px] lg:rounded-md">
+        <div className="mb-[5%] lg:mb-[2%] bg-[#04177f] w-[65px] h-[20px] text-white p-[1%] rounded-[4px] mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[113px] lg:h-[38px] lg:text-[13px] lg:rounded-md">
           Sign Up
         </div>
         <div className="flex text-[#00000057] justify-center items-center">
