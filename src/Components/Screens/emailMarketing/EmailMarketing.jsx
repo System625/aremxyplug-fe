@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./EmailMarketing.css";
@@ -6,6 +6,37 @@ import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 function EmailMarketing() {
+  const [gifSize, setGifSize] = useState("");
+  const [gifHeight, setGifHeight] = useState("");
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let newWidth = "";
+      let newHeight = "";
+
+      if (width < 768) {
+        newWidth = 500;
+        newHeight = 500;
+      } else if (width >= 768 && width < 1024) {
+        newWidth = 470;
+        newHeight = 470;
+      } else {
+        newWidth = 700;
+        newHeight = 650;
+      }
+
+      setGifSize(newWidth);
+      setGifHeight(newHeight);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div>
@@ -271,7 +302,7 @@ function EmailMarketing() {
         </p>
 
         <div
-          className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className="grid  xl:gap-x-4  md:grid-cols-2  lg:gap-x-4    
         grid-cols-1 gap-y-4 
          lg:px-[8%] px-[5%] mt-[10px]  md:mt-[30px] lg:mt-[50px] 
        
@@ -343,14 +374,15 @@ function EmailMarketing() {
               </p>
             </div>
           </div>
-          {/* Background image */}
-          <div className="h-[350px] md:h-[unset]  ">
+          {/* Background image  */}
+
+          <div className="h-[350px] md:h-[unset]  flex justify-center md:block md:justify-[unset] mb-[30px] md:mb-[unset]">
             <Player
               autoplay
               loop
               speed={2.5}
               src="https://assets5.lottiefiles.com/packages/lf20_6avkbecb.json"
-              style={{ height: "400px", width: "400px" }}
+              style={{ height: `${gifHeight}px`, width: `${gifSize}px` }}
             ></Player>
           </div>
           {/* <div
