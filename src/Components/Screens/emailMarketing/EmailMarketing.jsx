@@ -3,6 +3,8 @@ import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./EmailMarketing.css";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 function EmailMarketing() {
   return (
     <>
@@ -259,7 +261,7 @@ function EmailMarketing() {
       {/* Our Key Features */}
       <div className="bg-[#92ABFE] my-[50px] md:my-[70px]">
         <p
-          className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
+          className="text-[30px] font-bold md:text-[18.16px] lg:text-[32px] text-center pt-[50px]
            "
           style={{
             color: primaryColor,
@@ -342,13 +344,22 @@ function EmailMarketing() {
             </div>
           </div>
           {/* Background image */}
-          <div
+          <div className="h-[350px] md:h-[unset]  ">
+            <Player
+              autoplay
+              loop
+              speed={2.5}
+              src="https://assets5.lottiefiles.com/packages/lf20_6avkbecb.json"
+              style={{ height: "400px", width: "400px" }}
+            ></Player>
+          </div>
+          {/* <div
             className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
             style={{
               backgroundImage:
                 "url(./Images/email_marketing/keyFeaturesImage.png)",
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
       {/*   AremxyPlug Email Marketing Service */}

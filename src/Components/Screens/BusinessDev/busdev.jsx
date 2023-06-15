@@ -58,13 +58,13 @@ export const BusinessDev = () => {
       <div
         className="special mx-[-6%] px-[5%] py-[10%] md:px-[10%] lg:mx-[-9.5%]"
         style={{
-          backgroundImage:"url(./Images/businessimages/dottedBG.png)",
-          backgroundRepeat:"no-repeat",
-          backgroundPosition:"center",
-          backgroundSize:"cover"
+          backgroundImage: "url(./Images/businessimages/dottedBG.png)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
           // width:"100%"
 
-            // "url(.png), linear-gradient(90.67deg, #92ABFE 0.49%, #05E2FF 99.34%)",
+          // "url(.png), linear-gradient(90.67deg, #92ABFE 0.49%, #05E2FF 99.34%)",
         }}
       >
         <div className="md:flex mb-[20%] md:justify-center md:items-center md:gap-[250px] lg:gap-[300px] lg:mb-[10%]">
@@ -563,9 +563,11 @@ export const BusinessDev = () => {
           Book a session with us, we are so keen to help you to crush the
           adventure!
         </div>
-        <Link to="/ContactUs"><div className="w-[95px] h-[26px] bg-[#04177f] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[169px] lg:h-[45px] lg:text-[13px]">
-          Contact sales
-        </div></Link>
+        <Link to="/ContactUs">
+          <div className="w-[95px] h-[26px] bg-[#04177f] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[169px] lg:h-[45px] lg:text-[13px]">
+            Contact sales
+          </div>
+        </Link>
       </div>
     </div>
   );
