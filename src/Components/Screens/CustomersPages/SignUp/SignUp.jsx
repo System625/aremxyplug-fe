@@ -7,8 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
 import Joi from "joi";
 // import Modal from "../../Modal/Modal"
-import { Verification } from "../../../VerificationCode/Verification";
-import { Modal } from "../../Modal/Modal";
+// import { Verification } from "../../../VerificationCode/Verification";
+// import { Modal } from "../../Modal/Modal";
 // import { toast } from "react-toastify";
 
 export const SignUp = () => {
@@ -16,7 +16,7 @@ export const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
   const [errors, setErrors] = useState({});
-  const [verification, setVerification] = useState(false);
+  // const [verification, setVerification] = useState(false);
   const [state, setState] = useState({
     country: "",
     fullName: "",
@@ -30,13 +30,13 @@ export const SignUp = () => {
 
   const {
     country,
-    fullName,
-    userName,
+    // fullName,
+    // userName,
     email,
     phoneNumber,
     IVcode,
-    password,
-    confirmPassword,
+    // password,
+    // confirmPassword,
   } = state;
 
   // console.log(state);
@@ -490,11 +490,11 @@ export const SignUp = () => {
       </div>
 
       {/* <Newform /> */}
-      {verification && (
+      {/* {verification && (
         <Modal>
           <Verification />
         </Modal>
-      )}
+      )} */}
     </div>
   );
 };
