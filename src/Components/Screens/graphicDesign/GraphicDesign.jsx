@@ -237,7 +237,7 @@ function GraphicDesign() {
       {/* Our Key Features */}
       <div className="keyFeaturesGradient  my-[50px] md:my-[70px]">
         <p
-          className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
+          className="text-[30px] font-bold md:text-[18.16px] lg:text-[32px] text-center pt-[50px]
            "
           style={{
             color: primaryColor,
