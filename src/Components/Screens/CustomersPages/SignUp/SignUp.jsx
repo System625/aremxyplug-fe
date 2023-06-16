@@ -4,15 +4,94 @@ import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-// import { AiOutlineCaretDown } from "react-icons/ai";
 import "./SignUp.css";
+import Joi from "joi";
+// import Modal from "../../Modal/Modal"
+import { Verification } from "../../../VerificationCode/Verification";
+import { Modal } from "../../Modal/Modal";
+// import { toast } from "react-toastify";
 
 export const SignUp = () => {
-  const [country, setCountry] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState(null);
   const [isFocused, setIsFocused] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [verification, setVerification] = useState(false);
+  const [state, setState] = useState({
+    country: "",
+    fullName: "",
+    userName: "",
+    email: "",
+    phoneNumber: "",
+    IVcode: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const {
+    country,
+    fullName,
+    userName,
+    email,
+    phoneNumber,
+    IVcode,
+    password,
+    confirmPassword,
+  } = state;
+
+  // console.log(state);
+
+  // ========form validation using regex=======
+  const schema = Joi.object({
+    country: Joi.string().required(),
+
+    fullName: Joi.string()
+      .pattern(new RegExp(/^[A-Za-z]+(?:\s[A-Za-z]+)+$/))
+      .required()
+      .messages({ "string.pattern.base": "Please enter your First name and last name" }),
+
+    userName: Joi.string()
+      .pattern(new RegExp(/^[A-Za-z\s]+\d+$/))
+      .required()
+      .messages({ "string.pattern.base": "Username must have a digit" }),
+
+    email: Joi.string()
+      .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
+      .required()
+      .messages({ "string.pattern.base": "Invalid email " }),
+
+    phoneNumber: Joi.string().required(),
+
+    password: Joi.string()
+      .pattern(new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))
+      .required()
+      .messages({
+        "string.pattern.base":
+          "Password must have At least one alphabetical character, At least one digit and Minimum length of 8 characters",
+      }),
+
+    confirmPassword: Joi.string()
+      .pattern(new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))
+      .required()
+      .messages({
+        "string.pattern.base":
+          "Password must have At least one alphabetical character, At least one digit and Minimum length of 8 characters",
+      }),
+  });
+  // ======end of form valdiation=====
+
+  const handleCountryChange = (countryCode) => {
+    setState({ ...state, country: countryCode });
+  };
+
+  const handlePhoneNumberChange = (value) => {
+    setState({ ...state, phoneNumber: value });
+  };
+
+  function changeHandler(e) {
+    const { name, value } = e.target;
+    setState({ ...state, [name]: value });
+  }
 
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
@@ -24,6 +103,55 @@ export const SignUp = () => {
     if (isFocused.includes(index)) {
       setIsFocused(isFocused.filter((item) => item !== index));
     }
+  };
+
+  // ======on submit function=======
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const {
+      country,
+      fullName,
+      userName,
+      email,
+      phoneNumber,
+      password,
+      confirmPassword,
+    } = state;
+
+    const { error } = schema.validate({
+      fullName,
+      userName,
+      email,
+      phoneNumber,
+      password,
+      confirmPassword,
+      country,
+    });
+    if (error) {
+      // Handle validation error
+      setErrors(
+        error.details.reduce((acc, curr) => {
+          acc[curr.path[0]] = curr.message;
+          return acc;
+        }, {})
+      );
+    } else {
+      console.log("Form submitted successfully");
+      // toast.success("Sign Up successful");
+      setState({
+        country: "",
+        fullName: "",
+        userName: "",
+        email: "",
+        phoneNumber: "",
+        IVcode: "",
+        password: "",
+        confirmPassword: "",
+      });
+    }
+    setErrors({});
+    // setVerification(true); 
   };
 
   return (
@@ -49,7 +177,10 @@ export const SignUp = () => {
         <p className="text-[11px] font-bold text-center text-[#00000056] lg:text-[20px]">
           Create an account Now to get started...
         </p>
-        <div className="pt-[5%] pb-[10%] md:grid md:grid-cols-2 md:gap-[5%] md:mx-[8%] lg:pt-[13%] lg:px-[10%] lg:pb-[6%]">
+        <form
+          // onSubmit={handleSubmit}
+          className="pt-[5%] pb-[10%] md:grid md:grid-cols-2 md:gap-[5%] md:mx-[8%] lg:pt-[13%] lg:px-[10%] lg:pb-[6%]"
+        >
           {/* =====Country Input start======= */}
           <div>
             <p className="text-[9px] font-semibold mb-[5px] lg:text-[16px]">
@@ -60,22 +191,30 @@ export const SignUp = () => {
             >
               <div className="mt-[-3%] ">
                 <ReactFlagsSelect
-                  selected={country}
-                  onSelect={(value) => setCountry(value)}
+                  selected={state.country}
                   className="w-[100%]"
                   placeholder=" "
                   searchable
+                  value={country}
+                  name="country"
+                  onSelect={handleCountryChange}
                 />
               </div>
             </div>
+            {errors.country && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.country}
+              </div>
+            )}
           </div>
           {/* ======Country Input end========= */}
 
-          {/* =======FirstName Input start=========== */}
+          {/* =======FullName Input start=========== */}
           <div>
             <p className="text-[9px] font-semibold py-[5px] lg:text-[16px]">
               Full Name
             </p>
+
             <div
               className={`inputBorder px-[2%] flex justify-center items-center w-[98%] h-[22px] rounded-[2.9px] lg:w-[286px] lg:h-[39px] ${
                 isFocused.includes(1) ? "border-[#2684fe] border" : " border "
@@ -86,10 +225,18 @@ export const SignUp = () => {
               <input
                 className="outline-none flex justify-center items-center text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type="text"
+                value={state.fullName}
+                name="fullName"
+                onChange={changeHandler}
               />
             </div>
+            {errors.fullName && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.fullName}
+              </div>
+            )}
           </div>
-          {/* =======FirstName Input end========= */}
+          {/* =======FullName Input end========= */}
 
           {/* =========UserName Input start========  */}
           <div>
@@ -108,8 +255,16 @@ export const SignUp = () => {
               <input
                 className="outline-none flex justify-center items-center text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type="text"
+                value={state.userName}
+                name="userName"
+                onChange={changeHandler}
               />
             </div>
+            {errors.userName && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.userName}
+              </div>
+            )}
           </div>
           {/* =========UserName Input start======== */}
 
@@ -130,8 +285,16 @@ export const SignUp = () => {
               <input
                 className="outline-none flex justify-center items-center text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type="email"
+                value={email}
+                name="email"
+                onChange={changeHandler}
               />
             </div>
+            {errors.email && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.email}
+              </div>
+            )}
           </div>
           {/* ===============Email Input end============ */}
 
@@ -148,9 +311,11 @@ export const SignUp = () => {
               onBlur={() => handleBlur(4)}
             >
               <PhoneInput
-                value={phoneNumber}
+                selected={phoneNumber}
+                value={state.phoneNumber}
+                name="phoneNumber"
                 placeholder=""
-                onChange={(val) => setPhoneNumber(val)}
+                onChange={handlePhoneNumberChange}
                 enableSearch
                 disableSearchIcon
                 className="inputClass bg-black "
@@ -165,11 +330,16 @@ export const SignUp = () => {
                   backgroundColor: "transparent",
                 }}
                 dropdownStyle={{
-                  color: "#04177f",
+                  color: "#403f3f",
                   fontSize: "18px",
                 }}
               />
             </div>
+            {errors.phoneNumber && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.phoneNumber}
+              </div>
+            )}
           </div>
           {/* ==============Phone Number end=========== */}
 
@@ -187,13 +357,17 @@ export const SignUp = () => {
             >
               <input
                 className="outline-none flex justify-center items-center text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
-                type="number"
+                type="text"
+                value={IVcode}
+                name="IVcode"
+                onChange={changeHandler}
               />
             </div>
           </div>
           {/* ===========Invitation code end=============  */}
 
-          {/* ==========New password start============= */}
+          {/* ========== password start============= */}
+
           <div>
             <p className="text-[9px] font-semibold py-[5px] lg:text-[16px]">
               New Password
@@ -208,6 +382,9 @@ export const SignUp = () => {
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPassword ? "text" : "password"}
+                value={state.password}
+                name="password"
+                onChange={changeHandler}
               />
               <div
                 className="float-right"
@@ -224,8 +401,13 @@ export const SignUp = () => {
                 )}
               </div>
             </div>
+            {errors.password && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.password}
+              </div>
+            )}
           </div>
-          {/* ==========New password end============= */}
+          {/* ========== password end============= */}
 
           {/* ==========Confirm password start============= */}
           <div>
@@ -242,6 +424,9 @@ export const SignUp = () => {
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPasswordTwo ? "text" : "password"}
+                value={state.confirmPassword}
+                name="confirmPassword"
+                onChange={changeHandler}
               />
               <div
                 className="float-right"
@@ -258,9 +443,14 @@ export const SignUp = () => {
                 )}
               </div>
             </div>
+            {errors.confirmPassword && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.confirmPassword}
+              </div>
+            )}
           </div>
           {/* ==========Confirm password end============= */}
-        </div>
+        </form>
 
         <div className="lg:ml-[13%]">
           <div className="flex gap-[5px] w-[90%] mx-auto">
@@ -274,9 +464,14 @@ export const SignUp = () => {
             Forget password ?
           </p>
         </div>
-        <div className="mb-[5%] lg:mb-[2%] bg-[#04177f] w-[65px] h-[20px] text-white p-[1%] rounded-[4px] mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[113px] lg:h-[38px] lg:text-[13px] lg:rounded-md">
+
+        <button
+          onClick={handleSubmit}
+          type="submit"
+          className="flex justify-center item mb-[5%] lg:mb-[2%] bg-[#04177f] w-[65px] h-[20px] text-white p-[1%] rounded-[4px] mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[113px] lg:h-[38px] lg:text-[13px] lg:rounded-md"
+        >
           Sign Up
-        </div>
+        </button>
         <div className="flex text-[#00000057] justify-center items-center">
           <hr className="w-[1%]"></hr>{" "}
           <p className="text-[8px] lg:text-[14px]">OR</p>{" "}
@@ -293,6 +488,13 @@ export const SignUp = () => {
           <span className="text-[#04177f]">Sign In</span>
         </p>
       </div>
+
+      {/* <Newform /> */}
+      {verification && (
+        <Modal>
+          <Verification />
+        </Modal>
+      )}
     </div>
   );
 };
