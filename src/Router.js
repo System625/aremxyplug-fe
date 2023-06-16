@@ -24,6 +24,7 @@ import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCo
 import PrivacyPolicy from "./Components/Screens/PrivacyPolicy/PrivacyPolicy";
 import Team from './Components/Screens/Team/Team';
 import { SignUp } from "./Components/Screens/CustomersPages/SignUp/SignUp";
+import PasswordReset from  "./Components/Screens/CustomersPages/Password/PasswordReset"
 
 export const Router = () => {
   return (
@@ -54,6 +55,7 @@ export const Router = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/team" element={<Team/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
+        <Route path="/passwordReset" element={<PasswordReset/>}/>
       </Routes>
     </div>
   );
