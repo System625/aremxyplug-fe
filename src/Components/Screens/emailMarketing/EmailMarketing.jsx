@@ -1,9 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./EmailMarketing.css";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 function EmailMarketing() {
+  const [gifSize, setGifSize] = useState("");
+  const [gifHeight, setGifHeight] = useState("");
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let newWidth = "";
+      let newHeight = "";
+
+      if (width < 768) {
+        newWidth = 500;
+        newHeight = 500;
+      } else if (width >= 768 && width < 1024) {
+        newWidth = 470;
+        newHeight = 470;
+      } else {
+        newWidth = 700;
+        newHeight = 650;
+      }
+
+      setGifSize(newWidth);
+      setGifHeight(newHeight);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div>
@@ -259,7 +292,7 @@ function EmailMarketing() {
       {/* Our Key Features */}
       <div className="bg-[#92ABFE] my-[50px] md:my-[70px]">
         <p
-          className="font-bold text-[30px] md:text-[18.53px] lg:text-lg text-center pt-[50px]
+          className="text-[30px] font-bold md:text-[18.16px] lg:text-[32px] text-center pt-[50px]
            "
           style={{
             color: primaryColor,
@@ -269,7 +302,7 @@ function EmailMarketing() {
         </p>
 
         <div
-          className="grid  xl:gap-x-4  md:grid-cols-2 md:gap-x-4    
+          className="grid  xl:gap-x-4  md:grid-cols-2  lg:gap-x-4    
         grid-cols-1 gap-y-4 
          lg:px-[8%] px-[5%] mt-[10px]  md:mt-[30px] lg:mt-[50px] 
        
@@ -341,14 +374,24 @@ function EmailMarketing() {
               </p>
             </div>
           </div>
-          {/* Background image */}
-          <div
+          {/* Background image  */}
+
+          <div className="h-[350px] md:h-[unset]  flex justify-center md:block md:justify-[unset] mb-[30px] md:mb-[unset]">
+            <Player
+              autoplay
+              loop
+              speed={2.5}
+              src="https://assets5.lottiefiles.com/packages/lf20_6avkbecb.json"
+              style={{ height: `${gifHeight}px`, width: `${gifSize}px` }}
+            ></Player>
+          </div>
+          {/* <div
             className="h-[350px] md:h-[unset]  bg-contain bg-center bg-no-repeat"
             style={{
               backgroundImage:
                 "url(./Images/email_marketing/keyFeaturesImage.png)",
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
       {/*   AremxyPlug Email Marketing Service */}
