@@ -6,10 +6,9 @@ import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
 import Joi from "joi";
-// import Modal from "../../Modal/Modal"
-// import { Verification } from "../../../VerificationCode/Verification";
-// import { Modal } from "../../Modal/Modal";
-// import { toast } from "react-toastify";
+import { Verification } from "../../../VerificationCode/Verification";
+import { Modal } from "../../Modal/Modal";
+
 
 export const SignUp = () => {
   const [isFocused, setIsFocused] = useState([]);
@@ -80,6 +79,7 @@ export const SignUp = () => {
   });
   // ======end of form valdiation=====
 
+
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
   };
@@ -128,6 +128,7 @@ export const SignUp = () => {
       confirmPassword,
       country,
     });
+
     if (error) {
       // Handle validation error
       setErrors(
@@ -138,7 +139,6 @@ export const SignUp = () => {
       );
     } else {
       console.log("Form submitted successfully");
-      // toast.success("Sign Up successful");
       setState({
         country: "",
         fullName: "",
@@ -150,8 +150,15 @@ export const SignUp = () => {
         confirmPassword: "",
       });
     }
-    setErrors({});
-    // setVerification(true); 
+    // setErrors({});
+
+    // if(country && fullName){
+    //   setVerification(true)
+    // }
+    // else(
+    //   setVerification(false)
+    // )
+    ; 
   };
 
   return (
@@ -489,12 +496,11 @@ export const SignUp = () => {
         </p>
       </div>
 
-      {/* <Newform /> */}
-      {/* {verification && (
+      {/* {verification && ( */}
         <Modal>
           <Verification />
         </Modal>
-      )} */}
+      {/* )} */}
     </div>
   );
 };
