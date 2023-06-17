@@ -15,7 +15,7 @@ export const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
   const [errors, setErrors] = useState({});
-  const [verification, setVerification] = useState(false);
+  // const [verification, setVerification] = useState(false);
   const [state, setState] = useState({
     country: "",
     fullName: "",
@@ -496,11 +496,11 @@ export const SignUp = () => {
         </p>
       </div>
 
-      {verification && (
+      {/* {verification && ( */}
         <Modal>
           <Verification />
         </Modal>
-      )}
+      {/* )} */}
     </div>
   );
 };
