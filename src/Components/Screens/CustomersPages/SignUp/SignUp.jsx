@@ -6,8 +6,8 @@ import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
 import Joi from "joi";
-import { Verification } from "../../../VerificationCode/Verification";
-import { Modal } from "../../Modal/Modal";
+// import { Verification } from "../../../VerificationCode/Verification";
+// import { Modal } from "../../Modal/Modal";
 
 
 export const SignUp = () => {
@@ -497,9 +497,9 @@ export const SignUp = () => {
       </div>
 
       {/* {verification && ( */}
-        <Modal>
+        {/* <Modal>
           <Verification />
-        </Modal>
+        </Modal> */}
       {/* )} */}
     </div>
   );
