@@ -4,8 +4,25 @@ import passBanner from './passwordBanner.svg';
 import googleLogo from './Google.svg'
 import aremxyPlug from './aremxyPlug.svg'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { ContextProvider } from "../../../Context";
+import { useEffect } from 'react';
 
 const PasswordReset = () => {
+    const { hideNavbar, setHideNavbar } = useContext(ContextProvider);
+
+    const setNav = () => {
+        setHideNavbar(true);
+      };
+      console.log(hideNavbar);
+    
+      useEffect(() => {
+        setNav();
+        return () => {
+          setHideNavbar(false);
+        };
+        // eslint-disable-next-line
+      }, []);
   return (
     <>
         <div className='md:hidden min-h-screen'>
@@ -17,9 +34,9 @@ const PasswordReset = () => {
                 </div>
             </div>
             <div className="relative w-[96%] mx-auto rounded-[14.33px] py-[60px] -mt-[80px] bg-white mb-[25%] shadow-md">
-                <div className="absolute top-[14.3px] left-[14.3px] w-[36.51px] h-[17.73px]">
+                <Link to={`/`} className="absolute top-[14.3px] left-[14.3px] w-[36.51px] h-[17.73px]">
                     <img src={aremxyPlug} alt="brand_logo" className='h-full w-full object-cover'/>
-                </div>
+                </Link>
                 <form action="" className='w-[55%] mx-auto'>
                     <div className="mb-[10px]">
                         <h2 className='text-[9.17px] leading-[11.46px] mb-[5px] font-bold'>Username or Email</h2>
@@ -64,9 +81,9 @@ const PasswordReset = () => {
                 </div>
                 <div className='flex-1 py-[10%] lg:py-[12%]'>
                     <div className="relative w-[96%] mx-auto rounded-[14.33px] py-[60px] bg-white shadow-md lg:pb-[86.5px] lg:pt-[126.5px]">
-                        <div className="absolute top-[14.3px] left-[14.3px] w-[36.51px] h-[17.73px] lg:w-[63.73px] lg:h-[30.94px]">
+                        <Link to={`/`} className="absolute top-[14.3px] left-[14.3px] w-[36.51px] h-[17.73px] lg:w-[63.73px] lg:h-[30.94px]">
                             <img src={aremxyPlug} alt="brand_logo" className='h-full w-full object-cover'/>
-                        </div>
+                        </Link>
                         <form action="" className='w-[55%] mx-auto'>
                             <div className="mb-[10px] lg:mb-[15px]">
                                 <h2 className='text-[9.17px] leading-[11.46px] mb-[5px] font-bold lg:text-[16px] lg:leading-[20px]'>Username or Email</h2>
