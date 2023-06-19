@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactFlagsSelect from "chima-flags-select";
 import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
+import { Link } from "react-router-dom";
+import { ContextProvider } from "../../../Context";
 import Joi from "joi";
-// import { Verification } from "../../../VerificationCode/Verification";
-// import { Modal } from "../../Modal/Modal";
-
 
 export const SignUp = () => {
+  const { hideNavbar, setHideNavbar } = useContext(ContextProvider);
+
+  const setNav = () => {
+    setHideNavbar(true);
+  };
+  console.log(hideNavbar);
+
+  useEffect(() => {
+    setNav();
+    return () => {
+      setHideNavbar(false);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  // import { Verification } from "../../../VerificationCode/Verification";
+  // import { Modal } from "../../Modal/Modal";
+
   const [isFocused, setIsFocused] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
@@ -47,7 +64,9 @@ export const SignUp = () => {
     fullName: Joi.string()
       .pattern(new RegExp(/^[A-Za-z]+(?:\s[A-Za-z]+)+$/))
       .required()
-      .messages({ "string.pattern.base": "Please enter your First name and last name" }),
+      .messages({
+        "string.pattern.base": "Please enter your First name and last name",
+      }),
 
     userName: Joi.string()
       .pattern(new RegExp(/^[A-Za-z\s]+\d+$/))
@@ -78,7 +97,6 @@ export const SignUp = () => {
       }),
   });
   // ======end of form valdiation=====
-
 
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
@@ -158,7 +176,6 @@ export const SignUp = () => {
     // else(
     //   setVerification(false)
     // )
-    ; 
   };
 
   return (
@@ -492,12 +509,14 @@ export const SignUp = () => {
         </div>
         <p className="text-[8px] text-center mt-[5%] md:pb-[15%] lg:mt-[3%] lg:text-[14px]">
           Already have an account ?{" "}
-          <span className="text-[#04177f]">Sign In</span>
+          <span className="text-[#04177f]">
+            <Link to="/Login">Sign In</Link>
+          </span>
         </p>
       </div>
 
       {/* {verification && ( */}
-        {/* <Modal>
+      {/* <Modal>
           <Verification />
         </Modal> */}
       {/* )} */}

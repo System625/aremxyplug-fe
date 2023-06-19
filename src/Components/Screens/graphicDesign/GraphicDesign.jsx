@@ -3,6 +3,7 @@ import Bluebutton from "../../bluebutton/Bluebutton";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./GraphicDesign.css";
 import { Link } from "react-router-dom";
+
 function GraphicDesign() {
   return (
     <>
