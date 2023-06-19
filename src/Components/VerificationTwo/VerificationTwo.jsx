@@ -19,7 +19,7 @@ export const VerificationTwo = () => {
             <input className='h-[20px] w-[21px] border border-[#0003]' type="text" />
           </div>
 
-          <div
+          <div onClick={onClick}
             style={{ backgroundColor: buttonColor }}
             className="mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]"
           >

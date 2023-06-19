@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ContextProvider } from "../../Context";
 
 export const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const { hideNavbar } = useContext(ContextProvider);
 
   function handleScroll() {
     if (
@@ -31,7 +34,9 @@ export const NavBar = () => {
       <div
         className={`${
           scrolled ? "bg-[#ffffff]" : "bg-transparent"
-        } sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden h-[70px]`}
+        } sticky top-0 flex justify-between p-[5%] md:hidden lg:hidden h-[70px]
+        ${hideNavbar === true ? "hidden" : "flex md:hidden lg:hidden"}
+        `}
         style={{
           zIndex: 999,
         }}
@@ -52,7 +57,9 @@ export const NavBar = () => {
         />
       </div>
       {navOpen && (
-        <div className=" bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]">
+        <div
+          className={` bg-[#04177f] fixed z-[50] left-[60%] text-[12px] text-center text-[#ffffff] p-6 w-[35%]   `}
+        >
           <ul className="flex flex-col gap-[20px]">
             <li onClick={() => setNavOpen((prev) => !prev)}>
               <Link to="/">Home</Link>
@@ -89,7 +96,9 @@ export const NavBar = () => {
       <div
         className={`${
           scrolled ? "bg-[#ffffff]" : "bg-transparent"
-        } z-[55] sticky top-0 hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%]`}
+        } z-[55] sticky top-0 hidden md:flex justify-between p-[3%] px-[6%] lg:flex lg:justify-between lg:p-[2%] lg:px-[8%]
+        ${hideNavbar === true ? "hidden md:hidden lg:hidden" : "md:flex "}
+        `}
       >
         <Link to="/">
           <img

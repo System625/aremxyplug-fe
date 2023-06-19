@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactFlagsSelect from "chima-flags-select";
 import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
+import { Link } from "react-router-dom";
+import { ContextProvider } from "../../../Context";
 import Joi from "joi";
 import { Verification } from "../../../VerificationCode/Verification";
 import { Modal } from "../../Modal/Modal";
 
 export const SignUp = () => {
+  const { hideNavbar, setHideNavbar } = useContext(ContextProvider);
+
+  const setNav = () => {
+    setHideNavbar(true);
+  };
+  console.log(hideNavbar);
+
+  useEffect(() => {
+    setNav();
+    return () => {
+      setHideNavbar(false);
+    };
+    // eslint-disable-next-line
+  }, []);
+
   const [isFocused, setIsFocused] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
@@ -150,9 +167,8 @@ export const SignUp = () => {
         password: "",
         confirmPassword: "",
       });
-      setErrors({})
+      setErrors({});
     }
-
   };
 
   return (
@@ -167,11 +183,13 @@ export const SignUp = () => {
 
       {/* =====Sign up Form==== */}
       <div className="pb-[15%] bg-[#ffffff] ml-[3%] rounded-bl-3xl rounded-tl-3xl px-[4%] md:w-[573px] md:h-[640px] md:ml-[30%] lg:w-[1001px] lg:h-[1024px] lg:ml-[%] lg:px-0 lg:rounded-bl-[52px] lg:rounded-tl-[52px]">
-        <img
-          className="w-[36px] py-[5%] lg:w-[93px] lg:h-[] lg:py-[2%] lg:pl-[3%]"
-          src="./Images/signupimages/ap.png"
-          alt="/"
-        />
+        <Link to="/">
+          <img
+            className="w-[36px] py-[5%] lg:w-[93px] lg:h-[] lg:py-[2%] lg:pl-[3%]"
+            src="./Images/signupimages/ap.png"
+            alt="/"
+          />
+        </Link>
         <p className="text-[18px] font-extrabold text-center lg:text-[32px]">
           Welcome to <span className="text-[#04177f]">AremxyPlug!</span>
         </p>
@@ -456,20 +474,22 @@ export const SignUp = () => {
         <div className="lg:ml-[13%]">
           <div className="flex gap-[5px] w-[90%] mx-auto">
             <input type="checkbox" />
-            <p className="text-[8px] font-bold text-center text-[#00000060] lg:text-[14px]">
-              I have read and agreed to the Privacy Policy and Terms &
-              Conditions.
-            </p>
+            <Link to="/privacy-policy">
+              <p className="text-[8px] hover:text-[#04177f] font-bold text-center text-[#00000060] lg:text-[14px]">
+                I have read and agreed to the Privacy Policy and Terms &
+                Conditions.
+              </p>
+            </Link>
           </div>
-          <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
+         <Link to="/passwordReset"> <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
             Forget password ?
-          </p>
+          </p></Link>
         </div>
 
         <button
           onClick={handleSubmit}
           type="submit"
-          className="flex justify-center item mb-[5%] lg:mb-[2%] bg-[#04177f] w-[65px] h-[20px] text-white p-[1%] rounded-[4px] mx-auto text-center mt-[7%] text-[7px] lg:mt-[5%] lg:w-[113px] lg:h-[38px] lg:text-[13px] lg:rounded-md"
+          className="px-[35px] py-[10px] flex justify-center item-center mb-[5%] lg:mb-[2%] bg-[#04177f]  text-white p-[%] rounded-[4px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[5%] lg:w-[169px] lg:h-[45px] lg:text-[14px] lg:rounded-md"
         >
           Sign Up
         </button>
@@ -486,7 +506,9 @@ export const SignUp = () => {
         </div>
         <p className="text-[8px] text-center mt-[5%] md:pb-[15%] lg:mt-[3%] lg:text-[14px]">
           Already have an account ?{" "}
-          <span className="text-[#04177f]">Sign In</span>
+          <span className="text-[#04177f]">
+            <Link to="/Login">Sign In</Link>
+          </span>
         </p>
       </div>
 
