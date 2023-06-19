@@ -24,6 +24,7 @@ import TermsAndCondition from "./Components/Screens/TermsAndCondition/TermsAndCo
 import PrivacyPolicy from "./Components/Screens/PrivacyPolicy/PrivacyPolicy";
 import Team from './Components/Screens/Team/Team';
 import { SignUp } from "./Components/Screens/CustomersPages/SignUp/SignUp";
+import Login from "./Components/Screens/CustomersPages/login/Login";
 
 export const Router = () => {
   return (
@@ -50,10 +51,11 @@ export const Router = () => {
         <Route path="/OwnVTU" element={<OwnVTU />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/terms-and-condition" element={<TermsAndCondition/>}/>
+        <Route path="/terms-and-condition" element={<TermsAndCondition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/team" element={<Team/>}/>
-        <Route path="/signUp" element={<SignUp/>}/>
+        <Route path="/team" element={<Team />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );

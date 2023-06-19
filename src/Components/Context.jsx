@@ -3,6 +3,10 @@ import React, { createContext, useState } from "react";
 export const ContextProvider = createContext();
 
 export const Context = ({ children }) => {
+  // Hide navbar for authentication screens starts here
+  const [hideNavbar, setHideNavbar] = useState(false);
+  // Hide navbar for authentication screens ends here
+
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
   const [thirdDrop, setThirdDrop] = useState(false);
@@ -126,6 +130,11 @@ export const Context = ({ children }) => {
     setDropHandler18,
     setDropHandler19,
     setDropHandler20,
+
+    // *****************************************
+    hideNavbar,
+    setHideNavbar,
+    // *****************************************
   };
 
   return (

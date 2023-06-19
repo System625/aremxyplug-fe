@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactFlagsSelect from "chima-flags-select";
 import PhoneInput from "react-phone-input-2";
 import { AiFillEyeInvisible } from "react-icons/ai";
@@ -6,8 +6,25 @@ import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 // import { AiOutlineCaretDown } from "react-icons/ai";
 import "./SignUp.css";
+import { Link } from "react-router-dom";
+import { ContextProvider } from "../../../Context";
 
 export const SignUp = () => {
+  const { hideNavbar, setHideNavbar } = useContext(ContextProvider);
+
+  const setNav = () => {
+    setHideNavbar(true);
+  };
+  console.log(hideNavbar);
+
+  useEffect(() => {
+    setNav();
+    return () => {
+      setHideNavbar(false);
+    };
+    // eslint-disable-next-line
+  }, []);
+
   const [country, setCountry] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(null);
   const [isFocused, setIsFocused] = useState([]);
@@ -290,7 +307,9 @@ export const SignUp = () => {
         </div>
         <p className="text-[8px] text-center mt-[5%] md:pb-[15%] lg:mt-[3%] lg:text-[14px]">
           Already have an account ?{" "}
-          <span className="text-[#04177f]">Sign In</span>
+          <span className="text-[#04177f]">
+            <Link to="/Login">Sign In</Link>
+          </span>
         </p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
@@ -8,8 +8,11 @@ import { SiTwitter } from "react-icons/si";
 import { GrMail } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { ContextProvider } from "../../Context";
 
 export const Footer = () => {
+  const { hideNavbar } = useContext(ContextProvider);
+
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
   const [thirdDrop, setThirdDrop] = useState(false);
@@ -31,7 +34,11 @@ export const Footer = () => {
   return (
     <>
       {/* MOBILE VIEW */}
-      <div className="md:hidden bg-[#04177F] text-[#ffffff] pb-[20%]">
+      <div
+        className={`md:hidden bg-[#04177F] text-[#ffffff] pb-[20%]
+      ${hideNavbar === true ? "hidden" : "block md:hidden"}
+      `}
+      >
         <img
           className="w-[30%] p-[4%]"
           src="./Images/newaremxy.png"
@@ -92,7 +99,9 @@ export const Footer = () => {
                 Digital Service
               </div>
             </Link>
-            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/our-services/payment">Virtual Account</Link></div>
+            <div className="w-[80px] h-[13px] text-[9px]">
+              <Link to="/our-services/payment">Virtual Account</Link>
+            </div>
             {secondDrop && (
               <div className="flex flex-col gap-[20px]">
                 <div className="w-[96px] h-[13px] text-[9px]">
@@ -153,7 +162,9 @@ export const Footer = () => {
                 <div className="w-[100px] h-[13px] text-[9px]">
                   <HashLink to="/solutions/#transfer">Transfer</HashLink>
                 </div>
-                <div className="w-[94px] h-[13px] text-[9px]"><HashLink to="/solutions/#convert">Convert</HashLink></div>
+                <div className="w-[94px] h-[13px] text-[9px]">
+                  <HashLink to="/solutions/#convert">Convert</HashLink>
+                </div>
               </div>
             )}
             <div className="flex" onClick={handleClick3}>
@@ -186,8 +197,12 @@ export const Footer = () => {
             <div className="w-[80px] h-[13px] text-[9px]">
               <Link to="/ContactUs">Contact Sales</Link>
             </div>
-            <div className="w-[80px] h-[13px] text-[9px]"><Link to="/ContactUS">Phone</Link></div>
-            <div className="w-[80px] h-[13px] text-[9px]"><Link>Email</Link></div>
+            <div className="w-[80px] h-[13px] text-[9px]">
+              <Link to="/ContactUS">Phone</Link>
+            </div>
+            <div className="w-[80px] h-[13px] text-[9px]">
+              <Link>Email</Link>
+            </div>
           </div>
 
           <div className="flex flex-col gap-[15px]">
@@ -295,7 +310,11 @@ export const Footer = () => {
       </div>
 
       {/* TABLET & DESKTOP VIEW */}
-      <div className="hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] w-[]">
+      <div
+        className={`hidden md:block bg-[#04177F] text-[#ffffff] pb-[5%] w-[]
+       ${hideNavbar === true ? "hidden md:hidden" : "hidden md:block "}
+      `}
+      >
         <img
           className="w-[20%] p-[4%] ml-9 lg:p-[3%] lg:ml-[4%] lg:w-[19%]"
           src="./Images/newaremxy.png"
@@ -495,7 +514,8 @@ export const Footer = () => {
               <div className="text-lg lg:text-3xl">
                 <a
                   href="https://www.linkedin.com/company/aremxyplug-business-enterprises/"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <SiLinkedin />
                 </a>
