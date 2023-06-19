@@ -6,16 +6,15 @@ import { AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import "./SignUp.css";
 import Joi from "joi";
-// import { Verification } from "../../../VerificationCode/Verification";
-// import { Modal } from "../../Modal/Modal";
-
+import { Verification } from "../../../VerificationCode/Verification";
+import { Modal } from "../../Modal/Modal";
 
 export const SignUp = () => {
   const [isFocused, setIsFocused] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
   const [errors, setErrors] = useState({});
-  // const [verification, setVerification] = useState(false);
+  const [verification, setVerification] = useState(false);
   const [state, setState] = useState({
     country: "",
     fullName: "",
@@ -38,7 +37,7 @@ export const SignUp = () => {
     // confirmPassword,
   } = state;
 
-  // console.log(state);
+  console.log(state);
 
   // ========form validation using regex=======
   const schema = Joi.object({
@@ -47,12 +46,14 @@ export const SignUp = () => {
     fullName: Joi.string()
       .pattern(new RegExp(/^[A-Za-z]+(?:\s[A-Za-z]+)+$/))
       .required()
-      .messages({ "string.pattern.base": "Please enter your First name and last name" }),
+      .messages({
+        "string.pattern.base": "Please enter your First name and last name",
+      }),
 
     userName: Joi.string()
-      .pattern(new RegExp(/^[A-Za-z\s]+\d+$/))
+      .pattern(new RegExp(/^[A-Za-z\s]+$/))
       .required()
-      .messages({ "string.pattern.base": "Username must have a digit" }),
+      .messages({ "string.pattern.base": "Invalid Username" }),
 
     email: Joi.string()
       .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
@@ -62,23 +63,22 @@ export const SignUp = () => {
     phoneNumber: Joi.string().required(),
 
     password: Joi.string()
-      .pattern(new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))
+      .pattern(new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s]).{8,}$/))
       .required()
       .messages({
         "string.pattern.base":
-          "Password must have At least one alphabetical character, At least one digit and Minimum length of 8 characters",
+          "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
       }),
 
     confirmPassword: Joi.string()
-      .pattern(new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))
+      .pattern(new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s]).{8,}$/))
       .required()
       .messages({
         "string.pattern.base":
-          "Password must have At least one alphabetical character, At least one digit and Minimum length of 8 characters",
+          "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
       }),
   });
   // ======end of form valdiation=====
-
 
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
@@ -139,6 +139,7 @@ export const SignUp = () => {
       );
     } else {
       console.log("Form submitted successfully");
+      setVerification(true);
       setState({
         country: "",
         fullName: "",
@@ -149,16 +150,9 @@ export const SignUp = () => {
         password: "",
         confirmPassword: "",
       });
+      setErrors({})
     }
-    // setErrors({});
 
-    // if(country && fullName){
-    //   setVerification(true)
-    // }
-    // else(
-    //   setVerification(false)
-    // )
-    ; 
   };
 
   return (
@@ -196,7 +190,7 @@ export const SignUp = () => {
             <div
               className={`inputBorder px-[2%] w-[98%] border h-[22px] rounded-[2.9px] lg:w-[286px] lg:h-[39px]`}
             >
-              <div className="mt-[-3%] ">
+              <div className="mt-[-3%] md:mt-[-1%] ">
                 <ReactFlagsSelect
                   selected={state.country}
                   className="w-[100%]"
@@ -218,7 +212,7 @@ export const SignUp = () => {
 
           {/* =======FullName Input start=========== */}
           <div>
-            <p className="text-[9px] font-semibold py-[5px] lg:text-[16px]">
+            <p className="text-[9px] font-semibold py-[5px] md:pt-[0%] lg:text-[16px]">
               Full Name
             </p>
 
@@ -496,11 +490,11 @@ export const SignUp = () => {
         </p>
       </div>
 
-      {/* {verification && ( */}
-        {/* <Modal>
+      {verification && (
+        <Modal>
           <Verification />
-        </Modal> */}
-      {/* )} */}
+        </Modal>
+      )}
     </div>
   );
 };
