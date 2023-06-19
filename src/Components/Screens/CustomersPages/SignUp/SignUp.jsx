@@ -481,9 +481,13 @@ export const SignUp = () => {
               </p>
             </Link>
           </div>
-         <Link to="/passwordReset"> <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
-            Forget password ?
-          </p></Link>
+
+          <Link to="/passwordReset">
+            {" "}
+            <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
+              Forget password ?
+            </p>
+          </Link>
         </div>
 
         <button

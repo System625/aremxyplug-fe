@@ -73,9 +73,9 @@ function LoginForm() {
             </div>
           </div>
           {/* Password ends here*/}
-          <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
+          <Link  to={`/passwordReset`} className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
             Forget password ?
-          </p>
+          </Link>
           <div className="flex">
             <input type="checkbox" name="" id="" />
             <p className="ml-2 lg:text-[14px] md:text-[8.02px] text-[8.02px] text-[#575757] font-semibold tracking-wider">
