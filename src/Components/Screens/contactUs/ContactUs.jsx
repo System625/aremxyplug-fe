@@ -76,8 +76,6 @@ function ContactUs() {
       <div
         className=" grid  lg:gap-x-4  md:grid-cols-5 md:gap-x-4    
        grid-cols-1 gap-y-4 mt-[70px] md:mt-[110px] lg:mt-[140px]
-    
-       
         "
       >
         <div className="rounded-lg flex flex-col items-center  md:col-span-2 ">
