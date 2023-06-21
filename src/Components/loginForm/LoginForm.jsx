@@ -4,6 +4,7 @@ import Bluebutton from "../bluebutton/Bluebutton2";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
+  const [passwordHidden, setPasswordHidden] = useState("password");
   const [isFocused, setIsFocused] = useState([]);
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
@@ -25,9 +26,9 @@ function LoginForm() {
         className="w-[36.51px] h-[17.73px] lg:w-[63.73px] lg:h-[30.94px]"
       />
 
-      <div className="mt-[30px]">
+      <div className="mt-[50px]">
         {/* Email starts here 268455*/}
-        <div className="px-[20%]">
+        <div className="px-[15%] lg:px-[20%]">
           <div className=" mb-[14px] md:mb-[18px] lg:mb-[20px]">
             <p className="text-[8.93px] md:text-[11.58px] lg:text-[16px] font-[600] w-[30%] mb-[7px] lg:mb-[10px] tracking-wider">
               Email
@@ -56,7 +57,7 @@ function LoginForm() {
               Password
             </p>
             <div
-              className={`inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px]  rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
+              className={`relative inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px]  rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
             ${
               isFocused.includes(2)
                 ? "border-[#2684fe] border-2"
@@ -65,45 +66,62 @@ function LoginForm() {
               onFocus={() => handleFocus(2)}
               onBlur={() => handleBlur(2)}
             >
+              {passwordHidden === "password" ? (
+                <img
+                  src="./Images/login/eyeIcon2.png"
+                  alt="icon"
+                  className="absolute right-2 w-[13.75px] lg:w-[24px] cursor-pointer"
+                  onClick={() => setPasswordHidden("text")}
+                />
+              ) : (
+                <img
+                  src="./Images/login/eyeIcon1.png"
+                  alt="icon"
+                  className="absolute right-2 w-[13.75px] lg:w-[24px] cursor-pointer"
+                  onClick={() => setPasswordHidden("password")}
+                />
+              )}
               <input
-                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] px-[7.5px] md:px-[10px] rounded  text-[#403f3f] outline-none "
-                type="text"
+                className="w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] pl-[7.5px] md:pl-[10px] pr-[40px] md:pr-[50px] rounded  text-[#403f3f] outline-none "
+                type={passwordHidden}
                 // placeholder="Enter your first name"
               />
             </div>
           </div>
           {/* Password ends here*/}
-          <Link  to={`/passwordReset`} className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
-            Forget password ?
+          <Link to="/passwordReset">
+            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
+              Forget password ?
+            </p>
           </Link>
           <div className="flex">
             <input type="checkbox" name="" id="" />
-            <p className="ml-2 lg:text-[14px] md:text-[8.02px] text-[8.02px] text-[#575757] font-semibold tracking-wider">
+            <p className="ml-2 lg:text-[14px] md:text-[8.02px] text-[8.02px] text-[#575757]  tracking-wider my-6">
               Remember me next time!
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center my-4">
+        <div className="w-full flex justify-center ">
           <Bluebutton text="Signin" />
         </div>
-        <p className="text-center text-[14px] font-semibold text-[#575757] my-4">
+        <p className="text-center text-[14px] font-semibold text-[#575757] my-6">
           -OR-
         </p>
         <div className="flex justify-center">
           <div
-            className={`w-[80%] lg:w-[70%]  py-[9px] rounded  flex items-center justify-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px] cursor-pointer `}
+            className={`px-[10px] lg:px-[20px] py-[9px] rounded  flex items-center justify-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px] cursor-pointer `}
           >
             <img
               src="./Images/login/Google.png"
               alt="google"
               className="w-[11.46px] lg:w-[20px] "
             />
-            <p className="text-[9.17px] lg:text-[16px] pl-4 font-semibold tracking-wider">
+            <p className="lg:text-[14px] md:text-[8.02px] text-[8.02px]  pl-4 font-semibold tracking-wider">
               Signin with Google
             </p>
           </div>
         </div>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mb-[20px] mt-[50px] lg:mb-[50px] lg:mt-[100px]">
           <p className="text-[9.17px] lg:text-[16px] font-semibold tracking-wider">
             Don’t have an account yet{" "}
           </p>
