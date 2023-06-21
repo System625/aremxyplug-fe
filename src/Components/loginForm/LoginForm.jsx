@@ -89,9 +89,11 @@ function LoginForm() {
             </div>
           </div>
           {/* Password ends here*/}
-          <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold mt-6 cursor-pointer tracking-wider">
-            Forget password ?
-          </p>
+          <Link to="/passwordReset">
+            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
+              Forget password ?
+            </p>
+          </Link>
           <div className="flex">
             <input type="checkbox" name="" id="" />
             <p className="ml-2 lg:text-[14px] md:text-[8.02px] text-[8.02px] text-[#575757]  tracking-wider my-6">
@@ -107,7 +109,7 @@ function LoginForm() {
         </p>
         <div className="flex justify-center">
           <div
-            className={`w-[60%] lg:w-[55%]  py-[9px] rounded  flex items-center justify-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px] cursor-pointer `}
+            className={`px-[10px] lg:px-[20px] py-[9px] rounded  flex items-center justify-center lg:hover:border-[#b3b3b3] lg:duration-300 border-[#cdcdcd] border-[1px] cursor-pointer `}
           >
             <img
               src="./Images/login/Google.png"
