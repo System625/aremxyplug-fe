@@ -3776,6 +3776,11 @@ deepmerge@^4.2.2:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
   integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
 
+dees-verification-code-input@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/dees-verification-code-input/-/dees-verification-code-input-1.0.6.tgz#09230709490380ab6d412c11d48ef559d944b808"
+  integrity sha512-Q3MuyaBGefpvFwPJVZF5CGLFOF1iw2lUL8CsulqP5M2upb5ZbPUdgcAr1UOvt9Ct7z4cKf6aWhN3rNMF55jn1w==
+
 default-gateway@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/default-gateway/-/default-gateway-6.0.3.tgz#819494c888053bdb743edbf343d6cdf7f2943a71"
