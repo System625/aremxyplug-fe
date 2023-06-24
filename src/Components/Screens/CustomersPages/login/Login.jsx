@@ -21,8 +21,8 @@ function Login() {
       <div className="bg-[#04177F] "></div>
       <div className="bg-[#fff] "></div>
 
-      <div className="absolute top-0 bottom-0 right-0 left-0 grid grid-cols-1 md:grid-cols-2 items-center">
-        <div className="h-[80%] md:h-[100%] flex flex-col justify-center items-center ">
+      <div className="absolute top-0 bottom-0 right-0 left-0 md:grid md:grid-cols-2 flex flex-col justify-center md:justify-[unset] md:flex-[unset] md:items-center px-[10px] md:px-[70px]">
+        <div className=" md:h-[100%] md:mb-[-23%] lg:mb-[unset] flex flex-col md:justify-center items-center ">
           {" "}
           <div className="mt-[10px]">
             <p className="text-[18.33px] lg:text-[32px] font-bold text-[#fff]">
@@ -35,12 +35,12 @@ function Login() {
           <img
             src="./Images/login/loginImage.png"
             alt="background_image"
-            className="h-[50%] md:h-[20%] lg:h-[35%] "
+            className="w-[70%] md:w-[95%] xl:w-[75%] md:h-[15%] lg:h-[25%] xl:h-[35%] mt-[50px] "
           />
-          <div className="h-0 md:h-[25%] lg:h-[50%]  w-[100px] flex justify-center items-center"></div>
+          <div className="md:mt-[7%] lg:mt-[unset]  md:h-[25%] lg:h-[50%]  w-[100px] flex justify-center items-center "></div>
         </div>
 
-        <div className="mt-[-50px]  md:mt-[unset] md:h-[100%] flex items-center">
+        <div className="mt-[50px]  md:mt-[unset] md:h-[100%] flex items-center">
           <LoginForm />
         </div>
       </div>
