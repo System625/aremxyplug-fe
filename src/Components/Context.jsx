@@ -8,6 +8,10 @@ export const Context = ({ children }) => {
   const [hideNavbar, setHideNavbar] = useState(false);
   // Hide navbar for authentication screens ends here
 
+  // TRANSACTION PIN POP UP STATE STARTS HERE
+  const [openTranspin, setOpenTranspin] = useState(false);
+  // TRANSACTION PIN POP UP STATE ENDS HERE
+
   // ======== For FAQ dropdown ===========
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
@@ -301,6 +305,11 @@ export const Context = ({ children }) => {
     setDropHandler18,
     setDropHandler19,
     setDropHandler20,
+
+    // *****************************************
+    openTranspin,
+    setOpenTranspin,
+    // *****************************************
 
     // *****************************************
     hideNavbar,
