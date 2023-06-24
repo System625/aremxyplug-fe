@@ -12,15 +12,15 @@ function LoginForm() {
   const [otp2, setOtp2] = useState("");
   const [passwordHidden, setPasswordHidden] = useState("password");
   const [isFocused, setIsFocused] = useState([]);
-  const [isFocused_otp, setIsFocused_otp] = useState(null);
+  // const [isFocused_otp, setIsFocused_otp] = useState(null);
 
-  const handleFocused_otp = () => {
-    setIsFocused_otp(true);
-  };
+  // const handleFocused_otp = () => {
+  //   setIsFocused_otp(true);
+  // };
 
-  const handleBlur_otp = () => {
-    setIsFocused_otp(false);
-  };
+  // const handleBlur_otp = () => {
+  //   setIsFocused_otp(false);
+  // };
 
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
@@ -64,8 +64,8 @@ function LoginForm() {
                 value={otp}
                 onChange={setOtp}
                 numInputs={4}
-                onFocus={() => handleFocused_otp()}
-                onBlur={() => handleBlur_otp()}
+                // onFocus={() => handleFocused_otp()}
+                // onBlur={() => handleBlur_otp()}
                 inputStyle={{
                   color: "#403f3f",
                   width: 30,
@@ -89,8 +89,8 @@ function LoginForm() {
                 value={otp2}
                 onChange={setOtp2}
                 numInputs={4}
-                onFocus={() => handleFocused_otp()}
-                onBlur={() => handleBlur_otp()}
+                // onFocus={() => handleFocused_otp()}
+                // onBlur={() => handleBlur_otp()}
                 inputStyle={{
                   color: "#403f3f",
                   width: 30,
@@ -127,11 +127,13 @@ function LoginForm() {
         </div>
       )}
       {/* FORM OVERLAY AND CHILD INPUT ENDS HERE*/}
-      <img
-        src="./Images/login/arpLogo.png"
-        alt="logo"
-        className="w-[36.51px] h-[17.73px] lg:w-[63.73px] lg:h-[30.94px]"
-      />
+      <Link to="/">
+        <img
+          src="./Images/login/arpLogo.png"
+          alt="logo"
+          className="w-[36.51px] h-[17.73px] lg:w-[63.73px] lg:h-[30.94px]"
+        />
+      </Link>
 
       <div className="mt-[30px]">
         {/* Email starts here 268455*/}
