@@ -1,17 +1,29 @@
 import React, { useState } from "react";
 import { Modal } from "../Screens/Modal/Modal";
-import { VerificationTwo } from "../VerificationTwo/VerificationTwo";
+import { VerifyViaEmail } from "./VeirifyViaEmail/VerifyViaEmail";
+import { VerifyViaSms } from "./VerifyViaSms/VerifyViaSms";
 
-export const Verification = () => {
+export const Verification = ({ Email, phoneNumber }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
-  const [verifyTwo, setVerifyTwo] = useState(false);
+  const [borderColor, setBorderColor] = useState(false);
+  const [viaEmail, setViaEmail] = useState(false);
+  const [viaSms, setViaSms] = useState(false);
+  const [sms, setSms] = useState(true);
+  const [email, setEmail] = useState(true);
 
   const onClick = () => {
     setButtonColor("#04177f");
+    setBorderColor(!borderColor);
+    setSms(true);
+    setEmail(true);
   };
 
   const submitHandler = () => {
-    setVerifyTwo(true);
+    if (sms) {
+      setViaSms(true);
+    } else if (email) {
+      setViaEmail(true);
+    }
   };
 
   return (
@@ -21,46 +33,69 @@ export const Verification = () => {
           Select where we sent you verification-code
         </p>
         <div className="flex flex-col gap-[8px]">
-          <div
-            onClick={onClick}
-            className="flex h-[32px] w-[92px] border hover:border-[#D166FF] rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
-          >
-            <img
-              className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
-              src="./Images/signupimages/sms.png"
-              alt=""
-            />
-            <div className="text-[6px] lg:text-[12px]">
-              <div>Via SMS</div>
-              <div>0700&#42;&#42;&#42;&#42;&#42;&#42;</div>
+          {/* ========Button to verify through SMS====== */}
+          {sms && (
+            <div
+              onClick={onClick}
+              style={{
+                border: `1px solid ${borderColor ? "#D166FF" : "#0003"}`,
+              }}
+              className="flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
+            >
+              <img
+                className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
+                src="./Images/signupimages/sms.png"
+                alt=""
+              />
+              <div className="text-[6px] lg:text-[12px]">
+                <div>Via SMS</div>
+                <div>0700&#42;&#42;&#42;&#42;&#42;&#42;</div>
+              </div>
             </div>
-          </div>
-          <div
-            onClick={onClick}
-            className="flex h-[32px] w-[92px] border hover:border-[#D166FF] rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
-          >
-            <img
-              className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
-              src="./Images/signupimages/email.png"
-              alt=""
-            />
-            <div className="text-[6px] lg:text-[12px]">
-              <div>Via Email</div>
-              <div>Habib@&#42;&#42;&#42;&#42;&#42;</div>
+          )}
+
+          {/* =========Button to verify through Email====== */}
+          {email && (
+            <div
+              onClick={onClick}
+              style={{
+                border: `1px solid ${!borderColor ? "#D166FF" : "#0003"}`,
+              }}
+              className="flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
+            >
+              <img
+                className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
+                src="./Images/signupimages/email.png"
+                alt=""
+              />
+              <div className="text-[6px] lg:text-[12px]">
+                <div>Via Email</div>
+                <div>habib@****</div>
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* ==========Continue Button======== */}
           <div
             onClick={submitHandler}
             style={{ backgroundColor: buttonColor }}
-            className=" mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]"
+            className="cursor-pointer mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-md md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]"
           >
             Continue
           </div>
         </div>
       </div>
-      {verifyTwo && (
+
+      {/* ========Email verification pop up==== */}
+      {viaEmail && (
         <Modal>
-          <VerificationTwo />
+          <VerifyViaEmail themail={email} />
+        </Modal>
+      )}
+
+      {viaSms && (
+        <Modal>
+          <VerifyViaSms />
         </Modal>
       )}
     </>
