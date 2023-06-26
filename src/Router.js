@@ -28,6 +28,7 @@ import Login from "./Components/Screens/CustomersPages/login/Login";
 import PasswordReset from "./Components/Screens/CustomersPages/Password/PasswordReset"
 import { VerifyViaEmail } from "./Components/VerificationCode/VeirifyViaEmail/VerifyViaEmail";
 import { VerifyViaSms } from "./Components/VerificationCode/VerifyViaSms/VerifyViaSms";
+import NewPassword from "./Components/Screens/CustomersPages/Password/NewPassword";
 
 export const Router = () => {
   return (
@@ -59,7 +60,8 @@ export const Router = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/team" element={<Team />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/passwordReset" element={<PasswordReset />} />
+        <Route path="/passwordReset" element={<PasswordReset/>} />
+        <Route path="/newPassword" element={<NewPassword/>} />
         <Route path="/emailRoute" element={<VerifyViaEmail/>} />
         <Route path="/smsRoute" element={<VerifyViaSms/>} />
       </Routes>

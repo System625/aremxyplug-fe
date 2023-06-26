@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./LoginForm.css";
 import Bluebutton from "../bluebutton/Bluebutton2";
 import { Link } from "react-router-dom";
+import FirstModal from "../Screens/CustomersPages/Password/FirstModal";
 
 function LoginForm() {
   const [passwordHidden, setPasswordHidden] = useState("password");
   const [isFocused, setIsFocused] = useState([]);
+  const [showModal, setShowModal] = useState(false);
   const handleFocus = (index) => {
     if (!isFocused.includes(index)) {
       setIsFocused([...isFocused, index]);
@@ -20,6 +22,7 @@ function LoginForm() {
 
   return (
     <div className="mx-[20px] md:mx-[unset] w-[100%] md:w-[80%] loginForm p-[25px]">
+      { showModal &&  <FirstModal/>}
       <img
         src="./Images/login/arpLogo.png"
         alt="logo"
@@ -34,7 +37,7 @@ function LoginForm() {
               Email
             </p>
             <div
-              className={`inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
+              className={`inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px] rounded flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
             ${
               isFocused.includes(1)
                 ? "border-[#2684fe] border-2"
@@ -89,11 +92,9 @@ function LoginForm() {
             </div>
           </div>
           {/* Password ends here*/}
-          <Link to="/passwordReset">
-            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider">
-              Forget password ?
+            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-4 cursor-pointer tracking-wider" onClick={() => setShowModal(!showModal)}>
+              Forgot password ?
             </p>
-          </Link>
           <div className="flex">
             <input type="checkbox" name="" id="" />
             <p className="ml-2 lg:text-[14px] md:text-[8.02px] text-[8.02px] text-[#575757]  tracking-wider my-6">
