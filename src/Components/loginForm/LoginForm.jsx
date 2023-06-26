@@ -369,7 +369,6 @@ function LoginForm() {
             </div>
           </div>
           {/* Password ends here*/}
-          <Link to="/passwordReset">
             <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-2 cursor-pointer tracking-wider">
               Forgot password ?
             </p>
