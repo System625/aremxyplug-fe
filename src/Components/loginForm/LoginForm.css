@@ -7,7 +7,6 @@
 }
 
 .transPin {
-  border-radius: 15px;
   background: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -16,4 +15,10 @@
   border-radius: 2.865px;
   border: 0.573px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
   background: #fff;
+}
+
+.inputOTP:focus {
+  outline: 1px solid rgba(0, 0, 0, 0);
+  border: 0.573px solid #d166ff;
+  /* border-radius: 2.865px; */
 }

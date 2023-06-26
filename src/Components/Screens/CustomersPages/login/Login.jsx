@@ -3,8 +3,14 @@ import LoginForm from "../../../loginForm/LoginForm";
 import { ContextProvider } from "../../../Context";
 import { useState } from "react";
 function Login() {
-  const { hideNavbar, setHideNavbar, openTranspin } =
-    useContext(ContextProvider);
+  const {
+    hideNavbar,
+    setHideNavbar,
+    openTranspin,
+    openTranspinSuccessful,
+    openResetTranspin,
+    open2StepVerification,
+  } = useContext(ContextProvider);
 
   const setNav = () => {
     setHideNavbar(true);
@@ -27,7 +33,10 @@ function Login() {
       {/* --------------------------------BLUE AND WHITE BACKGROUND ENDS HERE--------------------------- */}
 
       {/* --------------------------------DARK OVERLAY STARTS HERE-------------------------------- */}
-      {openTranspin === true && (
+      {openTranspin === true ||
+      openTranspinSuccessful === true ||
+      openResetTranspin === true ||
+      open2StepVerification === true ? (
         <div
           className="absolute top-0 bottom-0 right-0 left-0"
           style={{
@@ -35,6 +44,8 @@ function Login() {
             zIndex: 900,
           }}
         ></div>
+      ) : (
+        ""
       )}
 
       {/*-------------------------------- DARK OVERLAY ENDS HERE-------------------------------- */}

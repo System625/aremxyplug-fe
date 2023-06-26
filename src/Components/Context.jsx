@@ -12,6 +12,18 @@ export const Context = ({ children }) => {
   const [openTranspin, setOpenTranspin] = useState(false);
   // TRANSACTION PIN POP UP STATE ENDS HERE
 
+  // TRANSACTION PIN SUCCESSFULL POP UP STATE STARTS HERE
+  const [openTranspinSuccessful, setOpenTranspinSuccessful] = useState(false);
+  // TRANSACTION PIN SUCCESSFULL UP STATE ENDS HERE
+
+  // RESET TRANSACTION PIN  POP UP STATE STARTS HERE
+  const [openResetTranspin, setOpenResetTranspin] = useState(false);
+  // RESET TRANSACTION SUCCESSFULL POP UP STATE ENDS HERE
+
+  // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
+  const [open2StepVerification, setOpen2StepVerification] = useState(false);
+  // 2 STEP VERIFICATION POP UP STATE ENDS HERE
+
   // ======== For FAQ dropdown ===========
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
@@ -314,6 +326,21 @@ export const Context = ({ children }) => {
     // *****************************************
     hideNavbar,
     setHideNavbar,
+    // *****************************************
+
+    // *****************************************
+    setOpenTranspinSuccessful,
+    openTranspinSuccessful,
+    // *****************************************
+
+    // *****************************************
+    openResetTranspin,
+    setOpenResetTranspin,
+    // *****************************************
+
+    // *****************************************
+    open2StepVerification,
+    setOpen2StepVerification,
     // *****************************************
 
     // ======Verification.jsx=====
