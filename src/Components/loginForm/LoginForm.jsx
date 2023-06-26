@@ -72,6 +72,7 @@ function LoginForm() {
         zIndex: 950,
       }}
     >
+      { showModal && <FirstModal/>}
       {/* FORM OVERLAY AND TRANSACTION PIN INPUT STARTS HERE */}
       {openTranspin === true && (
         <div
@@ -369,7 +370,7 @@ function LoginForm() {
             </div>
           </div>
           {/* Password ends here*/}
-            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-2 cursor-pointer tracking-wider">
+            <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-2 cursor-pointer tracking-wider" onClick={() => setShowModal(!showModal)}>
               Forgot password ?
             </p>
           <div className="flex">
