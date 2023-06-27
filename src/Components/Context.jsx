@@ -108,6 +108,12 @@ export const Context = ({ children }) => {
     password: "",
     confirmPassword: "",
   });
+  const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const [newError, setNewError] = useState("");
+
+  const handleCheckboxChange = (event) => {
+    setCheckboxChecked(event.target.checked);
+  };
 
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
@@ -171,6 +177,11 @@ export const Context = ({ children }) => {
       .messages({
         "string.pattern.base":
           "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
+        // .valid("same with password")
+        //   .required()
+        //   // .label("Confirm Password")
+        //   .messages({
+        //     "string": "Passwords do not match",
       }),
   });
   // ======end of form valdiation=====
@@ -209,6 +220,10 @@ export const Context = ({ children }) => {
           return acc;
         }, {})
       );
+      // if (password !== confirmPassword) {
+      //   setErrors({ confirmPassword: 'Passwords do not match' });
+      //   return;
+      // }
     } else {
       console.log("Form submitted successfully");
       setVerification(true);
@@ -224,6 +239,13 @@ export const Context = ({ children }) => {
       });
       setErrors({});
     }
+
+    if (!checkboxChecked) {
+      setNewError("Please check that you have agreed to continue ");
+      return;
+    }
+    // setNewError("")
+    // return;
   };
   // ========End for SignUp.jsx======
 
@@ -240,22 +262,27 @@ export const Context = ({ children }) => {
     setButtonColor("#04177f");
     setSmsBorderColor("#d166ff");
     setEmailBorderColor("#0003");
-    setSms(true);
-    setEmail(true);
+    // setSms(true);
+    // setEmail(true);
   };
   const onClickEmail = () => {
     setButtonColor("#04177f");
     setSmsBorderColor("#0003");
     setEmailBorderColor("#d166ff");
-    setSms(true);
-    setEmail(true);
+    // setSms(true);
+    // setEmail(true);
   };
 
   const submitHandler = () => {
+    console.log(sms, email);
     if (sms) {
-      setViaSms(true);
+      
+      // setViaSms(true) 
+      return;
+    
     } else if (email) {
       setViaEmail(true);
+    return
     }
   };
   // ============end For Verification.jsx ==========
@@ -334,6 +361,9 @@ export const Context = ({ children }) => {
     handleSubmit,
     setShowPassword,
     setShowPasswordTwo,
+    checkboxChecked,
+    handleCheckboxChange,
+    newError,
   };
 
   return (

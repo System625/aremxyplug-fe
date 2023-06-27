@@ -26,13 +26,13 @@ export const Verification = () => {
         </p>
         <div className="flex flex-col gap-[8px]">
           {/* ========Button to verify through SMS====== */}
-          {sms && (
+          {/* {sms && ( */}
             <div
               onClick={onClickSms}
               style={{
                 border: `1px solid ${smsborderColor}`,
               }}
-              className="flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
+              className={`${sms} flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]`}
             >
               <img
                 className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
@@ -44,16 +44,16 @@ export const Verification = () => {
                 <div>0700&#42;&#42;&#42;&#42;&#42;&#42;</div>
               </div>
             </div>
-          )}
+          {/* )} */}
 
           {/* =========Button to verify through Email====== */}
-          {email && (
+          {/* {email && ( */}
             <div
               onClick={onClickEmail}
               style={{
                 border: `1px solid ${emailborderColor}`,
               }}
-              className="flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]"
+              className={`${email} flex h-[32px] w-[92px] cursor-pointer rounded-[4.5px] p-1 gap-[5px] lg:w-[161px] lg:h-[60px] lg:rounded-[8px]`}
             >
               <img
                 className="w-[22px] h-[22px] lg:w-[40px] lg:h-[40px]"
@@ -65,7 +65,7 @@ export const Verification = () => {
                 <div>habib@****</div>
               </div>
             </div>
-          )}
+          {/* )} */}
 
           {/* ==========Continue Button======== */}
           <div
@@ -80,9 +80,12 @@ export const Verification = () => {
 
       {/* ========Email verification pop up==== */}
       {viaEmail && (
+        // <Modal>
+        // {viaEmail ? <VerifyViaEmail /> : <VerifyViaSms />}
+        // </Modal>
         <Modal>
-          <VerifyViaEmail />
-        </Modal>
+        <VerifyViaEmail />
+      </Modal>
       )}
 
       {viaSms && (

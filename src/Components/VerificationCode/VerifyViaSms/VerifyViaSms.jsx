@@ -4,11 +4,12 @@ import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
 import { VerifyViaEmail } from "../VeirifyViaEmail/VerifyViaEmail";
 
-export const VerifyViaSms = ({ Email }) => {
+export const VerifyViaSms = ({setViaSms}) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
   const [success, setSuccess] = useState("");
   const [viaEmail, setViaEmail] = useState(false);
+  // const [viaSms, setViaSms] = useState(true);
 
   const onClick = (code) => {
     setButtonColor("#04177f");
@@ -20,9 +21,12 @@ export const VerifyViaSms = ({ Email }) => {
     setSuccess(true);
   };
 
-  const emailHandler =() => {
-    setViaEmail(true)
-  }
+  const emailHandler = () => {
+
+    setViaEmail(true);
+    setViaSms(false)
+   return;
+  };
 
   return (
     <div className="p-4 flex flex-col gap-[10px] rounded-[8.6px] h-[172px] w-[199px] bg-white md:absolute md:top-[20%] md:left-[50%] lg:gap-[18px] lg:h-[301px] lg:w-[348px] lg:rounded-[15px] lg:">
@@ -30,8 +34,11 @@ export const VerifyViaSms = ({ Email }) => {
         Verification code has been sent to your phone
       </p>
       <div className="flex flex-col gap-[15px] lg:gap-[28px]">
-        <p onClick={emailHandler} className="cursor-pointer hover:underline text-[#737373] text-[6px] lg:text-[10px]">
-          Use email instead
+        <p
+          onClick={emailHandler}
+          className="cursor-pointer hover:underline text-[#737373] text-[6px] lg:text-[10px]"
+        >
+          Use email address instead
         </p>
 
         <div className="flex flex-col gap-[2px] md:gap-[6px]">
@@ -84,9 +91,15 @@ export const VerifyViaSms = ({ Email }) => {
 
       {viaEmail && (
         <Modal>
-          <VerifyViaEmail />
+          <VerifyViaEmail setViaEmail={setViaEmail} />
         </Modal>
       )}
+
+      {/* {viaSms && (
+        <Modal>
+          <VerifyViaSms />
+        </Modal>
+      )} */}
     </div>
   );
 };
