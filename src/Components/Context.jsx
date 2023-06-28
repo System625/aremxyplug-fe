@@ -4,9 +4,9 @@ import Joi from "joi";
 export const ContextProvider = createContext();
 
 export const Context = ({ children }) => {
-  // Hide navbar for authentication screens starts here
+  // Select username or email starts here
   const [hideNavbar, setHideNavbar] = useState(false);
-  // Hide navbar for authentication screens ends here
+  // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);
