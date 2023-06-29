@@ -247,30 +247,30 @@ export const Context = ({ children }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [smsborderColor, setSmsBorderColor] = useState("#0003");
   const [emailborderColor, setEmailBorderColor] = useState("#0003");
-  const [viaEmail, setViaEmail] = useState(false);
+  const [viaEmailOrSms, setViaEmailOrSms] = useState("");
   const [viaSms, setViaSms] = useState(false);
-  const [sms, setSms] = useState(true);
-  const [email, setEmail] = useState(true);
+  const [viaEmail, setViaEmail] = useState(false);
+  const [sms] = useState(true);
+  const [email] = useState(true);
 
   const onClickSms = () => {
     setButtonColor("#04177f");
     setSmsBorderColor("#d166ff");
     setEmailBorderColor("#0003");
-    setSms(true);
-    setEmail(true);
+    setViaEmailOrSms("sms");
   };
   const onClickEmail = () => {
     setButtonColor("#04177f");
     setSmsBorderColor("#0003");
     setEmailBorderColor("#d166ff");
-    setSms(true);
-    setEmail(true);
+
+    setViaEmailOrSms("email");
   };
 
   const submitHandler = () => {
-    if (sms) {
+    if (viaEmailOrSms === "sms") {
       setViaSms(true);
-    } else if (email) {
+    } else if (viaEmailOrSms === "email") {
       setViaEmail(true);
     }
   };
