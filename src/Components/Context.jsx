@@ -4,9 +4,25 @@ import Joi from "joi";
 export const ContextProvider = createContext();
 
 export const Context = ({ children }) => {
-  // Hide navbar for authentication screens starts here
+  // Select username or email starts here
   const [hideNavbar, setHideNavbar] = useState(false);
-  // Hide navbar for authentication screens ends here
+  // Select username or email ends here
+
+  // TRANSACTION PIN POP UP STATE STARTS HERE
+  // const [openTranspin, setOpenTranspin] = useState(false);
+  // TRANSACTION PIN POP UP STATE ENDS HERE
+
+  // TRANSACTION PIN SUCCESSFULL POP UP STATE STARTS HERE
+  // const [openTranspinSuccessful, setOpenTranspinSuccessful] = useState(false);
+  // TRANSACTION PIN SUCCESSFULL UP STATE ENDS HERE
+
+  // RESET TRANSACTION PIN  POP UP STATE STARTS HERE
+  // const [openResetTranspin, setOpenResetTranspin] = useState(false);
+  // RESET TRANSACTION SUCCESSFULL POP UP STATE ENDS HERE
+
+  // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
+  // const [open2StepVerification, setOpen2StepVerification] = useState(false);
+  // 2 STEP VERIFICATION POP UP STATE ENDS HERE
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);
@@ -269,39 +285,43 @@ export const Context = ({ children }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [smsborderColor, setSmsBorderColor] = useState("#0003");
   const [emailborderColor, setEmailBorderColor] = useState("#0003");
+  const [viaEmailOrSms, setViaEmailOrSms] = useState("");
   const [viaEmail, setViaEmail] = useState(false);
   const [viaSms, setViaSms] = useState(false);
-  const [sms, setSms] = useState(true);
-  const [email, setEmail] = useState(true);
+  const [sms] = useState(true);
+  const [email] = useState(true);
 
   const onClickSms = () => {
     setButtonColor("#04177f");
     setSmsBorderColor("#d166ff");
     setEmailBorderColor("#0003");
-    // setSms(true);
-    // setEmail(true);
+    setViaEmailOrSms("sms");
   };
   const onClickEmail = () => {
     setButtonColor("#04177f");
     setSmsBorderColor("#0003");
     setEmailBorderColor("#d166ff");
-    // setSms(true);
-    // setEmail(true);
+    setViaEmailOrSms("email");
   };
 
   const submitHandler = () => {
-    // console.log(sms, email);
-
-    if (sms) {
+    if (viaEmailOrSms === "sms") {
       setViaSms(true);
-      setViaEmail(false);
-      return
-    } else if (email) {
-      setViaSms(false);
+    } else if (viaEmailOrSms === "email") {
       setViaEmail(true);
-      return
     }
   };
+
+  const emailorsmsHandler = () => {
+    if (!viaEmail) {
+      setViaEmail(true);
+      setViaSms(false);
+    } else {
+      setViaEmail(false);
+      setViaSms(true);
+    }
+  };
+
   // ============end For Verification.jsx ==========
 
   const hold = {
@@ -382,6 +402,7 @@ export const Context = ({ children }) => {
     onClickSms,
     onClickEmail,
     submitHandler,
+    emailorsmsHandler,
 
     // ========SignUp.jsx========
     isFocused,
