@@ -286,7 +286,7 @@ export const SignUp = () => {
               onFocus={() => handleFocus(6)}
               onBlur={() => handleBlur(6)}
             >
-              
+
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPassword ? "text" : "password"}
@@ -394,7 +394,7 @@ export const SignUp = () => {
           onClick={handleSubmit}
           type="submit"
           disabled={!checkboxChecked}
-          className="px-[35px] py-[10px] flex justify-center item-center mb-[5%] lg:mb-[2%] bg-[#04177f]  text-white p-[%] rounded-[4px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
+          className="hover:cursor-pointer px-[35px] py-[10px] flex justify-center item-center mb-[5%] lg:mb-[2%] bg-[#04177f]  text-white p-[%] rounded-[4px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
         >
           Sign Up
         </button>
