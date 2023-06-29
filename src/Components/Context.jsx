@@ -9,6 +9,22 @@ export const Context = ({ children }) => {
   // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
+  // const [openTranspin, setOpenTranspin] = useState(false);
+  // TRANSACTION PIN POP UP STATE ENDS HERE
+
+  // TRANSACTION PIN SUCCESSFULL POP UP STATE STARTS HERE
+  // const [openTranspinSuccessful, setOpenTranspinSuccessful] = useState(false);
+  // TRANSACTION PIN SUCCESSFULL UP STATE ENDS HERE
+
+  // RESET TRANSACTION PIN  POP UP STATE STARTS HERE
+  // const [openResetTranspin, setOpenResetTranspin] = useState(false);
+  // RESET TRANSACTION SUCCESSFULL POP UP STATE ENDS HERE
+
+  // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
+  // const [open2StepVerification, setOpen2StepVerification] = useState(false);
+  // 2 STEP VERIFICATION POP UP STATE ENDS HERE
+
+  // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);
   // TRANSACTION PIN POP UP STATE ENDS HERE
 
@@ -124,6 +140,12 @@ export const Context = ({ children }) => {
     password: "",
     confirmPassword: "",
   });
+  const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const [newError, setNewError] = useState("");
+
+  const handleCheckboxChange = (event) => {
+    setCheckboxChecked(event.target.checked);
+  };
 
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
@@ -187,6 +209,11 @@ export const Context = ({ children }) => {
       .messages({
         "string.pattern.base":
           "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
+        // .valid("same with password")
+        //   .required()
+        //   // .label("Confirm Password")
+        //   .messages({
+        //     "string": "Passwords do not match",
       }),
   });
   // ======end of form valdiation=====
@@ -225,6 +252,10 @@ export const Context = ({ children }) => {
           return acc;
         }, {})
       );
+      // if (password !== confirmPassword) {
+      //   setErrors({ confirmPassword: 'Passwords do not match' });
+      //   return;
+      // }
     } else {
       console.log("Form submitted successfully");
       setVerification(true);
@@ -240,6 +271,13 @@ export const Context = ({ children }) => {
       });
       setErrors({});
     }
+
+    if (!checkboxChecked) {
+      setNewError("Please check that you have agreed to continue ");
+      return;
+    }
+    // setNewError("")
+    // return;
   };
   // ========End for SignUp.jsx======
 
@@ -263,7 +301,6 @@ export const Context = ({ children }) => {
     setButtonColor("#04177f");
     setSmsBorderColor("#0003");
     setEmailBorderColor("#d166ff");
-
     setViaEmailOrSms("email");
   };
 
@@ -274,6 +311,17 @@ export const Context = ({ children }) => {
       setViaEmail(true);
     }
   };
+
+  const emailorsmsHandler = () => {
+    if (!viaEmail) {
+      setViaEmail(true);
+      setViaSms(false);
+    } else {
+      setViaEmail(false);
+      setViaSms(true);
+    }
+  };
+
   // ============end For Verification.jsx ==========
 
   const hold = {
@@ -354,6 +402,7 @@ export const Context = ({ children }) => {
     onClickSms,
     onClickEmail,
     submitHandler,
+    emailorsmsHandler,
 
     // ========SignUp.jsx========
     isFocused,
@@ -370,6 +419,9 @@ export const Context = ({ children }) => {
     handleSubmit,
     setShowPassword,
     setShowPasswordTwo,
+    checkboxChecked,
+    handleCheckboxChange,
+    newError,
   };
 
   return (
