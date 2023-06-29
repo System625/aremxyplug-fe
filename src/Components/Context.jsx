@@ -286,8 +286,8 @@ export const Context = ({ children }) => {
   const [smsborderColor, setSmsBorderColor] = useState("#0003");
   const [emailborderColor, setEmailBorderColor] = useState("#0003");
   const [viaEmailOrSms, setViaEmailOrSms] = useState("");
-  const [viaEmail, setViaEmail] = useState(false);
   const [viaSms, setViaSms] = useState(false);
+  const [viaEmail, setViaEmail] = useState(false);
   const [sms] = useState(true);
   const [email] = useState(true);
 
