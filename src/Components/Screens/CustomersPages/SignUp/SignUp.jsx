@@ -286,6 +286,7 @@ export const SignUp = () => {
               onFocus={() => handleFocus(6)}
               onBlur={() => handleBlur(6)}
             >
+              
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPassword ? "text" : "password"}
