@@ -26,7 +26,7 @@ export const Verification = () => {
         </p>
         <div className="flex flex-col gap-[8px]">
           {/* ========Button to verify through SMS====== */}
-          {/* {sms && ( */}
+          {sms && (
             <div
               onClick={onClickSms}
               style={{
@@ -44,10 +44,10 @@ export const Verification = () => {
                 <div>0700&#42;&#42;&#42;&#42;&#42;&#42;</div>
               </div>
             </div>
-          {/* )} */}
+         )} 
 
           {/* =========Button to verify through Email====== */}
-          {/* {email && ( */}
+          {email && (
             <div
               onClick={onClickEmail}
               style={{
@@ -65,7 +65,7 @@ export const Verification = () => {
                 <div>habib@****</div>
               </div>
             </div>
-          {/* )} */}
+          )}
 
           {/* ==========Continue Button======== */}
           <div

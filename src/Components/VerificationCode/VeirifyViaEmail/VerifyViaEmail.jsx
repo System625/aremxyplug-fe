@@ -23,12 +23,13 @@ export const VerifyViaEmail = ({setViaEmail}) => {
   };
 
   const smsHandler = () => {
-   
+    setViaEmail(false)
   setViaSms(true)
+  
   };
 
   return (
-    <div className="p-4 flex flex-col gap-[10px] rounded-[8.6px] h-[172px] w-[199px] bg-white md:absolute md:top-[20%] md:left-[50%] lg:gap-[18px] lg:h-[301px] lg:w-[200px] lg:rounded-[15px] lg:">
+    <div className="p-4 flex flex-col gap-[10px] rounded-[8.6px] h-[172px] w-[199px] bg-white md:absolute md:top-[20%] md:left-[50%] lg:gap-[18px] lg:h-[301px] lg:w-[348px] lg:rounded-[15px] lg:">
       <p className="text-[8px] lg:text-[14px]">
         Verification code has been sent to your email
       </p>
