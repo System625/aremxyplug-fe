@@ -576,8 +576,8 @@ function LoginForm() {
                 className={` ${
                   username === "" || password === ""
                     ? "opacity-50 cursor-not-allowed"
-                    : "opacity-[unset]"
-                } inline-flex justify-center items-center text-[#fff]   text-center  cursor-pointer 
+                    : "opacity-[unset] cursor-pointer"
+                } inline-flex justify-center items-center text-[#fff]   text-center   
 text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]
 `}
                 style={{
@@ -593,8 +593,8 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                 className={` ${
                   username === "" || password === ""
                     ? "opacity-50 cursor-not-allowed"
-                    : "opacity-[unset]"
-                } inline-flex justify-center items-center text-[#fff]   text-center  cursor-pointer 
+                    : "opacity-[unset] cursor-pointer"
+                } inline-flex justify-center items-center text-[#fff]   text-center   
 text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]
 `}
                 style={{
