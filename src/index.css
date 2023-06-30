@@ -2,8 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    ::-ms-reveal {
-        display: none;
-    }
-}
+
