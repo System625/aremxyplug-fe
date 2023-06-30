@@ -44,7 +44,7 @@ const SecondModal = ({value}) => {
         <Modal>
             {/* if submision is true, it will display next content but if submission is not true then next content is not displayed. this prevents me from using two modals */}
             { submision ? 
-                <div className="w-[258px] h-[186px] lg:w-[450px] lg:h-[450px] md:ml-[40%] md:ml-[40%] md:-mt-[60%] lg:mt-[10%] px-[17.19px] bg-white rounded-[10.3px] md:px-[17.6px] lg:px-[31px] flex items-center justify-center">
+                <div className="w-[258px] h-[186px] lg:w-[450px] lg:h-[450px] md:ml-[40%] md:-mt-[60%] lg:mt-[10%] px-[17.19px] bg-white rounded-[10.3px] md:px-[17.6px] lg:px-[31px] flex items-center justify-center">
                     <div className=''>
                         <div className="flex items-center justify-center mb-[14.32px]">
                             <h2 className='text-[8.02px] leading-normal lg:text-[14px]'>Your Password has been reset successfully.</h2>
@@ -54,7 +54,7 @@ const SecondModal = ({value}) => {
                         </div>
                         <h2 className="text-[9.167px] font-bold leading-normal lg:text-[14px]">Create a New Password to Log in to your Account.</h2>
                         <div className='flex justify-center mt-[28.65px] lg:mt-[50px]'>
-                            <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] leading-normal bg-primary lg:py-[10px] lg:px-[35px] lg:text-[12px] lg:rounded-[8px] lg:text-[14px]' onClick={() => setRedirect(!redirect)}>Continue</button>
+                            <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] leading-normal bg-primary lg:py-[10px] lg:px-[35px] lg:rounded-[8px] lg:text-[14px]' onClick={() => setRedirect(!redirect)}>Continue</button>
                         </div>
                     </div>
                 </div> : 
@@ -102,7 +102,7 @@ const SecondModal = ({value}) => {
         <Modal>
             {/* if checked is true, it will display next content but if submission is not true then next content is not displayed. this prevents me from using two modals */}
             { checked ? 
-                <div className="w-[258px] h-[186px] lg:w-[450px] lg:h-[450px] md:ml-[40%] md:ml-[40%] md:-mt-[60%] lg:mt-[10%] px-[17.19px] bg-white rounded-[10.3px] md:py-[34.96px] md:px-[17.6px] lg:py-[62px] lg:px-[31px] flex items-center justify-center">
+                <div className="w-[258px] h-[186px] lg:w-[450px] lg:h-[450px] md:ml-[40%] md:-mt-[60%] lg:mt-[10%] px-[17.19px] bg-white rounded-[10.3px] md:py-[34.96px] md:px-[17.6px] lg:py-[62px] lg:px-[31px] flex items-center justify-center">
                     <div className=''>
                         <div className="flex items-center justify-center mb-[14.32px]">
                             <h2 className='text-[8.02px] leading-[13.74px] lg:text-[14px] lg:leading-[24px]'>Your Password has been reset successfully.</h2>
@@ -112,7 +112,7 @@ const SecondModal = ({value}) => {
                         </div>
                         <h2 className="text-[9.167px] font-bold leading-normal lg:text-[14px]">Create a New Password to Log in to your Account.</h2>
                         <div className='flex justify-center mt-[28.65px] lg:mt-[50px]'>
-                            <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] leading-normal bg-primary lg:py-[10px] lg:px-[35px] lg:text-[12px] lg:rounded-[8px] lg:text-[14px]' onClick={() => setRedirect(!redirect)}>Continue</button>
+                            <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] leading-normal bg-primary lg:py-[10px] lg:px-[35px] lg:rounded-[8px] lg:text-[14px]' onClick={() => setRedirect(!redirect)}>Continue</button>
                         </div>
                     </div>
                 </div> : 
