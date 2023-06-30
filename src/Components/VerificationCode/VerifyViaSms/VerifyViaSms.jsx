@@ -9,9 +9,9 @@ import { ContextProvider } from "../../Context";
 export const VerifyViaSms = ({ setViaSms }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
-  const [success, setSuccess] = useState("");
+  // const [success, setSuccess] = useState("");
 
-  const {emailorsmsHandler, viaEmail} = useContext(ContextProvider)
+  const {emailorsmsHandler, viaEmail,success, setSuccess} = useContext(ContextProvider)
 
   const onClick = (code) => {
     setButtonColor("#04177f");
@@ -24,6 +24,7 @@ export const VerifyViaSms = ({ setViaSms }) => {
       alert("Please enter the verification code");
     } else {
       setSuccess(true);
+
     }
   };
 

@@ -139,12 +139,16 @@ export const Context = ({ children }) => {
     IVcode: "",
     password: "",
     confirmPassword: "",
+    checkbox:false
   });
   const [checkboxChecked, setCheckboxChecked] = useState(false);
-  const [newError, setNewError] = useState("");
 
   const handleCheckboxChange = (event) => {
-    setCheckboxChecked(event.target.checked);
+    const { checked } = event.target;
+    setCheckboxChecked(checked);
+    if (checked) {
+      console.log("true");
+    }
   };
 
   const handleCountryChange = (countryCode) => {
@@ -156,8 +160,10 @@ export const Context = ({ children }) => {
   };
 
   function changeHandler(e) {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+    const { name, value, type, checked } = e.target;
+    const inputValue = type === 'checkbox' ? checked : value;
+    setState({ ...state, [name]: inputValue });
+
   }
 
   const handleFocus = (index) => {
@@ -209,12 +215,11 @@ export const Context = ({ children }) => {
       .messages({
         "string.pattern.base":
           "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
-        // .valid("same with password")
-        //   .required()
-        //   // .label("Confirm Password")
-        //   .messages({
-        //     "string": "Passwords do not match",
       }),
+
+    checkbox: Joi.boolean().required().invalid(false).messages({
+      'any.invalid': 'Please ensure you agree to the privacy policy, terms and condition',
+    }),
   });
   // ======end of form valdiation=====
 
@@ -228,9 +233,9 @@ export const Context = ({ children }) => {
       userName,
       email,
       phoneNumber,
-      // IVcode,
       password,
       confirmPassword,
+      checkbox,
     } = state;
 
     const { error } = schema.validate({
@@ -238,9 +243,9 @@ export const Context = ({ children }) => {
       userName,
       email,
       phoneNumber,
-      // IVcode,
       password,
       confirmPassword,
+      checkbox,
       country,
     });
 
@@ -252,10 +257,6 @@ export const Context = ({ children }) => {
           return acc;
         }, {})
       );
-      // if (password !== confirmPassword) {
-      //   setErrors({ confirmPassword: 'Passwords do not match' });
-      //   return;
-      // }
     } else {
       console.log("Form submitted successfully");
       setVerification(true);
@@ -272,12 +273,6 @@ export const Context = ({ children }) => {
       setErrors({});
     }
 
-    if (!checkboxChecked) {
-      setNewError("Please check that you have agreed to continue ");
-      return;
-    }
-    // setNewError("")
-    // return;
   };
   // ========End for SignUp.jsx======
 
@@ -290,6 +285,7 @@ export const Context = ({ children }) => {
   const [viaEmail, setViaEmail] = useState(false);
   const [sms] = useState(true);
   const [email] = useState(true);
+  const [success, setSuccess] = useState("");
 
   const onClickSms = () => {
     setButtonColor("#04177f");
@@ -307,6 +303,7 @@ export const Context = ({ children }) => {
   const submitHandler = () => {
     if (viaEmailOrSms === "sms") {
       setViaSms(true);
+
     } else if (viaEmailOrSms === "email") {
       setViaEmail(true);
     }
@@ -397,12 +394,16 @@ export const Context = ({ children }) => {
     emailborderColor,
     viaEmail,
     viaSms,
+    setViaEmail,
+    setViaSms,
     sms,
     email,
     onClickSms,
     onClickEmail,
     submitHandler,
     emailorsmsHandler,
+    success,
+    setSuccess,
 
     // ========SignUp.jsx========
     isFocused,
@@ -410,6 +411,7 @@ export const Context = ({ children }) => {
     showPasswordTwo,
     errors,
     verification,
+    setVerification,
     state,
     handleCountryChange,
     handlePhoneNumberChange,
@@ -421,7 +423,6 @@ export const Context = ({ children }) => {
     setShowPasswordTwo,
     checkboxChecked,
     handleCheckboxChange,
-    newError,
   };
 
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ReactCodeInput from "dees-verification-code-input";
-// import { Link } from "react-router-dom";
 import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
 import { VerifyViaSms } from "../VerifyViaSms/VerifyViaSms";
@@ -11,8 +10,6 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
   const [success, setSuccess] = useState("");
-  // const [viaEmail, setViaEmail] = useState(false);
-  // const [viaSms, setViaSms] = useState(false);
   const { emailorsmsHandler, viaSms } = useContext(ContextProvider);
   const onClick = (code) => {
     setButtonColor("#04177f");
@@ -21,7 +18,6 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
   };
 
   const submitHandler = () => {
-    // setSuccess(true);
     if (!verificationCode) {
       alert("Please enter the verification code");
     } else {
@@ -96,12 +92,6 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
           <VerifyViaSms />
         </Modal>
       )}
-
-      {/* {viaEmail && (
-        <Modal>
-          <VerifyViaEmail />
-        </Modal>
-      )} */}
     </div>
   );
 };

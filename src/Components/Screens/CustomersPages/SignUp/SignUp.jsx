@@ -12,7 +12,7 @@ import { Modal } from "../../Modal/Modal";
 
 export const SignUp = () => {
   const {
-    hideNavbar,
+    // hideNavbar,
     setHideNavbar,
     isFocused,
     showPassword,
@@ -29,14 +29,14 @@ export const SignUp = () => {
     setShowPassword,
     setShowPasswordTwo,
     checkboxChecked,
-    handleCheckboxChange,
-    newError
+    // handleCheckboxChange,
+    // newError,
   } = useContext(ContextProvider);
 
   const setNav = () => {
     setHideNavbar(true);
   };
-  console.log(hideNavbar);
+  // console.log(hideNavbar);
 
   useEffect(() => {
     setNav();
@@ -53,10 +53,12 @@ export const SignUp = () => {
     email,
     phoneNumber,
     IVcode,
+    // checkboxChecked,
     // password,
     // confirmPassword,
   } = state;
 
+  console.log(checkboxChecked)
   console.log(state);
 
   return (
@@ -286,7 +288,6 @@ export const SignUp = () => {
               onFocus={() => handleFocus(6)}
               onBlur={() => handleBlur(6)}
             >
-
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPassword ? "text" : "password"}
@@ -362,7 +363,12 @@ export const SignUp = () => {
 
         <div className="md:ml-[4%] lg:ml-[14%]">
           <div className="flex gap-[5px] w-[90%] mx-auto">
-            <input type="checkbox" checked={checkboxChecked} onChange={handleCheckboxChange} />
+            <input
+              type="checkbox"
+              value={state.checkbox}
+              name="checkbox"
+              onChange={changeHandler}
+            />
             <p className="text-[8px] font-bold text-center text-[#00000060] lg:text-[14px]">
               I have read and agreed to the{" "}
               <Link
@@ -380,8 +386,12 @@ export const SignUp = () => {
               </Link>
             </p>
           </div>
-          {newError && (<p className="text-red-500 text-[8px] font-bold mx-auto w-[90%] lg:text-[14px]">{newError}</p>)}
-          
+          {errors.checkbox && (
+            <p className="text-red-500 italic text-[10px] font-bold mx-auto w-[90%] lg:text-[14px]">
+              {errors.checkbox}
+            </p>
+          )}
+
           <Link to="/passwordReset">
             {" "}
             <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
@@ -393,7 +403,6 @@ export const SignUp = () => {
         <button
           onClick={handleSubmit}
           type="submit"
-          disabled={!checkboxChecked}
           className="hover:cursor-pointer px-[35px] py-[10px] flex justify-center item-center mb-[5%] lg:mb-[2%] bg-[#04177f]  text-white p-[%] rounded-[4px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
         >
           Sign Up
