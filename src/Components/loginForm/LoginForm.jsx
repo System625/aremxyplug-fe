@@ -57,6 +57,16 @@ function LoginForm() {
   const [toolTipWidth, setToolTipWidth] = useState("");
   const [toolTipOffset, setToolTipOffset] = useState("");
   const [errors, setErrors] = useState({});
+  const [transpinError, setTranspinErrors] = useState("");
+
+  function handleTranspin() {
+    if (otp === otp2) {
+      setOpenTranspin(false);
+      setOpenTranspinSuccessful(true);
+    } else {
+      setTranspinErrors("Pin does not match!");
+    }
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -168,7 +178,7 @@ function LoginForm() {
       } else {
         console.log("Form submitted successfully");
         if (checkbox === true) {
-          localStorage.setItem("aremxyEmail", JSON.stringify(username));
+          localStorage.setItem("aremxyEmail", JSON.stringify(email));
           localStorage.setItem("aremxyPassword", JSON.stringify(password));
         }
 
@@ -249,8 +259,34 @@ function LoginForm() {
               />
             </div>
             {/* TRANSACTION CONFIRM PIN ENDS HERE */}
-
+            {transpinError.length > 0 ? (
+              <p className="text-center text-red-500 lg:text-[16px] text-[9.167px] mt-[3px] mb-[-10px] lg:mb-[-15px] lg:mt-[15px]">
+                {transpinError}
+              </p>
+            ) : (
+              ""
+            )}
             <div className="w-full flex justify-center mt-[20px] mb-[10px] lg:mb-[10px] lg:mt-[50px]">
+              <button
+                onClick={handleTranspin}
+                type="submit"
+                disabled={otp.length !== 4 || otp2.length !== 4 ? true : false}
+                className={` ${
+                  otp.length !== 4 || otp2.length !== 4
+                    ? " bg-[#b3b3b3] cursor-not-allowed"
+                    : "bg-[#04177F] cursor-pointer"
+                } inline-flex justify-center items-center text-[#fff]   text-center   
+text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]
+`}
+                // style={{
+                //   backgroundColor: primaryColor,
+                // }}
+              >
+                <p> Create</p>
+              </button>
+            </div>
+
+            {/* <div className="w-full flex justify-center mt-[20px] mb-[10px] lg:mb-[10px] lg:mt-[50px]">
               <div
                 onClick={() => {
                   setOpenTranspin(false);
@@ -265,7 +301,7 @@ function LoginForm() {
               >
                 <p> Create</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
@@ -591,7 +627,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                 type="submit"
                 disabled={email === "" || password === "" ? true : false}
                 className={` ${
-                  username === "" || password === ""
+                  email === "" || password === ""
                     ? "opacity-50 cursor-not-allowed"
                     : "opacity-[unset] cursor-pointer"
                 } inline-flex justify-center items-center text-[#fff]   text-center   
