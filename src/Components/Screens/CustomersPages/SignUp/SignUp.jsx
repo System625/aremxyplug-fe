@@ -62,17 +62,17 @@ export const SignUp = () => {
   console.log(state);
 
   return (
-    <div className="h-[1237px] bg-[#04177f] md:h-[100%] pb-[%] md:flex md:pb-0 md:">
+    <div className="h-[1237px] bg-[#04177f] md: pb-[%] md:flex md:justify-center md:items-center md:pb-0 md:h-[100vh] lg:h-[100%]">
       {/* =====Hero Image==== */}
       <img
-        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[6%] md:left-[1%] lg:w-[500px] lg:top-[11%] lg:left-[2%]"
+        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[26%] md:left-[1%] lg:w-[500px] lg:top-[11%] lg:left-[2%]"
         src="./Images/signupimages/signUpImg.png"
         alt="/"
       />
       {/* =====Hero Image==== */}
 
       {/* =====Sign up Form==== */}
-      <div className="md:h-[100%] pb-[10%] bg-[#ffffff] ml-[3%] rounded-bl-3xl rounded-tl-3xl px-[4%] md:pb-[5%] md:w-[573px]  md:ml-[30%] lg:h lg:w-[1001px]  lg:ml-[%] lg:px-0 lg:rounded-bl-[52px] lg:rounded-tl-[52px]">
+      <div className="md:h-[55%] pb-[10%] bg-[#ffffff] ml-[3%] rounded-bl-3xl rounded-tl-3xl px-[4%] md:pb-[5%] md:w-[573px]  md:ml-[30%] lg:h-[1024px] lg:w-[1001px]  lg:ml-[%] lg:px-0 lg:rounded-bl-[52px] lg:rounded-tl-[52px]">
         <Link to="/">
           <img
             className="w-[36px] py-[5%] lg:w-[93px] lg:h-[] lg:py-[2%] lg:pl-[3%]"
