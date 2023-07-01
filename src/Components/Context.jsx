@@ -40,6 +40,10 @@ export const Context = ({ children }) => {
   const [open2StepVerification, setOpen2StepVerification] = useState(false);
   // 2 STEP VERIFICATION POP UP STATE ENDS HERE
 
+  // 2 STEP OTP VERIFICATION  POP UP STATE STARTS HERE
+  const [open2StepOTP, setOpen2StepOTP] = useState(false);
+  // 2 STEP OTP VERIFICATION POP UP STATE ENDS HERE
+
   // ======== For FAQ dropdown ===========
   const [firstDrop, setFirstDrop] = useState(false);
   const [secondDrop, setSecondDrop] = useState(false);
@@ -139,7 +143,7 @@ export const Context = ({ children }) => {
     IVcode: "",
     password: "",
     confirmPassword: "",
-    checkbox:false
+    checkbox: false,
   });
   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
@@ -161,9 +165,8 @@ export const Context = ({ children }) => {
 
   function changeHandler(e) {
     const { name, value, type, checked } = e.target;
-    const inputValue = type === 'checkbox' ? checked : value;
+    const inputValue = type === "checkbox" ? checked : value;
     setState({ ...state, [name]: inputValue });
-
   }
 
   const handleFocus = (index) => {
@@ -218,7 +221,8 @@ export const Context = ({ children }) => {
       }),
 
     checkbox: Joi.boolean().required().invalid(false).messages({
-      'any.invalid': 'Please ensure you agree to the privacy policy, terms and condition',
+      "any.invalid":
+        "Please ensure you agree to the privacy policy, terms and condition",
     }),
   });
   // ======end of form valdiation=====
@@ -272,7 +276,6 @@ export const Context = ({ children }) => {
       });
       setErrors({});
     }
-
   };
   // ========End for SignUp.jsx======
 
@@ -303,7 +306,6 @@ export const Context = ({ children }) => {
   const submitHandler = () => {
     if (viaEmailOrSms === "sms") {
       setViaSms(true);
-
     } else if (viaEmailOrSms === "email") {
       setViaEmail(true);
     }
@@ -386,6 +388,11 @@ export const Context = ({ children }) => {
     // *****************************************
     open2StepVerification,
     setOpen2StepVerification,
+    // *****************************************
+
+    // *****************************************
+    open2StepOTP,
+    setOpen2StepOTP,
     // *****************************************
 
     // ======Verification.jsx=====

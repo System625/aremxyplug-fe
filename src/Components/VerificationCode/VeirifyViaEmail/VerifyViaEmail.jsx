@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ReactCodeInput from "dees-verification-code-input";
 import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
 import { VerifyViaSms } from "../VerifyViaSms/VerifyViaSms";
-import { useContext } from "react";
 import { ContextProvider } from "../../Context";
 
 export const VerifyViaEmail = ({ setViaEmail }) => {
