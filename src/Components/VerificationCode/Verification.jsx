@@ -11,8 +11,6 @@ export const Verification = () => {
     emailborderColor,
     viaEmail,
     viaSms,
-    // sms,
-    // email,
     onClickSms,
     onClickEmail,
     submitHandler,
@@ -83,9 +81,6 @@ export const Verification = () => {
 
       {/* ========Email verification pop up==== */}
       {viaEmail && (
-        // <Modal>
-        // {viaEmail ? <VerifyViaEmail /> : <VerifyViaSms />}
-        // </Modal>
         <Modal>
           <VerifyViaEmail />
         </Modal>
