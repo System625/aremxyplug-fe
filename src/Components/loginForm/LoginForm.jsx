@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./LoginForm.css";
 import { Link } from "react-router-dom";
+import FirstModal from "../Screens/CustomersPages/Password/FirstModal";
 import { ContextProvider } from "../Context";
 import { primaryColor } from "../Screens/cardIssuing/cardIssuing";
 import OtpInput from "react-otp-input";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import Joi from "joi";
+
 function LoginForm() {
   const {
     setOpenTranspin,
@@ -53,10 +55,37 @@ function LoginForm() {
   const [otp2, setOtp2] = useState("");
   const [passwordHidden, setPasswordHidden] = useState("password");
   const [isFocused, setIsFocused] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   const [toolTipWidth, setToolTipWidth] = useState("");
   const [toolTipOffset, setToolTipOffset] = useState("");
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let newSize = "";
+      let newOffset = "";
+
+      if (width < 1024) {
+        newSize = "96%";
+        newOffset = 30;
+      } else {
+        newSize = "50%";
+        newOffset = 50;
+      }
+
+      setToolTipWidth(newSize);
+      setToolTipOffset(newOffset);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -188,6 +217,7 @@ function LoginForm() {
         zIndex: 950,
       }}
     >
+      { showModal && <FirstModal/>}
       {/* FORM OVERLAY AND TRANSACTION PIN INPUT STARTS HERE */}
       {openTranspin === true && (
         <div
@@ -444,7 +474,7 @@ function LoginForm() {
                 </span>
               </p>
               <div
-                className={`inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px]    rounded  flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
+                className={`inputBoxShadow w-[100%] h-[22.75px] lg:h-[39px] rounded flex items-center lg:hover:border-[#b3b3b3] lg:duration-300 
             ${
               isFocused.includes(1)
                 ? "border-[#2684fe] border-2"
@@ -550,12 +580,10 @@ function LoginForm() {
               </div>
             </div>
             {/* Password ends here*/}
-            <Link to="/passwordReset">
-              <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-2 cursor-pointer tracking-wider">
+                <p className="text-[#04177F] lg:text-[14px] md:text-[8.02px] text-[8.02px] font-semibold my-2 cursor-pointer tracking-wider" onClick={() => setShowModal(!showModal)}>
                 Forgot password ?
               </p>
-            </Link>
-            <div className="flex items-center mb-4 mt-2">
+              <div className="flex">
               <input
                 type="checkbox"
                 name=""
