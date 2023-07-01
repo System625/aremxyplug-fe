@@ -11,7 +11,7 @@ export const VerifyViaSms = ({ setViaSms }) => {
   const [verificationCode, setVerificationCode] = useState("");
   // const [success, setSuccess] = useState("");
 
-  const {emailorsmsHandler, viaEmail,success, setSuccess} = useContext(ContextProvider)
+  const {emailorsmsHandler, viaEmail,success,setSuccess} = useContext(ContextProvider)
 
   const onClick = (code) => {
     setButtonColor("#04177f");
