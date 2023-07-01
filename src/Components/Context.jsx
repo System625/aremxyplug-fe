@@ -9,6 +9,22 @@ export const Context = ({ children }) => {
   // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
+  // const [openTranspin, setOpenTranspin] = useState(false);
+  // TRANSACTION PIN POP UP STATE ENDS HERE
+
+  // TRANSACTION PIN SUCCESSFULL POP UP STATE STARTS HERE
+  // const [openTranspinSuccessful, setOpenTranspinSuccessful] = useState(false);
+  // TRANSACTION PIN SUCCESSFULL UP STATE ENDS HERE
+
+  // RESET TRANSACTION PIN  POP UP STATE STARTS HERE
+  // const [openResetTranspin, setOpenResetTranspin] = useState(false);
+  // RESET TRANSACTION SUCCESSFULL POP UP STATE ENDS HERE
+
+  // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
+  // const [open2StepVerification, setOpen2StepVerification] = useState(false);
+  // 2 STEP VERIFICATION POP UP STATE ENDS HERE
+
+  // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);
   // TRANSACTION PIN POP UP STATE ENDS HERE
 
@@ -23,6 +39,10 @@ export const Context = ({ children }) => {
   // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
   const [open2StepVerification, setOpen2StepVerification] = useState(false);
   // 2 STEP VERIFICATION POP UP STATE ENDS HERE
+
+  // 2 STEP OTP VERIFICATION  POP UP STATE STARTS HERE
+  const [open2StepOTP, setOpen2StepOTP] = useState(false);
+  // 2 STEP OTP VERIFICATION POP UP STATE ENDS HERE
 
   // ======== For FAQ dropdown ===========
   const [firstDrop, setFirstDrop] = useState(false);
@@ -123,7 +143,17 @@ export const Context = ({ children }) => {
     IVcode: "",
     password: "",
     confirmPassword: "",
+    checkbox: false,
   });
+  const [checkboxChecked, setCheckboxChecked] = useState(false);
+
+  const handleCheckboxChange = (event) => {
+    const { checked } = event.target;
+    setCheckboxChecked(checked);
+    if (checked) {
+      console.log("true");
+    }
+  };
 
   const handleCountryChange = (countryCode) => {
     setState({ ...state, country: countryCode });
@@ -134,8 +164,9 @@ export const Context = ({ children }) => {
   };
 
   function changeHandler(e) {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+    const { name, value, type, checked } = e.target;
+    const inputValue = type === "checkbox" ? checked : value;
+    setState({ ...state, [name]: inputValue });
   }
 
   const handleFocus = (index) => {
@@ -188,6 +219,11 @@ export const Context = ({ children }) => {
         "string.pattern.base":
           "Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters",
       }),
+
+    checkbox: Joi.boolean().required().invalid(false).messages({
+      "any.invalid":
+        "Please ensure you agree to the privacy policy, terms and condition",
+    }),
   });
   // ======end of form valdiation=====
 
@@ -201,9 +237,9 @@ export const Context = ({ children }) => {
       userName,
       email,
       phoneNumber,
-      // IVcode,
       password,
       confirmPassword,
+      checkbox,
     } = state;
 
     const { error } = schema.validate({
@@ -211,9 +247,9 @@ export const Context = ({ children }) => {
       userName,
       email,
       phoneNumber,
-      // IVcode,
       password,
       confirmPassword,
+      checkbox,
       country,
     });
 
@@ -252,6 +288,7 @@ export const Context = ({ children }) => {
   const [viaEmail, setViaEmail] = useState(false);
   const [sms] = useState(true);
   const [email] = useState(true);
+  const [success, setSuccess] = useState("");
 
   const onClickSms = () => {
     setButtonColor("#04177f");
@@ -263,7 +300,6 @@ export const Context = ({ children }) => {
     setButtonColor("#04177f");
     setSmsBorderColor("#0003");
     setEmailBorderColor("#d166ff");
-
     setViaEmailOrSms("email");
   };
 
@@ -274,6 +310,17 @@ export const Context = ({ children }) => {
       setViaEmail(true);
     }
   };
+
+  const emailorsmsHandler = () => {
+    if (!viaEmail) {
+      setViaEmail(true);
+      setViaSms(false);
+    } else {
+      setViaEmail(false);
+      setViaSms(true);
+    }
+  };
+
   // ============end For Verification.jsx ==========
 
   const hold = {
@@ -343,17 +390,27 @@ export const Context = ({ children }) => {
     setOpen2StepVerification,
     // *****************************************
 
+    // *****************************************
+    open2StepOTP,
+    setOpen2StepOTP,
+    // *****************************************
+
     // ======Verification.jsx=====
     buttonColor,
     smsborderColor,
     emailborderColor,
     viaEmail,
     viaSms,
+    setViaEmail,
+    setViaSms,
     sms,
     email,
     onClickSms,
     onClickEmail,
     submitHandler,
+    emailorsmsHandler,
+    success,
+    setSuccess,
 
     // ========SignUp.jsx========
     isFocused,
@@ -361,6 +418,7 @@ export const Context = ({ children }) => {
     showPasswordTwo,
     errors,
     verification,
+    setVerification,
     state,
     handleCountryChange,
     handlePhoneNumberChange,
@@ -370,6 +428,8 @@ export const Context = ({ children }) => {
     handleSubmit,
     setShowPassword,
     setShowPasswordTwo,
+    checkboxChecked,
+    handleCheckboxChange,
   };
 
   return (

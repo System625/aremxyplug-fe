@@ -16,6 +16,11 @@
   border: 0.573px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
   background: #fff;
 }
+.inputOTPError {
+  border-radius: 2.865px;
+  border: 0.573px solid var(--stroke-fade, rgba(238, 63, 63, 0.987));
+  background: #fff;
+}
 
 .inputOTP:focus {
   outline: 1px solid rgba(0, 0, 0, 0);

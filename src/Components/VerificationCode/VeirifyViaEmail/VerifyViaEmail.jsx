@@ -1,19 +1,15 @@
 import React, { useContext, useState } from "react";
 import ReactCodeInput from "dees-verification-code-input";
-// import { Link } from "react-router-dom";
 import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
 import { VerifyViaSms } from "../VerifyViaSms/VerifyViaSms";
 import { ContextProvider } from "../../Context";
 
-export const VerifyViaEmail = ({ Email }) => {
-  const { setViaEmail } = useContext(ContextProvider);
+export const VerifyViaEmail = ({ setViaEmail }) => {
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
   const [success, setSuccess] = useState("");
-  // const [viaEmail, setViaEmail] = useState(false);
-  const [viaSms, setViaSms] = useState(false);
-
+  const { emailorsmsHandler, viaSms } = useContext(ContextProvider);
   const onClick = (code) => {
     setButtonColor("#04177f");
     setVerificationCode(code);
@@ -21,11 +17,11 @@ export const VerifyViaEmail = ({ Email }) => {
   };
 
   const submitHandler = () => {
-    setSuccess(true);
-  };
-
-  const smsHandler = () => {
-    setViaSms(true);
+    if (!verificationCode) {
+      alert("Please enter the verification code");
+    } else {
+      setSuccess(true);
+    }
   };
 
   return (
@@ -35,7 +31,7 @@ export const VerifyViaEmail = ({ Email }) => {
       </p>
       <div className="flex flex-col gap-[15px] lg:gap-[28px]">
         <p
-          onClick={smsHandler}
+          onClick={emailorsmsHandler}
           className="cursor-pointer hover:underline text-[#737373] text-[6px] lg:text-[10px]"
         >
           Use mobile number instead
