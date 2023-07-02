@@ -62,10 +62,10 @@ export const SignUp = () => {
   console.log(state);
 
   return (
-    <div className="h-[1237px] bg-[#04177f] md: pb-[%] md:flex md:justify-center md:items-center md:pb-0 md:h-[100vh] lg:h-[100%]">
+    <div className="h-[1237px] bg-[#04177f] md: pb-[%] md:flex md:justify-center md:items-center md:pb-0 md:h-[100vh] lg:h-[170vh]">
       {/* =====Hero Image==== */}
       <img
-        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[26%] md:left-[1%] lg:w-[500px] lg:top-[11%] lg:left-[2%]"
+        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[26%] md:left-[1%] lg:w-[500px] lg:top-[20%] lg:left-[2%]"
         src="./Images/signupimages/signUpImg.png"
         alt="/"
       />
