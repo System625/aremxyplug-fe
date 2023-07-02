@@ -9,6 +9,7 @@ function Login() {
     openTranspinSuccessful,
     openResetTranspin,
     open2StepVerification,
+    open2StepOTP,
   } = useContext(ContextProvider);
 
   const setNav = () => {
@@ -35,7 +36,8 @@ function Login() {
       {openTranspin === true ||
       openTranspinSuccessful === true ||
       openResetTranspin === true ||
-      open2StepVerification === true ? (
+      open2StepVerification === true ||
+      open2StepOTP === true ? (
         <div
           className="absolute top-0 bottom-0 right-0 left-0"
           style={{
