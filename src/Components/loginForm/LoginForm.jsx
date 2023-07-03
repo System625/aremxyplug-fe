@@ -318,6 +318,7 @@ function LoginForm() {
             <div className="flex justify-center">
               <OtpInput
                 value={otp}
+                inputType="tel"
                 onChange={setOtp}
                 numInputs={4}
                 shouldAutoFocus={true}
@@ -342,6 +343,7 @@ function LoginForm() {
             <div className="flex justify-center ">
               <OtpInput
                 value={otp2}
+                inputType="tel"
                 onChange={setOtp2}
                 numInputs={4}
                 // onFocus={() => handleFocused_otp()}
@@ -617,6 +619,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                 <div className="inline-block ">
                   <OtpInput
                     value={otp3}
+                    inputType="tel"
                     onChange={setOtp3}
                     numInputs={6}
                     shouldAutoFocus={true}
@@ -718,6 +721,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                 <div className="inline-block ">
                   <OtpInput
                     value={otp3}
+                    inputType="tel"
                     onChange={setOtp3}
                     numInputs={6}
                     shouldAutoFocus={true}
