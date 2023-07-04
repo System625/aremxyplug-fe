@@ -17,3 +17,10 @@ backdrop-filter: blur(5.589743614196777px);
         gap: 6px;
     }
 }
+
+@media (min-width: 1024px){
+    .dashboard{
+        width: 275px;
+        gap:10px
+    }
+}
