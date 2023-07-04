@@ -1,27 +1,40 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ReactCodeInput from "dees-verification-code-input";
-// import { Link } from "react-router-dom";
 import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
 import { VerifyViaSms } from "../VerifyViaSms/VerifyViaSms";
-import { useContext } from "react";
 import { ContextProvider } from "../../Context";
+import { useEffect } from "react";
 
-export const VerifyViaEmail = ({ setViaEmail }) => {
+export const VerifyViaEmail = () => {
+  const [seconds, setSeconds] = useState(60)
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
   const [success, setSuccess] = useState("");
-  // const [viaEmail, setViaEmail] = useState(false);
-  // const [viaSms, setViaSms] = useState(false);
   const { emailorsmsHandler, viaSms } = useContext(ContextProvider);
+
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      if(seconds > 0){
+        setSeconds(seconds-1);
+      }
+    }, 1000);
+    return ()=>{
+      clearInterval(interval);
+    }
+  }, );
+
   const onClick = (code) => {
     setButtonColor("#04177f");
     setVerificationCode(code);
     // window.location.href="/dashboard";
   };
 
+  const resendOtp =() =>{
+    setSeconds(59)
+  }
+
   const submitHandler = () => {
-    // setSuccess(true);
     if (!verificationCode) {
       alert("Please enter the verification code");
     } else {
@@ -47,7 +60,7 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
             <ReactCodeInput
               className="custom-verification-input"
               length={6}
-              type="text"
+              type="number"
               value={verificationCode}
               onChange={onClick}
               autoFocus
@@ -57,7 +70,7 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
             <ReactCodeInput
               className="custom-verification-input"
               length={6}
-              type="text"
+              type="number"
               value={verificationCode}
               onChange={onClick}
               autoFocus
@@ -68,9 +81,9 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
 
           <div className="flex justify-between w-full lg:w-[90%] items-center mx-auto">
             <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
-              60sec
+              {seconds}secs
             </p>
-            <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
+            <p disabled={seconds > 0} onClick={resendOtp} style={{color: seconds > 0 ? "#0003" : "#04177f"}} className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]">
               Resend OTP
             </p>
           </div>
@@ -96,12 +109,6 @@ export const VerifyViaEmail = ({ setViaEmail }) => {
           <VerifyViaSms />
         </Modal>
       )}
-
-      {/* {viaEmail && (
-        <Modal>
-          <VerifyViaEmail />
-        </Modal>
-      )} */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactCodeInput from "dees-verification-code-input";
 import { Modal } from "../../Screens/Modal/Modal";
 import { VerificationSuccessful } from "../VeirifcationSuccessful/VerificationSuccessful";
@@ -6,12 +6,22 @@ import { VerifyViaEmail } from "../VeirifyViaEmail/VerifyViaEmail";
 import { useContext } from "react";
 import { ContextProvider } from "../../Context";
 
-export const VerifyViaSms = ({ setViaSms }) => {
+export const VerifyViaSms = () => {
+  const [seconds, setSeconds] = useState(60)
   const [buttonColor, setButtonColor] = useState("#0003");
   const [verificationCode, setVerificationCode] = useState("");
-  const [success, setSuccess] = useState("");
+  const {emailorsmsHandler, viaEmail,success,setSuccess} = useContext(ContextProvider)
 
-  const {emailorsmsHandler, viaEmail} = useContext(ContextProvider)
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      if(seconds > 0){
+        setSeconds(seconds-1);
+      }
+    }, 1000);
+    return ()=>{
+      clearInterval(interval);
+    }
+  }, );
 
   const onClick = (code) => {
     setButtonColor("#04177f");
@@ -19,11 +29,16 @@ export const VerifyViaSms = ({ setViaSms }) => {
     // window.location.href="/dashboard";
   };
 
+  const resendOtp =() =>{
+    setSeconds(59)
+  }
+
   const submitHandler = () => {
     if (!verificationCode) {
       alert("Please enter the verification code");
     } else {
       setSuccess(true);
+
     }
   };
 
@@ -46,7 +61,7 @@ export const VerifyViaSms = ({ setViaSms }) => {
             <ReactCodeInput
               className="custom-verification-input"
               length={6}
-              type="text"
+              type="number"
               value={verificationCode}
               onChange={onClick}
               autoFocus
@@ -56,7 +71,7 @@ export const VerifyViaSms = ({ setViaSms }) => {
             <ReactCodeInput
               className="custom-verification-input"
               length={6}
-              type="text"
+              type="number"
               value={verificationCode}
               onChange={onClick}
               autoFocus
@@ -67,9 +82,9 @@ export const VerifyViaSms = ({ setViaSms }) => {
 
           <div className="flex justify-between w-full lg:w-[90%] items-center mx-auto">
             <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
-              60sec
+              {seconds}secs
             </p>
-            <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
+            <p disabled={seconds > 0} onClick={resendOtp} style={{color: seconds > 0 ? "#0003" : "#04177f"}} className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]">
               Resend OTP
             </p>
           </div>

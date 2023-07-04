@@ -116,7 +116,7 @@ const NewPassword = () => {
                                     <img src={aremxyPlug} alt="brand_logo" className='h-full w-full object-cover'/>
                                 </Link>
                                 <div className=''>
-                                    <h2 className='text-center text-[11.45px] leading-normal font-[600] mb-[57.29px] lg:text-[20px] leading-normal'>Create a new password</h2>
+                                    <h2 className='text-center text-[11.45px] leading-normal font-[600] mb-[57.29px] lg:text-[20px]'>Create a new password</h2>
                                     <div className='my-[10px]'>
                                         <p className="text-[9.17px] md:text-[11.58px] lg:text-[16px] font-[600] lg:mb-[10px] tracking-wider leading-normal">Password</p>
                                         <div className='relative w-[100%] h-[22.75px] lg:h-[39px]  rounded  flex items-center'>

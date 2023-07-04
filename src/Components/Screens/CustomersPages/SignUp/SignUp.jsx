@@ -12,7 +12,7 @@ import { Modal } from "../../Modal/Modal";
 
 export const SignUp = () => {
   const {
-    hideNavbar,
+    // hideNavbar,
     setHideNavbar,
     isFocused,
     showPassword,
@@ -29,14 +29,14 @@ export const SignUp = () => {
     setShowPassword,
     setShowPasswordTwo,
     checkboxChecked,
-    handleCheckboxChange,
-    newError
+    // handleCheckboxChange,
+    // newError,
   } = useContext(ContextProvider);
 
   const setNav = () => {
     setHideNavbar(true);
   };
-  console.log(hideNavbar);
+  // console.log(hideNavbar);
 
   useEffect(() => {
     setNav();
@@ -53,24 +53,26 @@ export const SignUp = () => {
     email,
     phoneNumber,
     IVcode,
+    // checkboxChecked,
     // password,
     // confirmPassword,
   } = state;
 
+  console.log(checkboxChecked)
   console.log(state);
 
   return (
-    <div className="h-[1237px] bg-[#04177f] md:h-[100%] pb-[%] md:flex md:pb-0 md:">
+    <div className="h-[1237px] bg-[#04177f] md: pb-[%] md:flex md:justify-center md:items-center md:pb-0 md:h-[100vh] lg:h-[170vh]">
       {/* =====Hero Image==== */}
       <img
-        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[6%] md:left-[1%] lg:w-[500px] lg:top-[11%] lg:left-[2%]"
+        className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[26%] md:left-[1%] lg:w-[500px] lg:top-[20%] lg:left-[2%]"
         src="./Images/signupimages/signUpImg.png"
         alt="/"
       />
       {/* =====Hero Image==== */}
 
       {/* =====Sign up Form==== */}
-      <div className="md:h-[100%] pb-[10%] bg-[#ffffff] ml-[3%] rounded-bl-3xl rounded-tl-3xl px-[4%] md:pb-[5%] md:w-[573px]  md:ml-[30%] lg:h lg:w-[1001px]  lg:ml-[%] lg:px-0 lg:rounded-bl-[52px] lg:rounded-tl-[52px]">
+      <div className="md:h-[55%] pb-[10%] bg-[#ffffff] ml-[3%] rounded-bl-3xl rounded-tl-3xl px-[4%] md:pb-[5%] md:w-[573px]  md:ml-[30%] lg:h-[1024px] lg:w-[1001px]  lg:ml-[%] lg:px-0 lg:rounded-bl-[52px] lg:rounded-tl-[52px]">
         <Link to="/">
           <img
             className="w-[36px] py-[5%] lg:w-[93px] lg:h-[] lg:py-[2%] lg:pl-[3%]"
@@ -286,7 +288,6 @@ export const SignUp = () => {
               onFocus={() => handleFocus(6)}
               onBlur={() => handleBlur(6)}
             >
-
               <input
                 className="outline-none text-[12px] h-[15px] w-full lg:h-[25px] lg:text-[16px]"
                 type={showPassword ? "text" : "password"}
@@ -362,7 +363,12 @@ export const SignUp = () => {
 
         <div className="md:ml-[4%] lg:ml-[14%]">
           <div className="flex gap-[5px] w-[90%] mx-auto">
-            <input type="checkbox" checked={checkboxChecked} onChange={handleCheckboxChange} />
+            <input
+              type="checkbox"
+              value={state.checkbox}
+              name="checkbox"
+              onChange={changeHandler}
+            />
             <p className="text-[8px] font-bold text-center text-[#00000060] lg:text-[14px]">
               I have read and agreed to the{" "}
               <Link
@@ -380,8 +386,12 @@ export const SignUp = () => {
               </Link>
             </p>
           </div>
-          {newError && (<p className="text-red-500 text-[8px] font-bold mx-auto w-[90%] lg:text-[14px]">{newError}</p>)}
-          
+          {errors.checkbox && (
+            <p className="text-red-500 italic text-[10px] font-bold mx-auto w-[90%] lg:text-[14px]">
+              {errors.checkbox}
+            </p>
+          )}
+
           <Link to="/passwordReset">
             {" "}
             <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
@@ -393,7 +403,6 @@ export const SignUp = () => {
         <button
           onClick={handleSubmit}
           type="submit"
-          disabled={!checkboxChecked}
           className="hover:cursor-pointer px-[35px] py-[10px] flex justify-center item-center mb-[5%] lg:mb-[2%] bg-[#04177f]  text-white p-[%] rounded-[4px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
         >
           Sign Up
