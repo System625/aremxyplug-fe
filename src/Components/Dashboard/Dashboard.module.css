@@ -1,0 +1,26 @@
+.dashboard{
+display: flex;
+margin: 10% auto;
+display: flex;
+width: 96.074px;
+padding: 4% 0 4% 4%;
+gap: 4%;
+border-radius: 3.494px;
+background-color: rgba(255, 255, 255, 0.20);
+box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25), 0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
+backdrop-filter: blur(5.589743614196777px);
+}
+
+@media (min-width:768px){
+    .dashboard{
+        width: 157px;
+        gap: 6px;
+    }
+}
+
+@media (min-width: 1024px){
+    .dashboard{
+        width: 275px;
+        gap:10px
+    }
+}

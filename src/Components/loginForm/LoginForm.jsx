@@ -434,7 +434,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
               </div>
               {/* <Link to="/"> */}
               <div className="w-full flex justify-center mt-[20px]  lg:mt-[50px]">
-                <div
+                <Link to="/dashboard"><div
                   onClick={() => setOpenTranspinSuccessful(false)}
                   className=" inline-flex justify-center items-center text-[#fff]   text-center  cursor-pointer 
       text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rounded-[7px] lg:px-[37px] lg:py-[15px] lg:text-[14px]
@@ -444,7 +444,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                   }}
                 >
                   <p> Done</p>
-                </div>
+                </div></Link>
               </div>
               {/* </Link> */}
             </div>
