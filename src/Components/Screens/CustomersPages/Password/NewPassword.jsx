@@ -14,6 +14,7 @@ import RedirectModal from './RedirectModal';
 const NewPassword = () => {
     const [passHide, setPassHide] = useState("password");
     const [password, setPassword] = useState('');
+    const [passError, setPassError] = useState('')
     const [cpassword, setCpassword] = useState('');
     const [cpassHide, setCpassHide] = useState("password");
     const [submit, setSubmit] = useState(false);
@@ -36,7 +37,12 @@ const NewPassword = () => {
 
       const handleSubmit =(event)=> {
          event.preventDefault();
-         if (password !== cpassword) {
+         const regEx = new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s]).{8,}$/);
+         if (!regEx.test(password)) {
+            setBorder('border-red-500');
+            setSubmit(false);
+            setPassError('Password must have At least one alphabetical character, At least one digit, Contains at least one special character (e.g., !@#$%^&*) and Minimum length of 8 characters')
+         } else if (password !== cpassword) {
             setBorder('border-red-500');
             setSubmit(false);
             setError('Passwords do not match!!!')
@@ -74,6 +80,7 @@ const NewPassword = () => {
                                     )}
                                     <input className={`${border} border w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] pl-[7.5px] md:pl-[10px] pr-[40px] md:pr-[50px] rounded  text-[#403f3f] outline-none`} type={passHide} value={password} onChange={(event) => setPassword(event.target.value)}/>
                                 </div>
+                                <h2>{passError}</h2>
                             </div>
                             <div className=''>
                                 <p className="text-[9.17px] md:text-[11.58px] lg:text-[16px] font-[600] lg:mb-[10px] tracking-wider leading-normal">Confirm Password</p>
@@ -128,6 +135,7 @@ const NewPassword = () => {
                                             )}
                                             <input className={`${border} border w-full h-full text-[8.93px] md:text-[11.58px] lg:text-[20px] pl-[7.5px] md:pl-[10px] pr-[40px] md:pr-[50px] rounded  text-[#403f3f] outline-none`} type={passHide} value={password} onChange={(event) => setPassword(event.target.value)}/>
                                         </div>
+                                        <h2 className='text-red-500 text-[5.7px] text-center lg:text-[10px] leading-normal'>{passError}</h2>
                                     </div>
                                     <div className=''>
                                         <p className="text-[9.17px] md:text-[11.58px] lg:text-[16px] font-[600] lg:mb-[10px] tracking-wider leading-normal">Confirm Password</p>
