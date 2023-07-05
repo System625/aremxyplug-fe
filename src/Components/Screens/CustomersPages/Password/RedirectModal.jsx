@@ -24,7 +24,7 @@ const RedirectModal = () => {
                     </div>
                     <h2 className="text-[9.167px] font-bold leading-normal lg:text-[14px] text-center">Sign in to your account to start operations!</h2>
                     <div className='flex justify-center mt-[28.65px] lg:mt-[50px]'>
-                        <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] leading-normal bg-primary lg:py-[10px] lg:px-[35px] lg:text-[12px] lg:rounded-[8px] leading-normal' onClick={() => setRedirect(!redirect)}>Continue</button>
+                        <button className='py-[5.729px] px-[20.052px] border rounded-[4.583px] disabled:bg-[#ccc] font-bold text-white text-[6.875px] bg-primary lg:py-[10px] lg:px-[35px] lg:text-[12px] lg:rounded-[8px] leading-normal' onClick={() => setRedirect(!redirect)}>Continue</button>
                     </div>
                 </div>
             </div>

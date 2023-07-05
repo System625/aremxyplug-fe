@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { ContextProvider } from "../../../Context";
 import { Verification } from "../../../VerificationCode/Verification";
 import { Modal } from "../../Modal/Modal";
+import FirstModal from "../Password/FirstModal";
+import { useState } from "react";
 
 export const SignUp = () => {
   const {
@@ -61,9 +63,12 @@ export const SignUp = () => {
   console.log(checkboxChecked)
   console.log(state);
 
+  const [showPassModal, setShowPassModal] = useState(false)
+
   return (
     <div className="h-[1237px] bg-[#04177f] md: pb-[%] md:flex md:justify-center md:items-center md:pb-0 md:h-[100vh] lg:h-[170vh]">
       {/* =====Hero Image==== */}
+      {showPassModal && <FirstModal/>}
       <img
         className=" w-[286px] py-[15%] mx-auto md:absolute md:h-[%] md:w-[286.46px] md:top-[26%] md:left-[1%] lg:w-[500px] lg:top-[20%] lg:left-[2%]"
         src="./Images/signupimages/signUpImg.png"
@@ -392,9 +397,9 @@ export const SignUp = () => {
             </p>
           )}
 
-          <Link to="/passwordReset">
+          <Link>
             {" "}
-            <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]">
+            <p className="mt-[2%] text-[8px] font-extrabold mx-auto w-[90%] text-[#04177f] lg:text-[14px]" onClick={()=>setShowPassModal(!showPassModal)}>
               Forgot password ?
             </p>
           </Link>

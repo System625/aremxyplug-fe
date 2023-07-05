@@ -7,7 +7,7 @@ import tickGif from './tick.gif'
 
 const SecondModal = ({value}) => {
     const [OTP, setOTP] = useState("");
-    const presetNum = 178909;
+    const presetNum = 123456;
     const [error, setError] = useState('');
     const [border, setBorder] = useState('border');
     const [submision, setSubmission] = useState(false);
