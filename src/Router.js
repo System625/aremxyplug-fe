@@ -30,6 +30,7 @@ import { VerifyViaEmail } from "./Components/VerificationCode/VeirifyViaEmail/Ve
 import { VerifyViaSms } from "./Components/VerificationCode/VerifyViaSms/VerifyViaSms";
 import NewPassword from "./Components/Screens/CustomersPages/Password/NewPassword";
 import { MainDashboard } from "./Components/Dashboard/MainDashboard";
+import Wallet from "./Components/Wallet/Wallet";
 
 export const Router = () => {
   return (
@@ -69,7 +70,7 @@ export const Router = () => {
         <Route path="/emailRoute" element={<VerifyViaEmail />} />
         <Route path="/smsRoute" element={<VerifyViaSms />} />
         <Route path="/dashboard" element={<MainDashboard/>} />
-        
+        <Route path="/wallet" element={<Wallet/>} />
       </Routes>
     </div>
   );
