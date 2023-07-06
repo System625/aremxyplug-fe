@@ -29,7 +29,7 @@ import PasswordReset from "./Components/Screens/CustomersPages/Password/Password
 import { VerifyViaEmail } from "./Components/VerificationCode/VeirifyViaEmail/VerifyViaEmail";
 import { VerifyViaSms } from "./Components/VerificationCode/VerifyViaSms/VerifyViaSms";
 import NewPassword from "./Components/Screens/CustomersPages/Password/NewPassword";
-import { MainDashboard } from "./Components/Dashboard/MainDashboard";
+import { MainDashboard } from "./Components/Dashboard/Layout/MainDashboard";
 
 export const Router = () => {
   return (
