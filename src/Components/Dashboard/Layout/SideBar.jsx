@@ -6,20 +6,24 @@ import styles from "./Dashboard.module.css";
 
 export const SideBar = () => {
   const { setToggleSideBar } = useContext(ContextProvider);
-  const [dropDownBtn, setDropDownBtn] = useState(false);
-  const [dropDownBtn2, setDropDownBtn2] = useState(false);
+  const [dropDownOpen, setDropDownOpen] = useState({
+    dropdown1: false,
+    dropdown2: false,
+    dropdown3: false,
+    dropdown4: false,
+    dropdown5: false,
+    dropdown6: false,
+  });
 
-  const dropHandler = () => {
-    // const updatedButtons = dropDownBtn.map((i) => i === index)
-
-    // setDropDownBtn((prev) => !prev);
-    setDropDownBtn((prev) => !prev);
-  };
-  const dropHandler2 = () => {
-    // const updatedButtons = dropDownBtn.map((i) => i === index)
-
-    // setDropDownBtn((prev) => !prev);
-    setDropDownBtn2((prev) => !prev);
+  const dropHandler = (dropdownName) => {
+    setDropDownOpen((prevState) => ({
+      dropdown1: dropdownName === "dropdown1" ? !prevState.dropdown1 : false,
+      dropdown2: dropdownName === "dropdown2" ? !prevState.dropdown2 : false,
+      dropdown3: dropdownName === "dropdown3" ? !prevState.dropdown3 : false,
+      dropdown4: dropdownName === "dropdown4" ? !prevState.dropdown4 : false,
+      dropdown5: dropdownName === "dropdown5" ? !prevState.dropdown5 : false,
+      dropdown6: dropdownName === "dropdown6" ? !prevState.dropdown6 : false,
+    }));
   };
 
   return (
@@ -32,9 +36,9 @@ export const SideBar = () => {
           alt="Logo"
         />
         <img
-          onClick={setToggleSideBar(true)}
+          onClick={() => setToggleSideBar(false)}
           className="cursor-pointer w-[13.97px] h-[13.97px] md:w-[22px] md:h-[22px] lg:h-[40px] lg:w-[40px]"
-          src="./Images/dashboardImages/menu.png"
+          src="./Images/dashboardImages/menumenu.png"
           alt="Menu"
         />
       </div>
@@ -109,7 +113,7 @@ export const SideBar = () => {
                 <p>Transfer</p>
               </div>
               <div
-                onClick={dropHandler}
+                onClick={() => dropHandler("dropdown1")}
                 className="flex justify-between items-center"
               >
                 <div className="flex gap-[3.4px] items-center cursor-pointer">
@@ -122,11 +126,11 @@ export const SideBar = () => {
                 </div>
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>
-              {dropDownBtn && (
+              {dropDownOpen.dropdown1 && (
                 <ul className=" absolute top-[29%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[31%] md:w-[114px] lg:rounded-[6px] lg:top-[31%] lg:w-[200px] lg:ml-[19px]">
                   <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                     All Transactions
@@ -157,7 +161,7 @@ export const SideBar = () => {
 
             <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div
-                onClick={dropHandler2}
+                onClick={() => dropHandler("dropdown2")}
                 className="flex justify-between gap-[3.4px]"
               >
                 <div className="flex items-center cursor-pointer">
@@ -170,11 +174,11 @@ export const SideBar = () => {
                 </div>
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>
-              {dropDownBtn2 && (
+              {dropDownOpen.dropdown2 && (
                 <ul className=" absolute top-[35%]  ml-[12px] mt-[-5px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[36.5%] md:w-[114px] lg:rounded-[6px] lg:top-[36.5%] lg:w-[200px] lg:ml-[19px]">
                   <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                     Airtime Top-up
@@ -202,7 +206,10 @@ export const SideBar = () => {
                   </li>
                 </ul>
               )}
-              <div className="flex gap-[3.4px] justify-between">
+              <div
+                onClick={() => dropHandler("dropdown3")}
+                className="flex gap-[3.4px] justify-between"
+              >
                 <div className="flex gap-[3.5px] items-center cursor-pointer">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -211,13 +218,35 @@ export const SideBar = () => {
                   />
                   <p>Payments</p>
                 </div>
+                {dropDownOpen.dropdown3 && (
+                  <ul className=" absolute top-[37.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[39%] md:w-[114px] lg:rounded-[6px] lg:top-[38.5%] lg:w-[200px] lg:ml-[19px]">
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Wallets
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Virtual Accounts
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Money Transfer
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Card Payments
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      International Payments
+                    </li>
+                  </ul>
+                )}
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>
-              <div className="flex justify-between">
+              <div
+                onClick={() => dropHandler("dropdown4")}
+                className="flex justify-between"
+              >
                 <div className="flex items-center gap-[3.4px] cursor-pointer">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -226,9 +255,25 @@ export const SideBar = () => {
                   />
                   <p>Card Issuing</p>
                 </div>
+                {dropDownOpen.dropdown4 && (
+                  <ul className=" absolute top-[40.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[200px] lg:ml-[19px]">
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Virtual USD Card
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Virtual NGN Card
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Physical USD Card
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Physical NGN Card
+                    </li>
+                  </ul>
+                )}
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>
@@ -272,7 +317,10 @@ export const SideBar = () => {
                 />
                 <p>Pricing</p>
               </div>
-              <div className="flex justify-between">
+              <div
+                onClick={() => dropHandler("dropdown5")}
+                className="flex justify-between"
+              >
                 <div className="flex gap-[3.4px] items-center cursor-pointer">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -281,13 +329,23 @@ export const SideBar = () => {
                   />
                   <p>Upgrade</p>
                 </div>
+                {dropDownOpen.dropdown5 && (
+                  <ul className=" absolute top-[57.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[58%] md:w-[114px] lg:rounded-[6px] lg:top-[57.5%] lg:w-[200px] lg:ml-[19px]">
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      Become An Agent
+                    </li>
+                  </ul>
+                )}
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>
-              <div className="flex justify-between">
+              <div
+                onClick={() => dropHandler("dropdown6")}
+                className="flex justify-between"
+              >
                 <div className="flex gap-[3.4px] items-center cursor-pointer">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -296,9 +354,19 @@ export const SideBar = () => {
                   />
                   <p>Referrals</p>
                 </div>
+                {dropDownOpen.dropdown6 && (
+                  <ul className=" absolute top-[60.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[60.5%] md:w-[114px] lg:rounded-[6px] lg:top-[60.5%] lg:w-[200px] lg:ml-[19px]">
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      My Referrals
+                    </li>
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                      My Point Balance
+                    </li>
+                  </ul>
+                )}
                 <img
                   className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-down.png"
+                  src="./Images/dashboardImages/arrow-downlarge.png"
                   alt="dropdown"
                 />
               </div>

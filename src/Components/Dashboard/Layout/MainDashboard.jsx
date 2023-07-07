@@ -22,7 +22,7 @@ export const MainDashboard = () => {
 
   return (
     <div>
-       {toggleSideBar && (<div className='absolute'><SideBar/></div>)}
+       {toggleSideBar && (<div className='absolute top-0 left-0'><SideBar/></div>)}
        <TopBar/>
     </div>
   )
