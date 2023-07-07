@@ -325,6 +325,9 @@ export const Context = ({ children }) => {
 
   // ============end For Verification.jsx ==========
 
+  // =============Start Dashboard=============
+  const [toggleSideBar, setToggleSideBar] = useState("");
+
   const hold = {
     firstDrop,
     secondDrop,
@@ -436,6 +439,10 @@ export const Context = ({ children }) => {
     setResetEmail,
     resetNumber,
     setResetNumber,
+
+    // =========Dashboard=========
+    toggleSideBar,
+    setToggleSideBar,
   };
 
   return (
