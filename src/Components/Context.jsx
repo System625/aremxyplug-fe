@@ -6,6 +6,8 @@ export const ContextProvider = createContext();
 export const Context = ({ children }) => {
   // Select username or email starts here
   const [hideNavbar, setHideNavbar] = useState(false);
+  const [resetEmail, setResetEmail] = useState('');
+  const [resetNumber, setResetNumber] = useState('');
   // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
@@ -430,6 +432,10 @@ export const Context = ({ children }) => {
     setShowPasswordTwo,
     checkboxChecked,
     handleCheckboxChange,
+    resetEmail,
+    setResetEmail,
+    resetNumber,
+    setResetNumber,
   };
 
   return (
