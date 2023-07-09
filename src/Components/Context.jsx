@@ -1,5 +1,7 @@
 import React, { createContext, useState } from "react";
 import Joi from "joi";
+import axios from "axios";
+import { BASE_URL } from "../config";
 
 export const ContextProvider = createContext();
 
@@ -274,6 +276,15 @@ export const Context = ({ children }) => {
         password: "",
         confirmPassword: "",
       });
+
+      axios.post("http://aremxyplug.onrender.com/api/v1/users/signup")
+      .then((response) => {
+        console.log("signup successful")
+      })
+      .catch(error =>{
+        console.log(error);
+      })
+
       setErrors({});
     }
   };

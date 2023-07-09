@@ -13,14 +13,14 @@ export const TopBar = () => {
   //   setLogout((prev) => !prev);
   // };
   return (
-    <div className="mt-[14px] flex gap-[3%] justify-center md:gap-[10%] md:border-b-[1px] lg:mt-[18px] lg:border-b-[#0003] lg:gap-[18%]">
+    <div className="sticky top-0 z-[99px] bg-white mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md:border-b-[1px] lg:mt-[18px] lg:border-b-[#0003] lg:gap-[18%]">
       <img
         onClick={() => setToggleSideBar(true)}
         className="cursor-pointer w-[21px] h-[21px] md:h-[30.9px] md:w-[30.9px] lg:h-[52px] lg:w-[52px]"
         src="./Images/dashboardImages/menularge.png"
         alt="/harmburger"
       />
-      <div className="flex items-center gap-[40px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]">
+      <div className="flex items-center gap-[45px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]">
         <div className="cursor-pointer flex justify-between items-center px-[2%] w-[102px] h-[17px] rounded-[3.4px] border-[0.5px] border-[#0003] md:h-[33.8px] md:w-[202px] lg:border-[1.5px] lg:border-[#0003] lg:rounded-[10px] lg:w-[358px] lg:h-[60px]">
           <div className="flex justify-center items-center gap-[3px] lg:gap-[7px]">
             <img
@@ -57,7 +57,7 @@ export const TopBar = () => {
           />
         </div>
         {logout && (
-          <ul className="border drop-shadow-xl absolute top-[5.7%] right-[7%]  ml-[12px] mt-[px] rounded-[3px]  bg-[#ffffff] w-[75px] md:top-[5.5%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[12.9%] lg:w-[200px] lg:ml-[19px]">
+          <ul className="border drop-shadow-xl absolute top-[95%] right-[7%]  ml-[12px] mt-[px] rounded-[3px]  bg-[#ffffff] w-[75px] md:top-[95%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[95%] lg:w-[200px] lg:ml-[19px]">
             <li className="cursor-pointer hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
               My Profile
             </li>

@@ -27,11 +27,11 @@ export const SideBar = () => {
   };
 
   return (
-    <div className="text-[#fff] w-[109px] h-[100%] bg-[#04177f] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[312px] lg:rounded-br-[32px] lg:rounded-tr-[32px]">
+    <div className="leading-normal text-[#fff] w-[145px] h-[100%] bg-[#04177f] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[312px] lg:rounded-br-[32px] lg:rounded-tr-[32px]">
       {/* =======Nav Bar========= */}
-      <div className="flex w-[100%] gap-[40px] h-[13.97px] justify-center items-center mx-auto py-[18%] border-b-[0.349px] border-b-[#0003] border-b-solid md:border-b-[1.5px] md:gap-[55px] lg:gap-[110px] lg:py-[15%] ">
+      <div className="flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] border-b-[0.349px] border-b-[#0003] border-b-solid md:border-b-[1.5px] md:gap-[55px] lg:gap-[110px] lg:py-[15%] ">
         <img
-          className="w-[41px] h-[6.23px] md:h-[10px] md:w-[67px] lg:w-[118px] lg:h-[17px]"
+          className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[128px] lg:h-[25px]"
           src="./Images/dashboardImages/aremxylogo.png"
           alt="Logo"
         />
@@ -53,14 +53,14 @@ export const SideBar = () => {
               alt="DP"
             />
             <div className="flex flex-col gap-[3px] justify-center mt-[4%]">
-              <p className="text-[4.8px] font-semibold md:text-[8px] lg:text-[14px]">
+              <p className="text-[8px] font-semibold md:text-[8px] lg:text-[14px]">
                 Habib Kamaldeen
               </p>
               <div className="flex gap-[3px]">
-                <div className="rounded-[1px] px-[2px] font-semibold text-[4px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
+                <div className="rounded-[1px] px-[2px] font-semibold text-[5px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
                   Verified
                 </div>
-                <div className="rounded-[1px] px-[2px] font-semibold text-[4px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
+                <div className="rounded-[1px] px-[2px] font-semibold text-[5px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
                   KYCed
                 </div>
               </div>
@@ -75,7 +75,7 @@ export const SideBar = () => {
             src="./Images/dashboardImages/3square.png"
             alt="3squares"
           />
-          <p className="text-[4.8px] font-semibold md:text-[8px] lg:text-[14px]">
+          <p className="text-[7px] font-semibold md:text-[8px] lg:text-[14px]">
             Dashboard
           </p>
         </div>
@@ -83,11 +83,11 @@ export const SideBar = () => {
         <div className="flex flex-col gap-[10px]">
           {/* ========Collections========= */}
           <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">
+            <p className="text-[7px] md:text-[7px] lg:text-[12px]">
               COLLECTIONS
             </p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div className="flex gap-[3.4px] items-center cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
@@ -157,14 +157,14 @@ export const SideBar = () => {
 
           {/* =========Products======== */}
           <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">PRODUCTS</p>
+            <p className="text-[7px] md:text-[7px] lg:text-[12px]">PRODUCTS</p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div
                 onClick={() => dropHandler("dropdown2")}
                 className="flex justify-between gap-[3.4px]"
               >
-                <div className="flex items-center cursor-pointer">
+                <div className="flex gap-[3.4px] items-center cursor-pointer">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/telecom.png"
@@ -293,7 +293,7 @@ export const SideBar = () => {
                 />
                 <p>VTU Development</p>
               </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
+              <div className="flex gap-[3.4px] cursor-pointer items-center">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/businessdev.png"
@@ -306,9 +306,9 @@ export const SideBar = () => {
 
           {/* =======FEATURES======== */}
           <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">FEATURES</p>
+            <p className="text-[7px] md:text-[7px] lg:text-[12px]">FEATURES</p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div className="flex gap-[3.4px] cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -383,11 +383,11 @@ export const SideBar = () => {
 
           {/* ==========Developers============== */}
           <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">
+            <p className="text-[7px] md:text-[7px] lg:text-[12px]">
               DEVELOPERS
             </p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div className="flex gap-[3.4px] cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -409,9 +409,9 @@ export const SideBar = () => {
 
           {/* ========Supports======= */}
           <div className="mb-[35%]">
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">SUPPORTS</p>
+            <p className="text-[7px] md:text-[7px] lg:text-[12px]">SUPPORTS</p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
               <div className="flex gap-[3.4px] cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -465,7 +465,7 @@ export const SideBar = () => {
             src="/Images/dashboardImages/logout.png"
             alt="logout"
           />
-          <p className="cursor-pointer text-[5px] md:text-[7px] lg:text-[14px]">
+          <p className="cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]">
             Logout
           </p>
         </div>
