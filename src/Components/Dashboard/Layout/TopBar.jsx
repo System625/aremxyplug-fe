@@ -13,7 +13,7 @@ export const TopBar = () => {
   //   setLogout((prev) => !prev);
   // };
   return (
-    <div className="sticky top-0 z-[99px] bg-white mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md:border-b-[1px] lg:mt-[18px] lg:border-b-[#0003] lg:gap-[18%]">
+    <div className=" mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md:border-b-[1px] lg:mt-[18px] lg:border-b-[#0003] lg:gap-[18%]">
       <img
         onClick={() => setToggleSideBar(true)}
         className="cursor-pointer w-[21px] h-[21px] md:h-[30.9px] md:w-[30.9px] lg:h-[52px] lg:w-[52px]"
@@ -57,7 +57,7 @@ export const TopBar = () => {
           />
         </div>
         {logout && (
-          <ul className="border drop-shadow-xl absolute top-[95%] right-[7%]  ml-[12px] mt-[px] rounded-[3px]  bg-[#ffffff] w-[75px] md:top-[95%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[95%] lg:w-[200px] lg:ml-[19px]">
+          <ul className="z-50 border drop-shadow-xl absolute top-[95%] right-[7%]  ml-[12px] mt-[px] rounded-[3px]  bg-[#ffffff] w-[75px] md:top-[95%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[95%] lg:w-[200px] lg:ml-[19px]">
             <li className="cursor-pointer hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
               My Profile
             </li>

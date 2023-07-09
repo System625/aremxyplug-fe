@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 import Joi from "joi";
 import axios from "axios";
-import { BASE_URL } from "../config";
+// import { BASE_URL } from "../config";
 
 export const ContextProvider = createContext();
 
@@ -266,7 +266,6 @@ export const Context = ({ children }) => {
         }, {})
       );
     } else {
-      console.log("Form submitted successfully");
       setVerification(true);
       setState({
         country: "",

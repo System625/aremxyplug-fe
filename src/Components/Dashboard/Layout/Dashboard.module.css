@@ -1,28 +1,83 @@
-.dashboard{
-display: flex;
-margin: 10% auto;
-display: flex;
-width: 125px;
-padding: 4% 0 4% 4%;
-gap: 4%;
-border-radius: 3.494px;
-background-color: rgba(255, 255, 255, 0.20);
-box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25), 0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
-backdrop-filter: blur(5.589743614196777px);
+.dashboard {
+  display: flex;
+  margin: 10% auto;
+  display: flex;
+  width: 125px;
+  padding: 4% 0 4% 4%;
+  gap: 4%;
+  border-radius: 3.494px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
+  backdrop-filter: blur(5.589743614196777px);
 }
 
-@media (min-width:768px){
-    .dashboard{
-        width: 157px;
-        gap: 6px;
-    }
+.balance {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.balance1 {
+  width: 100%;
+  height: 167.787px;
+  border-radius: 8.32px;
+  background: #e9edfb;
+  padding: 3%;
+  /* padding-top: 3%;
+  padding-right: 4%; */
 }
 
-@media (min-width: 1024px){
-    .dashboard{
-        width: 275px;
-        gap:10px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
+.viewWallet {
+  display: flex;
+  padding: 3.92px 7.84px;
+  float: right;
+  gap: 7.84px;
+  border-radius: 10.193px;
+  background: #04177f;
+  color: #fff;
+  font-size: 6.933px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.walletText {
+  color: #000;
+  font-size: 11.093px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.NGN {
+  display: flex;
+  width: 43px;
+  height:19px;
+  padding: 3.92px;
+  gap: 7.84px;
+  color: #000;
+  border-radius: 10.193px;
+background: rgba(146, 171, 254, 0.18);
+  font-size: 6.933px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    width: 157px;
+    gap: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard {
+    width: 275px;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 }

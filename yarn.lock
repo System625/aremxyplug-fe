@@ -3763,6 +3763,11 @@ dedent@^0.7.0:
   resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
   integrity sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==
 
+deeone-multi-carousel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/deeone-multi-carousel/-/deeone-multi-carousel-1.0.0.tgz#dba1158ef348d2d72ba6c7359786dec21b3b708b"
+  integrity sha512-p7XIJPWc7XYnASEV+3V4F6q7qpJLxxAxvOJCpclO23AgQ9P+PxG4NKhtFtkaqpa0py8U2yGqKiBKKXNja2y+2Q==
+
 deep-equal@^2.0.5:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-2.2.1.tgz#c72ab22f3a7d3503a4ca87dde976fe9978816739"

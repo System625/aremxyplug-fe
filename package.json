@@ -11,6 +11,7 @@
     "axios": "^1.4.0",
     "chima-flags-select": "^1.0.2",
     "country-flag-icons": "^1.5.7",
+    "deeone-multi-carousel": "^1.0.0",
     "dees-verification-code-input": "^1.0.6",
     "install": "^0.13.0",
     "joi": "^17.9.2",
