@@ -8,8 +8,8 @@ export const ContextProvider = createContext();
 export const Context = ({ children }) => {
   // Select username or email starts here
   const [hideNavbar, setHideNavbar] = useState(false);
-  const [resetEmail, setResetEmail] = useState('');
-  const [resetNumber, setResetNumber] = useState('');
+  const [resetEmail, setResetEmail] = useState("");
+  const [resetNumber, setResetNumber] = useState("");
   // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
@@ -278,13 +278,17 @@ export const Context = ({ children }) => {
         confirmPassword: "",
       });
 
-      axios.post("http://aremxyplug.onrender.com/api/v1/users/signup")
-      .then((response) => {
-        console.log("signup successful")
-      })
-      .catch(error =>{
-        console.log(error);
-      })
+      const config = {
+        headers: { "Content-Type": "Application/json" },
+      };
+      axios
+        .post("http://aremxyplug.onrender.com/api/v1/users/signup", {}, config)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
       setErrors({});
     }
@@ -337,11 +341,11 @@ export const Context = ({ children }) => {
 
   // =============Start Dashboard=============
   const [toggleSideBar, setToggleSideBar] = useState("");
-const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
-  
+
   const hold = {
     firstDrop,
     secondDrop,
@@ -458,7 +462,7 @@ const [isDarkMode, setIsDarkMode] = useState(false);
     toggleSideBar,
     setToggleSideBar,
     isDarkMode,
-    handleToggle
+    handleToggle,
   };
 
   return (
