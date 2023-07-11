@@ -1,28 +1,295 @@
-.dashboard{
-display: flex;
-margin: 10% auto;
-display: flex;
-width: 96.074px;
-padding: 4% 0 4% 4%;
-gap: 4%;
-border-radius: 3.494px;
-background-color: rgba(255, 255, 255, 0.20);
-box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25), 0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
-backdrop-filter: blur(5.589743614196777px);
+.dashboard {
+  display: flex;
+  margin: 10% auto;
+  display: flex;
+  width: 125px;
+  padding: 4% 0 4% 4%;
+  gap: 4%;
+  border-radius: 3.494px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
+  backdrop-filter: blur(5.589743614196777px);
 }
 
-@media (min-width:768px){
-    .dashboard{
-        width: 157px;
-        gap: 6px;
-    }
+/* .background {
+  background-image: url("../../../../public/Images/dashboardImages/hero1.png");
+} */
+
+.balance {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.balance1 {
+  width: 100%;
+  height: 167.787px;
+  border-radius: 8.32px;
+  padding: 3%;
 }
 
-@media (min-width: 1024px){
-    .dashboard{
-        width: 275px;
-        gap:10px;
-        cursor: pointer;
-        
-    }
+.viewWallet {
+  display: flex;
+  padding: 5.92px 7.84px;
+  float: right;
+  gap: 7.84px;
+  border-radius: 10.193px;
+  background: #04177f;
+  color: #fff;
+  font-size: 6.933px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.walletText {
+  /* color: #000; */
+  font-size: 11.093px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.NGN {
+  /* display: flex; */
+  width: 43px;
+  height: 19px;
+  padding: 3.92px;
+  gap: 7.84px;
+  /* color: #000; */
+  border-radius: 10.193px;
+  background: rgba(146, 171, 254, 0.18);
+  font-size: 6.933px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+select {
+  background-color: transparent;
+  outline: none;
+  font-weight: bolder;
+}
+.custom-select {
+  margin-top: 10%;
+  display: flex;
+  padding: 4.14px 8.8px 4.5px 3.6px;
+  align-items: center;
+  border-radius: 2.88px 2.88px 0px 0px;
+  background-color: transparent;
+  box-shadow: 0px 1.4400001764297485px 3.6000008583068848px 0px
+    rgba(0, 0, 0, 0.25);
+}
+
+.currency {
+  border-radius: 2.88px 2.88px 0px 0px;
+  background: #fff;
+  box-shadow: 0px 1.4400001764297485px 3.6000008583068848px 0px
+    rgba(0, 0, 0, 0.25);
+}
+
+.viewBalance {
+  display: flex;
+  margin-top: 6%;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  width: 55px;
+  padding: 4.333px 11.667px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.333px;
+  border-radius: 4px;
+  /* background: var(--primary-color-main, #04177f); */
+}
+
+.button p {
+  color: #fff;
+  font-size: 6.333px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+/* ================ TABLET VIEW ============== */
+@media (min-width: 768px) {
+  .dashboard {
+    width: 157px;
+    gap: 6px;
+  }
+
+  .walletText {
+    /* color: #000; */
+    font-size: 18.093px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 6%;
+  }
+
+  .balance {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .balance1 {
+    width: 100%;
+    height: 250px;
+    border-radius: 8.32px;
+    /* background-color: #e9edfb; */
+    padding: 3%;
+  }
+
+  .viewWallet {
+    display: flex;
+    padding: 8.92px 9.84px;
+    float: right;
+    gap: 7.84px;
+    border-radius: 10.193px;
+    background: #04177f;
+    color: #fff;
+    font-size: 10.33px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .viewBalance {
+    display: flex;
+    margin-top: 4%;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NGN {
+    /* display: flex; */
+    width: 50px;
+    height: 25px;
+    padding: 5.92px;
+    gap: 7.84px;
+    /* color: #000; */
+    border-radius: 10.193px;
+    background: rgba(146, 171, 254, 0.18);
+    font-size: 9.933px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .button {
+    display: flex;
+    width: 110px;
+    padding: 7.333px 11.667px;
+    justify-content: center;
+    align-items: center;
+    gap: 9.333px;
+    border-radius: 8px;
+    /* background: var(--primary-color-main, ); */
+  }
+
+  .button p {
+    color: #fff;
+    font-size: 10.333px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+
+/* =================== DESKTOP VIEW================ */
+@media (min-width: 1024px) {
+  .dashboard {
+    width: 275px;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .button {
+    display: flex;
+    width: 218.237px;
+    padding: 13.226px 46.293px;
+    justify-content: center;
+    align-items: center;
+    gap: 13.226px;
+    flex-shrink: 0;
+    border-radius: 15.872px;
+    /* background: var(--primary-color-main, #04177f); */
+  }
+
+  .button p {
+    color: #fff;
+    font-size: 21.162px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .balance {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    /* gap: 48px; */
+    justify-content: space-between;
+  }
+  .balance1 {
+    width: 47%;
+    height: 320.081px;
+    flex-shrink: 0;
+    padding: 2%;
+    border-radius: 15.872px;
+    /* background: #e9edfb; */
+  }
+
+  .viewWallet {
+    display: flex;
+    padding: 10.84px 15px;
+    float: right;
+    border-radius: 19.193px;
+    background: #04177f;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .walletText {
+    /* color: #000; */
+    font-size: 23.093px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 8%;
+  }
+
+  .NGN {
+    width: 70px;
+    height: 35px;
+    padding: 7.92px;
+    gap: 14.84px;
+    /* color: #000; */
+    border-radius: 19.193px;
+    background: rgba(146, 171, 254, 0.18);
+    font-size: 13.933px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .viewBalance {
+    display: flex;
+    margin-top: 6%;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
 }

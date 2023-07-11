@@ -1,5 +1,7 @@
 import React, { createContext, useState } from "react";
 import Joi from "joi";
+import axios from "axios";
+// import { BASE_URL } from "../config";
 
 export const ContextProvider = createContext();
 
@@ -264,7 +266,6 @@ export const Context = ({ children }) => {
         }, {})
       );
     } else {
-      console.log("Form submitted successfully");
       setVerification(true);
       setState({
         country: "",
@@ -276,6 +277,15 @@ export const Context = ({ children }) => {
         password: "",
         confirmPassword: "",
       });
+
+      axios.post("http://aremxyplug.onrender.com/api/v1/users/signup")
+      .then((response) => {
+        console.log("signup successful")
+      })
+      .catch(error =>{
+        console.log(error);
+      })
+
       setErrors({});
     }
   };
@@ -327,7 +337,11 @@ export const Context = ({ children }) => {
 
   // =============Start Dashboard=============
   const [toggleSideBar, setToggleSideBar] = useState("");
-
+const [isDarkMode, setIsDarkMode] = useState(false);
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  
   const hold = {
     firstDrop,
     secondDrop,
@@ -443,6 +457,8 @@ export const Context = ({ children }) => {
     // =========Dashboard=========
     toggleSideBar,
     setToggleSideBar,
+    isDarkMode,
+    handleToggle
   };
 
   return (
