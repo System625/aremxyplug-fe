@@ -281,8 +281,10 @@ export const Context = ({ children }) => {
       const config = {
         headers: { "Content-Type": "Application/json" },
       };
+
+    const url = "http://aremxyplug.onrender.com/api/v1/users/signup"
       axios
-        .post("http://aremxyplug.onrender.com/api/v1/users/signup", {}, config)
+        .post(url, {}, config)
         .then((response) => {
           console.log(response.data);
         })
