@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-// import Select from "react-select";
 import { SideBar } from "../Layout/SideBar";
 import { useEffect, useContext } from "react";
 import { ContextProvider } from "../../Context";
@@ -162,7 +161,7 @@ export const MainDashboard = () => {
                     </span>
                   ) : (
                     <span className="text-[19px] leading-normal lg:text-[37px]">
-                      ********
+                      *********
                     </span>
                   )}
                   <div onClick={visibilityHandler} className=" text-[#92ABFE]">
