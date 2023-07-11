@@ -1,6 +1,6 @@
 import React from "react";
-import { BsArrowUp } from "react-icons/bs";
-import { BsArrowDown } from "react-icons/bs";
+// import { BsArrowUp } from "react-icons/bs";
+// import { BsArrowDown } from "react-icons/bs";
 
 export const TopNews = () => {
   return (
