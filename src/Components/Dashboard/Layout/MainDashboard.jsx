@@ -72,21 +72,23 @@ export const MainDashboard = () => {
             {/* ==============HERO SECTION========== */}
             <Swiper
               autoplay={{
-                delay: 2600,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
               pagination={{
                 dynamicBullets: true,
                 clickable: true,
+              
               }}
               modules={[Pagination, Autoplay]}
               className="mySwiper"
-              speed="500"
+              speed="2000"
               loop="true"
+            
             >
               <SwiperSlide>
                 {" "}
-                <div className="h-[100px] md:h-[150px] lg:h-[270px]">
+                <div className="h-[100px] md:h-[150px] lg:h-[270px] ">
                   <img
                     className="w-[100%] h-[75px] md:h-[120px] lg:h-[238px]"
                     src="./Images/dashboardImages/hero1.png"
@@ -161,7 +163,7 @@ export const MainDashboard = () => {
                     </span>
                   ) : (
                     <span className="text-[19px] leading-normal lg:text-[37px]">
-                      *********
+                      ********
                     </span>
                   )}
                   <div onClick={visibilityHandler} className=" text-[#92ABFE]">
