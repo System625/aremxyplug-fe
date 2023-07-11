@@ -6,14 +6,11 @@ import { ContextProvider } from "../../Context";
 import DarkModeToggle from "../DarkModeToggle";
 
 export const TopBar = () => {
-  const { setToggleSideBar } = useContext(ContextProvider);
+  const { setToggleSideBar,isDarkMode } = useContext(ContextProvider);
   const [logout, setLogout ] = useState(false);
 
-  // const handler = () => {
-  //   setLogout((prev) => !prev);
-  // };
   return (
-    <div className=" mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md:border-b-[1px] lg:mt-[18px] lg:border-b-[#0003] lg:gap-[18%]">
+    <div className={`sticky top-0  z-[99px] mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[18%] ${isDarkMode ? "bg-black border-b-[1px] border-b-[#fff]" : "bg-white lg:border-b-[1.5px] lg:border-b-[#0003]]"}`}>
       <img
         onClick={() => setToggleSideBar(true)}
         className="cursor-pointer w-[21px] h-[21px] md:h-[30.9px] md:w-[30.9px] lg:h-[52px] lg:w-[52px]"
@@ -21,7 +18,7 @@ export const TopBar = () => {
         alt="/harmburger"
       />
       <div className="flex items-center gap-[45px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]">
-        <div className="cursor-pointer flex justify-between items-center px-[2%] w-[102px] h-[17px] rounded-[3.4px] border-[0.5px] border-[#0003] md:h-[33.8px] md:w-[202px] lg:border-[1.5px] lg:border-[#0003] lg:rounded-[10px] lg:w-[358px] lg:h-[60px]">
+        <div className={`${isDarkMode ? "border border-[#fff]" : "border-[#0003]"} cursor-pointer flex justify-between items-center px-[2%] w-[102px] h-[17px] border-[0.5px] rounded-[3.4px] md:h-[33.8px] md:w-[202px] lg:border-[1.5px] lg:rounded-[10px] lg:w-[358px] lg:h-[60px]`}>
           <div className="flex justify-center items-center gap-[3px] lg:gap-[7px]">
             <img
               className="w-[7px] h-[7px] md:h-[13.75px] md:w-[13.75] lg:h-[24px] lg:w-[24px]"
@@ -57,14 +54,14 @@ export const TopBar = () => {
           />
         </div>
         {logout && (
-          <ul className="z-50 border drop-shadow-xl absolute top-[95%] right-[7%]  ml-[12px] mt-[px] rounded-[3px]  bg-[#ffffff] w-[75px] md:top-[95%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[95%] lg:w-[200px] lg:ml-[19px]">
-            <li className="cursor-pointer hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+          <ul className={`z-[99px] border drop-shadow-xl absolute top-[95%] right-[7%]  ml-[12px] mt-[px] rounded-[3px] w-[75px] md:top-[95%] md:w-[114px] lg:rounded-[6px] lg:right-[5%] lg:top-[95%] lg:w-[200px] lg:ml-[19px] ${isDarkMode ? "bg-[#000] text-[#fff] border-[#fff]" : "bg-[#ffffff] text-[#000] "}`}>
+            <li className="z-[99px] ursor-pointer hover:underline pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
               My Profile
             </li>
-            <li className="cursor-pointer hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+            <li className="cursor-pointer hover:underline pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
               Contact Support
             </li>
-            <Link to="/Login"><li className="cursor-pointer hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+            <Link to="/Login"><li className="z-[99px] cursor-pointer hover:underline pt-1 pb-1 pl-1 text-[5px] font-medium md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
               Logout
             </li></Link>
           </ul>
