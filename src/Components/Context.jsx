@@ -283,6 +283,7 @@ export const Context = ({ children }) => {
       };
 
     const url = "http://aremxyplug.onrender.com/api/v1/users/signup"
+    
       axios
         .post(url, {}, config)
         .then((response) => {
