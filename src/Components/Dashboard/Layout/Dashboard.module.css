@@ -54,13 +54,13 @@
 
 .NGN {
   /* display: flex; */
-  width: 43px;
-  height: 19px;
+  width: 60px;
+  height: 23px;
   padding: 3.92px;
   gap: 7.84px;
   /* color: #000; */
   border-radius: 10.193px;
-  background: rgba(146, 171, 254, 0.18);
+  background: rgba(146, 171, 254, 0);
   font-size: 6.933px;
   font-style: normal;
   font-weight: 600;
@@ -272,7 +272,7 @@ select {
   }
 
   .NGN {
-    width: 70px;
+    width: 80px;
     height: 35px;
     padding: 7.92px;
     gap: 14.84px;
@@ -283,6 +283,7 @@ select {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    /* z-index: 99px; */
   }
 
   .viewBalance {
@@ -292,4 +293,9 @@ select {
     justify-content: center;
     align-items: center;
   }
+
+  .myselect .custom-select{
+    outline: none;
+  }
+
 }
