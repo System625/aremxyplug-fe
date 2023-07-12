@@ -56,10 +56,6 @@ export const MainDashboard = () => {
     setActiveButtons(updatedButtons);
   };
 
-  const handleNoOptionsMessage = ({ inputValue }) => {
-    return `No options found for "${inputValue}"`;
-  };
-
   const options = [
     { value: "NGN", label: "NGN" },
     { value: "USD", label: "USD" },
