@@ -34,7 +34,9 @@ export const SideBar = () => {
     >
       {/* =======Nav Bar========= */}
       <div
-        className={`${isDarkMode ? "bg-[#000]" : "bg-[#04177f]"} sticky top-0 `}
+        className={`border-b-[0.3px] ${
+          isDarkMode ? "bg-[#000]" : "bg-[#04177f]"
+        } sticky top-0 `}
       >
         <div
           className={` ${
@@ -84,21 +86,21 @@ export const SideBar = () => {
         <div className={styles.dashboard}>
           <img
             className="w-[8.38px] h-[8.38px] md:w-[13px] md:h-[13px] lg:h-[24px] lg:w-[24px]"
-            src="./Images/dashboardImages/3square.png"
+            src="./Images/dashboardImages/dashboardimg.png"
             alt="3squares"
           />
-          <p className="text-[7px] font-semibold md:text-[8px] lg:text-[14px]">
+          <p className=" text-[7px] font-semibold md:text-[8px] lg:text-[14px]">
             Dashboard
           </p>
         </div>
       </div>
 
-      <div className="px-[5%] flex flex-col gap-[10px] overflow-scroll">
+      <div className=" mt-[9%] px-[5%] flex flex-col gap-[10px] overflow-scroll">
         {/* ========Collections========= */}
         <div>
           <p className="text-[7px] md:text-[7px] lg:text-[12px]">COLLECTIONS</p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
             <div className="flex gap-[3.4px] items-center cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
@@ -118,7 +120,7 @@ export const SideBar = () => {
             <div className="flex gap-[3.4px] items-center cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/translate.png"
+                src="./Images/dashboardImages/transfer.png"
                 alt="icon"
               />
               <p>Transfer</p>
@@ -133,36 +135,9 @@ export const SideBar = () => {
                   src="./Images/dashboardImages/transaction.png"
                   alt="icon"
                 />
-                <p>Transactions</p>
+                <p>Transaction</p>
               </div>
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
             </div>
-            {dropDownOpen.dropdown1 && (
-              <ul className="  top-[29%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[31%] md:w-[114px] lg:rounded-[6px] lg:top-[31%] lg:w-[200px] lg:ml-[19px]">
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  All Transactions
-                </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Successful
-                </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Failed
-                </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Pending
-                </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Refunded
-                </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Sales Analysis
-                </li>
-              </ul>
-            )}
           </div>
         </div>
 
@@ -170,7 +145,7 @@ export const SideBar = () => {
         <div>
           <p className="text-[7px] md:text-[7px] lg:text-[12px]">PRODUCTS</p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
             <div
               onClick={() => dropHandler("dropdown2")}
               className="flex justify-between gap-[3.4px]"
@@ -183,37 +158,85 @@ export const SideBar = () => {
                 />
                 <p>Telecom</p>
               </div>
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
+              {!dropDownOpen.dropdown2 ? (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-down.png"
+                  alt="dropdown"
+                />
+              ) : (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-up.png"
+                  alt="dropdown"
+                />
+              )}
             </div>
             {dropDownOpen.dropdown2 && (
-              <ul className="  ml-[12px] mt-[-5px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[36.5%] md:w-[114px] lg:rounded-[6px] lg:top-[36.5%] lg:w-[200px] lg:ml-[19px]">
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Airtime Top-up
+              <ul className=" mt-[-5px] rounded-[2.5px]  bg-[#f2faff10] w-[100px] md:top-[36.5%] md:w-[114px] lg:w-[220px] lg:rounded-[6px] lg:top-[36.5%]">
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Airtime Top-up</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Data Top-up
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Data Top-up</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Education Pins
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Education pins</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  TV Subscriptions
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Tv Subscription</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Electricity Bills
+                <li className="flex gap-[10%] hover:underline text-#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Electricity Bills</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Airtime Conversion
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Airtime Conversion</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Bulk SMS
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Bulk SMS</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Recharge Card Printing
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Recharge Card Printing</div>
                 </li>
               </ul>
             )}
@@ -230,28 +253,61 @@ export const SideBar = () => {
                 />
                 <p>Payments</p>
               </div>
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
+              {!dropDownOpen.dropdown3 ? (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-down.png"
+                  alt="dropdown"
+                />
+              ) : (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-up.png"
+                  alt="dropdown"
+                />
+              )}
             </div>
             {dropDownOpen.dropdown3 && (
-              <ul className="    ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[39%] md:w-[114px] lg:rounded-[6px] lg:top-[38.5%] lg:w-[200px] lg:ml-[19px]">
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Wallets
+              <ul className=" mt-[px] rounded-[2.5px] bg-[#f2faff19]  bg-[#ffffff] w-[100px] md:w-[114px] lg:rounded-[6px] lg:w-[220px] ">
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Wallets</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Virtual Accounts
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Virtual Accounts</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Money Transfer
+                <li className=" flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Money Transfer</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  Card Payments
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Card Payments</div>
                 </li>
-                <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                  International Payments
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>International Payments</div>
                 </li>
               </ul>
             )}
@@ -268,32 +324,60 @@ export const SideBar = () => {
                 />
                 <p>Card Issuing</p>
               </div>
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
+              {!dropDownOpen.dropdown4 ? (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-down.png"
+                  alt="dropdown"
+                />
+              ) : (
+                <img
+                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                  src="./Images/dashboardImages/arrow-up.png"
+                  alt="dropdown"
+                />
+              )}
             </div>
             {dropDownOpen.dropdown4 && (
-                <ul className="top-[40.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[200px] lg:ml-[19px]">
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Virtual USD Card
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Virtual NGN Card
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Physical USD Card
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Physical NGN Card
-                  </li>
-                </ul>
-              )}
+              <ul className=" mt-[px] rounded-[2.5px]  bg-[#f2faff19] w-[100px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[220px]">
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Virtual USD Card</div>
+                </li>
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Virtual NGN Card</div>
+                </li>
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Physical USD Card</div>
+                </li>
+                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                  <img
+                    className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/sideArrow.png"
+                    alt="/"
+                  />
+                  <div>Physical NGN Card</div>
+                </li>
+              </ul>
+            )}
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/digital.png"
+                src="./Images/dashboardImages/digitalServices.png"
                 alt="icon"
               />
               <p>Digital Services</p>
@@ -301,7 +385,7 @@ export const SideBar = () => {
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/vtu.png"
+                src="./Images/dashboardImages/vtuDevelopment.png"
                 alt="icon"
               />
               <p>VTU Development</p>
@@ -321,14 +405,14 @@ export const SideBar = () => {
         <div>
           <p className="text-[7px] md:text-[7px] lg:text-[12px]">FEATURES</p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/pricing.png"
+                src="./Images/dashboardImages/productPricing.png"
                 alt="icon"
               />
-              <p>Pricing</p>
+              <p>Product Pricing</p>
             </div>
             <div
               onClick={() => dropHandler("dropdown5")}
@@ -337,23 +421,11 @@ export const SideBar = () => {
               <div className="flex gap-[3.4px] items-center cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/upgrade.png"
+                  src="./Images/dashboardImages/accountUpgrade.png"
                   alt="icon"
                 />
-                <p>Upgrade</p>
+                <p>Account Upgrade</p>
               </div>
-              {dropDownOpen.dropdown5 && (
-                <ul className=" absolute top-[57.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[58%] md:w-[114px] lg:rounded-[6px] lg:top-[57.5%] lg:w-[200px] lg:ml-[19px]">
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Become An Agent
-                  </li>
-                </ul>
-              )}
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
             </div>
             <div
               onClick={() => dropHandler("dropdown6")}
@@ -365,103 +437,32 @@ export const SideBar = () => {
                   src="./Images/dashboardImages/referrals.png"
                   alt="icon"
                 />
-                <p>Referrals</p>
+                <p>My Referrals</p>
               </div>
-              {dropDownOpen.dropdown6 && (
-                <ul className=" absolute top-[60.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[60.5%] md:w-[114px] lg:rounded-[6px] lg:top-[60.5%] lg:w-[200px] lg:ml-[19px]">
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    My Referrals
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    My Point Balance
-                  </li>
-                </ul>
-              )}
-              <img
-                className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/arrow-downlarge.png"
-                alt="dropdown"
-              />
             </div>
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/myprofile.png"
+                src="./Images/dashboardImages/profileSettings.png"
                 alt="icon"
               />
-              <p>My Profile</p>
+              <p>Profile Settings</p>
             </div>
-          </div>
-        </div>
-
-        {/* ==========Developers============== */}
-        <div>
-          <p className="text-[7px] md:text-[7px] lg:text-[12px]">DEVELOPERS</p>
-
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/api.png"
+                src="./Images/dashboardImages/developersApi.png"
                 alt="icon"
               />
-              <p>API documentation</p>
+              <p>Develop's API </p>
             </div>
             <div className="flex gap-[3.4px] cursor-pointer">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/generatekey.png"
-                alt="icon"
-              />
-              <p>Generate API key</p>
-            </div>
-          </div>
-        </div>
-
-        {/* ========Supports======= */}
-        <div className="mb-[35%]">
-          <p className="text-[7px] md:text-[7px] lg:text-[12px]">SUPPORTS</p>
-
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-            <div className="flex gap-[3.4px] cursor-pointer">
-              <img
-                className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/contact-support.png"
+                src="./Images/dashboardImages/contactSupport.png"
                 alt="icon"
               />
               <p>Contact Support</p>
-            </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
-              <img
-                className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/livechat.png"
-                alt="icon"
-              />
-              <p>Live Chat</p>
-            </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
-              <img
-                className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/sendamail.png"
-                alt="icon"
-              />
-              <p>Send a Mail</p>
-            </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
-              <img
-                className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/whatsapp.png"
-                alt="icon"
-              />
-              <p>Whatsapp</p>
-            </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
-              <img
-                className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                src="./Images/dashboardImages/phonecall.png"
-                alt="icon"
-              />
-              <p>Phone Call</p>
             </div>
           </div>
         </div>
@@ -469,9 +470,9 @@ export const SideBar = () => {
 
       {/* ===========Logout========= */}
       <Link to="/Login">
-        <div className="ml-[5%] flex gap-[4%] border-t-[#0003] border-t-[0.35px] border-t-solid md:border-t-[1.5px] py-[10%] lg:text-[14px]">
+        <div className="mt-[55%] border-t-[0.3px] ml-[5%] flex gap-[4%] md:mt-[280%] md:border-t-[1.5px] py-[10%] lg:text-[14px]">
           <img
-            className="w-[8px] h-[8px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+            className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
             src="/Images/dashboardImages/logout.png"
             alt="logout"
           />

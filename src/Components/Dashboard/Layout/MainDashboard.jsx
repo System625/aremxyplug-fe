@@ -13,14 +13,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import { TopNews } from "../TopNews";
-import Select from "react-select";
+// import Select from "react-select";
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
     useContext(ContextProvider);
   const [visible, setVisibility] = useState(true);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
-  const [choosePlan, setChoosePlan] = useState(null);
+  // const [choosePlan, setChoosePlan] = useState(null);
+  const [crypto, setCrypto] = useState(true);
   const textRef = useRef(null);
 
   const handleCopyClick = () => {
@@ -56,14 +57,14 @@ export const MainDashboard = () => {
     setActiveButtons(updatedButtons);
   };
 
-  const options = [
-    { value: "NGN", label: "NGN" },
-    { value: "USD", label: "USD" },
-    { value: "GBP", label: "GBP" },
-    { value: "EUR", label: "EUR" },
-    { value: "AUD", label: "AUD" },
-    { value: "KES", label: "KES" },
-  ];
+  // const options = [
+  //   { value: "NGN", label: "NGN" },
+  //   { value: "USD", label: "USD" },
+  //   { value: "GBP", label: "GBP" },
+  //   { value: "EUR", label: "EUR" },
+  //   { value: "AUD", label: "AUD" },
+  //   { value: "KES", label: "KES" },
+  // ];
 
   return (
     <div>
@@ -145,13 +146,13 @@ export const MainDashboard = () => {
               <p className={styles.walletText}>Available Balance</p>
               {/* ================= */}
               <div className={styles.viewBalance}>
-                <div
+                {/* <div
                   className={`${
                     isDarkMode ? "border border-[#fff] " : "text-[#000]"
                   } ${styles.NGN}`}
-                >
-                  {/* <div className="inputBoxShadow2 transparent w-[30%] h-[38px] lg:h-[43px]  flex items-center"> */}
-                  <Select
+                > */}
+                {/* <div className="inputBoxShadow2 transparent w-[30%] h-[38px] lg:h-[43px]  flex items-center"> */}
+                {/* <Select
                     defaultValue={choosePlan}
                     onChange={setChoosePlan}
                     options={options}
@@ -200,7 +201,7 @@ export const MainDashboard = () => {
                         ...baseStyles,
                         color: "#000",
                         width: "74px",
-                        // height: "20px",
+                        height: "10px",
                         backgroundColor: "rgba(146, 171, 254, 0.7)",
                         outline: "outline",
                         border: "none",
@@ -210,9 +211,17 @@ export const MainDashboard = () => {
                         borderRadius: "15px",
                       }),
                     }}
-                  />
-                  {/* </div> */}
-                </div>
+                  /> */}
+                <select name="curr" id="curr">
+                  <option value="NGN">NGN</option>
+                  <option value="USD">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="EUR">EUR</option>
+                  <option value="AUD">AUD</option>
+                  <option value="KES">KES</option>
+                </select>
+                {/* </div> */}
+                {/* </div> */}
                 {visible ? (
                   <span className="text-[19px] leading-normal lg:text-[37px]">
                     &#8358;5,000.00
@@ -246,16 +255,18 @@ export const MainDashboard = () => {
                 >
                   Flat
                 </div>
-                <div
-                  onClick={() => handleClick(1)}
-                  className={`${
-                    isDarkMode ? " border" : " "
-                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
-                    activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
-                  } `}
-                >
-                  Crypto
-                </div>
+                {crypto && (
+                  <div
+                    onClick={() => handleClick(1)}
+                    className={`${
+                      isDarkMode ? " border" : " "
+                    } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
+                      activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
+                    } `}
+                  >
+                    Crypto
+                  </div>
+                )}
                 <div
                   onClick={() => handleClick(2)}
                   className={`${
@@ -285,40 +296,40 @@ export const MainDashboard = () => {
                   <p className="text-[11px] font-extrabold md:text-[17px] lg:text-[21px]">
                     Global Virtual Accounts
                   </p>
-                  <div
+                  {/* <div
                     className={`${
                       isDarkMode ? "border border-[#fff] " : "text-[#000]"
                     } ${styles.NGN}`}
-                  >
-                   <Select
-                    defaultValue={choosePlan}
-                    onChange={setChoosePlan}
-                    options={options}
-                    placeholder="NGN"
-                    className={`${styles.myselect} hidden lg:block transparent text-[#000] lg:w-[150px] lg:text-[13.93px] outline-none`}
-                    styles={{
-                      valueContainer: (baseStyles, state) => ({
-                        ...baseStyles,
-                        width: "380%",
-                        height: "29px",
-                        outline: "none",
-                      }),
-                      control: (baseStyles, state) => ({
-                        ...baseStyles,
-                        color: "#fff",
-                        width: "89px",
-                        height: "1px",
-                        backgroundColor: "transparent",
-                        outline: "none",
-                        border: "none",
-                        marginTop: "-10px",
-                        marginLeft: "-10px",
-                        marginRight: "-10px",
-                      }),
-                    }}
-                  />
+                  > */}
+                  {/* <Select
+                      defaultValue={choosePlan}
+                      onChange={setChoosePlan}
+                      options={options}
+                      placeholder="NGN"
+                      className={`${styles.myselect} hidden lg:block transparent text-[#000] lg:w-[150px] lg:text-[13.93px] outline-none`}
+                      styles={{
+                        valueContainer: (baseStyles, state) => ({
+                          ...baseStyles,
+                          width: "380%",
+                          height: "29px",
+                          outline: "none",
+                        }),
+                        control: (baseStyles, state) => ({
+                          ...baseStyles,
+                          color: "#fff",
+                          width: "89px",
+                          height: "1px",
+                          backgroundColor: "transparent",
+                          outline: "none",
+                          border: "none",
+                          marginTop: "-10px",
+                          marginLeft: "-10px",
+                          marginRight: "-10px",
+                        }),
+                      }}
+                    /> */}
 
-                  <Select
+                  {/* <Select
                     defaultValue={choosePlan}
                     onChange={setChoosePlan}
                     options={options}
@@ -349,8 +360,17 @@ export const MainDashboard = () => {
                         borderRadius: "15px",
                       }),
                     }}
-                  />
-                  </div>
+                  /> */}
+
+                  <select name="curr" id="curr">
+                    <option value="NGN">NGN</option>
+                    <option value="NGN">USD</option>
+                    <option value="NGN">GBP</option>
+                    <option value="NGN">EUR</option>
+                    <option value="NGN">AUD</option>
+                    <option value="NGN">KES</option>
+                  </select>
+                  {/* </div> */}
                 </div>
                 <p className="text-[6px] md:text-[10px] text-[#04177f] leading-normal font-bold lg:text-[11px]">
                   The below accounts are reserved for your wallet only.
@@ -383,7 +403,7 @@ export const MainDashboard = () => {
           </div>
           {/* ================VIRTUAL ACCOUNT CLOSE=============== */}
 
-          <div className="flex mt-[7%] gap-[40px] md:gap-[0px] lg:justify-between">
+          <div className="flex mt-[7%] gap-[40px] md:gap-[99px] lg:justify-between">
             <div
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f]"

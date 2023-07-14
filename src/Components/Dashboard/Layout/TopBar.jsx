@@ -10,7 +10,7 @@ export const TopBar = () => {
   const [logout, setLogout ] = useState(false);
 
   return (
-    <div className={`sticky top-0 z-50 mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[18%] ${isDarkMode ? "bg-black border-b-[1px] border-b-[#fff]" : "bg-white lg:border-b-[1.5px] lg:border-b-[#0003]]"}`}>
+    <div className={`sticky top-0 z-50 mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[18%] ${isDarkMode ? "bg-black border-b-[1px] border-b-[#fff]" : "bg-white md:border-b-[1px] lg:border-b-[1.5px] lg:border-b-[#0003]]"}`}>
       <img
         onClick={() => setToggleSideBar(true)}
         className="cursor-pointer w-[21px] h-[21px] md:h-[30.9px] md:w-[30.9px] lg:h-[52px] lg:w-[52px]"

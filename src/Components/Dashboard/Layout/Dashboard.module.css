@@ -1,20 +1,15 @@
 .dashboard {
   display: flex;
+  align-items: center;
   margin: 10% auto;
   display: flex;
   width: 125px;
   padding: 4% 0 4% 4%;
   gap: 4%;
-  border-radius: 3.494px;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 1.3974359035491943px 0px rgba(0, 0, 0, 0.25),
-    0px 0px 5.240384578704834px 0px rgba(255, 255, 255, 0.25) inset;
+  border-radius: 2.897px;
+  background: rgba(242, 250, 255, 0.1);
   backdrop-filter: blur(5.589743614196777px);
 }
-
-/* .background {
-  background-image: url("../../../../public/Images/dashboardImages/hero1.png");
-} */
 
 .balance {
   margin-top: 5%;
@@ -52,27 +47,40 @@
   margin-top: 7%;
 }
 
-.NGN {
-  /* display: flex; */
+/* .NGN {
+  display: flex;
+  width: 50px;
   width: 60px;
   height: 23px;
   padding: 3.92px;
   gap: 7.84px;
-  /* color: #000; */
+  color: #000;
   border-radius: 10.193px;
+background: var(--boxes, rgba(146, 171, 254, 0.18));
   background: rgba(146, 171, 254, 0);
   font-size: 6.933px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-}
+} */
 
 select {
-  background-color: transparent;
+  padding: 3px;
+  border-radius: 10.193px;
+background: var(--boxes, rgba(146, 171, 254, 0.18));
+  height: 23px;
+  font-size: 9.933px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 50px;
+  /* background-color: transparent; */
   outline: none;
   font-weight: bolder;
 }
-.custom-select {
+
+
+/* .custom-select {
   margin-top: 10%;
   display: flex;
   padding: 4.14px 8.8px 4.5px 3.6px;
@@ -81,7 +89,7 @@ select {
   background-color: transparent;
   box-shadow: 0px 1.4400001764297485px 3.6000008583068848px 0px
     rgba(0, 0, 0, 0.25);
-}
+} */
 
 .currency {
   border-radius: 2.88px 2.88px 0px 0px;
@@ -202,6 +210,21 @@ select {
     font-weight: 900;
     line-height: normal;
   }
+
+  select {
+    padding: 3px;
+    border-radius: 10.193px;
+  background: var(--boxes, rgba(146, 171, 254, 0.18));
+    height: 23px;
+    font-size: 9.933px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 50px;
+    /* background-color: transparent; */
+    outline: none;
+    font-weight: bolder;
+  }
 }
 
 /* =================== DESKTOP VIEW================ */
@@ -294,8 +317,22 @@ select {
     align-items: center;
   }
 
-  .myselect .custom-select{
+  .myselect .custom-select {
     outline: none;
   }
 
+  select {
+    padding: 5.6px;
+    border-radius: 14.193px;
+  background: var(--boxes, rgba(146, 171, 254, 0.18));
+    height: 33px;
+    font-size: 10.733px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 55px;
+    /* background-color: transparent; */
+    outline: none;
+    font-weight: bolder;
+  }
 }
