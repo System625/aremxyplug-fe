@@ -95,13 +95,15 @@ export const SideBar = () => {
         </div>
       </div>
 
-      <div className=" mt-[9%] px-[5%] flex flex-col gap-[10px] overflow-scroll">
+      <div className=" mt-[9%] px-[8%] flex flex-col gap-[10px] overflow-scroll">
         {/* ========Collections========= */}
         <div>
-          <p className="text-[7px] md:text-[7px] lg:text-[12px]">COLLECTIONS</p>
+          <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+            COLLECTIONS
+          </p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-            <div className="flex gap-[3.4px] items-center cursor-pointer">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
                 src="./Images/dashboardImages/wallet.png"
@@ -109,7 +111,7 @@ export const SideBar = () => {
               />
               <p>Wallet</p>
             </div>
-            <div className="flex gap-[3.4px] items-center cursor-pointer">
+            <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/topup.png"
@@ -117,7 +119,7 @@ export const SideBar = () => {
               />
               <p>Top Up</p>
             </div>
-            <div className="flex gap-[3.4px] items-center cursor-pointer">
+            <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/transfer.png"
@@ -129,7 +131,7 @@ export const SideBar = () => {
               onClick={() => dropHandler("dropdown1")}
               className="flex justify-between items-center"
             >
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
+              <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/transaction.png"
@@ -143,14 +145,16 @@ export const SideBar = () => {
 
         {/* =========Products======== */}
         <div>
-          <p className="text-[7px] md:text-[7px] lg:text-[12px]">PRODUCTS</p>
+          <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+            PRODUCTS
+          </p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
             <div
               onClick={() => dropHandler("dropdown2")}
               className="flex justify-between gap-[3.4px]"
             >
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
+              <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/telecom.png"
@@ -174,7 +178,7 @@ export const SideBar = () => {
             </div>
             {dropDownOpen.dropdown2 && (
               <ul className=" mt-[-5px] rounded-[2.5px]  bg-[#f2faff10] w-[100px] md:top-[36.5%] md:w-[114px] lg:w-[220px] lg:rounded-[6px] lg:top-[36.5%]">
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -182,7 +186,7 @@ export const SideBar = () => {
                   />
                   <div>Airtime Top-up</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -190,7 +194,7 @@ export const SideBar = () => {
                   />
                   <div>Data Top-up</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1  font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -198,7 +202,7 @@ export const SideBar = () => {
                   />
                   <div>Education pins</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -206,7 +210,7 @@ export const SideBar = () => {
                   />
                   <div>Tv Subscription</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -214,7 +218,7 @@ export const SideBar = () => {
                   />
                   <div>Electricity Bills</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -222,7 +226,7 @@ export const SideBar = () => {
                   />
                   <div>Airtime Conversion</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -230,7 +234,7 @@ export const SideBar = () => {
                   />
                   <div>Bulk SMS</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -245,7 +249,7 @@ export const SideBar = () => {
               onClick={() => dropHandler("dropdown3")}
               className="flex gap-[3.5px] items-center cursor-pointer justify-between"
             >
-              <div className="flex gap-1">
+              <div className="flex gap-1 lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/payments.png"
@@ -268,8 +272,8 @@ export const SideBar = () => {
               )}
             </div>
             {dropDownOpen.dropdown3 && (
-              <ul className=" mt-[px] rounded-[2.5px] bg-[#f2faff19]  bg-[#ffffff] w-[100px] md:w-[114px] lg:rounded-[6px] lg:w-[220px] ">
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+              <ul className=" mt-[px] rounded-[2.5px] bg-[#f2faff19] w-[100px] md:w-[114px] lg:rounded-[6px] lg:w-[220px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -277,7 +281,7 @@ export const SideBar = () => {
                   />
                   <div>Wallets</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -285,7 +289,7 @@ export const SideBar = () => {
                   />
                   <div>Virtual Accounts</div>
                 </li>
-                <li className=" flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className=" flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -293,7 +297,7 @@ export const SideBar = () => {
                   />
                   <div>Money Transfer</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -301,7 +305,7 @@ export const SideBar = () => {
                   />
                   <div>Card Payments</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -316,7 +320,7 @@ export const SideBar = () => {
               onClick={() => dropHandler("dropdown4")}
               className="flex justify-between"
             >
-              <div className="flex items-center gap-[3.4px] cursor-pointer">
+              <div className="flex items-center gap-[3.4px] cursor-pointer lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/cardissuing.png"
@@ -340,7 +344,7 @@ export const SideBar = () => {
             </div>
             {dropDownOpen.dropdown4 && (
               <ul className=" mt-[px] rounded-[2.5px]  bg-[#f2faff19] w-[100px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[220px]">
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -348,7 +352,7 @@ export const SideBar = () => {
                   />
                   <div>Virtual USD Card</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -356,7 +360,7 @@ export const SideBar = () => {
                   />
                   <div>Virtual NGN Card</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -364,7 +368,7 @@ export const SideBar = () => {
                   />
                   <div>Physical USD Card</div>
                 </li>
-                <li className="flex gap-[10%] hover:underline text-[#fff] pt-1 pb-1 pl-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:text-[14px] ">
+                <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                   <img
                     className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/sideArrow.png"
@@ -374,7 +378,7 @@ export const SideBar = () => {
                 </li>
               </ul>
             )}
-            <div className="flex gap-[3.4px] cursor-pointer">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/digitalServices.png"
@@ -382,7 +386,7 @@ export const SideBar = () => {
               />
               <p>Digital Services</p>
             </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/vtuDevelopment.png"
@@ -390,7 +394,7 @@ export const SideBar = () => {
               />
               <p>VTU Development</p>
             </div>
-            <div className="flex gap-[3.4px] cursor-pointer items-center">
+            <div className="flex gap-[3.4px] cursor-pointer items-center lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/businessdev.png"
@@ -403,10 +407,12 @@ export const SideBar = () => {
 
         {/* =======FEATURES======== */}
         <div>
-          <p className="text-[7px] md:text-[7px] lg:text-[12px]">FEATURES</p>
+          <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+            FEATURES
+          </p>
 
-          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[4%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-            <div className="flex gap-[3.4px] cursor-pointer">
+          <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/productPricing.png"
@@ -418,7 +424,7 @@ export const SideBar = () => {
               onClick={() => dropHandler("dropdown5")}
               className="flex justify-between"
             >
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
+              <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/accountUpgrade.png"
@@ -431,7 +437,7 @@ export const SideBar = () => {
               onClick={() => dropHandler("dropdown6")}
               className="flex justify-between"
             >
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
+              <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                   src="./Images/dashboardImages/referrals.png"
@@ -440,7 +446,7 @@ export const SideBar = () => {
                 <p>My Referrals</p>
               </div>
             </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/profileSettings.png"
@@ -448,7 +454,7 @@ export const SideBar = () => {
               />
               <p>Profile Settings</p>
             </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/developersApi.png"
@@ -456,7 +462,7 @@ export const SideBar = () => {
               />
               <p>Develop's API </p>
             </div>
-            <div className="flex gap-[3.4px] cursor-pointer">
+            <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
               <img
                 className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                 src="./Images/dashboardImages/contactSupport.png"

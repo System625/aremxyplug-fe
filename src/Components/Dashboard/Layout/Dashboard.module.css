@@ -22,6 +22,16 @@
   height: 167.787px;
   border-radius: 8.32px;
   padding: 3%;
+  /* filter: blur(10px);
+  transition: 100ms filter linear; */
+}
+.balance2 {
+  width: 100%;
+  height: 167.787px;
+  border-radius: 8.32px;
+  padding: 3%;
+  /* filter: blur(30px);
+  transition: 100ms filter linear; */
 }
 
 .viewWallet {
@@ -155,6 +165,13 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
     /* background-color: #e9edfb; */
     padding: 3%;
   }
+  .balance2 {
+    width: 100%;
+    height: 250px;
+    border-radius: 8.32px;
+    /* background-color: #e9edfb; */
+    padding: 3%;
+  }
 
   .viewWallet {
     display: flex;
@@ -264,6 +281,14 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
     justify-content: space-between;
   }
   .balance1 {
+    width: 47%;
+    height: 320.081px;
+    flex-shrink: 0;
+    padding: 2%;
+    border-radius: 15.872px;
+    /* background: #e9edfb; */
+  }
+  .balance2 {
     width: 47%;
     height: 320.081px;
     flex-shrink: 0;
