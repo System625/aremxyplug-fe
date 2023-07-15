@@ -235,6 +235,7 @@ export const Context = ({ children }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+
     const {
       country,
       fullName,
@@ -245,6 +246,8 @@ export const Context = ({ children }) => {
       confirmPassword,
       checkbox,
     } = state;
+
+
 
     const { error } = schema.validate({
       fullName,
@@ -278,19 +281,29 @@ export const Context = ({ children }) => {
         confirmPassword: "",
       });
 
+      const data = {
+        fullname : fullName,
+        username : userName,
+        phone_number : phoneNumber,
+        // iv_code : IVCode,
+        email : email,
+        password : password,
+        country : country,
+      }
+
       const config = {
         headers: { "Content-Type": "Application/json" },
       };
 
-    const url = "http://aremxyplug.onrender.com/api/v1/users/signup"
-    
+      const url = "https://aremxyplug.onrender.com/api/v1/users/signup";
+
       axios
-        .post(url, {}, config)
+        .post(url, data, config)
         .then((response) => {
           console.log(response.data);
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error.message);
         });
 
       setErrors({});
