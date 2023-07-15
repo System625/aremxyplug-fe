@@ -73,12 +73,13 @@ export const MainDashboard = () => {
 
   return (
     <div>
-      {/* ============SIDE BAR========= */}
+      
 
       {/* ==============TOP BAR========== */}
       <TopBar />
 
       <div className="w-[100%] ">
+        {/* ============SIDE BAR========= */}
         {toggleSideBar && (
           <div className="absolute top-0 left-0 z-50">
             <SideBar />
