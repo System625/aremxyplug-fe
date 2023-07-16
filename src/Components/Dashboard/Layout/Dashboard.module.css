@@ -118,7 +118,7 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
 
 .button {
   display: flex;
-  width: 55px;
+  width: 50%;
   padding: 4.333px 11.667px;
   justify-content: center;
   align-items: center;
@@ -255,11 +255,11 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
 
   .button {
     display: flex;
-    width: 218.237px;
+    width: 20%;
     padding: 13.226px 46.293px;
     justify-content: center;
     align-items: center;
-    gap: 13.226px;
+    gap: 19.226px;
     flex-shrink: 0;
     border-radius: 15.872px;
     /* background: var(--primary-color-main, #04177f); */

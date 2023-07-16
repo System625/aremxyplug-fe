@@ -59,7 +59,6 @@ export const MainDashboard = () => {
 
   const cryptoHand = () => {
     setCrypto(true);
-    
   };
 
   // const options = [
@@ -73,8 +72,6 @@ export const MainDashboard = () => {
 
   return (
     <div>
-      
-
       {/* ==============TOP BAR========== */}
       <TopBar />
 
@@ -88,7 +85,7 @@ export const MainDashboard = () => {
         {/* <div className=" w-[%]"> */}
         <div
           className={`${
-            toggleSideBar ? "lg:w-[72%] lg:float-right" : ""
+            toggleSideBar ? "lg:w-[69.5%] lg:float-right" : ""
           } w-[] mx-[5%] mt-[8%] lg:mt-[3%] `}
         >
           {/* ==============HERO SECTION========== */}
@@ -149,7 +146,13 @@ export const MainDashboard = () => {
               >
                 View Wallets
               </button>
-              <p className={styles.walletText}>Available Balance</p>
+              <p
+                className={`${
+                  toggleSideBar ? "" : ""
+                } ${styles.walletText}`}
+              >
+                Available Balance
+              </p>
               {/* ================= */}
               <div className={styles.viewBalance}>
                 {/* <div
@@ -229,7 +232,11 @@ export const MainDashboard = () => {
                 {/* </div> */}
                 {/* </div> */}
                 {visible ? (
-                  <span className=" text-[19px] leading-normal lg:text-[37px]">
+                  <span
+                    className={` ${
+                      toggleSideBar ? "lg:text-[19px]" : "lg:text-[37px]"
+                    } text-[19px] leading-normal `}
+                  >
                     &#8358;5,000.00
                   </span>
                 ) : (
@@ -259,7 +266,7 @@ export const MainDashboard = () => {
                     activeButtons[0] ? "bg-[#04177f] lg:" : "bg-[#92ABFE2E]"
                   } `}
                 >
-                 Flat
+                  Flat
                 </div>
                 {crypto && (
                   <div
@@ -302,7 +309,11 @@ export const MainDashboard = () => {
               </button>
               <div>
                 <div className="flex mt-[8%] gap-[30px] md:mt-[5%] lg:mt-[9%]">
-                  <p className="text-[11px] font-extrabold md:text-[17px] lg:text-[21px]">
+                  <p
+                    className={`${
+                      toggleSideBar ? "lg:text-[17px]" : ""
+                    } text-[11px] font-extrabold md:text-[17px] lg:text-[21px]`}
+                  >
                     Global Virtual Accounts
                   </p>
                   {/* <div
@@ -412,7 +423,11 @@ export const MainDashboard = () => {
           </div>
           {/* ================VIRTUAL ACCOUNT CLOSE=============== */}
 
-          <div className="flex mt-[7%] gap-[40px] md:gap-[99px] lg:justify-between">
+          <div
+            className={`${
+              toggleSideBar ? "" : ""
+            } flex mt-[7%] gap-[40px] md:gap-[px] lg:gap-[6.5%]`}
+          >
             <div
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f]"
