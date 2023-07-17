@@ -3,16 +3,18 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContextProvider } from "../../Context";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "../DashboardComponents/DarkModeToggle";
+import styles from "./Dashboard.module.css";
 
 export const TopBar = () => {
-  const { setToggleSideBar, isDarkMode, } =
-    useContext(ContextProvider);
+  const { setToggleSideBar, isDarkMode } = useContext(ContextProvider);
   const [logout, setLogout] = useState(false);
 
   return (
     <div
-      className={`sticky top-0 z-50 mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[17%] ${
+      className={`${
+        styles.topbar
+      } sticky top-0 z-50 mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[17%] ${
         isDarkMode
           ? "bg-black border-b-[1px] border-b-[#fff]"
           : "bg-white md:border-b-[1px] lg:border-b-[1.5px] lg:border-b-[#0003]]"

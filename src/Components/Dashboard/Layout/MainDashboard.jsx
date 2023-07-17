@@ -12,15 +12,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-import { TopNews } from "../TopNews";
-// import Select from "react-select";
+import QuickFeatures from "../DashboardComponents/QuickFeatures"
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
     useContext(ContextProvider);
   const [visible, setVisibility] = useState(true);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
-  // const [choosePlan, setChoosePlan] = useState(null);
   const [crypto, setCrypto] = useState(true);
   const textRef = useRef(null);
 
@@ -53,22 +51,12 @@ export const MainDashboard = () => {
 
   const handleClick = (index) => {
     const updatedButtons = activeButtons.map((isActive, i) => i === index);
-
     setActiveButtons(updatedButtons);
   };
 
   const cryptoHand = () => {
     setCrypto(true);
   };
-
-  // const options = [
-  //   { value: "NGN", label: "NGN" },
-  //   { value: "USD", label: "USD" },
-  //   { value: "GBP", label: "GBP" },
-  //   { value: "EUR", label: "EUR" },
-  //   { value: "AUD", label: "AUD" },
-  //   { value: "KES", label: "KES" },
-  // ];
 
   return (
     <div>
@@ -146,11 +134,7 @@ export const MainDashboard = () => {
               >
                 View Wallets
               </button>
-              <p
-                className={`${
-                  toggleSideBar ? "" : ""
-                } ${styles.walletText}`}
-              >
+              <p className={`${toggleSideBar ? "" : ""} ${styles.walletText}`}>
                 Available Balance
               </p>
               {/* ================= */}
@@ -246,21 +230,23 @@ export const MainDashboard = () => {
                 )}
                 <div onClick={visibilityHandler} className=" text-[#92ABFE]">
                   {visible ? (
-                    <div className="lg:text-[40px]">
+                    <div className={`lg:text-[40px] ${styles.eye}`}>
                       <AiFillEye />
                     </div>
                   ) : (
-                    <div className="lg:text-[40px]">
+                    <div className={`lg:text-[40px] ${styles.eye}`}>
                       <AiFillEyeInvisible />
                     </div>
                   )}
                 </div>
               </div>
               {/* ==================== */}
-              <div className="flex justify-center items-center gap-[75px] mt-[10%] md:mt-[7%]">
+              <div
+                className={`${styles.fcp} flex justify-center items-center gap-[75px] mt-[10%] md:mt-[7%]`}
+              >
                 <div
                   onClick={() => handleClick(0)`bg-[#490]`}
-                  className={`${
+                  className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
                   } bg-[#92ABFE2E] cursor w-[17%] md:w-[10%] flex py-[3.92px] justify-center items-center text-[7px] md:text-[10px] font-semibold leading-normal rounded-[10px] lg:text-[13px] lg:w-[16%] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f] ${
                     activeButtons[0] ? "bg-[#04177f] lg:" : "bg-[#92ABFE2E]"
@@ -274,7 +260,7 @@ export const MainDashboard = () => {
                       handleClick(1);
                       cryptoHand();
                     }}
-                    className={`${
+                    className={`${styles.fcp2} ${
                       isDarkMode ? " border" : " "
                     } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
                       activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
@@ -285,7 +271,7 @@ export const MainDashboard = () => {
                 )}
                 <div
                   onClick={() => handleClick(2)}
-                  className={`${
+                  className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
                   } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
                     activeButtons[2] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
@@ -424,9 +410,9 @@ export const MainDashboard = () => {
           {/* ================VIRTUAL ACCOUNT CLOSE=============== */}
 
           <div
-            className={`${
+            className={`${styles.ttwc} ${
               toggleSideBar ? "" : ""
-            } flex mt-[7%] gap-[40px] md:gap-[px] lg:gap-[6.5%]`}
+            } flex mt-[7%] gap-[40px] md:gap-[95px] lg:gap-[6.5%]`}
           >
             <div
               className={`${
@@ -434,7 +420,7 @@ export const MainDashboard = () => {
               } ${styles.button}`}
             >
               <img
-                className="w-[11px] h-[11px] lg:w-[51px] lg:h-[51px]"
+                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                 src="./Images/dashboardImages/topup.png"
                 alt="topup"
               />
@@ -446,7 +432,7 @@ export const MainDashboard = () => {
               } ${styles.button}`}
             >
               <img
-                className="w-[11px] h-[11px] lg:w-[51px] lg:h-[51px]"
+                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                 src="./Images/dashboardImages/transfer.png"
                 alt="topup"
               />
@@ -458,7 +444,7 @@ export const MainDashboard = () => {
               } ${styles.button}`}
             >
               <img
-                className="w-[11px] h-[11px] lg:w-[51px] lg:h-[51px]"
+                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                 src="./Images/dashboardImages/withdraw.png"
                 alt="topup"
               />
@@ -470,7 +456,7 @@ export const MainDashboard = () => {
               } ${styles.button}`}
             >
               <img
-                className="w-[11px] h-[11px] lg:w-[51px] lg:h-[51px]"
+                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                 src="./Images/dashboardImages/convert.png"
                 alt="topup"
               />
@@ -478,8 +464,8 @@ export const MainDashboard = () => {
             </div>
           </div>
 
-          {/* ===========TOP NEWS========== */}
-          <TopNews />
+        <QuickFeatures/>
+          
         </div>
         {/* </div> */}
       </div>

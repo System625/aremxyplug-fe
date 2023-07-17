@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { ContextProvider } from "../Context";
+import { ContextProvider } from "../../Context";
 
 export default function DarkModeToggle() {
   const { isDarkMode, handleToggle } = useContext(ContextProvider);

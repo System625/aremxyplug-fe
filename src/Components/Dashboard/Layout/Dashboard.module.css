@@ -222,7 +222,7 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
 
   .button p {
     color: #fff;
-    font-size: 10.333px;
+    font-size: 13.333px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -243,6 +243,82 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
     font-weight: bolder;
   }
 }
+
+
+/* =================Surface Duo================ */
+@media (min-width: 912px) and (max-width: 1368px ){
+  /* .mainbody{
+width: 70%;
+  } */
+.sidebar{
+width: 240px;
+}
+
+.navSide{
+gap: 95px;
+}
+
+.topbar{
+  gap:195px;
+}
+
+.viewWallet{
+  font-size: 20px;
+}
+
+.walletText{
+  font-size: 25px;
+}
+
+.viewBalance {
+  display: flex;
+  margin-top: 4%;
+  gap: 59px;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  padding: 8.6px;
+  border-radius: 14.193px;
+  height: 33px;
+  font-size: 13.733px;
+  width: 69px;
+}
+
+.eye{
+  font-size: 30px;
+}
+
+.fcp{
+  margin-top: 6%;
+  gap: 100px;
+}
+
+.fcp2{
+  font-size: 14px;
+  border-radius: 15px;
+}
+
+.ttwc{
+  gap: 10%;
+}
+
+.button{
+gap: 10px;
+width: 25%;
+}
+
+.button p{
+  font-size: 20.162px;
+}
+
+.button img{
+  width: 30px;
+  height: 30px;
+}
+}
+
 
 /* =================== DESKTOP VIEW================ */
 @media (min-width: 1024px) {

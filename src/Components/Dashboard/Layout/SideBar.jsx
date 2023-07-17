@@ -28,7 +28,7 @@ export const SideBar = () => {
 
   return (
     <div
-      className={` fixed overflow-auto ${
+      className={`${styles.sidebar} fixed overflow-auto ${
         isDarkMode ? "bg-[#000] border" : " bg-[#04177f]"
       } leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[312px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
     >
@@ -39,7 +39,7 @@ export const SideBar = () => {
         } sticky top-0 `}
       >
         <div
-          className={` ${
+          className={`${styles.navSide} ${
             isDarkMode ? "border-b-[0.3px]" : "border-b-[0.3px] border-b-[#fff]"
           } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[110px] lg:py-[15%] `}
         >
