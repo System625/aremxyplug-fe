@@ -77,7 +77,7 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
 select {
   padding: 3px;
   border-radius: 10.193px;
-background: var(--boxes, rgba(146, 171, 254, 0.18));
+  background: var(--boxes, rgba(146, 171, 254, 0.18));
   height: 23px;
   font-size: 9.933px;
   font-style: normal;
@@ -88,7 +88,6 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
   outline: none;
   font-weight: bolder;
 }
-
 
 /* .custom-select {
   margin-top: 10%;
@@ -231,7 +230,7 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
   select {
     padding: 3px;
     border-radius: 10.193px;
-  background: var(--boxes, rgba(146, 171, 254, 0.18));
+    background: var(--boxes, rgba(146, 171, 254, 0.18));
     height: 23px;
     font-size: 9.933px;
     font-style: normal;
@@ -244,81 +243,79 @@ background: var(--boxes, rgba(146, 171, 254, 0.18));
   }
 }
 
-
 /* =================Surface Duo================ */
-@media (min-width: 912px) and (max-width: 1368px ){
+@media (min-width: 912px) and (max-width: 1368px) {
   /* .mainbody{
 width: 70%;
   } */
-.sidebar{
-width: 240px;
-}
+  .sidebar {
+    width: 240px;
+  }
 
-.navSide{
-gap: 95px;
-}
+  .navSide {
+    gap: 95px;
+  }
 
-.topbar{
-  gap:195px;
-}
+  .topbar {
+    gap: 195px;
+  }
 
-.viewWallet{
-  font-size: 20px;
-}
+  .viewWallet {
+    font-size: 20px;
+  }
 
-.walletText{
-  font-size: 25px;
-}
+  .walletText {
+    font-size: 25px;
+  }
 
-.viewBalance {
-  display: flex;
-  margin-top: 4%;
-  gap: 59px;
-  justify-content: center;
-  align-items: center;
-}
+  .viewBalance {
+    display: flex;
+    margin-top: 4%;
+    gap: 59px;
+    justify-content: center;
+    align-items: center;
+  }
 
-select {
-  padding: 8.6px;
-  border-radius: 14.193px;
-  height: 33px;
-  font-size: 13.733px;
-  width: 69px;
-}
+  select {
+    padding: 8.6px;
+    border-radius: 14.193px;
+    height: 33px;
+    font-size: 13.733px;
+    width: 69px;
+  }
 
-.eye{
-  font-size: 30px;
-}
+  .eye {
+    font-size: 30px;
+  }
 
-.fcp{
-  margin-top: 6%;
-  gap: 100px;
-}
+  .fcp {
+    margin-top: 6%;
+    gap: 100px;
+  }
 
-.fcp2{
-  font-size: 14px;
-  border-radius: 15px;
-}
+  .fcp2 {
+    font-size: 14px;
+    border-radius: 15px;
+  }
 
-.ttwc{
-  gap: 10%;
-}
+  .ttwc {
+    gap: 10%;
+  }
 
-.button{
-gap: 10px;
-width: 25%;
-}
+  .button {
+    gap: 10px;
+    width: 25%;
+  }
 
-.button p{
-  font-size: 20.162px;
-}
+  .button p {
+    font-size: 20.162px;
+  }
 
-.button img{
-  width: 30px;
-  height: 30px;
+  .button img {
+    width: 30px;
+    height: 30px;
+  }
 }
-}
-
 
 /* =================== DESKTOP VIEW================ */
 @media (min-width: 1024px) {
@@ -425,7 +422,7 @@ width: 25%;
   select {
     padding: 5.6px;
     border-radius: 14.193px;
-  background: var(--boxes, rgba(146, 171, 254, 0.18));
+    background: var(--boxes, rgba(146, 171, 254, 0.18));
     height: 33px;
     font-size: 10.733px;
     font-style: normal;
