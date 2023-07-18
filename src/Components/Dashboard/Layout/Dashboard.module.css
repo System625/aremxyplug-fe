@@ -22,16 +22,12 @@
   height: 167.787px;
   border-radius: 8.32px;
   padding: 3%;
-  /* filter: blur(10px);
-  transition: 100ms filter linear; */
 }
 .balance2 {
   width: 100%;
   height: 167.787px;
   border-radius: 8.32px;
   padding: 3%;
-  /* filter: blur(30px);
-  transition: 100ms filter linear; */
 }
 
 .viewWallet {
@@ -48,7 +44,6 @@
 }
 
 .walletText {
-  /* color: #000; */
   font-size: 11.093px;
   font-style: normal;
   font-weight: 600;
@@ -89,17 +84,6 @@ select {
   font-weight: bolder;
 }
 
-/* .custom-select {
-  margin-top: 10%;
-  display: flex;
-  padding: 4.14px 8.8px 4.5px 3.6px;
-  align-items: center;
-  border-radius: 2.88px 2.88px 0px 0px;
-  background-color: transparent;
-  box-shadow: 0px 1.4400001764297485px 3.6000008583068848px 0px
-    rgba(0, 0, 0, 0.25);
-} */
-
 .currency {
   border-radius: 2.88px 2.88px 0px 0px;
   background: #fff;
@@ -132,6 +116,10 @@ select {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+}
+
+.sidebar{
+height: 100vh;
 }
 
 /* ================ TABLET VIEW ============== */
@@ -194,12 +182,11 @@ select {
   }
 
   .NGN {
-    /* display: flex; */
+
     width: 50px;
     height: 25px;
     padding: 5.92px;
     gap: 7.84px;
-    /* color: #000; */
     border-radius: 10.193px;
     background: rgba(146, 171, 254, 0.18);
     font-size: 9.933px;
@@ -216,7 +203,6 @@ select {
     align-items: center;
     gap: 9.333px;
     border-radius: 8px;
-    /* background: var(--primary-color-main, ); */
   }
 
   .button p {
@@ -237,19 +223,19 @@ select {
     font-weight: 600;
     line-height: normal;
     width: 50px;
-    /* background-color: transparent; */
     outline: none;
     font-weight: bolder;
+
   }
 }
 
-/* =================Surface Duo================ */
+/* =================Surface Pro 7================ */
 @media (min-width: 912px) and (max-width: 1368px) {
-  /* .mainbody{
-width: 70%;
-  } */
   .sidebar {
     width: 240px;
+    height: 100vh;
+border-top-right-radius: 45px;
+border-bottom-right-radius: 45px;
   }
 
   .navSide {
@@ -315,6 +301,71 @@ width: 70%;
     width: 30px;
     height: 30px;
   }
+
+  .logout{
+    margin-top: 250%;
+  }
+}
+
+
+/* ===================Surface Duo======================== */
+@media (min-width:540px) and (max-width:720px){
+  .sidebar {
+    height: 100vh;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+  }
+
+  .logout{
+    margin-top: 90%;
+  }
+
+  .topbar {
+    gap: 100px;
+    /* border-bottom:  */
+  }
+
+  .topbarcom{
+gap: 80px;
+
+  }
+
+  .viewWallet {
+    font-size: 10px;
+  }
+
+  .walletText {
+    font-size: 16px;
+  }
+
+  .viewBalance {
+    display: flex;
+    margin-top: 4%;
+    gap: 59px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .balance1{
+height: 220px;
+  }
+
+  .balance2{
+    height: 220px;
+  }
+
+.fcp2{
+font-size: 10px;
+}
+
+.button{
+gap: 10px;
+padding: 8px 0;
+}
+
+.button p{
+  font-size: 10px;
+}
 }
 
 /* =================== DESKTOP VIEW================ */

@@ -1,3 +1,4 @@
+/* ===============Mobile Screen================= */
 .quickbody {
   margin-top: 10%;
 }
@@ -20,6 +21,8 @@
   line-height: normal;
 }
 
+
+/* ==================Surface Pro 7================ */
 @media (min-width: 912px) and (max-width: 1368px) {
   .feature {
     width: 150px;
@@ -40,4 +43,16 @@
   .quickgrid {
     gap: 20px;
   }
+}
+
+/* ==================Surface Duo=================== */
+@media (min-width: 540px) and (max-width: 720px){
+
+.feature{
+width: 85px;
+}
+
+.quickgrid {
+  gap: 20px;
+}
 }
