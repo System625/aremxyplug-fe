@@ -26,7 +26,7 @@ export const TopBar = () => {
         src="./Images/dashboardImages/menularge.png"
         alt="/harmburger"
       />
-      <div className="flex items-center gap-[45px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]">
+      <div className={`${styles.topbarcom} flex items-center gap-[45px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]`}>
         <div
           className={`${
             isDarkMode ? "border border-[#fff]" : "border-[#0003]"
