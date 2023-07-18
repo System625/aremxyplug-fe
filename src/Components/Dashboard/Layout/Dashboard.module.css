@@ -1,3 +1,7 @@
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 .dashboard {
   display: flex;
   align-items: center;
