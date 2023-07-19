@@ -93,7 +93,6 @@ select {
   align-items: center;
   gap: 3.333px;
   border-radius: 4px;
-  /* background: var(--primary-color-main, #04177f); */
 }
 
 .button p {
@@ -104,42 +103,18 @@ select {
   line-height: normal;
 }
 
-.sidebar{
-height: 100vh;
-}
-
-.blur{
-  /* background-color: red; */
-  position: absolute;
-  backdrop-filter: blur(4px);
-  color: var(--primary-color-main, #04177F);
-  /* top: 35%; */
-  /* right: 15%; */
-  width: 70%;
-  height: 70px;
-  font-size: 11.093px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-align: center;
-margin-left: 6%;
-padding-top: 3%;
+.sidebar {
+  height: 100vh;
 }
 
 /* ================ TABLET VIEW ============== */
 @media (min-width: 768px) {
-  .blur{
-font-size: larger;
-padding-top: 2%;
-  }
-
   .dashboard {
     width: 157px;
     gap: 6px;
   }
 
   .walletText {
-    /* color: #000; */
     font-size: 18.093px;
     font-style: normal;
     font-weight: 600;
@@ -158,14 +133,12 @@ padding-top: 2%;
     width: 100%;
     height: 250px;
     border-radius: 8.32px;
-    /* background-color: #e9edfb; */
     padding: 3%;
   }
   .balance2 {
     width: 100%;
     height: 250px;
     border-radius: 8.32px;
-    /* background-color: #e9edfb; */
     padding: 3%;
   }
 
@@ -191,7 +164,6 @@ padding-top: 2%;
   }
 
   .NGN {
-
     width: 50px;
     height: 25px;
     padding: 5.92px;
@@ -234,17 +206,11 @@ padding-top: 2%;
     width: 50px;
     outline: none;
     font-weight: bolder;
-
   }
 }
 
 /* =================Surface Pro 7================ */
 @media (min-width: 912px) and (max-width: 1368px) {
-  .blur{
-    font-size: 20px;
-    padding-top: 2%;
-      }
-
   .sidebar {
     width: 250px;
     height: 100vh;
@@ -290,11 +256,11 @@ padding-top: 2%;
     height: 280px;
   }
 
-  .GVA{
-font-size: 25px;
+  .GVA {
+    font-size: 25px;
   }
 
-  .virtualaccounttxt{
+  .virtualaccounttxt {
     font-size: 19px;
   }
 
@@ -338,42 +304,39 @@ font-size: 25px;
     height: 30px;
   }
 
-  .logout{
+  .logout {
     margin-top: 190%;
     font-size: 24px;
     align-items: center;
   }
 
-  .logouttxt{
+  .logouttxt {
     font-size: 18px;
-      }
+  }
 
-  .sidebartxt{
+  .sidebartxt {
     font-size: 13px;
   }
 }
 
-
 /* ===================Surface Duo======================== */
-@media (min-width:540px) and (max-width:720px){
+@media (min-width: 540px) and (max-width: 720px) {
   .sidebar {
     height: 100vh;
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 
-  .logout{
+  .logout {
     margin-top: 90%;
   }
 
   .topbar {
     gap: 100px;
-    /* border-bottom:  */
   }
 
-  .topbarcom{
-gap: 80px;
-
+  .topbarcom {
+    gap: 80px;
   }
 
   .viewWallet {
@@ -392,39 +355,30 @@ gap: 80px;
     align-items: center;
   }
 
-  .balance1{
-height: 220px;
-  }
-
-  .balance2{
+  .balance1 {
     height: 220px;
   }
 
-.fcp2{
-font-size: 10px;
-}
+  .balance2 {
+    height: 220px;
+  }
 
-.button{
-gap: 10px;
-padding: 8px 0;
-}
+  .fcp2 {
+    font-size: 10px;
+  }
 
-.button p{
-  font-size: 10px;
-}
+  .button {
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  .button p {
+    font-size: 10px;
+  }
 }
 
 /* =================== DESKTOP VIEW================ */
 @media (min-width: 1024px) {
-  .blur{
-    /* background-color: red; */
-    width: 37%;
-    height: 90px;
-    font-size: 24px;
-    font-weight: bolder;
-    margin-left: 1%;
-      }
-
   .dashboard {
     width: 275px;
     gap: 10px;
@@ -441,7 +395,6 @@ padding: 8px 0;
     gap: 19.226px;
     flex-shrink: 0;
     border-radius: 15.872px;
-    /* background: var(--primary-color-main, #04177f); */
   }
 
   .button p {
@@ -456,7 +409,6 @@ padding: 8px 0;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
-    /* gap: 48px; */
     justify-content: space-between;
   }
   .balance1 {
@@ -465,7 +417,6 @@ padding: 8px 0;
     flex-shrink: 0;
     padding: 2%;
     border-radius: 15.872px;
-    /* background: #e9edfb; */
   }
   .balance2 {
     width: 47%;
@@ -473,7 +424,6 @@ padding: 8px 0;
     flex-shrink: 0;
     padding: 2%;
     border-radius: 15.872px;
-    /* background: #e9edfb; */
   }
 
   .viewWallet {
@@ -489,7 +439,6 @@ padding: 8px 0;
   }
 
   .walletText {
-    /* color: #000; */
     font-size: 23.093px;
     font-style: normal;
     font-weight: 600;
@@ -503,14 +452,12 @@ padding: 8px 0;
     height: 35px;
     padding: 7.92px;
     gap: 14.84px;
-    /* color: #000; */
     border-radius: 19.193px;
     background: rgba(146, 171, 254, 0.18);
     font-size: 13.933px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    /* z-index: 99px; */
   }
 
   .viewBalance {
@@ -535,7 +482,6 @@ padding: 8px 0;
     font-weight: 600;
     line-height: normal;
     width: 55px;
-    /* background-color: transparent; */
     outline: none;
     font-weight: bolder;
   }
