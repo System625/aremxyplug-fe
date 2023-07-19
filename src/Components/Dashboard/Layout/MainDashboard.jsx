@@ -144,26 +144,58 @@ export const MainDashboard = () => {
                 </div>
               )}
               {/* ================= */}
-              <div
+              {!activeButtons[2] ? (
+                <div
+                  className={`${toggleSideBar ? "lg:pt-[7%]" : ""} ${
+                    styles.viewBalance
+                  }`}
+                >
+                  <select name="curr" id="curr">
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="AUD">AUD</option>
+                    <option value="KES">KES</option>
+                  </select>
+                  {visible ? (
+                    <span
+                      className={` ${
+                        toggleSideBar ? "lg:text-[19px]" : "lg:text-[37px]"
+                      } text-[19px] leading-normal `}
+                    >
+                      &#8358;5,000.00
+                    </span>
+                  ) : (
+                    <span className="text-[19px] leading-normal lg:text-[37px]">
+                      **********
+                    </span>
+                  )}
+                  <div onClick={visibilityHandler} className=" text-[#92ABFE]">
+                    {visible ? (
+                      <div className={`lg:text-[40px] ${styles.eye}`}>
+                        <AiFillEye />
+                      </div>
+                    ) : (
+                      <div className={`lg:text-[40px] ${styles.eye}`}>
+                        <AiFillEyeInvisible />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div
                 className={`${toggleSideBar ? "lg:pt-[7%]" : ""} ${
                   styles.viewBalance
                 }`}
               >
-                <select name="curr" id="curr">
-                  <option value="NGN">NGN</option>
-                  <option value="USD">USD</option>
-                  <option value="GBP">GBP</option>
-                  <option value="EUR">EUR</option>
-                  <option value="AUD">AUD</option>
-                  <option value="KES">KES</option>
-                </select>
                 {visible ? (
                   <span
                     className={` ${
                       toggleSideBar ? "lg:text-[19px]" : "lg:text-[37px]"
                     } text-[19px] leading-normal `}
                   >
-                    &#8358;5,000.00
+                    5000.00
                   </span>
                 ) : (
                   <span className="text-[19px] leading-normal lg:text-[37px]">
@@ -182,6 +214,7 @@ export const MainDashboard = () => {
                   )}
                 </div>
               </div>
+              )}
               {/* ==================== */}
               <div
                 className={`${toggleSideBar ? "lg:mt-[13%]" : ""} ${
@@ -217,7 +250,10 @@ export const MainDashboard = () => {
                 </div>
                 {/* )} */}
                 <div
-                  onClick={() => handleClick(2)}
+                  onClick={() => {
+                    handleClick(2);
+                    setBlur(false);
+                  }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
                   } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
@@ -298,8 +334,8 @@ export const MainDashboard = () => {
 
           <div
             className={`${styles.ttwc} ${
-              toggleSideBar ? "" : ""
-            } flex mt-[7%] gap-[40px] md:gap-[95px] lg:gap-[6.5%]`}
+              toggleSideBar ? "lg:gap-[68px]" : "lg:gap-[85px]"
+            } flex mt-[7%] gap-[40px] md:gap-[90px] `}
           >
             <div
               className={`${
