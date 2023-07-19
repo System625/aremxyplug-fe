@@ -100,13 +100,13 @@ export const SideBar = () => {
 
         <div className=" flex flex-col">
           <div className=" mt-[9%] px-[8%] flex flex-col gap-[10px] ">
-            {/* ========Collections========= */}
+            {/* ========COLLECTIONS========= */}
             <div>
-              <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
                 COLLECTIONS
               </p>
 
-              <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
                 <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
@@ -147,13 +147,13 @@ export const SideBar = () => {
               </div>
             </div>
 
-            {/* =========Products======== */}
+            {/* =========PRODUCTS======== */}
             <div>
-              <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
                 PRODUCTS
               </p>
 
-              <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
                 <div
                   onClick={() => dropHandler("dropdown2")}
                   className="flex justify-between gap-[3.4px]"
@@ -411,11 +411,11 @@ export const SideBar = () => {
 
             {/* =======FEATURES======== */}
             <div>
-              <p className="text-[7px] md:text-[7px] lg:text-[14px] font-extrabold">
+              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
                 FEATURES
               </p>
 
-              <div className="flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
+              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
                 <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -489,7 +489,7 @@ export const SideBar = () => {
               src="/Images/dashboardImages/logout.png"
               alt="logout"
             />
-            <p className="cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]">
+            <p className={`${styles.logouttxt} cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]`}>
               Logout
             </p>
           </div>
