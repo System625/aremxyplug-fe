@@ -380,7 +380,7 @@ select {
 /* =================== DESKTOP VIEW================ */
 @media (min-width: 1024px) {
   .dashboard {
-    width: 275px;
+    width: 265px;
     gap: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -439,7 +439,7 @@ select {
   }
 
   .walletText {
-    font-size: 23.093px;
+    /* font-size: 23.093px; */
     font-style: normal;
     font-weight: 600;
     line-height: normal;

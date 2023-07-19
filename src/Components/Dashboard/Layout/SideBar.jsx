@@ -30,7 +30,7 @@ export const SideBar = () => {
     <div
       className={`${styles.sidebar}  fixed overflow-auto${
         isDarkMode ? "bg-[#000] border" : " bg-[#04177f]"
-      } flex flex-col  justify-between  leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[312px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
+      } flex flex-col  justify-between  leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[332px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
     >
       {/* =======Nav Bar========= */}
       <div>
@@ -44,7 +44,7 @@ export const SideBar = () => {
               isDarkMode
                 ? "border-b-[0.3px]"
                 : "border-b-[0.3px] border-b-[#fff]"
-            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[90px] lg:py-[15%] `}
+            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[70px] lg:py-[15%] `}
           >
             <img
               className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[128px] lg:h-[25px]"
@@ -482,7 +482,7 @@ export const SideBar = () => {
         {/* ===========Logout========= */}
         <Link to="/Login">
           <div
-            className={`${styles.logout} pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
+            className={`${styles.logout} bg-red-400 pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
           >
             <img
               className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
