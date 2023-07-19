@@ -44,7 +44,7 @@ export const SideBar = () => {
               isDarkMode
                 ? "border-b-[0.3px]"
                 : "border-b-[0.3px] border-b-[#fff]"
-            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[110px] lg:py-[15%] `}
+            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[90px] lg:py-[15%] `}
           >
             <img
               className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[128px] lg:h-[25px]"
