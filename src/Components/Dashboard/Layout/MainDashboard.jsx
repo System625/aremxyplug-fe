@@ -66,7 +66,6 @@ export const MainDashboard = () => {
             <SideBar />
           </div>
         )}
-        {/* <div className=" w-[%]"> */}
         <div
           className={`${
             toggleSideBar ? "lg:w-[69.5%] lg:float-right" : ""
@@ -134,78 +133,22 @@ export const MainDashboard = () => {
                 Available Balance
               </p>
               {blur && (
-                <div className={styles.blur}>
+                <div
+                  className={` ${
+                    toggleSideBar
+                      ? "backdrop-blur-[4.5px] md:absolute md:w-[80%] md:h-[65px] md:ml-[3%] md:text-[19px] md:text-center lg:absolute lg:mt-2 lg:ml-[2%] lg:w-[28%] lg:text-[20px] lg:h-[89px] text-[#04177f]"
+                      : "backdrop-blur-[4.5px] absolute text-[#04177f] w-[70%] h-[70px] text-[11px] font-bold text-center ml-[6%] pt-[3%] md:text-[20px] md:mt-[%] md:pb-[8%] md:pt-[0%] md:h-[40px] md:text-extrabold lg:text-[24px] lg:ml-[4%] lg:w-[33%] lg:pt-[1%] lg:h-[90px]"
+                  } `}
+                >
                   This feature is currently not available...
                 </div>
               )}
               {/* ================= */}
-              <div className={styles.viewBalance}>
-                {/* <div
-                  className={`${
-                    isDarkMode ? "border border-[#fff] " : "text-[#000]"
-                  } ${styles.NGN}`}
-                > */}
-                {/* <div className="inputBoxShadow2 transparent w-[30%] h-[38px] lg:h-[43px]  flex items-center"> */}
-                {/* <Select
-                    defaultValue={choosePlan}
-                    onChange={setChoosePlan}
-                    options={options}
-                    placeholder="NGN"
-                    className={`${styles.myselect} hidden lg:block transparent text-[#000] lg:w-[150px] lg:text-[13.93px] outline-none`}
-                    styles={{
-                      valueContainer: (baseStyles, state) => ({
-                        ...baseStyles,
-                        width: "380%",
-                        height: "29px",
-                        outline: "none",
-                      }),
-                      control: (baseStyles, state) => ({
-                        ...baseStyles,
-                        color: "#fff",
-                        width: "89px",
-                        height: "1px",
-                        backgroundColor: "transparent",
-                        outline: "none",
-                        border: "none",
-                        marginTop: "-10px",
-                        marginLeft: "-10px",
-                        marginRight: "-10px",
-                      }),
-                    }}
-                  />
-
-                  <Select
-                    defaultValue={choosePlan}
-                    onChange={setChoosePlan}
-                    options={options}
-                    placeholder="NGN"
-                    className="lg:hidden transparent w-[120px] text-[7.93px] text-[#403f3f] outline-none"
-                    styles={{
-                      placeholder: (baseStyles, state) => ({
-                        ...baseStyles,
-                        text: "NGN",
-                      }),
-                      noOptionsMessage: { inputValue: "NGN" },
-
-                      valueContainer: (baseStyles, state) => ({
-                        ...baseStyles,
-                        // width: "60%",
-                      }),
-                      control: (baseStyles, state) => ({
-                        ...baseStyles,
-                        color: "#000",
-                        width: "74px",
-                        height: "10px",
-                        backgroundColor: "rgba(146, 171, 254, 0.7)",
-                        outline: "outline",
-                        border: "none",
-                        marginTop: "-11px",
-                        marginLeft: "-8px",
-                        marginRight: "0px",
-                        borderRadius: "15px",
-                      }),
-                    }}
-                  /> */}
+              <div
+                className={`${toggleSideBar ? "lg:pt-[7%]" : ""} ${
+                  styles.viewBalance
+                }`}
+              >
                 <select name="curr" id="curr">
                   <option value="NGN">NGN</option>
                   <option value="USD">USD</option>
@@ -214,8 +157,6 @@ export const MainDashboard = () => {
                   <option value="AUD">AUD</option>
                   <option value="KES">KES</option>
                 </select>
-                {/* </div> */}
-                {/* </div> */}
                 {visible ? (
                   <span
                     className={` ${
@@ -243,7 +184,9 @@ export const MainDashboard = () => {
               </div>
               {/* ==================== */}
               <div
-                className={`${styles.fcp} flex justify-center items-center gap-[75px] mt-[10%] md:mt-[7%]`}
+                className={`${toggleSideBar ? "lg:mt-[13%]" : ""} ${
+                  styles.fcp
+                } flex justify-center items-center gap-[75px] mt-[10%] md:mt-[9%]`}
               >
                 <div
                   onClick={() => {
@@ -306,71 +249,6 @@ export const MainDashboard = () => {
                   >
                     Global Virtual Accounts
                   </p>
-                  {/* <div
-                    className={`${
-                      isDarkMode ? "border border-[#fff] " : "text-[#000]"
-                    } ${styles.NGN}`}
-                  > */}
-                  {/* <Select
-                      defaultValue={choosePlan}
-                      onChange={setChoosePlan}
-                      options={options}
-                      placeholder="NGN"
-                      className={`${styles.myselect} hidden lg:block transparent text-[#000] lg:w-[150px] lg:text-[13.93px] outline-none`}
-                      styles={{
-                        valueContainer: (baseStyles, state) => ({
-                          ...baseStyles,
-                          width: "380%",
-                          height: "29px",
-                          outline: "none",
-                        }),
-                        control: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: "#fff",
-                          width: "89px",
-                          height: "1px",
-                          backgroundColor: "transparent",
-                          outline: "none",
-                          border: "none",
-                          marginTop: "-10px",
-                          marginLeft: "-10px",
-                          marginRight: "-10px",
-                        }),
-                      }}
-                    /> */}
-
-                  {/* <Select
-                    defaultValue={choosePlan}
-                    onChange={setChoosePlan}
-                    options={options}
-                    placeholder="NGN"
-                    className="lg:hidden transparent w-[120px] text-[7.93px] text-[#403f3f] outline-none"
-                    styles={{
-                      placeholder: (baseStyles, state) => ({
-                        ...baseStyles,
-                        text: "NGN",
-                      }),
-                      noOptionsMessage: { inputValue: "NGN" },
-
-                      valueContainer: (baseStyles, state) => ({
-                        ...baseStyles,
-                        // width: "60%",
-                      }),
-                      control: (baseStyles, state) => ({
-                        ...baseStyles,
-                        color: "#000",
-                        width: "74px",
-                        // height: "20px",
-                        backgroundColor: "rgba(146, 171, 254, 0.7)",
-                        outline: "outline",
-                        border: "none",
-                        marginTop: "-11px",
-                        marginLeft: "-8px",
-                        marginRight: "0px",
-                        borderRadius: "15px",
-                      }),
-                    }}
-                  /> */}
 
                   <select name="curr" id="curr">
                     <option value="NGN">NGN</option>
@@ -380,7 +258,6 @@ export const MainDashboard = () => {
                     <option value="NGN">AUD</option>
                     <option value="NGN">KES</option>
                   </select>
-                  {/* </div> */}
                 </div>
                 <p className="text-[6px] md:text-[10px] text-[#04177f] leading-normal font-bold lg:text-[11px]">
                   The below accounts are reserved for your wallet only.
@@ -476,7 +353,6 @@ export const MainDashboard = () => {
 
           <QuickFeatures />
         </div>
-        {/* </div> */}
       </div>
     </div>
   );
