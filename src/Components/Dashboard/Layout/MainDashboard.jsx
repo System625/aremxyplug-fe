@@ -12,14 +12,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-import QuickFeatures from "../DashboardComponents/QuickFeatures"
+import QuickFeatures from "../DashboardComponents/QuickFeatures";
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
     useContext(ContextProvider);
   const [visible, setVisibility] = useState(true);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
-  const [crypto, setCrypto] = useState(true);
+  const [blur, setBlur] = useState(false);
   const textRef = useRef(null);
 
   const handleCopyClick = () => {
@@ -52,10 +52,6 @@ export const MainDashboard = () => {
   const handleClick = (index) => {
     const updatedButtons = activeButtons.map((isActive, i) => i === index);
     setActiveButtons(updatedButtons);
-  };
-
-  const cryptoHand = () => {
-    setCrypto(true);
   };
 
   return (
@@ -137,6 +133,11 @@ export const MainDashboard = () => {
               <p className={`${toggleSideBar ? "" : ""} ${styles.walletText}`}>
                 Available Balance
               </p>
+              {blur && (
+                <div className={styles.blur}>
+                  This feature is currently not available...
+                </div>
+              )}
               {/* ================= */}
               <div className={styles.viewBalance}>
                 {/* <div
@@ -245,7 +246,10 @@ export const MainDashboard = () => {
                 className={`${styles.fcp} flex justify-center items-center gap-[75px] mt-[10%] md:mt-[7%]`}
               >
                 <div
-                  onClick={() => handleClick(0)`bg-[#490]`}
+                  onClick={() => {
+                    handleClick(0);
+                    setBlur(false);
+                  }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
                   } bg-[#92ABFE2E] cursor w-[17%] md:w-[10%] flex py-[3.92px] justify-center items-center text-[7px] md:text-[10px] font-semibold leading-normal rounded-[10px] lg:text-[13px] lg:w-[16%] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f] ${
@@ -254,21 +258,21 @@ export const MainDashboard = () => {
                 >
                   Flat
                 </div>
-                {crypto && (
-                  <div
-                    onClick={() => {
-                      handleClick(1);
-                      cryptoHand();
-                    }}
-                    className={`${styles.fcp2} ${
-                      isDarkMode ? " border" : " "
-                    } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
-                      activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
-                    } `}
-                  >
-                    Crypto
-                  </div>
-                )}
+                {/* {crypto && ( */}
+                <div
+                  onClick={() => {
+                    handleClick(1);
+                    setBlur(true);
+                  }}
+                  className={`${styles.fcp2} ${
+                    isDarkMode ? " border" : " "
+                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
+                    activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
+                  } `}
+                >
+                  Crypto
+                </div>
+                {/* )} */}
                 <div
                   onClick={() => handleClick(2)}
                   className={`${styles.fcp2} ${
@@ -296,7 +300,7 @@ export const MainDashboard = () => {
               <div>
                 <div className="flex mt-[8%] gap-[30px] md:mt-[5%] lg:mt-[9%]">
                   <p
-                    className={`${
+                    className={`${styles.GVA} ${
                       toggleSideBar ? "lg:text-[17px]" : ""
                     } text-[11px] font-extrabold md:text-[17px] lg:text-[21px]`}
                   >
@@ -384,15 +388,21 @@ export const MainDashboard = () => {
               </div>
 
               <div className="mt-[5%] flex flex-col gap-[10px] lg:gap-[30px]">
-                <div className="flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]">
+                <div
+                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
+                >
                   <div>Bank Name</div>
                   <div>SBI</div>
                 </div>
-                <div className="flex text-[10px] gap-[75px] md:text-[15px]">
+                <div
+                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[75px] md:text-[15px]`}
+                >
                   <div>Account Name</div>
                   <div>Habib Kamaldeen</div>
                 </div>
-                <div className="flex text-[10px] gap-[65px] md:text-[15px]">
+                <div
+                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[65px] md:text-[15px]`}
+                >
                   <div>Account Number</div>
                   <div className="flex items-center gap-[10px]">
                     <div ref={textRef}>1400 00xx xxxx</div>
@@ -464,8 +474,7 @@ export const MainDashboard = () => {
             </div>
           </div>
 
-        <QuickFeatures/>
-          
+          <QuickFeatures />
         </div>
         {/* </div> */}
       </div>
