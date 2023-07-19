@@ -129,7 +129,7 @@ export const MainDashboard = () => {
               >
                 View Wallets
               </button>
-              <p className={`${toggleSideBar ? "" : ""} ${styles.walletText}`}>
+              <p className={`${toggleSideBar ? "lg:text-[15px]" : "lg:text-[23px]"} ${styles.walletText}`}>
                 Available Balance
               </p>
               {blur && (
@@ -280,8 +280,8 @@ export const MainDashboard = () => {
                 <div className="flex mt-[8%] gap-[30px] md:mt-[5%] lg:mt-[9%]">
                   <p
                     className={`${styles.GVA} ${
-                      toggleSideBar ? "lg:text-[10px]" : ""
-                    } text-[11px] font-extrabold md:text-[17px] lg:text-[21px]`}
+                      toggleSideBar ? "lg:text-[15px]" : "lg:text-[21px]"
+                    } text-[11px] font-extrabold md:text-[17px] `}
                   >
                     Global Virtual Accounts
                   </p>
@@ -302,7 +302,7 @@ export const MainDashboard = () => {
 
               <div className={`${toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"} mt-[5%] flex flex-col gap-[10px] `}>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[5%]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
                 >
                   <div>Bank Name</div>
                   <div>SBI</div>
