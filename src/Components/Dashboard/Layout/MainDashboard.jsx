@@ -280,7 +280,7 @@ export const MainDashboard = () => {
                 <div className="flex mt-[8%] gap-[30px] md:mt-[5%] lg:mt-[9%]">
                   <p
                     className={`${styles.GVA} ${
-                      toggleSideBar ? "lg:text-[17px]" : ""
+                      toggleSideBar ? "lg:text-[10px]" : ""
                     } text-[11px] font-extrabold md:text-[17px] lg:text-[21px]`}
                   >
                     Global Virtual Accounts
@@ -300,21 +300,21 @@ export const MainDashboard = () => {
                 </p>
               </div>
 
-              <div className="mt-[5%] flex flex-col gap-[10px] lg:gap-[30px]">
+              <div className={`${toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"} mt-[5%] flex flex-col gap-[10px] `}>
                 <div
-                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
                 >
                   <div>Bank Name</div>
                   <div>SBI</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[75px] md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:text-[15px]`}
                 >
                   <div>Account Name</div>
                   <div>Habib Kamaldeen</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} flex text-[10px] gap-[65px] md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:text-[15px]`}
                 >
                   <div>Account Number</div>
                   <div className="flex items-center gap-[10px]">
@@ -334,7 +334,7 @@ export const MainDashboard = () => {
 
           <div
             className={`${styles.ttwc} ${
-              toggleSideBar ? "lg:gap-[68px]" : "lg:gap-[85px]"
+              toggleSideBar ? "lg:gap-[66px]" : "lg:gap-[80px]"
             } flex mt-[7%] gap-[40px] md:gap-[90px] `}
           >
             <div
