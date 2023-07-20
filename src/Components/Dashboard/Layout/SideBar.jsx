@@ -30,7 +30,7 @@ export const SideBar = () => {
     <div
       className={`${styles.sidebar}  fixed overflow-auto${
         isDarkMode ? "bg-[#000] border" : " bg-[#04177f]"
-      } flex flex-col  justify-between  leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[332px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
+      } flex flex-col  justify-between  leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[310px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
     >
       {/* =======Nav Bar========= */}
       <div>
@@ -44,10 +44,10 @@ export const SideBar = () => {
               isDarkMode
                 ? "border-b-[0.3px]"
                 : "border-b-[0.3px] border-b-[#fff]"
-            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:gap-[70px] lg:py-[15%] `}
+            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:py-[15%] `}
           >
             <img
-              className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[128px] lg:h-[25px]"
+              className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[125px] lg:h-[25px]"
               src="./Images/dashboardImages/aremxylogo.png"
               alt="Logo"
             />
@@ -102,11 +102,15 @@ export const SideBar = () => {
           <div className=" mt-[9%] px-[8%] flex flex-col gap-[10px] ">
             {/* ========COLLECTIONS========= */}
             <div>
-              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
+              >
                 COLLECTIONS
               </p>
 
-              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
                 <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
@@ -149,11 +153,15 @@ export const SideBar = () => {
 
             {/* =========PRODUCTS======== */}
             <div>
-              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
+              >
                 PRODUCTS
               </p>
 
-              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
                 <div
                   onClick={() => dropHandler("dropdown2")}
                   className="flex justify-between gap-[3.4px]"
@@ -411,11 +419,15 @@ export const SideBar = () => {
 
             {/* =======FEATURES======== */}
             <div>
-              <p className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
+              >
                 FEATURES
               </p>
 
-              <div className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}>
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
                 <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -478,23 +490,23 @@ export const SideBar = () => {
             </div>
           </div>
         </div>
-        </div>
-        {/* ===========Logout========= */}
-        <Link to="/Login">
-          <div
-            className={`${styles.logout} bg-red-400 pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
-          >
-            <img
-              className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-              src="/Images/dashboardImages/logout.png"
-              alt="logout"
-            />
-            <p className={`${styles.logouttxt} cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]`}>
-              Logout
-            </p>
-          </div>
-        </Link>
-      
+      </div>
+      {/* ===========Logout========= */}
+
+      <div
+        className={`${styles.logout} pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
+      >
+        <img
+          className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+          src="/Images/dashboardImages/logout.png"
+          alt="logout"
+        />
+        <p
+          className={`${styles.logouttxt} cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]`}
+        >
+          <Link to="/Login">Logout</Link>
+        </p>
+      </div>
     </div>
   );
 };
