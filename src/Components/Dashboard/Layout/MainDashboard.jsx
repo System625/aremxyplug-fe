@@ -129,7 +129,7 @@ export const MainDashboard = () => {
               >
                 View Wallets
               </button>
-              <p className={`${toggleSideBar ? "lg:text-[15px]" : "lg:text-[23px]"} ${styles.walletText}`}>
+              <p className={`${toggleSideBar ? "lg:text-[18px]" : "lg:text-[23px]"} ${styles.walletText}`}>
                 Available Balance
               </p>
               {blur && (
@@ -217,9 +217,9 @@ export const MainDashboard = () => {
               )}
               {/* ==================== */}
               <div
-                className={`${toggleSideBar ? "lg:mt-[13%]" : ""} ${
+                className={`${toggleSideBar ? "lg:mt-[20%]" : ""} ${
                   styles.fcp
-                } flex justify-center items-center gap-[75px] mt-[10%] md:mt-[9%]`}
+                } flex justify-center items-center gap-[75px] mt-[10%] md:mt-[9%] `}
               >
                 <div
                   onClick={() => {
@@ -280,7 +280,7 @@ export const MainDashboard = () => {
                 <div className="flex mt-[8%] gap-[30px] md:mt-[5%] lg:mt-[9%]">
                   <p
                     className={`${styles.GVA} ${
-                      toggleSideBar ? "lg:text-[15px]" : "lg:text-[21px]"
+                      toggleSideBar ? "lg:text-[10px]" : "lg:text-[21px]"
                     } text-[11px] font-extrabold md:text-[17px] `}
                   >
                     Global Virtual Accounts
@@ -302,19 +302,19 @@ export const MainDashboard = () => {
 
               <div className={`${toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"} mt-[5%] flex flex-col gap-[10px] `}>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[5%]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[1%]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
                 >
                   <div>Bank Name</div>
                   <div>SBI</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Name</div>
                   <div>Habib Kamaldeen</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Number</div>
                   <div className="flex items-center gap-[10px]">
@@ -334,7 +334,7 @@ export const MainDashboard = () => {
 
           <div
             className={`${styles.ttwc} ${
-              toggleSideBar ? "lg:gap-[66px]" : "lg:gap-[80px]"
+              toggleSideBar ? "lg:gap-[63px]" : "lg:gap-[80px]"
             } flex mt-[7%] gap-[40px] md:gap-[90px] `}
           >
             <div
