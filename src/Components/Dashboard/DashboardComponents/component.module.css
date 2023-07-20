@@ -3,6 +3,15 @@
   margin-top: 10%;
 }
 
+.QuickFeaturetext{
+font-weight:bolder;
+}
+
+.InOutText{
+font-size: 11px;
+font-weight:bolder;
+}
+
 .feature {
   display: flex;
   width: 60.333px;
@@ -14,10 +23,29 @@
   background: #fff;
   box-shadow: 0px 0px 3.3333332538604736px 0px rgba(0, 0, 0, 0.25);
   color: #000;
-  font-size: 6.333px;
+  font-size: 5.333px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+/* ===================Tablet view ================ */
+@media (min-width: 820px) and (max-width:1180px) {
+  .feature{
+    width: 130px;
+    gap: 3.333px;
+    padding: 15px 0px;
+    font-size: 10.333px;
+  }
+
+  .feature img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .InOutText{
+    font-size: 14px;
+    }
 }
 
 /* ==================Surface Pro 7================ */
@@ -30,7 +58,7 @@
     font-size: 13.333px;
   }
 
-  .text {
+  .QuickFeaturetext {
     font-size: 18px;
   }
 
@@ -42,7 +70,9 @@
     gap: 20px;
   }
 
-  
+  .InOutText{
+    font-size: 18px;
+    }
 
 }
 
@@ -70,13 +100,22 @@
     background: #fff;
     box-shadow: 0px 0px 13.247862815856934px 0px rgba(0, 0, 0, 0.25);
     color: #000;
-    font-size: 20.197px;
+    font-size: 18.197px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
 
+  .feature img {
+    width: 75px;
+    height: 75px;
+  }
+
   .quickgrid {
     gap: 24px;
   }
+
+  .InOutText{
+    font-size: 21px;
+    }
 }
