@@ -69,7 +69,7 @@ export const MainDashboard = () => {
         )}
         <div
           className={`${
-            toggleSideBar ? "lg:w-[69.5%] lg:float-right" : ""
+            toggleSideBar ? "lg:w-[73.5%] lg:float-right" : ""
           } w-[] mx-[5%] mt-[8%] lg:mt-[3%] `}
         >
           {/* ==============HERO SECTION========== */}

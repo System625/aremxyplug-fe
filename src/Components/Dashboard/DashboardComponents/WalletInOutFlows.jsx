@@ -14,7 +14,7 @@ import { ContextProvider } from "../../Context";
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
 
 export const WalletInOutFlows = () => {
-  const { volumeValueToggle, isValue, isDarkMode } =
+  const { volumeValueToggle, isValue, isDarkMode, toggleSideBar } =
     useContext(ContextProvider);
   const [activeButtons, setActiveButtons] = useState([
     false,
@@ -84,7 +84,7 @@ export const WalletInOutFlows = () => {
   };
 
   return (
-    <div className="mt-[10%]">
+    <div className="mt-[10%] lg:mt-[5%]">
       <div className="flex items-center gap-[10px]">
         <p className={styles.InOutText}>Wallets Inflows & Outflows</p>
         <img
@@ -95,7 +95,7 @@ export const WalletInOutFlows = () => {
       </div>
 
       {/* ==============================Inflows & Outflows Indicator====================== */}
-      <div className={`${styles.INnOUT} my-[10%] flex `}>
+      <div className={`${styles.INnOUT} my-[10%] flex lg:mt-[5%] lg:items-center`}>
         <select name="curr" id="curr">
           <option value="NGN">NGN</option>
           <option value="USD">USD</option>
@@ -105,11 +105,11 @@ export const WalletInOutFlows = () => {
           <option value="KES">KES</option>
         </select>
 
-        <div className={`${styles.inflowOutflow} bg-[#D5F6E3] text-[7px]`}>
-          <div className="flex gap-[px] ">
-            <p className="">Total Inflows</p>
+        <div className={`${styles.inflowOutflow} bg-[#D5F6E3] text-[7px] ${toggleSideBar ? "lg:text-[14px]" : "lg:text-[px]"}`}>
+          <div className="flex gap-1 md:items-center ">
+            <p className={`${toggleSideBar ? "lg:text-[18px]" : ""}`}>Total Inflows</p>
             <img
-              className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+              className="h-[8.3px] w-[8.3px] md:h-[18px] md:w-[18px] lg:w-[24px] lg:h-[24px]"
               src="./Images/dashboardImages/newarrow-down.png"
               alt="dropdown"
             />
@@ -117,10 +117,10 @@ export const WalletInOutFlows = () => {
           <div className="text-center">&#8358;0</div>
         </div>
         <div className={`${styles.inflowOutflow} bg-[#92abfe81] text-[7px]`}>
-          <div className="flex gap-1 ">
-            <p className="">Inflow Transactions </p>
+          <div className="flex gap-1 md:items-center">
+            <p className={`${toggleSideBar ? "lg:text-[18px]" : ""}`}>Total Transactions </p>
             <img
-              className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+              className="h-[8.3px] w-[8.3px] md:h-[18px] md:w-[18px] lg:w-[24px] lg:h-[24px]"
               src="./Images/dashboardImages/newarrow-down.png"
               alt="dropdown"
             />
@@ -128,11 +128,11 @@ export const WalletInOutFlows = () => {
           <div className="text-center">&#8358;0</div>
         </div>
         <div className={`${styles.inflowOutflow} bg-[#FDCECE] text-[7px]`}>
-          <div className="flex gap-1 ">
-            <p className="">Total Outflows</p>
+          <div className="flex gap-1 md:items-center">
+            <p className={`${toggleSideBar ? "lg:text-[18px]" : ""}`}>Total Outflows</p>
             <img
-              className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-              src="./Images/dashboardImages/newarrow-down.png"
+              className="h-[8.3px] w-[8.3px] md:h-[18px] md:w-[18px] lg:w-[24px] lg:h-[24px]"
+              src="./Images/dashboardImages/newarrow-up.png"
               alt="dropdown"
             />
           </div>
@@ -147,7 +147,7 @@ export const WalletInOutFlows = () => {
         }`}
       >
         {/* ==============Amount Of Days==================== */}
-        <div className={styles.chartbuttons}>
+        <div className={`${styles.chartbuttons} ${toggleSideBar ? "gap-[10px] text-[5.6px] md:text-[13.66px] lg:gap-[20px] lg:text-[15px]" : "text-[5.6px] lg:text-[21px]  md:text-[13.66px] lg:gap-[50px] gap-[10px] "}`}>
           <div
             onClick={() => {
               handleClick(0);
@@ -201,7 +201,7 @@ export const WalletInOutFlows = () => {
         </div>
 
         {/* ==============Volume & Value Toggle================== */}
-        <div className="text-[7px] flex gap-2 items-center mt-[7%] ml-[75%]">
+        <div className={`text-[7px] flex gap-2 items-center mt-[7%]  md:text-[14px] lg:text-[18px]  ${toggleSideBar ? "lg:ml-[80%]" : "ml-[75%] lg:ml-[85%] md:ml-[82%]"}`}>
           <div>Volume</div>
           <div
             onClick={volumeValueToggle}
@@ -219,18 +219,18 @@ export const WalletInOutFlows = () => {
         </div>
 
         {/* ====================Inflow & Outflow indication================ */}
-        <div className="flex float-right mt-[5%]">
-          <div className="flex items-center">
-            <div className="text-2xl text-[#58DA8F]">
+        <div className="flex float-right mt-[5%] md:mt-[3%]">
+          <div className="flex items-center ">
+            <div className="text-2xl text-[#58DA8F] md:text-5xl">
               <RxDotFilled />
             </div>
-            <div className="text-[7px]">Inflow</div>
+            <div className="text-[7px] md:text-[14px]">Inflow</div>
           </div>
           <div className="flex items-center">
-            <div className="text-2xl text-[#FA6B6B]">
+            <div className="text-2xl text-[#FA6B6B] md:text-5xl">
               <RxDotFilled />
             </div>
-            <div className="text-[7px]">Outflow</div>
+            <div className="text-[7px] md:text-[14px]">Outflows</div>
           </div>
         </div>
 

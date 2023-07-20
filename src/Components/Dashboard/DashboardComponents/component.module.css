@@ -37,7 +37,6 @@
 
 .chartbuttons {
   display: flex;
-  gap: 10px;
   float: right;
 }
 
@@ -48,7 +47,7 @@
   border-radius: 1.667px;
   /* background: var(--stroke-fade, rgba(0, 0, 0, 0.30)); */
   color: #FFF;
-  font-size: 5.667px;
+  /* font-size: 5.667px; */
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -83,6 +82,21 @@
   .InOutText {
     font-size: 14px;
   }
+
+  .INnOUT {
+  align-items: center;
+  }
+  
+  .inflowOutflow {
+    font-size: 12.145px;
+    padding: 11.386px 20.361px;
+    border-radius: 5px;
+  }
+
+  .chartBtn{
+    padding: 6px 7.333px;
+    /* font-size: 13.667px; */
+  }
 }
 
 /* ==================Surface Pro 7================ */
@@ -112,6 +126,11 @@
     font-size: 18px;
   }
 
+  .inflowOutflow {
+    font-size: 16.145px;
+    padding: 11.386px 25.361px;
+    border-radius: 7px;
+  }
 }
 
 /* ==================Surface Duo=================== */
@@ -155,5 +174,26 @@
 
   .InOutText {
     font-size: 21px;
+  }
+
+  .InOutText {
+    font-size: 21px;
+    font-weight: bolder;
+  }
+
+  .inflowOutflow{
+    font-size: 21px;
+    font-weight: 800;
+    padding: 19.873px 52.994px;
+  }
+
+  .chartbuttons{
+    /* gap:50px; */
+  }
+
+  .chartBtn{
+    /* font-size: 21px; */
+    padding: 2px 13.259px;
+    border-radius: 6.629px;
   }
 }
