@@ -4,7 +4,7 @@ const QuickFeatures = () => {
   return (
     <div className={styles.quickbody}>
       <div className="flex items-center gap-[10px]">
-        <p className={`${styles.text} text-[11px] lg:text-[21px]`}>Quick Features</p>
+        <p className={`${styles.QuickFeaturetext} text-[11px] lg:text-[21px] `}>Quick Features</p>
         <img
           className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
           src="./Images/Dashboardimages/arrowright.png"
@@ -21,7 +21,7 @@ const QuickFeatures = () => {
           <p>Data Topup</p>
         </div>
         <div className={styles.feature}>
-          <img className="h-[25px] w-[25px] md:w-[] md:h-[] lg:h-[79px] lg:w-[79px]" src="./Images/Dashboardimages/feature3.png" alt="/" />
+          <img className="h-[25px] w-[25px] md:w-[] md:h-[] lg:h-[85px] lg:w-[85px]" src="./Images/Dashboardimages/feature3.png" alt="/" />
           <p>Education Pins</p>
         </div>
         <div className={styles.feature}>

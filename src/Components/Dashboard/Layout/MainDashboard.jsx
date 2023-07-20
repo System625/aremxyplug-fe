@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import QuickFeatures from "../DashboardComponents/QuickFeatures";
+import { WalletInOutFlows } from "../DashboardComponents/WalletInOutFlows";
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
@@ -68,7 +69,7 @@ export const MainDashboard = () => {
         )}
         <div
           className={`${
-            toggleSideBar ? "lg:w-[69.5%] lg:float-right" : ""
+            toggleSideBar ? "lg:w-[73.5%] lg:float-right" : ""
           } w-[] mx-[5%] mt-[8%] lg:mt-[3%] `}
         >
           {/* ==============HERO SECTION========== */}
@@ -229,7 +230,7 @@ export const MainDashboard = () => {
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
                   } bg-[#92ABFE2E] cursor w-[17%] md:w-[10%] flex py-[3.92px] justify-center items-center text-[7px] md:text-[10px] font-semibold leading-normal rounded-[10px] lg:text-[13px] lg:w-[16%] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f] ${
-                    activeButtons[0] ? "bg-[#04177f] lg:" : "bg-[#92ABFE2E]"
+                    activeButtons[0] ? "bg-[#04177f] " : "bg-[#92ABFE2E]"
                   } `}
                 >
                   Flat
@@ -302,19 +303,19 @@ export const MainDashboard = () => {
 
               <div className={`${toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"} mt-[5%] flex flex-col gap-[10px] `}>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[1%]" : ""} flex text-[10px] gap-[90px] md:font-extrabold md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[1%]" : ""} flex text-[10px] gap-[90px] md:gap-[110px] md:font-extrabold md:text-[15px]`}
                 >
                   <div>Bank Name</div>
                   <div>SBI</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:text-[15px] lg:font-extrabold`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:gap-[80px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Name</div>
                   <div>Habib Kamaldeen</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:text-[15px] lg:font-extrabold`}
+                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:gap-[60px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Number</div>
                   <div className="flex items-center gap-[10px]">
@@ -388,6 +389,7 @@ export const MainDashboard = () => {
           </div>
 
           <QuickFeatures />
+          <WalletInOutFlows/>
         </div>
       </div>
     </div>
