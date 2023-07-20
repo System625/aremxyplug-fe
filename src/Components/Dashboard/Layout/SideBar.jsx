@@ -184,7 +184,7 @@ export const SideBar = () => {
                     <img
                       className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
                       src="./Images/dashboardImages/arrow-up.png"
-                      alt="dropdown"
+                      alt="dropup"
                     />
                   )}
                 </div>

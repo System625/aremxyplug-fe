@@ -358,9 +358,15 @@ export const Context = ({ children }) => {
   // =============Start Dashboard=============
   const [toggleSideBar, setToggleSideBar] = useState("");
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isValue, SetIsValue] = useState(false);
+
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  const volumeValueToggle = () => {
+    SetIsValue(!isValue);
+  }
 
   const hold = {
     firstDrop,
@@ -479,6 +485,8 @@ export const Context = ({ children }) => {
     setToggleSideBar,
     isDarkMode,
     handleToggle,
+    volumeValueToggle,
+    isValue
   };
 
   return (
