@@ -5,7 +5,7 @@ import { ContextProvider } from "../../Context";
 import styles from "./Dashboard.module.css";
 
 export const SideBar = () => {
-  const { setToggleSideBar } = useContext(ContextProvider);
+  const { setToggleSideBar, isDarkMode } = useContext(ContextProvider);
   const [dropDownOpen, setDropDownOpen] = useState({
     dropdown1: false,
     dropdown2: false,
@@ -27,449 +27,476 @@ export const SideBar = () => {
   };
 
   return (
-    <div className="text-[#fff] w-[109px] h-[100%] bg-[#04177f] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[312px] lg:rounded-br-[32px] lg:rounded-tr-[32px]">
+    <div
+      className={`${styles.sidebar}  fixed overflow-auto${
+        isDarkMode ? "bg-[#000] border" : " bg-[#04177f]"
+      } flex flex-col  justify-between  leading-normal text-white  w-[145px] h-[] rounded-tr-[11.17px] rounded-br-[11.17px] md:w-[178px] md:rounded-tr-[18px] md:rounded-br-[18px] lg:w-[310px] lg:rounded-br-[32px] lg:rounded-tr-[32px] lg:h-[100vh]`}
+    >
       {/* =======Nav Bar========= */}
-      <div className="flex w-[100%] gap-[40px] h-[13.97px] justify-center items-center mx-auto py-[18%] border-b-[0.349px] border-b-[#0003] border-b-solid md:border-b-[1.5px] md:gap-[55px] lg:gap-[110px] lg:py-[15%] ">
-        <img
-          className="w-[41px] h-[6.23px] md:h-[10px] md:w-[67px] lg:w-[118px] lg:h-[17px]"
-          src="./Images/dashboardImages/aremxylogo.png"
-          alt="Logo"
-        />
-        <img
-          onClick={() => setToggleSideBar(false)}
-          className="cursor-pointer w-[13.97px] h-[13.97px] md:w-[22px] md:h-[22px] lg:h-[40px] lg:w-[40px]"
-          src="./Images/dashboardImages/menumenu.png"
-          alt="Menu"
-        />
-      </div>
-
-      <div className="px-[5%] pt-[5%]">
-        {/* ======Profile picture and name======== */}
-        <div>
-          <div className="flex gap-[3px] md:gap-[5px]">
+      <div>
+        <div
+          className={`border-b-[0.3px] ${
+            isDarkMode ? "bg-[#000]" : "bg-[#04177f]"
+          } sticky top-0 `}
+        >
+          <div
+            className={`${styles.navSide} ${
+              isDarkMode
+                ? "border-b-[0.3px]"
+                : "border-b-[0.3px] border-b-[#fff]"
+            } flex w-[100%] gap-[45px] h-[13.97px] justify-center items-center mx-auto py-[13%] md:gap-[55px] lg:py-[15%] `}
+          >
             <img
-              className="w-[13.97px] h-[13.97px] md:w-[22px] md:h-[22px] lg:w-[40px] lg:h-[40px]"
-              src="./Images/dashboardImages/habib.png"
-              alt="DP"
+              className="w-[59px] h-[10.23px] md:h-[10px] md:w-[67px] lg:w-[125px] lg:h-[25px]"
+              src="./Images/dashboardImages/aremxylogo.png"
+              alt="Logo"
             />
-            <div className="flex flex-col gap-[3px] justify-center mt-[4%]">
-              <p className="text-[4.8px] font-semibold md:text-[8px] lg:text-[14px]">
-                Habib Kamaldeen
-              </p>
-              <div className="flex gap-[3px]">
-                <div className="rounded-[1px] px-[2px] font-semibold text-[4px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
-                  Verified
-                </div>
-                <div className="rounded-[1px] px-[2px] font-semibold text-[4px] bg-[#b4b4b4] md:text-[6px] lg:text-[10px] lg:rounded-[2px]">
-                  KYCed
+            <img
+              onClick={() => setToggleSideBar(false)}
+              className="cursor-pointer w-[13.97px] h-[13.97px] md:w-[22px] md:h-[22px] lg:h-[40px] lg:w-[40px]"
+              src="./Images/dashboardImages/menumenu.png"
+              alt="Menu"
+            />
+          </div>
+
+          <div className="px-[5%] pt-[5%] ">
+            {/* ======Profile picture and name======== */}
+            <div className="sticky top-0">
+              <div className="flex gap-[3px] md:gap-[5px] items-center">
+                <img
+                  className="w-[13.97px] h-[13.97px] md:w-[22px] md:h-[22px] lg:w-[40px] lg:h-[40px]"
+                  src="./Images/dashboardImages/habib.png"
+                  alt="DP"
+                />
+                <div className="flex flex-col gap-[3px] justify-center mt-[4%]">
+                  <p className="text-[8px] font-semibold md:text-[8px] lg:text-[14px]">
+                    Habib Kamaldeen
+                  </p>
+                  <div className="flex gap-[3px] lg:gap-[5px]">
+                    <div className=" rounded-[1px] px-[4px] py-[1px] font-semibold text-[6px] bg-[#b4b4b4] md:text-[6px] lg:text-[12px] lg:rounded-[2px]">
+                      Verified
+                    </div>
+                    <div className="rounded-[1px] px-[4px] py-[1px] font-semibold text-[6px] bg-[#b4b4b4] md:text-[6px] lg:text-[12px] lg:rounded-[2px]">
+                      KYCed
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ======Dashboard nav======= */}
-        <div className={styles.dashboard}>
-          <img
-            className="w-[8.38px] h-[8.38px] md:w-[13px] md:h-[13px] lg:h-[24px] lg:w-[24px]"
-            src="./Images/dashboardImages/3square.png"
-            alt="3squares"
-          />
-          <p className="text-[4.8px] font-semibold md:text-[8px] lg:text-[14px]">
-            Dashboard
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-[10px]">
-          {/* ========Collections========= */}
-          <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">
-              COLLECTIONS
+          {/* ======Dashboard nav======= */}
+          <div className={styles.dashboard}>
+            <img
+              className="w-[8.38px] h-[8.38px] md:w-[13px] md:h-[13px] lg:h-[24px] lg:w-[24px]"
+              src="./Images/dashboardImages/dashboardimg.png"
+              alt="3squares"
+            />
+            <p className=" text-[7px] font-semibold md:text-[8px] lg:text-[14px] ">
+              Dashboard
             </p>
-
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <Link to={`/wallet`} className="flex gap-[3.4px] items-center cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
-                  src="./Images/dashboardImages/wallet.png"
-                  alt="icon"
-                />
-                <p>Wallet</p>
-              </Link>
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/topup.png"
-                  alt="icon"
-                />
-                <p>Top Up</p>
-              </div>
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/translate.png"
-                  alt="icon"
-                />
-                <p>Transfer</p>
-              </div>
-              <div
-                onClick={() => dropHandler("dropdown1")}
-                className="flex justify-between items-center"
-              >
-                <div className="flex gap-[3.4px] items-center cursor-pointer">
-                  <img
-                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/transaction.png"
-                    alt="icon"
-                  />
-                  <p>Transactions</p>
-                </div>
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              {dropDownOpen.dropdown1 && (
-                <ul className=" absolute top-[29%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[31%] md:w-[114px] lg:rounded-[6px] lg:top-[31%] lg:w-[200px] lg:ml-[19px]">
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    All Transactions
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Successful
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Failed
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Pending
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Refunded
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Sales Analysis
-                  </li>
-                </ul>
-              )}
-            </div>
           </div>
+        </div>
 
-          {/* =========Products======== */}
-          <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">PRODUCTS</p>
-
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <div
-                onClick={() => dropHandler("dropdown2")}
-                className="flex justify-between gap-[3.4px]"
+        <div className=" flex flex-col">
+          <div className=" mt-[9%] px-[8%] flex flex-col gap-[10px] ">
+            {/* ========COLLECTIONS========= */}
+            <div>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
               >
-                <div className="flex items-center cursor-pointer">
+                COLLECTIONS
+              </p>
+
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
+                <Link to={`/wallet`} className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
-                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/telecom.png"
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
+                    src="./Images/dashboardImages/wallet.png"
                     alt="icon"
                   />
-                  <p>Telecom</p>
+                  <p>Wallet</p>
+                </Link>
+                <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/topup.png"
+                    alt="icon"
+                  />
+                  <p>Top Up</p>
                 </div>
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              {dropDownOpen.dropdown2 && (
-                <ul className=" absolute top-[35%]  ml-[12px] mt-[-5px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[36.5%] md:w-[114px] lg:rounded-[6px] lg:top-[36.5%] lg:w-[200px] lg:ml-[19px]">
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Airtime Top-up
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Data Top-up
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Education Pins
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    TV Subscriptions
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Electricity Bills
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Airtime Conversion
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Bulk SMS
-                  </li>
-                  <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                    Recharge Card Printing
-                  </li>
-                </ul>
-              )}
-              <div
-                onClick={() => dropHandler("dropdown3")}
-                className="flex gap-[3.4px] justify-between"
-              >
-                <div className="flex gap-[3.5px] items-center cursor-pointer">
+                <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/payments.png"
+                    src="./Images/dashboardImages/transfer.png"
                     alt="icon"
                   />
-                  <p>Payments</p>
+                  <p>Transfer</p>
+                </div>
+                <div
+                  onClick={() => dropHandler("dropdown1")}
+                  className="flex justify-between items-center"
+                >
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/transaction.png"
+                      alt="icon"
+                    />
+                    <p>Transaction</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* =========PRODUCTS======== */}
+            <div>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
+              >
+                PRODUCTS
+              </p>
+
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
+                <div
+                  onClick={() => dropHandler("dropdown2")}
+                  className="flex justify-between gap-[3.4px]"
+                >
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/telecom.png"
+                      alt="icon"
+                    />
+                    <p>Telecom</p>
+                  </div>
+                  {!dropDownOpen.dropdown2 ? (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-down.png"
+                      alt="dropdown"
+                    />
+                  ) : (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-up.png"
+                      alt="dropup"
+                    />
+                  )}
+                </div>
+                {dropDownOpen.dropdown2 && (
+                  <ul className=" mt-[-5px] rounded-[2.5px]  bg-[#f2faff10] w-[100px] md:top-[36.5%] md:w-[114px] lg:w-[220px] lg:rounded-[6px] lg:top-[36.5%]">
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Airtime Top-up</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Data Top-up</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1  font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Education pins</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Tv Subscription</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Electricity Bills</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Airtime Conversion</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Bulk SMS</div>
+                    </li>
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Recharge Card Printing</div>
+                    </li>
+                  </ul>
+                )}
+
+                <div
+                  onClick={() => dropHandler("dropdown3")}
+                  className="flex gap-[3.5px] items-center cursor-pointer justify-between"
+                >
+                  <div className="flex gap-1 lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/payments.png"
+                      alt="icon"
+                    />
+                    <p>Payments</p>
+                  </div>
+                  {!dropDownOpen.dropdown3 ? (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-down.png"
+                      alt="dropdown"
+                    />
+                  ) : (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-up.png"
+                      alt="dropdown"
+                    />
+                  )}
                 </div>
                 {dropDownOpen.dropdown3 && (
                   <ul className=" absolute top-[37.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[39%] md:w-[114px] lg:rounded-[6px] lg:top-[38.5%] lg:w-[200px] lg:ml-[19px]">
-                    <Link to={`/wallet`} className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                       Wallets
-                    </Link>
+                    </li>
                     <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                       Virtual Accounts
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Money Transfer
+                    <li className=" flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Money Transfer</div>
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Card Payments
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Card Payments</div>
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      International Payments
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>International Payments</div>
                     </li>
                   </ul>
                 )}
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              <div
-                onClick={() => dropHandler("dropdown4")}
-                className="flex justify-between"
-              >
-                <div className="flex items-center gap-[3.4px] cursor-pointer">
-                  <img
-                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/cardissuing.png"
-                    alt="icon"
-                  />
-                  <p>Card Issuing</p>
+
+                <div
+                  onClick={() => dropHandler("dropdown4")}
+                  className="flex justify-between"
+                >
+                  <div className="flex items-center gap-[3.4px] cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/cardissuing.png"
+                      alt="icon"
+                    />
+                    <p>Card Issuing</p>
+                  </div>
+                  {!dropDownOpen.dropdown4 ? (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-down.png"
+                      alt="dropdown"
+                    />
+                  ) : (
+                    <img
+                      className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/arrow-up.png"
+                      alt="dropdown"
+                    />
+                  )}
                 </div>
                 {dropDownOpen.dropdown4 && (
-                  <ul className=" absolute top-[40.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[200px] lg:ml-[19px]">
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Virtual USD Card
+                  <ul className=" mt-[px] rounded-[2.5px]  bg-[#f2faff19] w-[100px] md:top-[42%] md:w-[114px] lg:rounded-[6px] lg:top-[41.5%] lg:w-[220px]">
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Virtual USD Card</div>
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Virtual NGN Card
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Virtual NGN Card</div>
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Physical USD Card
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Physical USD Card</div>
                     </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Physical NGN Card
+                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                      <img
+                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                        src="./Images/dashboardImages/sideArrow.png"
+                        alt="/"
+                      />
+                      <div>Physical NGN Card</div>
                     </li>
                   </ul>
                 )}
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/digital.png"
-                  alt="icon"
-                />
-                <p>Digital Services</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/vtu.png"
-                  alt="icon"
-                />
-                <p>VTU Development</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/businessdev.png"
-                  alt="icon"
-                />
-                <p>Business Development</p>
-              </div>
-            </div>
-          </div>
-
-          {/* =======FEATURES======== */}
-          <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">FEATURES</p>
-
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/pricing.png"
-                  alt="icon"
-                />
-                <p>Pricing</p>
-              </div>
-              <div
-                onClick={() => dropHandler("dropdown5")}
-                className="flex justify-between"
-              >
-                <div className="flex gap-[3.4px] items-center cursor-pointer">
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/upgrade.png"
+                    src="./Images/dashboardImages/digitalServices.png"
                     alt="icon"
                   />
-                  <p>Upgrade</p>
+                  <p>Digital Services</p>
                 </div>
-                {dropDownOpen.dropdown5 && (
-                  <ul className=" absolute top-[57.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[58%] md:w-[114px] lg:rounded-[6px] lg:top-[57.5%] lg:w-[200px] lg:ml-[19px]">
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      Become An Agent
-                    </li>
-                  </ul>
-                )}
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              <div
-                onClick={() => dropHandler("dropdown6")}
-                className="flex justify-between"
-              >
-                <div className="flex gap-[3.4px] items-center cursor-pointer">
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/referrals.png"
+                    src="./Images/dashboardImages/vtuDevelopment.png"
                     alt="icon"
                   />
-                  <p>Referrals</p>
+                  <p>VTU Development</p>
                 </div>
-                {dropDownOpen.dropdown6 && (
-                  <ul className=" absolute top-[60.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[60.5%] md:w-[114px] lg:rounded-[6px] lg:top-[60.5%] lg:w-[200px] lg:ml-[19px]">
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      My Referrals
-                    </li>
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
-                      My Point Balance
-                    </li>
-                  </ul>
-                )}
-                <img
-                  className="h-[8.3px] w-[8.3px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/arrow-downlarge.png"
-                  alt="dropdown"
-                />
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/myprofile.png"
-                  alt="icon"
-                />
-                <p>My Profile</p>
+                <div className="flex gap-[3.4px] cursor-pointer items-center lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/businessdev.png"
+                    alt="icon"
+                  />
+                  <p>Business Development</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* ==========Developers============== */}
-          <div>
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">
-              DEVELOPERS
-            </p>
+            {/* =======FEATURES======== */}
+            <div>
+              <p
+                className={`${styles.sidebartxt} text-[7px] md:text-[7px] lg:text-[14px] font-extrabold`}
+              >
+                FEATURES
+              </p>
 
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/api.png"
-                  alt="icon"
-                />
-                <p>API documentation</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/generatekey.png"
-                  alt="icon"
-                />
-                <p>Generate API key</p>
-              </div>
-            </div>
-          </div>
-
-          {/* ========Supports======= */}
-          <div className="mb-[35%]">
-            <p className="text-[4px] md:text-[7px] lg:text-[12px]">SUPPORTS</p>
-
-            <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/contact-support.png"
-                  alt="icon"
-                />
-                <p>Contact Support</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/livechat.png"
-                  alt="icon"
-                />
-                <p>Live Chat</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/sendamail.png"
-                  alt="icon"
-                />
-                <p>Send a Mail</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/whatsapp.png"
-                  alt="icon"
-                />
-                <p>Whatsapp</p>
-              </div>
-              <div className="flex gap-[3.4px] cursor-pointer">
-                <img
-                  className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                  src="./Images/dashboardImages/phonecall.png"
-                  alt="icon"
-                />
-                <p>Phone Call</p>
+              <div
+                className={`${styles.sidebartxt} flex flex-col gap-[10px] text-[7px] font-semibold ml-[%] my-[7%] md:text-[8px] lg:text-[14px] lg:gap-[15px]`}
+              >
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/productPricing.png"
+                    alt="icon"
+                  />
+                  <p>Product Pricing</p>
+                </div>
+                <div
+                  onClick={() => dropHandler("dropdown5")}
+                  className="flex justify-between"
+                >
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/accountUpgrade.png"
+                      alt="icon"
+                    />
+                    <p>Account Upgrade</p>
+                  </div>
+                </div>
+                <div
+                  onClick={() => dropHandler("dropdown6")}
+                  className="flex justify-between"
+                >
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/referrals.png"
+                      alt="icon"
+                    />
+                    <p>My Referrals</p>
+                  </div>
+                </div>
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/profileSettings.png"
+                    alt="icon"
+                  />
+                  <p>Profile Settings</p>
+                </div>
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/developersApi.png"
+                    alt="icon"
+                  />
+                  <p>Develop's API </p>
+                </div>
+                <div className="flex gap-[3.4px] cursor-pointer lg:gap-[11px]">
+                  <img
+                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                    src="./Images/dashboardImages/contactSupport.png"
+                    alt="icon"
+                  />
+                  <p>Contact Support</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* ===========Logout========= */}
-      <Link to="/Login">
-        <div className="ml-[5%] flex gap-[4%] border-t-[#0003] border-t-[0.35px] border-t-solid md:border-t-[1.5px] py-[10%] lg:text-[14px]">
-          <img
-            className="w-[8px] h-[8px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-            src="/Images/dashboardImages/logout.png"
-            alt="logout"
-          />
-          <p className="cursor-pointer text-[5px] md:text-[7px] lg:text-[14px]">
-            Logout
-          </p>
-        </div>
-      </Link>
+
+      <div
+        className={`${styles.logout} pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
+      >
+        <img
+          className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+          src="/Images/dashboardImages/logout.png"
+          alt="logout"
+        />
+        <p
+          className={`${styles.logouttxt} cursor-pointer text-[7px] md:text-[7px] lg:text-[14px]`}
+        >
+          <Link to="/Login">Logout</Link>
+        </p>
+      </div>
     </div>
   );
 };

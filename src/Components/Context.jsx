@@ -1,13 +1,15 @@
 import React, { createContext, useState } from "react";
 import Joi from "joi";
+import axios from "axios";
+// import { BASE_URL } from "../config";
 
 export const ContextProvider = createContext();
 
 export const Context = ({ children }) => {
   // Select username or email starts here
   const [hideNavbar, setHideNavbar] = useState(false);
-  const [resetEmail, setResetEmail] = useState('');
-  const [resetNumber, setResetNumber] = useState('');
+  const [resetEmail, setResetEmail] = useState("");
+  const [resetNumber, setResetNumber] = useState("");
   // Select username or email ends here
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
@@ -233,6 +235,7 @@ export const Context = ({ children }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+
     const {
       country,
       fullName,
@@ -243,6 +246,8 @@ export const Context = ({ children }) => {
       confirmPassword,
       checkbox,
     } = state;
+
+
 
     const { error } = schema.validate({
       fullName,
@@ -264,7 +269,6 @@ export const Context = ({ children }) => {
         }, {})
       );
     } else {
-      console.log("Form submitted successfully");
       setVerification(true);
       setState({
         country: "",
@@ -276,6 +280,32 @@ export const Context = ({ children }) => {
         password: "",
         confirmPassword: "",
       });
+
+      const data = {
+        fullname : fullName,
+        username : userName,
+        phone_number : phoneNumber,
+        // iv_code : IVCode,
+        email : email,
+        password : password,
+        country : country,
+      }
+
+      const config = {
+        headers: { "Content-Type": "Application/json" },
+      };
+
+      const url = "https://aremxyplug.onrender.com/api/v1/users/signup";
+
+      axios
+        .post(url, data, config)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+
       setErrors({});
     }
   };
@@ -327,6 +357,16 @@ export const Context = ({ children }) => {
 
   // =============Start Dashboard=============
   const [toggleSideBar, setToggleSideBar] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isValue, SetIsValue] = useState(false);
+
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const volumeValueToggle = () => {
+    SetIsValue(!isValue);
+  }
 
   const hold = {
     firstDrop,
@@ -443,6 +483,10 @@ export const Context = ({ children }) => {
     // =========Dashboard=========
     toggleSideBar,
     setToggleSideBar,
+    isDarkMode,
+    handleToggle,
+    volumeValueToggle,
+    isValue
   };
 
   return (
