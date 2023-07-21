@@ -88,14 +88,14 @@ export const SideBar = () => {
             </p>
 
             <div className="flex flex-col gap-[10px] text-[4.8px] font-semibold ml-[4%] my-[4%] md:text-[8px] lg:text-[14px] lg:gap-[15px]">
-              <div className="flex gap-[3.4px] items-center cursor-pointer">
+              <Link to={`/wallet`} className="flex gap-[3.4px] items-center cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:h-[24px] lg:w-[24px]"
                   src="./Images/dashboardImages/wallet.png"
                   alt="icon"
                 />
                 <p>Wallet</p>
-              </div>
+              </Link>
               <div className="flex gap-[3.4px] items-center cursor-pointer">
                 <img
                   className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -220,9 +220,9 @@ export const SideBar = () => {
                 </div>
                 {dropDownOpen.dropdown3 && (
                   <ul className=" absolute top-[37.5%]  ml-[12px] mt-[px] rounded-[2.5px]  bg-[#ffffff] w-[74px] md:top-[39%] md:w-[114px] lg:rounded-[6px] lg:top-[38.5%] lg:w-[200px] lg:ml-[19px]">
-                    <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
+                    <Link to={`/wallet`} className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                       Wallets
-                    </li>
+                    </Link>
                     <li className="hover:underline text-[#000] pt-1 pb-1 pl-1 text-[5px] font-medium border-b-[0.22px] border-[#0003] md:border-b-[0.335px] md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[6%] lg:border-b-[0.6px] lg:text-[14px] ">
                       Virtual Accounts
                     </li>

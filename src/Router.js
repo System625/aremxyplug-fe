@@ -31,6 +31,7 @@ import { VerifyViaSms } from "./Components/VerificationCode/VerifyViaSms/VerifyV
 import NewPassword from "./Components/Screens/CustomersPages/Password/NewPassword";
 import { MainDashboard } from "./Components/Dashboard/Layout/MainDashboard";
 import Wallet from "./Components/Wallet/Wallet";
+import FiatWallet from "./Components/Wallet/FiatWallet";
 
 export const Router = () => {
   return (
@@ -71,6 +72,7 @@ export const Router = () => {
         <Route path="/smsRoute" element={<VerifyViaSms />} />
         <Route path="/dashboard" element={<MainDashboard/>} />
         <Route path="/wallet" element={<Wallet/>} />
+        <Route path="/fiat-wallet" element={<FiatWallet/>} />
       </Routes>
     </div>
   );
