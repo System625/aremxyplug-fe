@@ -31,9 +31,10 @@ export default DIGITAL_SERVICES_BG
 export function VTU_PAY({props,color}) {
   return (
     <svg
-      width={380}
-      height={319}
-      viewBox="0 0 380 319"
+    // className="absolute w-[100%]" viewBox="0 0 0 319"
+       width={380}
+       height={319}
+       viewBox="0 0 380 319"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -45,6 +46,31 @@ export function VTU_PAY({props,color}) {
     </svg>
   )
 }
+
+
+
+
+export function EMAIL_MARKETING_BG({props,width,height}) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 771 533"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+     
+      <path
+        opacity={0.18}
+        d="M131.301 61c-24.34 5.16-49.64 10.76-69.18 26.17-16.5 13-42.21 37-50 56.5-33 82.37 4.31 182.6 76.73 233.86 34.06 24.11 76.51 35.78 107.12 64.16 19.36 17.95 32.92 41.71 53.52 58.21 30.1 24.09 70.74 29.42 109.2 32 26.72 1.81 54.48 2.59 79.27-7.57 17.92-7.34 33.1-19.93 48-32.34l98.71-82.43c15.86-13.23 30.69-34.3 51.34-34.16 185.86 1.33 198.39-217.4-86.86-314.28-25.14-8.54-42.38-32.28-66-44.45-48.79-25.15-104.94-17-154.15.4-62.48 22.15-132.86 30.14-197.7 43.93z"
+        fill="#68E1FD"
+      />
+      
+    </svg>
+  )
+}
+
 
 
 

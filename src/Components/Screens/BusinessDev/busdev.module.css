@@ -1,0 +1,58 @@
+.img{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+    background-image: url("../../../../public/Images/businessimages/dot1.png");
+    background-position: center;
+    /* position: relative; */
+    /* background-size: "contain"; */
+    width: "312px";
+    height: "250px";
+}
+.img2{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+    background-image: url("../../../../public/Images/businessimages/dot1.png");
+    background-position: center;
+    /* position: relative; */
+    /* background-size: "contain"; */
+    width: "312px";
+    height: "250px";
+}
+
+.special{
+    background-image: url("../../../../public/Images/businessimages/dottedBG.png");
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px){
+    .img2{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: justify;
+        background-image: url("../../../../public/Images/businessimages/dot1.png");
+        background-position: center;
+        /* position: relative; */
+        /* background-size: "contain"; */
+        width: "312px";
+        height: "250px";
+    }
+}
+
+/* flex flex-col gap-[20px] text-justify */
+@media (min-width: 1024px){
+    .img{
+        background-image: url("../../../../public/Images/businessimages/dot2.png");
+        background-position: center;
+        background-size: "cover";
+        width: "350px";
+        height: "250px";
+    }
+}
