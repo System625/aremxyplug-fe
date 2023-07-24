@@ -1,0 +1,22 @@
+.faq-item {
+    padding: 0;
+}
+.faq-item .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.faq-item .faq-question h2 {
+    margin-bottom: 0;
+}
+.faq-answer {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.2s ease;
+    white-space: pre-wrap;
+}
+.faq-answer.open {
+    padding-top: 4px;
+    height: auto;
+}
