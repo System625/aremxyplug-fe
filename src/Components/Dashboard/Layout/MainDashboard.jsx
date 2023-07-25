@@ -21,6 +21,7 @@ export const MainDashboard = () => {
   const [visible, setVisibility] = useState(true);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
   const [blur, setBlur] = useState(false);
+  const [blurTwo, setBlurTwo] = useState(false);
   const textRef = useRef(null);
 
   const handleCopyClick = () => {
@@ -130,7 +131,11 @@ export const MainDashboard = () => {
               >
                 View Wallets
               </button>
-              <p className={`${toggleSideBar ? "lg:text-[18px]" : "lg:text-[23px]"} ${styles.walletText}`}>
+              <p
+                className={`${
+                  toggleSideBar ? "lg:text-[18px]" : "lg:text-[23px]"
+                } ${styles.walletText}`}
+              >
                 Available Balance
               </p>
               {blur && (
@@ -186,35 +191,35 @@ export const MainDashboard = () => {
                 </div>
               ) : (
                 <div
-                className={`${toggleSideBar ? "lg:pt-[7%]" : ""} ${
-                  styles.viewBalance
-                }`}
-              >
-                {visible ? (
-                  <span
-                    className={` ${
-                      toggleSideBar ? "lg:text-[19px]" : "lg:text-[37px]"
-                    } text-[19px] leading-normal `}
-                  >
-                    5000.00
-                  </span>
-                ) : (
-                  <span className="text-[19px] leading-normal lg:text-[37px]">
-                    **********
-                  </span>
-                )}
-                <div onClick={visibilityHandler} className=" text-[#92ABFE]">
+                  className={`${toggleSideBar ? "lg:pt-[7%]" : ""} ${
+                    styles.viewBalance
+                  }`}
+                >
                   {visible ? (
-                    <div className={`lg:text-[40px] ${styles.eye}`}>
-                      <AiFillEye />
-                    </div>
+                    <span
+                      className={` ${
+                        toggleSideBar ? "lg:text-[19px]" : "lg:text-[37px]"
+                      } text-[19px] leading-normal `}
+                    >
+                      5000.00
+                    </span>
                   ) : (
-                    <div className={`lg:text-[40px] ${styles.eye}`}>
-                      <AiFillEyeInvisible />
-                    </div>
+                    <span className="text-[19px] leading-normal lg:text-[37px]">
+                      **********
+                    </span>
                   )}
+                  <div onClick={visibilityHandler} className=" text-[#92ABFE]">
+                    {visible ? (
+                      <div className={`lg:text-[40px] ${styles.eye}`}>
+                        <AiFillEye />
+                      </div>
+                    ) : (
+                      <div className={`lg:text-[40px] ${styles.eye}`}>
+                        <AiFillEyeInvisible />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
               )}
               {/* ==================== */}
               <div
@@ -229,8 +234,8 @@ export const MainDashboard = () => {
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
-                  } bg-[#92ABFE2E] cursor w-[17%] md:w-[10%] flex py-[3.92px] justify-center items-center text-[7px] md:text-[10px] font-semibold leading-normal rounded-[10px] lg:text-[13px] lg:w-[16%] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f] ${
-                    activeButtons[0] ? "bg-[#04177f] " : "bg-[#92ABFE2E]"
+                  } bg-[#92ABFE2E] cursor-pointer w-[17%] md:w-[10%] flex py-[3.92px] justify-center items-center text-[7px] md:text-[10px] font-semibold leading-normal rounded-[10px] lg:text-[13px] lg:w-[16%] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f] ${
+                    activeButtons[0] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
                   } `}
                 >
                   Flat
@@ -243,7 +248,7 @@ export const MainDashboard = () => {
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
-                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
+                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor-pointer w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px]  hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
                     activeButtons[1] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
                   } `}
                 >
@@ -257,8 +262,8 @@ export const MainDashboard = () => {
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
-                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
-                    activeButtons[2] ? "bg-[#04177f]" : "bg-[#92ABFE2E]"
+                  } md:text-[10px] md:w-[10%] bg-[#92ABFE2E] cursor-pointer w-[17%] flex py-[3.92px] justify-center items-center text-[7px] font-semibold leading-normal rounded-[10px] lg:w-[16%] lg:text-[13px] lg:py-[7.47px] lg:rounded-[19px] hover:bg-[#04177f] hover:text-white active:bg-[#04177f]${
+                    activeButtons[2] ? " bg-[#04177f]" : "bg-[#92ABFE2E]"
                   } `}
                 >
                   Points
@@ -301,21 +306,31 @@ export const MainDashboard = () => {
                 </p>
               </div>
 
-              <div className={`${toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"} mt-[5%] flex flex-col gap-[10px] `}>
+              <div
+                className={`${
+                  toggleSideBar ? "lg:gap-[20px]" : "lg:gap-[30px]"
+                } mt-[5%] flex flex-col gap-[10px] `}
+              >
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px] lg:mt-[1%]" : ""} flex text-[10px] gap-[90px] md:gap-[110px] md:font-extrabold md:text-[15px]`}
+                  className={`${styles.virtualaccounttxt} ${
+                    toggleSideBar ? "lg:text-[10px] lg:mt-[1%]" : ""
+                  } flex text-[10px] gap-[90px] md:gap-[110px] md:font-extrabold md:text-[15px]`}
                 >
                   <div>Bank Name</div>
                   <div>SBI</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[75px] md:gap-[80px] md:text-[15px] lg:font-extrabold`}
+                  className={`${styles.virtualaccounttxt} ${
+                    toggleSideBar ? "lg:text-[10px]" : ""
+                  }  flex text-[10px] gap-[75px] md:gap-[80px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Name</div>
                   <div>Habib Kamaldeen</div>
                 </div>
                 <div
-                  className={`${styles.virtualaccounttxt} ${toggleSideBar ? "lg:text-[10px]" : ""}  flex text-[10px] gap-[65px] md:gap-[60px] md:text-[15px] lg:font-extrabold`}
+                  className={`${styles.virtualaccounttxt} ${
+                    toggleSideBar ? "lg:text-[10px]" : ""
+                  }  flex text-[10px] gap-[65px] md:gap-[60px] md:text-[15px] lg:font-extrabold`}
                 >
                   <div>Account Number</div>
                   <div className="flex items-center gap-[10px]">
@@ -389,7 +404,7 @@ export const MainDashboard = () => {
           </div>
 
           <QuickFeatures />
-          <WalletInOutFlows/>
+          <WalletInOutFlows />
         </div>
       </div>
     </div>
