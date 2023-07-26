@@ -106,7 +106,7 @@ const NewPassword = () => {
 
 
                 {/* tab and large screen view start here*/}
-                <div className="hidden md:grid grid-cols-1 md:h-[100vh] lg:h-[150vh] relative">
+                <div className="hidden md:grid grid-cols-1 md:h-[150vh] lg:h-[150vh] relative">
                     <div className="bg-primary"></div>
                     <div className="bg-[#ffff]"></div>
                     <div className="absolute left-0 top-0 right-0 bottom-0 grid grid-cols-2 px-[70px] items-center z-30">

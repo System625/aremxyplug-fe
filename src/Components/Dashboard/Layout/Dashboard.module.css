@@ -16,22 +16,6 @@
 }
 
 
-/* {blurTwo && (
-  <div
-    className={` ${
-      toggleSideBar
-        ? ""
-        : "backdrop-blur-[4.5px] text-[#04177f] text-[12px] h-[14%] w-[85%] font-extrabold flex justify-center pt-[7%]"
-    } `}
-  >
-    Coming Soon...
-  </div>
-)} */
-
-/* onClick={() => {
-  setBlurTwo(true);
-}} */
-
 .balance {
   margin-top: 5%;
   display: flex;
@@ -57,7 +41,7 @@
   float: right;
   gap: 7.84px;
   border-radius: 10.193px;
-  background: #04177f;
+  /* background: #04177f; */
   color: #fff;
   font-size: 6.933px;
   font-weight: 600;
@@ -79,12 +63,12 @@ select {
   background: var(--boxes, rgba(146, 171, 254, 0.18));
   height: 23px;
   font-size: 9.933px;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   width: 50px;
   outline: none;
   font-weight: bolder;
+
 }
 
 .currency {
@@ -165,7 +149,7 @@ select {
     float: right;
     gap: 7.84px;
     border-radius: 10.193px;
-    background: #04177f;
+    /* background: #04177f; */
     color: #fff;
     font-size: 10.33px;
     font-weight: 600;
@@ -245,9 +229,9 @@ select {
     font-size: 20px;
   }
 
-  .walletText {
+  /* .walletText { */
     /* font-size: 25.5px; */
-  }
+  /* } */
 
   .dashboard {
     width: 209px;
@@ -303,9 +287,9 @@ select {
     border-radius: 15px;
   }
 
-  .ttwc {
+  /* .ttwc { */
     /* gap: 10%; */
-  }
+  /* } */
 
   .button {
     gap: 10px;
@@ -360,9 +344,9 @@ select {
     font-size: 10px;
   }
 
-  .walletText {
+  /* .walletText { */
     /* font-size: 16px; */
-  }
+  /* } */
 
   .viewBalance {
     display: flex;
@@ -448,7 +432,7 @@ select {
     padding: 10.84px 15px;
     float: right;
     border-radius: 19.193px;
-    background: #04177f;
+    /* background: #04177f; */
     color: #fff;
     font-size: 13px;
     font-weight: 600;
@@ -507,9 +491,9 @@ select {
     gap: 50px;
   }
 
-  .fcp{
+  /* .fcp{ */
     /* margin-top: 10%; */
-  }
+  /* } */
 
   .GVA {
     font-size: 20px;
