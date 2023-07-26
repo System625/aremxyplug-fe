@@ -15,6 +15,7 @@
   backdrop-filter: blur(5.589743614196777px);
 }
 
+
 .balance {
   margin-top: 5%;
   display: flex;
@@ -40,7 +41,7 @@
   float: right;
   gap: 7.84px;
   border-radius: 10.193px;
-  background: #04177f;
+  /* background: #04177f; */
   color: #fff;
   font-size: 6.933px;
   font-weight: 600;
@@ -62,12 +63,12 @@ select {
   background: var(--boxes, rgba(146, 171, 254, 0.18));
   height: 23px;
   font-size: 9.933px;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   width: 50px;
   outline: none;
   font-weight: bolder;
+
 }
 
 .currency {
@@ -148,7 +149,7 @@ select {
     float: right;
     gap: 7.84px;
     border-radius: 10.193px;
-    background: #04177f;
+    /* background: #04177f; */
     color: #fff;
     font-size: 10.33px;
     font-weight: 600;
@@ -228,9 +229,9 @@ select {
     font-size: 20px;
   }
 
-  .walletText {
+  /* .walletText { */
     /* font-size: 25.5px; */
-  }
+  /* } */
 
   .dashboard {
     width: 209px;
@@ -286,9 +287,9 @@ select {
     border-radius: 15px;
   }
 
-  .ttwc {
+  /* .ttwc { */
     /* gap: 10%; */
-  }
+  /* } */
 
   .button {
     gap: 10px;
@@ -343,9 +344,9 @@ select {
     font-size: 10px;
   }
 
-  .walletText {
+  /* .walletText { */
     /* font-size: 16px; */
-  }
+  /* } */
 
   .viewBalance {
     display: flex;
@@ -380,7 +381,7 @@ select {
 /* =================== DESKTOP VIEW================ */
 @media (min-width: 1024px) {
   .dashboard {
-    width: 230px;
+    width: 220px;
     gap: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -431,7 +432,7 @@ select {
     padding: 10.84px 15px;
     float: right;
     border-radius: 19.193px;
-    background: #04177f;
+    /* background: #04177f; */
     color: #fff;
     font-size: 13px;
     font-weight: 600;
@@ -487,12 +488,12 @@ select {
   }
 
   .navSide {
-    gap: 70px;
+    gap: 50px;
   }
 
-  .fcp{
+  /* .fcp{ */
     /* margin-top: 10%; */
-  }
+  /* } */
 
   .GVA {
     font-size: 20px;

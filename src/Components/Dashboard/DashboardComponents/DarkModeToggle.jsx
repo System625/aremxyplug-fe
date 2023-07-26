@@ -1,14 +1,27 @@
 import React from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { ContextProvider } from "../../Context";
 
 export default function DarkModeToggle() {
   const { isDarkMode, handleToggle } = useContext(ContextProvider);
 
+  useEffect(()=>{
+    const storeDarkMode = localStorage.getItem("darkModeEnabled") === "true";
+    if (storeDarkMode !== isDarkMode){
+handleToggle()
+    }
+  }, [handleToggle, isDarkMode]);
+
+  const toggleDarkMode = () => {
+    handleToggle();
+    localStorage.setItem('darkModeEnabled', (!isDarkMode).toString());
+  };
+
   return (
     <div>
       <div
-        onClick={handleToggle}
+        onClick={toggleDarkMode}
         className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
           isDarkMode ? "bg-[#b1b0b0]" : "bg-[#0003]"
         }`}
