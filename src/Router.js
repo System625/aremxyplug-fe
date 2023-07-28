@@ -32,6 +32,7 @@ import NewPassword from "./Components/Screens/CustomersPages/Password/NewPasswor
 import { MainDashboard } from "./Components/Dashboard/Layout/MainDashboard";
 import Wallet from "./Components/Wallet/Wallet";
 import FiatWallet from "./Components/Wallet/FiatWallet";
+import NewWallet from "./Components/Wallet/NewWallet";
 
 export const Router = () => {
   return (
@@ -73,6 +74,7 @@ export const Router = () => {
         <Route path="/dashboard" element={<MainDashboard/>} />
         <Route path="/wallet" element={<Wallet/>} />
         <Route path="/fiat-wallet" element={<FiatWallet/>} />
+        <Route path="/new-wallet" element={<NewWallet/>} />
       </Routes>
     </div>
   );
