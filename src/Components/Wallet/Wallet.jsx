@@ -35,14 +35,14 @@ const Wallet = () => {
 
   return (
     <DashBoardLayout>
-        <div className="px-[6.67%] pb-[5%]">
-          <div className="w-full h-[65.33px] md:h-[112.29px] lg:h-[196px] mt-8 rounded-[7px] bg-[#61CCFF] flex px-[15px]">
-            <div className='py-[15px] grow'>
-              <h2 className='text-[8px] md:text-[13.75px] font-bold mb-3 lg:text-[24px]'>WALLETS OVERVIEW.</h2>
-              <h2 className='text-[6.6px] md:text-[11.46px] lg:text-[20px]'>Please select wallet type from the available options below.</h2>
+        <div className="px-[6.67%] pb-[5%] md:px-[8%]">
+          <div className="w-full h-[65.33px] md:h-[112.29px] lg:h-[196px] mt-8 rounded-[7px] bg-[#61CCFF] flex px-[16px] lg:px-[50px] justify-between">
+            <div className='py-[13px] lg:py-[40px]'>
+              <h2 className='text-[8px] md:text-[13.75px] font-bold mb-3 lg:text-[24px] lg:mb-4'>WALLETS OVERVIEW.</h2>
+              <h2 className='text-[6.6px] md:text-[11.46px] lg:text-[20px] lg:leading-[26px] mb-3'>Please select wallet type from the available options below.</h2>
             </div>
-            <div className='shrink h-full'>
-              <img src='./Images/wallet/walletBanner.png' alt="" className='w-full h-full'/>
+            <div className='h-full lg:w-[254.8px]'>
+              <img src='./Images/wallet/walletBanner.png' alt="" className='h-full'/>
             </div>
           </div>
           <div className="w-full h-[102.28px] lg:h-[186px] mt-4 flex flex-col justify-between md:mt-6 md:h-[106.5px]">
