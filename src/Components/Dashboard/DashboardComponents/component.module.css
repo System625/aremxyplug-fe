@@ -58,6 +58,9 @@
   border-radius: 1.97px;
 }
 
+.totalTransactions{
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+}
 
 
 /* ===================Tablet view ================ */
@@ -90,6 +93,12 @@
 
   .chartBtn{
     padding: 6px 7.333px;
+  }
+
+  .totalTransactions{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.35);
+    /* top: 122.5%; */
+    /* font-size: 16px; */
   }
 }
 
@@ -124,6 +133,17 @@
     font-size: 16.145px;
     padding: 11.386px 25.361px;
     border-radius: 7px;
+  }
+
+  .totalTransactions{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.35);
+    /* top: 116.5%; */
+    /* font-size: 16px; */
+  }
+
+  .totalTransactions li{
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 }
 
@@ -181,13 +201,10 @@
     padding: 19.873px 52.994px;
   }
 
-  /* .chartbuttons{ */
-    /* gap:50px; */
-  /* } */
-
   .chartBtn{
     /* font-size: 21px; */
     padding: 2px 13.259px;
     border-radius: 6.629px;
   }
+
 }

@@ -22,7 +22,7 @@ export const DashBoardLayout = ({children}) => {
 
   return (
     <div>
-       {toggleSideBar && (<div className='absolute top-0 left-0'><SideBar/></div>)}
+       {toggleSideBar && (<div className='absolute top-0 left-0 z-50'><SideBar/></div>)}
        <TopBar/>
        {children}
     </div>

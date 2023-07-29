@@ -253,7 +253,7 @@ export const Home = () => {
             ensure that our services take our customers to the pinnacle of their
             aspirations in order to be the best service provider.
           </p>
-          <Link to="/about-us">
+          <Link to="/About-us">
             <div className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]">
               Learn more
             </div>

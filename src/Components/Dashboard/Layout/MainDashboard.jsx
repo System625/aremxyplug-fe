@@ -22,8 +22,10 @@ export const MainDashboard = () => {
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
   const [blur, setBlur] = useState(false);
   const [blurTwo, setBlurTwo] = useState(false);
+  const [blurThree, setBlurThree] = useState(false);
   const textRef = useRef(null);
   const [selected, setSelected] = useState("");
+  const [selected2, setSelected2] = useState("");
 
   const handleCopyClick = () => {
     const text = textRef.current.innerText;
@@ -60,7 +62,26 @@ export const MainDashboard = () => {
   const handleSelectedOption = (event) => {
     const clickedoption = event.target.value;
     setSelected(clickedoption);
-    setBlurTwo(clickedoption === 'USD' || clickedoption === "GBP"  || clickedoption ===  "AUD" || clickedoption === "KES" || clickedoption === "EUR");
+    setBlurTwo(
+      clickedoption === "USD" ||
+        clickedoption === "GBP" ||
+        clickedoption === "AUD" ||
+        clickedoption === "KES" ||
+        clickedoption === "EUR"
+    );
+
+    return;
+  };
+  const handleSelectedOption2 = (event) => {
+    const clickedoption = event.target.value;
+    setSelected2(clickedoption);
+    setBlurThree(
+      clickedoption === "USD" ||
+        clickedoption === "GBP" ||
+        clickedoption === "AUD" ||
+        clickedoption === "KES" ||
+        clickedoption === "EUR"
+    );
     return;
   };
 
@@ -135,7 +156,9 @@ export const MainDashboard = () => {
               } ${styles.balance1}`}
             >
               <button
-                className={`${isDarkMode ? "border bg-black" : "bg-[#04177f]"} ${styles.viewWallet}`}
+                className={`${
+                  isDarkMode ? "border bg-black" : "bg-[#04177f]"
+                } ${styles.viewWallet}`}
               >
                 View Wallets
               </button>
@@ -148,13 +171,28 @@ export const MainDashboard = () => {
               </p>
               {blur && (
                 <div
-                  className={`${isDarkMode ? " text-[#fff]" : "text-[#04177f]"} ${
+                  className={`${
+                    isDarkMode ? " text-[#fff]" : "text-[#04177f]"
+                  } ${
                     toggleSideBar
                       ? "backdrop-blur-[4.5px] md:absolute md:w-[80%] md:h-[65px] md:ml-[3%] md:text-[19px] md:text-center lg:absolute lg:mt-2 lg:ml-[2%] lg:w-[28%] lg:text-[20px] lg:h-[89px] text-[#04177f]"
                       : "backdrop-blur-[4.5px] absolute w-[70%] h-[70px] text-[13px] font-bold text-center ml-[6%] pt-[3%] md:text-[20px] md:mt-[%] md:pb-[8%] md:pt-[0%] md:h-[40px] md:text-extrabold lg:text-[24px] lg:ml-[4%] lg:w-[33%] lg:pt-[1%] lg:h-[90px]"
                   } `}
                 >
                   This feature is currently not available...
+                </div>
+              )}
+              {blurThree && (
+                <div
+                  className={`${
+                    isDarkMode ? " text-[#fff]" : "text-[#04177f]"
+                  } ${
+                    toggleSideBar
+                      ? "backdrop-blur-[4.5px] md:absolute md:w-[80%] md:h-[65px] md:ml-[3%] md:text-[19px] md:text-center lg:absolute lg:mt-12 lg:font-extrabold lg:ml-[2%] lg:w-[14%] lg:text-[22px] lg:h-[50px] lg:left-[33%] text-[#04177f]"
+                      : "backdrop-blur-[4.5px] absolute w-[38%] right-[23%] h-[70px] text-[13px] font-bold text-center ml-[6%] pt-[5%] md:text-[20px] md:mt-[%] md:pb-[8%] md:pt-[0%] md:h-[40px] md:text-extrabold lg:text-[24px] lg:ml-[%] lg:w-[21%] lg:pb-0 lg:h-[60px] lg:flex lg:justify-center lg:items-center lg:mt-[2%] lg:right-[60%]"
+                  } `}
+                >
+                  Coming Soon...
                 </div>
               )}
               {/* ================= */}
@@ -164,7 +202,12 @@ export const MainDashboard = () => {
                     styles.viewBalance
                   }`}
                 >
-                  <select name="curr" id="curr">
+                  <select
+                    name="curr"
+                    id="curr"
+                    onChange={handleSelectedOption2}
+                    value={selected2}
+                  >
                     <option value="NGN">NGN</option>
                     <option value="USD">USD</option>
                     <option value="GBP">GBP</option>
@@ -239,6 +282,7 @@ export const MainDashboard = () => {
                   onClick={() => {
                     handleClick(0);
                     setBlur(false);
+                    setBlurThree();
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
@@ -246,13 +290,14 @@ export const MainDashboard = () => {
                     activeButtons[0] ? "bg-[#04177f] " : "bg-[#92ABFE2E]"
                   } `}
                 >
-                  Flat
+                  Fiat
                 </div>
-              
+
                 <div
                   onClick={() => {
                     handleClick(1);
                     setBlur(true);
+                    setBlurThree();
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
@@ -262,11 +307,12 @@ export const MainDashboard = () => {
                 >
                   Crypto
                 </div>
-             
+
                 <div
                   onClick={() => {
                     handleClick(2);
                     setBlur(false);
+                    setBlurThree();
                   }}
                   className={`${styles.fcp2} ${
                     isDarkMode ? " border" : " "
@@ -286,7 +332,9 @@ export const MainDashboard = () => {
               } ${styles.balance2}`}
             >
               <button
-                className={`${isDarkMode ? "border bg-black" : "bg-[#04177f]"} ${styles.viewWallet}`}
+                className={`${
+                  isDarkMode ? "border bg-black" : "bg-[#04177f]"
+                } ${styles.viewWallet}`}
               >
                 View Accounts
               </button>
@@ -321,7 +369,9 @@ export const MainDashboard = () => {
 
               {blurTwo && (
                 <div
-                  className={` ${isDarkMode ? " text-[#fff]" : "text-[#04177f]"} ${
+                  className={` ${
+                    isDarkMode ? " text-[#fff]" : "text-[#04177f]"
+                  } ${
                     toggleSideBar
                       ? "backdrop-blur-[5px] absolute lg:h-[25%] lg:w-[30%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[4%] lg:text-[25px] lg:text-[#04177f]"
                       : "backdrop-blur-[4.5px] absolute text-[14px] h-[13%] w-[85%] font-extrabold flex justify-center pt-[7%] md:h-[11%] md:text-[25px] md:pt-[5%] lg:w-[30%] lg:h-[30%] "
