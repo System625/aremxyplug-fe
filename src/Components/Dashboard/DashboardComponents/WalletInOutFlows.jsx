@@ -18,6 +18,7 @@ export const WalletInOutFlows = () => {
     useContext(ContextProvider);
   const [blur, setBlur] = useState(false);
   const [selected, setSelected] = useState("");
+  const [toggleTotalTransaction, setToggleTotalTransaction] = useState(false);
 
   const [activeButtons, setActiveButtons] = useState([
     false,
@@ -70,7 +71,7 @@ export const WalletInOutFlows = () => {
         fontSize: "20px",
       },
       {
-        label: "Function Values, Outflows", // Replace with your data label
+        label: "Function Values, Inflows", // Replace with your data label
         data: [0, 2, 4, 6, 8, 10], // Replace with your function's values
         backgroundColor: "#58DA8F", // Optional: Background color for the chart
         borderColor: "#58DA8F", // Optional: Border color for the chart
@@ -83,6 +84,7 @@ export const WalletInOutFlows = () => {
     scales: {
       y: {
         beginAtZero: true, // Optional: Start the Y-axis from 0
+        stacked: true,
       },
     },
   };
@@ -146,10 +148,12 @@ export const WalletInOutFlows = () => {
           </div>
           <div className="text-center">&#8358;0</div>
         </div>
+
         <div
           className={`${styles.inflowOutflow} ${
             isDarkMode ? "border " : " bg-[#92abfe81]"
           }  text-[7px]`}
+          onClick={() => setToggleTotalTransaction((prev) => !prev)}
         >
           <div className="flex gap-1 md:items-center">
             <p className={`${toggleSideBar ? "lg:text-[18px]" : ""}`}>
@@ -163,6 +167,7 @@ export const WalletInOutFlows = () => {
           </div>
           <div className="text-center">&#8358;0</div>
         </div>
+
         <div
           className={`${styles.inflowOutflow} ${
             isDarkMode ? "border " : " bg-[#FDCECE]"
@@ -182,12 +187,34 @@ export const WalletInOutFlows = () => {
         </div>
       </div>
 
+      {toggleTotalTransaction && (
+        <div
+          className={`${styles.totalTransactions} ${
+            toggleSideBar
+              ? "lg:top-[250%] lg:w-[295px] lg:right-[27.5%] lg:text-[20px]"
+              : "lg:right-[33%] lg:w-[317px] lg:top-[255%] lg:text-[20px]"
+          } bg-white text-[7px] absolute top-[114%] right-[29.5%] w-[87px] md:w-[210px] md:right-[32.5%] md:text-[16px] md:top-[119.5%]`}
+        >
+          <ul>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Total Transactions
+            </li>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Inflow Transactions
+            </li>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Outflow Transactions
+            </li>
+          </ul>
+        </div>
+      )}
+
       {blur && (
         <div
           className={` ${isDarkMode ? "" : ""} ${
             toggleSideBar
-              ? "backdrop-blur-[5px] absolute font-extrabold lg:h-[101%] lg:w-[75%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[20%] lg:text-[28px] lg:text-[#04177f]"
-              : "backdrop-blur-[4.5px] absolute text-[#04177f] text-[14px] h-[32.5%] w-[90%] font-extrabold flex justify-center pt-[23%] md:h-[42%] md:text-[34px] md:pt-[22%] lg:text-[45px] lg:w-[90%] lg:h-[121%] "
+              ? "backdrop-blur-[5px] z-50 absolute font-extrabold lg:h-[101%] lg:w-[75%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[20%] lg:text-[28px] lg:text-[#04177f]"
+              : "backdrop-blur-[5px] z-50 absolute text-[#04177f] text-[14px] h-[32.5%] w-[90%] font-extrabold flex justify-center pt-[23%] md:h-[42%] md:text-[34px] md:pt-[22%] lg:text-[45px] lg:w-[90%] lg:h-[121%] "
           } `}
         >
           This Currency Is Currently Not Available...
@@ -262,7 +289,7 @@ export const WalletInOutFlows = () => {
 
         {/* ==============Volume & Value Toggle================== */}
         <div
-          className={`text-[7px] flex gap-2 items-center mt-[7%]  md:text-[14px] lg:text-[18px]  ${
+          className={`text-[7px] flex gap-2 items-center mt-[7%]  md:text-[14px] lg:mt-[4%] lg:text-[18px]  ${
             toggleSideBar ? "lg:ml-[80%]" : "ml-[75%] lg:ml-[85%] md:ml-[82%]"
           }`}
         >
@@ -283,7 +310,7 @@ export const WalletInOutFlows = () => {
         </div>
 
         {/* ====================Inflow & Outflow indication================ */}
-        <div className="flex float-right mt-[5%] md:mt-[3%]">
+        <div className="flex float-right mt-[5%] md:mt-[3%] lg:mt-[1%]">
           <div className="flex items-center ">
             <div className="text-2xl text-[#58DA8F] md:text-5xl">
               <RxDotFilled />
@@ -306,9 +333,7 @@ export const WalletInOutFlows = () => {
       </div>
       {/* ========================Chart End========================= */}
 
-      <div className="mt-5%">
-        SPACE
-      </div>
+      <div className="mt-5%">SPACE</div>
     </div>
   );
 };
