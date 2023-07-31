@@ -359,6 +359,7 @@ export const Context = ({ children }) => {
   const [toggleSideBar, setToggleSideBar] = useState("");
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isValue, SetIsValue] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
@@ -486,7 +487,11 @@ export const Context = ({ children }) => {
     isDarkMode,
     handleToggle,
     volumeValueToggle,
-    isValue
+    isValue,
+
+
+    // Login
+    showModal2, setShowModal2
   };
 
   return (
