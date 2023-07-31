@@ -291,16 +291,16 @@ export const BusinessDev = () => {
           />
           <ul className="text-justify ml-[5%] list-disc flex flex-col gap-[15px] text-[12px] md:text-[7px] md:w-[222px] lg:text-[12px] lg:w-[330px]">
             <li>
-              Conduct thorough market research to identify opportunities, target
-              markets, and consumer trends.
+              Work closely with clients to develop customized business
+              strategies aligned with your goals and objectives.
             </li>
             <li>
-              Perform competitor analysis to gain insights into market
-              positioning and develop competitive strategies.
+              Define value propositions, competitive advantages, and
+              differentiation strategies.
             </li>
             <li>
-              Provide detailed reports and recommendations based on the research
-              findings.
+              Identify growth areas and develop strategic plans for market
+              expansion.
             </li>
           </ul>
         </div>
@@ -314,16 +314,16 @@ export const BusinessDev = () => {
           />
           <ul className="text-justify ml-[5%] list-disc flex flex-col gap-[15px] text-[12px] w-[330px] md:text-[7px] md:w-[222px] lg:text-[12px] lg:w-[330px]">
             <li>
-              Conduct thorough market research to identify opportunities, target
-              markets, and consumer trends.
+              Create comprehensive sales and marketing plans tailored to your
+              target audience.
             </li>
             <li>
-              Perform competitor analysis to gain insights into market
-              positioning and develop competitive strategies.
+              Develop branding strategies, messaging frameworks, and marketing
+              collateral.
             </li>
             <li>
-              Provide detailed reports and recommendations based on the research
-              findings.
+              Assist in lead generation, customer acquisition, and conversion
+              optimization.
             </li>
           </ul>
         </div>
@@ -337,16 +337,15 @@ export const BusinessDev = () => {
           />
           <ul className="text-justify ml-[5%] list-disc flex flex-col gap-[15px] text-[12px] md:text-[7px] md:w-[222px] lg:text-[12px] lg:w-[330px]">
             <li>
-              Conduct thorough market research to identify opportunities, target
-              markets, and consumer trends.
+              We help to identify potential strategic partnership and alliances
+              to enhance business growth.
             </li>
             <li>
-              Perform competitor analysis to gain insights into market
-              positioning and develop competitive strategies.
+              Facilitate partnership negotiations and agreements where needed.
             </li>
             <li>
-              Provide detailed reports and recommendations based on the research
-              findings.
+              Support collaboration initiatives to dive innovation and expand
+              market reach.
             </li>
           </ul>
         </div>

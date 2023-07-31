@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+.faq-answer.open {
+    @apply h-[90px] md:h-[125px] lg:h-[218.81px];
+}
+
 
