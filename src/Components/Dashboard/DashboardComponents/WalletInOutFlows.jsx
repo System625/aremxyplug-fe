@@ -60,7 +60,8 @@ export const WalletInOutFlows = () => {
       "22:00",
       "23:00",
       "24:00",
-    ], // Replace with your X-axis labels
+    ],
+  // Replace with your X-axis labels
     datasets: [
       {
         label: "Function Values, Outflows", // Replace with your data label
@@ -68,7 +69,6 @@ export const WalletInOutFlows = () => {
         backgroundColor: "#FA6B6B", // Optional: Background color for the chart
         borderColor: "#FA6B6B", // Optional: Border color for the chart
         borderWidth: 1, // Optional: Border width for the chart
-        fontSize: "20px",
       },
       {
         label: "Function Values, Inflows", // Replace with your data label
@@ -80,14 +80,21 @@ export const WalletInOutFlows = () => {
     ],
   };
 
+  // const options = {
+  //   scales: {
+  //     y: {
+  //       beginAtZero: true, // Optional: Start the Y-axis from 0
+  //       stacked: true,
+  //     },
+  //   },
+  // };
+
   const options = {
-    scales: {
-      y: {
-        beginAtZero: true, // Optional: Start the Y-axis from 0
-        stacked: true,
-      },
-    },
-  };
+    parsing : {
+      xAxisKey: "data\\.key",
+      yAxisKey: "data\\.value"
+    }
+  }
 
   const handleSelectedOption = (event) => {
     const clickedoption = event.target.value;
@@ -103,7 +110,7 @@ export const WalletInOutFlows = () => {
   };
 
   return (
-    <div className="mt-[10%] lg:mt-[5%]">
+    <div className="mt-[10%] lg:mt-[5%] mb-[10%]">
       <div className="flex items-center gap-[10px]">
         <p className={styles.InOutText}>Wallets Inflows & Outflows</p>
         <img
@@ -333,7 +340,6 @@ export const WalletInOutFlows = () => {
       </div>
       {/* ========================Chart End========================= */}
 
-      <div className="mt-5%">SPACE</div>
     </div>
   );
 };
