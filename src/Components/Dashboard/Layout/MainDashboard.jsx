@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import QuickFeatures from "../DashboardComponents/QuickFeatures";
 import { WalletInOutFlows } from "../DashboardComponents/WalletInOutFlows";
+import { RecentTransaction } from "../DashboardComponents/RecentTransaction";
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
@@ -480,6 +481,7 @@ export const MainDashboard = () => {
 
           <QuickFeatures />
           <WalletInOutFlows />
+          <RecentTransaction />
         </div>
       </div>
     </div>
