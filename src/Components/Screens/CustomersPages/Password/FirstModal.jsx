@@ -24,6 +24,7 @@ const FirstModal = () => {
   return (
     <div>
       <Modal>
+      
         <div className="md:ml-[40%] md:-mt-[20%] lg:-mb-[30%] px-[17.609px] py-[35.536px] bg-white rounded-[10.3px] md:py-[34.96px] md:px-[17.6px] lg:py-[62px] lg:px-[31px]">
            <h2 className="text-[9.16px] leading-[13.74px] lg:text-[16px] lg:leading-[24px]">Input your email to reset password</h2>
            <form>
