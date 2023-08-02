@@ -10,6 +10,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
+import CookieBanner from "./CookieBanner";
 
 const feedback = [
   <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
@@ -95,6 +96,9 @@ export const Home = () => {
 
   return (
     <>
+    <div className="fixed top-[10%] left-0 right-0 z-50">
+    <CookieBanner/>
+    </div>
       <div className={styles.hero}>
         <div className=" w-[90%] pt-[40%] mx-auto md:pt-[10%] md:w-[] lg:pt-[25%]">
           <div className="text-justify tracking-widest w-[100%] text-[#04177F] text-[20px] font-extrabold md:text-[25px] md:font-bold lg:tracking-wide lg:text-[45px] lg:font-extrabold lg:leading-[px]">
