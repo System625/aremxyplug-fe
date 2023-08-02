@@ -14,7 +14,7 @@ export const TopBar = () => {
     <div
       className={`${
         styles.topbar
-      } ${toggleSideBar ? "sticky top-0 ": "sticky top-0"} z-40 mt-[14px] flex gap-[6%] justify-center md:gap-[10%] md: lg:mt-[18px] lg:gap-[15%] ${
+      } ${toggleSideBar ? "sticky top-0 ": "sticky top-0"} z-40 mt-[14px] flex gap-[4%] justify-center md:gap-[9%] md: lg:mt-[18px] lg:gap-[15%] ${
         isDarkMode
           ? "bg-black border-b-[1px] border-b-[#fff]"
           : "bg-white md:border-b-[1px] lg:border-b-[1.5px] lg:border-b-[#0003]]"
@@ -26,7 +26,7 @@ export const TopBar = () => {
         src="./Images/dashboardImages/menularge.png"
         alt="/harmburger"
       />
-      <div className={`${styles.topbarcom} flex items-center gap-[45px] md:gap-[90px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]`}>
+      <div className={`${styles.topbarcom} flex items-center gap-[29px] md:gap-[70px] lg:gap-[152px] border-b-[0.3px] md:border-b-0 border-[#0003] pb-[2%] lg:pb-[1.2%]`}>
         <div
           className={`${
             isDarkMode ? "border border-[#fff]" : "border-[#0003]"
@@ -34,29 +34,29 @@ export const TopBar = () => {
         >
           <div className="flex justify-center items-center gap-[3px] lg:gap-[7px]">
             <img
-              className="w-[7px] h-[7px] md:h-[13.75px] md:w-[13.75] lg:h-[24px] lg:w-[24px]"
+              className="w-[7px] h-[7px] md:h-[15.75px] md:w-[15.75] lg:h-[24px] lg:w-[24px]"
               src="./Images/dashboardImages/largeprofile.png"
               alt="/"
             />
-            <p className="text-[5px] md:text-[9px] lg:text-[16px] lg:font-extrabold">
+            <p className="text-[7px] md:text-[14px] lg:text-[16px] lg:font-extrabold">
               Switch Account
             </p>
           </div>
           <img
-            className="h-[7px] w-[7px] md:w-[13.7px] md:h-[13.7px] lg:h-[22px] lg:w-[22px]"
+            className="h-[7px] w-[7px] md:w-[15.7px] md:h-[15.7px] lg:h-[22px] lg:w-[22px]"
             src="./Images/dashboardImages/arrow-downlarge.png"
             alt="/"
           />
         </div>
-        <p className="text-[5px] md:text-[9.167px] lg:text-[18px]">Dashboard</p>
+        <p className="text-[8px] md:text-[14.167px] lg:text-[18px]">Dashboard</p>
         <div className="flex justify-center items-center gap-[5px] md:gap-[10px]">
-          <div className="cursor-pointer flex text-[4px] md:text-[8.8px] lg:text-[12px] lg:font-extrabold gap-[3px] md:gap-[6px]">
+          <div className="cursor-pointer flex items-center text-[7px] md:text-[13.8px] lg:text-[12px] lg:font-extrabold gap-[3px] md:gap-[6px]">
             <p>Light</p>
             <DarkModeToggle />
             <p>Dark</p>
           </div>
           <img
-            className="cursor-pointer w-[8px] h-[8px] md:w-[16px] md:h-[16px] lg:w-[28px] lg:h-[28px]"
+            className="cursor-pointer w-[12px] h-[12px] md:w-[16px] md:h-[16px] lg:w-[28px] lg:h-[28px]"
             src="./Images/dashboardImages/notificationlarge.png"
             alt="notification"
           />

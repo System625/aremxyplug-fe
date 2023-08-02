@@ -17,11 +17,12 @@
   width: 60.333px;
   padding: 3.333px 6.667px;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   gap: 3.333px;
   border-radius: 4px;
   box-shadow: 0px 0px 3.3333332538604736px 0px rgba(0, 0, 0, 0.25);
-  font-size: 5.333px;
+  font-size: 8.333px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -67,14 +68,17 @@
     rgba(0, 0, 0, 0.25);
 }
 
+.viewTransact {
+  box-shadow: 0px 0px 6.666667461395264px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
 .viewTransactions {
   display: flex;
-  width: 100%;
   padding: 20px 0px 15px 0px;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  box-shadow: 0px 0px 6.666667461395264px 0px rgba(0, 0, 0, 0.25);
 }
 
 .noTransactions {
@@ -92,7 +96,7 @@
   box-shadow: 0px 0px 1.3319103717803955px 0px rgba(0, 0, 0, 0.25);
 }
 
-.viewText{
+.viewText {
   color: #707070;
   font-size: 10px;
   font-style: normal;
@@ -100,19 +104,28 @@
   line-height: 130%; /* 13px */
 }
 
-.contactus{
+.contactus {
   display: flex;
   padding: 2.865px 8.594px;
   justify-content: center;
   align-items: center;
   gap: 5.729px;
   border-radius: 5.156px;
-  background: var(--primary-color-main, #04177F);
-  color: #FFF;
-font-size: 8px;
-font-style: normal;
-font-weight: 500;
-line-height: 130%; /* 10.4px */
+  background: var(--primary-color-main, #04177f);
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 10.4px */
+}
+
+.calender {
+  position: absolute;
+  width: 170px;
+  height: 209px;
+  background: #fff;
+  box-shadow: 0px 0px 15.634516716003418px 0px rgba(139, 67, 255, 0.5);
+margin-top: -8%;
 }
 
 /* ===================Tablet view ================ */
@@ -160,14 +173,14 @@ line-height: 130%; /* 10.4px */
     flex-direction: column;
     align-items: center;
     gap: 15px;
-
+    padding-bottom: 10%;
   }
-  
+
   .noTransactions {
     width: 300px;
     height: 300px;
   }
-  
+
   .viewAll {
     display: flex;
     padding: 5.999px 5.998px;
@@ -177,8 +190,8 @@ line-height: 130%; /* 10.4px */
     background: #fff;
     box-shadow: 0px 0px 1.3319103717803955px 0px rgba(0, 0, 0, 0.25);
   }
-  
-  .viewText{
+
+  .viewText {
     color: #707070;
     font-family: Inter;
     font-size: 20px;
@@ -186,16 +199,21 @@ line-height: 130%; /* 10.4px */
     font-weight: 500;
     line-height: 130%; /* 13px */
   }
-  
-  .contactus{
+
+  .contactus {
     display: flex;
     padding: 2.865px 8.594px;
     justify-content: center;
     align-items: center;
     gap: 5.729px;
     border-radius: 5.156px;
-  font-size: 18px;
+    font-size: 18px;
+  }
 
+  .calender{
+    margin-top: -3.5%;
+    width: 270px;
+    height: 260px;
   }
 }
 
@@ -241,6 +259,12 @@ line-height: 130%; /* 10.4px */
   .totalTransactions li {
     padding-top: 9px;
     padding-bottom: 9px;
+  }
+
+  .calender{
+    margin-top: -3.5%;
+    width: 270px;
+    height: 260px;
   }
 }
 
@@ -308,7 +332,7 @@ line-height: 130%; /* 10.4px */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
-  .viewText{
+  .viewText {
     font-size: 14px;
   }
 
@@ -317,8 +341,16 @@ line-height: 130%; /* 10.4px */
     height: 456px;
   }
 
-  .contactus{
+  .contactus {
     font-size: 15px;
   }
-}
 
+  .calender {
+    position: absolute;
+    width: 300px;
+    height: 340px;
+    box-shadow: 0px 0px 15.634516716003418px 0px rgba(139, 67, 255, 0.5);
+  margin-top: -3.5%;
+  }
+
+}
