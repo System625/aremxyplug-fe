@@ -24,6 +24,8 @@ import NewPassword from "./Components/Screens/CustomersPages/Password/NewPasswor
 import { MainDashboard } from "./Components/Dashboard/Layout/MainDashboard";
 import Wallet from "./Components/Wallet/Wallet";
 import FiatWallet from "./Components/Wallet/FiatWallet";
+import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
+import { Solution } from "./Components/Screens/Solutions/Solution";
 import NewWallet from "./Components/Wallet/NewWallet";
 import PointBalance from "./Components/Wallet/PointBalance";
 
@@ -32,12 +34,13 @@ export const Router = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/About-us" element={<AboutUs/>} />
+        <Route path="/Solutions" element={<Solution/>} />
         <Route path="/our-services" element={<OurServices />} />
         <Route path="/VTU_DEV" element={<VTU_DEV />} />
         <Route path="/CardIssuing" element={<CardIssuing />} />
         <Route path="/our-services/payment" element={<PaymentServices />} />
         <Route path="/our-services/telecoms" element={<Telecoms />} />
-      
         <Route
           path="/social-media-marketing"
           element={<SocialMediaMarketing />}

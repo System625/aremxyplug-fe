@@ -121,7 +121,7 @@ export const NavBar = () => {
             <Link to="/pricing">Pricing</Link>
           </li>
           <li className="text-[9px] lg:text-[16px]">
-            <Link to="/solutions">Solutions</Link>
+            <Link to="/Solutions">Solutions</Link>
           </li>
           <li className="text-[9px] lg:text-[16px]">
             <Link to="/faq">FAQs</Link>

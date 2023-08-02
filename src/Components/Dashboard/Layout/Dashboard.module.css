@@ -68,7 +68,7 @@ select {
   width: 50px;
   outline: none;
   font-weight: bolder;
-
+/* z-index: 99px; */
 }
 
 .currency {

@@ -1,16 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import LoginForm from "../../../loginForm/LoginForm";
 import { ContextProvider } from "../../../Context";
+
 function Login() {
-  const {
-    hideNavbar,
-    setHideNavbar,
-    openTranspin,
-    openTranspinSuccessful,
-    openResetTranspin,
-    open2StepVerification,
-    open2StepOTP,
-  } = useContext(ContextProvider);
+  const { hideNavbar, setHideNavbar } = useContext(ContextProvider);
 
   const setNav = () => {
     setHideNavbar(true);
@@ -31,25 +24,6 @@ function Login() {
       <div className="bg-[#fff] "></div>
 
       {/* --------------------------------BLUE AND WHITE BACKGROUND ENDS HERE--------------------------- */}
-
-      {/* --------------------------------DARK OVERLAY STARTS HERE-------------------------------- */}
-      {openTranspin === true ||
-      openTranspinSuccessful === true ||
-      openResetTranspin === true ||
-      open2StepVerification === true ||
-      open2StepOTP === true ? (
-        <div
-          className="absolute top-0 bottom-0 right-0 left-0"
-          style={{
-            backgroundColor: "rgba(0,0,0,0.4)",
-            zIndex: 900,
-          }}
-        ></div>
-      ) : (
-        ""
-      )}
-
-      {/*-------------------------------- DARK OVERLAY ENDS HERE-------------------------------- */}
 
       <div className="absolute top-0 bottom-0 right-0 left-0 md:grid md:grid-cols-2 flex flex-col justify-center md:justify-[unset] md:flex-[unset] md:items-center px-[10px] md:px-[70px]">
         <div className=" md:h-[100%] md:mb-[-23%] lg:mb-[unset] flex flex-col md:justify-center items-center ">

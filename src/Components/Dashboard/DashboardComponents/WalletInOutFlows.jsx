@@ -18,6 +18,8 @@ export const WalletInOutFlows = () => {
     useContext(ContextProvider);
   const [blur, setBlur] = useState(false);
   const [selected, setSelected] = useState("");
+  // const [setToggleTotalTransaction] = useState(false);
+  const [yAxisValue, setYAxisValue] = useState("volume");
 
   const [activeButtons, setActiveButtons] = useState([
     false,
@@ -30,6 +32,26 @@ export const WalletInOutFlows = () => {
   const handleClick = (index) => {
     const updatedButtons = activeButtons.map((isActive, i) => i === index);
     setActiveButtons(updatedButtons);
+  };
+
+  // function formatYAxisLabel(value) {
+  //   return "#" + value / 1000 + "k";
+  // }
+
+  // Function to handle button click and toggle the y-axis label type
+  const handleButtonClick = () => {
+    setYAxisValue(yAxisValue === "volume" ? "value" : "volume");
+  };
+
+  // Function to transform y-axis labels from volume to value
+  const transformYAxisValue = (v) => {
+    if (yAxisValue === "value") {
+      // const values = ["&#8358;0", "&#8358;1k", "&#8358;2k", "&#8358;3k"];
+      const values = ["₦0k", "10k", "20k", "30K"];
+      return values[v];
+    } else {
+      return v;
+    }
   };
 
   const data = {
@@ -59,33 +81,57 @@ export const WalletInOutFlows = () => {
       "22:00",
       "23:00",
       "24:00",
-    ], // Replace with your X-axis labels
+    ],
+    // Replace with your X-axis labels
+
     datasets: [
       {
-        label: "Function Values, Outflows", // Replace with your data label
-        data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Replace with your function's values
-        backgroundColor: "#FA6B6B", // Optional: Background color for the chart
-        borderColor: "#FA6B6B", // Optional: Border color for the chart
-        borderWidth: 1, // Optional: Border width for the chart
-        fontSize: "20px",
+        label: "data",
+        data: [0,10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+        // border: false
+        display: false,
+        borderWidth: 0,
+        pointRadius: 0,
       },
-      {
-        label: "Function Values, Outflows", // Replace with your data label
-        data: [0, 2, 4, 6, 8, 10], // Replace with your function's values
-        backgroundColor: "#58DA8F", // Optional: Background color for the chart
-        borderColor: "#58DA8F", // Optional: Border color for the chart
-        borderWidth: 1, // Optional: Border width for the chart
-      },
+
+      //   {
+      //     label: "Function Values, Outflows", // Replace with your data label
+      //     // data: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000], // Replace with your function's values
+      //     backgroundColor: "#FA6B6B", // Optional: Background color for the chart
+      //     borderColor: "#FA6B6B", // Optional: Border color for the chart
+      //     borderWidth: 1, // Optional: Border width for the chart
+      //   },
+      //   {
+      //     label: "Function Values, Inflows", // Replace with your data label
+      //     // data: [0, 2, 4, 6, 8, 10], // Replace with your function's values
+      //     backgroundColor: "#58DA8F", // Optional: Background color for the chart
+      //     borderColor: "#58DA8F", // Optional: Border color for the chart
+      //     borderWidth: 1, // Optional: Border width for the chart
+      //   },
     ],
   };
 
   const options = {
     scales: {
       y: {
-        beginAtZero: true, // Optional: Start the Y-axis from 0
+        ticks: {
+          callback: function (v) {
+            return transformYAxisValue(v);
+          },
+        },
+        grid: {
+          display: false,
+        },
+      },
+
+      x: {
+        grid: {
+          display: false,
+        },
       },
     },
   };
+
 
   const handleSelectedOption = (event) => {
     const clickedoption = event.target.value;
@@ -101,7 +147,7 @@ export const WalletInOutFlows = () => {
   };
 
   return (
-    <div className="mt-[10%] lg:mt-[5%]">
+    <div className="mt-[10%] lg:mt-[5%] mb-[10%]">
       <div className="flex items-center gap-[10px]">
         <p className={styles.InOutText}>Wallets Inflows & Outflows</p>
         <img
@@ -146,6 +192,7 @@ export const WalletInOutFlows = () => {
           </div>
           <div className="text-center">&#8358;0</div>
         </div>
+
         <div
           className={`${styles.inflowOutflow} ${
             isDarkMode ? "border " : " bg-[#92abfe81]"
@@ -161,8 +208,9 @@ export const WalletInOutFlows = () => {
               alt="dropdown"
             />
           </div>
-          <div className="text-center">&#8358;0</div>
+          <div className="text-center">0</div>
         </div>
+
         <div
           className={`${styles.inflowOutflow} ${
             isDarkMode ? "border " : " bg-[#FDCECE]"
@@ -182,12 +230,34 @@ export const WalletInOutFlows = () => {
         </div>
       </div>
 
+      {/* {toggleTotalTransaction && (
+        <div
+          className={`${styles.totalTransactions} ${
+            toggleSideBar
+              ? "lg:top-[250%] lg:w-[295px] lg:right-[27.5%] lg:text-[20px]"
+              : "lg:right-[33%] lg:w-[317px] lg:top-[255%] lg:text-[20px]"
+          } bg-white text-[7px] absolute top-[114%] right-[29.5%] w-[87px] md:w-[210px] md:right-[32.5%] md:text-[16px] md:top-[119.5%]`}
+        >
+          <ul>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Total Transactions
+            </li>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Inflow Transactions
+            </li>
+            <li className="p-[3px] border-b-[1px] md:py-[9px] md:pl-[20px]">
+              Outflow Transactions
+            </li>
+          </ul>
+        </div>
+      )} */}
+
       {blur && (
         <div
           className={` ${isDarkMode ? "" : ""} ${
             toggleSideBar
-              ? "backdrop-blur-[5px] absolute font-extrabold lg:h-[101%] lg:w-[75%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[20%] lg:text-[28px] lg:text-[#04177f]"
-              : "backdrop-blur-[4.5px] absolute text-[#04177f] text-[14px] h-[32.5%] w-[90%] font-extrabold flex justify-center pt-[23%] md:h-[42%] md:text-[34px] md:pt-[22%] lg:text-[45px] lg:w-[90%] lg:h-[121%] "
+              ? "backdrop-blur-[5px] z-50 absolute font-extrabold lg:h-[101%] lg:w-[75%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[20%] lg:text-[28px] lg:text-[#04177f]"
+              : "backdrop-blur-[5px] z-50 absolute text-[#04177f] text-[14px] h-[36.5%] w-[90%] font-extrabold flex justify-center pt-[23%] md:h-[42%] md:text-[34px] md:pt-[22%] lg:text-[45px] lg:w-[90%] lg:h-[121%] "
           } `}
         >
           This Currency Is Currently Not Available...
@@ -262,13 +332,16 @@ export const WalletInOutFlows = () => {
 
         {/* ==============Volume & Value Toggle================== */}
         <div
-          className={`text-[7px] flex gap-2 items-center mt-[7%]  md:text-[14px] lg:text-[18px]  ${
-            toggleSideBar ? "lg:ml-[80%]" : "ml-[75%] lg:ml-[85%] md:ml-[82%]"
-          }`}
+          className={`text-[7px] flex gap-2 items-center mt-[7%]  md:text-[14px] lg:mt-[4%] lg:text-[18px]  ${
+            toggleSideBar ? "lg:ml-[80%]" : " lg:ml-[85%] md:ml-[82%]"
+          } ml-[75%]`}
         >
           <div>Volume</div>
           <div
-            onClick={volumeValueToggle}
+            onClick={() => {
+              volumeValueToggle();
+              handleButtonClick();
+            }}
             className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
               isValue ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
             }`}
@@ -283,7 +356,7 @@ export const WalletInOutFlows = () => {
         </div>
 
         {/* ====================Inflow & Outflow indication================ */}
-        <div className="flex float-right mt-[5%] md:mt-[3%]">
+        <div className="flex float-right mt-[5%] md:mt-[3%] lg:mt-[1%]">
           <div className="flex items-center ">
             <div className="text-2xl text-[#58DA8F] md:text-5xl">
               <RxDotFilled />
@@ -305,10 +378,6 @@ export const WalletInOutFlows = () => {
         />
       </div>
       {/* ========================Chart End========================= */}
-
-      <div className="mt-5%">
-        SPACE
-      </div>
     </div>
   );
 };
