@@ -109,9 +109,7 @@
   padding: 2.865px 8.594px;
   justify-content: center;
   align-items: center;
-  gap: 5.729px;
   border-radius: 5.156px;
-  /* background: var(--primary-color-main, #04177f); */
   color: #fff;
   font-size: 8px;
   font-style: normal;
@@ -233,6 +231,15 @@
     width: 270px;
     height: 260px;
   }
+
+  .cryptoTopUp {
+    position: absolute;
+    top: 40%;
+    width: 55%;
+    height: 380px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
+  }
 }
 
 /* ==================Surface Pro 7================ */
@@ -292,6 +299,15 @@
     gap: 203.073px;
     border-radius: 6.875px;
     box-shadow: 0px 0px 5.7291669845581055px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .cryptoTopUp {
+    position: absolute;
+    top: 37%;
+    width: 50%;
+    height: 360px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -391,6 +407,9 @@
 
   .cryptoTopUp{
     width: 562px;
-    height: 100%;
+    height: 500px;
+    position: absolute;
+    top: 5%;
   }
+  
 }

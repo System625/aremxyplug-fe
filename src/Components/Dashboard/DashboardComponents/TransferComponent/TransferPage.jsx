@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { useState } from "react";
-import { ContextProvider } from "../../Context";
-import { DashBoardLayout } from "../Layout/DashBoardLayout";
+import { ContextProvider } from "../../../Context";
+import { DashBoardLayout } from "../../Layout/DashBoardLayout";
 import styles from "./component.module.css";
+import { Modal } from "../../../Screens/Modal/Modal";
 
 export const TransferPage = () => {
   const { isDarkMode, toggleSideBar } = useContext(ContextProvider);
@@ -19,7 +20,7 @@ export const TransferPage = () => {
   return (
     <DashBoardLayout>
       <div
-        className={`${isDarkMode ? "" : ""} mx-[%] mt-[10%] md:mt-[5%] ${
+        className={`${isDarkMode ? "" : ""} scroll-none mx-[%] mt-[10%] md:mt-[5%] ${
           toggleSideBar ? "lg:mx-[0%]" : "lg:mx-0"
         }`}
       >
@@ -47,7 +48,7 @@ export const TransferPage = () => {
             }}
             className={`font-extrabold ${
               activeBtn[0] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
+            } cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
             Fiat Transfer
           </div>
@@ -59,7 +60,7 @@ export const TransferPage = () => {
             }}
             className={`font-extrabold ${
               activeBtn[1] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
+            } cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
             Crypto Transfer
           </div>
@@ -170,39 +171,45 @@ export const TransferPage = () => {
         )}
 
         {cryptoTopUp && (
-          <div
-            className={` mt-6 ${isDarkMode ? "border" : "bg-[#fff]"} ${
-              styles.cryptoTopUp
-            }`}
-          >
-            <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold lg:text-[25px] lg:pt-[3%]">
-              This Feature is Currently Not Available.
-            </div>
-            <img
-              className="mx-auto mt-[10%] w-[135px] h-[96px] md:w-[] md:h-[] lg:w-[400px] lg:h-[310px] lg:mt-[5%]"
-              src="./Images/Dashboardimages/Cryptocomingsoon.png"
-              alt="/"
-            />
-            <div className="mx-[6%] flex flex-col gap-[5px] ">
-              <div className="text-[8px] font-extrabold float-right ml-[80%] lg:text-[15px] lg:ml-[85%]">
-                Coming soon...
+          <Modal>
+            <div
+              className={` mt-6 ${isDarkMode ? "border bg-[#000]" : "bg-[#fff]"} ${
+                styles.cryptoTopUp
+              }`}
+            >
+              <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
+                This Feature is Currently Not Available.
               </div>
-              <div
-                className={` ${
-                  isDarkMode ? "border" : "bg-[#04177f] "
-                } text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center lg:my-[3%] lg:h-[60px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
-              >
-                Okay
+              <img
+                className="mx-auto mt-[10%] w-[135px] h-[96px] md:w-[220px] md:h-[200px] md:mt-[5%] lg:w-[350px] lg:h-[280px] lg:mt-[5%]"
+                src="./Images/Dashboardimages/Cryptocomingsoon.png"
+                alt="/"
+              />
+              <div className="mx-[6%] flex flex-col gap-[5px] ">
+                <div className="text-[8px] font-extrabold float-right ml-[80%] md:ml-[70%] md:text-[12px] lg:text-[13px] lg:ml-[80%]">
+                  Coming soon...
+                </div>
+                <div
+                onClick={()=>{
+                  setCryptoTopUp(false)
+                  handleClick(0)
+                }}
+                  className={` ${
+                    isDarkMode ? "border" : "bg-[#04177f] "
+                  } cursor-pointer text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                >
+                  Okay
+                </div>
               </div>
             </div>
-          </div>
+          </Modal>
         )}
 
         {/* ===========Contact Us==================== */}
         <div
           className={`${
-            isDarkMode ? "mb-[16%]" : ""
-          } flex gap-[15px] justify-center items-center mt-[42%] md:mt-[38%] lg:mt-[26%] lg:mb-[10%]`}
+            isDarkMode ? "mb-[1%]" : ""
+          } flex gap-[15px] justify-center items-center mt-[40%] md:mt-[38%] lg:mt-[26%] lg:mb-[%]`}
         >
           <div className="text-[10px] md:text-[12px] lg:text-[14px]">
             You need help ?
