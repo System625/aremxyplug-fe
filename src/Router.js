@@ -28,6 +28,7 @@ import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
 import NewWallet from "./Components/Wallet/NewWallet";
 import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferPage";
+import PointBalance from "./Components/Wallet/PointBalance";
 
 export const Router = () => {
   return (
@@ -65,6 +66,7 @@ export const Router = () => {
         <Route path="/fiat-wallet" element={<FiatWallet />} />
         <Route path="/new-wallet" element={<NewWallet />} />
         <Route path="/TransferPage" element={<TransferPage />} />
+        <Route path="/point-balance" element={<PointBalance />} />
       </Routes>
     </div>
   );

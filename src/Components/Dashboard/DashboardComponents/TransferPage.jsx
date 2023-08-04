@@ -18,7 +18,11 @@ export const TransferPage = () => {
   };
   return (
     <DashBoardLayout>
-      <div className={`${isDarkMode ? "" : ""} mx-[5%] mt-[10%] md:mt-[5%] ${toggleSideBar ? "ml-[22%]" : ""}`}>
+      <div
+        className={`${isDarkMode ? "" : ""} mx-[%] mt-[10%] md:mt-[5%] ${
+          toggleSideBar ? "lg:mx-[0%]" : "lg:mx-0"
+        }`}
+      >
         <img
           className="w-[100%] h-[80px] md:h-[180px] lg:h-[230px]"
           src="/Images/dashboardImages/transferImg.png"
@@ -34,7 +38,7 @@ export const TransferPage = () => {
         </div>
 
         {/* ================Fiat and Crypto TopUp button=========== */}
-        <div className="text-[8px] flex gap-[11%] md:text-[18px] lg:text-[20px]">
+        <div className="text-[8px] flex gap-[9%] md:text-[18px] lg:text-[20px]">
           <div
             onClick={() => {
               handleClick(0);
@@ -43,19 +47,19 @@ export const TransferPage = () => {
             }}
             className={`font-extrabold ${
               activeBtn[0] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
+            } py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
             Fiat Transfer
           </div>
           <div
             onClick={() => {
               handleClick(1);
-              setFiatTopUp(false);
+              // setFiatTopUp(false);
               setCryptoTopUp(true);
             }}
             className={`font-extrabold ${
               activeBtn[1] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
+            } py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
             Crypto Transfer
           </div>
@@ -167,26 +171,26 @@ export const TransferPage = () => {
 
         {cryptoTopUp && (
           <div
-            className={`mt-6 ${isDarkMode ? "border" : "bg-[#fff]"} ${
+            className={` mt-6 ${isDarkMode ? "border" : "bg-[#fff]"} ${
               styles.cryptoTopUp
             }`}
           >
-            <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold">
+            <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold lg:text-[25px] lg:pt-[3%]">
               This Feature is Currently Not Available.
             </div>
             <img
-              className="mx-auto mt-[10%] w-[135px] h-[96px] md:w-[] md:h-[] lg:w-[px] lg:h-[px]"
+              className="mx-auto mt-[10%] w-[135px] h-[96px] md:w-[] md:h-[] lg:w-[400px] lg:h-[310px] lg:mt-[5%]"
               src="./Images/Dashboardimages/Cryptocomingsoon.png"
               alt="/"
             />
             <div className="mx-[6%] flex flex-col gap-[5px] ">
-              <div className="text-[8px] font-extrabold float-right ml-[80%]">
+              <div className="text-[8px] font-extrabold float-right ml-[80%] lg:text-[15px] lg:ml-[85%]">
                 Coming soon...
               </div>
               <div
                 className={` ${
                   isDarkMode ? "border" : "bg-[#04177f] "
-                } text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center`}
+                } text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center lg:my-[3%] lg:h-[60px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
               >
                 Okay
               </div>
