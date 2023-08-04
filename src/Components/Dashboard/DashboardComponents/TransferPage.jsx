@@ -18,13 +18,13 @@ export const TransferPage = () => {
   };
   return (
     <DashBoardLayout>
-      <div className={`${isDarkMode ? "" : ""} mx-[5%] mt-[10%]`}>
+      <div className={`${isDarkMode ? "" : ""} mx-[5%] mt-[10%] md:mt-[5%] ${toggleSideBar ? "ml-[22%]" : ""}`}>
         <img
-          className="w-[100%] h-[80px]"
+          className="w-[100%] h-[80px] md:h-[180px] lg:h-[230px]"
           src="/Images/dashboardImages/transferImg.png"
           alt="/"
         />
-        <div className="flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[10%] gap-[8px]">
+        <div className="flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[10%] gap-[8px] md:my-[5%] md:text-[18px] lg:text-[20px]">
           <p>Select Transfer type </p>
           <img
             className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
@@ -34,7 +34,7 @@ export const TransferPage = () => {
         </div>
 
         {/* ================Fiat and Crypto TopUp button=========== */}
-        <div className="text-[8px] flex gap-[11%]">
+        <div className="text-[8px] flex gap-[11%] md:text-[18px] lg:text-[20px]">
           <div
             onClick={() => {
               handleClick(0);
@@ -43,9 +43,9 @@ export const TransferPage = () => {
             }}
             className={`font-extrabold ${
               activeBtn[0] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px]`}
+            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
-            Fiat Topup
+            Fiat Transfer
           </div>
           <div
             onClick={() => {
@@ -55,15 +55,15 @@ export const TransferPage = () => {
             }}
             className={`font-extrabold ${
               activeBtn[1] ? "bg-[#04177f] text-white" : "bg-[#92abfe18]"
-            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px]`}
+            } py-[8.17px] px-[15%] rounded-tr-[5px] rounded-br-[5px] rounded-bl-[5px] md:py-[14px] md:px-[5%] md:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] lg:px-[3%] lg:py-[18px]`}
           >
-            Crypto Topup
+            Crypto Transfer
           </div>
         </div>
 
         {/* =================Trasnfer buttons==================== */}
         {fiatTopUp && (
-          <div className="mt-[10%] flex flex-col gap-[20px]">
+          <div className="mt-[10%] flex flex-col gap-[20px] md:mt-[8%] md:gap-[30px]">
             <div
               className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
                 styles.toMyAcct
@@ -76,8 +76,8 @@ export const TransferPage = () => {
                   alt="/"
                 />
                 <div>
-                  <p className="text-[10px]">To My Account</p>
-                  <p className="text-[8px] text-[#7c7c7c]">
+                  <p className="text-[10px] md:text-[18px]">To My Account</p>
+                  <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
                     Transfer money from your wallets to your personal bank
                     account.
                   </p>
@@ -101,8 +101,8 @@ export const TransferPage = () => {
                   alt="/"
                 />
                 <div>
-                  <p className="text-[10px]">To Other Banks</p>
-                  <p className="text-[8px] text-[#7c7c7c]">
+                  <p className="text-[10px] md:text-[18px]">To Other Banks</p>
+                  <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
                     Transfer money from your wallets to any bank accounts.
                   </p>
                 </div>
@@ -120,13 +120,13 @@ export const TransferPage = () => {
             >
               <div className="flex gap-[5px] items-center">
                 <img
-                  className="w-[18px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                  className="w-[18px] h-[13px] md:w-[] md:h-[] lg:w-[30px] lg:h-[20px]"
                   src="Images/Dashboardimages/tf3.png"
                   alt="/"
                 />
                 <div>
-                  <p className="text-[10px]">To AremxyPlug</p>
-                  <p className="text-[8px] text-[#7c7c7c]">
+                  <p className="text-[10px] md:text-[18px]">To AremxyPlug</p>
+                  <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
                     Transfer money from your wallets to any AremxyPlug user.
                   </p>
                 </div>
@@ -149,8 +149,8 @@ export const TransferPage = () => {
                   alt="/"
                 />
                 <div>
-                  <p className="text-[10px]">Bulk Transfer</p>
-                  <p className="text-[8px] text-[#7c7c7c]">
+                  <p className="text-[10px] md:text-[18px]">Bulk Transfer</p>
+                  <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
                     Transfer money from your wallets to multiple recipients at a
                     time.
                   </p>
@@ -185,7 +185,7 @@ export const TransferPage = () => {
               </div>
               <div
                 className={` ${
-                  isDarkMode ? "" : "bg-[#04177f] "
+                  isDarkMode ? "border" : "bg-[#04177f] "
                 } text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center`}
               >
                 Okay
@@ -198,7 +198,7 @@ export const TransferPage = () => {
         <div
           className={`${
             isDarkMode ? "mb-[16%]" : ""
-          } flex gap-[15px] justify-center items-center mt-[42%] `}
+          } flex gap-[15px] justify-center items-center mt-[42%] md:mt-[38%] lg:mt-[26%] lg:mb-[10%]`}
         >
           <div className="text-[10px] md:text-[12px] lg:text-[14px]">
             You need help ?
