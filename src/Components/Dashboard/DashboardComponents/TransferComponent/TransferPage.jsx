@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { ContextProvider } from "../../../Context";
 import { DashBoardLayout } from "../../Layout/DashBoardLayout";
-import styles from "./component.module.css";
+import styles from "../../DashboardComponents/component.module.css";
 import { Modal } from "../../../Screens/Modal/Modal";
 
 export const TransferPage = () => {
@@ -82,13 +82,15 @@ export const TransferPage = () => {
                   src="Images/Dashboardimages/tf1.png"
                   alt="/"
                 />
-                <div>
-                  <p className="text-[10px] md:text-[18px]">To My Account</p>
-                  <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
-                    Transfer money from your wallets to your personal bank
-                    account.
-                  </p>
-                </div>
+                <Link to="/ToMyAccount">
+                  <div>
+                    <p className="text-[10px] md:text-[18px]">To My Account</p>
+                    <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">
+                      Transfer money from your wallets to your personal bank
+                      account.
+                    </p>
+                  </div>
+                </Link>
               </div>
               <img
                 className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"

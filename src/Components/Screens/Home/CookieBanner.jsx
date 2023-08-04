@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CookieBanner = () => {
   const [accepted, setAccepted] = useState(
@@ -48,8 +49,10 @@ const CookieBanner = () => {
         However, if you prefer a cookie-free experience, click "Decline" and
         we'll respect your privacy. To learn more about our deliciously
         effective cookies and how they can supercharge your visit, check out our
-        Privacy Policy. Ready to take a byte? Accept or Decline, the choice is
-        yours!
+        <Link to="/privacy-policy">
+          <span className="text-[#04177f] font-extrabold hover:underline cursor-pointer"> Privacy Policy</span>
+        </Link>
+        . Ready to take a byte? Accept or Decline, the choice is yours!
       </p>
       <div className="flex justify-between my-[8%] md:my-[3%]">
         <button
