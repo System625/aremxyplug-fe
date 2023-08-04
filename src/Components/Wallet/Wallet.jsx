@@ -49,7 +49,12 @@ const Wallet = () => {
               </div>
             </div>
             <div className="w-full h-[102.28px] lg:h-[186px] mt-4 flex flex-col justify-between md:mt-6 md:h-[106.5px] lg:mt-12">
-              <h2 className='text-[8px] leading-[12px] font-bold mb-3 lg:text-[15px] md:text-[10px] md:leading-[15px]'>Select Wallets:</h2>
+              <div className='lg:mb-8 flex items-center gap-1 mb-5'>
+                  <h2 className='text-[8.62px] font-bold lg:text-[15px]'>Select Wallets</h2>
+                  <div className='lg:w-6 lg:h-6 w-4 h-4'>
+                      <img src='./Images/wallet/arrow-square-right.svg' alt="" className='h-full'/>
+                  </div>
+              </div>
               <div className='w-full h-[61.64px] flex justify-between md:h-[65.85px] lg:h-[115px]'>
                 <div className='md:w-[130px] w-[80.24px] flex justify-center items-center rounded-[5px] lg:rounded-[9px] lg:w-[172px]' style={{boxShadow:`0px 0px 11.495177268981934px 0px #00000040`}}>
                   <Link to={`/fiat-wallet`} className='text-center'>
@@ -80,7 +85,12 @@ const Wallet = () => {
               </div>
             </div>
             <div className='mt-4 lg:mt-12'>
-              <h2 className='text-[8.62px] font-bold mb-4 lg:text-[15px] lg:mb-8'>Quick Wallet FAQs</h2>
+              <div className='lg:mb-8 flex items-center gap-1 mb-5'>
+                  <h2 className='text-[8.62px] font-bold lg:text-[15px]'>Quick Wallets FAQs</h2>
+                  <div className='lg:w-6 lg:h-6 w-4 h-4'>
+                      <img src='./Images/wallet/arrow-square-right.svg' alt="" className='h-full'/>
+                  </div>
+              </div>
               <div>
                   {faqList.map((faqItem) => (
                   <FaqCard 
@@ -93,9 +103,9 @@ const Wallet = () => {
               </div>
             </div>
           </div>
-          <div className='flex gap-2 justify-center items-center lg:mt-40'>
+          <div className='flex gap-2 justify-center items-center md:mt-40'>
             <h2 className='text-[8px] leading-[12px] lg:text-[12px]'>You need help?</h2>
-            <Link to={`/ContactUs`} className='text-[7px] leading-[10.5px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
+            <Link to={`/ContactUs`} className='text-[8px] leading-[12px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
           </div>
         </div>
         {showCryptoModal &&

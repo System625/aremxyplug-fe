@@ -9,10 +9,11 @@ import AddAccount from './AddAccount'
 const FiatWallet = () => {
   const [showModal, setShowModal] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [currentId, setCurrentId] = useState(null);
   const [selection, setSelection] = useState('');
-
-
   const [addWalletModal, setAddWalletModal] = useState(false);
+
+  const amt = 10000
 
     const countryList = [
         {
@@ -59,39 +60,12 @@ const FiatWallet = () => {
       }
 
       const displayMoney =(index)=> {
-        if (clicked === index) {
-          return setClicked(true)
-        }
-        setClicked(index)
+        setCurrentId(index);
+        setClicked(!clicked);
       }
 
       const notAvailableCountries = ['United States', 'United Kingdom', 'Kenya', 'Australia', 'European Union']
       const notAvailable = notAvailableCountries.includes(selection);
-      console.log(notAvailable);
-      console.log(selection);
-      console.log(clicked);
-
-  const TableRow = ({name, flag, code, onClick, onToggle, active}) => {
-    const value='10,000'
-    return (
-      <div className="grid grid-cols-3 text-[7px] leading-[10.5px] pb-[8px] md:text-[10px] md:leading-[15px] border-b last:border-b-0 last:pb-0 lg:text-[16px] lg:leading-[24px] cursor-pointer lg:pb-3 lg:pt-2">
-        <h2 className='text-slate-400'>{name}</h2>
-        <div className='flex gap-1 items-center justify-center lg:gap-2' onClick={onClick}>
-          <div className='w-[10px] h-[10px] md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] rounded-full overflow-hidden flex items-center justify-center'>
-            <img src={flag} alt="" className='w-full h-full object-cover'/>
-          </div>
-          <h2 className='text-right'>{code}</h2>
-        </div>
-        <div className='flex gap-1 justify-end items-center text-slate-400'>
-          {active ? <h2>{code}{value}</h2> : <h2>*****</h2>}
-          <div className='flex gap-1'>
-              <BsEyeFill onClick={onToggle} className='text-[#92abfe]'/>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <DashBoardLayout>
       {/* this is to make it display default if no election */}
@@ -111,16 +85,16 @@ const FiatWallet = () => {
             <div className='mt-[25.39px] md:mt-[35px] lg:mt-[60px] flex items-center w-full gap-[28px]'>
               <div className='w-[60%] lg:w-[65%] h-[22px] md:h-[25px] lg:h-[51px]'>
                 <div className="w-full relative">
-                  <input type="text" name="" placeholder='Search for Wallets, e.g; NGN or Nigeria' className='text-[7px] leading-[10.5px] p-[4px] md:text-[9.17px] md:leading-[11.97px] w-full h-full p-0 outline-none placeholder:text-[7px] placeHolder:leading-[10.5px] rounded-[4px] border block px-1 md:placeholder:text-[9.17px] lg:placeholder:text-base lg:placeholder:leading-[20px] lg:rounded-[12px] lg:text-base lg:leading-[20px] lg:p-3'/>
+                  <input type="text" name="" placeholder='Search for Wallets, e.g; NGN or Nigeria' className='text-[7px] leading-[10.5px] p-[4px] md:text-[9.17px] md:leading-[11.97px] w-full h-full outline-none placeholder:text-[7px] placeHolder:leading-[10.5px] rounded-[4px] border block px-1 md:placeholder:text-[9.17px] lg:placeholder:text-base lg:placeholder:leading-[20px] lg:rounded-[12px] lg:text-base lg:leading-[20px] lg:p-3'/>
                   <div className='absolute right-[4px] bottom-[3px] lg:right-[7px] lg:bottom-[10px] w-[12px] h-[12px] md:w-[11.46px] md:h-[11.46px] md:bottom-1 lg:w-[20px] lg:h-[20px]'>
-                      <img src="./Images/wallet/search-status.png" alt="searchIcon" className='w-full h-full'/>  
+                      <img src="./Images/wallet/search-status.svg" alt="searchIcon" className='w-full h-full'/>  
                   </div>
                 </div>
               </div>
               <div className="w-[40%] lg:w-[35%] border flex h-[20px] md:h-[23px] lg:h-[48px] rounded-[4px] items-center justify-between px-1 lg:rounded-[12px] lg:px-3">
                 <button className='text-[7px] leading-[10.5px] block md:text-[9.17px] lg:rounded-[12px] lg:text-base lg:leading-[20px] h-full'>Refresh Wallet Balances</button>
                   <div className='w-[12px] h-[12px] md:w-[11.46px] md:h-[11.46px] lg:w-[20px] lg:h-[20px]'>
-                      <img src="./Images/wallet/search-status.png" alt="searchIcon" className='w-full h-full object-cover'/>  
+                      <img src="./Images/wallet/refresh-square-2.svg" alt="searchIcon" className='w-full h-full object-cover'/>  
                   </div>
               </div>
             </div>
@@ -151,9 +125,23 @@ const FiatWallet = () => {
                 <h2 className='font-bold'>Balance</h2>
               </div>
               <div className="flex flex-col gap-2">
-                  {countryList.map((country) => (
-                  <TableRow key={country.id} flag={country.flag} code={country.code} name={country.name} onClick={() => handleSelection(country.name)}/>
-                  ))}
+                {countryList.map((country) => (
+                  <div className="grid grid-cols-3 text-[7px] leading-[10.5px] pb-[8px] md:text-[10px] md:leading-[15px] border-b last:border-b-0 last:pb-0 lg:text-[16px] lg:leading-[24px] cursor-pointer lg:pb-3 lg:pt-2" key={country.id}>
+                    <h2 className='text-slate-400'>{country.name}</h2>
+                    <div className='flex gap-1 items-center justify-center lg:gap-2' onClick={() => handleSelection(country.name)}>
+                      <div className='w-[10px] h-[10px] md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] rounded-full overflow-hidden flex items-center justify-center'>
+                        <img src={country.flag} alt="" className='w-full h-full object-cover'/>
+                      </div>
+                      <h2 className='text-right'>{country.code}</h2>
+                    </div>
+                    <div className='flex gap-1 justify-end items-center text-slate-400'>
+                      { currentId === country.id && clicked ? <h2>{country.code}{amt}</h2> : <h2>*****</h2>}
+                      <button onClick={()=> displayMoney(country.id)}>
+                        <BsEyeFill className='text-[#92abfe]'/>
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
               <div className="border-t -mx-2 px-2 text-right pt-1 md:pt-2 lg:pt-3 lg:pb-2 flex justify-end cursor-pointer gap-2 items-center">
                 <div className="text-[7px] leading-[10.5px] md:text-[10px] md:leading-[15px] lg:text-[15px] lg:leading-[22.5px] flex items-center gap-1">
@@ -176,7 +164,7 @@ const FiatWallet = () => {
               </div>
             </div>
           </div>
-          <div className='flex gap-2 justify-center items-center'>
+          <div className='flex gap-2 justify-center items-center md:mt-40'>
             <h2 className='text-[8px] leading-[12px] lg:text-[12px]'>You need help?</h2>
             <Link to={`/ContactUs`} className='text-[7px] leading-[10.5px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
           </div>
@@ -200,16 +188,16 @@ const FiatWallet = () => {
                 <div className='mt-[25.39px] md:mt-[35px] lg:mt-[60px] flex items-center w-full gap-[28px]'>
                   <div className='w-[60%] lg:w-[65%] h-[22px] md:h-[25px] lg:h-[51px]'>
                     <div className="w-full relative">
-                      <input type="text" name="" placeholder='Search for Wallets, e.g; NGN or Nigeria' className='text-[7px] leading-[10.5px] p-[4px] md:text-[9.17px] md:leading-[11.97px] w-full h-full p-0 outline-none placeholder:text-[7px] placeHolder:leading-[10.5px] rounded-[4px] border block px-1 md:placeholder:text-[9.17px] lg:placeholder:text-base lg:placeholder:leading-[20px] lg:rounded-[12px] lg:text-base lg:leading-[20px] lg:p-3'/>
+                      <input type="text" name="" placeholder='Search for Wallets, e.g; NGN or Nigeria' className='text-[7px] leading-[10.5px] p-[4px] md:text-[9.17px] md:leading-[11.97px] w-full h-full outline-none placeholder:text-[7px] placeHolder:leading-[10.5px] rounded-[4px] border block px-1 md:placeholder:text-[9.17px] lg:placeholder:text-base lg:placeholder:leading-[20px] lg:rounded-[12px] lg:text-base lg:leading-[20px] lg:p-3'/>
                       <div className='absolute right-[4px] bottom-[3px] lg:right-[7px] lg:bottom-[10px] w-[12px] h-[12px] md:w-[11.46px] md:h-[11.46px] md:bottom-1 lg:w-[20px] lg:h-[20px]'>
-                          <img src="./Images/wallet/search-status.png" alt="searchIcon" className='w-full h-full'/>  
+                          <img src="./Images/wallet/search-status.svg" alt="searchIcon" className='w-full h-full'/>  
                       </div>
                     </div>
                   </div>
                   <div className="w-[40%] lg:w-[35%] border flex h-[20px] md:h-[23px] lg:h-[41px] rounded-[4px] items-center justify-between px-1 lg:rounded-[12px] lg:px-3">
                     <button className='text-[7px] leading-[10.5px] block md:text-[9.17px] lg:rounded-[12px] lg:text-base lg:leading-[20px] h-full'>Refresh Wallet Balances</button>
                       <div className='w-[12px] h-[12px] md:w-[11.46px] md:h-[11.46px] lg:w-[20px] lg:h-[20px]'>
-                          <img src="./Images/wallet/search-status.png" alt="searchIcon" className='w-full h-full object-cover'/>  
+                          <img src="./Images/wallet/refresh-square-2.svg" alt="searchIcon" className='w-full h-full object-cover'/>  
                       </div>
                   </div>
                 </div>
@@ -241,7 +229,21 @@ const FiatWallet = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                       {countryList.map((country) => (
-                      <TableRow key={country.id} flag={country.flag} code={country.code} name={country.name} onClick={() => handleSelection(country.name)} active={clicked === country.id} onToggle={()=> displayMoney(country.id)}/>
+                        <div className="grid grid-cols-3 text-[7px] leading-[10.5px] pb-[8px] md:text-[10px] md:leading-[15px] border-b last:border-b-0 last:pb-0 lg:text-[16px] lg:leading-[24px] cursor-pointer lg:pb-3 lg:pt-2" key={country.id}>
+                          <h2 className='text-slate-400'>{country.name}</h2>
+                          <div className='flex gap-1 items-center justify-center lg:gap-2' onClick={() => handleSelection(country.name)}>
+                            <div className='w-[10px] h-[10px] md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] rounded-full overflow-hidden flex items-center justify-center'>
+                              <img src={country.flag} alt="" className='w-full h-full object-cover'/>
+                            </div>
+                            <h2 className='text-right'>{country.code}</h2>
+                          </div>
+                          <div className='flex gap-1 justify-end items-center text-slate-400'>
+                            { currentId === country.id && clicked ? <h2>{country.code}{amt}</h2> : <h2>*****</h2>}
+                            <button onClick={()=> displayMoney(country.id)}>
+                              <BsEyeFill className='text-[#92abfe]'/>
+                            </button>
+                          </div>
+                        </div>
                       ))}
                   </div>
                   <div className="border-t -mx-2 px-2 text-right pt-1 md:pt-2 lg:pt-3 lg:pb-2 flex justify-end cursor-pointer gap-2 items-center">
@@ -265,7 +267,7 @@ const FiatWallet = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex gap-2 justify-center items-center lg:mt-40'>
+              <div className='flex gap-2 justify-center items-center md:mt-40'>
                 <h2 className='text-[8px] leading-[12px] lg:text-[12px] lg:leading-[18px]'>You need help?</h2>
                 <Link to={`/ContactUs`} className='text-[7px] leading-[10.5px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
               </div>

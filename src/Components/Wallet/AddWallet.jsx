@@ -80,7 +80,7 @@ const AddWallet = ({onClick}) => {
     setAddAccount(false);
   }
   const handleAddAccount =()=> {
-  const availableCountries = ['United States', 'United Kingdom', 'Australia', 'Kenya', 'European Union', 'Nigeria']
+  const availableCountries = ['United States', 'United Kingdom', 'Australia', 'Kenya', 'European Union']
   const available = availableCountries.includes(countryName);
   if (available){
     setAddAccount(true);
@@ -90,6 +90,7 @@ const AddWallet = ({onClick}) => {
  }
 
  if (redirect) {
+  window.location.reload();
   return <Navigate to='/fiat-wallet'/>
  }
 
@@ -102,14 +103,14 @@ const AddWallet = ({onClick}) => {
         <div className='w-[141.14px] h-[173.86px] lg:w-[318px] lg:h-[380px] md:w-[217.7px] md:h-[182.344px] absolute right-0 top-0'>
           <img src='./Images/wallet/orangeBanner.png' alt="" className=' rounded-r-md object-cover w-full'/>
         </div>
-        <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add wallet</h2>
+        <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add Wallet</h2>
         <h2 className='text-[7px] leading-[10.5px] mb-[6px] text-center md:text-[10px] md:leading-[15px] lg:text-base lg:leading-[24px]'>This Wallet has already exists.</h2>
-        <div className='flex justify-center items-center mt-[18%] lg:mt-[8%]'>
-          <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
+        <div className='flex justify-center items-center mt-[18%] lg:mt-[8%] md:mt-[4%]'>
+          <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px] md:w-[150px] md:h-[150px]'>
             <img src="./Images/wallet/gift.gif" alt=""/>
           </div>
         </div>
-        <div className='flex gap-[45px] absolute bottom-[22px] md:justify-center md:gap-[20px] lg:w-[93%] lg:gap-[30px]' >
+        <div className='flex gap-[45px] absolute bottom-[22px] md:justify-center md:gap-[20px] lg:w-[93%] lg:gap-[30px] md:w-[91%]' >
           <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={() => setRedirect(true)}>View Wallet</button>
           <button className='text-[10px] leading-[15px]  px-[28.6px] py-[10px] text-red-500 rounded-[7px] hover:bg-red-500 hover:text-white lg:text-base lg:leading-[24px]' onClick={onClick}>Cancel</button>
         </div>
@@ -124,14 +125,14 @@ const AddWallet = ({onClick}) => {
           <div className='w-[141.14px] h-[173.86px] lg:w-[318px] lg:h-[380px] absolute right-0 top-0'>
             <img src='./Images/wallet/pinkBanner.png' alt="" className=' rounded-r-md object-cover w-full'/>
           </div>
-          <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add wallet</h2>
+          <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add Wallet</h2>
           <h2 className='text-[7px] leading-[10.5px] mb-[6px] text-center md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>This Wallet is currently not available.</h2>
           <div className='flex justify-center items-center mt-[18%] lg:mt-[8%]'>
             <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
               <img src="./Images/wallet/spinner.gif" alt=""/>
             </div>
           </div>
-          <div className='w-[85%] absolute bottom-[22px]'>
+          <div className='w-[85%] absolute bottom-[22px] lg:w-[93%]'>
             <button className='w-full text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] lg:text-base lg:leading-[24px]' onClick={onClick}>Okay</button>
           </div>
         </div>
@@ -141,7 +142,7 @@ const AddWallet = ({onClick}) => {
           <div className='w-[141.14px] h-[173.86px] lg:w-[318px] lg:h-[380px] absolute right-0 top-0'>
             <img src='./Images/wallet/greenBanner.png' alt="" className=' rounded-r-md object-cover w-full'/>
           </div>
-          <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add wallet</h2>
+          <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add Wallets</h2>
           <h2 className='text-[7px] leading-[10.5px] mb-[6px] text-center md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Please select the available currency to add new wallets.</h2>
           <div className='flex gap-2'>
             <div className="w-3/4">
@@ -182,7 +183,7 @@ const AddWallet = ({onClick}) => {
             </div>
           </div>
           <div className='flex w-[87%] justify-between absolute bottom-[22px] md:justify-center mx-auto md:gap-[25px] md:w-[72%] lg:w-[65%] lg:gap-[30px]'>
-            <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] lg:text-base lg:leading-[24px]' onClick={() => handleAddAccount()}>Add Acount</button>
+            <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] lg:text-base lg:leading-[24px]' onClick={() => handleAddAccount()}>Add Wallet</button>
             <button className='text-[10px] leading-[15px]  px-[28.6px] py-[10px] text-red-500 rounded-[7px] hover:bg-red-500 hover:text-white lg:text-base lg:leading-[24px]' onClick={onClick}>Cancel</button>
           </div>
         </div> }
