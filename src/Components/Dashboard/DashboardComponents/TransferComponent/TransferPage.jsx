@@ -20,7 +20,9 @@ export const TransferPage = () => {
   return (
     <DashBoardLayout>
       <div
-        className={`${isDarkMode ? "" : ""} scroll-none mx-[%] mt-[10%] md:mt-[5%] ${
+        className={`${
+          isDarkMode ? "" : ""
+        } scroll-none mx-[%] mt-[10%] md:mt-[5%] ${
           toggleSideBar ? "lg:mx-[0%]" : "lg:mx-0"
         }`}
       >
@@ -173,9 +175,9 @@ export const TransferPage = () => {
         {cryptoTopUp && (
           <Modal>
             <div
-              className={` mt-6 ${isDarkMode ? "border bg-[#000]" : "bg-[#fff]"} ${
-                styles.cryptoTopUp
-              }`}
+              className={` mt-6 ${
+                isDarkMode ? "border bg-[#000]" : "bg-[#fff]"
+              } ${styles.cryptoTopUp}`}
             >
               <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
                 This Feature is Currently Not Available.
@@ -190,10 +192,10 @@ export const TransferPage = () => {
                   Coming soon...
                 </div>
                 <div
-                onClick={()=>{
-                  setCryptoTopUp(false)
-                  handleClick(0)
-                }}
+                  onClick={() => {
+                    setCryptoTopUp(false);
+                    handleClick(0);
+                  }}
                   className={` ${
                     isDarkMode ? "border" : "bg-[#04177f] "
                   } cursor-pointer text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
