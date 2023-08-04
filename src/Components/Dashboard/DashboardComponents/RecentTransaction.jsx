@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 import { ContextProvider } from "../../Context";
@@ -7,7 +8,7 @@ import styles from "./component.module.css";
 
 export const RecentTransaction = () => {
   const { toggleSideBar, isDarkMode } = useContext(ContextProvider);
-  const [calender, setCalender] = useState(true);
+  const [calender, setCalender] = useState(false);
   return (
     <div className="mb-[25%]">
       <div className="flex items-center gap-[10px] md:">
@@ -119,7 +120,15 @@ export const RecentTransaction = () => {
             <div className="text-[8px] md:text-[12px] lg:text-[14px]">
               You need help ?
             </div>
-            <div className={styles.contactus}>Contact Us</div>
+            <Link to="/ContactUs">
+              <div
+                className={`${isDarkMode ? "border " : "bg-[#04177f]"} ${
+                  styles.contactus
+                }`}
+              >
+                Contact Us
+              </div>
+            </Link>
           </div>
         </div>
       </div>

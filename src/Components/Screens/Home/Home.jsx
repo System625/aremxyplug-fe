@@ -96,7 +96,7 @@ export const Home = () => {
 
   return (
     <>
-    <div className="fixed top-[10%] left-0 right-0 z-50">
+    <div className="fixed top-[12%] left-0 right-0 z-50 md:top-[55%] lg:top-[45%]">
     <CookieBanner/>
     </div>
       <div className={styles.hero}>

@@ -51,11 +51,11 @@ export const TopBar = () => {
             alt="/"
           />
         </div>
-        <Link to="/Dashboard">
-          <p className="text-[8px] md:text-[14.167px] lg:text-[18px]">
-            Dashboard
-          </p>
-        </Link>
+
+        <p className="text-[8px] md:text-[14.167px] lg:text-[18px]">
+          Dashboard
+        </p>
+
         <div className="flex justify-center items-center gap-[5px] md:gap-[10px]">
           <div className="cursor-pointer flex items-center text-[7px] md:text-[13.8px] lg:text-[12px] lg:font-extrabold gap-[3px] md:gap-[6px]">
             <p>Light</p>
