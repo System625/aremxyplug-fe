@@ -28,6 +28,8 @@ import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
 import NewWallet from "./Components/Wallet/NewWallet";
 import TopUpScreen from "./Components/Screens/topUP/TopUpScreen";
+import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferPage";
+import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
 
 export const Router = () => {
   return (
@@ -60,11 +62,13 @@ export const Router = () => {
         <Route path="/newPassword" element={<NewPassword />} />
         <Route path="/emailRoute" element={<VerifyViaEmail />} />
         <Route path="/smsRoute" element={<VerifyViaSms />} />
-        <Route path="/dashboard" element={<MainDashboard/>} />
-        <Route path="/wallet" element={<Wallet/>} />
-        <Route path="/top-up" element={<TopUpScreen/>} />
-        <Route path="/fiat-wallet" element={<FiatWallet/>} />
-        <Route path="/new-wallet" element={<NewWallet/>} />
+        <Route path="/dashboard" element={<MainDashboard />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/top-up" element={<TopUpScreen />} />
+        <Route path="/fiat-wallet" element={<FiatWallet />} />
+        <Route path="/new-wallet" element={<NewWallet />} />
+        <Route path="/money-transfer" element={<TransferPage />} />
+        <Route path="/to-my-account" element={<ToMyAccountPage />} />
       </Routes>
     </div>
   );
