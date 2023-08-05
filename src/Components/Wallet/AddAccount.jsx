@@ -10,9 +10,9 @@ const AddAccount = ({onClick}) => {
             <img src="./Images/wallet/businessAccount.png" alt=""/>
           </div>
         </div>
-        <div className='flex gap-[45px] absolute bottom-[22px] justify-center items-center md:gap-[20px] lg:w-[93%] lg:gap-[30px]' >
-          <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={onClick}>Okay</button>
-          <h2 className='text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
+        <div className='flex gap-[45px] absolute bottom-[22px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col' >
+          <h2 className='text-right text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
+          <button className='w-full text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={onClick}>Okay</button>
         </div>
       </div>
     </div>
