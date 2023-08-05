@@ -444,7 +444,7 @@ export const MainDashboard = () => {
               <p>Topup</p>
             </div>
             <Link
-              to="/TransferPage"
+              to="/money-transfer"
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f] "
               } ${styles.button}`}
