@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import QuickFeatures from "../DashboardComponents/QuickFeatures";
 import { WalletInOutFlows } from "../DashboardComponents/WalletInOutFlows";
+import { RecentTransaction } from "../DashboardComponents/RecentTransaction";
+import { Link } from "react-router-dom";
 
 export const MainDashboard = () => {
   const { setHideNavbar, toggleSideBar, isDarkMode } =
@@ -441,18 +443,21 @@ export const MainDashboard = () => {
               />
               <p>Topup</p>
             </div>
-            <div
+            <Link
+              to="/TransferPage"
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f] "
               } ${styles.button}`}
             >
-              <img
-                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
-                src="./Images/dashboardImages/transfer.png"
-                alt="topup"
-              />
-              <p>Transfer</p>
-            </div>
+              <div className="flex items-center gap-[5%]">
+                <img
+                  className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
+                  src="./Images/dashboardImages/transfer.png"
+                  alt="topup"
+                />
+                <p>Transfer</p>
+              </div>
+            </Link>
             <div
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f]"
@@ -481,6 +486,7 @@ export const MainDashboard = () => {
 
           <QuickFeatures />
           <WalletInOutFlows />
+          <RecentTransaction />
         </div>
       </div>
     </div>
