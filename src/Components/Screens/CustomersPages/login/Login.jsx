@@ -37,7 +37,7 @@ function Login() {
             </p>
           </div>
           <img
-            src="./Images/login/loginImage.png"
+            src="./Images/login/loginImage.png"    
             alt="background_image"
             className="w-[70%] md:w-[95%] xl:w-[75%] md:h-[15%] lg:h-[25%] xl:h-[35%] mt-[50px] "
           />
