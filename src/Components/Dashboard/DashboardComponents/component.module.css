@@ -109,9 +109,7 @@
   padding: 2.865px 8.594px;
   justify-content: center;
   align-items: center;
-  gap: 5.729px;
   border-radius: 5.156px;
-  background: var(--primary-color-main, #04177f);
   color: #fff;
   font-size: 8px;
   font-style: normal;
@@ -125,7 +123,25 @@
   height: 209px;
   background: #fff;
   box-shadow: 0px 0px 15.634516716003418px 0px rgba(139, 67, 255, 0.5);
-margin-top: -8%;
+  margin-top: -8%;
+}
+
+.toMyAcct {
+  display: flex;
+  padding: 6.968px 12.508px 10.376px 6.968px;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 3.974px;
+  box-shadow: 0px 0px 3.3119657039642334px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cryptoTopUp {
+  position: absolute;
+  top: 34%;
+  width: 90%;
+  height: 269px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* ===================Tablet view ================ */
@@ -210,10 +226,19 @@ margin-top: -8%;
     font-size: 18px;
   }
 
-  .calender{
+  .calender {
     margin-top: -3.5%;
     width: 270px;
     height: 260px;
+  }
+
+  .cryptoTopUp {
+    position: absolute;
+    top: 40%;
+    width: 55%;
+    height: 380px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -261,10 +286,28 @@ margin-top: -8%;
     padding-bottom: 9px;
   }
 
-  .calender{
+  .calender {
     margin-top: -3.5%;
     width: 270px;
     height: 260px;
+  }
+
+  .toMyAcct {
+    display: flex;
+    padding: 8.594px 28.645px 8.375px 8.595px;
+    align-items: center;
+    gap: 203.073px;
+    border-radius: 6.875px;
+    box-shadow: 0px 0px 5.7291669845581055px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .cryptoTopUp {
+    position: absolute;
+    top: 37%;
+    width: 50%;
+    height: 360px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -350,7 +393,23 @@ margin-top: -8%;
     width: 300px;
     height: 340px;
     box-shadow: 0px 0px 15.634516716003418px 0px rgba(139, 67, 255, 0.5);
-  margin-top: -3.5%;
+    margin-top: -3.5%;
   }
 
+  .toMyAcct {
+    display: flex;
+    padding: 15px 50px 15px 15px;
+    align-items: center;
+    gap: 354px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+  }
+
+  .cryptoTopUp{
+    width: 562px;
+    height: 500px;
+    position: absolute;
+    top: 5%;
+  }
+  
 }

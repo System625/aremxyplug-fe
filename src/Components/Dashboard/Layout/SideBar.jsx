@@ -86,16 +86,18 @@ export const SideBar = () => {
           </div>
 
           {/* ======Dashboard nav======= */}
-          <Link to="/dashboard"><div className={styles.dashboard}>
-            <img
-              className="w-[8.38px] h-[8.38px] md:w-[13px] md:h-[13px] lg:h-[24px] lg:w-[24px]"
-              src="./Images/dashboardImages/dashboardimg.png"
-              alt="3squares"
-            />
-            <p className=" text-[7px] font-semibold md:text-[8px] lg:text-[14px] ">
-              Dashboard
-            </p>
-          </div></Link>
+          <Link to="/dashboard">
+            <div className={styles.dashboard}>
+              <img
+                className="w-[8.38px] h-[8.38px] md:w-[13px] md:h-[13px] lg:h-[24px] lg:w-[24px]"
+                src="./Images/dashboardImages/dashboardimg.png"
+                alt="3squares"
+              />
+              <p className=" text-[7px] font-semibold md:text-[8px] lg:text-[14px] ">
+                Dashboard
+              </p>
+            </div>
+          </Link>
         </div>
 
         <div className=" flex flex-col">
@@ -130,14 +132,16 @@ export const SideBar = () => {
                   />
                   <p>Top Up</p>
                 </div>
-                <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
-                  <img
-                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/transfer.png"
-                    alt="icon"
-                  />
-                  <p>Transfer</p>
-                </div>
+                <Link to="/TransferPage">
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/transfer.png"
+                      alt="icon"
+                    />
+                    <p>Transfer</p>
+                  </div>
+                </Link>
                 <div
                   onClick={() => dropHandler("dropdown1")}
                   className="flex justify-between items-center"

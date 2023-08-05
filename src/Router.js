@@ -27,15 +27,17 @@ import FiatWallet from "./Components/Wallet/FiatWallet";
 import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
 import NewWallet from "./Components/Wallet/NewWallet";
+import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferPage";
 import PointBalance from "./Components/Wallet/PointBalance";
+import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
 
 export const Router = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About-us" element={<AboutUs/>} />
-        <Route path="/Solutions" element={<Solution/>} />
+        <Route path="/About-us" element={<AboutUs />} />
+        <Route path="/Solutions" element={<Solution />} />
         <Route path="/our-services" element={<OurServices />} />
         <Route path="/VTU_DEV" element={<VTU_DEV />} />
         <Route path="/CardIssuing" element={<CardIssuing />} />
@@ -60,11 +62,13 @@ export const Router = () => {
         <Route path="/newPassword" element={<NewPassword />} />
         <Route path="/emailRoute" element={<VerifyViaEmail />} />
         <Route path="/smsRoute" element={<VerifyViaSms />} />
-        <Route path="/dashboard" element={<MainDashboard/>} />
-        <Route path="/wallet" element={<Wallet/>} />
-        <Route path="/fiat-wallet" element={<FiatWallet/>} />
-        <Route path="/new-wallet" element={<NewWallet/>} />
-        <Route path="/point-balance" element={<PointBalance/>} />
+        <Route path="/dashboard" element={<MainDashboard />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/fiat-wallet" element={<FiatWallet />} />
+        <Route path="/new-wallet" element={<NewWallet />} />
+        <Route path="/TransferPage" element={<TransferPage />} />
+        <Route path="/point-balance" element={<PointBalance />} />
+        <Route path="/ToMyAccount" element={<ToMyAccountPage />} />
       </Routes>
     </div>
   );
