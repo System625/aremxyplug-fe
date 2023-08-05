@@ -27,7 +27,7 @@ import FiatWallet from "./Components/Wallet/FiatWallet";
 import { AboutUs } from "./Components/Screens/AboutUs/AboutUs";
 import { Solution } from "./Components/Screens/Solutions/Solution";
 import NewWallet from "./Components/Wallet/NewWallet";
-
+import TopUpScreen from "./Components/Screens/topUP/TopUpScreen";
 export const Router = () => {
   return (
     <div>
@@ -63,6 +63,7 @@ export const Router = () => {
         <Route path="/wallet" element={<Wallet/>} />
         <Route path="/fiat-wallet" element={<FiatWallet/>} />
         <Route path="/new-wallet" element={<NewWallet/>} />
+        <Route path="/top-up" element={<TopUpScreen/>} />
       </Routes>
     </div>
   );

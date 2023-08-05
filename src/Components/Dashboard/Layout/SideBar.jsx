@@ -122,7 +122,8 @@ export const SideBar = () => {
                   />
                   <p>Wallet</p>
                 </Link>
-                <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+       <Link to="/top-up">
+       <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                     src="./Images/dashboardImages/topup.png"
@@ -130,6 +131,7 @@ export const SideBar = () => {
                   />
                   <p>Top Up</p>
                 </div>
+       </Link>
                 <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                   <img
                     className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
