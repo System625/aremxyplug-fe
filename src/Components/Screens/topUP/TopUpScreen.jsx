@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-
-import { TopBar } from "../../Dashboard/Layout/TopBar";
-import { SideBar } from "../../Dashboard/Layout/SideBar";
 import { ContextProvider } from "../../Context";
 import { useContext } from "react";
 import { useEffect } from "react";
 import { primaryColor } from "../cardIssuing/cardIssuing";
 import "./topUp.css";
 import WalletModal from "../../Wallet/WalletModal";
+import { DashBoardLayout } from "../../Dashboard/Layout/DashBoardLayout";
+import { Link } from "react-router-dom";
 
 // FUNDING METHODS DATA STARTS HERE
 const data = [
@@ -40,7 +39,7 @@ const data = [
 // FUNDING METHODS DATA ENDS HERE
 
 function TopUpScreen() {
-  const { setHideNavbar, toggleSideBar} =
+  const { setHideNavbar} =
     useContext(ContextProvider);
 
   const [paymentType, setPaymentType] = useState("fiat");
@@ -59,22 +58,11 @@ function TopUpScreen() {
   }, []);
 
   return (
-    <div>
-      {/* ==============TOP BAR========== */}
-      <TopBar />
+    <DashBoardLayout>
 
-      <div className="w-[100%] ">
-        {/* ============SIDE BAR========= */}
-        {toggleSideBar && (
-          <div className="absolute top-0 left-0 z-50">
-            <SideBar />
-          </div>
-        )}
-        <div
-          className={`${
-            toggleSideBar ? "lg:w-[73.5%] lg:float-right" : ""
-          } w-[] mx-[5%] mt-[8%] lg:mt-[3%] `}
-        >
+<div >
+  <div
+       >
           {/* TOP BANNER STARTS HERE */}
           <div>
             <img
@@ -149,8 +137,10 @@ md:rounded-tr-[6.875px] md:rounded-br-[6.875px] md:rounded-bl-[6.875px] ml-[40.8
             />
           </div>
 
-          {/* FUNDING METHODS STARTS HERE */}
-          {data.map((data, index) => (
+       <div className="flex flex-col justify-between h-[100vh] ">
+     <div>
+            {/* FUNDING METHODS STARTS HERE */}
+            {data.map((data, index) => (
             <div key={index.toString()} className="Style1 ">
               <div className="flex items-center">
                 <img src={data.image} alt="." className="Img1" />
@@ -168,17 +158,13 @@ md:rounded-tr-[6.875px] md:rounded-br-[6.875px] md:rounded-bl-[6.875px] ml-[40.8
           ))}
           {/* FUNDING METHODS STARTS HERE */}
 
-          <div className="flex justify-center items-end lg:mb-[20px] md:mb-[10px] mb-[10px] mt-[10px] md:mt-[unset] md:h-[500px]">
-            <div className="inline-flex">
-              <p className="textHelp">You need help?</p>
-              <div className="contactBtn">
-                <p className="textContact">Contact Us</p>
-              </div>
-            </div>
+     </div>
+     <div className='flex gap-2 justify-center items-center md:mt-40 mb-[60px] md:mb-[40px]'>
+            <h2 className='text-[8px] leading-[12px] lg:text-[12px]'>You need help?</h2>
+            <Link to={`/ContactUs`} className='text-[8px] leading-[12px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
           </div>
+       </div>
         </div>
-      </div>
-
       {showCryptoModal1 && (
         <WalletModal>
           <div className="w-full h-full">
@@ -206,8 +192,10 @@ md:rounded-tr-[6.875px] md:rounded-br-[6.875px] md:rounded-bl-[6.875px] ml-[40.8
             </div>
           </div>
         </WalletModal>
-      )}
-    </div>
+      )}</div>
+
+
+    </DashBoardLayout>
   );
 }
 
