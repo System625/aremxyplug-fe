@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import { TopBar } from "../../Dashboard/Layout/TopBar";
-import { SideBar } from "../../Dashboard/Layout/SideBar";
 import { ContextProvider } from "../../Context";
 import { useContext } from "react";
 import { useEffect } from "react";
@@ -42,7 +39,7 @@ const data = [
 // FUNDING METHODS DATA ENDS HERE
 
 function TopUpScreen() {
-  const { setHideNavbar, toggleSideBar} =
+  const { setHideNavbar} =
     useContext(ContextProvider);
 
   const [paymentType, setPaymentType] = useState("fiat");
