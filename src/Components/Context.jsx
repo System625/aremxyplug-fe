@@ -10,23 +10,9 @@ export const Context = ({ children }) => {
   const [hideNavbar, setHideNavbar] = useState(false);
   const [resetEmail, setResetEmail] = useState("");
   const [resetNumber, setResetNumber] = useState("");
-  // Select username or email ends here
 
-  // TRANSACTION PIN POP UP STATE STARTS HERE
-  // const [openTranspin, setOpenTranspin] = useState(false);
-  // TRANSACTION PIN POP UP STATE ENDS HERE
 
-  // TRANSACTION PIN SUCCESSFULL POP UP STATE STARTS HERE
-  // const [openTranspinSuccessful, setOpenTranspinSuccessful] = useState(false);
-  // TRANSACTION PIN SUCCESSFULL UP STATE ENDS HERE
 
-  // RESET TRANSACTION PIN  POP UP STATE STARTS HERE
-  // const [openResetTranspin, setOpenResetTranspin] = useState(false);
-  // RESET TRANSACTION SUCCESSFULL POP UP STATE ENDS HERE
-
-  // 2 STEP VERIFICATION  POP UP STATE STARTS HERE
-  // const [open2StepVerification, setOpen2StepVerification] = useState(false);
-  // 2 STEP VERIFICATION POP UP STATE ENDS HERE
 
   // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);

@@ -120,13 +120,13 @@ export const WalletInOutFlows = () => {
           },
         },
         grid: {
-          display: false,
+          // display: false,
         },
       },
 
       x: {
         grid: {
-          display: false,
+          // display: false,
         },
       },
     },
