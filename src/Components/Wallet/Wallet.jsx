@@ -110,6 +110,7 @@ const Wallet = () => {
         </div>
         {showCryptoModal &&
         <>
+        
           <WalletModal>
             <div className='w-full h-full'>
               <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
