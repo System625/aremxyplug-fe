@@ -124,17 +124,17 @@ export const SideBar = () => {
                   />
                   <p>Wallet</p>
                 </Link>
-       <Link to="/top-up">
-       <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
-                  <img
-                    className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                    src="./Images/dashboardImages/topup.png"
-                    alt="icon"
-                  />
-                  <p>Top Up</p>
-                </div>
-               </Link>
-                <Link to="/TransferPage">
+                <Link to="/top-up">
+                  <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
+                    <img
+                      className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                      src="./Images/dashboardImages/topup.png"
+                      alt="icon"
+                    />
+                    <p>Top Up</p>
+                  </div>
+                </Link>
+                <Link to="/money-transfer">
                   <div className="flex gap-[3.4px] items-center cursor-pointer lg:gap-[11px]">
                     <img
                       className="w-[8.3px] h-[8.3px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -310,14 +310,15 @@ export const SideBar = () => {
                       />
                       <div>Virtual Accounts</div>
                     </li>
-                    <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                   <Link to="/money-transfer">
+                   <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                       <img
                         className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
                         src="./Images/dashboardImages/sideArrow.png"
                         alt="/"
                       />
                       <div>Money Transfer</div>
-                    </li>
+                    </li></Link>
                     <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                       <img
                         className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
