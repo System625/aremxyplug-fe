@@ -54,7 +54,7 @@ const PasswordReset = () => {
   return (
     <>
         {/* tmobile screen view */}
-        <div className='md:hidden h-[1115px] relative w-[100%] xl:w-[85%] md:mx-[unset]'>
+        <div className='md:hidden h-[150vh] relative w-[100%] xl:w-[85%] md:mx-[unset]'>
             {showModal && <SecondModal value={selectionType} />}
             <div className='pt-[27%] pb-[33%] bg-primary'>
                 <h2 className='text-white font-bold text-[18.33px] leading-[27.5px] text-center'>Welcome to AremxyPlug!</h2>
