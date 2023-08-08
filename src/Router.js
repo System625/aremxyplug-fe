@@ -30,6 +30,7 @@ import NewWallet from "./Components/Wallet/NewWallet";
 import TopUpScreen from "./Components/Screens/topUP/TopUpScreen";
 import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferPage";
 import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
+import PointBalance from "./Components/Wallet/PointBalance";
 
 export const Router = () => {
   return (
@@ -67,6 +68,7 @@ export const Router = () => {
         <Route path="/top-up" element={<TopUpScreen />} />
         <Route path="/fiat-wallet" element={<FiatWallet />} />
         <Route path="/new-wallet" element={<NewWallet />} />
+        <Route path="/point-balance" element={<PointBalance/>} />
         <Route path="/money-transfer" element={<TransferPage />} />
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
       </Routes>

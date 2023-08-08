@@ -60,7 +60,7 @@ const PointBalance = () => {
                 
                 <div className="w-full h-[102.28px] lg:h-[186px] mt-12 flex flex-col justify-between md:h-[106.5px] lg:mt-20">
                 <div className='w-full grid grid-cols-3 gap-[10px] lg:gap-5 h-[78px] md:h-[90px] lg:h-[160px]'>
-                    <div className='rounded-[4px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#ced9ff] lg:rounded-[12px] lg:py-4 flex flex-col justify-between'>
+                    <div className='rounded-[5px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#ced9ff] lg:rounded-[12px] lg:py-4 flex flex-col justify-between'>
                         <h2 className='text-center text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>Total Transaction Points</h2>
                         <div className='flex gap-2 items-center justify-center mt-1 lg:mt-5'>
                         { refPoints ? <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>10,000.00</h2> : <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px] mt-1'>******</h2>}
@@ -70,7 +70,7 @@ const PointBalance = () => {
                             <Link className='inline-block py-[2px] px-1 rounded-[3px] bg-primary text-white text-[8px] leading-[12px] lg:text-[12px] lg:leading-[18px] lg:px-2 md:rounded-[6px]'>View Transaction</Link>
                         </div>
                     </div>
-                    <div className='rounded-[4px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#ffe7c9] lg:rounded-[12px] lg:py-4 flex flex-col justify-between'>
+                    <div className='rounded-[5px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#ffe7c9] lg:rounded-[12px] lg:py-4 flex flex-col justify-between'>
                         <h2 className='text-center text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>Total Referral Points</h2>
                         <div className='flex gap-2 items-center justify-center mt-1 lg:mt-5'>
                         {transPoints ? <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>10,000.00</h2> : <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px] mt-1'>******</h2>}
@@ -80,7 +80,7 @@ const PointBalance = () => {
                             <Link className='inline-block py-[2px] px-1 rounded-[3px] bg-primary text-white text-[8px] leading-[12px] lg:text-[12px] lg:leading-[18px] lg:px-2 md:rounded-[6px]'>View Referrals</Link>
                         </div>
                     </div>
-                    <div className='rounded-[4px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#a5ffcb] lg:py-4 lg:rounded-[12px] flex flex-col justify-between'>
+                    <div className='rounded-[5px] md:rounded-[8px] md:p-2 px-[3px] py-2 bg-[#a5ffcb] lg:py-4 lg:rounded-[12px] flex flex-col justify-between'>
                         <h2 className='text-center text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>Total Earned Points</h2>
                         <div className='flex gap-2 items-center justify-center mt-1 lg:mt-5'>
                             {earnPoints ? <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>10,000.00</h2> : <h2 className='text-[8.5px] leading-[13.5px] lg:text-[16px] lg:leading-[24px] mt-1'>******</h2>}

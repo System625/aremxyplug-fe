@@ -127,13 +127,13 @@ const AddWallet = ({onClick}) => {
           </div>
           <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Add Wallet</h2>
           <h2 className='text-[7px] leading-[10.5px] mb-[6px] text-center md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>This Wallet is currently not available.</h2>
-          <div className='flex justify-center items-center mt-[18%] lg:mt-[8%]'>
+          <div className='flex justify-center items-center mt-[10%] lg:mt-[8%]'>
             <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
               <img src="./Images/wallet/spinner.gif" alt=""/>
             </div>
           </div>
-          <div className='w-[85%] absolute bottom-[22px] lg:w-[93%]'>
-            <button className='w-full text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] lg:text-base lg:leading-[24px]' onClick={onClick}>Okay</button>
+          <div className='w-[85%] absolute bottom-[22px] lg:w-[93%] md:flex md:justify-center'>
+            <button className='w-full md:w-fit text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] lg:text-base lg:leading-[24px]' onClick={onClick}>Okay</button>
           </div>
         </div>
       </> 

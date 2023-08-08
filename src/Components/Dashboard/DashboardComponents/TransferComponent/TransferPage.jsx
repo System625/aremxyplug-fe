@@ -9,7 +9,7 @@ import { Modal } from "../../../Screens/Modal/Modal";
 
 export const TransferPage = () => {
   const { isDarkMode, toggleSideBar } = useContext(ContextProvider);
-  const [activeBtn, setActiveBtn] = useState([false, false]);
+  const [activeBtn, setActiveBtn] = useState([true, false]);
   const [fiatTopUp, setFiatTopUp] = useState(true);
   const [cryptoTopUp, setCryptoTopUp] = useState(false);
 
@@ -83,6 +83,7 @@ export const TransferPage = () => {
                   alt="/"
                 />
                 <Link to="/to-my-account">
+                  
                   <div>
                     <p className="text-[10px] md:text-[18px]">To My Account</p>
                     <p className="text-[8px] text-[#7c7c7c] md:text-[16px]">

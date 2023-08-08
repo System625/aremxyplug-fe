@@ -186,6 +186,7 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                 onChange={setOtp}
                 numInputs={4}
                 shouldAutoFocus={true}
+
                 inputStyle={{
                   color: "#403f3f",
                   width: 30,
@@ -193,7 +194,9 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                   borderRadius: 3,
                 }}
                 renderInput={(props) => (
-                  <input {...props} className="inputOTP mx-[3px]" />
+                  <input 
+                  
+                  {...props} className="inputOTP mx-[3px]" />
                 )}
               />
             </div>
@@ -219,7 +222,9 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                   borderRadius: 3,
                 }}
                 renderInput={(props) => (
-                  <input {...props} className="inputOTP mx-[3px] " />
+                  <input 
+                  type="password"
+                  {...props} className="inputOTP mx-[3px] " />
                 )}
               />
             </div>
@@ -310,7 +315,9 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                       borderRadius: 3,
                     }}
                     renderInput={(props) => (
-                      <input {...props} className="inputOTP mx-[3px]" />
+                      <input
+                      type="password"
+                      {...props} className="inputOTP mx-[3px]" />
                     )}
                   />
                   {/* Error message starts here */}
@@ -406,7 +413,9 @@ text-[10px] font-bold leading-[11.31px]  px-[25px] py-[8px] rounded-[3px] lg:rou
                       borderRadius: 3,
                     }}
                     renderInput={(props) => (
-                      <input {...props} className="inputOTP mx-[3px]" />
+                      <input 
+                      type="password"
+                      {...props} className="inputOTP mx-[3px]" />
                     )}
                   />
                   {/* Error message starts here */}
