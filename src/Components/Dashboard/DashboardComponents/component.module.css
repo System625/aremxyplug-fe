@@ -154,6 +154,20 @@
     rgba(0, 0, 0, 0.25);
 }
 
+.accountRecords {
+  display: inline-flex;
+  height: 250px;
+  width: 100%;
+  margin-top: 5%;
+  flex-direction: column;
+  align-items: center;
+  gap: 25.333px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 1.333333134651184px 1.333333134651184px 0px
+    rgba(0, 0, 0, 0.25);
+}
+
 /* ===================Tablet view ================ */
 @media (min-width: 820px) and (max-width: 1180px) {
   .feature {
