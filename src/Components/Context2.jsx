@@ -1,18 +1,19 @@
-import React, {createContext,} from "react";
+import React, { createContext } from "react";
+// import { useState } from "react";
 
 export const ContextProvider = createContext();
-export const Context2 = ({children}) => {
+export const Context2 = ({ children }) => {
+  
 
+  const hold = {
+   
+  };
 
-const hold = {
-
-}
-
-return (
+  return (
     <div>
-<ContextProvider.Provider value={hold}>
-    {children}
-</ContextProvider.Provider>
+      <ContextProvider.Provider value={hold}>
+        {children}
+      </ContextProvider.Provider>
     </div>
-)
-}
+  );
+};

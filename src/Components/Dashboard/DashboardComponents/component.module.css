@@ -168,6 +168,37 @@
     rgba(0, 0, 0, 0.25);
 }
 
+.accountRecords {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 5%;
+  background: #fff;
+  box-shadow: 0px 1.333333134651184px 1.333333134651184px 0px
+    rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  align-items: center;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 6%;
+  font-weight: bolder;
+}
+
+th{
+  border: 0.5px solid #0003;
+  border-bottom: hidden;
+  border-top: hidden;
+  text-align: center;
+  padding: 4px;
+}
+
+td{
+  border: 0.5px solid #0003;
+  padding: 18px 6px;
+}
+
 /* ===================Tablet view ================ */
 @media (min-width: 820px) and (max-width: 1180px) {
   .feature {
@@ -263,6 +294,27 @@
     height: 380px;
     border-radius: 8px;
     box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .countrySelect {
+    border-radius: 5px;
+    left: 78%;
+    width: 140px;
+   
+  }
+
+  .accountRecords {
+    height: 100%;
+  }
+  
+  th{
+    padding: 6px;
+  }
+  
+  td{
+    text-align: center;
+    border: 0.5px solid #0003;
+    padding: 18px 18px;
   }
 }
 
@@ -434,5 +486,22 @@
     height: 500px;
     position: absolute;
     top: 5%;
+  }
+
+  .countrySelect {
+    border-radius: 5px;
+    left: 77.5%;
+    width: 231px;
+   
+  }
+
+  td{
+    text-align: center;
+    border: 0.5px solid #0003;
+    padding: 18px 18px;
+  }
+
+  .accountRecords {
+    height: 100%;
   }
 }

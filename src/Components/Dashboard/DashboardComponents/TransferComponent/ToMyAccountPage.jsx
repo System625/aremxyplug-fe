@@ -46,7 +46,7 @@ export const ToMyAccountPage = () => {
 
         {/* =======================Tablet & Desktop view================== */}
         <div className="hidden md:flex mt-[5%] items-center md:gap-[8%] justify-between">
-          <div className="flex border w-[180px] rounded-[7px] h-[40px] items-center">
+          <div className="flex border w-[180px] rounded-[7px] h-[40px] items-center lg:w-[231px] lg:h-[41px] lg:rounded-[12px] lg:px-[5px]">
             <input
               className="text-[9px] w-[115px] ml-[2%] md:text-[14px] md:w-[150px] lg:text-[16px] lg:w-[100%]"
               type="search"
