@@ -151,7 +151,7 @@ md:rounded-tr-[6.875px] md:rounded-br-[6.875px] md:rounded-bl-[6.875px] ml-[40.8
 
           {/* FUNDING METHODS STARTS HERE */}
           {data.map((data, index) => (
-            <div key={index.toString()} className="Style1 ">
+            <div key={index.toString()} className="Style1 " onClick={() => console.log(index)}>
               <div className="flex items-center">
                 <img src={data.image} alt="." className="Img1" />
                 <div className="lg:ml-[10px] md:ml-[7px] ml-[4px]">

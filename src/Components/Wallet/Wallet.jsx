@@ -109,23 +109,22 @@ const Wallet = () => {
           </div>
         </div>
         {showCryptoModal &&
-        <>
-          <WalletModal>
-            <div className='w-full h-full'>
-              <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-              <div className='flex justify-center items-center mt-[16%] lg:mt-[20%]'>
-                <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
-                  <img src="./Images/wallet/comingSoon.png" alt=""/>
+          <>
+            <WalletModal>
+              <div className='w-full h-full'>
+                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
+                <div className='flex justify-center items-center mt-[16%] lg:mt-[20%]'>
+                  <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
+                    <img src="./Images/wallet/comingSoon.png" alt=""/>
+                  </div>
+                </div>
+                <div className='flex gap-[45px] absolute bottom-[22px] justify-center items-center md:gap-[20px] lg:w-[93%] lg:gap-[30px]' >
+                  <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowCryptoModal(false)}>Okay</button>
+                  <h2 className='text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                 </div>
               </div>
-              <div className='flex gap-[45px] absolute bottom-[22px] justify-center items-center md:gap-[20px] lg:w-[93%] lg:gap-[30px]' >
-                <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowCryptoModal(false)}>Okay</button>
-                <h2 className='text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
-              </div>
-            </div>
-           
-          </WalletModal>
-        </>
+            </WalletModal>
+          </>
         }
     </DashBoardLayout>
   );
