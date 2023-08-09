@@ -147,7 +147,7 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
             </p>
             <img
               src="Images/top_up/arrowR.png"
-              alt=" "
+              alt="/"
               className="ml-[1%] w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
             />
           </div>
@@ -173,7 +173,7 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
                   </div>
                   <img
                     src="Images/top_up/arrowR.png"
-                    alt=" "
+                    alt="/"
                     className="ml-[1%] w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
                   />
                 </div>
