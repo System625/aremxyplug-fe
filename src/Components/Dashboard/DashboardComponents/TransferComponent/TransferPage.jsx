@@ -9,7 +9,7 @@ import { Modal } from "../../../Screens/Modal/Modal";
 
 export const TransferPage = () => {
   const { isDarkMode, toggleSideBar } = useContext(ContextProvider);
-  const [activeBtn, setActiveBtn] = useState([false, false]);
+  const [activeBtn, setActiveBtn] = useState([true, false]);
   const [fiatTopUp, setFiatTopUp] = useState(true);
   const [cryptoTopUp, setCryptoTopUp] = useState(false);
 
@@ -23,8 +23,8 @@ export const TransferPage = () => {
         className={`${
           isDarkMode ? "" : ""
         } scroll-none mx-[%] mt-[10%] md:mt-[5%] ${
-          toggleSideBar ? "lg:mx-[0%]" : "lg:mx-0"
-        }`}
+          toggleSideBar ? "lg:mx-[0%] lg:mt-[1%]" : "lg:mx-0 lg:mt-[3%]"
+        } `}
       >
         <img
           className="w-[100%] h-[80px] md:h-[180px] lg:h-[230px]"
@@ -175,22 +175,23 @@ export const TransferPage = () => {
           </div>
         )}
 
+        {/* ============crypto transfer modal============= */}
         {cryptoTopUp && (
           <Modal>
             <div
               className={` mt-6 ${
                 isDarkMode ? "border bg-[#000]" : "bg-[#fff]"
-              } ${styles.cryptoTopUp}`}
+              } ${styles.cryptoTopUp} flex flex-col justify-between `}
             >
               <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
                 This Feature is Currently Not Available.
               </div>
               <img
-                className="mx-auto mt-[10%] w-[135px] h-[96px] md:w-[220px] md:h-[200px] md:mt-[5%] lg:w-[350px] lg:h-[280px] lg:mt-[5%]"
+                className="mx-auto mt-[] w-[135px] h-[96px] md:w-[220px] md:h-[200px] md:mt-[5%] lg:w-[350px] lg:h-[280px] lg:mt-[5%]"
                 src="./Images/Dashboardimages/Cryptocomingsoon.png"
                 alt="/"
               />
-              <div className="mx-[6%] flex flex-col gap-[5px] ">
+              <div className="mx-[6%] flex flex-col gap-[5px] pb-[5%]">
                 <div className="text-[8px] font-extrabold float-right ml-[80%] md:ml-[70%] md:text-[12px] lg:text-[13px] lg:ml-[80%]">
                   Coming soon...
                 </div>
