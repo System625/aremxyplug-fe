@@ -205,7 +205,7 @@ export const SideBar = () => {
                         src="./Images/dashboardImages/sideArrow.png"
                         alt="/"
                       />
-                      <div>Airtime Top-up</div>
+                      <Link to={'/airtime-topup'}>Airtime Top-up</Link>
                     </li>
                     <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                       <img

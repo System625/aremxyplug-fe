@@ -43,13 +43,13 @@ const PointBalance = () => {
             <div>
                 <div>
                 <div className="w-full h-[65.33px] md:h-[112.29px] lg:h-[196px] rounded-[7px] md:rounded-[11.5px] bg-[#94C1FF] flex px-[16px] lg:px-[50px] justify-between lg:rounded-[20px]">
-                <div className='py-[13px] lg:py-[40px]'>
-                    <h2 className='text-[8px] md:text-[13.75px] font-bold mb-3 lg:text-[24px] lg:mb-4'>POINT BALANCE.</h2>
-                    <h2 className='text-[6.6px] md:text-[11.46px] lg:text-[20px] lg:leading-[26px] mb-3'>The below point balances are your total earned points from all your transactions and referrals.</h2>
-                </div>
-                <div className='h-full lg:w-[254.8px]'>
-                    <img src='./Images/wallet/fiatBanner.png' alt="" className='h-full'/>
-                </div>
+                    <div className='py-[13px] lg:py-[40px]'>
+                        <h2 className='text-[8px] md:text-[13.75px] font-bold mb-3 lg:text-[24px] lg:mb-4'>POINT BALANCE.</h2>
+                        <h2 className='text-[6.6px] md:text-[11.46px] lg:text-[20px] lg:leading-[26px] mb-3'>The below point balances are your total earned points from all your transactions and referrals.</h2>
+                    </div>
+                    <div className='h-full lg:w-[254.8px]'>
+                        <img src='./Images/wallet/fiatBanner.png' alt="" className='h-full'/>
+                    </div>
                 </div>
                 <div className='lg:my-8 my-5 flex items-center gap-1'>
                     <h2 className='text-[8.62px] font-bold lg:text-[15px]'>Points Analysis</h2>
