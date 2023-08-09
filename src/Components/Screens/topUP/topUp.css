@@ -7,7 +7,20 @@
     border-radius: 4px; 
 background: #FFF;
 
-margin-top: 15px;
+
+}
+
+
+.Style11{
+    display: flex;
+    padding: 5px 12.666px 10.333px 4.998px; 
+    align-items: center; 
+    justify-content: space-between;
+    border:1.5px solid #FFF;
+    border-radius: 4px; 
+background: #000;
+
+
 }
 .Text1{
     color: #000;
@@ -30,6 +43,7 @@ margin-top: 15px;
     width: 12px;
     height: 12px; 
 }
+
 
 .textHelp{
     color: #000;
