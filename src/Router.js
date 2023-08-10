@@ -31,6 +31,7 @@ import TopUpScreen from "./Components/Screens/topUP/TopUpScreen";
 import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferPage";
 import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
 import PointBalance from "./Components/Wallet/PointBalance";
+import { PersonalAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/PersonalAccountPage";
 
 export const Router = () => {
   return (
@@ -71,6 +72,7 @@ export const Router = () => {
         <Route path="/point-balance" element={<PointBalance/>} />
         <Route path="/money-transfer" element={<TransferPage />} />
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
+        <Route path="/personal-account" element={<PersonalAccountPage/>} />
       </Routes>
     </div>
   );

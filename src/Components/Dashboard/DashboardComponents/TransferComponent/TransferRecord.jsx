@@ -6,11 +6,7 @@ import styles from "../../DashboardComponents/component.module.css";
 
 // ================Function for country select dropdown===================
 
-const CountrySelect = ({
-  onSelect,
-  selectedCountry,
-  countries,
-}) => {
+const CountrySelect = ({ onSelect, selectedCountry, countries }) => {
   const countryList = [
     {
       id: 1,
@@ -52,12 +48,13 @@ const CountrySelect = ({
 
   const [showList, setShowList] = useState(false);
   const [selected, setSelected] = useState(false);
-  const { setNoRecord, setAvailableAccount, image, setImage } =
+  const { setNoRecord, setAvailableAccount, image, setImage, setCode } =
     useContext(ContextProvider);
 
-  const handleOptionClick = (country, flag, id) => {
+  const handleOptionClick = (country, flag, id, code) => {
     onSelect(country);
     setImage(flag);
+    setCode(code)
     setShowList(false);
     setSelected(true);
     setNoRecord(id !== 1);
@@ -106,9 +103,8 @@ const CountrySelect = ({
               className="cursor-pointer border-b flex items-center p-1 gap-[5px] text-[9px] bg-[#fff] md:text-[14px] lg:text-[16px]"
               key={country.id}
               onClick={() =>
-                handleOptionClick(country.name, country.flag, country.id)
+                handleOptionClick(country.name, country.flag, country.id, country.code)
               }
-              
             >
               <img
                 className="w-[11px] h-[11px] lg:w-[29px] lg:h-[29px]"
@@ -129,7 +125,7 @@ export const TransferRecord = () => {
   const { isDarkMode } = useContext(ContextProvider);
   const { noRecord, availableAccount, image } = useContext(ContextProvider);
   const [selectedCountry, setSelectedCountry] = useState("");
-  const [activeButton, setActiveButtons] = useState([false, false]);
+  const [activeButton, setActiveButtons] = useState([true, false]);
 
   const handleCountrySelect = (country, id) => {
     setSelectedCountry(country);
@@ -207,47 +203,49 @@ export const TransferRecord = () => {
       )}
 
       {availableAccount && (
-        <table className="text-[7px] md:text-[12px] lg:text-[16px]">
-          <thead>
-            <tr className="bg-[#c3d9ff] lg:h-[47px]">
-              <th>Country</th>
-              <th>Currency</th>
-              <th>Bank Name</th>
-              <th>Account Name</th>
-              <th>Account Number</th>
-              <th>Reference No</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="">
-                <div className="flex gap-[3px] lg:gap-[10px]">
+        <Link to="/personal-account">
+          <table className="text-[7px] md:text-[12px] lg:text-[16px]">
+            <thead>
+              <tr className="bg-[#c3d9ff] lg:h-[47px]">
+                <th>Country</th>
+                <th>Currency</th>
+                <th>Bank Name</th>
+                <th>Account Name</th>
+                <th>Account Number</th>
+                <th>Reference No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="">
+                  <div className="flex gap-[3px] lg:gap-[10px]">
+                    <img
+                      className="w-[11px] h-[11px] lg:w-[24px] lg:h-[24px]"
+                      src={image}
+                      alt=""
+                    />{" "}
+                    <p> Nigeria</p>
+                  </div>
+                </td>
+                <td>NGN</td>
+                <td>GT Bank</td>
+                <td>Habib Kamaldeen</td>
+                <td>01234*****</td>
+                <td className="flex gap-[5px] lg:gap-[10px]">
+                  <p> AP-2023 0703-001 </p>
                   <img
-                    className="w-[11px] h-[11px] lg:w-[24px] lg:h-[24px]"
-                    src={image}
-                    alt=""
-                  />{" "}
-                  <p> Nigeria</p>
-                </div>
-              </td>
-              <td>NGN</td>
-              <td>GT Bank</td>
-              <td>Habib Kamaldeen</td>
-              <td>01234*****</td>
-              <td className="flex gap-[5px] lg:gap-[10px]">
-                <p> AP-2023 0703-001 </p>
-                <img
-                  className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
-                  src="./Images/Dashboardimages/arrowright.png"
-                  alt="/"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                    className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/Dashboardimages/arrowright.png"
+                    alt="/"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Link>
       )}
 
-      <div className="flex gap-[15px] justify-center items-center absolute top-[90%] left-[35%] lg:top-[220%] lg:left-[40%]">
+      <div className="flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
         <div className="text-[8px] md:text-[12px] lg:text-[16px]">
           You need help ?
         </div>
