@@ -84,8 +84,8 @@ const VirtualAccount = () => {
             }}
             >
               <div className='py-[13px] lg:py-[40px]'>
-                <h2 className='text-[8px] md:text-[13.75px] md:leading-[20.63px] font-bold mb-2 lg:text-[24px] lg:mb-4'>GLOBAL VIRTUAL ACCOUNTS</h2>
-                <h2 className='text-[6.6px] md:text-[11.46px] md:leading-[15px] lg:text-[20px] lg:leading-[26px] mb-3'>Please select the wallet currency to view the account details.
+                <h2 className='text-[#000] text-[8px] md:text-[13.75px] md:leading-[20.63px] font-bold mb-2 lg:text-[24px] lg:mb-4'>GLOBAL VIRTUAL ACCOUNTS</h2>
+                <h2 className='text-[#000] text-[6.6px] md:text-[11.46px] md:leading-[15px] lg:text-[20px] lg:leading-[26px] mb-3'>Please select the wallet currency to view the account details.
 
 </h2>
               </div>
