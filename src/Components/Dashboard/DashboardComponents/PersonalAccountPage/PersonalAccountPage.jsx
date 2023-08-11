@@ -9,7 +9,7 @@ export const PersonalAccountPage = () => {
   const { isDarkMode, image, code } = useContext(ContextProvider);
   return (
     <DashBoardLayout>
-      <div className="flex flex-col justify-between h-full">
+      <div className="flex flex-col justify-between h-full md:mt-[-4%]">
         <div>
           {" "}
           <img
@@ -17,23 +17,25 @@ export const PersonalAccountPage = () => {
             src="/Images/dashboardImages/ToMyAccount.png"
             alt="/"
           />
-          <div className="flex my-[5%] gap-11 font-extrabold">
+          <div className="flex my-[5%] gap-11 font-extrabold md:w-[80%]">
             <button
-              className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center`}
+              className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center md:w-[390px] lg:h-[41px]`}
             >
-              <h2 className="text-[9px]">Transfer Money To Account</h2>
+              <h2 className="text-[9px] md:text-[12px] lg:text-[16px] ">
+                Transfer Money To Account
+              </h2>
               <img
-                className="w-[11px] h-[11px] lg:w-[29px] lg:h-[29px]"
+                className="w-[11px] h-[11px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
                 src="/Images/dashboardImages/transfer-money.png"
                 alt=""
               />
             </button>
             <button
-              className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center`}
+              className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center md:w-[390px] lg:h-[41px]`}
             >
-              <h2 className="text-[9px]">Add Money To Wallet</h2>
+              <h2 className="text-[9px] md:text-[12px] lg:text-[16px]">Add Money To Wallet</h2>
               <img
-                className="w-[11px] h-[11px] lg:w-[29px] lg:h-[29px]"
+                className="w-[11px] h-[11px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
                 src="/Images/dashboardImages/add-money.png"
                 alt=""
               />
@@ -49,46 +51,89 @@ export const PersonalAccountPage = () => {
           </div>
           {/* ==================Account Details============================ */}
           <div className={`${styles.detailsBox}`}>
-            <div className="flex gap-8">
+            {/* ==================First line=============== */}
+            <div className="flex gap-8 md:w-[64%] md:gap-[10%] lg:gap-[80px]">
               <div
-                className={`${styles.boxes} h-[48px] w-full flex justify-between items-center px-[5%]`}
+                className={`${styles.boxes} h-[48px] w-full flex justify-between items-center px-[5%] md:items-start md:p-[2%] md:w-[350px] md:h-[88px]`}
               >
-                <div>
-                  <p className="text-[10px] font-extrabold">Country</p>
-                  <p className="text-[7px]">Nigeria</p>
+                <div className="flex flex-col md:gap-[10px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Country
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">Nigeria</p>
                 </div>
                 <img
-                  className="w-[16px] h-[16px] lg:w-[29px] lg:h-[29px]"
+                  className="w-[16px] h-[16px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
                   src={image}
                   alt="/"
                 />
               </div>
               <div
-                className={`${styles.boxes} w-full h-[48px] px-[5%] flex flex-col justify-center`}
+                className={`${styles.boxes} w-full h-[48px] px-[5%] flex flex-col justify-center md:items-start md:p-[2%] md:w-[350px] md:h-[88px] md:gap-[10px]`}
               >
-                <p className="text-[10px] font-extrabold">Currency</p>
-                <p className="text-[7px]">{code}</p>
+                <p className="text-[10px] font-extrabold md:text-[17px]">
+                  Currency
+                </p>
+                <p className="text-[7px] md:text-[12px]">{code}</p>
               </div>
             </div>
-            <div
-              className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
-            >
-              <div className="flex flex-col gap-[5px]">
-                <p className="text-[10px] font-extrabold">Email Address</p>
-                <p className="text-[7px]">Habib@gmail.com</p>
-              </div>
-              <img
-                className="w-[16px] h-[16px] lg:w-[29px] lg:h-[29px]"
-                src="./Images/Dashboardimages/email-address.png"
-                alt="/"
-              />
-            </div>
-            <div className="flex gap-8 ">
+            {/* ================Second line for Tablet view================== */}
+            <div className="md:flex md:gap-[6%] lg:gap-[80px]">
               <div
-                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
+                className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:p-2 md:h-[88px] md:gap-[10px]`}
+              >
+                <div className="flex flex-col gap-[5px] md:gap-[10px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Email Address
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">habib@gmail.com</p>
+                </div>
+                <img
+                  className="w-[16px] h-[16px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/email-address.png"
+                  alt="/"
+                />
+              </div>
+              <div
+                className={`${styles.boxes} hidden w-full h-[48px] md:flex justify-between px-[5%] pt-[3%] md:w-[350px] md:p-2 md:h-[88px]`}
+              >
+                <div className="flex flex-col gap-[5px] md:gap-[10px]">
+                  <p className="text-[10px] font-extrabold md:text-[15px]">
+                    Account Number/IBAN
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">0123456789</p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/iban.png"
+                  alt="/"
+                />
+              </div>
+              <div
+                className={`${styles.boxes} hidden w-full h-[48px] md:flex justify-between px-[5%] pt-[3%] md:w-[350px] md:p-2 md:h-[88px]`}
+              >
+                <div className="flex flex-col gap-[5px] md:gap-[10px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Account Name
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">Habib Kamaldeen</p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/account-name.png"
+                  alt="/"
+                />
+              </div>
+            </div>
+            {/* ====================Second Line for mobile view=============== */}
+            <div className="flex gap-8 md:hidden">
+              <div
+                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[4%] pt-[1%]`}
               >
                 <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold">Account Number</p>
+                  <p className="text-[9.5px] font-extrabold">
+                    Account Number/IBAN
+                  </p>
                   <p className="text-[7px]">0123456789</p>
                 </div>
                 <img
@@ -112,19 +157,41 @@ export const PersonalAccountPage = () => {
               </div>
             </div>
             <div
-              className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
+              className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:p-2 md:h-[88px] md:w-[350px] lg:w-[400px]`}
             >
-              <div className="flex flex-col gap-[5px]">
-                <p className="text-[10px] font-extrabold">Home Address</p>
-                <p className="text-[7px]">AC 123 AremxyPlug Street, Nigeria</p>
+              <div className="flex flex-col gap-[5px] md:gap-[10px]">
+                <p className="text-[10px] font-extrabold md:text-[17px]">
+                  Home Address
+                </p>
+                <p className="text-[7px] md:text-[12px]">
+                  AC 123 AremxyPlug Street, Nigeria
+                </p>
               </div>
               <img
-                className="w-[14px] h-[14px] lg:w-[29px] lg:h-[29px]"
+                className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
                 src="./Images/Dashboardimages/home-address.png"
                 alt="/"
               />
             </div>
-            <div className="flex gap-8">
+
+            {/* ====================== Third line ===================== */}
+            <div
+              className={`${styles.boxes} hidden w-[500px] h-[88px] md:flex justify-between p-2 lg:w-[670px]`}
+            >
+              <div className="flex flex-col gap-[10px]">
+                <p className="text-[17px] font-extrabold w-[%]">
+                  Swift Code/Sort Code/ Routine Number
+                </p>
+                <p className="text-[12px]">AREMXYYYY</p>
+              </div>
+              <img
+                className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                src="./Images/Dashboardimages/barcode.png"
+                alt="/"
+              />
+            </div>
+
+            <div className="flex gap-8 md:hidden">
               <div
                 className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[2%]`}
               >
@@ -154,24 +221,58 @@ export const PersonalAccountPage = () => {
                 />
               </div>
             </div>
-            <div
-              className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
-            >
-              <div className="flex flex-col gap-[5px]">
-                <p className="text-[10px] font-extrabold">
-                  Beneficiary Address
-                </p>
-                <p className="text-[7px]">AC 123 AremxyPlug Street, Nigeria</p>
-              </div>
-              <img
-                className="w-[14px] h-[14px] lg:w-[29px] lg:h-[29px]"
-                src="./Images/Dashboardimages/home-address.png"
-                alt="/"
-              />
-            </div>
-            <div className="flex gap-8">
+
+            {/* =====================Third line tablet======================== */}
+            <div className="hidden md:flex gap-[80px]">
               <div
-                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
+                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
+              >
+                <div className="flex flex-col gap-[5px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Bank Name
+                  </p>
+                  <p className="text-[7px] md:text-[12px] ">GT Bank</p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/bank-name.png"
+                  alt="/"
+                />
+              </div>
+              <div
+                className={`${styles.boxes} ${styles.boxes3} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
+              >
+                <div className="flex flex-col gap-[5px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Beneficiary Address
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">
+                    AC 123 AremxyPlug Street, Nigeria
+                  </p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/beneficiary-address.png"
+                  alt="/"
+                />
+              </div>
+              <div
+                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
+              >
+                <div className="flex flex-col gap-[5px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">Beneficiary City</p>
+                  <p className="text-[7px] md:text-[12px]">Kaduna City</p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:h-[20px] md:w-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/beneficiary.png"
+                  alt="/"
+                />
+              </div>
+            </div>
+            <div className="flex gap-8 md:hidden">
+              <div
+                className={`${styles.boxes}  w-full h-[48px] flex justify-between px-[5%] pt-[3%] `}
               >
                 <div className="flex flex-col gap-[5px]">
                   <p className="text-[10px] font-extrabold">Beneficiary City</p>
@@ -184,7 +285,7 @@ export const PersonalAccountPage = () => {
                 />
               </div>
               <div
-                className={`${styles.boxes} w-full h-[48px] flex justify-between gap-[] px-[5%] pt-[3%]`}
+                className={`${styles.boxes} w-full h-[48px] flex justify-between gap-[] px-[5%] pt-[3%] `}
               >
                 <div className="flex flex-col gap-[5px]">
                   <p className="text-[10px] font-extrabold">
@@ -199,40 +300,55 @@ export const PersonalAccountPage = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 lg:gap-[80px]">
               <div
-                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%]`}
+                className={`${styles.boxes} hidden w-full h-[48px] md:w-[350px] md:flex justify-between gap-[] px-[5%] pt-[3%] md:p-2 md:h-[88px]`}
               >
-                <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold">ZIP / Postcode</p>
-                  <p className="text-[7px]">235642</p>
+                <div className="flex flex-col gap-[5px] md:gap-[10px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    State or Province
+                  </p>
+                  <p className="text-[7px] md:text-[12px]">Kaduna City</p>
                 </div>
                 <img
-                  className="w-[14px] h-[14px] lg:w-[29px] lg:h-[29px]"
+                  className="w-[14px] h-[14px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
+                  src="./Images/Dashboardimages/direct-notification.png"
+                  alt="/"
+                />
+              </div>
+              <div
+                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
+              >
+                <div className="flex flex-col gap-[5px]">
+                  <p className="text-[10px] font-extrabold md:text-[17px]">ZIP / Postcode</p>
+                  <p className="text-[7px] md:text-[12px]">235642</p>
+                </div>
+                <img
+                  className="w-[14px] h-[14px] md:h-[20px] md:w-[20px] lg:w-[29px] lg:h-[29px]"
                   src="./Images/Dashboardimages/zip.png"
                   alt="/"
                 />
               </div>
               <div
-                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[4%]`}
+                className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[4%] md:w-[350px] md:h-[88px] md:p-2`}
               >
                 <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold">Reference Number</p>
-                  <p className="text-[7px]">AP-20230703-001 </p>
+                  <p className="text-[10px] font-extrabold md:text-[17px]">Reference Number</p>
+                  <p className="text-[7px] md:text-[12px]">AP-20230703-001 </p>
                 </div>
                 <img
-                  className="w-[14px] h-[14px] lg:w-[29px] lg:h-[29px]"
+                  className="w-[14px] h-[14px] md:h-[25px] md:w-[25px] lg:w-[29px] lg:h-[29px]"
                   src="./Images/Dashboardimages/reference.png"
                   alt="/"
                 />
               </div>
             </div>
           </div>
-          <div className="flex gap-8 my-[9%]">
-            <button className="text-[12px] font-extrabold h-[45px] bg-[#04177f] text-white w-full rounded-[6px]">
+          <div className="flex gap-8 my-[9%] md:w-[60%] lg:gap-1 lg:w-[54%]">
+            <button className="text-[12px] font-extrabold h-[45px] bg-[#04177f] text-white w-full rounded-[6px] md:w-[48%] md:text-[17px]">
               Edit Account Details
             </button>
-            <button className="text-[#F95252] text-[14px] w-full rounded-[6px] font-extrabold ">
+            <button className="text-[#F95252] text-[14px] w-full rounded-[6px] font-extrabold md:w-[48%] lg:text-[16px]">
               Delete Account
             </button>
           </div>
