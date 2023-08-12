@@ -34,6 +34,7 @@ import PointBalance from "./Components/Wallet/PointBalance";
 import VirtualAccount from "./Components/Screens/virtualAccount/VirtualAccount";
 import { PersonalAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/PersonalAccountPage";
 import AirtimeTopUp from "./Components/AirtimeTopUp/AirtimeTopUp";
+import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtualAccount";
 
 export const Router = () => {
   return (
@@ -77,6 +78,7 @@ export const Router = () => {
         <Route path="/virtual-account" element={<VirtualAccount />} />
         <Route path="/personal-account" element={<PersonalAccountPage/>} />
         <Route path="/airtime-topup" element={<AirtimeTopUp/>} />
+        <Route path="/ngn-virtual-account" element={<NgnVirtualAccount/>} />
       </Routes>
     </div>
   );
