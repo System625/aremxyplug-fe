@@ -92,7 +92,9 @@ function TopUpScreen() {
                   backgroundColor: primaryColor,
                 }}
               >
-                <p className="text-[#fff] text-[8px]  md:text-[18px] lg:text-[20px]">Fiat Topup</p>
+                <p className="text-[#fff] text-[8px]  md:text-[18px] lg:text-[20px]">
+                  Fiat Topup
+                </p>
               </div>
             ) : (
               <div
@@ -105,7 +107,9 @@ function TopUpScreen() {
                   backgroundColor: "rgba(146, 171, 254, 0.18)",
                 }}
               >
-                <p className="text-[#000] text-[8px]  md:text-[18px] lg:text-[20px]">Fiat Topup</p>
+                <p className="text-[#000] text-[8px]  md:text-[18px] lg:text-[20px]">
+                  Fiat Topup
+                </p>
               </div>
             )}
 
@@ -119,7 +123,9 @@ function TopUpScreen() {
                   backgroundColor: primaryColor,
                 }}
               >
-                <p className="text-[#fff] text-[8px]  md:text-[18px] lg:text-[20px]">Crypto Topup</p>
+                <p className="text-[#fff] text-[8px]  md:text-[18px] lg:text-[20px]">
+                  Crypto Topup
+                </p>
               </div>
             ) : (
               <div
@@ -134,7 +140,9 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
                   backgroundColor: "rgba(146, 171, 254, 0.18)",
                 }}
               >
-                <p className="text-[#000] text-[8px]  md:text-[18px] lg:text-[20px]">Crypto Topup</p>
+                <p className="text-[#000] text-[8px]  md:text-[18px] lg:text-[20px]">
+                  Crypto Topup
+                </p>
               </div>
             )}
           </div>
@@ -149,7 +157,7 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
             </p>
             <img
               src="Images/top_up/arrowR.png"
-              alt=" "
+              alt="/"
               className="ml-[1%] w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
             />
           </div>
@@ -161,7 +169,11 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
                 <Link to="/virtual-account">
                             <div key={index.toString()} className={` ${isDarkMode ? "Style11 ":"Style1 "} mt-[25px] lg:mt-[27px]`}>
                   <div className="flex items-center">
-                    <img src={data.image} alt="." className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]" />
+                    <img
+                      src={data.image}
+                      alt="."
+                      className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    />
                     <div className="lg:ml-[10px] md:ml-[7px] ml-[4px]">
                       <p className="text-[10px] md:text-[18px]">{data.title}</p>
                       <p className={`    ${isDarkMode ? "text-[#fff]":"text-[#7c7c7c]"} text-[8px]  md:text-[16px]`}> {data.content}</p>
@@ -169,7 +181,7 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
                   </div>
                   <img
                     src="Images/top_up/arrowR.png"
-                    alt=" "
+                    alt="/"
                     className="ml-[1%] w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
                   />
                 </div>

@@ -63,12 +63,12 @@ const FiatWallet = () => {
         setCurrentId(index);
         setClicked(!clicked);
       }
-
+      // check if the countries in the list is among the already existing countries
       const notAvailableCountries = ['United States', 'United Kingdom', 'Kenya', 'Australia', 'European Union']
       const notAvailable = notAvailableCountries.includes(selection);
   return (
     <DashBoardLayout>
-      {/* this is to make it display default if no election */}
+      {/* this is to make it display default if no selection then render otherwise when selected */}
       { selection === '' ?
         <>
         <div className='flex flex-col justify-between h-full'>

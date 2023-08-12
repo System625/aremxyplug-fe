@@ -144,6 +144,86 @@
   box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
 }
 
+.countrySelect {
+  border-radius: 5px;
+  color: #7c7c7c;
+  position: absolute;
+  left: 69%;
+  width: 95px;
+  box-shadow: 0px 1.627705693244934px 4.0692644119262695px 0px
+    rgba(0, 0, 0, 0.25);
+}
+
+.accountRecords {
+  display: inline-flex;
+  height: 250px;
+  width: 100%;
+  margin-top: 5%;
+  flex-direction: column;
+  align-items: center;
+  gap: 25.333px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 1.333333134651184px 1.333333134651184px 0px
+    rgba(0, 0, 0, 0.25);
+}
+
+.accountRecords {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 5%;
+  background: #fff;
+  box-shadow: 0px 1.333333134651184px 1.333333134651184px 0px
+    rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 6%;
+  font-weight: bolder;
+}
+
+th {
+  border: 0.5px solid #0003;
+  border-bottom: hidden;
+  border-top: hidden;
+  text-align: center;
+  padding: 4px;
+}
+
+td {
+  border: 0.5px solid #0003;
+  padding: 18px 6px;
+}
+
+.transferMoneyBtn {
+  border-radius: 4.763px;
+  background: #fff;
+  box-shadow: 0px 0px 3.969465970993042px 0px rgba(0, 0, 0, 0.25);
+}
+
+.boxes {
+  border-radius: 3.328px;
+  border: 0.555px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
+  background: #fff3e5;
+  grid-column: 0;
+}
+
+.detailsBox{
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: auto auto ; */
+  gap: 28px;
+}
+
+.boxes3{
+  grid-column: 1/3;
+
+}
+
 /* ===================Tablet view ================ */
 @media (min-width: 820px) and (max-width: 1180px) {
   .feature {
@@ -239,6 +319,26 @@
     height: 380px;
     border-radius: 8px;
     box-shadow: 0px 0px 9.217082977294922px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .countrySelect {
+    border-radius: 5px;
+    left: 78%;
+    width: 140px;
+  }
+
+  .accountRecords {
+    height: 100%;
+  }
+
+  th {
+    padding: 6px;
+  }
+
+  td {
+    text-align: center;
+    border: 0.5px solid #0003;
+    padding: 18px 18px;
   }
 }
 
@@ -405,11 +505,31 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
   }
 
-  .cryptoTopUp{
+  .cryptoTopUp {
     width: 562px;
     height: 500px;
     position: absolute;
     top: 5%;
   }
-  
+
+  .countrySelect {
+    border-radius: 5px;
+    left: 77.5%;
+    width: 231px;
+  }
+
+  td {
+    text-align: center;
+    border: 0.5px solid #0003;
+    padding: 18px 18px;
+  }
+
+  .accountRecords {
+    height: 100%;
+  }
+
+  .transferMoneyBtn {
+    border-radius:12px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  }
 }

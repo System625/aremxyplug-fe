@@ -11,9 +11,6 @@ export const Context = ({ children }) => {
   const [resetEmail, setResetEmail] = useState("");
   const [resetNumber, setResetNumber] = useState("");
 
-
-
-
   // TRANSACTION PIN POP UP STATE STARTS HERE
   const [openTranspin, setOpenTranspin] = useState(false);
   // TRANSACTION PIN POP UP STATE ENDS HERE
@@ -221,7 +218,6 @@ export const Context = ({ children }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-
     const {
       country,
       fullName,
@@ -232,8 +228,6 @@ export const Context = ({ children }) => {
       confirmPassword,
       checkbox,
     } = state;
-
-
 
     const { error } = schema.validate({
       fullName,
@@ -268,14 +262,14 @@ export const Context = ({ children }) => {
       });
 
       const data = {
-        fullname : fullName,
-        username : userName,
-        phone_number : phoneNumber,
+        fullname: fullName,
+        username: userName,
+        phone_number: phoneNumber,
         // iv_code : IVCode,
-        email : email,
-        password : password,
-        country : country,
-      }
+        email: email,
+        password: password,
+        country: country,
+      };
 
       const config = {
         headers: { "Content-Type": "Application/json" },
@@ -353,7 +347,15 @@ export const Context = ({ children }) => {
 
   const volumeValueToggle = () => {
     SetIsValue(!isValue);
-  }
+  };
+  // =============End Dashboard====================
+
+  // ==============Start Transfer page=============
+  const [noRecord, setNoRecord] = useState(true);
+  const [availableAccount, setAvailableAccount] = useState(false);
+  const [image, setImage] = useState("");
+  const [code, setCode] = useState("");
+  // ==========End Transfer page=============
 
   const hold = {
     firstDrop,
@@ -475,9 +477,19 @@ export const Context = ({ children }) => {
     volumeValueToggle,
     isValue,
 
-
     // Login
-    showModal2, setShowModal2
+    showModal2,
+    setShowModal2,
+
+    // =========transferpages===========
+    noRecord,
+    setNoRecord,
+    availableAccount,
+    setAvailableAccount,
+    image,
+    setImage,
+    code,
+    setCode,
   };
 
   return (
