@@ -354,6 +354,7 @@ export const Context = ({ children }) => {
   const [noRecord, setNoRecord] = useState(true);
   const [availableAccount, setAvailableAccount] = useState(false);
   const [image, setImage] = useState("");
+  const [code, setCode] = useState("");
   // ==========End Transfer page=============
 
   const hold = {
@@ -486,7 +487,9 @@ export const Context = ({ children }) => {
     availableAccount,
     setAvailableAccount,
     image,
-    setImage
+    setImage,
+    code,
+    setCode,
   };
 
   return (
