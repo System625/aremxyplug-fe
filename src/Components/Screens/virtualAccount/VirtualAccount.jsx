@@ -1,22 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { DashBoardLayout } from '../../Dashboard/Layout/DashBoardLayout';
 import { Link } from 'react-router-dom';
-import AddWallet from '../../Wallet/AddWallet';
+
 import { ContextProvider } from '../../Context';
+import TopupModal from '../../topup/TopupModal';
  
 
 const VirtualAccount = () => {
-  const [ setShowModal] = useState(false);
-  const [clicked, setClicked] = useState(false);
-  const [currentId, setCurrentId] = useState(null);
-  const [ setSelection] = useState('');
-  const [addWalletModal, setAddWalletModal] = useState(false);
 
 
-  const { isDarkMode } = useContext(ContextProvider);
 
-
-  const amt = 10000
 
     const countryList = [
         {
@@ -57,23 +50,22 @@ const VirtualAccount = () => {
         },
       ];
 
-      const handleSelection =(value)=> {
-        setSelection(value);
-        setShowModal(true);
-      }
 
-      const displayMoney =(index)=> {
-        setCurrentId(index);
-        setClicked(!clicked);
-      }
 
-    //   const notAvailableCountries = ['United States', 'United Kingdom', 'Kenya', 'Australia', 'European Union']
-    //   const notAvailable = notAvailableCountries.includes(selection);
+
+      const [showCryptoModal1, setShowCryptoModal1] = useState(false);
+
+
+      const { isDarkMode } = useContext(ContextProvider);
+    
+    
+
+
   return (
     <DashBoardLayout>
       {/* this is to make it display default if no election */}
      
-        <>
+      
         <div className='flex flex-col justify-between h-full'>
          
           <div>
@@ -124,17 +116,22 @@ const VirtualAccount = () => {
               </div>
               <div className="flex flex-col gap-2">
                 {countryList.map((country) => (
-                  <div className="grid grid-cols-3 text-[7px] leading-[10.5px] pb-[8px] md:text-[10px] md:leading-[15px] border-b last:border-b-0 last:pb-0 lg:text-[16px] lg:leading-[24px] cursor-pointer lg:pb-3 lg:pt-2" key={country.id}>
+                  <Link  
+                  key={country.id} 
+                  to={`${country.code === "NGN" ? "/ngn-virtual-account": "" }`}
+                  onClick={() => country.code !== "NGN" && setShowCryptoModal1(true)}
+                  >
+                  <div className="grid grid-cols-3 text-[7px] leading-[10.5px] pb-[8px] md:text-[10px] md:leading-[15px] border-b last:border-b-0 last:pb-0 lg:text-[16px] lg:leading-[24px] cursor-pointer lg:pb-3 lg:pt-2">
                     <h2 className='text-slate-400'>{country.name}</h2>
-                    <div className='flex gap-1 items-center justify-center lg:gap-2' onClick={() => handleSelection(country.name)}>
+                    <div className='flex gap-1 items-center justify-center lg:gap-2' >
                       <div className='w-[10px] h-[10px] md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] rounded-full overflow-hidden flex items-center justify-center'>
                         <img src={country.flag} alt="" className='w-full h-full object-cover'/>
                       </div>
                       <h2 className='text-right'>{country.code}</h2>
                     </div>
                     <div className='flex gap-1 justify-end items-center text-slate-400'>
-                      { currentId === country.id && clicked ? <h2>{country.code}{amt}</h2> : <h2>Account</h2>}
-                      <button onClick={()=> displayMoney(country.id)}>
+                      <h2>Account</h2>
+                      <button >
                       <img
               src="Images/top_up/arrowR.png"
               alt=" "
@@ -143,6 +140,7 @@ const VirtualAccount = () => {
                       </button>
                     </div>
                   </div>
+                  </Link>
                 ))}
               </div>
               <div className="border-t -mx-2 px-2 text-right pt-1 md:pt-2 lg:pt-3 lg:pb-2 flex justify-end cursor-pointer gap-2 items-center">
@@ -180,9 +178,43 @@ const VirtualAccount = () => {
               </Link>
             </div>
         </div>
-        {addWalletModal && <AddWallet onClick={() => setAddWalletModal(false)}/>}
-        </> 
+      
+      
+        {showCryptoModal1 && (
+          <TopupModal>
+            <div className={`${isDarkMode ? "bg-[#000] border":"bg-[#fff]"} w-[90%] md:w-[70%] lg:w-[50%] pb-[33px] rounded-[8px] md:rounded-[11.5px]`} >
+              <h2 className="text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary
+              mt-[20px]
+              ">
+                This Currency is Currently Not Available.
+              </h2>
+              <div className="flex justify-center items-center mt-[16%] lg:mt-[10%] ">
+                <div className="w-[110px] h-[110px] md:w-[260px] md:h-[260px]">
+                  <img src="./Images/virtual-account/phone.png" alt="" />
+                </div>
+              </div>
+       
+              <div className="mx-[6%] flex flex-col gap-[5px] ">
+                <div className="text-[8px] font-extrabold md:text-[12px] lg:text-[13px] w-full text-right md:mb-[-20px] lg:mb-[-40px] ">
+                  Coming soon...
+                </div>
+                <div
+                  onClick={() => {
+                    setShowCryptoModal1((prev) => !prev);
+                    
+                  }}
+                  className={` ${
+                    isDarkMode ? "border" : "bg-[#04177f] "
+                  } cursor-pointer     text-white text-[10px] h-[40px] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[40%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                >
+                  Okay
+                </div>
+              </div>
 
+
+            </div>
+          </TopupModal>
+        )}
       
     </DashBoardLayout>
   );

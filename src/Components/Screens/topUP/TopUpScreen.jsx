@@ -217,21 +217,7 @@ cursor-pointer py-[8.17px] px-[14%] rounded-tr-[5px] rounded-br-[5px] rounded-bl
                   <img src="./Images/wallet/comingSoon.png" alt="" />
                 </div>
               </div>
-              {/* <div className="flex flex-col-reverse md:flex md:flex-row   justify-center items-center md:gap-[20px] lg:w-[93%] lg:gap-[30px] mt-[5%] md:mt-[15%] lg:mt-[10%]">
-                <button
-                  className="w-[100%] md:w-[unset] text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]"
-                  onClick={() => {
-                    setShowCryptoModal1((prev) => !prev);
-                    setPaymentType("fiat");
-                  }}
-                >
-                  Okay
-                </button>
-                <h2 className="text-[#000] w-full md:w-[unset] text-right text-[10px] leading-[15px] md:px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]">
-                  Coming soon...
-                </h2>
-              </div> */}
-
+       
               <div className="mx-[6%] flex flex-col gap-[5px] ">
                 <div className="text-[8px] font-extrabold md:text-[12px] lg:text-[13px] w-full text-right md:mb-[-20px] lg:mb-[-40px] ">
                   Coming soon...
