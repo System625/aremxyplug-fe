@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import { Modal } from "../../../../Screens/Modal/Modal";
+import { useNavigate } from "react-router-dom";
 
 export const PersonalAccountForm = () => {
   const countryList = [
@@ -68,8 +69,9 @@ export const PersonalAccountForm = () => {
     checkbox: false,
   });
   // const [checkboxChecked, setCheckboxChecked] = useState(false);
+  // console.log(state);
 
-  console.log(state);
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -83,13 +85,9 @@ export const PersonalAccountForm = () => {
   //   setState({ ...state, currency: value });
   // };
 
-  function reloadPage() {
-    window.location.reload();
-  }
-
-  function goBack() {
-    window.history.back();
-  }
+  // function reloadPage() {
+  //   window.location.reload();
+  // }
 
   const handleCountryClick = (name, flag, id, code) => {
     setFlag(flag);
@@ -102,13 +100,15 @@ export const PersonalAccountForm = () => {
 
   return (
     <>
-      <div className="mt-[4%] grid grid-cols-2 gap-[7%] h-[]">
+      <div className="mt-[4%] grid grid-cols-2 gap-[7%] h-[] lg:w-[90%]">
         {/* =====================Country Input========================= */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Select Country</p>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Select Country
+          </p>
           <div
             onClick={() => setShowList(!showList)}
-            className="border rounded-[5px] h-[25px] flex justify-between items-center p-1"
+            className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]"
           >
             {selected ? (
               <div className="flex gap-[7px] items-center">
@@ -117,7 +117,10 @@ export const PersonalAccountForm = () => {
                   src={flag}
                   alt=""
                 />
-                <p className="text-[10px] font-extrabold"> {countryName}</p>
+                <p className="text-[10px] font-extrabold lg:text-[14px]">
+                  {" "}
+                  {countryName}
+                </p>
               </div>
             ) : (
               <p></p>
@@ -129,11 +132,11 @@ export const PersonalAccountForm = () => {
             />
           </div>
           {showList && (
-            <div className="absolute top-[40.5%] rounded shadow-xl border w-[41.5%]">
+            <div className="absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[41.5%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]">
               {" "}
               {countryList.map((country) => (
                 <div
-                  className=" cursor-pointer border-b flex items-center p-2 gap-[5px] text-[9px] bg-[#fff] md:text-[14px] lg:text-[16px]"
+                  className=" cursor-pointer border-b flex items-center p-2 gap-[5px] text-[9px]  md:text-[14px] lg:text-[16px]"
                   key={country.id}
                   onClick={() =>
                     handleCountryClick(
@@ -158,13 +161,15 @@ export const PersonalAccountForm = () => {
 
         {/* ==================Currency Input============================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Select Currency</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Select Currency
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             {/* <p className="text-[10px] font-extrabold">{countryCode}</p> */}
             <input
               // onSelect={handleCurrencyChange}
               name="currency"
-              className="text-[10px] font-extrabold outline-none"
+              className="text-[10px] font-extrabold outline-none lg:text-[14px]"
               type="text"
               selected={state.currency}
               value={countryCode}
@@ -174,13 +179,15 @@ export const PersonalAccountForm = () => {
 
         {/* ========================Email Address Input ================ */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Email Address</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Email Address
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="email"
               value={state.email}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="email"
             />
           </div>
@@ -188,13 +195,15 @@ export const PersonalAccountForm = () => {
 
         {/* ==========================House Address====================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">House Address</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            House Address
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="houseAddress"
               value={state.houseAddress}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -202,13 +211,15 @@ export const PersonalAccountForm = () => {
 
         {/* ============================Account Name====================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Account Name</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Account Name
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="accountName"
               value={state.accountName}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -216,13 +227,15 @@ export const PersonalAccountForm = () => {
 
         {/* =========================Account Number / IBAN==================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Account Number / IBAN</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Account Number / IBAN
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="accountNumber"
               value={state.accountNumber}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="number"
             />
           </div>
@@ -230,15 +243,15 @@ export const PersonalAccountForm = () => {
 
         {/* ===================Swift Code/ Sort Code / Routine Number ============ */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
             Swift Code/ Sort Code / Routine Number
           </p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="swiftCode"
               value={state.swiftCode}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="number"
             />
           </div>
@@ -246,13 +259,13 @@ export const PersonalAccountForm = () => {
 
         {/* ===========================Bank Name============================ */}
         <div className={`flex justify-end ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold">Bank Name</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="bankName"
               value={state.bankName}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -260,13 +273,15 @@ export const PersonalAccountForm = () => {
 
         {/* =====================Beneficiary Address=========================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Beneficiary Address</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Beneficiary Address
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="beneficiaryAddress"
               value={state.beneficiaryAddress}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -274,13 +289,15 @@ export const PersonalAccountForm = () => {
 
         {/* ===========================Beneficiary City======================= */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">Beneficiary City</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Beneficiary City
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="beneficiaryCity"
               value={state.beneficiaryCity}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -288,13 +305,15 @@ export const PersonalAccountForm = () => {
 
         {/* ================================State or Province======================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">State or Province</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            State or Province
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="stateOrProvince"
               value={state.stateOrProvince}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
@@ -302,13 +321,15 @@ export const PersonalAccountForm = () => {
 
         {/* ============================ZIP / Postcode=============================== */}
         <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold">ZIP / Postcode</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1">
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            ZIP / Postcode
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
               name="zipCode"
               value={state.zipCode}
-              className="text-[10px] w-[100%] h-[100%] outline-none"
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="number"
             />
           </div>
@@ -365,14 +386,14 @@ export const PersonalAccountForm = () => {
               // onClick={handleSubmit}
               type="submit"
               style={{ backgroundColor: "#0008" }}
-              className="hover:cursor-pointer px-[20px] py-1 flex justify-center item-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto text-center mt-[7%] text-[9px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
+              className="hover:cursor-pointer px-[20px] py-1 flex justify-center items-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:w-[] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
             >
               Add Account
             </button>
             <button
-              onClick={goBack}
+              onClick={() => navigate("/to-my-account")}
               type="submit"
-              className="hover:cursor-pointer font-extrabold px-[35px] flex justify-center item-center mb-[5%] lg:mb-[2%]  text-[#F95252] mx-auto text-center mt-[7%] text-[12px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
+              className="hover:cursor-pointer font-extrabold px-[35px] flex justify-center item-center mb-[5%] lg:mb-[2%]  text-[#F95252] mx-auto text-center mt-[7%] text-[12px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[16px] lg:rounded-lg"
             >
               Cancel
             </button>
@@ -381,7 +402,7 @@ export const PersonalAccountForm = () => {
 
         {currencyAvailable && (
           <Modal>
-            <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[50px]">
+            <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[50px] lg:w-[40%] lg:py-[3%] lg:rounded-[7px]">
               <p className="text-[12px] text-[#04177f] font-extrabold">
                 This Currency is Currently Not Available.
               </p>
@@ -390,11 +411,11 @@ export const PersonalAccountForm = () => {
                 src="/Images/addAccountImages/account-unavailable.png"
                 alt=""
               />
-              <p className="absolute top-[66%] right-[15%] text-[8px]">
+              <p className="absolute top-[66%] right-[15%] text-[8px] lg:text-[12px] lg:right-[35%]">
                 Coming Soon...
               </p>
               <div
-                onClick={reloadPage}
+                onClick={() => navigate("/to-my-account")}
                 className={` ${
                   isDarkMode ? "border" : "bg-[#04177f] "
                 } cursor-pointer text-white text-[10px] h-[25px] w-[25%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}

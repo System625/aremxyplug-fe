@@ -497,4 +497,8 @@ td {
     padding: 18px 18px;
   }
 
+  .accountRecords{
+    height: 100%;
+  }
+
 }
