@@ -59,7 +59,7 @@ const Wallet = () => {
                 <div className='md:w-[130px] w-[80.24px] flex justify-center items-center rounded-[5px] lg:rounded-[9px] lg:w-[172px]' style={{boxShadow:`0px 0px 11.495177268981934px 0px #00000040`}}>
                   <Link to={`/fiat-wallet`} className='text-center'>
                     <div className='w-[13.79px] h-[13.79px] mx-auto lg:h-[24px] lg:w-[24px]'>
-                      <img src="./Images/wallet/walletIcon.png" alt="icon" className='w-full'/>
+                      <img src="./Images/wallet/wallet-3.svg" alt="icon" className='w-full'/>
                     </div>
                     <h2 className='text-[10px] leading-[15px] mt-1 lg:text-[16px] lg:mt-2 md:text-[12px] md:leading-[18px]'>Fiat Wallets</h2>
                    </Link>
@@ -69,7 +69,7 @@ const Wallet = () => {
                   onClick={() => setShowCryptoModal(true)}>
                   <div className='text-center'>
                     <div className='w-[13.79px] h-[13.79px] mx-auto lg:h-[24px] lg:w-[24px]'>
-                      <img src="./Images/wallet/cryptoIcon.png" alt="icon" className='w-full'/>
+                      <img src="./Images/wallet/wallet-add.svg" className='w-full'alt="icon"/>
                     </div>
                     <h2 className='text-[10px] leading-[15px] mt-1 lg:text-[16px] lg:mt-2 md:text-[12px] md:leading-[18px]'>Crypto Wallets</h2>
                   </div>
@@ -77,7 +77,7 @@ const Wallet = () => {
                 <div className='md:w-[130px] w-[80.24px] flex justify-center items-center rounded-[5px] lg:rounded-[9px] lg:w-[172px]' style={{boxShadow:`0px 0px 11.495177268981934px 0px #00000040`}}>
                   <Link className='text-center' to={`/point-balance`}>
                     <div className='w-[13.79px] h-[13.79px] mx-auto lg:h-[24px] lg:w-[24px]'>
-                      <img src="./Images/wallet/balanceIcon.png" alt="icon" className='w-full'/>
+                      <img src="./Images/wallet/wallet.svg" alt="icon" className='w-full' />
                     </div>
                     <h2 className='text-[10px] mt-1 lg:text-[16px] lg:mt-2 md:text-[12px] md:leading-[18px]'>Points Balance</h2>
                   </Link>
@@ -108,19 +108,20 @@ const Wallet = () => {
             <Link to={`/ContactUs`} className='text-[8px] leading-[12px] text-white bg-primary px-2 py-1 rounded-full lg:text-[8px]'>Contact Us</Link>
           </div>
         </div>
+        {/* crypto popup */}
         {showCryptoModal &&
           <>
             <WalletModal>
-              <div className='w-full h-full'>
-                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-                <div className='flex justify-center items-center mt-[16%] lg:mt-[20%]'>
-                  <div className='w-[110px] h-[110px] lg:w-[220px] lg:h-[220px]'>
+              <div className='w-full h-full flex flex-col justify-between'>
+                <h2 className='text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] md:pt-[3%]'>This Feature is Currently Not Available.</h2>
+                <div className='flex justify-center items-center mt-[10%] lg:mt-[5%]'>
+                  <div className='mx-auto w-[135px] h-[96px] md:w-[171px] md:h-[148px] md:mt-[0] lg:w-[350px] lg:h-[280px] lg:mt-[5%]'>
                     <img src="./Images/wallet/comingSoon.png" alt=""/>
                   </div>
                 </div>
-                <div className='flex gap-[45px] absolute bottom-[22px] justify-center items-center md:gap-[20px] lg:w-[93%] lg:gap-[30px]' >
-                  <button className='text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowCryptoModal(false)}>Okay</button>
-                  <h2 className='text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
+                <div className='flex md:justify-center md:items-center flex-col-reverse md:flex-row gap-0 pb-[5%] mt-[3%]' >
+                  <button className='w-full md:w-fit text-[10px] leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowCryptoModal(false)}>Okay</button>
+                  <h2 className='text-right text-[10px] leading-[15px] px-[28.6px] py-[10px] rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                 </div>
               </div>
             </WalletModal>
