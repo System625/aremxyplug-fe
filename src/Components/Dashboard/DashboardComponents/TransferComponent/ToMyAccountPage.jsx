@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { DashBoardLayout } from "../../Layout/DashBoardLayout";
 import { TransferRecord } from "./TransferRecord";
 
@@ -26,14 +27,16 @@ export const ToMyAccountPage = () => {
           />
         </div>
         <div className="md:hidden flex mb-[4%] items-center md:gap-[8%] justify-between">
-          <div className="flex items-center gap-[4px] bg-[#04177f] text-white text-[9px] h-[20px] w-[136px] rounded-[5px] justify-center font-extrabold">
-            <p>Add New Account</p>
-            <img
-              className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[24px] lg:h-[24px]"
-              src="./Images/dashboardImages/add-account.png"
-              alt="topup"
-            />
-          </div>
+          <Link to="/add-account">
+            <div className="flex items-center gap-[4px] bg-[#04177f] text-white text-[9px] h-[20px] w-[136px] rounded-[5px] justify-center font-extrabold">
+              <p>Add New Account</p>
+              <img
+                className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[24px] lg:h-[24px]"
+                src="./Images/dashboardImages/add-account.png"
+                alt="topup"
+              />
+            </div>
+          </Link>
           <div className="flex items-center gap-[5px] bg-[#04177f] text-white text-[9px] h-[20px] w-[136px] rounded-[5px] justify-center font-extrabold ">
             <p>Refresh Account</p>
             <img

@@ -72,18 +72,19 @@ export const TransferPage = () => {
           {/* =================Trasnfer buttons==================== */}
           {fiatTransfer && (
             <div className="mt-[10%] flex flex-col gap-[20px] md:mt-[8%] md:gap-[30px]">
-              <div
-                className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
-                  styles.toMyAcct
-                }`}
-              >
-                <div className="flex gap-[5px] items-center">
-                  <img
-                    className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
-                    src="Images/Dashboardimages/tf1.png"
-                    alt="/"
-                  />
-                  <Link to="/to-my-account">
+              <Link to="/to-my-account">
+                <div
+                  className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
+                    styles.toMyAcct
+                  }`}
+                >
+                  <div className="flex gap-[5px] items-center">
+                    <img
+                      className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                      src="Images/Dashboardimages/tf1.png"
+                      alt="/"
+                    />
+
                     <div>
                       <p className="text-[10px] md:text-[18px]">
                         To My Account
@@ -93,14 +94,14 @@ export const TransferPage = () => {
                         account.
                       </p>
                     </div>
-                  </Link>
+                  </div>
+                  <img
+                    className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/Dashboardimages/arrowright.png"
+                    alt="/"
+                  />
                 </div>
-                <img
-                  className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
-                  src="./Images/Dashboardimages/arrowright.png"
-                  alt="/"
-                />
-              </div>
+              </Link>
               <div
                 className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
                   styles.toMyAcct

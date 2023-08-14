@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { ContextProvider } from "../../../Context";
 import { DashBoardLayout } from "../../Layout/DashBoardLayout";
-import styles from "../../DashboardComponents/component.module.css";
+import styles from "../TransferComponent/transfer.module.css";
 import { Link } from "react-router-dom";
 
 export const PersonalAccountPage = () => {
   const { isDarkMode, image, code } = useContext(ContextProvider);
+  const [tfPopUp, setTfPopUp] = useState(true);
   return (
     <DashBoardLayout>
-      <div className="flex flex-col justify-between h-full md:mt-[-4%]">
+      <div className=" flex flex-col justify-between h-full md:mt-[-4%]">
         <div>
           {" "}
           <img
@@ -19,6 +20,7 @@ export const PersonalAccountPage = () => {
           />
           <div className="flex my-[5%] gap-11 font-extrabold md:w-[80%]">
             <button
+              onClick={()=>setTfPopUp(!tfPopUp)}
               className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center md:w-[390px] lg:h-[41px]`}
             >
               <h2 className="text-[9px] md:text-[12px] lg:text-[16px] ">
@@ -30,10 +32,17 @@ export const PersonalAccountPage = () => {
                 alt=""
               />
             </button>
+
+            {/* ===================Transfer Money To Account pop up====================== */}
+            {tfPopUp && <div className={styles.transferMoneyPop}></div>}
+            {/* ===================End of Transfer Money To Account pop up====================== */}
+
             <button
               className={`${styles.transferMoneyBtn} flex gap-[5px] w-[100%] h-[26px] justify-center items-center md:w-[390px] lg:h-[41px]`}
             >
-              <h2 className="text-[9px] md:text-[12px] lg:text-[16px]">Add Money To Wallet</h2>
+              <h2 className="text-[9px] md:text-[12px] lg:text-[16px]">
+                Add Money To Wallet
+              </h2>
               <img
                 className="w-[11px] h-[11px] md:w-[20px] md:h-[20px] lg:w-[29px] lg:h-[29px]"
                 src="/Images/dashboardImages/add-money.png"
@@ -260,7 +269,9 @@ export const PersonalAccountPage = () => {
                 className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
               >
                 <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold md:text-[17px]">Beneficiary City</p>
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Beneficiary City
+                  </p>
                   <p className="text-[7px] md:text-[12px]">Kaduna City</p>
                 </div>
                 <img
@@ -320,7 +331,9 @@ export const PersonalAccountPage = () => {
                 className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[3%] md:w-[350px] md:h-[88px] md:p-2`}
               >
                 <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold md:text-[17px]">ZIP / Postcode</p>
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    ZIP / Postcode
+                  </p>
                   <p className="text-[7px] md:text-[12px]">235642</p>
                 </div>
                 <img
@@ -333,11 +346,13 @@ export const PersonalAccountPage = () => {
                 className={`${styles.boxes} w-full h-[48px] flex justify-between px-[5%] pt-[4%] md:w-[350px] md:h-[88px] md:p-2`}
               >
                 <div className="flex flex-col gap-[5px]">
-                  <p className="text-[10px] font-extrabold md:text-[17px]">Reference Number</p>
+                  <p className="text-[10px] font-extrabold md:text-[17px]">
+                    Reference Number
+                  </p>
                   <p className="text-[7px] md:text-[12px]">AP-20230703-001 </p>
                 </div>
                 <img
-                  className="w-[14px] h-[14px] md:h-[25px] md:w-[25px] lg:w-[29px] lg:h-[29px]"
+                  className="w-[17px] h-[17px] md:h-[25px] md:w-[25px] lg:w-[29px] lg:h-[29px]"
                   src="./Images/Dashboardimages/reference.png"
                   alt="/"
                 />
@@ -345,10 +360,10 @@ export const PersonalAccountPage = () => {
             </div>
           </div>
           <div className="flex gap-8 my-[9%] md:w-[60%] lg:gap-1 lg:w-[54%]">
-            <button className="text-[12px] font-extrabold h-[45px] bg-[#04177f] text-white w-full rounded-[6px] md:w-[48%] md:text-[17px]">
+            <button className="cursor-pointer text-[12px] font-extrabold h-[45px] bg-[#04177f] text-white w-full rounded-[6px] md:w-[48%] md:text-[17px]">
               Edit Account Details
             </button>
-            <button className="text-[#F95252] text-[14px] w-full rounded-[6px] font-extrabold md:w-[48%] lg:text-[16px]">
+            <button className="cursor-pointer text-[#F95252] text-[14px] w-full rounded-[6px] font-extrabold md:w-[48%] lg:text-[16px]">
               Delete Account
             </button>
           </div>
