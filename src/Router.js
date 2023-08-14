@@ -32,6 +32,7 @@ import { TransferPage } from "./Components/Dashboard/DashboardComponents/Transfe
 import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
 import PointBalance from "./Components/Wallet/PointBalance";
 import AirtimeTopUp from "./Components/AirtimeTopUp/AirtimeTopUp";
+import AirtimeVtu from "./Components/AirtimeTopUp/AirtimeVtu";
 
 export const Router = () => {
   return (
@@ -73,6 +74,7 @@ export const Router = () => {
         <Route path="/money-transfer" element={<TransferPage />} />
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
         <Route path="/airtime-topup" element={<AirtimeTopUp/>} />
+        <Route path="/airtime-vtu" element={<AirtimeVtu/>} />
       </Routes>
     </div>
   );

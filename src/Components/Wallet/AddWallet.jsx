@@ -12,6 +12,7 @@ const AddWallet = ({onClick}) => {
   const [addAccount, setAddAccount] = useState(false);
   const [notAccount, setNotAccount] = useState(false);
   const [redirect, setRedirect] = useState(false);
+  
   const countryList = [
     {
       id:1,
