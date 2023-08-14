@@ -46,23 +46,28 @@ const CountrySelect = ({ onSelect, selectedCountry, countries }) => {
     },
   ];
 
-  const [showList, setShowList] = useState(false);
-  const [selected, setSelected] = useState(false);
-  const { setNoRecord, setAvailableAccount, image, setImage, setCode } =
-    useContext(ContextProvider);
+  const {
+    setNoRecord,
+    setAvailableAccount,
+    image,
+    setImage,
+    setCode,
+    showList,
+    setShowList,
+    selected,
+    setSelected,
+  } = useContext(ContextProvider);
 
   const handleOptionClick = (country, flag, id, code) => {
     onSelect(country);
     setImage(flag);
-    setCode(code)
+    setCode(code);
     setShowList(false);
     setSelected(true);
     setNoRecord(id !== 1);
     setAvailableAccount(id === 1);
 
-    // }
     console.log(id);
-    // const clicked = e.target.value;
   };
   return (
     <div>
@@ -103,7 +108,12 @@ const CountrySelect = ({ onSelect, selectedCountry, countries }) => {
               className="cursor-pointer border-b flex items-center p-1 gap-[5px] text-[9px] bg-[#fff] md:text-[14px] lg:text-[16px]"
               key={country.id}
               onClick={() =>
-                handleOptionClick(country.name, country.flag, country.id, country.code)
+                handleOptionClick(
+                  country.name,
+                  country.flag,
+                  country.id,
+                  country.code
+                )
               }
             >
               <img
@@ -122,19 +132,15 @@ const CountrySelect = ({ onSelect, selectedCountry, countries }) => {
 
 // ===================Transfer Page To Account================
 export const TransferRecord = () => {
-  const { isDarkMode } = useContext(ContextProvider);
+  const { isDarkMode, handleActive, activeButton } =
+    useContext(ContextProvider);
   const { noRecord, availableAccount, image } = useContext(ContextProvider);
   const [selectedCountry, setSelectedCountry] = useState("");
-  const [activeButton, setActiveButtons] = useState([true, false]);
 
   const handleCountrySelect = (country, id) => {
     setSelectedCountry(country);
   };
 
-  const handleActive = (index) => {
-    const updatedButtons = activeButton.map((isActive, i) => i === index);
-    setActiveButtons(updatedButtons);
-  };
   return (
     <div>
       <div className=" flex items-end justify-between">
