@@ -354,6 +354,15 @@ export const Context = ({ children }) => {
   const [noRecord, setNoRecord] = useState(true);
   const [availableAccount, setAvailableAccount] = useState(false);
   const [image, setImage] = useState("");
+  const [code, setCode] = useState("");
+  const [activeButton, setActiveButtons] = useState([true, false]);
+  const [showList, setShowList] = useState(false);
+  const [selected, setSelected] = useState(false);
+
+  const handleActive = (index) => {
+    const updatedButtons = activeButton.map((isActive, i) => i === index);
+    setActiveButtons(updatedButtons);
+  };
   // ==========End Transfer page=============
 
   const hold = {
@@ -486,7 +495,16 @@ export const Context = ({ children }) => {
     availableAccount,
     setAvailableAccount,
     image,
-    setImage
+    setImage,
+    code,
+    setCode,
+    activeButton,
+    setActiveButtons,
+    handleActive,
+    showList,
+    setShowList,
+    selected,
+    setSelected,
   };
 
   return (

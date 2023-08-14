@@ -31,8 +31,12 @@ import TopUpScreen from "./Components/Screens/topUP/TopUpScreen";
 import { TransferPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferPage";
 import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/TransferComponent/ToMyAccountPage";
 import PointBalance from "./Components/Wallet/PointBalance";
+import VirtualAccount from "./Components/Screens/virtualAccount/VirtualAccount";
+import { PersonalAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/PersonalAccountPage";
 import AirtimeTopUp from "./Components/AirtimeTopUp/AirtimeTopUp";
 import AirtimeVtu from "./Components/AirtimeTopUp/AirtimeVtu";
+import { AddAccount } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/AddAccountPage/AddAccount";
+import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtualAccount";
 
 export const Router = () => {
   return (
@@ -73,8 +77,12 @@ export const Router = () => {
         <Route path="/point-balance" element={<PointBalance/>} />
         <Route path="/money-transfer" element={<TransferPage />} />
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
+        <Route path="/virtual-account" element={<VirtualAccount />} />
+        <Route path="/personal-account" element={<PersonalAccountPage/>} />
         <Route path="/airtime-topup" element={<AirtimeTopUp/>} />
         <Route path="/airtime-vtu" element={<AirtimeVtu/>} />
+        <Route path="/add-account" element={<AddAccount/>} />
+        <Route path="/ngn-virtual-account" element={<NgnVirtualAccount/>} />
       </Routes>
     </div>
   );
