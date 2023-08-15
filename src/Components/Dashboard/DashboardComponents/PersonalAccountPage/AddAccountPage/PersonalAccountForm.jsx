@@ -209,16 +209,15 @@ export const PersonalAccountForm = () => {
           </div>
         </div>
 
-        {/* ============================Account Name====================== */}
-        <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">
-            Account Name
-          </p>
+        {/* ============================Bank Name====================== */}
+
+        <div className={` ${styles.inputBox}`}>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
-              name="accountName"
-              value={state.accountName}
+              name="bankName"
+              value={state.bankName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
@@ -252,25 +251,27 @@ export const PersonalAccountForm = () => {
               name="swiftCode"
               value={state.swiftCode}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
-              type="number"
-            />
-          </div>
-        </div>
-
-        {/* ===========================Bank Name============================ */}
-        <div className={`flex justify-end ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
-            <input
-              onChange={handleInputChange}
-              name="bankName"
-              value={state.bankName}
-              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
         </div>
 
+        {/* ===========================Account Name============================ */}
+
+        <div className={`flex justify-end ${styles.inputBox}`}>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Account Name
+          </p>
+          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
+            <input
+              onChange={handleInputChange}
+              name="accountName"
+              value={state.accountName}
+              className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
+              type="text"
+            />
+          </div>
+        </div>
         {/* =====================Beneficiary Address=========================== */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
@@ -402,7 +403,7 @@ export const PersonalAccountForm = () => {
 
         {currencyAvailable && (
           <Modal>
-            <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[50px] lg:w-[40%] lg:py-[3%] lg:rounded-[7px]">
+            <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[40px] lg:w-[40%] lg:py-[3%] lg:rounded-[7px]">
               <p className="text-[12px] text-[#04177f] font-extrabold">
                 This Currency is Currently Not Available.
               </p>
@@ -411,20 +412,34 @@ export const PersonalAccountForm = () => {
                 src="/Images/addAccountImages/account-unavailable.png"
                 alt=""
               />
-              <p className="absolute top-[66%] right-[15%] text-[8px] lg:text-[12px] lg:right-[35%]">
+              <p className="absolute top-[59%] right-[15%] text-[8px] lg:text-[12px] lg:right-[35%]">
                 Coming Soon...
               </p>
               <div
                 onClick={() => navigate("/to-my-account")}
                 className={` ${
                   isDarkMode ? "border" : "bg-[#04177f] "
-                } cursor-pointer text-white text-[10px] h-[25px] w-[25%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                } cursor-pointer text-white text-[12px] h-[35px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
               >
                 Okay
               </div>
             </div>
           </Modal>
         )}
+      </div>
+      <div className="mt-[25%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
+        <div className="text-[8px] md:text-[12px] lg:text-[16px]">
+          You need help ?
+        </div>
+        <Link to="/ContactUs">
+          <div
+            className={`${
+              isDarkMode ? "border " : "bg-[#04177f]"
+            } text-[8px] p-1 text-white rounded-[8px]`}
+          >
+            Contact Us
+          </div>
+        </Link>
       </div>
     </>
   );

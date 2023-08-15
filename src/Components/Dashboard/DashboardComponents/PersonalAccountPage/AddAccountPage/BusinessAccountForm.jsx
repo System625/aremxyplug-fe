@@ -206,21 +206,19 @@ export const BusinessAccountForm = () => {
         </div>
 
         {/* ============================Account Name====================== */}
-        <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">
-            Company's Name
-          </p>
+
+        <div className={` ${styles.inputBox}`}>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
-              name="accountName"
-              value={state.accountName}
+              name="bankName"
+              value={state.bankName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
         </div>
-
         {/* =========================Account Number / IBAN==================== */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
@@ -255,12 +253,14 @@ export const BusinessAccountForm = () => {
 
         {/* ===========================Bank Name============================ */}
         <div className={`flex justify-end ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Company's Name
+          </p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
-              name="bankName"
-              value={state.bankName}
+              name="accountName"
+              value={state.accountName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
@@ -421,6 +421,20 @@ export const BusinessAccountForm = () => {
             </div>
           </Modal>
         )}
+      </div>
+      <div className="mt-[25%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
+        <div className="text-[8px] md:text-[12px] lg:text-[16px]">
+          You need help ?
+        </div>
+        <Link to="/ContactUs">
+          <div
+            className={`${
+              isDarkMode ? "border " : "bg-[#04177f]"
+            } text-[8px] p-1 text-white rounded-[8px]`}
+          >
+            Contact Us
+          </div>
+        </Link>
       </div>
     </>
   );
