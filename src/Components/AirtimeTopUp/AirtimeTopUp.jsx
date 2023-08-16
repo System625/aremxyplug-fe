@@ -10,8 +10,8 @@ const AirtimeTopUp = () => {
     const [showVoucher, setShowVoucher] = useState(false);
     const [showSchedule, setShowSchedule] = useState(false);
     const [showBulk, setShowBulk] = useState(false);
-    const active = ' lg:text-[20px] lg:leading-[30px] lg:w-[248px] lg:h-[50px] md:flex md:justify-center md:items-center md:flex-none bg-[#E2F3FF] flex-1 text-[8px] leading-[12px] text-center py-1 border-b-2 border-primary rounded-[3px]';
-    const inactive = ' lg:text-[20px] lg:leading-[30px] lg:w-[248px] lg:h-[50px] md:flex md:justify-center md:items-center md:flex-none flex-1 text-[8px] leading-[12px] text-center py-1'
+    const active = 'md:text-[12px] md:leading-[18px] lg:text-[20px] lg:leading-[30px] lg:w-[248px] md:w-[145.5px] md:h-[23px] lg:h-[50px] md:flex md:justify-center md:items-center md:flex-none bg-[#E2F3FF] flex-1 text-[8px] leading-[12px] text-center py-1 border-b-2 border-primary rounded-[3px]';
+    const inactive = 'md:text-[12px] md:leading-[18px] lg:text-[20px] lg:leading-[30px] lg:w-[248px] md:w-[145.5px] md:h-[23px] lg:h-[50px] md:flex md:justify-center md:items-center md:flex-none flex-1 text-[8px] leading-[12px] text-center py-1'
 
     const handleTab1 =()=> {
         setActiveTab('tab_1')
@@ -23,14 +23,14 @@ const AirtimeTopUp = () => {
 
     const TabOneItem =({title,text, icon, link, onClick})=> {
         return (
-            <Link className='lg:h-[90px] border flex justify-between items-center py-[3px] pl-[3px] lg:pl-[15px] pr-4 rounded-[7px]' to={link} onClick={onClick}>
+            <Link className=' lg:h-[90px] border flex justify-between items-center py-[3px] md:py-[8px] md:pl-[8px] pl-[3px] lg:pl-[15px] pr-4 rounded-[7px]' to={link} onClick={onClick} style={{boxShadow: `0px 0px 2.347222328186035px 0px rgba(0, 0, 0, 0.25)`}}>
                 <div className='flex gap-1 items-center md:gap-2'>
                     <div className='lg:w-6 lg:h-6 w-4 h-4'>
                         <img src={icon} alt="" className='w-full h-full'/>
                     </div>
-                    <div className='w-[221px] lg:w-[661px]'>
-                        <h2 className='mb-1 text-[9px] leading-[13.5px] lg:text-[16px] lg:leading-[24px]'>{title}</h2>
-                        <p className='text-[8px] leading-[12px] lg:text-[14px] lg:leading-[21px]'>{text}</p>
+                    <div className='w-[221px] lg:w-[661px] md:w-[500px]'>
+                        <h2 className='mb-1 text-[9px] leading-[13.5px] lg:text-[16px] lg:leading-[24px] font-semibold'>{title}</h2>
+                        <p className='text-[8px] leading-[12px] lg:text-[14px] lg:leading-[21px] md:text-[9px] md:leading-[13.5px]'>{text}</p>
                     </div>
                 </div>
                 <div className='lg:w-6 lg:h-6 w-4 h-4'>
@@ -46,13 +46,13 @@ const AirtimeTopUp = () => {
                 <div className="h-[65.33px] md:h-[112.29px] lg:h-[196px] rounded-[7px] md:rounded-[11.5px] w-full">
                     <img src="./Images/airtimeTopUp/blue_banner.png" alt="" className='w-full h-full'/>
                 </div>
-                <div className='my-[15px] lg:my-[80px] flex gap-1'>
+                <div className='my-[20px] lg:my-[80px] md:my-[40px] flex gap-1'>
                     <h2 className='text-[8.62px] lg:text-[15px]'>Select Airtime Type</h2>
                     <div className='lg:w-6 lg:h-6 w-4 h-4'>
                         <img src='./Images/wallet/arrow-square-right.svg' alt="" className='h-full'/>
                     </div>
                 </div>
-                <ul className='flex items-center w-full mb-6 border-b'>
+                <ul className='flex items-center w-full mb-6 border-b md:mb-8'>
                     <li className={activeTab === 'tab_1' ? active : inactive} onClick={handleTab1}>Local Airtime</li>
                     <li className={activeTab === 'tab_2' ? active : inactive} onClick={handleTab2}>International Airtime</li>
                 </ul>
@@ -99,15 +99,15 @@ const AirtimeTopUp = () => {
                     }
                     { activeTab === 'tab_2' && 
                         <WalletModal>
-                            <div className='rounded-[8px] h-[250px] relative md:rounded-[11.5px] lg:h-[404px] md:h-[237px] bg-white p-5' >
+                            <div className='rounded-[8px] h-[250px] relative lg:rounded-[11.5px] md:rounded-[6px] flex flex-col justify-between' >
                                 <h2 className='text-center text-[10px] leading-[15px] mb-[30px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>International Airtime.</h2>
                                 <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
                                 <div className='flex justify-center items-center mt-[8%] lg:mt-[5%]'>
-                                    <div className='w-[170px] lg:w-[270px] lg:h-[220px] mb-[5%] lg:mb-0'>
+                                    <div className='w-[170px] lg:w-[270px] lg:h-[220px] mb-[5%] md:mb-0'>
                                         <img src="./Images/airtimeTopUp/international-airtime.png" alt="" className='w-full'/>
                                     </div>
                                 </div>
-                                <div className='w-[100%] md:flex md:flex-row-reverse absolute lg:bottom-[24px] bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
+                                <div className='w-[100%] md:flex md:flex-row-reverse bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
                                     <h2 className='w-full md:w-fit text-right text-[10px] leading-[15px] py-[10px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                                     <button className='w-full text-[10px] md:w-fit leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={handleTab1}>Okay</button>
                                 </div>
@@ -116,15 +116,15 @@ const AirtimeTopUp = () => {
                     }
                     { showRoll && 
                         <WalletModal>
-                            <div className='rounded-[8px] h-[250px] relative lg:rounded-[11.5px] lg:h-[404px] md:h-[237px] bg-white p-5 md:p-3 md:rounded-[6px]' >
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[30px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] md:mb-[20px] '>Airtime Roll.</h2>
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-                                <div className='flex justify-center items-center mt-[8%] lg:mt-[10%]'>
-                                    <div className='w-[170px] lg:h-[150px] md:h-[88px] mb-[5%] lg:mb-0'>
+                            <div className='rounded-[8px] relative lg:rounded-[11.5px] md:rounded-[6px] flex-col justify-between' >
+                                <h2 className='mb-3 text-center text-[10px] leading-[15px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] md:mb-[20px] '>Airtime Roll.</h2>
+                                <h2 className='text-center text-[10px] leading-[15px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
+                                <div className='flex justify-center items-center my-[4%] lg:mt-[10%]'>
+                                    <div className='h-[140px] lg:h-[180px] md:h-[120px]'>
                                         <img src="./Images/airtimeTopUp/airtime-roll.png" alt="" className='mx-auto h-full'/>
                                     </div>
                                 </div>
-                                <div className='w-[100%] md:flex md:flex-row-reverse absolute lg:bottom-[40px] bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
+                                <div className='w-[100%] md:flex md:flex-row-reverse md:gap-[20px] lg:gap-[30px] flex-col md:justify-center' >
                                     <h2 className='w-full md:w-fit text-right text-[10px] leading-[15px] py-[10px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                                     <button className='w-full text-[10px] md:w-fit leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowRoll(false)}>Okay</button>
                                 </div>
@@ -133,15 +133,15 @@ const AirtimeTopUp = () => {
                     }
                     { showVoucher && 
                         <WalletModal>
-                            <div className='rounded-[8px] h-[250px] relative lg:rounded-[11.5px] lg:h-[404px] md:h-[237px] bg-white p-5 md:p-3 md:rounded-[6px]' >
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[30px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Airtime Voucher.</h2>
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-                                <div className='flex justify-center items-center mt-[8%] lg:mt-[10%]'>
-                                    <div className='w-[170px] lg:w-[270px] lg:h-[150px] mb-[5%] lg:mb-0'>
+                            <div className='rounded-[8px] relative lg:rounded-[11.5px] md:rounded-[6px] flex-col justify-between' >
+                                <h2 className='mb-3 text-center text-[10px] leading-[15px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] md:mb-[20px] '>Airtime Voucher.</h2>
+                                <h2 className='text-center text-[10px] leading-[15px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
+                                <div className='flex justify-center items-center my-[4%] lg:mt-[10%]'>
+                                    <div className='h-[140px] lg:h-[180px] md:h-[120px]'>
                                         <img src="./Images/airtimeTopUp/airtime-voucher.png" alt="" className='mx-auto h-full'/>
                                     </div>
                                 </div>
-                                <div className='w-[100%] md:flex md:flex-row-reverse absolute lg:bottom-[40px] bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
+                                <div className='w-[100%] md:flex md:flex-row-reverse md:gap-[20px] lg:gap-[30px] flex-col md:justify-center' >
                                     <h2 className='w-full md:w-fit text-right text-[10px] leading-[15px] py-[10px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                                     <button className='w-full text-[10px] md:w-fit leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowVoucher(false)}>Okay</button>
                                 </div>
@@ -150,15 +150,15 @@ const AirtimeTopUp = () => {
                     }
                     { showSchedule && 
                         <WalletModal>
-                            <div className='rounded-[8px] h-[250px] relative md:rounded-[11.5px] lg:h-[404px] md:h-[237px] bg-white p-5' >
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[30px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Airtime Schedule.</h2>
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-                                <div className='flex justify-center items-center mt-[8%] lg:mt-[10%]'>
-                                    <div className='w-[170px] lg:w-[270px] lg:h-[150px] mb-[5%] lg:mb-0'>
+                            <div className='rounded-[8px] relative lg:rounded-[11.5px] md:rounded-[6px] flex-col justify-between' >
+                                <h2 className='mb-3 text-center text-[10px] leading-[15px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] md:mb-[20px] '>Airtime Schedule.</h2>
+                                <h2 className='text-center text-[10px] leading-[15px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
+                                <div className='flex justify-center items-center my-[4%] lg:mt-[10%]'>
+                                    <div className='h-[140px] lg:h-[180px] md:h-[120px]'>
                                         <img src="./Images/airtimeTopUp/airtime-schedule.png" alt="" className='mx-auto h-full'/>
                                     </div>
                                 </div>
-                                <div className='w-[100%] md:flex md:flex-row-reverse absolute lg:bottom-[40px] bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
+                                <div className='w-[100%] md:flex md:flex-row-reverse md:gap-[20px] lg:gap-[30px] flex-col md:justify-center' >
                                     <h2 className='w-full md:w-fit text-right text-[10px] leading-[15px] py-[10px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                                     <button className='w-full text-[10px] md:w-fit leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowSchedule(false)}>Okay</button>
                                 </div>
@@ -167,15 +167,15 @@ const AirtimeTopUp = () => {
                     }
                     { showBulk && 
                         <WalletModal>
-                            <div className='rounded-[8px] h-[250px] relative md:rounded-[11.5px] lg:h-[404px] md:h-[237px] bg-white p-5' >
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[30px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Bulk Airtime.</h2>
-                                <h2 className='text-center text-[10px] leading-[15px] mb-[10px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
-                                <div className='flex justify-center items-center mt-[8%] lg:mt-[10%]'>
-                                    <div className='w-[170px] lg:w-[270px] lg:h-[150px] mb-[5%] lg:mb-0'>
+                            <div className='rounded-[8px] relative lg:rounded-[11.5px] md:rounded-[6px] flex-col justify-between' >
+                                <h2 className='mb-3 text-center text-[10px] leading-[15px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] md:mb-[20px] '>Bulk Airtime.</h2>
+                                <h2 className='text-center text-[10px] leading-[15px] font-semibold md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px] text-primary'>This Feature is Currently Not Available.</h2>
+                                <div className='flex justify-center items-center my-[4%] lg:mt-[10%]'>
+                                    <div className='h-[140px] lg:h-[180px] md:h-[120px]'>
                                         <img src="./Images/airtimeTopUp/bulk-airtime.png" alt="" className='mx-auto h-full'/>
                                     </div>
                                 </div>
-                                <div className='w-[100%] md:flex md:flex-row-reverse absolute lg:bottom-[40px] bottom-[0px] md:gap-[20px] lg:w-[93%] lg:gap-[30px] flex-col md:justify-center' >
+                                <div className='w-[100%] md:flex md:flex-row-reverse md:gap-[20px] lg:gap-[30px] flex-col md:justify-center' >
                                     <h2 className='w-full md:w-fit text-right text-[10px] leading-[15px] py-[10px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]'>Coming soon...</h2>
                                     <button className='w-full text-[10px] md:w-fit leading-[15px] bg-primary px-[28.6px] py-[10px] text-white rounded-[7px] md:text-[12px] md:leading-[18px] lg:text-base lg:leading-[24px]' onClick={()=>setShowBulk(false)}>Okay</button>
                                 </div>

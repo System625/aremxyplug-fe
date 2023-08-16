@@ -31,8 +31,6 @@ export const SignUp = () => {
     setShowPassword,
     setShowPasswordTwo,
     checkboxChecked,
-    // handleCheckboxChange,
-    // newError,
   } = useContext(ContextProvider);
 
   const setNav = () => {

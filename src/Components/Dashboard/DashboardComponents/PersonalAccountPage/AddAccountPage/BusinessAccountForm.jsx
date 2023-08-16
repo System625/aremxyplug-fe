@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import { Modal } from "../../../../Screens/Modal/Modal";
+import Joi from "joi";
 
 export const BusinessAccountForm = () => {
   const countryList = [
@@ -52,9 +53,10 @@ export const BusinessAccountForm = () => {
   const [countryName, setCountryName] = useState("");
   //   const [btnColor, setBtnColor] = useState("#0008");
   const [currencyAvailable, setCurrencyAvailable] = useState(false);
+  const [successful, setSuccessful] = useState(false);
   const [state, setState] = useState({
-    country: "",
-    currency: "",
+    // country: "",
+    // currency: "",
     email: "",
     houseAddress: "",
     accountName: "",
@@ -67,20 +69,19 @@ export const BusinessAccountForm = () => {
     zipCode: "",
     checkbox: false,
   });
+  const [errors, setErrors] = useState({});
   //   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
   console.log(state);
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setState((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+    const { name, value, type, checked } = event.target;
+    const inputValue = type === "checkbox" ? checked : value;
+    setState({
+      ...state,
+      [name]: inputValue,
+    });
   };
-  //   function reloadPage() {
-  //     window.location.reload();
-  //   }
 
   const navigate = useNavigate();
 
@@ -91,6 +92,74 @@ export const BusinessAccountForm = () => {
     setSelected(true);
     setCountryCode(code);
     setCurrencyAvailable(id !== 1);
+  };
+
+  // ========form validation using regex=======
+  const schema = Joi.object({
+    // countryName: Joi.string().required(),
+    email: Joi.string()
+      .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
+      .required()
+      .messages({ "string.pattern.base": "Invalid email " }),
+    houseAddress: Joi.string().required(),
+    accountName: Joi.string().required(),
+    accountNumber: Joi.number().integer().min(-2).max(+9),
+    swiftCode: Joi.string().length(64),
+    bankName: Joi.string().required(),
+    beneficiaryAddress: Joi.string().required(),
+    beneficiaryCity: Joi.string().required(),
+    stateOrProvince: Joi.string().required(),
+    zipCode: Joi.number().integer().min(-30587).max(+30587),
+    checkbox: Joi.boolean().required().invalid(false).messages({
+      "any.invalid":
+        "Please ensure you agree to the privacy policy, terms and condition",
+    }),
+  });
+  // ======end of form valdiation=====
+
+  const handleAddAccount = (e) => {
+    e.preventDefault();
+
+    const {
+      // countryName,
+      email,
+      houseAddress,
+      accountName,
+      accountNumber,
+      swiftCode,
+      bankName,
+      beneficiaryAddress,
+      beneficiaryCity,
+      stateOrProvince,
+      zipCode,
+      checkbox,
+    } = state;
+
+    const { error } = schema.validate({
+      // countryName,
+      email,
+      houseAddress,
+      accountName,
+      accountNumber,
+      swiftCode,
+      bankName,
+      beneficiaryAddress,
+      beneficiaryCity,
+      stateOrProvince,
+      zipCode,
+      checkbox,
+    });
+
+    if (error) {
+      setErrors(
+        error.details.reduce((acc, curr) => {
+          acc[curr.path[0]] = curr.message;
+          return acc;
+        }, {})
+      );
+    } else {
+      setSuccessful(true);
+    }
   };
 
   return (
@@ -171,6 +240,11 @@ export const BusinessAccountForm = () => {
               value={countryCode}
             />
           </div>
+          {errors.currency && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.currency}
+            </div>
+          )}
         </div>
 
         {/* ========================Email Address Input ================ */}
@@ -187,6 +261,11 @@ export const BusinessAccountForm = () => {
               type="email"
             />
           </div>
+          {errors.email && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.email}
+            </div>
+          )}
         </div>
 
         {/* ==========================House Address====================== */}
@@ -203,6 +282,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.bankName && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.bankName}
+            </div>
+          )}
         </div>
 
         {/* ============================Account Name====================== */}
@@ -218,6 +302,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.bankName && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.bankName}
+            </div>
+          )}
         </div>
         {/* =========================Account Number / IBAN==================== */}
         <div className={styles.inputBox}>
@@ -233,6 +322,11 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.accountNumber && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.accountNumber}
+            </div>
+          )}
         </div>
 
         {/* ===================Swift Code/ Sort Code / Routine Number ============ */}
@@ -249,9 +343,14 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.swiftCode && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.swiftCode}
+            </div>
+          )}
         </div>
 
-        {/* ===========================Bank Name============================ */}
+        {/* ===========================Company Name============================ */}
         <div className={`flex justify-end ${styles.inputBox}`}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Company's Name
@@ -265,6 +364,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.accountName && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.accountName}
+            </div>
+          )}
         </div>
 
         {/* =====================Beneficiary Address=========================== */}
@@ -281,6 +385,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.beneficiaryAddress && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.beneficiaryAddress}
+            </div>
+          )}
         </div>
 
         {/* ===========================Beneficiary City======================= */}
@@ -297,6 +406,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.beneficiaryCity && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.beneficiaryCity}
+            </div>
+          )}
         </div>
 
         {/* ================================State or Province======================== */}
@@ -313,6 +427,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.stateOrProvince && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.stateOrProvince}
+            </div>
+          )}
         </div>
 
         {/* ============================ZIP / Postcode=============================== */}
@@ -329,6 +448,11 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.zipCode && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.zipCode}
+            </div>
+          )}
         </div>
 
         {/* ==============================Acknowledgement Checks========================= */}
@@ -373,6 +497,11 @@ export const BusinessAccountForm = () => {
                 </Link>
               </p>
             </div>
+            {errors.checkbox && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.checkbox}
+              </div>
+            )}
           </div>
 
           {/* ========================Add and Cancel Button================== */}
@@ -417,6 +546,35 @@ export const BusinessAccountForm = () => {
                 } cursor-pointer text-white text-[10px] h-[25px] w-[25%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
               >
                 Okay
+              </div>
+            </div>
+          </Modal>
+        )}
+
+        {successful && (
+          <Modal>
+            <div className={styles.successful}>
+              <img
+                className="m-2 w-[19.9px] h-[11.81px] "
+                src="/Images/addAccountImages/aremxyAddLogo.png"
+                alt="/"
+              />
+              <hr className="h-[6px] bg-[#04177f] border-none" />
+              <div className="my-[3%] flex flex-col justify-between h-[70%]">
+                <div className="text-center">
+                  <p className="text-[11px] font-extrabold">Successful</p>
+                  <p className="text-[11px] font-extrabold text-[#00AA48]">
+                    Your Account has been added successfully.
+                  </p>
+                </div>
+                <div
+                  onClick={() => navigate("/to-my-account")}
+                  className={` ${
+                    isDarkMode ? "border" : "bg-[#04177f] "
+                  } mx-auto cursor-pointer text-white text-[12px] h-[35px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                >
+                  Done
+                </div>
               </div>
             </div>
           </Modal>
