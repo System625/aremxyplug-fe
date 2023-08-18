@@ -6,6 +6,7 @@ import styles from "../../TransferComponent/transfer.module.css";
 import { Modal } from "../../../../Screens/Modal/Modal";
 import { useNavigate } from "react-router-dom";
 import Joi from "joi";
+import axios from "axios";
 
 export const PersonalAccountForm = () => {
   const countryList = [
@@ -52,7 +53,7 @@ export const PersonalAccountForm = () => {
   const [flag, setFlag] = useState("");
   const [countryCode, setCountryCode] = useState("");
   const [countryName, setCountryName] = useState("");
-  // const [btnColor, setBtnColor] = useState("#0008");
+  const [btnColor, setBtnColor] = useState("#0008");
   const [currencyAvailable, setCurrencyAvailable] = useState(false);
   const [successful, setSuccessful] = useState(false);
   const [state, setState] = useState({
@@ -69,6 +70,7 @@ export const PersonalAccountForm = () => {
     stateOrProvince: "",
     zipCode: "",
     checkbox: false,
+    checkbox2: false,
   });
 
   const [errors, setErrors] = useState({});
@@ -86,6 +88,8 @@ export const PersonalAccountForm = () => {
     });
   };
 
+  // checked ? setBtnColor("#04177f") : setBtnColor("#0008");
+
   const handleCountryClick = (name, flag, id, code) => {
     setFlag(flag);
     setShowList(false);
@@ -97,32 +101,43 @@ export const PersonalAccountForm = () => {
 
   // ========form validation using regex=======
   const schema = Joi.object({
-    // countryName: Joi.string().required(),
+    countryName: Joi.string().required(),
+    // country: Joi.string().required(),
     email: Joi.string()
       .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
       .required()
       .messages({ "string.pattern.base": "Invalid email " }),
     houseAddress: Joi.string().required(),
     accountName: Joi.string().required(),
-    accountNumber: Joi.number().integer().min(-2).max(+9),
+    accountNumber: Joi.string()
+      .pattern(new RegExp(/^\d+$/))
+      .required()
+      .messages({
+        "string.pattern.base": "Account number should be 10 digits ",
+      }),
     swiftCode: Joi.string().required(),
     bankName: Joi.string().required(),
     beneficiaryAddress: Joi.string().required(),
     beneficiaryCity: Joi.string().required(),
     stateOrProvince: Joi.string().required(),
-    // zipCode: Joi.number().integer().min(-30587).max(+30587),
+    zipCode: Joi.number().integer().min(-30587).max(+30587),
     checkbox: Joi.boolean().required().invalid(false).messages({
+      "any.invalid": "Please ensure you acknowledge",
+    }),
+    checkbox2: Joi.boolean().required().invalid(false).messages({
       "any.invalid":
         "Please ensure you agree to the privacy policy, terms and condition",
     }),
   });
   // ======end of form valdiation=====
 
+  // ==========Submit Handler============
   const handleAddAccount = (e) => {
     e.preventDefault();
 
     const {
-      // countryName,
+      country,
+      countryName,
       email,
       houseAddress,
       accountName,
@@ -134,10 +149,12 @@ export const PersonalAccountForm = () => {
       stateOrProvince,
       zipCode,
       checkbox,
+      checkbox2,
     } = state;
 
     const { error } = schema.validate({
-      // countryName,
+      countryName,
+      country,
       email,
       houseAddress,
       accountName,
@@ -149,6 +166,7 @@ export const PersonalAccountForm = () => {
       stateOrProvince,
       zipCode,
       checkbox,
+      checkbox2,
     });
 
     if (error) {
@@ -163,6 +181,10 @@ export const PersonalAccountForm = () => {
     }
   };
 
+  // const handleCountryChange = (e) => {
+  //   const targetedValue = e.target;
+  //   setCountryName(targetedValue);
+  // };
   return (
     <>
       <div className="mt-[4%] grid grid-cols-2 gap-[7%] h-[] lg:w-[90%]">
@@ -196,9 +218,9 @@ export const PersonalAccountForm = () => {
               alt="dropdown"
             />
           </div>
-          {errors.countryCode && (
+          {errors.countryName && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-              {errors.countryCode}
+              {errors.countryName}
             </div>
           )}
           {showList && (
@@ -229,7 +251,7 @@ export const PersonalAccountForm = () => {
           )}
         </div>
 
-        {/* ==================Currency Input============================== */}
+        {/* ==================Currency============================ */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Select Currency
@@ -279,9 +301,9 @@ export const PersonalAccountForm = () => {
               type="text"
             />
           </div>
-          {errors.bankName && (
+          {errors.houseAddress && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-              {errors.bankName}
+              {errors.houseAddress}
             </div>
           )}
         </div>
@@ -292,6 +314,7 @@ export const PersonalAccountForm = () => {
           <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
+              // onClick={bankApi}
               onChange={handleInputChange}
               name="bankName"
               value={state.bankName}
@@ -479,9 +502,11 @@ export const PersonalAccountForm = () => {
             <div className="flex gap-[15px] w-full">
               <input
                 type="checkbox"
-                value={state.checkbox}
+                value={state.checkbox2}
                 name="checkbox"
+                // onClick={}
                 onChange={handleInputChange}
+                // onChange={checkbox2}
               />
               <p className="text-[8px] w-full font-bold text-[#00000080] lg:text-[14px]">
                 I have read and agreed to AremxyPlug{" "}
@@ -500,9 +525,9 @@ export const PersonalAccountForm = () => {
                 </Link>
               </p>
             </div>
-            {errors.checkbox && (
+            {errors.checkbox2 && (
               <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-                {errors.checkbox}
+                {errors.checkbox2}
               </div>
             )}
           </div>
@@ -513,7 +538,7 @@ export const PersonalAccountForm = () => {
             <button
               onClick={handleAddAccount}
               type="submit"
-              style={{ backgroundColor: "#0008" }}
+              style={{ backgroundColor: btnColor }}
               className="hover:cursor-pointer px-[20px] py-1 flex justify-center items-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:w-[] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
             >
               Add Account
@@ -583,7 +608,7 @@ export const PersonalAccountForm = () => {
           </Modal>
         )}
       </div>
-      <div className="mt-[25%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
+      <div className="mt-[30%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
         <div className="text-[8px] md:text-[12px] lg:text-[16px]">
           You need help ?
         </div>

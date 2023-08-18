@@ -224,21 +224,13 @@ export const BusinessAccountForm = () => {
         </div>
 
         {/* ==================Currency Input============================== */}
-        {/* <p className="text-red-500 bg-blue-300">{state}</p> */}
+
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Select Currency
           </p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
-            {/* <p className="text-[10px] font-extrabold">{countryCode}</p> */}
-            <input
-              //   onSelect={handleInputChange}
-              name="currency"
-              className="text-[10px] font-extrabold outline-none lg:text-[14px]"
-              type="text"
-              selected={state.countryCode}
-              value={countryCode}
-            />
+          <div className="border text-[10px] rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
+            {countryCode}
           </div>
           {errors.currency && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
@@ -302,9 +294,9 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
-          {errors.bankName && (
+          {errors.accountName && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-              {errors.bankName}
+              {errors.accountName}
             </div>
           )}
         </div>
@@ -508,7 +500,7 @@ export const BusinessAccountForm = () => {
 
           <div className="flex ">
             <button
-              // onClick={handleSubmit}
+              onClick={handleAddAccount}
               type="submit"
               style={{ backgroundColor: "#0008" }}
               className="hover:cursor-pointer px-[20px] py-1 flex justify-center item-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
@@ -580,7 +572,7 @@ export const BusinessAccountForm = () => {
           </Modal>
         )}
       </div>
-      <div className="mt-[25%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
+      <div className="mt-[30%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
         <div className="text-[8px] md:text-[12px] lg:text-[16px]">
           You need help ?
         </div>
