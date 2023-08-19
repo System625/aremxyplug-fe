@@ -6,13 +6,20 @@ import styles from "../TransferComponent/transfer.module.css";
 import { Link } from "react-router-dom";
 import { Modal } from "../../../Screens/Modal/Modal";
 import Joi from "joi";
-// import { useEffect } from "react";
 
 export const PersonalAccountPage = () => {
-  const { isDarkMode, image, code, toggleSideBar } = useContext(ContextProvider);
+  const { isDarkMode, image, code, toggleSideBar } =
+    useContext(ContextProvider);
   const [tfPopUp, setTfPopUp] = useState(false);
+  const [confirmationPopUp, setConfirmationPopUp] = useState(false);
   const [amtToTransfer, setAmtToTransfer] = useState("");
   const [errors, setErrors] = useState({});
+
+  const transferFee = 50;
+
+  const pointsEarned = "+2.00";
+
+  const TotalAmount = amtToTransfer;
 
   console.log(amtToTransfer);
   const amountHandler = (e) => {
@@ -21,7 +28,7 @@ export const PersonalAccountPage = () => {
 
   const schema = Joi.object({
     amtToTransfer: Joi.string()
-      .pattern(new RegExp(/\d{5,}/))
+      .pattern(new RegExp(/\d{4,}/))
       .required()
       .messages({
         "string.pattern.base": "Amount can not be less than 1000",
@@ -43,6 +50,9 @@ export const PersonalAccountPage = () => {
         }, {})
       );
     } else {
+      setConfirmationPopUp(true);
+      setTfPopUp(false);
+      setErrors({});
     }
   };
   return (
@@ -71,11 +81,14 @@ export const PersonalAccountPage = () => {
             </button>
 
             {/* ===================Transfer Money To Account pop up====================== */}
-
             {tfPopUp && (
               <Modal>
                 (
-                <div className={`${styles.transferMoneyPop} ${toggleSideBar ? "md:w-[45%]" : ""} w-[45%]`}>
+                <div
+                  className={`${styles.transferMoneyPop} ${
+                    toggleSideBar ? "md:w-[45%]" : ""
+                  } md:w-[45%] w-[90%]`}
+                >
                   <img
                     onClick={() => setTfPopUp(false)}
                     className="absolute right-2 w-[18px] h-[18px] my-[1%] md:w-[35px] md:h-[35px] lg:w-[29px] lg:h-[29px]"
@@ -98,7 +111,9 @@ export const PersonalAccountPage = () => {
                       </div>
                     </div>
                     <div>
-                      <p className="text-[10px] font-extrabold md:text-[16px]">Account Name</p>
+                      <p className="text-[10px] font-extrabold md:text-[16px]">
+                        Account Name
+                      </p>
                       <div className="border-[0.55px] h-[18px] flex flex-col justify-between p-[1%] rounded-[4px] md:p-[3%]  md:rounded-[8px] md:h-[40px] md:border-[1.5px]">
                         <p className="text-[8px] text-[#0008] md:text-[14px]">
                           Habib Kamaldeen
@@ -110,7 +125,9 @@ export const PersonalAccountPage = () => {
                         Account Number
                       </p>
                       <div className="border-[0.55px] h-[18px] flex flex-col justify-between p-[1%] rounded-[4px] md:p-[3%] md:rounded-[8px] md:h-[40px] md:border-[1.5px]">
-                        <p className="text-[8px] text-[#0008] md:text-[14px]">0123456789</p>
+                        <p className="text-[8px] text-[#0008] md:text-[14px]">
+                          0123456789
+                        </p>
                       </div>
                     </div>
                     <div>
@@ -120,7 +137,7 @@ export const PersonalAccountPage = () => {
                       <input
                         onChange={amountHandler}
                         type="number"
-                        className="outline-none text-[10px] text-[#0003] border-[0.55px] w-full h-[18px] flex flex-col justify-between p-[1%] rounded-[4px] md:text-[14px] md:p-[3%] md:rounded-[8px] md:h-[40px] md:border-[1.5px]"
+                        className="outline-none text-[10px] text-[#0008] border-[0.55px] w-full h-[18px] flex flex-col justify-between p-[1%] rounded-[4px] md:text-[14px] md:p-[3%] md:rounded-[8px] md:h-[40px] md:border-[1.5px]"
                       />
                       {errors.amtToTransfer && (
                         <div className="text-[12px] text-red-500 italic lg:text-[14px]">
@@ -145,7 +162,9 @@ export const PersonalAccountPage = () => {
                     </div>
                   </div>
                   <div className="w-[90%] mx-auto mt-[15px] md:w-[50%] md:ml-[5%] md:mx-0">
-                    <p className="text-[10px] font-extrabold md:text-[16px]">Message</p>
+                    <p className="text-[10px] font-extrabold md:text-[16px]">
+                      Message
+                    </p>
                     <textarea
                       placeholder="Optional"
                       className="text-[10px] outline-none w-full border-[0.55px] h-[80px] flex flex-col justify-between p-[1%] rounded-[4px] md:h-[100px] md:text-[14px] md:rounded-[8px] md:border-[1.5px]"
@@ -158,6 +177,98 @@ export const PersonalAccountPage = () => {
                     } my-[5%] w-[88%] flex justify-center items-center mx-auto cursor-pointer text-[14px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[20px] lg:h-[35px]`}
                   >
                     Proceed
+                  </button>
+                </div>
+                )
+              </Modal>
+            )}
+
+            {/* =============Confirm Transaction popup====================== */}
+            {confirmationPopUp && (
+              <Modal>
+                (
+                <div
+                  className={`${styles.transferMoneyPop} ${
+                    toggleSideBar ? "md:w-[45%]" : ""
+                  } md:w-[45%] w-[90%]`}
+                >
+                  <img
+                    onClick={() => setConfirmationPopUp(false)}
+                    className="absolute right-2 w-[18px] h-[18px] my-[1%] md:w-[35px] md:h-[35px] lg:w-[29px] lg:h-[29px]"
+                    src="/Images/transferImages/close-circle.png"
+                    alt=""
+                  />
+                  <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
+                  <h2 className="text-[12px] my-[5%] text-center md:text-[20px] md:my-[4%]">
+                    Confirm Transaction
+                  </h2>
+                  <p className="text-[8px] text-[#0008] text-center mb-2">
+                    You are about to transfer{" "}
+                    <span className="text-[#000] font-extrabold text-[10px]">
+                      &#8358;{amtToTransfer}.00{" "}
+                    </span>
+                    from your NGN wallet to{" "}
+                  </p>
+
+                  <div className="flex flex-col gap-3">
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Bank Name</p>
+                      <span>Sporta</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Account Name</p>
+                      <span>Habib Kamaldeen</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Account Number</p>
+                      <span>7785695102</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Amount to Transfer</p>
+                      <span>&#8358;{amtToTransfer}.00</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Transfaction fee</p>
+                      <span>&#8358;{transferFee}.00</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Vat Fee</p>
+                      <span>&#8358;00.00</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Total Amount</p>
+                      <span>&#8358;{TotalAmount.toLocaleString()}.00</span>
+                    </div>
+                    <div className="flex text-[10px] w-[90%] mx-auto justify-between">
+                      <p className="text-[#0008]">Points Earned</p>
+                      <span className="text-[#00AA48]">{pointsEarned}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#0001] h-[45px] my-5 flex justify-between items-center px-[4%]">
+                    <div className="flex gap-2 items-center">
+                      <div className="bg-white rounded-full h-[27px] w-[27px] flex justify-center items-center">
+                        <img
+                          className="w-[16px] h-[16px]"
+                          src={image}
+                          alt="/"
+                        />
+                      </div>
+                      <p className="text-[10px]">Available Balance <span className="text-[#0003]">(&#8358;50,000.00)</span></p>
+                    </div>
+                    <img
+                      className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                      src="./Images/Dashboardimages/arrowright.png"
+                      alt="/"
+                    />
+                  </div>
+                  <button
+                    onClick={handleProceed}
+                    className={`${
+                      amtToTransfer ? "bg-[#04177f]" : "bg-[#0008]"
+                    } my-[5%] w-[88%] flex justify-center items-center mx-auto cursor-pointer text-[14px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[20px] lg:h-[35px]`}
+                  >
+                    Confirmed
                   </button>
                 </div>
                 )

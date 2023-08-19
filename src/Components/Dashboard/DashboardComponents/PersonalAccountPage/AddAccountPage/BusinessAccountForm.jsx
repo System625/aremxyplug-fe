@@ -50,15 +50,16 @@ export const BusinessAccountForm = () => {
     useContext(ContextProvider);
   const [flag, setFlag] = useState("");
   const [countryCode, setCountryCode] = useState("");
-  const [countryName, setCountryName] = useState("");
-  //   const [btnColor, setBtnColor] = useState("#0008");
+  const [country, setCountry] = useState("");
   const [currencyAvailable, setCurrencyAvailable] = useState(false);
   const [successful, setSuccessful] = useState(false);
+  const [checkbox, setCheckBox] = useState({
+    checkbox1: false,
+    checkbox2: false,
+  });
   const [state, setState] = useState({
-    // country: "",
-    // currency: "",
     email: "",
-    houseAddress: "",
+    companyAddress: "",
     accountName: "",
     accountNumber: "",
     swiftCode: "",
@@ -70,9 +71,18 @@ export const BusinessAccountForm = () => {
     checkbox: false,
   });
   const [errors, setErrors] = useState({});
-  //   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
   console.log(state);
+
+  const handleCheckBox = (event) => {
+    const { name, checked } = event.target;
+    setCheckBox((prevState) => {
+      return {
+        ...prevState,
+        [name]: checked,
+      };
+    });
+  };
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -88,7 +98,7 @@ export const BusinessAccountForm = () => {
   const handleCountryClick = (name, flag, id, code) => {
     setFlag(flag);
     setShowList(false);
-    setCountryName(name);
+    setCountry(name);
     setSelected(true);
     setCountryCode(code);
     setCurrencyAvailable(id !== 1);
@@ -96,12 +106,12 @@ export const BusinessAccountForm = () => {
 
   // ========form validation using regex=======
   const schema = Joi.object({
-    // countryName: Joi.string().required(),
+    country: Joi.string().required(),
     email: Joi.string()
       .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
       .required()
       .messages({ "string.pattern.base": "Invalid email " }),
-    houseAddress: Joi.string().required(),
+    companyAddress: Joi.string().required(),
     accountName: Joi.string().required(),
     accountNumber: Joi.number().integer().min(-2).max(+9),
     swiftCode: Joi.string().length(64),
@@ -110,7 +120,10 @@ export const BusinessAccountForm = () => {
     beneficiaryCity: Joi.string().required(),
     stateOrProvince: Joi.string().required(),
     zipCode: Joi.number().integer().min(-30587).max(+30587),
-    checkbox: Joi.boolean().required().invalid(false).messages({
+    checkbox1: Joi.boolean().required().invalid(false).messages({
+      "any.invalid": "Please ensure you acknowledge",
+    }),
+    checkbox2: Joi.boolean().required().invalid(false).messages({
       "any.invalid":
         "Please ensure you agree to the privacy policy, terms and condition",
     }),
@@ -121,33 +134,34 @@ export const BusinessAccountForm = () => {
     e.preventDefault();
 
     const {
-      // countryName,
       email,
-      houseAddress,
-      accountName,
+      companyAddress,
       accountNumber,
       swiftCode,
+      accountName,
       bankName,
       beneficiaryAddress,
       beneficiaryCity,
       stateOrProvince,
       zipCode,
-      checkbox,
     } = state;
 
+    const { checkbox2, checkbox1 } = checkbox;
+
     const { error } = schema.validate({
-      // countryName,
+      country,
       email,
-      houseAddress,
-      accountName,
+      companyAddress,
       accountNumber,
       swiftCode,
+      accountName,
       bankName,
       beneficiaryAddress,
       beneficiaryCity,
       stateOrProvince,
       zipCode,
-      checkbox,
+      checkbox1,
+      checkbox2,
     });
 
     if (error) {
@@ -183,7 +197,7 @@ export const BusinessAccountForm = () => {
                 />
                 <p className="text-[10px] font-extrabold lg:text-[14px]">
                   {" "}
-                  {countryName}
+                  {country}
                 </p>
               </div>
             ) : (
@@ -195,6 +209,11 @@ export const BusinessAccountForm = () => {
               alt="dropdown"
             />
           </div>
+          {errors.country && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.country}
+            </div>
+          )}
           {showList && (
             <div className="absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[41.5%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]">
               {" "}
@@ -260,7 +279,7 @@ export const BusinessAccountForm = () => {
           )}
         </div>
 
-        {/* ==========================House Address====================== */}
+        {/* ==========================Company's Address====================== */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Company's Address
@@ -269,19 +288,19 @@ export const BusinessAccountForm = () => {
             <input
               onChange={handleInputChange}
               name="houseAddress"
-              value={state.houseAddress}
+              value={state.companyAddress}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
-          {errors.bankName && (
+          {errors.companyAddress && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-              {errors.bankName}
+              {errors.companyAddress}
             </div>
           )}
         </div>
 
-        {/* ============================Account Name====================== */}
+        {/* ============================Bank Name====================== */}
 
         <div className={` ${styles.inputBox}`}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
@@ -294,9 +313,9 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
-          {errors.accountName && (
+          {errors.bankName && (
             <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-              {errors.accountName}
+              {errors.bankName}
             </div>
           )}
         </div>
@@ -455,9 +474,9 @@ export const BusinessAccountForm = () => {
               <input
                 className="text-[#0006]"
                 type="checkbox"
-                value={state.checkbox}
-                name="checkbox"
-                onChange={handleInputChange}
+                value={checkbox.checkbox1}
+                name="checkbox1"
+                onChange={handleCheckBox}
               />
               <p className="text-[8px] w-full font-bold text-[#00000080] lg:text-[14px]">
                 {" "}
@@ -468,9 +487,9 @@ export const BusinessAccountForm = () => {
             <div className="flex gap-[15px] w-full">
               <input
                 type="checkbox"
-                value={state.checkbox}
-                name="checkbox"
-                onChange={handleInputChange}
+                value={checkbox.checkbox2}
+                name="checkbox2"
+                onChange={handleCheckBox}
               />
               <p className="text-[8px] w-full font-bold text-[#00000080] lg:text-[14px]">
                 I have read and agreed to AremxyPlug{" "}
@@ -489,9 +508,9 @@ export const BusinessAccountForm = () => {
                 </Link>
               </p>
             </div>
-            {errors.checkbox && (
+            {errors.checkbox2 && (
               <div className="text-[12px] text-red-500 italic lg:text-[14px]">
-                {errors.checkbox}
+                {errors.checkbox2}
               </div>
             )}
           </div>
@@ -502,13 +521,14 @@ export const BusinessAccountForm = () => {
             <button
               onClick={handleAddAccount}
               type="submit"
-              style={{ backgroundColor: "#0008" }}
-              className="hover:cursor-pointer px-[20px] py-1 flex justify-center item-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
+              className={`${
+                checkbox.checkbox2 ? "bg-[#04177f]" : "bg-[#0008]"
+              } hover:cursor-pointer px-[20px] py-1 flex justify-center items-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:w-[] lg:h-[42px] lg:text-[14px] lg:rounded-lg`}
             >
               Add Account
             </button>
             <button
-              onClick={() => navigate("to-my-account")}
+              onClick={() => navigate("/to-my-account")}
               type="submit"
               className="hover:cursor-pointer font-extrabold px-[35px] flex justify-center item-center mb-[5%] lg:mb-[2%]  text-[#F95252] mx-auto text-center mt-[7%] text-[12px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[16px] lg:rounded-lg"
             >
