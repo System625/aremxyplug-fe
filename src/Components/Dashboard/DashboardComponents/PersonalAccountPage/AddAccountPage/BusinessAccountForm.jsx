@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import { Modal } from "../../../../Screens/Modal/Modal";
+import Joi from "joi";
 
 export const BusinessAccountForm = () => {
   const countryList = [
@@ -49,14 +50,16 @@ export const BusinessAccountForm = () => {
     useContext(ContextProvider);
   const [flag, setFlag] = useState("");
   const [countryCode, setCountryCode] = useState("");
-  const [countryName, setCountryName] = useState("");
-  //   const [btnColor, setBtnColor] = useState("#0008");
+  const [country, setCountry] = useState("");
   const [currencyAvailable, setCurrencyAvailable] = useState(false);
+  const [successful, setSuccessful] = useState(false);
+  const [checkbox, setCheckBox] = useState({
+    checkbox1: false,
+    checkbox2: false,
+  });
   const [state, setState] = useState({
-    country: "",
-    currency: "",
     email: "",
-    houseAddress: "",
+    companyAddress: "",
     accountName: "",
     accountNumber: "",
     swiftCode: "",
@@ -67,30 +70,110 @@ export const BusinessAccountForm = () => {
     zipCode: "",
     checkbox: false,
   });
-  //   const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const [errors, setErrors] = useState({});
 
   console.log(state);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setState((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+  const handleCheckBox = (event) => {
+    const { name, checked } = event.target;
+    setCheckBox((prevState) => {
+      return {
+        ...prevState,
+        [name]: checked,
+      };
+    });
   };
-  //   function reloadPage() {
-  //     window.location.reload();
-  //   }
+
+  const handleInputChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    const inputValue = type === "checkbox" ? checked : value;
+    setState({
+      ...state,
+      [name]: inputValue,
+    });
+  };
 
   const navigate = useNavigate();
 
   const handleCountryClick = (name, flag, id, code) => {
     setFlag(flag);
     setShowList(false);
-    setCountryName(name);
+    setCountry(name);
     setSelected(true);
     setCountryCode(code);
     setCurrencyAvailable(id !== 1);
+  };
+
+  // ========form validation using regex=======
+  const schema = Joi.object({
+    country: Joi.string().required(),
+    email: Joi.string()
+      .pattern(new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
+      .required()
+      .messages({ "string.pattern.base": "Invalid email " }),
+    companyAddress: Joi.string().required(),
+    accountName: Joi.string().required(),
+    accountNumber: Joi.number().integer().min(-2).max(+9),
+    swiftCode: Joi.string().length(64),
+    bankName: Joi.string().required(),
+    beneficiaryAddress: Joi.string().required(),
+    beneficiaryCity: Joi.string().required(),
+    stateOrProvince: Joi.string().required(),
+    zipCode: Joi.number().integer().min(-30587).max(+30587),
+    checkbox1: Joi.boolean().required().invalid(false).messages({
+      "any.invalid": "Please ensure you acknowledge",
+    }),
+    checkbox2: Joi.boolean().required().invalid(false).messages({
+      "any.invalid":
+        "Please ensure you agree to the privacy policy, terms and condition",
+    }),
+  });
+  // ======end of form valdiation=====
+
+  const handleAddAccount = (e) => {
+    e.preventDefault();
+
+    const {
+      email,
+      companyAddress,
+      accountNumber,
+      swiftCode,
+      accountName,
+      bankName,
+      beneficiaryAddress,
+      beneficiaryCity,
+      stateOrProvince,
+      zipCode,
+    } = state;
+
+    const { checkbox2, checkbox1 } = checkbox;
+
+    const { error } = schema.validate({
+      country,
+      email,
+      companyAddress,
+      accountNumber,
+      swiftCode,
+      accountName,
+      bankName,
+      beneficiaryAddress,
+      beneficiaryCity,
+      stateOrProvince,
+      zipCode,
+      checkbox1,
+      checkbox2,
+    });
+
+    if (error) {
+      setErrors(
+        error.details.reduce((acc, curr) => {
+          acc[curr.path[0]] = curr.message;
+          return acc;
+        }, {})
+      );
+    } else {
+      setSuccessful(true);
+    }
   };
 
   return (
@@ -114,7 +197,7 @@ export const BusinessAccountForm = () => {
                 />
                 <p className="text-[10px] font-extrabold lg:text-[14px]">
                   {" "}
-                  {countryName}
+                  {country}
                 </p>
               </div>
             ) : (
@@ -126,6 +209,11 @@ export const BusinessAccountForm = () => {
               alt="dropdown"
             />
           </div>
+          {errors.country && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.country}
+            </div>
+          )}
           {showList && (
             <div className="absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[41.5%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]">
               {" "}
@@ -155,22 +243,19 @@ export const BusinessAccountForm = () => {
         </div>
 
         {/* ==================Currency Input============================== */}
-        {/* <p className="text-red-500 bg-blue-300">{state}</p> */}
+
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Select Currency
           </p>
-          <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
-            {/* <p className="text-[10px] font-extrabold">{countryCode}</p> */}
-            <input
-              //   onSelect={handleInputChange}
-              name="currency"
-              className="text-[10px] font-extrabold outline-none lg:text-[14px]"
-              type="text"
-              selected={state.countryCode}
-              value={countryCode}
-            />
+          <div className="border text-[10px] rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
+            {countryCode}
           </div>
+          {errors.currency && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.currency}
+            </div>
+          )}
         </div>
 
         {/* ========================Email Address Input ================ */}
@@ -187,9 +272,14 @@ export const BusinessAccountForm = () => {
               type="email"
             />
           </div>
+          {errors.email && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.email}
+            </div>
+          )}
         </div>
 
-        {/* ==========================House Address====================== */}
+        {/* ==========================Company's Address====================== */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Company's Address
@@ -198,29 +288,37 @@ export const BusinessAccountForm = () => {
             <input
               onChange={handleInputChange}
               name="houseAddress"
-              value={state.houseAddress}
+              value={state.companyAddress}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
+          {errors.companyAddress && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.companyAddress}
+            </div>
+          )}
         </div>
 
-        {/* ============================Account Name====================== */}
-        <div className={styles.inputBox}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">
-            Company's Name
-          </p>
+        {/* ============================Bank Name====================== */}
+
+        <div className={` ${styles.inputBox}`}>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
-              name="accountName"
-              value={state.accountName}
+              name="bankName"
+              value={state.bankName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
+          {errors.bankName && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.bankName}
+            </div>
+          )}
         </div>
-
         {/* =========================Account Number / IBAN==================== */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
@@ -235,6 +333,11 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.accountNumber && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.accountNumber}
+            </div>
+          )}
         </div>
 
         {/* ===================Swift Code/ Sort Code / Routine Number ============ */}
@@ -251,20 +354,32 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.swiftCode && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.swiftCode}
+            </div>
+          )}
         </div>
 
-        {/* ===========================Bank Name============================ */}
+        {/* ===========================Company Name============================ */}
         <div className={`flex justify-end ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
+          <p className="text-[10px] font-extrabold lg:text-[20px]">
+            Company's Name
+          </p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
               onChange={handleInputChange}
-              name="bankName"
-              value={state.bankName}
+              name="accountName"
+              value={state.accountName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
             />
           </div>
+          {errors.accountName && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.accountName}
+            </div>
+          )}
         </div>
 
         {/* =====================Beneficiary Address=========================== */}
@@ -281,6 +396,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.beneficiaryAddress && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.beneficiaryAddress}
+            </div>
+          )}
         </div>
 
         {/* ===========================Beneficiary City======================= */}
@@ -297,6 +417,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.beneficiaryCity && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.beneficiaryCity}
+            </div>
+          )}
         </div>
 
         {/* ================================State or Province======================== */}
@@ -313,6 +438,11 @@ export const BusinessAccountForm = () => {
               type="text"
             />
           </div>
+          {errors.stateOrProvince && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.stateOrProvince}
+            </div>
+          )}
         </div>
 
         {/* ============================ZIP / Postcode=============================== */}
@@ -329,6 +459,11 @@ export const BusinessAccountForm = () => {
               type="number"
             />
           </div>
+          {errors.zipCode && (
+            <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+              {errors.zipCode}
+            </div>
+          )}
         </div>
 
         {/* ==============================Acknowledgement Checks========================= */}
@@ -339,9 +474,9 @@ export const BusinessAccountForm = () => {
               <input
                 className="text-[#0006]"
                 type="checkbox"
-                value={state.checkbox}
-                name="checkbox"
-                onChange={handleInputChange}
+                value={checkbox.checkbox1}
+                name="checkbox1"
+                onChange={handleCheckBox}
               />
               <p className="text-[8px] w-full font-bold text-[#00000080] lg:text-[14px]">
                 {" "}
@@ -352,9 +487,9 @@ export const BusinessAccountForm = () => {
             <div className="flex gap-[15px] w-full">
               <input
                 type="checkbox"
-                value={state.checkbox}
-                name="checkbox"
-                onChange={handleInputChange}
+                value={checkbox.checkbox2}
+                name="checkbox2"
+                onChange={handleCheckBox}
               />
               <p className="text-[8px] w-full font-bold text-[#00000080] lg:text-[14px]">
                 I have read and agreed to AremxyPlug{" "}
@@ -373,21 +508,27 @@ export const BusinessAccountForm = () => {
                 </Link>
               </p>
             </div>
+            {errors.checkbox2 && (
+              <div className="text-[12px] text-red-500 italic lg:text-[14px]">
+                {errors.checkbox2}
+              </div>
+            )}
           </div>
 
           {/* ========================Add and Cancel Button================== */}
 
           <div className="flex ">
             <button
-              // onClick={handleSubmit}
+              onClick={handleAddAccount}
               type="submit"
-              style={{ backgroundColor: "#0008" }}
-              className="hover:cursor-pointer px-[20px] py-1 flex justify-center item-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:h-[42px] lg:text-[14px] lg:rounded-lg"
+              className={`${
+                checkbox.checkbox2 ? "bg-[#04177f]" : "bg-[#0008]"
+              } hover:cursor-pointer px-[20px] py-1 flex justify-center items-center mb-[5%] lg:mb-[2%]  text-white p-[%] rounded-[6px] mx-auto mt-[7%] text-[9px] lg:px-[5%] lg:mt-[3%] lg:w-[] lg:h-[42px] lg:text-[14px] lg:rounded-lg`}
             >
               Add Account
             </button>
             <button
-              onClick={() => navigate("to-my-account")}
+              onClick={() => navigate("/to-my-account")}
               type="submit"
               className="hover:cursor-pointer font-extrabold px-[35px] flex justify-center item-center mb-[5%] lg:mb-[2%]  text-[#F95252] mx-auto text-center mt-[7%] text-[12px] lg:px-[37px] lg:mt-[3%] lg:w-[140px] lg:h-[42px] lg:text-[16px] lg:rounded-lg"
             >
@@ -421,6 +562,49 @@ export const BusinessAccountForm = () => {
             </div>
           </Modal>
         )}
+
+        {successful && (
+          <Modal>
+            <div className={styles.successful}>
+              <img
+                className="m-2 w-[19.9px] h-[11.81px] "
+                src="/Images/addAccountImages/aremxyAddLogo.png"
+                alt="/"
+              />
+              <hr className="h-[6px] bg-[#04177f] border-none" />
+              <div className="my-[3%] flex flex-col justify-between h-[70%]">
+                <div className="text-center">
+                  <p className="text-[11px] font-extrabold">Successful</p>
+                  <p className="text-[11px] font-extrabold text-[#00AA48]">
+                    Your Account has been added successfully.
+                  </p>
+                </div>
+                <div
+                  onClick={() => navigate("/to-my-account")}
+                  className={` ${
+                    isDarkMode ? "border" : "bg-[#04177f] "
+                  } mx-auto cursor-pointer text-white text-[12px] h-[35px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                >
+                  Done
+                </div>
+              </div>
+            </div>
+          </Modal>
+        )}
+      </div>
+      <div className="mt-[30%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
+        <div className="text-[8px] md:text-[12px] lg:text-[16px]">
+          You need help ?
+        </div>
+        <Link to="/ContactUs">
+          <div
+            className={`${
+              isDarkMode ? "border " : "bg-[#04177f]"
+            } text-[8px] p-1 text-white rounded-[8px]`}
+          >
+            Contact Us
+          </div>
+        </Link>
       </div>
     </>
   );

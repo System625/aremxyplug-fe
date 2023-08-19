@@ -69,6 +69,7 @@ const CountrySelect = ({ onSelect, selectedCountry, countries }) => {
 
     console.log(id);
   };
+
   return (
     <div>
       <button
@@ -209,46 +210,59 @@ export const TransferRecord = () => {
       )}
 
       {availableAccount && (
-        <Link to="/personal-account">
-          <table className="text-[7px] md:text-[12px] lg:text-[16px]">
-            <thead>
-              <tr className="bg-[#c3d9ff] lg:h-[47px]">
-                <th>Country</th>
-                <th>Currency</th>
-                <th>Bank Name</th>
-                <th>Account Name</th>
-                <th>Account Number</th>
-                <th>Reference No</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="">
-                  <div className="flex gap-[3px] lg:gap-[10px]">
-                    <img
-                      className="w-[11px] h-[11px] lg:w-[24px] lg:h-[24px]"
-                      src={image}
-                      alt=""
-                    />{" "}
-                    <p> Nigeria</p>
-                  </div>
-                </td>
-                <td>NGN</td>
-                <td>GT Bank</td>
-                <td>Habib Kamaldeen</td>
-                <td>01234*****</td>
-                <td className="flex gap-[5px] lg:gap-[10px]">
-                  <p> AP-2023 0703-001 </p>
+        <table className="text-[7px] md:text-[12px] lg:text-[16px]">
+          <thead>
+            <tr className="bg-[#c3d9ff] lg:h-[47px]">
+              <th>Country</th>
+              <th>Currency</th>
+              <th>Bank Name</th>
+              <th>Account Name</th>
+              <th>Account Number</th>
+              <th>Reference No</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td className="">
+                <div className="flex gap-[3px] lg:gap-[10px]">
                   <img
-                    className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
-                    src="./Images/Dashboardimages/arrowright.png"
-                    alt="/"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </Link>
+                    className="w-[11px] h-[11px] lg:w-[24px] lg:h-[24px]"
+                    src={image}
+                    alt=""
+                  />{" "}
+                  <p>
+                    {" "}
+                    <Link to="/personal-account">Nigeria</Link>
+                  </p>
+                </div>
+              </td>
+              <td>
+                <Link to="/personal-account">NGN</Link>
+              </td>
+              <td>
+                <Link to="/personal-account">GT Bank</Link>
+              </td>
+              <td>
+                <Link to="/personal-account">Habib Kamaldeen</Link>
+              </td>
+              <td>
+                <Link to="/personal-account">01234*****</Link>
+              </td>
+              <td className="flex gap-[5px] lg:gap-[10px]">
+                <p>
+                  {" "}
+                  <Link to="/personal-account">AP-2023 0703-001 </Link>
+                </p>
+                <img
+                  className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
+                  src="./Images/Dashboardimages/arrowright.png"
+                  alt="/"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       )}
 
       <div className="flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
