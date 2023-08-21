@@ -48,8 +48,14 @@ export const PersonalAccountForm = () => {
     },
   ];
 
-  const { showList, setShowList, selected, setSelected, isDarkMode } =
-    useContext(ContextProvider);
+  const {
+    showList,
+    setShowList,
+    selected,
+    setSelected,
+    isDarkMode,
+    toggleSideBar,
+  } = useContext(ContextProvider);
   const [flag, setFlag] = useState("");
   const [countryCode, setCountryCode] = useState("");
   const [country, setCountry] = useState("");
@@ -187,7 +193,7 @@ export const PersonalAccountForm = () => {
 
   return (
     <>
-      <div className="mt-[4%] grid grid-cols-2 gap-[5%] h-[] lg:w-[90%]">
+      <div className="mt-[4%] flex flex-col gap-[10px] md:grid md:grid-cols-2 md:gap-[5%] h-[] lg:w-[90%] ">
         {/* =====================Country Input========================= */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
@@ -224,7 +230,15 @@ export const PersonalAccountForm = () => {
             </div>
           )}
           {showList && (
-            <div className="absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[41.5%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]">
+            <div
+              className={`${
+                toggleSideBar
+                  ? "lg:w-[31.5%] lg:top-[100.5%]"
+                  : "lg:w-[38.5%] lg:top-[105.3%]"
+              }  ${
+                styles.countryDropDown
+              } absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[90.3%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]`}
+            >
               {" "}
               {countryList.map((country) => (
                 <div
@@ -314,12 +328,16 @@ export const PersonalAccountForm = () => {
           <p className="text-[10px] font-extrabold lg:text-[20px]">Bank Name</p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
             <input
-              // onClick={bankApi}
               onChange={handleInputChange}
               name="bankName"
               value={state.bankName}
               className="text-[10px] w-[100%] h-[100%] outline-none lg:text-[14px]"
               type="text"
+            />
+            <img
+              className=" h-[13.3px] w-[13.3px] lg:w-[24px] lg:h-[24px] "
+              src="./Images/dashboardImages/arrow-down2.png"
+              alt="dropdown"
             />
           </div>
           {errors.bankName && (
@@ -589,7 +607,9 @@ export const PersonalAccountForm = () => {
               <hr className="h-[6px] bg-[#04177f] border-none lg:h-[22px]" />
               <div className="my-[3%] flex flex-col justify-between h-[70%]">
                 <div className="text-center">
-                  <p className="text-[11px] font-extrabold lg:text-[16px]">Successful</p>
+                  <p className="text-[11px] font-extrabold lg:text-[16px]">
+                    Successful
+                  </p>
                   <p className="text-[11px] font-extrabold text-[#00AA48] lg:text-[16px]">
                     Your Account has been added successfully.
                   </p>
@@ -606,21 +626,6 @@ export const PersonalAccountForm = () => {
             </div>
           </Modal>
         )}
-      </div>
-
-      <div className="mt-[30%] mb-[10%] flex gap-[15px] justify-center items-center absolute top-[100%] left-[35%] lg:top-[220%] lg:left-[40%]">
-        <div className="text-[8px] md:text-[12px] lg:text-[16px]">
-          You need help ?
-        </div>
-        <Link to="/ContactUs">
-          <div
-            className={`${
-              isDarkMode ? "border " : "bg-[#04177f]"
-            } text-[8px] p-1 text-white rounded-[8px]`}
-          >
-            Contact Us
-          </div>
-        </Link>
       </div>
     </>
   );

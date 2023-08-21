@@ -1,4 +1,18 @@
-/* =======================Mobile View ======================== */
+/* =====================Iphone SE======================= */
+@media (min-width: 375px) and (max-width: 667px) {
+  .countryDropDown {
+    top: 45.6%;
+  }
+}
+
+/* ========================iphone 12 pro===================== */
+@media (min-width: 390px) and (max-width: 844px) {
+  .countryDropDown {
+    top: 36.6%;
+  }
+}
+
+/* =======================Samsung Galaxy S8+ ======================== */
 .transferMoneyBtn {
   border-radius: 4.763px;
   background: #fff;
@@ -62,7 +76,6 @@
 
 /* ======================Surface Pro 7===================== */
 @media (min-width: 912px) and (max-width: 1368px) {
-
 }
 
 /* ==================Laptop View ============================ */
@@ -83,12 +96,12 @@
     gap: 25px;
   }
 
-  .transferMoneyPop{
+  .transferMoneyPop {
     top: 7%;
     height: 600px;
   }
 
-  .successful{
+  .successful {
     width: 50%;
     height: 465px;
     box-shadow: 0px 0px 16.952381610870361px 0px rgba(0, 0, 0, 0.25);
