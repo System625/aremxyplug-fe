@@ -48,9 +48,20 @@
 
   .transferMoneyPop {
     position: absolute;
+    top: 10%;
+    /* width: 90%; */
+    height: 505px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .transferConfirmation{
+    position: absolute;
     top: 27%;
     /* width: 90%; */
-    height: 520px;
+    height: 515px;
     flex-shrink: 0;
     border-radius: 8px;
     background: #fff;
