@@ -85,7 +85,7 @@ export const PersonalAccountPage = () => {
               <Modal>
                 (
                 <div
-                  className={`${styles.transferMoneyPop} ${
+                  className={` ${styles.transferMoneyPop} ${
                     toggleSideBar ? "md:w-[45%]" : ""
                   } md:w-[45%] w-[90%]`}
                 >
@@ -99,7 +99,7 @@ export const PersonalAccountPage = () => {
                   <h2 className="text-[12px] my-[5%] text-center md:text-[20px] md:my-[4%]">
                     Transfer Money to Account
                   </h2>
-                  <div className="w-[90%] mx-auto flex flex-col gap-[15px] md:grid md:grid-cols-2">
+                  <div className="w-[90%] mx-auto flex flex-col gap-[10px] md:grid md:grid-cols-2">
                     <div>
                       <p className="text-[10px] font-extrabold md:text-[16px]">
                         Bank Name
@@ -188,7 +188,7 @@ export const PersonalAccountPage = () => {
               <Modal>
                 (
                 <div
-                  className={`${styles.transferMoneyPop} ${
+                  className={`${styles.transferConfirmation} ${
                     toggleSideBar ? "md:w-[45%]" : ""
                   } md:w-[45%] w-[90%]`}
                 >
