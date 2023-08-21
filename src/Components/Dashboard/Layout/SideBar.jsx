@@ -205,7 +205,7 @@ export const SideBar = () => {
                         src="./Images/dashboardImages/sideArrow.png"
                         alt="/"
                       />
-                      <Link to={'/airtime-topup'}>Airtime Top-up</Link>
+                      <Link to={"/airtime-topup"}>Airtime Top-up</Link>
                     </li>
                     <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                       <img
@@ -310,15 +310,16 @@ export const SideBar = () => {
                       />
                       <div>Virtual Accounts</div>
                     </li>
-                   <Link to="/money-transfer">
-                   <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
-                      <img
-                        className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
-                        src="./Images/dashboardImages/sideArrow.png"
-                        alt="/"
-                      />
-                      <div>Money Transfer</div>
-                    </li></Link>
+                    <Link to="/money-transfer">
+                      <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
+                        <img
+                          className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
+                          src="./Images/dashboardImages/sideArrow.png"
+                          alt="/"
+                        />
+                        <div>Money Transfer</div>
+                      </li>
+                    </Link>
                     <li className="flex gap-[5%] hover:underline text-[#fff] pt-1 pb-1 font-medium md:text-[8px] lg:pt-[6%] lg:pb-[6%] lg:pl-[%] lg:text-[14px] ">
                       <img
                         className="w-[8.5px] h-[8.5px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
@@ -504,7 +505,7 @@ export const SideBar = () => {
       {/* ===========Logout========= */}
 
       <div
-        className={`${styles.logout} pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[80%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
+        className={`${styles.logout} pl-[5%] mt-[%] border-t-[0.3px] ml-[%] flex gap-[4%] md:mt-[%] md:border-t-[1.5px] py-[10%] lg:pb-[10%] lg:text-[14px]`}
       >
         <img
           className="w-[11px] h-[11px] md:w-[13.75px] md:h-[13.75px] lg:w-[24px] lg:h-[24px]"
