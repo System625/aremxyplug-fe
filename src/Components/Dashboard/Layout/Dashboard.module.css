@@ -328,10 +328,6 @@ select {
     border-bottom-right-radius: 25px;
   }
 
-  .logout {
-    /* margin-top: 90%; */
-  }
-
   .topbar {
     gap: 100px;
   }
