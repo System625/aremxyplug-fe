@@ -1,5 +1,5 @@
 .countryDropDown {
-  position: absolute;
+  /* position: absolute; */
   top: 45.5%;
 }
 
@@ -67,21 +67,21 @@
   box-shadow: 0px 0px 5.952381610870361px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media (min-width: 360px) {
+/* @media (min-width: 360px) {
   .countryDropDown {
     position: absolute;
     top: 40.5%;
   }
 }
 
-@media (min-width:375px) {
+@media (min-width: 375px) {
   .countryDropDown {
     position: absolute;
     top: 45.5%;
   }
-}
+} */
 
-@media (min-width: 390px) {
+/* @media (min-width: 390px) {
   .countryDropDown {
     position: absolute;
     top: 36.5%;
@@ -100,10 +100,34 @@
     position: absolute;
     top: 35.5%;
   }
+} */
+
+/* =================Surface Duo============== */
+@media (min-width: 540px) {
+  .countryDropDown {
+    position: absolute;
+    top: 49.5%;
+    /* width: 43%; */
+  }
+}
+
+/* =================Ipad mini=================== */
+@media (min-width: 768px) {
+  .countryDropDown {
+    position: absolute;
+    top: 49.5%;
+    width: 43%;
+  }
 }
 
 /* =====================Tablet View ====================== */
-@media (min-width: 820px) and (max-width: 1180px) {
+@media (min-width: 820px) {
+  .countryDropDown {
+    position: absolute;
+    top: 44.5%;
+    width: 43%;
+  }
+
   .detailsBox {
     display: grid;
     /* flex-direction: column; */
@@ -138,7 +162,12 @@
 }
 
 /* ======================Surface Pro 7===================== */
-@media (min-width: 912px) and (max-width: 1368px) {
+@media (min-width: 912px){
+  .countryDropDown {
+    position: absolute;
+    top: 40%;
+    width: 43%;
+  }
 }
 
 /* ==================Laptop View ============================ */
