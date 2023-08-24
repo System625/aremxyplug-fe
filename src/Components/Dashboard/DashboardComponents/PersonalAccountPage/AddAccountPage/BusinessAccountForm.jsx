@@ -46,8 +46,14 @@ export const BusinessAccountForm = () => {
     },
   ];
 
-  const { showList, setShowList, selected, setSelected, isDarkMode, toggleSideBar } =
-    useContext(ContextProvider);
+  const {
+    showList,
+    setShowList,
+    selected,
+    setSelected,
+    isDarkMode,
+    toggleSideBar,
+  } = useContext(ContextProvider);
   const [flag, setFlag] = useState("");
   const [countryCode, setCountryCode] = useState("");
   const [country, setCountry] = useState("");
@@ -216,7 +222,9 @@ export const BusinessAccountForm = () => {
           )}
           {showList && (
             <div
-              className={`${toggleSideBar ? "lg:w-[31.5%] lg:top-[100.5%]" : "lg:w-[38.5%] lg:top-[105.3%]"} ${styles.countryDropDown} absolute top-[40.5%] rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[90.3%]  lg:rounded-br-[14px] lg:rounded-bl-[14px] `}
+              className={`${toggleSideBar ? "" : ""} ${
+                styles.countryDropDown
+              } rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-full lg:w-full lg:rounded-br-[14px] lg:rounded-bl-[14px] `}
             >
               {" "}
               {countryList.map((country) => (

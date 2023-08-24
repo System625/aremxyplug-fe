@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useContext } from "react";
 import { ContextProvider } from "../../../Context";
 import { DashBoardLayout } from "../../Layout/DashBoardLayout";
@@ -7,17 +7,19 @@ import { Link } from "react-router-dom";
 import { Modal } from "../../../Screens/Modal/Modal";
 import Joi from "joi";
 import OtpInput from "react-otp-input";
+import { RiFileCopyFill } from "react-icons/ri";
 
 export const PersonalAccountPage = () => {
   const { isDarkMode, image, code, toggleSideBar } =
     useContext(ContextProvider);
   const [tfPopUp, setTfPopUp] = useState(false);
-  const [confirmationPopUp, setConfirmationPopUp] = useState(true);
+  const [confirmationPopUp, setConfirmationPopUp] = useState(false);
   const [inputPinPopUp, setInputPinPopUp] = useState(false);
   const [transactSuccessPopUp, setTransactSuccessPopUp] = useState(false);
   const [inputPin, setInputPin] = useState("");
   const [amtToTransfer, setAmtToTransfer] = useState("");
   const [errors, setErrors] = useState({});
+  const textRef = useRef(null);
 
   const transferFee = 50;
 
@@ -69,6 +71,19 @@ export const PersonalAccountPage = () => {
     setInputPinPopUp(true);
     setConfirmationPopUp(false);
   };
+
+  const handleCopyClick = () => {
+    const text = textRef.current.innerText;
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("Copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Error copying text: ", err);
+      });
+  };
+
   return (
     <DashBoardLayout>
       <div className=" flex flex-col justify-between md:mt-[-4%]">
@@ -360,9 +375,14 @@ export const PersonalAccountPage = () => {
                     alt=""
                   />
                   <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
-                  <h2 className="text-[12px] my-[5%] text-center md:text-[20px] md:my-[4%] lg:my-[2%]">
+                  <h2 className="text-[12px] my-[4%] text-center md:text-[20px] md:my-[4%] lg:my-[2%]">
                     Transaction Successful
                   </h2>
+                  <img
+                    className="w-[65px] h-[50px] mx-auto mb-[2%]"
+                    src="./Images/transferImages/Tick.png"
+                    alt="/"
+                  />
                   <p className="text-[8px] text-[#0008] text-center mb-2 lg:text-[16px]">
                     You are about to transfer{" "}
                     <span className="text-[#000] font-extrabold text-[10px] lg:text-[20px]">
@@ -394,7 +414,17 @@ export const PersonalAccountPage = () => {
                     </div>
                     <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Session ID</p>
-                      <span>1232455566664654</span>
+                      <div className="flex items-center">
+                        <span ref={textRef}>
+                          1232455566664654 <br /> 1232455566664654
+                        </span>
+                        <div
+                          onClick={handleCopyClick}
+                          className="text-[#92abfec3] text-[13px] font-extrabold lg:text-[16px]"
+                        >
+                          <RiFileCopyFill />
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -407,16 +437,16 @@ export const PersonalAccountPage = () => {
                     </p>
                     {/* </div> */}
                   </div>
-                  <div className=" inline-flex mx-auto gap-[5px]">
+                  <div className="flex w-[70%] mx-auto">
                     <button
                       // onClick={handleSwitch}
-                      className={`bg-[#04177f] w-[111px] my-[5%] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
+                      className={`bg-[#04177f] w-[111px] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
                     >
-                      Confirmed
+                      Done
                     </button>
                     <button
                       // onClick={handleSwitch}
-                      className={`border-[1px] w-[111px] border-[#04177f] my-[5%] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
+                      className={`border-[1px] w-[111px] border-[#04177f] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
                     >
                       Receipt
                     </button>
