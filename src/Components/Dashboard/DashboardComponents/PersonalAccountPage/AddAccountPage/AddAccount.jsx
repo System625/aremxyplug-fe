@@ -15,7 +15,7 @@ export const AddAccount = () => {
 
   return (
     <DashBoardLayout>
-      <div className="flex flex-col justify-between lg:gap-[200px] lg:h-full lg:">
+      <div className="flex flex-col justify-between md:h-full lg:gap-[200px] lg:h-full lg:">
         <div className="lg:h-[100%] ">
           <img
             className="w-[100%] h-[80px] md:h-[180px] lg:h-[230px]"
@@ -65,7 +65,7 @@ export const AddAccount = () => {
           {personalAcc && <PersonalAccountForm />}
           {businessAcc && <BusinessAccountForm />}
         </div>
-        <div className=" flex gap-[15px] justify-center items-center ">
+        <div className=" flex gap-[15px] justify-center items-center mb-[5%] ">
           <div className="text-[8px] md:text-[12px] lg:text-[16px]">
             You need help ?
           </div>

@@ -33,6 +33,7 @@ export const PersonalAccountPage = () => {
   };
   const inputPinHandler = (e) => {
     setInputPin(e.target.value);
+    setInputPinPopUp(false)
     setTransactSuccessPopUp(true);
   };
 
@@ -86,7 +87,7 @@ export const PersonalAccountPage = () => {
 
   return (
     <DashBoardLayout>
-      <div className=" flex flex-col justify-between md:mt-[-4%]">
+      <div className={`${toggleSideBar ? "lg:mt-[1%]" : "lg:mt-[4%]"} flex flex-col justify-between md:mt-[-4%]`}>
         <div>
           {" "}
           <img
@@ -114,8 +115,8 @@ export const PersonalAccountPage = () => {
                 (
                 <div
                   className={` ${styles.transferMoneyPop} ${
-                    toggleSideBar ? "md:w-[45%]" : ""
-                  } md:w-[45%] w-[90%]`}
+                    toggleSideBar ? "md:w-[45%] lg:w-[50%]" : "md:w-[80%] lg:w-[70%]"
+                  } w-[90%]`}
                 >
                   <img
                     onClick={() => setTfPopUp(false)}
@@ -177,7 +178,7 @@ export const PersonalAccountPage = () => {
                       <p className="text-[10px] font-extrabold md:text-[16px]">
                         Available Balance
                       </p>
-                      <div className="border-[0.55px] h-[20px] flex justify-between p-[1%] rounded-[4px] md:p-[3%] md:rounded-[8px] md:h-[40px] md:border-[1.5px]">
+                      <div className="border-[0.55px] h-[20px] flex justify-between items-center p-[1%] rounded-[4px] md:p-[3%] md:rounded-[8px] md:h-[40px] md:border-[1.5px]">
                         <p className="text-[8px] text-[#0008] md:text-[14px]">
                           &#8358;50,000.00
                         </p>
@@ -218,7 +219,7 @@ export const PersonalAccountPage = () => {
                 (
                 <div
                   className={`${styles.transferConfirmation} ${
-                    toggleSideBar ? "md:w-[45%]" : ""
+                    toggleSideBar ? "md:w-[45%] lg:w-[50%]" : "lg:w-[70%]"
                   } md:w-[45%] w-[90%]`}
                 >
                   <img
@@ -228,47 +229,47 @@ export const PersonalAccountPage = () => {
                     alt=""
                   />
                   <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
-                  <h2 className="text-[12px] my-[5%] text-center md:text-[20px] md:my-[4%] lg:my-[2%]">
+                  <h2 className="text-[12px] my-[5%] text-center md:text-[25px] md:my-[4%] lg:my-[2%]">
                     Confirm Transaction
                   </h2>
-                  <p className="text-[8px] text-[#0008] text-center mb-2 lg:text-[16px]">
+                  <p className="text-[8px] text-[#0008] text-center mb-2 md:text-[12px] lg:text-[16px]">
                     You are about to transfer{" "}
-                    <span className="text-[#000] font-extrabold text-[10px] lg:text-[20px]">
+                    <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[20px]">
                       &#8358;{amtToTransfer}.00{" "}
                     </span>
                     from your NGN wallet to{" "}
                   </p>
 
                   <div className="flex flex-col gap-3">
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Bank Name</p>
                       <span>Sporta</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Account Name</p>
                       <span>Habib Kamaldeen</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Account Number</p>
                       <span>7785695102</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Amount to Transfer</p>
                       <span>&#8358;{amtToTransfer}.00</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Transfaction fee</p>
                       <span>&#8358;{transferFee}.00</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Vat Fee</p>
                       <span>&#8358;00.00</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Total Amount</p>
                       <span>&#8358;{TotalAmount.toLocaleString()}.00</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[20px]">
                       <p className="text-[#0008]">Points Earned</p>
                       <span className="text-[#00AA48]">{pointsEarned}</span>
                     </div>
@@ -283,7 +284,7 @@ export const PersonalAccountPage = () => {
                           alt="/"
                         />
                       </div>
-                      <p className="text-[10px]  lg:text-[20px]">
+                      <p className="text-[10px] md:text-[14px]  lg:text-[20px]">
                         Available Balance{" "}
                         <span className="text-[#0003]">(&#8358;50,000.00)</span>
                       </p>
@@ -306,14 +307,14 @@ export const PersonalAccountPage = () => {
             )}
             {/* =============Confirm Transaction popup====================== */}
 
-            {/* ==================inputPin PopUp==================== */}
+            {/* ==================Input Pin PopUp==================== */}
             {inputPinPopUp && (
               <Modal>
                 (
                 <div
                   className={`${styles.inputPin} ${
-                    toggleSideBar ? "md:w-[45%]" : ""
-                  } md:w-[45%] w-[90%]`}
+                    toggleSideBar ? "md:w-[45%] lg:w-[50%]" : ""
+                  } md:w-[55%] w-[90%]`}
                 >
                   <img
                     onClick={() => setInputPinPopUp(false)}
@@ -322,7 +323,7 @@ export const PersonalAccountPage = () => {
                     alt=""
                   />
                   <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
-                  <p className="text-[9px] font-extrabold text-center my-[10%]">
+                  <p className="text-[9px] md:text-[16px] font-extrabold text-center my-[10%] lg:my-[%]">
                     Input PIN to complete transaction
                   </p>
                   <div className="flex flex-col gap-[10px] justify-center items-center font-extrabold mb-[8%]">
@@ -342,7 +343,7 @@ export const PersonalAccountPage = () => {
                         <input {...props} className="inputOTP mx-[3px]" />
                       )}
                     />
-                    <p className="text-[8px] text-[#04177f]">Forgot Pin ?</p>
+                    <p className="text-[8px] md:text-[12px] text-[#04177f]">Forgot Pin ?</p>
                   </div>
                   <button
                     onClick={inputPinHandler}
@@ -359,60 +360,60 @@ export const PersonalAccountPage = () => {
             )}
             {/* ==================inputPin PopUp==================== */}
 
-            {/* ====================Transaction Succesful PopUp=============== */}
+            {/* ====================Transaction Successful PopUp=============== */}
             {transactSuccessPopUp && (
               <Modal>
                 (
                 <div
-                  className={`${styles.transferConfirmation} ${
+                  className={`${styles.successful} ${
                     toggleSideBar ? "md:w-[45%]" : ""
                   } md:w-[45%] w-[90%]`}
                 >
                   <img
-                    onClick={() => setConfirmationPopUp(false)}
+                    onClick={() => setTransactSuccessPopUp(false)}
                     className="absolute right-2 w-[18px] h-[18px] my-[1%] md:w-[35px] md:h-[35px] lg:w-[29px] lg:h-[29px]"
                     src="/Images/transferImages/close-circle.png"
                     alt=""
                   />
                   <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
-                  <h2 className="text-[12px] my-[4%] text-center md:text-[20px] md:my-[4%] lg:my-[2%]">
+                  <h2 className="text-[12px] my-[4%] text-center md:text-[20px] md:my-[3%] lg:text-[16px] lg:my-[2%]">
                     Transaction Successful
                   </h2>
                   <img
-                    className="w-[65px] h-[50px] mx-auto mb-[2%]"
-                    src="./Images/transferImages/Tick.png"
+                    className="w-[50px] h-[50px] mx-auto mb-[2%]"
+                    src="./Gif/checkMarkGif.gif"
                     alt="/"
                   />
-                  <p className="text-[8px] text-[#0008] text-center mb-2 lg:text-[16px]">
-                    You are about to transfer{" "}
-                    <span className="text-[#000] font-extrabold text-[10px] lg:text-[20px]">
+                  <p className="text-[8px] text-[#0008] text-center mb-2 md:text-[14px] lg:text-[14px]">
+                    You have successfully transferred{" "}
+                    <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[16px]">
                       &#8358;{amtToTransfer}.00{" "}
                     </span>
                     from your NGN wallet to{" "}
                   </p>
 
                   <div className="flex flex-col gap-3">
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Bank Name</p>
                       <span>Sporta Bank</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Account Name</p>
                       <span>Habib Kamaldeen</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Account Number</p>
                       <span>7785695102</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Transfaction fee</p>
                       <span>&#8358;{transferFee}.00</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Order Number</p>
                       <span>122555556464564</span>
                     </div>
-                    <div className="flex text-[10px] w-[90%] mx-auto justify-between  lg:text-[20px]">
+                    <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                       <p className="text-[#0008]">Session ID</p>
                       <div className="flex items-center">
                         <span ref={textRef}>
@@ -428,16 +429,16 @@ export const PersonalAccountPage = () => {
                     </div>
                   </div>
 
-                  <div className="bg-[#04177f28] mx-4 h-[45px] my-5 flex justify-between items-center px-[4%]">
+                  <div className="bg-[#04177f28] mx-4 h-[45px] my-5 flex justify-between items-center px-[4%] md:h-[65px] lg:h-[75px]">
                     {/* <div className="flex gap-2 items-center"> */}
-                    <p className="text-[6px] text-center mx-auto w-[171px] lg:text-[20px]">
+                    <p className="text-[6px] text-center mx-auto w-[171px] md:text-[14px] md:w-[80%] lg:text-[16px]">
                       The transfer has been sent successfully. Please contact
                       the recipient bank with the Session ID if payment not
                       received within 5-15 minutes.
                     </p>
                     {/* </div> */}
                   </div>
-                  <div className="flex w-[70%] mx-auto">
+                  <div className="flex w-[70%] mx-auto md:w-[60%]">
                     <button
                       // onClick={handleSwitch}
                       className={`bg-[#04177f] w-[111px] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
