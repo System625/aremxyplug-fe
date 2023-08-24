@@ -37,6 +37,7 @@ import AirtimeTopUp from "./Components/AirtimeTopUp/AirtimeTopUp";
 import AirtimeVtu from "./Components/AirtimeTopUp/AirtimeVtu";
 import { AddAccount } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/AddAccountPage/AddAccount";
 import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtualAccount";
+import { CookiesSettings } from "./Components/Screens/Home/Cookie/CookiesSettings";
 
 export const Router = () => {
   return (
@@ -83,6 +84,7 @@ export const Router = () => {
         <Route path="/airtime-vtu" element={<AirtimeVtu/>} />
         <Route path="/add-account" element={<AddAccount/>} />
         <Route path="/ngn-virtual-account" element={<NgnVirtualAccount/>} />
+        <Route path="/cookie-settings" element={<CookiesSettings/>} />
       </Routes>
     </div>
   );

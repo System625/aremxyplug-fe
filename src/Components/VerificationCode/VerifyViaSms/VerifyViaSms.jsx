@@ -7,41 +7,38 @@ import { useContext } from "react";
 import { ContextProvider } from "../../Context";
 
 export const VerifyViaSms = () => {
-  const [seconds, setSeconds] = useState(60)
-  const [buttonColor, setButtonColor] = useState("#0003");
+  const [seconds, setSeconds] = useState(60);
   const [verificationCode, setVerificationCode] = useState("");
-  const {emailorsmsHandler, viaEmail,success,setSuccess} = useContext(ContextProvider)
+  const { emailorsmsHandler, viaEmail, success, setSuccess } =
+    useContext(ContextProvider);
 
-  useEffect(()=>{
-    const interval = setInterval(()=>{
-      if(seconds > 0){
-        setSeconds(seconds-1);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
       }
     }, 1000);
-    return ()=>{
+    return () => {
       clearInterval(interval);
-    }
-  }, );
+    };
+  });
 
   const onClick = (code) => {
-    setButtonColor("#04177f");
     setVerificationCode(code);
     // window.location.href="/dashboard";
   };
 
-  const resendOtp =() =>{
-    setSeconds(59)
-  }
+  const resendOtp = () => {
+    setSeconds(59);
+  };
 
   const submitHandler = () => {
     if (!verificationCode) {
       alert("Please enter the verification code");
     } else {
       setSuccess(true);
-
     }
   };
-
 
   return (
     <div className="p-4 flex flex-col gap-[10px] rounded-[8.6px] h-[172px] w-[199px] bg-white md:absolute md:top-[20%] md:left-[50%] lg:gap-[18px] lg:h-[301px] lg:w-[348px] lg:rounded-[15px] lg:">
@@ -49,12 +46,12 @@ export const VerifyViaSms = () => {
         Verification code has been sent to your phone
       </p>
       <div className="flex flex-col gap-[15px] lg:gap-[28px]">
-          <p
-            onClick={emailorsmsHandler}
-            className="cursor-pointer hover:underline text-[#737373] text-[6px] lg:text-[10px]"
-          >
-            Use email address instead
-          </p>
+        <p
+          onClick={emailorsmsHandler}
+          className="cursor-pointer hover:underline text-[#737373] text-[6px] lg:text-[10px]"
+        >
+          Use email address instead
+        </p>
 
         <div className="flex flex-col gap-[2px] md:gap-[6px]">
           <div className="lg:hidden">
@@ -84,19 +81,26 @@ export const VerifyViaSms = () => {
             <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
               {seconds}secs
             </p>
-            <p disabled={seconds > 0} onClick={resendOtp} style={{color: seconds > 0 ? "#0003" : "#04177f"}} className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]">
+            <p
+              disabled={seconds > 0}
+              onClick={resendOtp}
+              style={{ color: seconds > 0 ? "#0003" : "#04177f" }}
+              className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]"
+            >
               Resend OTP
             </p>
           </div>
         </div>
 
-        <div
+        <button
           onClick={submitHandler}
-          style={{ backgroundColor: buttonColor }}
-          className="cursor-pointer mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-[4.5px] lg:rounded-[8px] md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]"
+          disabled={verificationCode.length !== 6 ? true : false}
+          className={`${
+            verificationCode.length !== 6 ? "bg-[#0003]" : "bg-[#04177f]"
+          } cursor-pointer mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-[4.5px] lg:rounded-[8px] md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]`}
         >
           Continue
-        </div>
+        </button>
       </div>
       {success && (
         <Modal>

@@ -391,7 +391,7 @@ export const PersonalAccountForm = () => {
 
         {/* ===========================Account Name============================ */}
 
-        <div className={`flex justify-end ${styles.inputBox}`}>
+        <div className={` ${styles.inputBox}`}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
             Account Name
           </p>

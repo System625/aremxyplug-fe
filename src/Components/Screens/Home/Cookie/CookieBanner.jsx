@@ -50,7 +50,10 @@ const CookieBanner = () => {
         we'll respect your privacy. To learn more about our deliciously
         effective cookies and how they can supercharge your visit, check out our
         <Link to="/privacy-policy">
-          <span className="text-[#04177f] font-extrabold hover:underline cursor-pointer"> Privacy Policy</span>
+          <span className="text-[#04177f] font-extrabold hover:underline cursor-pointer">
+            {" "}
+            Privacy Policy
+          </span>
         </Link>
         . Ready to take a byte? Accept or Decline, the choice is yours!
       </p>
@@ -68,11 +71,13 @@ const CookieBanner = () => {
           Decline Cookies
         </button>
       </div>
-      <div className="flex justify-center">
-        <button className=" bg-[#04177f] text-white text-[10px] px-[6%] py-[3%] rounded-[6px]  md:px-[4%] md:py-[2%] md:text-[14px] lg:py-0 lg:h-[50px] lg:px-[3%]">
-          Cookies Settings
-        </button>
-      </div>
+      <Link to="/cookie-settings">
+        <div className="flex justify-center ">
+          <button className=" bg-[#04177f] text-white text-[10px] px-[6%] py-[3%] rounded-[6px]  md:px-[4%] md:py-[2%] md:text-[14px] lg:py-0 lg:h-[50px] lg:px-[3%]">
+            Cookies Settings
+          </button>
+        </div>
+      </Link>
     </div>
   ) : null;
 };

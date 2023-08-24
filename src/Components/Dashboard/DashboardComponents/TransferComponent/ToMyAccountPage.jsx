@@ -16,7 +16,7 @@ export const ToMyAccountPage = () => {
         {/* ===================Mobile view====================== */}
         <div className="md:hidden flex border w-[136px] h-[20px] rounded-[5px] items-center my-[6%] md:h-[30px] md:w-[24%] lg:h-[41px] lg:w-[231px] lg:rounded-[12px] lg:justify-between lg:pr-[1%]">
           <input
-            className="text-[9px] w-[115px] ml-[2%] md:text-[14px] md:w-[150px] lg:text-[16px] lg:w-[100%]"
+            className="outline-none text-[9px] w-[115px] ml-[2%] md:text-[14px] md:w-[150px] lg:text-[16px] lg:w-[100%]"
             type="search"
             placeholder="Search Account"
           />

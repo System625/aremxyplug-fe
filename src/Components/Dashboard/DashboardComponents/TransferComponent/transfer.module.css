@@ -1,102 +1,139 @@
-/* =====================Iphone SE======================= */
-@media (min-width: 375px) {
+.countryDropDown {
+  position: absolute;
+  top: 45.5%;
+}
+
+.transferMoneyBtn {
+  border-radius: 4.763px;
+  background: #fff;
+  box-shadow: 0px 0px 3.969465970993042px 0px rgba(0, 0, 0, 0.25);
+}
+
+.boxes {
+  border-radius: 3.328px;
+  border: 0.555px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
+  background: #fff3e5;
+  grid-column: 0;
+}
+
+.detailsBox {
+  display: grid;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+
+.transferMoneyPop {
+  position: absolute;
+  height: 505px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
+}
+
+.transferConfirmation {
+  position: absolute;
+  bottom: 0%;
+  height: 470px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
+}
+
+.inputPin {
+  position: absolute;
+  bottom: 0%;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
+}
+
+.inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.successful {
+  width: 312px;
+  height: 246px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 5.952381610870361px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 360px) {
   .countryDropDown {
-    top: 42.6%;
-  }
-  .transferMoneyPop {
     position: absolute;
-    top: 18%;
+    top: 40.5%;
   }
 }
 
-/* ========================iphone 12 pro===================== */
-@media (min-width: 360px) and (min-width: 390px) {
+@media (min-width:375px) {
   .countryDropDown {
-    top: 37.6%;
-  }
-  /* .transferMoneyPop {
     position: absolute;
-    top: 27%;
-  } */
+    top: 45.5%;
+  }
+}
+
+@media (min-width: 390px) {
+  .countryDropDown {
+    position: absolute;
+    top: 36.5%;
+  }
 }
 
 @media (min-width: 412px) {
   .countryDropDown {
-    top: 35%;
+    position: absolute;
+    top: 34.5%;
   }
 }
-/* =======================Samsung Galaxy S8+ ======================== */
-@media (min-width: 360px) and (max-width: 740px) {
-  .transferMoneyBtn {
-    border-radius: 4.763px;
-    background: #fff;
-    box-shadow: 0px 0px 3.969465970993042px 0px rgba(0, 0, 0, 0.25);
-  }
 
-  .boxes {
-    border-radius: 3.328px;
-    border: 0.555px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
-    background: #fff3e5;
-    grid-column: 0;
+@media (min-width: 414px) {
+  .countryDropDown {
+    position: absolute;
+    top: 35.5%;
   }
+}
 
+/* =====================Tablet View ====================== */
+@media (min-width: 820px) and (max-width: 1180px) {
   .detailsBox {
     display: grid;
     /* flex-direction: column; */
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
   }
 
   .transferMoneyPop {
-    position: absolute;
-    top: 10%;
-    /* width: 90%; */
-    height: 505px;
-    flex-shrink: 0;
-    border-radius: 8px;
+    height: 600px;
+    width: 70%;
+    border-radius: 12px;
     background: #fff;
     box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
   }
 
-  .transferConfirmation{
+  .transferConfirmation {
+    width: 70%;
     position: absolute;
-    top: 27%;
-    /* width: 90%; */
     height: 515px;
+    bottom: 0%;
     flex-shrink: 0;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
   }
 
-  .inputBox {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .successful {
-    width: 312px;
-    height: 246px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0px 0px 5.952381610870361px 0px rgba(0, 0, 0, 0.25);
-  }
-
-  /* =====================Tablet View ====================== */
-  @media (min-width: 820px) and (max-width: 1180px) {
-    .detailsBox {
-      display: grid;
-      /* flex-direction: column; */
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .transferMoneyPop {
-      height: 650px;
-      border-radius: 12px;
-    }
+  .boxes {
+    background: #fff3e5;
+    border-radius: 3.328px;
+    border: 0.555px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
   }
 }
 
@@ -122,14 +159,36 @@
     gap: 25px;
   }
 
+  .boxes {
+    background: #fff3e5;
+    border-radius: 6.328px;
+    border: 1.555px solid var(--stroke-fade, rgba(0, 0, 0, 0.3));
+  }
+
   .transferMoneyPop {
-    top: 7%;
-    height: 600px;
+    top: 3%;
+    width: 880px;
+    height: 620px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
   }
 
   .successful {
     width: 50%;
     height: 465px;
     box-shadow: 0px 0px 16.952381610870361px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .transferConfirmation {
+    position: absolute;
+    top: 0.8%;
+    width: 880px;
+    /* bottom: 0; */
+    height: 640px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 7.068181991577148px 0px rgba(0, 0, 0, 0.25);
   }
 }
