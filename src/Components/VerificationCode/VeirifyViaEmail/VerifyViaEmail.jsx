@@ -7,32 +7,30 @@ import { ContextProvider } from "../../Context";
 import { useEffect } from "react";
 
 export const VerifyViaEmail = () => {
-  const [seconds, setSeconds] = useState(60)
-  const [buttonColor, setButtonColor] = useState("#0003");
+  const [seconds, setSeconds] = useState(60);
   const [verificationCode, setVerificationCode] = useState("");
   const [success, setSuccess] = useState("");
   const { emailorsmsHandler, viaSms } = useContext(ContextProvider);
 
-  useEffect(()=>{
-    const interval = setInterval(()=>{
-      if(seconds > 0){
-        setSeconds(seconds-1);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
       }
     }, 1000);
-    return ()=>{
+    return () => {
       clearInterval(interval);
-    }
-  }, );
+    };
+  });
 
   const onClick = (code) => {
-    setButtonColor("#04177f");
     setVerificationCode(code);
     // window.location.href="/dashboard";
   };
 
-  const resendOtp =() =>{
-    setSeconds(59)
-  }
+  const resendOtp = () => {
+    setSeconds(59);
+  };
 
   const submitHandler = () => {
     if (!verificationCode) {
@@ -83,19 +81,26 @@ export const VerifyViaEmail = () => {
             <p className="text-[#04177f] text-[5.7px] md:text-[7px] lg:text-[10px]">
               {seconds}secs
             </p>
-            <p disabled={seconds > 0} onClick={resendOtp} style={{color: seconds > 0 ? "#0003" : "#04177f"}} className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]">
+            <p
+              disabled={seconds > 0}
+              onClick={resendOtp}
+              style={{ color: seconds > 0 ? "#0003" : "#04177f" }}
+              className="hover:cursor-pointer text-[5.7px] md:text-[7px] lg:text-[10px]"
+            >
               Resend OTP
             </p>
           </div>
         </div>
 
-        <div
+        <button
           onClick={submitHandler}
-          style={{ backgroundColor: buttonColor }}
-          className="cursor-pointer mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-[4.5px] lg:rounded-[8px] md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]"
+          disabled={verificationCode.length !== 6 ? true : false}
+          className={`${
+            verificationCode.length !== 6 ? "bg-[#0003]" : "bg-[#04177f]"
+          } cursor-pointer mt-[5%] mx-auto w-[64px] h-[21px] flex justify-center items-center text-[#ffffff] text-[7px] rounded-[4.5px] lg:rounded-[8px] md:w-[95px] md:h-[26px] md:p-[2%] lg:w-[113px] lg:h-[38px] lg:text-[13px]`}
         >
           Continue
-        </div>
+        </button>
       </div>
 
       {success && (

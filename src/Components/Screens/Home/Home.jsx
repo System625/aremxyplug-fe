@@ -10,7 +10,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
-import CookieBanner from "./CookieBanner";
+import CookieBanner from "./Cookie/CookieBanner";
 
 const feedback = [
   <div className="bg-[#D9D9D9] h-[200px] w-[100%] md:h-[200px] md:w-[60%] md:flex md:mx-auto lg:h-[300px] lg:w-[50%]">
