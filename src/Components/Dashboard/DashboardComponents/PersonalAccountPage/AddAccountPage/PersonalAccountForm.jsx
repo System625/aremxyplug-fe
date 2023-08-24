@@ -237,7 +237,7 @@ export const PersonalAccountForm = () => {
                   : "lg:w-[38.5%] lg:top-[105.3%]"
               }  ${
                 styles.countryDropDown
-              } rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[100%] lg:w-[37.5%] lg:rounded-br-[14px] lg:rounded-bl-[14px] lg:top-[105.3%]`}
+              } rounded-br-[7px] rounded-bl-[7px] shadow-xl bg-[#fff] border w-[100%] lg:w-full lg:rounded-br-[14px] lg:rounded-bl-[14px]`}
             >
               {" "}
               {countryList.map((country) => (
