@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useRef } from "react";
 import Joi from "joi";
 import axios from "axios";
 // import { BASE_URL } from "../config";
@@ -340,6 +340,8 @@ export const Context = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isValue, SetIsValue] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const date = new Date();
+
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
@@ -350,7 +352,7 @@ export const Context = ({ children }) => {
   };
   // =============End Dashboard====================
 
-  // ==============Start Transfer page=============
+  // ==============Start Transfer pages=============
   const [noRecord, setNoRecord] = useState(true);
   const [availableAccount, setAvailableAccount] = useState(false);
   const [image, setImage] = useState("");
@@ -358,6 +360,9 @@ export const Context = ({ children }) => {
   const [activeButton, setActiveButtons] = useState([true, false]);
   const [showList, setShowList] = useState(false);
   const [selected, setSelected] = useState(false);
+  const [amtToTransfer, setAmtToTransfer] = useState("");
+  const textRef = useRef(null);
+  const transferFee = 50;
 
   const handleActive = (index) => {
     const updatedButtons = activeButton.map((isActive, i) => i === index);
@@ -505,6 +510,12 @@ export const Context = ({ children }) => {
     setShowList,
     selected,
     setSelected,
+    amtToTransfer,
+    setAmtToTransfer,
+    textRef,
+    transferFee,
+    date,
+    useRef,
   };
 
   return (
