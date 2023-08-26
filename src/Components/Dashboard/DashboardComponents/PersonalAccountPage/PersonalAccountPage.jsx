@@ -553,7 +553,7 @@ export const PersonalAccountPage = () => {
                     src="./Gif/checkMarkGif.gif"
                     alt="/"
                   />
-                    <Link to="/add-account">
+                    <Link to="/to-my-account">
                       {" "}
                       <div
                         className={` ${

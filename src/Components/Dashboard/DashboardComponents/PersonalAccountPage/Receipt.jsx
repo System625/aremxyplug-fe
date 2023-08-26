@@ -63,7 +63,6 @@ export const Receipt = (receipt) => {
           className={` ${styles.receipt} ${
             toggleSideBar ? "" : "lg:w-[880px] "
           } w-full lg:mx-auto`}
-          ref={contentRef}
         >
           <div className="flex justify-between items-center mx-[3%] my-[2%] lg:my-[1%]">
             <Link to="/">
@@ -83,137 +82,139 @@ export const Receipt = (receipt) => {
             </Link>
           </div>
           <hr className="h-[6px] bg-[#04177f] border-none md:h-[10px]" />
-          <h3 className="font-extrabold text-[12px] my-[2%] text-center md:text-[20px] md:my-[3%] lg:text-[16px] lg:my-[2%]">
-            Transaction Receipt
-          </h3>
-          <div className="w-full flex justify-center ">
-            <img
-              className="absolute w-[250px] h-[450px] md:w-[70%] lg:w-[50%] lg:h-[550px]"
-              src="./Images/transferImages/receipt-background.png"
-              alt="/"
-            />
-          </div>
-          <h3 className="font-extrabold text-[12px] mt-[2%] text-center md:text-[20px] md:my-[3%] lg:text-[16px] lg:my-[2%]">
-            Transaction Successful on
-          </h3>
-          <span className="text-[11px] text-[#0008] font-extrabold flex justify-center items-center">
-            {date.toLocaleDateString(undefined, {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-              second: "numeric",
-              hour12: true,
-            })}
-          </span>
-          <p className="text-[9px] text-[#0008] text-center my-2 md:text-[14px] lg:text-[14px]">
-            You have successfully transferred{" "}
-            <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[16px]">
-              &#8358;{amtToTransfer}.00{" "}
+          <div ref={contentRef}>
+            {" "}
+            <h3 className="font-extrabold text-[12px] my-[2%] text-center md:text-[20px] md:my-[3%] lg:text-[16px] lg:my-[2%]">
+              Transaction Receipt
+            </h3>
+            <div className="w-full flex justify-center ">
+              <img
+                className="absolute w-[250px] h-[450px] md:w-[70%] lg:w-[50%] lg:h-[550px]"
+                src="./Images/transferImages/receipt-background.png"
+                alt="/"
+              />
+            </div>
+            <h3 className="font-extrabold text-[12px] mt-[2%] text-center md:text-[20px] md:my-[3%] lg:text-[16px] lg:my-[2%]">
+              Transaction Successful on
+            </h3>
+            <span className="text-[11px] text-[#0008] font-extrabold flex justify-center items-center">
+              {date.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric",
+                hour12: true,
+              })}
             </span>
-            from your NGN wallet to{" "}
-          </p>
+            <p className="text-[9px] text-[#0008] text-center my-2 md:text-[14px] lg:text-[14px]">
+              You have successfully transferred{" "}
+              <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[16px]">
+                &#8358;{amtToTransfer}.00{" "}
+              </span>
+              from your NGN wallet to{" "}
+            </p>
+            <div className="flex flex-col gap-3">
+              {/* ========================Recipient Info================== */}
+              <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
+                <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
+                  <p>Recipient Info</p>
+                  <img
+                    className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/Dashboardimages/arrowright.png"
+                    alt="/"
+                  />
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Bank Name</p>
+                  <span>Sporta Bank</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Account Name</p>
+                  <span>Habib Kamaldeen</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Account Number</p>
+                  <span>7785695102</span>
+                </div>
+              </div>
 
-          <div className="flex flex-col gap-3">
-            {/* ========================Recipient Info================== */}
-            <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
-              <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
-                <p>Recipient Info</p>
-                <img
-                  className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
-                  src="./Images/Dashboardimages/arrowright.png"
-                  alt="/"
-                />
+              {/* ===================Sender Info====================== */}
+              <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
+                <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
+                  <p>Sender Info</p>
+                  <img
+                    className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/Dashboardimages/arrowright.png"
+                    alt="/"
+                  />
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Customer Name</p>
+                  <span>Samad Adbul</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Wallet Type</p>
+                  <span>Nigerian NGN Wallet</span>
+                </div>
               </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Bank Name</p>
-                <span>Sporta Bank</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Account Name</p>
-                <span>Habib Kamaldeen</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Account Number</p>
-                <span>7785695102</span>
-              </div>
-            </div>
 
-            {/* ===================Sender Info====================== */}
-            <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
-              <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
-                <p>Sender Info</p>
-                <img
-                  className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
-                  src="./Images/Dashboardimages/arrowright.png"
-                  alt="/"
-                />
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Customer Name</p>
-                <span>Samad Adbul</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Wallet Type</p>
-                <span>Nigerian NGN Wallet</span>
-              </div>
-            </div>
-
-            {/* ===================Transaction Info==================== */}
-            <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
-              <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
-                <p>Transaction Info</p>
-                <img
-                  className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
-                  src="./Images/Dashboardimages/arrowright.png"
-                  alt="/"
-                />
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Product</p>
-                <span>Money Transfer</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Description</p>
-                <span>From NGN Wallet</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Message</p>
-                <span>For Financial Use</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Order Number</p>
-                <span>1256464564</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Transaction ID</p>
-                <span>0331njokdhtf55</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between items-center lg:text-[16px]">
-                <p className="text-[#0008]">Session ID</p>
-                <div className="flex items-center">
-                  <span ref={textRef}>
-                    1232455566664654 <br /> 1232455566664654
-                  </span>
-                  <div
-                    onClick={handleCopyClick}
-                    className="text-[#92abfec3] text-[13px] font-extrabold lg:text-[16px]"
-                  >
-                    <RiFileCopyFill />
+              {/* ===================Transaction Info==================== */}
+              <div className="flex flex-col gap-[3px] w-[90%] mx-auto lg:gap-[5px]">
+                <div className="flex gap-[5px] items-center text-[10px] lg:text-[16px] font-extrabold">
+                  <p>Transaction Info</p>
+                  <img
+                    className="w-[13px] h-[13px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/Dashboardimages/arrowright.png"
+                    alt="/"
+                  />
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Product</p>
+                  <span>Money Transfer</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Description</p>
+                  <span>From NGN Wallet</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Message</p>
+                  <span>For Financial Use</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Order Number</p>
+                  <span>1256464564</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                  <p className="text-[#0008]">Transaction ID</p>
+                  <span>0331njokdhtf55</span>
+                </div>
+                <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between items-center lg:text-[16px]">
+                  <p className="text-[#0008]">Session ID</p>
+                  <div className="flex items-center">
+                    <span ref={textRef}>
+                      1232455566664654 <br /> 1232455566664654
+                    </span>
+                    <div
+                      onClick={handleCopyClick}
+                      className="text-[#92abfec3] text-[13px] font-extrabold lg:text-[16px]"
+                    >
+                      <RiFileCopyFill />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="rounded-[8px] bg-[#E2F3FF] mx-4 h-[45px] my-5 flex justify-between items-center px-[4%] md:h-[65px] lg:h-[75px]">
+              <p className="text-[8px] text-center mx-auto w-[200px] md:text-[14px] md:w-[80%] lg:text-[16px]">
+                Earn free points on every successful transactions, redeem your
+                earned points to real money, withdrawn to your bank account
+                instantly.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-[8px] bg-[#E2F3FF] mx-4 h-[45px] my-5 flex justify-between items-center px-[4%] md:h-[65px] lg:h-[75px]">
-            <p className="text-[8px] text-center mx-auto w-[200px] md:text-[14px] md:w-[80%] lg:text-[16px]">
-              Earn free points on every successful transactions, redeem your
-              earned points to real money, withdrawn to your bank account
-              instantly.
-            </p>
-          </div>
           <div className="flex w-[70%] mx-auto mb-[5%] md:w-[60%] ">
             <button
               onClick={() => {
