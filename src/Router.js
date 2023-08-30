@@ -39,6 +39,7 @@ import { AddAccount } from "./Components/Dashboard/DashboardComponents/PersonalA
 import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtualAccount";
 import { CookiesSettings } from "./Components/Screens/Home/Cookie/CookiesSettings";
 import { Receipt } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/Receipt";
+import { WithdrawPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawPage";
 
 export const Router = () => {
   return (
@@ -76,17 +77,18 @@ export const Router = () => {
         <Route path="/top-up" element={<TopUpScreen />} />
         <Route path="/fiat-wallet" element={<FiatWallet />} />
         <Route path="/new-wallet" element={<NewWallet />} />
-        <Route path="/point-balance" element={<PointBalance/>} />
+        <Route path="/point-balance" element={<PointBalance />} />
         <Route path="/money-transfer" element={<TransferPage />} />
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
         <Route path="/virtual-account" element={<VirtualAccount />} />
-        <Route path="/personal-account" element={<PersonalAccountPage/>} />
-        <Route path="/airtime-topup" element={<AirtimeTopUp/>} />
-        <Route path="/airtime-vtu" element={<AirtimeVtu/>} />
-        <Route path="/add-account" element={<AddAccount/>} />
-        <Route path="/ngn-virtual-account" element={<NgnVirtualAccount/>} />
-        <Route path="/cookie-settings" element={<CookiesSettings/>} />
-        <Route path="/Receipt" element={<Receipt/>} />
+        <Route path="/personal-account" element={<PersonalAccountPage />} />
+        <Route path="/airtime-topup" element={<AirtimeTopUp />} />
+        <Route path="/airtime-vtu" element={<AirtimeVtu />} />
+        <Route path="/add-account" element={<AddAccount />} />
+        <Route path="/ngn-virtual-account" element={<NgnVirtualAccount />} />
+        <Route path="/cookie-settings" element={<CookiesSettings />} />
+        <Route path="/Receipt" element={<Receipt />} />
+        <Route path="/withdraw" element={<WithdrawPage />} />
       </Routes>
     </div>
   );
