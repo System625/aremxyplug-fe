@@ -311,28 +311,28 @@ export const TransferRecord = () => {
                   />{" "}
                   <p>
                     {" "}
-                    <Link to="/personal-account">Nigeria</Link>
+                    <Link to="/business-account">Nigeria</Link>
                   </p>
                 </div>
               </td>
               <td>
-                <Link to="/personal-account">NGN</Link>
+                <Link to="/business-account">NGN</Link>
               </td>
               <td>
-                <Link to="/personal-account">Mercury Bank</Link>
+                <Link to="/business-account">Mercury Bank</Link>
               </td>
               <td>
-                <Link to="/personal-account">
+                <Link to="/business-account">
                   AremxyPlug Business Ent, LTD.
                 </Link>
               </td>
               <td>
-                <Link to="/personal-account">01234*****</Link>
+                <Link to="/business-account">01234*****</Link>
               </td>
               <td className="flex gap-[5px] lg:gap-[10px]">
                 <p>
                   {" "}
-                  <Link to="/personal-account">AP-2023 0703-001 </Link>
+                  <Link to="/business-account">AP-2023 0703-001 </Link>
                 </p>
                 <img
                   className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
