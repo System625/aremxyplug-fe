@@ -74,7 +74,7 @@ export const WithdrawPage = () => {
           {/* =================Trasnfer buttons==================== */}
           {fiatWithdrawal && (
             <div className="mt-[10%] flex flex-col gap-[20px] md:mt-[8%] md:gap-[30px]">
-              <Link to="/to-my-account">
+              <Link to="">
                 <div
                   className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
                     styles.toMyAcct

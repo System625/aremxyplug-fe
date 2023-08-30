@@ -40,6 +40,7 @@ import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtual
 import { CookiesSettings } from "./Components/Screens/Home/Cookie/CookiesSettings";
 import { Receipt } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/Receipt";
 import { WithdrawPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawPage";
+import { BusinessAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/BusinessAccountPage";
 
 export const Router = () => {
   return (
@@ -82,6 +83,7 @@ export const Router = () => {
         <Route path="/to-my-account" element={<ToMyAccountPage />} />
         <Route path="/virtual-account" element={<VirtualAccount />} />
         <Route path="/personal-account" element={<PersonalAccountPage />} />
+        <Route path="/business-account" element={<BusinessAccountPage />} />
         <Route path="/airtime-topup" element={<AirtimeTopUp />} />
         <Route path="/airtime-vtu" element={<AirtimeVtu />} />
         <Route path="/add-account" element={<AddAccount />} />
