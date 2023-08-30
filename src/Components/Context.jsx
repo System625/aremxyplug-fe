@@ -353,7 +353,8 @@ export const Context = ({ children }) => {
 
   // ==============Start Transfer pages=============
   const [noRecord, setNoRecord] = useState(true);
-  const [availableAccount, setAvailableAccount] = useState(false);
+  const [personalAccount, setPersonalAccount] = useState(false);
+  const [businessAccount, setBusinessAccount] = useState(false);
   const [image, setImage] = useState("");
   const [code, setCode] = useState("");
   const [activeButton, setActiveButtons] = useState([true, false]);
@@ -522,8 +523,10 @@ export const Context = ({ children }) => {
     // =========transferpages===========
     noRecord,
     setNoRecord,
-    availableAccount,
-    setAvailableAccount,
+    personalAccount,
+    setPersonalAccount,
+    businessAccount,
+    setBusinessAccount,
     image,
     setImage,
     code,
