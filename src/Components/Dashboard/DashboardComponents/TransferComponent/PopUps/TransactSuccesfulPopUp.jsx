@@ -28,7 +28,7 @@ export const TransactSuccesfulPopUp = () => {
           <div
             className={`${styles.successful} ${
               toggleSideBar ? "md:w-[45%] lg:ml-[20%] lg:w-[40%]" : "lg:w-[40%]"
-            } md:w-[45%] w-[90%]`}
+            } md:w-[45%] w-[90%] overflow-auto`}
           >
             <div className="flex justify-between items-center mx-[3%] my-[2%] lg:my-[1%]">
               <img
@@ -106,7 +106,7 @@ export const TransactSuccesfulPopUp = () => {
                 within 5-15 minutes.
               </p>
             </div>
-            <div className="flex w-[70%] mx-auto items-center gap-[5%] md:w-[60%]">
+            <div className="flex w-[70%] mx-auto items-center gap-[5%] md:w-[60%] lg:my-[5%]">
               <button
                 onClick={handleTransactionSuccessClose}
                 className={`bg-[#04177f] w-[111px] flex justify-center items-center mx-auto cursor-pointer text-[12px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[16px] lg:w-[163px] lg:h-[38px] lg:my-[2%]`}
