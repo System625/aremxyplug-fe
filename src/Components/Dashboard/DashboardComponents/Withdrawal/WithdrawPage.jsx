@@ -74,7 +74,7 @@ export const WithdrawPage = () => {
           {/* =================Trasnfer buttons==================== */}
           {fiatWithdrawal && (
             <div className="mt-[10%] flex flex-col gap-[20px] md:mt-[8%] md:gap-[30px]">
-              <Link to="">
+              <Link to="/withdraw-to-account">
                 <div
                   className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
                     styles.toMyAcct
@@ -156,9 +156,9 @@ export const WithdrawPage = () => {
                 />
               </div>
               <div
-              onClick={()=>{
-                setScanQR(true)
-              }}
+                onClick={() => {
+                  setScanQR(true);
+                }}
                 className={`${isDarkMode ? "border" : "bg-[#fff]"} ${
                   styles.toMyAcct
                 }`}
@@ -260,7 +260,6 @@ export const WithdrawPage = () => {
             </div>
           </Modal>
         )}
-
 
         {/* ============Scan QR Code PopUp============= */}
         {scanQR && (
