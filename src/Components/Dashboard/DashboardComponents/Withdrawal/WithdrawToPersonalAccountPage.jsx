@@ -6,10 +6,10 @@ import styles from "../TransferComponent/transfer.module.css";
 import { Link } from "react-router-dom";
 import { ConfirmTransactionPopUp } from "../TransferComponent/PopUps/ConfirmTransactionPopUp";
 import { TransactSuccesfulPopUp } from "../TransferComponent/PopUps/TransactSuccesfulPopUp";
-import { TransferMoneyToAccountPopUp } from "../TransferComponent/PopUps/TransferMoneyToAccountPopUp";
 import { DeleteAccountPopUp } from "../TransferComponent/PopUps/DeleteAccountPopUp";
 import { DeleteSuccessfulPopUp } from "../TransferComponent/PopUps/DeleteSuccessfulPopUp";
 import { InputPinPopUp } from "../TransferComponent/PopUps/InputPinPopUp";
+import { WithdrawMoneyToAccountPopUp } from "./WithdrawalPopUps/WithdrawMoneyToAccountPopUp";
 
 export const WithdrawToPersonalAccountPage = () => {
   const {
@@ -329,7 +329,7 @@ export const WithdrawToPersonalAccountPage = () => {
         {/* ====================POP UPS=================== */}
 
         {/* =============Transfer Money To Account pop up========= */}
-        <TransferMoneyToAccountPopUp />
+        <WithdrawMoneyToAccountPopUp />
 
         {/* =============Confirm Transaction popup================ */}
         <ConfirmTransactionPopUp />

@@ -5,7 +5,7 @@ import { Modal } from "../../../../Screens/Modal/Modal";
 import styles from "../../TransferComponent/transfer.module.css";
 import Joi from "joi";
 
-export const TransferMoneyToAccountPopUp = () => {
+export const WithdrawMoneyToAccountPopUp = () => {
   const {
     toggleSideBar,
     image,
@@ -72,7 +72,7 @@ export const TransferMoneyToAccountPopUp = () => {
             />
             <hr className="h-[6px] bg-[#04177f] border-none mt-[8%] md:mt-[6%] md:h-[10px]" />
             <h2 className="text-[12px] my-[5%] text-center md:text-[20px] lg:text-[16px] md:my-[4%]">
-              Transfer Money to Account
+              Withdraw Money to Account
             </h2>
             <div className="w-[90%] mx-auto flex flex-col gap-[10px] md:grid md:grid-cols-2 lg:gap-[30px]">
               <div>
@@ -107,7 +107,7 @@ export const TransferMoneyToAccountPopUp = () => {
               </div>
               <div>
                 <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[14px]">
-                  Amount To Transfer
+                  Amount To Withdraw
                 </p>
                 <input
                   onChange={amountHandler}
