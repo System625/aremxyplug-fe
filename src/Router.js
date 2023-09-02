@@ -41,6 +41,9 @@ import { CookiesSettings } from "./Components/Screens/Home/Cookie/CookiesSetting
 import { Receipt } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/Receipt";
 import { WithdrawPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawPage";
 import { BusinessAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/BusinessAccountPage";
+import { WithdrawToMyAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToMyAccountPage";
+import { WithdrawToPersonalAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToPersonalAccountPage";
+import { WithdrawToBusinessAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToBusinessAccountPage";
 
 export const Router = () => {
   return (
@@ -91,6 +94,18 @@ export const Router = () => {
         <Route path="/cookie-settings" element={<CookiesSettings />} />
         <Route path="/Receipt" element={<Receipt />} />
         <Route path="/withdraw" element={<WithdrawPage />} />
+        <Route
+          path="/withdraw-to-account"
+          element={<WithdrawToMyAccountPage />}
+        />
+        <Route
+          path="/withdraw-to-personalaccount"
+          element={<WithdrawToPersonalAccountPage />}
+        />
+        <Route
+          path="/withdraw-to-businessaccount"
+          element={<WithdrawToBusinessAccountPage />}
+        />
       </Routes>
     </div>
   );
