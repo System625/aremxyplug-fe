@@ -273,9 +273,7 @@ export const WithdrawAccounts = () => {
               <td className="flex gap-[5px] lg:gap-[10px]">
                 <p>
                   {" "}
-                  <Link to="/withdraw-to-personalaccount">
-                    AP-2023 0703-001{" "}
-                  </Link>
+                  <Link to="/withdraw-to-personalaccount">AP-2023 0703-001 </Link>
                 </p>
                 <img
                   className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
@@ -334,9 +332,7 @@ export const WithdrawAccounts = () => {
               <td className="flex gap-[5px] lg:gap-[10px]">
                 <p>
                   {" "}
-                  <Link to="/withdraw-to-businessaccount">
-                    AP-2023 0703-001{" "}
-                  </Link>
+                  <Link to="/withdraw-to-businessaccount">AP-2023 0703-001 </Link>
                 </p>
                 <img
                   className="w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[20px] lg:h-[20px]"
