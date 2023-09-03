@@ -4,12 +4,12 @@ import { ContextProvider } from "../../../Context";
 import { DashBoardLayout } from "../../Layout/DashBoardLayout";
 import styles from "../TransferComponent/transfer.module.css";
 import { Link } from "react-router-dom";
-import { ConfirmTransactionPopUp } from "../TransferComponent/PopUps/ConfirmTransactionPopUp";
-import { TransactSuccesfulPopUp } from "../TransferComponent/PopUps/TransactSuccesfulPopUp";
 import { DeleteAccountPopUp } from "../TransferComponent/PopUps/DeleteAccountPopUp";
 import { DeleteSuccessfulPopUp } from "../TransferComponent/PopUps/DeleteSuccessfulPopUp";
 import { InputPinPopUp } from "../TransferComponent/PopUps/InputPinPopUp";
 import { WithdrawMoneyToAccountPopUp } from "./WithdrawalPopUps/WithdrawMoneyToAccountPopUp";
+import { ConfirmWithdrawalPopUp } from "./WithdrawalPopUps/ConfirmWithdrawalPopUp";
+import { WithdrawSuccesfulPopUp } from "./WithdrawalPopUps/WithdrawSuccessfulPopUp";
 
 export const WithdrawToPersonalAccountPage = () => {
   const {
@@ -328,14 +328,14 @@ export const WithdrawToPersonalAccountPage = () => {
 
         {/* ====================POP UPS=================== */}
 
-        {/* =============Transfer Money To Account pop up========= */}
+        {/* =============Withdraw Money To Account pop up========= */}
         <WithdrawMoneyToAccountPopUp />
 
-        {/* =============Confirm Transaction popup================ */}
-        <ConfirmTransactionPopUp />
+        {/* =============Confirm Withdraw popup================ */}
+        <ConfirmWithdrawalPopUp />
 
         {/* =============Transaction Successful PopUp============= */}
-        <TransactSuccesfulPopUp />
+        <WithdrawSuccesfulPopUp/>
 
         {/* =============Delete Account PopUp===================== */}
         <DeleteAccountPopUp />
