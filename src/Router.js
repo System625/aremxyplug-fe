@@ -44,6 +44,7 @@ import { BusinessAccountPage } from "./Components/Dashboard/DashboardComponents/
 import { WithdrawToMyAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToMyAccountPage";
 import { WithdrawToPersonalAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToPersonalAccountPage";
 import { WithdrawToBusinessAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToBusinessAccountPage";
+import { WithdrawalReceipt } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawalPopUps/WithdrawalReceipt.";
 
 export const Router = () => {
   return (
@@ -106,6 +107,7 @@ export const Router = () => {
           path="/withdraw-to-businessaccount"
           element={<WithdrawToBusinessAccountPage />}
         />
+        <Route path="/withdrawal-receipt" element={<WithdrawalReceipt />} />
       </Routes>
     </div>
   );
