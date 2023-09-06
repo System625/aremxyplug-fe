@@ -55,7 +55,7 @@ export const WithdrawSuccesfulPopUp = () => {
               alt="/"
             />
             <p className="text-[8px] text-[#0008] text-center mb-2 md:text-[14px] lg:text-[12px]">
-              You have successfully withdraw{" "}
+              You have successfully withdrawn{" "}
               <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[14px]">
                 &#8358;{amtToTransfer}.00{" "}
               </span>
