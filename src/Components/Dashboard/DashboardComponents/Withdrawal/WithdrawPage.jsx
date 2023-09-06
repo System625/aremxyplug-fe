@@ -35,7 +35,7 @@ export const WithdrawPage = () => {
             alt="/"
           />
           <div className="flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[10%] gap-[8px] md:my-[5%] md:text-[18px] lg:text-[20px]">
-            <p>Select Withdrawal type </p>
+            <p>Select account type </p>
             <img
               className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
               src="./Images/Dashboardimages/arrowright.png"
@@ -230,12 +230,16 @@ export const WithdrawPage = () => {
                 styles.cryptoTopUp
               } flex flex-col justify-between `}
             >
-              {/* <div className="text-[10px] text-center pt-[5%] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
-               Payment Link
-              </div> */}
-              <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
-                This Feature is Currently Not Available.
+              <div className="pt-[5%]">
+                {" "}
+                <div className="text-[12px] text-center pt-[%] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
+                  Payment Link
+                </div>
+                <div className="text-[10px] text-center pt-[%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
+                  This Feature is Currently Not Available.
+                </div>
               </div>
+
               <img
                 className="mx-auto mt-[] w-[135px] h-[96px] md:w-[220px] md:h-[200px] md:mt-[5%] lg:w-[350px] lg:h-[280px] lg:mt-[5%]"
                 src="./Images/withdrawImages/nfc-payment.png"
@@ -269,11 +273,14 @@ export const WithdrawPage = () => {
                 styles.cryptoTopUp
               } flex flex-col justify-between `}
             >
-              {/* <div className="text-[10px] text-center pt-[5%] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
-               Payment Link
-              </div> */}
-              <div className="text-[10px] text-center pt-[5%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
-                This Feature is Currently Not Available.
+              <div className="pt-[5%]">
+                {" "}
+                <div className="text-[12px] text-center pt-[%] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
+                  Scan QR Code
+                </div>
+                <div className="text-[10px] text-center pt-[%] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px] lg:pt-[3%]">
+                  This Feature is Currently Not Available.
+                </div>
               </div>
               <img
                 className="mx-auto mt-[] w-[100px] h-[96px] md:w-[220px] md:h-[200px] md:mt-[5%] lg:w-[350px] lg:h-[280px] lg:mt-[5%]"

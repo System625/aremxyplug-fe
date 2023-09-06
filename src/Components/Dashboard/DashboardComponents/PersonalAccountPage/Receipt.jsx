@@ -58,7 +58,7 @@ export const Receipt = (receipt) => {
   };
   return (
     <DashBoardLayout>
-      <div className="flex flex-col gap-[25px] lg:gap-[85px]">
+      <div className="flex flex-col gap-[35px] lg:gap-[85px]">
         <div
           className={` ${styles.receipt} ${
             toggleSideBar ? "" : "lg:w-[880px] "
