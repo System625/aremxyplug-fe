@@ -33,13 +33,8 @@ export const WithdrawToPersonalAccountPage = () => {
       >
         <div>
           {" "}
-          {/* <img
-            className=" w-[100%] h-[80px] md:h-[180px] lg:h-[230px]"
-            src="/Images/dashboardImages/ToMyAccount.png"
-            alt="/"
-          /> */}
           <div
-            className=" flex p-[5%] h-[80px] md:h-[180px] lg:h-[230px] rounded-[7px]"
+            className=" flex gap-[10%] p-[5%] h-[80px] md:h-[180px] lg:h-[230px] rounded-[7px]"
             style={{
               background:
                 "linear-gradient(91deg, #33B6FF 0.39%, #4AFFCD 101.71%)",
@@ -49,12 +44,16 @@ export const WithdrawToPersonalAccountPage = () => {
               <p className="text-[10px] font-extrabold">
                 WITHDRAW MONEY TO MY ACCOUNT.
               </p>
-              <p className="text-[8px]">
+              <p className="text-[7px]">
                 Withdraw money from your wallets to your personal or business
                 bank accounts without any hassle or hidden fee.
               </p>
             </div>
-            <img src="" alt="/" />
+            <img
+              className=" w-[66px] h-[60px] md:h-[180px] lg:h-[180px] lg:w-[200px]"
+              src="/Images/withdrawImages/moneyandphone.png"
+              alt="/"
+            />
           </div>
           <div className="flex my-[5%] gap-11 font-extrabold md:w-[80%]">
             <button
@@ -349,7 +348,7 @@ export const WithdrawToPersonalAccountPage = () => {
         {/* =============Withdraw Money To Account pop up========= */}
         <WithdrawMoneyToAccountPopUp />
 
-        {/* =============Confirm Withdraw popup================ */}
+        {/* =============Confirm Withdraw popup=================== */}
         <ConfirmWithdrawalPopUp />
 
         {/* =============Transaction Successful PopUp============= */}
