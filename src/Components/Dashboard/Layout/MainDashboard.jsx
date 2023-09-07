@@ -448,7 +448,7 @@ export const MainDashboard = () => {
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f] "
               } ${styles.button}`}
             >
-              <div className="flex items-center gap-[5%]">
+              <div className="flex items-center gap-[10%]">
                 <img
                   className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                   src="./Images/dashboardImages/transfer.png"
@@ -464,7 +464,7 @@ export const MainDashboard = () => {
               } ${styles.button}`}
             >
               {" "}
-              <div className="flex items-center gap-[6%]">
+              <div className="flex items-center gap-[10%]">
                 <img
                   className="w-[11px] h-[11px] md:h-[20px] md:w-[20px] lg:w-[51px] lg:h-[51px]"
                   src="./Images/dashboardImages/withdraw.png"

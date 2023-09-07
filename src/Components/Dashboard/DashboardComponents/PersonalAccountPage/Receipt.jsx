@@ -72,7 +72,7 @@ export const Receipt = (receipt) => {
                 alt=""
               />
             </Link>
-            <Link to="/money-transfer">
+            <Link to="/personal-account">
               {" "}
               <img
                 className=" w-[18px] h-[18px] md:w-[35px] md:h-[35px] lg:w-[29px] lg:h-[29px]"
