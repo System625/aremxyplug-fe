@@ -5,6 +5,7 @@ import { RiFileCopyFill } from "react-icons/ri";
 import { Modal } from "../../../../Screens/Modal/Modal";
 import { Link } from "react-router-dom";
 import styles from "../../TransferComponent/transfer.module.css";
+// import { TransactFailedPopUp } from "./TransactionFailedPopUp";
 
 export const TransactSuccesfulPopUp = () => {
   const {
@@ -25,6 +26,7 @@ export const TransactSuccesfulPopUp = () => {
     <div>
       {transactSuccessPopUp && (
         <Modal>
+          {/* <TransactFailedPopUp/> */}
           <div
             className={`${styles.successful} ${
               toggleSideBar ? "md:w-[45%] lg:ml-[20%] lg:w-[40%]" : "lg:w-[40%]"

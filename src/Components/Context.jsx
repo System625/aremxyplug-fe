@@ -341,6 +341,7 @@ export const Context = ({ children }) => {
   const [isValue, SetIsValue] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const date = new Date();
+  const sidebarRef = useRef(null);
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
@@ -349,6 +350,15 @@ export const Context = ({ children }) => {
   const volumeValueToggle = () => {
     SetIsValue(!isValue);
   };
+
+
+  const handleClickOutside = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setToggleSideBar(false);
+    }
+  };
+
+
   // =============End Dashboard====================
 
   // ==============Start Transfer pages=============
@@ -560,6 +570,7 @@ export const Context = ({ children }) => {
     inputPin,
     setInputPin,
     inputPinHandler,
+    handleClickOutside,
   };
 
   return (
