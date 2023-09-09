@@ -364,7 +364,7 @@ export const MainDashboard = () => {
                     <option value="KES">KES</option>
                   </select>
                 </div>
-                <p className="text-[6px] md:text-[10px] text-[#04177f] leading-normal font-bold lg:text-[11px]">
+                <p className="w-[50%] text-[8px] md:text-[10px] text-[#04177f] leading-normal font-bold lg:text-[11px]">
                   The below accounts are reserved for your wallet only.
                 </p>
               </div>
@@ -376,7 +376,7 @@ export const MainDashboard = () => {
                   } ${
                     toggleSideBar
                       ? "backdrop-blur-[5px] absolute lg:h-[25%] lg:w-[30%] lg:ml-[-8px] lg:flex lg:justify-center lg:pt-[4%] lg:text-[25px] lg:text-[#04177f]"
-                      : "backdrop-blur-[4.5px] absolute text-[14px] h-[13%] w-[85%] font-extrabold flex justify-center pt-[7%] md:h-[11%] md:text-[25px] md:pt-[5%] lg:w-[30%] lg:h-[30%] "
+                      : "backdrop-blur-[4.5px] absolute text-[14px] h-[13%] w-[85%] font-extrabold flex justify-center pt-[7%] md:h-[11%] md:text-[25px] md:pt-[5%] lg:w-[32%] lg:h-[28%] lg:ml-[-1%]"
                   } `}
                 >
                   Coming Soon...
@@ -428,7 +428,7 @@ export const MainDashboard = () => {
           <div
             className={`${styles.ttwc} ${
               toggleSideBar ? "lg:gap-[63px]" : "lg:gap-[80px]"
-            } flex mt-[7%] gap-[37px] md:gap-[90px] `}
+            } flex mt-[7%] gap-[30px] md:gap-[90px] `}
           >
             <div
               className={`${
@@ -461,7 +461,7 @@ export const MainDashboard = () => {
               to="/withdraw"
               className={`${
                 isDarkMode ? " border bg-[#000]" : "bg-[#04177f]"
-              } ${styles.button}`}
+              } ${styles.button} pr-3`}
             >
               {" "}
               <div className="flex items-center gap-[10%]">

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContextProvider } from "../../Context";
 import styles from "./Dashboard.module.css";
 
 export const SideBar = () => {
-  const { setToggleSideBar, isDarkMode } = useContext(ContextProvider);
+  const { setToggleSideBar, isDarkMode, handleClickOutside } = useContext(ContextProvider);
   const [dropDownOpen, setDropDownOpen] = useState({
     dropdown1: false,
     dropdown2: false,
@@ -25,6 +25,14 @@ export const SideBar = () => {
       dropdown6: dropdownName === "dropdown6" ? !prevState.dropdown6 : false,
     }));
   };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, );
 
   return (
     <div
