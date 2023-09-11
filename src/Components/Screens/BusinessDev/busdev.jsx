@@ -547,13 +547,13 @@ export const BusinessDev = () => {
 
       {/* LAST SECTION */}
       <div
-        className="py-[8%] mx-auto mb-[25%] w-[312px] rounded-xl h-[312px] flex flex-col justify-center items-center gap-[30px] md:gap-[10px] md:w-[695px] md:h-[174px] md:mx-auto lg:w-[1228px] lg:h-[298px] lg:gap-[35px] md:mb-[15%]"
+        className="py-[8%] mx-auto mb-[25%] w-[312px] rounded-xl h-[312px] flex flex-col justify-center items-center gap-[30px] md:gap-[10px] md:w-[695px] md:h-[174px] md:mx-auto lg:w-[100%] lg:h-[298px] lg:gap-[35px] md:mb-[15%]"
         style={{ boxShadow: "0px 0px 11.5833px rgba(0, 0, 0, 0.25)" }}
       >
         <div className="w-[292px] text-[20px] leading-[30px] text-center font-semibold text-[#04177f] md:w-[375px] md:text-[17px] md:font-semibold lg:text-[30px] lg:w-[648px] ">
           AremxyPlug Business Consulting Services
         </div>
-        <div className="w-[294px] h-[105px] text-[10px] text-center leading-[15px] md:w-[659px] md:text-[10px] lg:text-[18px] lg:w-[1138px] lg:h-[108px] lg:leading-[27px]">
+        <div className="w-[294px] h-[105px] text-[10px] text-center leading-[15px] md:w-[659px] md:text-[10px] lg:text-[18px] lg:w-[80%] lg:h-[108px] lg:leading-[27px]">
           At AremxyPlug, we are committed to providing a one-stop shop solution
           to individuals and businesses. Want to take your next big company to a
           milestone?

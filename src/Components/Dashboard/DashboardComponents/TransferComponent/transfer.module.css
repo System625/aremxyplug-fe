@@ -17,7 +17,6 @@
 
 .detailsBox {
   display: grid;
-  /* flex-direction: column; */
   gap: 10px;
 }
 
