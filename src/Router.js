@@ -45,6 +45,8 @@ import { WithdrawToMyAccountPage } from "./Components/Dashboard/DashboardCompone
 import { WithdrawToPersonalAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToPersonalAccountPage";
 import { WithdrawToBusinessAccountPage } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawToBusinessAccountPage";
 import { WithdrawalReceipt } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawalPopUps/WithdrawalReceipt.";
+import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
+import { ToOtherBanks } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/ToOtherBanks";
 
 export const Router = () => {
   return (
@@ -64,6 +66,7 @@ export const Router = () => {
         />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/businessDev" element={<BusinessDev />} />
+        <Route path="/DigitalServices" element={<DigitalServices />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/OwnVTU" element={<OwnVTU />} />
         <Route path="/pricing" element={<Pricing />} />
@@ -108,6 +111,7 @@ export const Router = () => {
           element={<WithdrawToBusinessAccountPage />}
         />
         <Route path="/withdrawal-receipt" element={<WithdrawalReceipt />} />
+        <Route path="/To-other-banks" element={<ToOtherBanks/>} />
       </Routes>
     </div>
   );
