@@ -3,7 +3,6 @@ import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import Joi from "joi";
 import { ConfirmOtherTransaction } from "./OtherBankPopUp/ConfirmOtherTransaction";
-// import { Modal } from "../../../../Screens/Modal/Modal";
 
 export default function GlobalTransfer() {
   const {
@@ -13,11 +12,12 @@ export default function GlobalTransfer() {
     setSelected,
     // isDarkMode,
     toggleSideBar,
-    volumeValueToggle,
-    isValue,
     amtToTransfer,
     setAmtToTransfer,
   } = useContext(ContextProvider);
+
+  const [addToRecipient, SetAddToRecipient] = useState(false);
+  const [saveToFavorite, setSaveTofavorite] = useState(false)
 
   const countryList = [
     {
@@ -385,16 +385,16 @@ export default function GlobalTransfer() {
             <div className="text-[9px]">Add to recipient ?</div>
             <div
               onClick={() => {
-                volumeValueToggle();
+                SetAddToRecipient(!addToRecipient);
                 // handleButtonClick();
               }}
               className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
-                isValue ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
+                addToRecipient ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
               }`}
             >
               <div
                 className={`rounded-full w-[7.5px] h-[6.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
-                  isValue ? "float-right" : "float-left"
+                  addToRecipient ? "float-right" : "float-left"
                 }`}
               ></div>
             </div>
@@ -403,16 +403,16 @@ export default function GlobalTransfer() {
             <div className="text-[9px]">Save to favorities</div>
             <div
               onClick={() => {
-                volumeValueToggle();
+                setSaveTofavorite(!saveToFavorite)
                 // handleButtonClick();
               }}
               className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
-                isValue ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
+                saveToFavorite ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
               }`}
             >
               <div
                 className={`rounded-full w-[7.5px] h-[6.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
-                  isValue ? "float-right" : "float-left"
+                  saveToFavorite ? "float-right" : "float-left"
                 }`}
               ></div>
             </div>
@@ -428,7 +428,7 @@ export default function GlobalTransfer() {
           Proceed
         </button>
       </div>
-      {/* <Modal> */}
+      
         <ConfirmOtherTransaction
           otherBanksConfirmation={otherBanksConfirmation}
           setOtherBankConfirmation={setOtherBankConfirmation}
@@ -437,7 +437,6 @@ export default function GlobalTransfer() {
           accountnumber={state.accountNumber}
           transferamount={amtToTransfer}
         />
-      {/* </Modal> */}
     </div>
   );
 }
