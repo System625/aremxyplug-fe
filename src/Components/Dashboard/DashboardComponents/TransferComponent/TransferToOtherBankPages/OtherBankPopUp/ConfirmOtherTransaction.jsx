@@ -1,20 +1,21 @@
 import React from "react";
-import { useContext, useState} from "react";
+import { useContext, useState } from "react";
 import { ContextProvider } from "../../../../../Context";
 import { Modal } from "../../../../../Screens/Modal/Modal";
 import styles from "../../../TransferComponent/transfer.module.css";
 import { OtherInputPinPopUp } from "../OtherInputPinPop";
 
-export const ConfirmOtherTransaction = ({otherBanksConfirmation, setOtherBankConfirmation, accountname,
-    accountnumber,
-    transferamount, bankname}) => {
-  const {
-    toggleSideBar,
-    transferFee,
-    image,
-  } = useContext(ContextProvider);
+export const ConfirmOtherTransaction = ({
+  otherBanksConfirmation,
+  setOtherBankConfirmation,
+  accountname,
+  accountnumber,
+  transferamount,
+  bankname,
+}) => {
+  const { toggleSideBar, transferFee, image } = useContext(ContextProvider);
 
-  const [otherInputPinPopUp, setOtherInputPinPopUp] = useState(false)
+  const [otherInputPinPopUp, setOtherInputPinPopUp] = useState(false);
 
   const TotalAmount = transferamount;
   const pointsEarned = "+2.00";
@@ -113,7 +114,14 @@ export const ConfirmOtherTransaction = ({otherBanksConfirmation, setOtherBankCon
         </Modal>
       )}
 
-      <OtherInputPinPopUp otherInputPinPopUp={otherInputPinPopUp} setOtherInputPinPopUp={setOtherInputPinPopUp}/>
+      <OtherInputPinPopUp
+        otherInputPinPopUp={otherInputPinPopUp}
+        setOtherInputPinPopUp={setOtherInputPinPopUp}
+        accountname={accountname}
+        accountnumber={accountnumber}
+        transferamount={transferamount}
+        bankname={bankname}
+      />
     </div>
   );
 };

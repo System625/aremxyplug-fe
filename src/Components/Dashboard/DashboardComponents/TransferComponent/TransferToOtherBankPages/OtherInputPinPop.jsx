@@ -5,21 +5,28 @@ import { useContext } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import { useState } from "react";
+import { TransactionSuccessToOtherBank } from "./OtherBankPopUp/TransactionSuccessToOtherBank";
 
-export const OtherInputPinPopUp = ({otherInputPinPopUp, setOtherInputPinPopUp}) => {
-  const {
-    toggleSideBar,
-  } = useContext(ContextProvider);
+export const OtherInputPinPopUp = ({
+  otherInputPinPopUp,
+  setOtherInputPinPopUp,
+  accountname,
+  accountnumber,
+  transferamount,
+  bankname,
+}) => {
+  const { toggleSideBar } = useContext(ContextProvider);
 
   const [inputPin, setInputPin] = useState("");
+  const [transactSuccessToOtherBank, setTransactSuccessToOtherBank] =
+    useState(false);
 
   const inputPinHandler = (e) => {
     setInputPin(e.target.value);
-    // setOtherInputPinPopUp(false);
-    // setTransactSuccessPopUp(true);
+    setTransactSuccessToOtherBank(true);
+    setOtherInputPinPopUp(false);
   };
 
-  
   return (
     <div>
       {" "}
@@ -73,6 +80,14 @@ export const OtherInputPinPopUp = ({otherInputPinPopUp, setOtherInputPinPopUp}) 
           </div>
         </Modal>
       )}
+      <TransactionSuccessToOtherBank
+        transactSuccessToOtherBank={transactSuccessToOtherBank}
+        setTransactSuccessToOtherBank={setTransactSuccessToOtherBank}
+        accountname={accountname}
+        accountnumber={accountnumber}
+        transferamount={transferamount}
+        bankname={bankname}
+      />
     </div>
   );
 };
