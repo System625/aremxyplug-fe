@@ -47,7 +47,8 @@ import { WithdrawToBusinessAccountPage } from "./Components/Dashboard/DashboardC
 import { WithdrawalReceipt } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawalPopUps/WithdrawalReceipt.";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import { ToOtherBanks } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/ToOtherBanks";
-import { OtherBankReceipt } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/OtherBankPopUp/OtherBankReceipt";
+import { OtherBankReceipt } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/OtherBankPopUp/OtherBankPopUp/OtherBankReceipt";
+import GlobalTransfer from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/GlobalTransfer";
 
 export const Router = () => {
   return (
@@ -112,8 +113,9 @@ export const Router = () => {
           element={<WithdrawToBusinessAccountPage />}
         />
         <Route path="/withdrawal-receipt" element={<WithdrawalReceipt />} />
-        <Route path="/To-other-banks" element={<ToOtherBanks/>} />
-        <Route path="/other-bank-receipt" element={<OtherBankReceipt/>} />
+        <Route path="/To-other-banks" element={<ToOtherBanks />} />
+        <Route path="/other-bank-receipt" element={<OtherBankReceipt />} />
+        <Route path="/global-transfer" element={<GlobalTransfer />} />
       </Routes>
     </div>
   );

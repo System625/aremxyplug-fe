@@ -2,7 +2,9 @@ import React, { useContext, useState } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import Joi from "joi";
-import { ConfirmOtherTransaction } from "./OtherBankPopUp/ConfirmOtherTransaction";
+import { ConfirmOtherTransaction } from "./OtherBankPopUp/OtherBankPopUp/ConfirmOtherTransaction";
+import { Modal } from "../../../../Screens/Modal/Modal";
+// import { useNavigate } from "react-router-dom";
 
 export default function GlobalTransfer() {
   const {
@@ -10,14 +12,14 @@ export default function GlobalTransfer() {
     setShowList,
     selected,
     setSelected,
-    // isDarkMode,
+    isDarkMode,
     toggleSideBar,
     amtToTransfer,
     setAmtToTransfer,
   } = useContext(ContextProvider);
 
   const [addToRecipient, SetAddToRecipient] = useState(false);
-  const [saveToFavorite, setSaveTofavorite] = useState(false)
+  const [saveToFavorite, setSaveTofavorite] = useState(false);
 
   const countryList = [
     {
@@ -68,6 +70,8 @@ export default function GlobalTransfer() {
     bankName: "",
   });
   const [otherBanksConfirmation, setOtherBankConfirmation] = useState(false);
+  const [currencyAvailable, setCurrencyAvailable] = useState(false);
+  // const navigate = useNavigate();
 
   const schema = Joi.object({
     country: Joi.string().required(),
@@ -108,8 +112,8 @@ export default function GlobalTransfer() {
         }, {})
       );
     } else {
-      setOtherBankConfirmation(true)
-      setErrors({})
+      setOtherBankConfirmation(true);
+      setErrors({});
     }
 
     // console.log(successful);
@@ -125,6 +129,7 @@ export default function GlobalTransfer() {
     setCountry(name);
     setSelected(true);
     setCountryCode(code);
+    setCurrencyAvailable(id !== 1);
   };
 
   const handleInputChange = (event) => {
@@ -136,10 +141,12 @@ export default function GlobalTransfer() {
     });
   };
 
+  const refresh = () => window.location.reload(true);
+
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex flex-col gap-[20px] lg:gap-[40px]">
       {" "}
-      <div className="flex flex-col gap-[15px]">
+      <div className="flex flex-col gap-[15px] md:flex-row lg:gap-[30px]">
         {/* =====================Country========================= */}
         <div className={styles.inputBox}>
           <p className="text-[10px] font-extrabold lg:text-[20px]">
@@ -239,8 +246,8 @@ export default function GlobalTransfer() {
         </div>
       </div>
       {/* ==========================Select/Add Recipient====================== */}
-      <div className="flex gap-[10%]">
-        <div className="w-full flex items-center justify-between border text-[10px]  rounded-[5px] h-[25px] p-1 lg:h-[45px] lg:text-[14px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
+      <div className="flex gap-[10%] lg:gap-[3%]">
+        <div className="w-full flex items-center justify-between border text-[10px]  rounded-[5px] h-[25px] p-1 lg:h-[45px] lg:text-[16px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
           <p>Select Recipient</p>
           <img
             className="w-[13px] h-[13px] lg:w-[29px] lg:h-[29px]"
@@ -248,7 +255,7 @@ export default function GlobalTransfer() {
             alt=""
           />
         </div>
-        <div className="w-full flex items-center justify-between border text-[10px]  rounded-[5px] h-[25px] p-1 lg:h-[45px] lg:text-[14px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
+        <div className="w-full flex items-center justify-between border text-[10px]  rounded-[5px] h-[25px] p-1 lg:h-[45px] lg:text-[16px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
           <p>Add Recipient</p>
           <img
             className="w-[13px] h-[13px] lg:w-[29px] lg:h-[29px]"
@@ -257,10 +264,10 @@ export default function GlobalTransfer() {
           />
         </div>
       </div>
-      <div className="bg-[#04177f] text-[#fff] text-[9px] h-[19px] flex justify-center items-center rounded-[2px]">
+      <div className="bg-[#04177f] text-[#fff] text-[9px] h-[19px] flex justify-center items-center rounded-[2px] lg:w-[45%] lg:h-[38px] lg:text-[16px]">
         Real-time Bank Network Tracker
       </div>
-      <div className="flex flex-col gap-[20px]">
+      <div className="flex flex-col gap-[20px] md:grid md:grid-cols-2">
         {/* =====================Bank Name=================== */}
 
         <div className={` ${styles.inputBox}`}>
@@ -332,7 +339,7 @@ export default function GlobalTransfer() {
 
         {/* =========================Amount To Transfer==================== */}
         <div className={` ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[14px]">
+          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[20px]">
             Amount To Transfer
           </p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
@@ -353,11 +360,11 @@ export default function GlobalTransfer() {
 
         {/* ===========================Available Balance===================== */}
         <div className={` ${styles.inputBox}`}>
-          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[14px]">
+          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[20px]">
             Available Balance
           </p>
           <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[45px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
-            <p className="text-[8px] text-[#0008] md:text-[14px] lg:text-[12px]">
+            <p className="text-[8px] text-[#0008] md:text-[14px] lg:text-[16px]">
               &#8358;50,000.00
             </p>
             {/* <img
@@ -369,20 +376,22 @@ export default function GlobalTransfer() {
         </div>
 
         {/* =============================Message======================= */}
-        <div className="w-[100%] mx-auto mt-[15px] md:w-[50%] md:ml-[5%] md:mx-0">
-          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[14px]">
+        <div className="w-[100%] mx-auto mt-[15px] md:mt-0 ">
+          <p className="text-[10px] font-extrabold md:text-[16px] lg:text-[20px]">
             Message
           </p>
           <textarea
             placeholder="Optional"
-            className="text-[10px] outline-none w-full border-[1px] h-[80px] flex flex-col justify-between p-[1%] rounded-[4px] md:h-[100px] md:text-[14px] md:rounded-[8px] md:border-[1.5px] lg:h-[80px] lg:w-[90%]"
+            className="text-[10px] outline-none w-full border-[1px] h-[80px] flex flex-col justify-between p-[1%] rounded-[4px] md:h-[100px] md:text-[14px] md:rounded-[8px] md:border-[1px] lg:border-[#0003] lg:h-[120px] lg:w-[100%]"
           ></textarea>
         </div>
+      </div>
+
 
         {/* =========================Add to recipient ? ======================= */}
         <div className="flex gap-[10px]">
           <div className="flex items-center gap-[10px]">
-            <div className="text-[9px]">Add to recipient ?</div>
+            <div className="text-[9px] lg:text-[16px]">Add to recipient ?</div>
             <div
               onClick={() => {
                 SetAddToRecipient(!addToRecipient);
@@ -400,10 +409,10 @@ export default function GlobalTransfer() {
             </div>
           </div>
           <div className="flex items-center gap-[10px]">
-            <div className="text-[9px]">Save to favorities</div>
+            <div className="text-[9px] lg:text-[16px]">Save to favorities</div>
             <div
               onClick={() => {
-                setSaveTofavorite(!saveToFavorite)
+                setSaveTofavorite(!saveToFavorite);
                 // handleButtonClick();
               }}
               className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
@@ -419,24 +428,48 @@ export default function GlobalTransfer() {
           </div>
         </div>
 
-        <button
-          onClick={handleProceed}
-          className={`${
-            amtToTransfer.length < 4 ? "bg-[#0008]" : "bg-[#04177f]"
-          } my-[5%] w-full flex justify-center items-center mx-auto cursor-pointer text-[14px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[20px] lg:text-[16px] lg:h-[38px] lg:my-[4%]`}
-        >
-          Proceed
-        </button>
-      </div>
-      
-        <ConfirmOtherTransaction
-          otherBanksConfirmation={otherBanksConfirmation}
-          setOtherBankConfirmation={setOtherBankConfirmation}
-          bankname={state.bankName}
-          accountname={state.accountName}
-          accountnumber={state.accountNumber}
-          transferamount={amtToTransfer}
-        />
+      <button
+        onClick={handleProceed}
+        className={`${
+          amtToTransfer.length < 4 ? "bg-[#0008]" : "bg-[#04177f]"
+        } my-[5%] w-full flex justify-center items-center mx-auto cursor-pointer text-[14px] font-extrabold h-[40px] text-white rounded-[6px] md:w-[25%] md:rounded-[8px] md:text-[20px] lg:text-[16px] lg:h-[38px] lg:my-[4%]`}
+      >
+        Proceed
+      </button>
+      {currencyAvailable && (
+        <Modal>
+          <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[40px] lg:w-[40%] lg:py-[3%] lg:rounded-[7px]">
+            <p className="text-[12px] text-[#04177f] font-extrabold">
+              This Currency is Currently Not Available.
+            </p>
+            <img
+              className="w-[50%] h-[50%]"
+              src="/Images/addAccountImages/account-unavailable.png"
+              alt=""
+            />
+            <p className="absolute top-[59%] right-[15%] text-[8px] lg:text-[12px] lg:right-[35%]">
+              Coming Soon...
+            </p>
+
+            <div
+              onClick={refresh}
+              className={` ${
+                isDarkMode ? "border" : "bg-[#04177f] "
+              } cursor-pointer text-white text-[12px] h-[35px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+            >
+              Okay
+            </div>
+          </div>
+        </Modal>
+      )}
+      <ConfirmOtherTransaction
+        otherBanksConfirmation={otherBanksConfirmation}
+        setOtherBankConfirmation={setOtherBankConfirmation}
+        bankname={state.bankName}
+        accountname={state.accountName}
+        accountnumber={state.accountNumber}
+        transferamount={amtToTransfer}
+      />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export const ToOtherBanks = () => {
               alt="/"
             />
           </div>
-          <div className="flex justify-between text-[9px] md:text-[14px] lg:text-[20px]">
+          <div className="flex justify-between text-[9px] md:justify-start md:gap-[28%] md:text-[14px] lg:text-[20px]">
             <div
               onClick={() => {
                 handleActive(0);

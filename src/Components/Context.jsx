@@ -351,7 +351,6 @@ export const Context = ({ children }) => {
     SetIsValue(!isValue);
   };
 
-
   const handleClickOutside = (event) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
       setToggleSideBar(false);
@@ -404,6 +403,11 @@ export const Context = ({ children }) => {
     setActiveButtons(updatedButtons);
   };
   // ==========End Transfer page=============
+
+  // ================Start of Transfer To International Banks PopUp =====================
+  const [internationalBankConfirmation, setInternationalBankConfirmation] =
+    useState(false);
+  // ================End of Transfer To International Banks PopUp =======================
 
   const hold = {
     firstDrop,
@@ -570,6 +574,10 @@ export const Context = ({ children }) => {
     setInputPin,
     inputPinHandler,
     handleClickOutside,
+
+    // ===========International transfer ==============
+    internationalBankConfirmation,
+    setInternationalBankConfirmation,
   };
 
   return (
