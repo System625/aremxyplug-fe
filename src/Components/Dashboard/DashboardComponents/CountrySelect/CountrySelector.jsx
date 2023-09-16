@@ -78,7 +78,7 @@ export const CountrySelector = ({ onSelect, selectedCountry }) => {
     <div>
       <button
         onClick={() => setShowList(!showList)}
-        className="text-[8px] text-[#0005] h-[23.5px] w-[50px] flex justify-center gap-[20%] items-center bg-[#04177f] mb-[4%] md:w-[142px] md:h-[22px] md:text-[12px] lg:w-[231px] lg:h-[41px] lg:text-[16px] lg:rounded-[8px]"
+        className="text-[8px] text-[#0005] h-[23.5px] w-[50px] flex justify-center gap-[20%] items-center bg-[#04177f] mb-[4%] md:w-[142px] md:h-[22px] md:text-[12px] lg:w-[180px] lg:h-[44px] lg:text-[16px] "
       >
         {selected ? (
           <div className="flex gap-[5px] items-center md:gap-[8px]">
@@ -114,7 +114,7 @@ export const CountrySelector = ({ onSelect, selectedCountry }) => {
         <div className="" style={{boxShadow:"0px 1.60656px 4.01639px 0px rgba(0, 0, 0, 0.25)",}}>
           {countryList.map((country) => (
             <div
-              className="cursor-pointer border-b flex items-center p-1 gap-[5px] text-[9px] bg-[#fff] md:text-[14px] lg:text-[16px]"
+              className="cursor-pointer border-b flex items-center p-1 gap-[5px] text-[9px] bg-[#fff] md:text-[14px] lg:text-[16px] lg:justify-between lg:px-[25%]"
               key={country.id}
               onClick={() =>
                 handleOptionClick(

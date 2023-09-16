@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ContextProvider } from "../../../../Context";
 import styles from "../../TransferComponent/transfer.module.css";
 import { useState } from "react";
-import { TransactionSuccessToOtherBank } from "./OtherBankPopUp/TransactionSuccessToOtherBank";
+import { TransactionSuccessToOtherBank } from "./OtherBankPopUp/OtherBankPopUp/TransactionSuccessToOtherBank";
 
 export const OtherInputPinPopUp = ({
   otherInputPinPopUp,
