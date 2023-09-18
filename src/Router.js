@@ -33,7 +33,6 @@ import { ToMyAccountPage } from "./Components/Dashboard/DashboardComponents/Tran
 import PointBalance from "./Components/Wallet/PointBalance";
 import VirtualAccount from "./Components/Screens/virtualAccount/VirtualAccount";
 import { PersonalAccountPage } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/PersonalAccountPage";
-import AirtimeTopUp from "./Components/AirtimeTopUp/AirtimeTopUp";
 import AirtimeVtu from "./Components/AirtimeTopUp/AirtimeVtu";
 import { AddAccount } from "./Components/Dashboard/DashboardComponents/PersonalAccountPage/AddAccountPage/AddAccount";
 import NgnVirtualAccount from "./Components/Screens/ngnVirtualAccount/NgnVirtualAccount";
@@ -48,6 +47,7 @@ import { WithdrawalReceipt } from "./Components/Dashboard/DashboardComponents/Wi
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import { ToOtherBanks } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/ToOtherBanks";
 import { OtherBankReceipt } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/OtherBankPopUp/OtherBankReceipt";
+import AirTime from "./Components/AirTimePage/AirTime";
 
 export const Router = () => {
   return (
@@ -92,7 +92,7 @@ export const Router = () => {
         <Route path="/virtual-account" element={<VirtualAccount />} />
         <Route path="/personal-account" element={<PersonalAccountPage />} />
         <Route path="/business-account" element={<BusinessAccountPage />} />
-        <Route path="/airtime-topup" element={<AirtimeTopUp />} />
+        <Route path="/airtime-topup" element={<AirTime />} />
         <Route path="/airtime-vtu" element={<AirtimeVtu />} />
         <Route path="/add-account" element={<AddAccount />} />
         <Route path="/ngn-virtual-account" element={<NgnVirtualAccount />} />
