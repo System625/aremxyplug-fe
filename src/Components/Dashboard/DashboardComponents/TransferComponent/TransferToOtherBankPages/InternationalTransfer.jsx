@@ -62,8 +62,8 @@ export const InternationalTransfer = () => {
   return (
     <div>
       {" "}
-      <div className="bg-[#04177f] text-[#fff] text-[9px] h-[19px] flex justify-center items-center rounded-[2px] lg:text-[16px] lg:h-[38px] lg:w-[50%]">
-        Real-time Bank Network Tracker
+      <div className="bg-[#04177f] text-[#fff] text-[10px] h-[20px] flex justify-center items-center rounded-[2px] lg:text-[16px] lg:h-[38px] lg:w-[50%]">
+        Real-time International Transfer Check Rate
       </div>
       <div className="font-extrabold flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[7%] gap-[8px] md:my-[5%] md:text-[18px] lg:text-[20px]">
         <p>From</p>
