@@ -12,13 +12,15 @@ export const ConfirmInterTransactionPopUp = ({
   swiftCode,
   recipientAddress,
   purposeOfPayment,
+  amountToTransfer,
+  amountToReceive
 }) => {
   const { toggleSideBar, transferFee, image, internationalBankConfirmation } =
     useContext(ContextProvider);
 
-//   const [otherInputPinPopUp, setOtherInputPinPopUp] = useState(false);
+  //   const [otherInputPinPopUp, setOtherInputPinPopUp] = useState(false);
 
-  const TotalAmount = transferamount;
+  // const TotalAmount = transferamount;
   const pointsEarned = "+2.00";
 
   const handleSwitch = () => {
@@ -32,11 +34,11 @@ export const ConfirmInterTransactionPopUp = ({
           (
           <div
             className={`${styles.transferConfirmation} ${
-              toggleSideBar ? " lg:ml-[20%] lg:w-[40%]" : "lg:w-[40%]"
-            } w-[90%]`}
+              toggleSideBar ? " lg:ml-[20%] lg:w-[40%]" : "lg:w-[562px]"
+            } w-[90%] overflow-auto`}
           >
             <img
-            //   onClick={() => setOtherBankConfirmation(false)}
+              //   onClick={() => setOtherBankConfirmation(false)}
               className="absolute right-2 w-[18px] h-[18px] my-[1%] md:w-[35px] md:h-[35px] lg:w-[25px] lg:h-[25px]"
               src="/Images/transferImages/close-circle.png"
               alt=""
@@ -45,10 +47,10 @@ export const ConfirmInterTransactionPopUp = ({
             <h2 className="text-[12px] my-[5%] text-center md:my-[3%] md:text-[15px] lg:my-[2%] lg:text-[16px]">
               Confirm Transaction
             </h2>
-            <p className="text-[8px] text-[#0008] text-center mb-2 md:text-[12px] lg:text-[14px]">
+            <p className="text-[7px] text-[#0008] text-center mb-2 md:text-[12px] lg:text-[14px]">
               You are about to transfer{" "}
               <span className="text-[#000] font-extrabold text-[10px] md:text-[16px] lg:text-[12px]">
-                &#8358;{transferamount}.00{" "}
+                &#8358;{amountToTransfer}.00 for &#36;{amountToReceive}{" "}
               </span>
               from your NGN wallet to{" "}
             </p>
@@ -67,20 +69,32 @@ export const ConfirmInterTransactionPopUp = ({
                 <span>{accountNumber}</span>
               </div>
               <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                <p className="text-[#0008]">Swift Code / Sort Code / Routine</p>
+                <span>{swiftCode}</span>
+              </div>
+              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                <p className="text-[#0008]">Recipient Address</p>
+                <span>{recipientAddress}</span>
+              </div>
+              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                <p className="text-[#0008]">Purpose of Payment</p>
+                <span>{purposeOfPayment}</span>
+              </div>
+              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                 <p className="text-[#0008]">Amount to Transfer</p>
-                <span>&#8358;{transferamount}.00</span>
+                <span>&#8358;{amountToTransfer}.00</span>
+              </div>
+              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
+                <p className="text-[#0008]">Recipient Will Receive</p>
+                <span>&#36; {amountToReceive}.00</span>
               </div>
               <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                 <p className="text-[#0008]">Transfaction fee</p>
                 <span>&#8358;{transferFee}.00</span>
               </div>
               <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Vat Fee</p>
-                <span>&#8358;00.00</span>
-              </div>
-              <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
-                <p className="text-[#0008]">Total Amount</p>
-                <span>&#8358;{TotalAmount.toLocaleString()}.00</span>
+                <p className="text-[#0008]">Completion Time</p>
+                <span>Instantly</span>
               </div>
               <div className="flex text-[10px] md:text-[14px] w-[90%] mx-auto justify-between  lg:text-[16px]">
                 <p className="text-[#0008]">Points Earned</p>
