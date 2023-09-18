@@ -226,9 +226,16 @@ export const InternationalDetail = ({
 
               {/* =====================Recipient Address=========================== */}
               <div className={styles.inputBox}>
-                <p className="text-[10px] font-extrabold lg:text-[16px]">
-                  Purpose of payment
-                </p>
+                <div className="flex items-center gap-[5px]">
+                  <p className="text-[10px] font-extrabold lg:text-[16px]">
+                    Purpose of payment
+                  </p>
+                  <img
+                    className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
+                    src="./Images/transferImages/message-question.png"
+                    alt="/"
+                  />
+                </div>
                 <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[40px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
                   <input
                     onChange={handleInputChange}
