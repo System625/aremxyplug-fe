@@ -31,19 +31,19 @@ export const PersonalAccountForm = () => {
     {
       id: 4,
       name: "European",
-      code: "GBP",
+      code: "EUR",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/europeanFlag.png"),
     },
     {
       id: 5,
       name: "Australia",
-      code: "GBP",
+      code: "AUD",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/australiaFlag.png"),
     },
     {
       id: 6,
       name: "Kenya",
-      code: "GBP",
+      code: "KES",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/kenyaFlag.png"),
     },
   ];

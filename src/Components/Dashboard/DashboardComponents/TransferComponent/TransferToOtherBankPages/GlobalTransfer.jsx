@@ -43,19 +43,19 @@ export default function GlobalTransfer() {
     {
       id: 4,
       name: "European",
-      code: "GBP",
+      code: "EUR",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/europeanFlag.png"),
     },
     {
       id: 5,
       name: "Australia",
-      code: "GBP",
+      code: "AUD",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/australiaFlag.png"),
     },
     {
       id: 6,
       name: "Kenya",
-      code: "GBP",
+      code: "KES",
       flag: require("../../../../Dashboard/DashboardComponents/flagsImages/kenyaFlag.png"),
     },
   ];
@@ -264,7 +264,7 @@ export default function GlobalTransfer() {
           />
         </div>
       </div>
-      <div className="bg-[#04177f] text-[#fff] text-[9px] h-[19px] flex justify-center items-center rounded-[2px] lg:w-[45%] lg:h-[38px] lg:text-[16px]">
+      <div className="bg-[#04177f] text-[#fff] text-[10px] h-[20px] flex justify-center items-center rounded-[2px] lg:w-[45%] lg:h-[38px] lg:text-[16px]">
         Real-time Bank Network Tracker
       </div>
       <div className="flex flex-col gap-[20px] md:grid md:grid-cols-2">
@@ -391,36 +391,36 @@ export default function GlobalTransfer() {
         {/* =========================Add to recipient ? ======================= */}
         <div className="flex gap-[10px]">
           <div className="flex items-center gap-[10px]">
-            <div className="text-[9px] lg:text-[16px]">Add to recipient ?</div>
+            <div className="text-[11px] lg:text-[16px]">Add to recipient ?</div>
             <div
               onClick={() => {
                 SetAddToRecipient(!addToRecipient);
                 // handleButtonClick();
               }}
-              className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
+              className={` w-[17px] h-[8.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
                 addToRecipient ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
               }`}
             >
               <div
-                className={`rounded-full w-[7.5px] h-[6.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
+                className={`rounded-full w-[9.5px] h-[8.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
                   addToRecipient ? "float-right" : "float-left"
                 }`}
               ></div>
             </div>
           </div>
           <div className="flex items-center gap-[10px]">
-            <div className="text-[9px] lg:text-[16px]">Save to favorities</div>
+            <div className="text-[11px] lg:text-[16px]">Save to favorities</div>
             <div
               onClick={() => {
                 setSaveTofavorite(!saveToFavorite);
                 // handleButtonClick();
               }}
-              className={` w-[15px] h-[6.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
+              className={` w-[17px] h-[8.4px] md:w-[30px] md:h-[12px] lg:w-[50px] lg:h-[22px] lg:rounded-full rounded ${
                 saveToFavorite ? "bg-[#58DA8F]" : "bg-[#b1b0b0]"
               }`}
             >
               <div
-                className={`rounded-full w-[7.5px] h-[6.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
+                className={`rounded-full w-[9.5px] h-[8.4px] md:w-[14px] md:h-[12px] lg:h-[22px] lg:w-[21px] lg:drop-shadow-md bg-[#fff] ${
                   saveToFavorite ? "float-right" : "float-left"
                 }`}
               ></div>
@@ -438,16 +438,16 @@ export default function GlobalTransfer() {
       </button>
       {currencyAvailable && (
         <Modal>
-          <div className="bg-white shadow-lg w-[90%] rounded-[5px] flex flex-col items-center py-[4%] gap-[40px] lg:w-[40%] lg:py-[3%] lg:rounded-[7px]">
-            <p className="text-[12px] text-[#04177f] font-extrabold">
+          <div className="bg-white shadow-lg w-[90%] rounded-[8px] h-[269px] flex flex-col items-center py-[4%] gap-[40px] md:h-[360px] lg:w-[562px] lg:h-[500px] lg:py-[3%] lg:rounded-[px]">
+            <p className="text-[10px] text-[#04177f] font-extrabold md:text-[16px] lg:text-[25px]">
               This Currency is Currently Not Available.
             </p>
             <img
-              className="w-[50%] h-[50%]"
+              className="w-[135px] h-[96px]"
               src="/Images/addAccountImages/account-unavailable.png"
               alt=""
             />
-            <p className="absolute top-[59%] right-[15%] text-[8px] lg:text-[12px] lg:right-[35%]">
+            <p className="absolute top-[58%] right-[15%] text-[8px] md:text-[12px] md:ml-[70%] lg:text-[13px] lg:right-[35%] lg:ml-[80%]">
               Coming Soon...
             </p>
 
@@ -455,7 +455,7 @@ export default function GlobalTransfer() {
               onClick={refresh}
               className={` ${
                 isDarkMode ? "border" : "bg-[#04177f] "
-              } cursor-pointer text-white text-[12px] h-[35px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+              } cursor-pointer text-white text-[10px] h-[40px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
             >
               Okay
             </div>
