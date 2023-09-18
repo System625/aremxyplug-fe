@@ -1,9 +1,9 @@
 import React from "react";
 import { useContext, useRef } from "react";
-import { ContextProvider } from "../../../../../Context";
+import { ContextProvider } from "../../../../../../Context";
 import { RiFileCopyFill } from "react-icons/ri";
-import styles from "../../../TransferComponent/transfer.module.css";
-import { DashBoardLayout } from "../../../../Layout/DashBoardLayout";
+import styles from "../../../../TransferComponent/transfer.module.css";
+import { DashBoardLayout } from "../../../../../Layout/DashBoardLayout";
 import { Link } from "react-router-dom";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";

@@ -1,6 +1,9 @@
 .successful::-webkit-scrollbar {
   display: none;
 }
+.transferMoneyPop::-webkit-scrollbar {
+  display: none;
+}
 
 .transferMoneyBtn {
   border-radius: 4.763px;

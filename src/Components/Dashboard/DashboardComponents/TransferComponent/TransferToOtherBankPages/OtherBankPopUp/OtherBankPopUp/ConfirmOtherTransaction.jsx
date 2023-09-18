@@ -1,9 +1,9 @@
 import React from "react";
 import { useContext, useState } from "react";
-import { ContextProvider } from "../../../../../Context";
-import { Modal } from "../../../../../Screens/Modal/Modal";
-import styles from "../../../TransferComponent/transfer.module.css";
-import { OtherInputPinPopUp } from "../OtherInputPinPop";
+import { ContextProvider } from "../../../../../../Context";
+import { Modal } from "../../../../../../Screens/Modal/Modal";
+import styles from "../../../../TransferComponent/transfer.module.css";
+import { OtherInputPinPopUp } from "../../OtherInputPinPop";
 
 export const ConfirmOtherTransaction = ({
   otherBanksConfirmation,
@@ -30,7 +30,7 @@ export const ConfirmOtherTransaction = ({
         <Modal>
           (
           <div
-            className={`${styles.transferConfirmation} ${
+            className={`${styles.transferMoneyPop} ${
               toggleSideBar ? " lg:ml-[20%] lg:w-[40%]" : "lg:w-[40%]"
             } w-[90%]`}
           >

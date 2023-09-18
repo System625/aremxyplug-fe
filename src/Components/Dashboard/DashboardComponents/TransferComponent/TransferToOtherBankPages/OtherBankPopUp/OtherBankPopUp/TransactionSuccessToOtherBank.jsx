@@ -1,10 +1,10 @@
 import React from "react";
 import { useContext } from "react";
-import { ContextProvider } from "../../../../../Context";
+import { ContextProvider } from "../../../../../../Context";
 import { RiFileCopyFill } from "react-icons/ri";
-import { Modal } from "../../../../../Screens/Modal/Modal";
-import { Link, } from "react-router-dom";
-import styles from "../../../TransferComponent/transfer.module.css";
+import { Modal } from "../../../../../../Screens/Modal/Modal";
+import { Link } from "react-router-dom";
+import styles from "../../../../TransferComponent/transfer.module.css";
 import { OtherBankReceipt } from "./OtherBankReceipt";
 import { useState } from "react";
 // import { TransactFailedPopUp } from "./TransactionFailedPopUp";
@@ -20,7 +20,7 @@ export const TransactionSuccessToOtherBank = ({
   const { toggleSideBar, transferFee, textRef, handleCopyClick } =
     useContext(ContextProvider);
   const [receipt] = useState(false);
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   const handleTransactionSuccessClose = () => {
     setTransactSuccessToOtherBank(false);

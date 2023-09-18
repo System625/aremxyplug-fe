@@ -35,7 +35,7 @@ export const WithdrawPage = () => {
             alt="/"
           />
           <div className="flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[10%] gap-[8px] md:my-[5%] md:text-[18px] lg:text-[20px]">
-            <p>Select withdrawal type </p>
+            <p>Select Withdrawal Type </p>
             <img
               className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
               src="./Images/Dashboardimages/arrowright.png"

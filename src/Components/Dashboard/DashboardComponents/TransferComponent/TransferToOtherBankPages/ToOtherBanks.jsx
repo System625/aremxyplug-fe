@@ -23,14 +23,14 @@ export const ToOtherBanks = () => {
             alt="/"
           />
           <div className="flex text-[#7c7c7c] text-[10px] leading-[130%] items-center my-[10%] gap-[8px] md:my-[5%] md:text-[18px] lg:text-[20px]">
-            <p>Select Account type </p>
+            <p>Select Transfer type </p>
             <img
               className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
               src="./Images/Dashboardimages/arrowright.png"
               alt="/"
             />
           </div>
-          <div className="flex justify-between text-[9px] md:text-[14px] lg:text-[20px]">
+          <div className="flex justify-between text-[9px] md:justify-start md:gap-[28%] md:text-[14px] lg:text-[20px]">
             <div
               onClick={() => {
                 handleActive(0);
@@ -41,7 +41,7 @@ export const ToOtherBanks = () => {
                 activeButton[0]
                   ? "bg-[#E2F3FF] rounded-[2px] border-b-[2px] border-b-[#04177f] h-[16px] flex items-center p-[5px] md:h-[35px] lg:rounded-[6px] lg:border-b-[4px] lg:h-[50px]"
                   : ""
-              } w-[144px] justify-center rounded-[2px] md:w-[180px] md:rounded-[3px] md:justify-center md:items-center flex lg:w-[248px] lg:rounded-[6px]`}
+              } cursor-pointer w-[144px] justify-center rounded-[2px] md:w-[180px] md:rounded-[3px] md:justify-center md:items-center flex lg:w-[248px] lg:rounded-[6px]`}
             >
               Global Transfer
             </div>
@@ -55,7 +55,7 @@ export const ToOtherBanks = () => {
                 activeButton[1]
                   ? "bg-[#E2F3FF] rounded-[2px] border-b-[2px] border-b-[#04177f] h-[16px] flex items-center p-[5px]  md:h-[35px] lg:rounded-[6px] lg:border-b-[4px] lg:h-[50px]"
                   : ""
-              } w-[144px] justify-center rounded-[2px] md:w-[180px] md:rounded-[3px]  md:justify-center md:items-center flex lg:w-[248px] lg:rounded-[6px]`}
+              }cursor-pointer w-[144px] justify-center rounded-[2px] md:w-[180px] md:rounded-[3px]  md:justify-center md:items-center flex lg:w-[248px] lg:rounded-[6px]`}
             >
               International Transfer
             </div>
