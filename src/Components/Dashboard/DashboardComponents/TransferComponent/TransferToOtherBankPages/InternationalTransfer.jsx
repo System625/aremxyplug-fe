@@ -154,6 +154,8 @@ export const InternationalTransfer = () => {
       <InternationalDetail
         InternationalDetailPopUp={InternationalDetailPopUp}
         setInternationalDetailPopUp={setInternationalDetailPopUp}
+        amountToReceive={receive}
+        amountToTransfer={transfer}
       />
     </div>
   );

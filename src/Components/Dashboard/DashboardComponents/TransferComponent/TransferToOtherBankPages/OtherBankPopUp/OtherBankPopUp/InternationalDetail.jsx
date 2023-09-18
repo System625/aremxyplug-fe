@@ -9,8 +9,10 @@ import { ConfirmInterTransactionPopUp } from "../InternationalPopUp/ConfirmInter
 export const InternationalDetail = ({
   InternationalDetailPopUp,
   setInternationalDetailPopUp,
+  amountToTransfer,
+  amountToReceive
 }) => {
-  const { toggleSideBar, setInternationalBankConfirmation } =
+  const { isDarkMode, toggleSideBar, setInternationalBankConfirmation } =
     useContext(ContextProvider);
 
   const [state, setState] = useState({
@@ -23,6 +25,7 @@ export const InternationalDetail = ({
     message: "",
   });
 
+  const [purpose, setPurpose] = useState(false);
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (event) => {
@@ -89,6 +92,16 @@ export const InternationalDetail = ({
     // console.log(successful);
   };
 
+  // const handlePurposePopUpOpen = () => {
+  //   setInternationalDetailPopUp(false);
+  //   setPurpose(true);
+  // };
+
+  // const handlePurposePopUpClose = () => {
+  //   setPurpose(false);
+  //   setInternationalDetailPopUp(true);
+  // };
+
   return (
     <div>
       {InternationalDetailPopUp && (
@@ -97,7 +110,7 @@ export const InternationalDetail = ({
             className={` ${styles.transferMoneyPop} ${
               toggleSideBar
                 ? "md:w-[45%] lg:ml-[20%] lg:w-[40%]"
-                : "md:w-[80%] lg:w-[40%]"
+                : "md:w-[80%] lg:w-[562px]"
             } w-[90%] overflow-auto`}
           >
             <img
@@ -224,18 +237,57 @@ export const InternationalDetail = ({
                 )}
               </div>
 
-              {/* =====================Recipient Address=========================== */}
+              {/* =====================Purpose of Payment=========================== */}
               <div className={styles.inputBox}>
                 <div className="flex items-center gap-[5px]">
                   <p className="text-[10px] font-extrabold lg:text-[16px]">
                     Purpose of payment
                   </p>
                   <img
+                    onClick={() => setPurpose(true)}
                     className="w-[15px] h-[15px] md:w-[] md:h-[] lg:w-[20px] lg:h-[20px]"
                     src="./Images/transferImages/message-question.png"
                     alt="/"
                   />
                 </div>
+
+                {purpose && (
+                  <Modal>
+                    <div
+                      className={`${
+                        toggleSideBar
+                          ? "md:w-[45%] lg:ml-[20%] lg:w-[40%]"
+                          : "md:w-[80%] lg:w-[562px]"
+                      } w-[90%] bg-white shadow-lg rounded-[8px] h-[269px] flex flex-col items-center py-[4%] gap-[40px] md:h-[360px] lg:h-[404px] lg:py-[3%] lg:rounded-[20px]`}
+                    >
+                      <hr className="h-[6px] w-full bg-[#04177f] border-none mt-[5%] md:mt-[6%] md:h-[10px]" />
+
+                      <div className="flex flex-col justify-between h-full">
+                        <p className="leading-[11px] text-[9px] text-[#7C7C7C] text-center font-extrabold md:text-[10px] lg:w-[90%] lg:mx-auto lg:text-[16px] lg:flex lg:flex-col lg:gap-[5%] lg:leading-[19.5px]">
+                          <span className="text-[#04177f] font-extrabold">
+                            Purpose of Payments can be any of the following,
+                            E.g;
+                          </span>
+                          <br />
+                          <br />
+                          <p>
+                            For Bills Payment, For Goods & Services, For
+                            Financial, For Education, For Healthcare, and etc...
+                          </p>
+                        </p>
+
+                        <div
+                          onClick={() => setPurpose(false)}
+                          className={` ${
+                            isDarkMode ? "border" : "bg-[#04177f] "
+                          } cursor-pointer mx-auto text-white text-[10px] h-[40px] w-[80%] rounded-[5px] flex items-center justify-center md:mx-auto md:w-[20%] md:h-[30px] md:text-[14px] lg:my-[3%] lg:h-[40px] lg:text-[20px] lg:w-[30%] lg:mx-auto`}
+                        >
+                          Okay
+                        </div>
+                      </div>
+                    </div>
+                  </Modal>
+                )}
                 <div className="border rounded-[5px] h-[25px] flex justify-between items-center p-1 lg:h-[40px] lg:rounded-[10px] lg:border-[1px] lg:border-[#0003]">
                   <input
                     onChange={handleInputChange}
@@ -287,6 +339,8 @@ export const InternationalDetail = ({
         swiftCode={state.swiftCode}
         recipientAddress={state.recipientAddress}
         purposeOfPayment={state.purposeOfPayment}
+        amountToTransfer={amountToTransfer}
+        amountToReceive={amountToReceive}
       />
     </div>
   );
