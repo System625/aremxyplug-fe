@@ -46,13 +46,9 @@ import { WithdrawToBusinessAccountPage } from "./Components/Dashboard/DashboardC
 import { WithdrawalReceipt } from "./Components/Dashboard/DashboardComponents/Withdrawal/WithdrawalPopUps/WithdrawalReceipt.";
 import DigitalServices from "./Components/Screens/digitalServices/DigitalServices";
 import { ToOtherBanks } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/ToOtherBanks";
-<<<<<<< HEAD
-import { OtherBankReceipt } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/OtherBankPopUp/OtherBankReceipt";
 import AirTime from "./Components/AirTimePage/AirTime";
-=======
 import { OtherBankReceipt } from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/OtherBankPopUp/OtherBankPopUp/OtherBankReceipt";
 import GlobalTransfer from "./Components/Dashboard/DashboardComponents/TransferComponent/TransferToOtherBankPages/GlobalTransfer";
->>>>>>> 101a1aac89e8caf4fcd9242e5c2ba39f5417e466
 
 export const Router = () => {
   return (
